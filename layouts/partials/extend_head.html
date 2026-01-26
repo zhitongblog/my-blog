@@ -2,3 +2,12 @@
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' 
         data-cf-beacon='{"token": "你的token"}'></script>
 <!-- End Cloudflare Web Analytics -->
+ {{- if not .Site.IsServer }}
+<!-- Ezoic 隐私合规脚本 -->
+<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+<script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+<script>
+    window.ezstandalone = window.ezstandalone || {};
+    ezstandalone.cmd = ezstandalone.cmd || [];
+</script>
