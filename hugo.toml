@@ -1,0 +1,61 @@
+baseURL = 'https://你的域名.com/'
+languageCode = 'zh-cn'
+title = '智通和你一起学AI'
+theme = 'PaperMod'
+
+# 每页文章数
+[pagination]
+  pagerSize = 10
+
+# 菜单配置
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "归档"
+    url = "/archives/"
+    weight = 3
+  [[menu.main]]
+    name = "标签"
+    url = "/tags/"
+    weight = 4
+  [[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 5
+
+# PaperMod 主题配置
+[params]
+  description = "这是智通成长的历程"
+  author = "智通"
+  
+  # 首页信息
+  [params.homeInfoParams]
+    Title = "AI时代，唯有不断学习👋"
+    Content = "你好，我是智通。欢迎来到我的精神角落。"
+  
+  # 社交链接
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/zhitongblog"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:lixd220@gmail.com"
+  
+  # 搜索功能
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+
+# 输出格式（启用搜索）
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

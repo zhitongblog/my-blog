@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>智通和你一起学AI</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 26 Jan 2025 20:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>别做“提示词工程师”，要做“AI时代的提问者</title>
+      <link>http://localhost:1313/posts/my-second-post/</link>
+      <pubDate>Sun, 26 Jan 2025 20:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/my-second-post/</guid>
+      <description>&lt;p&gt;在过去的一年里，我见过无数人疯狂地收藏各种“AI 咒语大全”——那些长达几千字的 Prompt（提示词）模板，仿佛只要把它们复制粘贴进对话框，AI 就能瞬间吐出完美的方案，把我们从繁重的工作中解救出来。&lt;/p&gt;
+&lt;p&gt;但现实往往是：&lt;strong&gt;你用着和别人一样的神级模板，却只得到了一个平庸的答案。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;为什么？因为我们搞错了一个根本逻辑。我们太急于成为一名懂技巧的“提示词工程师”，却忘记了在 AI 面前，我们首先应该是一个&lt;strong&gt;懂得思考的“提问者”&lt;/strong&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;一-ai-不是许愿池它是你的镜子&#34;&gt;一、 AI 不是许愿池，它是你的“镜子”&lt;/h4&gt;
+&lt;p&gt;很多人把 AI 当作许愿池，扔进去一个硬币（简单指令），就期待它从水里冒出来送你一把金斧头。
+比如，你告诉 AI：“帮我写一篇关于时间管理的文章。”
+AI 会给你一篇四平八稳、全是车轱辘话的废话文学。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;因为你的大脑是模糊的，AI 的反馈自然就是混沌的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在 AI 时代，大模型本质上是一面镜子。它反射的不仅仅是你的知识储备，更是你的&lt;strong&gt;逻辑清晰度&lt;/strong&gt;。如果你自己都没想清楚“这篇文章是写给谁看的”、“要解决什么核心痛点”、“风格是严肃还是幽默”，AI 再强大，也只能基于概率给你一个“平均数”答案。&lt;/p&gt;
+&lt;h4 id=&#34;二-所谓神级提示词本质是思维的结构化&#34;&gt;二、 所谓“神级提示词”，本质是思维的结构化&lt;/h4&gt;
+&lt;p&gt;我研究过那些被奉为圭臬的高效 Prompt，抛开花哨的格式，它们的核心都在做一件事：&lt;strong&gt;结构化思维（Structured Thinking）。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;与其背诵咒语，不如掌握一套通用的**“智通提问心法”**。无论模型如何迭代，这套底层逻辑是不变的：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 设定身份（Who）：给 AI 穿上“制服”&lt;/strong&gt;
+不要只说“写个代码”或“写段小说”。
+要说：“你是一位拥有10年经验的资深产品经理”或者“你是一位擅长营造悬疑氛围的畅销书作家”。身份决定了 AI 调取数据的维度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 锚定背景（Context）：把 AI 拉入“现场”&lt;/strong&gt;
+即使是真的一对一咨询，你不给背景，专家也无法诊断。
+告诉它：“我正在为一群刚入职的大学生做培训，他们普遍有拖延症，且对说教很反感。”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 明确任务与约束（Constraints）：画出“红线”&lt;/strong&gt;
+这是最容易被忽略的一步。
+“请给我三个可执行的建议，不要虚大空的理论。每个建议必须包含一个具体案例。总字数控制在 800 字以内。”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;把这三点串联起来，你其实是在教 AI 如何像你一样思考，而不是仅仅替你干活。&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;三-哪怕不懂代码也要懂逻辑&#34;&gt;三、 哪怕不懂代码，也要懂逻辑&lt;/h4&gt;
+&lt;p&gt;常有人问我：“智通，我不会写代码，是不是就没法深入使用 AI？”&lt;/p&gt;
+&lt;p&gt;我的回答恰恰相反。在未来，&lt;strong&gt;逻辑语言（Logic）比编程语言（Code）更重要。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当你能够清晰地拆解一个复杂问题——把“写一部小说”拆解为“大纲设计-角色小传-冲突构建-章节填充”；把“开发一个APP”拆解为“需求分析-功能列表-交互逻辑”时，你就是那个发号施令的指挥官。&lt;/p&gt;
+&lt;p&gt;AI 能够弥补我们在技能上的短板（比如它能瞬间写出我不会的 Python 爬虫代码），但它无法弥补我们在&lt;strong&gt;思维上的懒惰&lt;/strong&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;四-结语&#34;&gt;四、 结语&lt;/h4&gt;
+&lt;p&gt;不要迷信那些“一键生成”的魔法。AI 时代最大的护城河，不是你手里掌握了多少个 Prompt 模板，而是你面对一个复杂问题时，&lt;strong&gt;能够抽丝剥茧、提出高质量问题的能力。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;机器可以回答一切，但只有人类能够提出真正有价值的问题。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>我的第一篇博客</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Sun, 26 Jan 2025 20:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;h2 id=&#34;为什么写博客&#34;&gt;为什么写博客&lt;/h2&gt;
+&lt;p&gt;你好，我是智通。欢迎来到我的精神角落。&lt;/p&gt;
+&lt;p&gt;如果在三年前，有人告诉我人工智能将以如此惊人的速度重构我们的工作与生活，我可能会觉得那是科幻电影的脚本。但今天，当大模型开始写代码、绘画、甚至进行逻辑推理时，我们都必须承认：未来已来，而且它不讲客气。&lt;/p&gt;
+&lt;p&gt;站在这个时代的风口浪尖，很多人感到焦虑。我们习惯了用“经验”来构筑护城河，但AI的出现，瞬间填平了许多依靠死记硬背和重复劳动建立起来的沟壑。&lt;/p&gt;
+&lt;p&gt;在这个时代，什么才是真正的护城河？&lt;/p&gt;
+&lt;p&gt;我的答案很简单，也是我开设这个博客的初衷：唯有不断学习，保持精进。&lt;/p&gt;
+&lt;p&gt;但这里的“学习”，不再是单纯的知识堆砌——因为在存储知识方面，我们永远赢不了硬盘。AI时代的学习，是认知的升级，是思维模型的重塑，是提出好问题的能力，更是将散落的信息串联成智慧的“通达”之力。
+正如我的名字“智通”所寄托的寓意：&lt;/p&gt;
+&lt;p&gt;智（Wisdom）： 在信息过载中甄别真伪，汲取智慧；&lt;/p&gt;
+&lt;p&gt;通（Connection）： 融会贯通，将技术工具与人文思考相结合，打通认知的任督二脉。&lt;/p&gt;
+&lt;p&gt;在这个博客里，我不会贩卖焦虑，也不会盲目鼓吹技术。我希望记录下在AI浪潮中，一个普通个体如何通过持续学习来迭代自己。&lt;/p&gt;
+&lt;p&gt;这里会有我对新技术的测评与思考，有关于个人成长的读书笔记，也许还会有一些试错的教训。我希望这里能成为一个“思维补给站”。&lt;/p&gt;
+&lt;p&gt;种一棵树最好的时间是十年前，其次是现在。&lt;/p&gt;
+&lt;p&gt;在这个瞬息万变的时代，原地踏步就是最大的风险。让我们不再做时代的旁观者，而是做一个终身学习的实践者。&lt;/p&gt;
+&lt;p&gt;保持饥渴，保持精进。&lt;/p&gt;
+&lt;p&gt;我是智通，期待与你在路上相遇。&lt;/p&gt;
+&lt;h2 id=&#34;博客内容规划&#34;&gt;博客内容规划&lt;/h2&gt;
+&lt;h3 id=&#34;ai技术分享&#34;&gt;AI技术分享&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;AI技能技巧&lt;/li&gt;
+&lt;li&gt;AI世界大事追踪&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;思考&#34;&gt;思考&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;学习感悟&lt;/li&gt;
+&lt;li&gt;AI世界预测&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;未来展望&#34;&gt;未来展望&lt;/h2&gt;
+&lt;p&gt;希望我们一起成为AI时代的幸存者！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
