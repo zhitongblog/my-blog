@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>数字极简 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E6%95%B0%E5%AD%97%E6%9E%81%E7%AE%80/</link>
+    <description>Recent content in 数字极简 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:1313/tags/%E6%95%B0%E5%AD%97%E6%9E%81%E7%AE%80/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

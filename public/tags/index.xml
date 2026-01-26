@@ -6,41 +6,76 @@
     <description>Recent content in Tags on 智通和你一起学AI</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 26 Jan 2025 20:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2025 20:50:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI思考</title>
+      <link>http://localhost:1313/tags/ai%E6%80%9D%E8%80%83/</link>
+      <pubDate>Sun, 26 Jan 2025 20:50:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/ai%E6%80%9D%E8%80%83/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>个人成长</title>
+      <link>http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
+      <pubDate>Sun, 26 Jan 2025 20:50:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>数字极简</title>
+      <link>http://localhost:1313/tags/%E6%95%B0%E5%AD%97%E6%9E%81%E7%AE%80/</link>
+      <pubDate>Sun, 26 Jan 2025 20:50:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%95%B0%E5%AD%97%E6%9E%81%E7%AE%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>深度工作</title>
+      <link>http://localhost:1313/tags/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Sun, 26 Jan 2025 20:50:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI革命</title>
       <link>http://localhost:1313/tags/ai%E9%9D%A9%E5%91%BD/</link>
-      <pubDate>Sun, 26 Jan 2025 20:00:00 +0800</pubDate>
+      <pubDate>Sun, 26 Jan 2025 20:03:00 +0800</pubDate>
       <guid>http://localhost:1313/tags/ai%E9%9D%A9%E5%91%BD/</guid>
       <description></description>
     </item>
     <item>
       <title>Prompt</title>
       <link>http://localhost:1313/tags/prompt/</link>
-      <pubDate>Sun, 26 Jan 2025 20:00:00 +0800</pubDate>
+      <pubDate>Sun, 26 Jan 2025 20:03:00 +0800</pubDate>
       <guid>http://localhost:1313/tags/prompt/</guid>
       <description></description>
     </item>
     <item>
       <title>学习</title>
       <link>http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Sun, 26 Jan 2025 20:00:00 +0800</pubDate>
+      <pubDate>Sun, 26 Jan 2025 20:03:00 +0800</pubDate>
       <guid>http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>感悟</title>
-      <link>http://localhost:1313/tags/%E6%84%9F%E6%82%9F/</link>
-      <pubDate>Sun, 26 Jan 2025 20:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/%E6%84%9F%E6%82%9F/</guid>
       <description></description>
     </item>
     <item>
       <title>提示词</title>
       <link>http://localhost:1313/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/</link>
-      <pubDate>Sun, 26 Jan 2025 20:00:00 +0800</pubDate>
+      <pubDate>Sun, 26 Jan 2025 20:03:00 +0800</pubDate>
       <guid>http://localhost:1313/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>驯化AI</title>
+      <link>http://localhost:1313/tags/%E9%A9%AF%E5%8C%96ai/</link>
+      <pubDate>Sun, 26 Jan 2025 20:03:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E9%A9%AF%E5%8C%96ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>感悟</title>
+      <link>http://localhost:1313/tags/%E6%84%9F%E6%82%9F/</link>
+      <pubDate>Sun, 26 Jan 2025 20:01:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%84%9F%E6%82%9F/</guid>
       <description></description>
     </item>
   </channel>

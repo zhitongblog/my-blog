@@ -8,37 +8,61 @@
     <loc>http://localhost:1313/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai%E9%9D%A9%E5%91%BD/</loc>
-    <lastmod>2025-01-26T20:00:00+08:00</lastmod>
+    <loc>http://localhost:1313/tags/ai%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2025-01-26T20:50:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-01-26T20:00:00+08:00</lastmod>
+    <lastmod>2025-01-26T20:50:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-01-26T20:00:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/prompt/</loc>
-    <lastmod>2025-01-26T20:00:00+08:00</lastmod>
+    <lastmod>2025-01-26T20:50:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-01-26T20:00:00+08:00</lastmod>
+    <lastmod>2025-01-26T20:50:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/my-second-post/</loc>
-    <lastmod>2025-01-26T20:00:00+08:00</lastmod>
+    <loc>http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</loc>
+    <lastmod>2025-01-26T20:50:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2026-01-26-learn-ai2/</loc>
+    <lastmod>2025-01-26T20:50:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E5%BF%83%E6%B3%95/</loc>
+    <lastmod>2025-01-26T20:50:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%95%B0%E5%AD%97%E6%9E%81%E7%AE%80/</loc>
+    <lastmod>2025-01-26T20:50:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C/</loc>
+    <lastmod>2025-01-26T20:50:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ai%E9%9D%A9%E5%91%BD/</loc>
+    <lastmod>2025-01-26T20:03:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/prompt/</loc>
+    <lastmod>2025-01-26T20:03:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2025-01-26T20:00:00+08:00</lastmod>
+    <lastmod>2025-01-26T20:03:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/%E6%84%9F%E6%82%9F/</loc>
-    <lastmod>2025-01-26T20:00:00+08:00</lastmod>
+    <lastmod>2025-01-26T20:03:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E6%84%9F%E6%82%9F/</loc>
-    <lastmod>2025-01-26T20:00:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
-    <lastmod>2025-01-26T20:00:00+08:00</lastmod>
+    <loc>http://localhost:1313/posts/2026-01-26-learn-ai/</loc>
+    <lastmod>2025-01-26T20:03:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/</loc>
-    <lastmod>2025-01-26T20:00:00+08:00</lastmod>
+    <lastmod>2025-01-26T20:03:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E9%A9%AF%E5%8C%96ai/</loc>
+    <lastmod>2025-01-26T20:03:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/my-second-post/</loc>
+    <lastmod>2025-01-26T20:02:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E6%84%9F%E6%82%9F/</loc>
+    <lastmod>2025-01-26T20:01:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/my-first-post/</loc>
+    <lastmod>2025-01-26T20:01:00+08:00</lastmod>
   </url>
 </urlset>
