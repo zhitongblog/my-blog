@@ -6,8 +6,40 @@
     <description>Recent content on 智通和你一起学AI</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 26 Jan 2025 20:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;-你好我是智通&#34;&gt;👋 你好，我是智通&lt;/h2&gt;
+&lt;p&gt;一个热爱写作的产品经理。&lt;/p&gt;
+&lt;h2 id=&#34;-关于博客&#34;&gt;🎯 关于博客&lt;/h2&gt;
+&lt;p&gt;这个博客创建于 2026年，主要分享：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;💻 AI进化历史&lt;/li&gt;
+&lt;li&gt;📚 AI使用技巧&lt;/li&gt;
+&lt;li&gt;🌏 产品经理方法论&lt;/li&gt;
+&lt;li&gt;🎨 创意设计思考&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-技术栈&#34;&gt;🛠️ 技术栈&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;gemini&lt;/code&gt; &lt;code&gt;chagpt&lt;/code&gt; &lt;code&gt;Git&lt;/code&gt; &lt;code&gt;clade&lt;/code&gt; &lt;code&gt;grok&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;-博客信息&#34;&gt;📊 博客信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;构建工具：Hugo v0.154.5&lt;/li&gt;
+&lt;li&gt;主题：PaperMod&lt;/li&gt;
+&lt;li&gt;托管：Cloudflare Pages&lt;/li&gt;
+&lt;li&gt;源码：&lt;a href=&#34;https://github.com/zhitongblog/my-blog&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-联系方式&#34;&gt;📬 联系方式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/zhitongblog&#34;&gt;@zhitongblog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Email: &lt;a href=&#34;mailto:lixd220@email.com&#34;&gt;@lixd220&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
     <item>
       <title>别做“提示词工程师”，要做“AI时代的提问者</title>
       <link>http://localhost:1313/posts/my-second-post/</link>
