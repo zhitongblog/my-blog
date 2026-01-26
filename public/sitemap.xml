@@ -37,11 +37,5 @@
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2025-01-26T20:00:00+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E5%BC%80%E5%A7%8B/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E9%9A%8F%E7%AC%94/</loc>
   </url>
 </urlset>
