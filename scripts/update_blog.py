@@ -1,57 +1,57 @@
 import os
 import datetime
-import google.generativeai as genai
+from google import genai
 
-# 1. 配置 Gemini API
-# 建议在 GitHub Secrets 中设置 GEMINI_API_KEY
+# 1. 配置新的 Gemini 客户端
 api_key = os.getenv("GEMINI_API_KEY")
-genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-pro')
+client = genai.Client(api_key=api_key)
 
 def generate_content():
-    # 定义 AI 的角色和任务
+    # 使用 2026 年主流的 gemini-1.5-flash 模型，速度更快且免费额度高
+    model_id = "gemini-1.5-flash" 
     prompt = """
-    你是一位资深的 AI 产品经理和专栏作家。
-    请针对今天的日期，写一篇关于 'AI 行业趋势' 或 '产品设计深度思考' 的短博文。
-    要求：
-    1. 语言专业且有见地。
-    2. 包含一个吸引人的标题。
-    3. 使用 Markdown 格式。
-    4. 字数在 600 字左右。
+    你是一位资深的 AI 产品经理。请针对今天写一篇 600 字左右的深度思考博客。
+    要求：Markdown 格式，第一行必须是标题（不带 #），后续是正文。
     """
-    response = model.generate_content(prompt)
-    return response.text
+    
+    try:
+        response = client.models.generate_content(
+            model=model_id,
+            contents=prompt
+        )
+        return response.text
+    except Exception as e:
+        print(f"调用 Gemini 出错: {e}")
+        return None
 
 def create_hugo_post(content):
+    if not content: return
+    
     today = datetime.datetime.now().strftime("%Y-%m-%d")
-    # 提取第一行作为标题并去除 Markdown 符号
     lines = content.strip().split('\n')
-    title = lines[0].replace('# ', '').replace('**', '')
+    title = lines[0].strip()
     body = '\n'.join(lines[1:])
 
-    # 构建 Hugo Front Matter
     post_template = f"""---
 title: "{title}"
 date: {today}T09:00:00+08:00
 draft: false
-tags: ["AI", "AutoUpdate"]
-categories: ["DailyInsight"]
+tags: ["AI", "Automated"]
 ---
 
 {body}
 """
     
-    # 确保路径存在
     os.makedirs("content/posts", exist_ok=True)
-    file_name = f"content/posts/ai-insight-{today}.md"
+    file_name = f"content/posts/ai-post-{today}.md"
     
     with open(file_name, "w", encoding="utf-8") as f:
         f.write(post_template)
-    print(f"文件已生成: {file_name}")
+    print(f"成功生成文章: {file_name}")
 
 if __name__ == "__main__":
-    if not api_key:
-        print("错误: 请设置环境变量 GEMINI_API_KEY")
-    else:
+    if api_key:
         blog_content = generate_content()
         create_hugo_post(blog_content)
+    else:
+        print("未检测到 GEMINI_API_KEY")
