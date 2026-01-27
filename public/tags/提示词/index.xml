@@ -6,12 +6,63 @@
     <description>Recent content in 提示词 on 智通和你一起学AI</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 26 Jan 2025 20:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2025 20:03:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我和 AI “吵”了一架，才写出了满意的方案</title>
+      <link>http://localhost:1313/posts/2026-01-26-learn-ai/</link>
+      <pubDate>Sun, 26 Jan 2025 20:03:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2026-01-26-learn-ai/</guid>
+      <description>&lt;p&gt;很多朋友问我：“智通，你用 AI 辅助写作，是不是几分钟就能生成一章？”&lt;/p&gt;
+&lt;p&gt;我的回答通常让他们失望：“不，有时候比我自己写还要慢。因为通过图灵测试容易，通过我的‘审美测试’很难。”&lt;/p&gt;
+&lt;p&gt;前几天，我在构思我的新历史小说的一个关键章节时，和 AI 发生了一场激烈的“争吵”。正是这场争吵，让我意识到：&lt;strong&gt;人机协作的本质，不是它替你干活，而是它陪你打磨。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;一-第一回合平庸的电视剧台词&#34;&gt;一、 第一回合：平庸的“电视剧台词”&lt;/h2&gt;
+&lt;p&gt;当时我想写一场重头戏：一位古代帝王（主角）在朝堂上遭遇臣子逼宫，但他必须在不动声色中掌控全局。&lt;/p&gt;
+&lt;p&gt;我给 AI 的指令很简单：“请写一段帝王面对臣子质疑时的心理描写，要体现出他的霸气和深沉。”&lt;/p&gt;
+&lt;p&gt;AI 很快给出了回复。我读完差点笑了——那是典型的三流古装剧台词。充满了“朕意已决”、“大胆狂徒”这种脸谱化的词汇，心理活动全是“哼，我看你怎么演”这种浅白的吐槽。&lt;/p&gt;
+&lt;p&gt;如果我直接用了这段文字，我的小说就毁了。&lt;/p&gt;
+&lt;h2 id=&#34;二-第二回合即使是-ai也怕较真的产品经理&#34;&gt;二、 第二回合：即使是 AI，也怕“较真”的产品经理&lt;/h2&gt;
+&lt;p&gt;我没有重新生成，而是像一个挑剔的主编一样，开始给它下“修改意见”（或者说是找茬）：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;智通的反馈：&lt;/strong&gt;
+“太肤浅了。把你生成的这段删掉。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;去掉所有形容词：&lt;/strong&gt; 不要用‘霸气’、‘威严’这种词，要用动作细节来表现。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;增加权谋感：&lt;/strong&gt; 他不应该愤怒，他应该觉得好笑。他看到的不是一个臣子在说话，而是一颗棋子在跳动。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加入感官描写：&lt;/strong&gt; 此时大殿很安静，写写他听到的声音，或者手里把玩的东西。”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;AI 沉默了几秒，重新生成了第二版。&lt;/p&gt;
+&lt;p&gt;这一次，它写道：“皇帝轻轻转动着拇指上的玉扳指，听着台下臣子激昂的陈词，嘴角微微上扬……”&lt;/p&gt;
+&lt;p&gt;好了一些，但还是不够。那个“嘴角上扬”太俗套了，那是反派的标准动作，不是帝王的城府。&lt;/p&gt;
+&lt;h2 id=&#34;三-第三回合互相逼迫直至涌现&#34;&gt;三、 第三回合：互相逼迫，直至“涌现”&lt;/h2&gt;
+&lt;p&gt;我继续和它“吵”：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“不要嘴角上扬！那是情绪的泄露。真正的掌控是面无表情。
+让他关注一个不相干的细节，比如大殿地砖上的光影，或者窗外的一声蝉鸣。通过这种‘走神’，来反衬他对局势的绝对把控——因为这些臣子的生死，对他来说还不如一只蝉重要。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这一次，AI 似乎终于“听懂”了我的逻辑。它给出的第三版描述，让我眼前一亮：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“他没有看那位跪地痛哭的御史，目光落在了大殿金砖缝隙里的一粒微尘上。日头偏西，光影把那粒灰尘拉得很长。殿下的声音很嘈杂，但在他耳中，却像隔着一层水的闷响。他甚至有些走神地想：负责打扫今日大殿的那个小太监，大概是要挨板子了。”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这正是我想要的感觉——&lt;strong&gt;举重若轻的残忍，漫不经心的威压。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;四-启示好的答案是磨出来的&#34;&gt;四、 启示：好的答案是“磨”出来的&lt;/h2&gt;
+&lt;p&gt;这场“争吵”持续了二十分钟。如果我自己写，可能也就半小时。但我依然觉得这二十分钟无比超值。&lt;/p&gt;
+&lt;p&gt;为什么？&lt;/p&gt;
+&lt;p&gt;因为在不断驳斥 AI 的过程中，&lt;strong&gt;我自己的创作意图也被逼得越来越清晰。&lt;/strong&gt;
+一开始，我只知道我要“霸气”；
+在反驳它的过程中，我才意识到我真正要的是“举重若轻的残忍”。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不是 AI 给了我灵感，而是为了驳倒它平庸的回答，我被迫调动了更深层的思考。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;五-结语&#34;&gt;五、 结语&lt;/h2&gt;
+&lt;p&gt;在 AI 时代，我们不缺生成内容的工具，缺的是&lt;strong&gt;有品位的把关人&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;如果你用 AI，它给你什么你就收什么，那你迟早会被它同化成一个平庸的复制品。
+只有当你敢于质疑它、否定它、向它提出极其苛刻的要求时，它才会从一个“废话生成器”，变成你真正的“灵感磨刀石”。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不要怕和 AI “吵架”，真理和好作品，往往都在第 N 次修改之后。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>别做“提示词工程师”，要做“AI时代的提问者</title>
       <link>http://localhost:1313/posts/my-second-post/</link>
-      <pubDate>Sun, 26 Jan 2025 20:00:00 +0800</pubDate>
+      <pubDate>Sun, 26 Jan 2025 20:02:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/my-second-post/</guid>
       <description>&lt;p&gt;在过去的一年里，我见过无数人疯狂地收藏各种“AI 咒语大全”——那些长达几千字的 Prompt（提示词）模板，仿佛只要把它们复制粘贴进对话框，AI 就能瞬间吐出完美的方案，把我们从繁重的工作中解救出来。&lt;/p&gt;
 &lt;p&gt;但现实往往是：&lt;strong&gt;你用着和别人一样的神级模板，却只得到了一个平庸的答案。&lt;/strong&gt;&lt;/p&gt;

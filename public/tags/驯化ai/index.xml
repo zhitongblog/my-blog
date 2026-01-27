@@ -6,15 +6,14 @@
     <description>Recent content in 驯化AI on 智通和你一起学AI</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 26 Jan 2025 20:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2025 20:03:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E9%A9%AF%E5%8C%96ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我和 AI “吵”了一架，才写出了满意的方案</title>
       <link>http://localhost:1313/posts/2026-01-26-learn-ai/</link>
-      <pubDate>Sun, 26 Jan 2025 20:00:00 +0800</pubDate>
+      <pubDate>Sun, 26 Jan 2025 20:03:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/2026-01-26-learn-ai/</guid>
-      <description>&lt;p&gt;在上一篇文章里，我谈到了“提问”的重要性。今天，我想更进一步，聊聊**“迭代”**。&lt;/p&gt;
-&lt;p&gt;很多朋友问我：“智通，你用 AI 辅助写作，是不是几分钟就能生成一章？”&lt;/p&gt;
+      <description>&lt;p&gt;很多朋友问我：“智通，你用 AI 辅助写作，是不是几分钟就能生成一章？”&lt;/p&gt;
 &lt;p&gt;我的回答通常让他们失望：“不，有时候比我自己写还要慢。因为通过图灵测试容易，通过我的‘审美测试’很难。”&lt;/p&gt;
 &lt;p&gt;前几天，我在构思我的新历史小说的一个关键章节时，和 AI 发生了一场激烈的“争吵”。正是这场争吵，让我意识到：&lt;strong&gt;人机协作的本质，不是它替你干活，而是它陪你打磨。&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;一-第一回合平庸的电视剧台词&#34;&gt;一、 第一回合：平庸的“电视剧台词”&lt;/h2&gt;
