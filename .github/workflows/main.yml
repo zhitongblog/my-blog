@@ -1,0 +1,33 @@
+name: Daily Gemini Blog Update
+
+on:
+  schedule:
+    - cron: '0 5 * * *' # 每天北京时间早 8 点执行
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install google-generativeai
+
+      - name: Run Gemini Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # 读取你设置的 Secret
+        run: python scripts/update_blog.py
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add content/posts/*.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: daily ai post" && git push)
