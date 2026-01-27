@@ -2,32 +2,54 @@ name: Daily Gemini Blog Update
 
 on:
   schedule:
-    - cron: '0 5 * * *' # 每天北京时间早 8 点执行
+    # 每天北京时间早上 8:00 运行 (UTC 00:00)
+    - cron: '0 5 * * *'
+  # 支持手动点击按钮执行，方便调试
   workflow_dispatch:
 
+# 【关键】赋予机器人写入仓库内容的权限，否则会报 Exit Code 1
+permissions:
+  contents: write
+
 jobs:
-  build:
+  build_and_post:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      # 1. 拉取仓库代码
+      - name: Checkout Code
         uses: actions/checkout@v4
 
+      # 2. 安装 Python 环境
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
+      # 3. 安装 Gemini 官方库
       - name: Install Dependencies
         run: pip install google-generativeai
 
+      # 4. 运行生成文章的脚本
       - name: Run Gemini Script
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # 读取你设置的 Secret
+          # 【关键】确保这里的名字和你 GitHub Secrets 里设置的一模一样
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/update_blog.py
 
-      - name: Commit and Push
+      # 5. 提交并推送新文章
+      - name: Commit and Push Changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          # 配置机器人身份
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 检查是否有新文件产生
           git add content/posts/*.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: daily ai post" && git push)
+          
+          # 【核心逻辑】只有当确实有文件改动时才执行 commit，防止因“无改动”导致的 Exit Code 1
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "chore: 🤖 每日自动更新文章 [$(date +'%Y-%m-%d')]"
+            git push
+          else
+            echo "没有检测到新文章生成，跳过提交。"
+          fi
