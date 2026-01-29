@@ -6,8 +6,69 @@
     <description>Recent content on 智通和你一起学AI</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 27 Jan 2026 11:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jan 2026 12:26:09 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>实战复盘】产品经理写代码是一种什么体验？记我的第一个AI工具开发历程</title>
+      <link>http://localhost:1313/posts/%E5%AE%9E%E6%88%98%E5%A4%8D%E7%9B%98%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%86%99%E4%BB%A3%E7%A0%81%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C%E8%AE%B0%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAai%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91%E5%8E%86%E7%A8%8B/</link>
+      <pubDate>Thu, 29 Jan 2026 12:26:09 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E5%AE%9E%E6%88%98%E5%A4%8D%E7%9B%98%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%86%99%E4%BB%A3%E7%A0%81%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C%E8%AE%B0%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAai%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91%E5%8E%86%E7%A8%8B/</guid>
+      <description>&lt;p&gt;在上一篇文章里，我豪言壮语地说要“Build in Public”。今天，是时候兑现承诺了。&lt;/p&gt;
+&lt;p&gt;作为一名产品经理（PM），我过去的工作是动嘴皮子和画原型图，然后把文档甩给开发。但当我决定做一名“独立开发者”时，我发现——&lt;strong&gt;没人可甩了&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我的第一个练手项目是 &lt;strong&gt;“StoryGlint（小说大纲助手）”&lt;/strong&gt; 的一个核心模块：&lt;strong&gt;角色一致性检查器&lt;/strong&gt;。
+痛点很明确：写长篇小说时，经常写着写着就把配角的瞳色搞错了，或者把反派的性格写崩了。我想做一个工具，能自动扫描章节，对比人设卡，指出不一致的地方。&lt;/p&gt;
+&lt;p&gt;听起来很简单，对吧？
+然而，现实给了我三记响亮的耳光。&lt;/p&gt;
+&lt;h2 id=&#34;第一关不仅要会写代码还要会修环境&#34;&gt;第一关：不仅要会写代码，还要会修环境&lt;/h2&gt;
+&lt;p&gt;我在 Google Cloud 的 &lt;strong&gt;Vertex AI Workbench&lt;/strong&gt; 上搭建了开发环境。我以为有 AI 辅助写代码（Code Generation），我只需要负责复制粘贴。&lt;/p&gt;
+&lt;p&gt;现实是：AI 写的代码是对的，但环境是错的。&lt;/p&gt;
+&lt;p&gt;前几天，在调试 Gemini CLI 工具时，我一直遇到一个诡异的报错：
+&lt;code&gt;TypeError: fetch failed&lt;/code&gt; 以及随后的 &lt;code&gt;400 INVALID_ARGUMENT&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;如果我有技术合伙人，我此时应该在 Slack 上 @他 骂街了。但现在，我只能盯着那个黑底白字的终端发呆。
+我不得不花了一整天时间去查文档、去 Stack Overflow 翻答案，最后发现是 API 调用参数格式的问题，以及本地网络代理的配置冲突。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;启示：&lt;/strong&gt; AI 可以帮你写出逻辑完美的 Python 函数，但它无法帮你解决“网线没插好”这种物理世界的环境问题。作为独立开发者，&lt;strong&gt;Debug 环境的能力比写算法更重要。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第二关数据灾难与时光倒流&#34;&gt;第二关：数据灾难与“时光倒流”&lt;/h2&gt;
+&lt;p&gt;1 月 24 日那天，我经历了一个所有开发者的噩梦：&lt;strong&gt;误删代码&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在一次重构文件目录时，我手滑覆盖了核心的逻辑文件。更糟糕的是，我当时还没来得及推送到 GitHub。
+看着瞬间变空的代码框，我脑子里一片空白。&lt;/p&gt;
+&lt;p&gt;那一刻，我被迫学会了如何使用 Google Cloud 的快照功能。我疯狂地搜索“Vertex AI Workbench restore version”，在经过惊心动魄的半小时操作后，终于把项目回滚到了三天前的版本。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;启示：&lt;/strong&gt; 也是从那天起，我养成了每写完一个功能就 &lt;code&gt;git commit&lt;/code&gt; 的肌肉记忆。&lt;strong&gt;数据备份，是比代码质量更底层的生存法则。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI 创业下半场：为什么“套壳”必死，而“场景”永生？</title>
+      <link>http://localhost:1313/posts/ai-%E5%88%9B%E4%B8%9A%E4%B8%8B%E5%8D%8A%E5%9C%BA%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A5%97%E5%A3%B3%E5%BF%85%E6%AD%BB%E8%80%8C%E5%9C%BA%E6%99%AF%E6%B0%B8%E7%94%9F/</link>
+      <pubDate>Thu, 29 Jan 2026 12:11:15 +0800</pubDate>
+      <guid>http://localhost:1313/posts/ai-%E5%88%9B%E4%B8%9A%E4%B8%8B%E5%8D%8A%E5%9C%BA%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A5%97%E5%A3%B3%E5%BF%85%E6%AD%BB%E8%80%8C%E5%9C%BA%E6%99%AF%E6%B0%B8%E7%94%9F/</guid>
+      <description>&lt;p&gt;在过去的两三年里，AI 创业圈流行着一个残酷的笑话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“你的创业项目很棒，直到 OpenAI 开了一场发布会。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这并非危言耸听。还记得那些主打“PDF 阅读总结”的初创公司吗？当 ChatGPT 上线文档上传功能的那一刻，它们的估值瞬间归零。还记得那些做“AI 视频生成”的小团队吗？Sora 和 Veo 的出现让它们显得像个玩具。&lt;/p&gt;
+&lt;p&gt;这就是 &lt;strong&gt;“套壳（Wrapper）”&lt;/strong&gt; 的宿命。&lt;/p&gt;
+&lt;p&gt;作为一名产品经理，我经常被问到：“智通，现在入局 AI 创业，是不是只能给巨头做嫁衣？”&lt;/p&gt;
+&lt;p&gt;我的答案是：&lt;strong&gt;如果你只是在卖“模型的能力”，你必死无疑；但如果你在卖“解决问题的方案”，这才是黄金时代的开始。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;今天，我想聊聊在 AI 创业的下半场，我们该如何构建真正的护城河。&lt;/p&gt;
+&lt;h2 id=&#34;一-警惕薄层封装陷阱&#34;&gt;一、 警惕“薄层封装”陷阱&lt;/h2&gt;
+&lt;p&gt;什么是“薄层封装”（Thin Wrapper）？
+简单说，就是你的产品核心价值完全来自于调用 API，你只是做了一个 UI 界面（User Interface）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;典型特征：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户输入 -&amp;gt; 你的 Prompt -&amp;gt; GPT 返回 -&amp;gt; 展示给用户。&lt;/li&gt;
+&lt;li&gt;如果 OpenAI 的 API 挂了，你的产品就成了砖头。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;为什么它没有未来？&lt;/strong&gt;
+因为“模型能力”是像电力一样的基础设施。电网公司（OpenAI/Google）会不断降低电费，并提供更稳的电压。如果你只是一个“转售电力的二道贩子”，当电网直接把插座修到用户家里时，你就没有存在的必要了。&lt;/p&gt;
+&lt;h2 id=&#34;二-真正的机会垂直场景vertical-saas&#34;&gt;二、 真正的机会：垂直场景（Vertical SaaS）&lt;/h2&gt;
+&lt;p&gt;巨头的模型是**“通才”&lt;strong&gt;，它们懂莎士比亚，懂量子力学，但它们不懂&lt;/strong&gt;“义乌小商品城的发货流程”&lt;strong&gt;，也不懂&lt;/strong&gt;“中国三甲医院的病历合规标准”**。&lt;/p&gt;
+&lt;p&gt;这，就是创业者的机会。&lt;/p&gt;
+&lt;h3 id=&#34;1-窄度即深度&#34;&gt;1. 窄度即深度&lt;/h3&gt;
+&lt;p&gt;不要做“AI 写作助手”，要做“&lt;strong&gt;跨境电商亚马逊 Listing 优化助手&lt;/strong&gt;”。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;前者&lt;/strong&gt;是红海，你要和微软 Copilot 竞争。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后者&lt;/strong&gt;是蓝海，你需要通过微调（Fine-tuning）让 AI 懂得什么是 A9 算法，什么是高转化率的关键词，什么是违禁词。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;智通心法：&lt;/strong&gt; 你的目标客户越具体，你的 Prompt 和工作流就越难以被通用模型替代。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AI 时代的“一人公司”实战指南：如何用极简配置撬动最大价值</title>
       <link>http://localhost:1313/posts/2026-01-28-use-ai1/</link>

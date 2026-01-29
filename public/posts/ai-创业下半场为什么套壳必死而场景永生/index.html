@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>AI 创业下半场：为什么“套壳”必死，而“场景”永生？ | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="在过去的两三年里，AI 创业圈流行着一个残酷的笑话：
+
+“你的创业项目很棒，直到 OpenAI 开了一场发布会。”
+
+这并非危言耸听。还记得那些主打“PDF 阅读总结”的初创公司吗？当 ChatGPT 上线文档上传功能的那一刻，它们的估值瞬间归零。还记得那些做“AI 视频生成”的小团队吗？Sora 和 Veo 的出现让它们显得像个玩具。
+这就是 “套壳（Wrapper）” 的宿命。
+作为一名产品经理，我经常被问到：“智通，现在入局 AI 创业，是不是只能给巨头做嫁衣？”
+我的答案是：如果你只是在卖“模型的能力”，你必死无疑；但如果你在卖“解决问题的方案”，这才是黄金时代的开始。
+今天，我想聊聊在 AI 创业的下半场，我们该如何构建真正的护城河。
+一、 警惕“薄层封装”陷阱
+什么是“薄层封装”（Thin Wrapper）？
+简单说，就是你的产品核心价值完全来自于调用 API，你只是做了一个 UI 界面（User Interface）。
+典型特征：
+
+用户输入 -&gt; 你的 Prompt -&gt; GPT 返回 -&gt; 展示给用户。
+如果 OpenAI 的 API 挂了，你的产品就成了砖头。
+
+为什么它没有未来？
+因为“模型能力”是像电力一样的基础设施。电网公司（OpenAI/Google）会不断降低电费，并提供更稳的电压。如果你只是一个“转售电力的二道贩子”，当电网直接把插座修到用户家里时，你就没有存在的必要了。
+二、 真正的机会：垂直场景（Vertical SaaS）
+巨头的模型是**“通才”，它们懂莎士比亚，懂量子力学，但它们不懂“义乌小商品城的发货流程”，也不懂“中国三甲医院的病历合规标准”**。
+这，就是创业者的机会。
+1. 窄度即深度
+不要做“AI 写作助手”，要做“跨境电商亚马逊 Listing 优化助手”。
+
+前者是红海，你要和微软 Copilot 竞争。
+后者是蓝海，你需要通过微调（Fine-tuning）让 AI 懂得什么是 A9 算法，什么是高转化率的关键词，什么是违禁词。
+
+智通心法： 你的目标客户越具体，你的 Prompt 和工作流就越难以被通用模型替代。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/ai-%E5%88%9B%E4%B8%9A%E4%B8%8B%E5%8D%8A%E5%9C%BA%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A5%97%E5%A3%B3%E5%BF%85%E6%AD%BB%E8%80%8C%E5%9C%BA%E6%99%AF%E6%B0%B8%E7%94%9F/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/ai-%E5%88%9B%E4%B8%9A%E4%B8%8B%E5%8D%8A%E5%9C%BA%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A5%97%E5%A3%B3%E5%BF%85%E6%AD%BB%E8%80%8C%E5%9C%BA%E6%99%AF%E6%B0%B8%E7%94%9F/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' 
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      AI 创业下半场：为什么“套壳”必死，而“场景”永生？
+    </h1>
+    <div class="post-meta"><span title='2026-01-29 12:11:15.081079 +0800 CST'>January 29, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+            <img loading="eager" src="http://localhost:1313/posts/ai-%E5%88%9B%E4%B8%9A%E4%B8%8B%E5%8D%8A%E5%9C%BA%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A5%97%E5%A3%B3%E5%BF%85%E6%AD%BB%E8%80%8C%E5%9C%BA%E6%99%AF%E6%B0%B8%E7%94%9F/unnamed%20%2824%29.jpg" alt="">
+        
+</figure><div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e4%b8%80-%e8%ad%a6%e6%83%95%e8%96%84%e5%b1%82%e5%b0%81%e8%a3%85%e9%99%b7%e9%98%b1" aria-label="一、 警惕“薄层封装”陷阱">一、 警惕“薄层封装”陷阱</a></li>
+                <li>
+                    <a href="#%e4%ba%8c-%e7%9c%9f%e6%ad%a3%e7%9a%84%e6%9c%ba%e4%bc%9a%e5%9e%82%e7%9b%b4%e5%9c%ba%e6%99%afvertical-saas" aria-label="二、 真正的机会：垂直场景（Vertical SaaS）">二、 真正的机会：垂直场景（Vertical SaaS）</a><ul>
+                        
+                <li>
+                    <a href="#1-%e7%aa%84%e5%ba%a6%e5%8d%b3%e6%b7%b1%e5%ba%a6" aria-label="1. 窄度即深度">1. 窄度即深度</a></li>
+                <li>
+                    <a href="#2-%e7%a7%81%e6%9c%89%e6%95%b0%e6%8d%aeproprietary-data%e6%98%af%e6%a0%b8%e5%bf%83%e5%a3%81%e5%9e%92" aria-label="2. 私有数据（Proprietary Data）是核心壁垒">2. 私有数据（Proprietary Data）是核心壁垒</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e4%b8%89-%e4%bb%8echat%e8%81%8a%e5%a4%a9%e8%bf%9b%e5%8c%96%e5%88%b0agent%e8%a1%8c%e5%8a%a8" aria-label="三、 从“Chat（聊天）”进化到“Agent（行动）”">三、 从“Chat（聊天）”进化到“Agent（行动）”</a></li>
+                <li>
+                    <a href="#%e5%9b%9b-%e5%88%9b%e5%a7%8b%e4%ba%ba-%e5%b8%82%e5%9c%ba%e5%a5%91%e5%90%88%e5%ba%a6founder-market-fit" aria-label="四、 创始人-市场契合度（Founder-Market Fit）">四、 创始人-市场契合度（Founder-Market Fit）</a></li>
+                <li>
+                    <a href="#%e4%ba%94-%e7%bb%93%e8%af%ad" aria-label="五、 结语">五、 结语</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>在过去的两三年里，AI 创业圈流行着一个残酷的笑话：</p>
+<blockquote>
+<p>“你的创业项目很棒，直到 OpenAI 开了一场发布会。”</p>
+</blockquote>
+<p>这并非危言耸听。还记得那些主打“PDF 阅读总结”的初创公司吗？当 ChatGPT 上线文档上传功能的那一刻，它们的估值瞬间归零。还记得那些做“AI 视频生成”的小团队吗？Sora 和 Veo 的出现让它们显得像个玩具。</p>
+<p>这就是 <strong>“套壳（Wrapper）”</strong> 的宿命。</p>
+<p>作为一名产品经理，我经常被问到：“智通，现在入局 AI 创业，是不是只能给巨头做嫁衣？”</p>
+<p>我的答案是：<strong>如果你只是在卖“模型的能力”，你必死无疑；但如果你在卖“解决问题的方案”，这才是黄金时代的开始。</strong></p>
+<p>今天，我想聊聊在 AI 创业的下半场，我们该如何构建真正的护城河。</p>
+<h2 id="一-警惕薄层封装陷阱">一、 警惕“薄层封装”陷阱<a hidden class="anchor" aria-hidden="true" href="#一-警惕薄层封装陷阱">#</a></h2>
+<p>什么是“薄层封装”（Thin Wrapper）？
+简单说，就是你的产品核心价值完全来自于调用 API，你只是做了一个 UI 界面（User Interface）。</p>
+<p><strong>典型特征：</strong></p>
+<ul>
+<li>用户输入 -&gt; 你的 Prompt -&gt; GPT 返回 -&gt; 展示给用户。</li>
+<li>如果 OpenAI 的 API 挂了，你的产品就成了砖头。</li>
+</ul>
+<p><strong>为什么它没有未来？</strong>
+因为“模型能力”是像电力一样的基础设施。电网公司（OpenAI/Google）会不断降低电费，并提供更稳的电压。如果你只是一个“转售电力的二道贩子”，当电网直接把插座修到用户家里时，你就没有存在的必要了。</p>
+<h2 id="二-真正的机会垂直场景vertical-saas">二、 真正的机会：垂直场景（Vertical SaaS）<a hidden class="anchor" aria-hidden="true" href="#二-真正的机会垂直场景vertical-saas">#</a></h2>
+<p>巨头的模型是**“通才”<strong>，它们懂莎士比亚，懂量子力学，但它们不懂</strong>“义乌小商品城的发货流程”<strong>，也不懂</strong>“中国三甲医院的病历合规标准”**。</p>
+<p>这，就是创业者的机会。</p>
+<h3 id="1-窄度即深度">1. 窄度即深度<a hidden class="anchor" aria-hidden="true" href="#1-窄度即深度">#</a></h3>
+<p>不要做“AI 写作助手”，要做“<strong>跨境电商亚马逊 Listing 优化助手</strong>”。</p>
+<ul>
+<li><strong>前者</strong>是红海，你要和微软 Copilot 竞争。</li>
+<li><strong>后者</strong>是蓝海，你需要通过微调（Fine-tuning）让 AI 懂得什么是 A9 算法，什么是高转化率的关键词，什么是违禁词。</li>
+</ul>
+<p><strong>智通心法：</strong> 你的目标客户越具体，你的 Prompt 和工作流就越难以被通用模型替代。</p>
+<h3 id="2-私有数据proprietary-data是核心壁垒">2. 私有数据（Proprietary Data）是核心壁垒<a hidden class="anchor" aria-hidden="true" href="#2-私有数据proprietary-data是核心壁垒">#</a></h3>
+<p>在上一篇文章中我提到过，AI 时代，<strong>数据 &gt; 代码</strong>。
+如果你的产品能够积累用户的私有数据（比如用户的过往交易记录、偏好设置、草稿箱），这些数据反过来会让你的 AI 越来越懂这个用户。</p>
+<p>ChatGPT 就算再强，它也没有用户在你这里留下的历史数据。这就是你的护城河。</p>
+<h2 id="三-从chat聊天进化到agent行动">三、 从“Chat（聊天）”进化到“Agent（行动）”<a hidden class="anchor" aria-hidden="true" href="#三-从chat聊天进化到agent行动">#</a></h2>
+<p>第一波 AI 浪潮是 <strong>Chatbot（聊天机器人）</strong>，你问它答。
+第二波 AI 浪潮是 <strong>Agent（智能体）</strong>，你设定目标，它去干活。</p>
+<p>对于创业者来说，价值在于**“Workflow（工作流）”**的自动化。</p>
+<p><strong>案例对比：</strong></p>
+<ul>
+<li><strong>Level 1 (Chat):</strong> 用户问 AI：“帮我写一封催款邮件。”（价值低）</li>
+<li><strong>Level 2 (Agent):</strong> 用户授权 AI 读取财务软件。AI 自动监测谁逾期了，自动写好邮件，自动发送，并在收到回复后自动更新状态。（价值高）</li>
+</ul>
+<p><strong>不要只生成文本，要去触碰现实世界。</strong> 去连接支付网关，去操作 CRM，去发布 WordPress。只有当你嵌入到用户的**业务流（Business Flow）**中，用户才离不开你。</p>
+<h2 id="四-创始人-市场契合度founder-market-fit">四、 创始人-市场契合度（Founder-Market Fit）<a hidden class="anchor" aria-hidden="true" href="#四-创始人-市场契合度founder-market-fit">#</a></h2>
+<p>最后，我想谈谈人。</p>
+<p>在 AI 创业中，<strong>技术门槛在无限降低，行业认知门槛在无限升高。</strong>
+现在写一个 AI 应用的代码，可能只需要两天。但“知道这个行业哪里痛”，可能需要你在这个行业摸爬滚打五年。</p>
+<p>所以，最好的 AI 创业者，往往不是最懂算法的人，而是<strong>最懂行业的老炮儿</strong>。</p>
+<ul>
+<li>你做过 10 年财务，你才知道发票报销的痛点在哪里。</li>
+<li>你写过 10 本小说，你才知道网文作者卡文的时候真正需要什么（不仅仅是生成文字，而是梳理逻辑）。</li>
+</ul>
+<p><strong>不要因为有了锤子（AI），就满世界找钉子。而是因为你太了解那颗钉子（痛点），终于等来了这把锤子。</strong></p>
+<h2 id="五-结语">五、 结语<a hidden class="anchor" aria-hidden="true" href="#五-结语">#</a></h2>
+<p>AI 并没有让创业变得更容易，它只是让“构建产品”变得更容易了。
+但“构建商业模式”依然像攀登珠峰一样艰难。</p>
+<p>不要迷信大模型的神力。回到商业的本质：<strong>你究竟为谁，解决了什么问题，帮他省了多少钱？</strong></p>
+<p>把这三个问题想清楚，再动手写第一行代码。</p>
+<hr>
+<blockquote>
+<p><strong>我的下一步计划：</strong>
+作为一个正在实践“一人公司”理念的产品经理，我正在孵化一个小型的 AI 工具项目（关于内容创作流）。下一篇文章，我可能会通过“Build in Public（公开构建）”的方式，分享我从 Idea 到 MVP（最小可行性产品）的全过程，包括我踩过的坑。</p>
+</blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

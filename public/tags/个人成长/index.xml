@@ -6,8 +6,70 @@
     <description>Recent content in 个人成长 on 智通和你一起学AI</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 26 Jan 2025 20:50:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jan 2025 20:50:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【AI与古文写作】拒绝“戏说味”：如何用AI还原秦代的“法家冷峻风”</title>
+      <link>http://localhost:1313/posts/2026-01-27-use-ai2/</link>
+      <pubDate>Mon, 27 Jan 2025 20:50:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2026-01-27-use-ai2/</guid>
+      <description>&lt;p&gt;在写历史小说时，很多作者（包括我）都会遇到一个两难的困境：写得太白话，像披着古装的现代人；写得太文言，读者的阅读门槛又太高。&lt;/p&gt;
+&lt;p&gt;尤其是写&lt;strong&gt;秦朝&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;秦代的文风不同于汉赋的华丽，更不同于明清小说的通俗。秦尚法家，文风**“辞意峻激，质朴无华”**。那种透在骨子里的霸道和冷峻，非常难拿捏。&lt;/p&gt;
+&lt;p&gt;今天，作为“AI 与古文”系列的第一期，我做了一个实验：&lt;strong&gt;能不能让 AI 忘掉那些电视剧台词，真正写出“秦风”？&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;一-实验目标&#34;&gt;一、 实验目标&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;场景：&lt;/strong&gt; 秦始皇刚刚统一六国，要颁布“书同文”的诏书。
+&lt;strong&gt;难点：&lt;/strong&gt; 避免出现“奉天承运”（这是明清才有的）、“天下苍生”（太儒家了，秦不吃这一套）等穿越词汇。&lt;/p&gt;
+&lt;h2 id=&#34;二-第一轮测试惨不忍睹的古装剧风&#34;&gt;二、 第一轮测试：惨不忍睹的“古装剧风”&lt;/h2&gt;
+&lt;p&gt;我首先尝试了直接提问（Zero-shot）：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;指令：&lt;/strong&gt; “请模仿秦始皇的语气，写一道推行小篆、统一文字的诏书。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;AI 的回答（节选）：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“朕自登基以来，心系天下苍生。今六国文字混乱，百姓交流不便，朕心甚痛。特此昭告天下，废除六国异文，皆用小篆，以利千秋万代……”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;❌ 智通点评：&lt;/strong&gt;
+这完全是把清宫剧的台词套到了秦始皇头上。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;“心系天下苍生”：&lt;/strong&gt; 这是儒家的仁爱思想，不是法家的逻辑。秦始皇的逻辑应该是“便于统治”、“法令严明”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“朕心甚痛”：&lt;/strong&gt; 始皇帝不会这么情绪化。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;三-第二轮测试投喂语料进行风格迁移&#34;&gt;三、 第二轮测试：投喂“语料”进行风格迁移&lt;/h2&gt;
+&lt;p&gt;为了纠正 AI 的“口音”，我必须给它喂招。我找来了李斯的《谏逐客书》和琅琊台刻石的原文，提取了其中的高频词和句式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优化后的 Prompt（提示词）：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;角色设定：&lt;/strong&gt; 你是秦朝丞相李斯，正在草拟诏书。
+&lt;strong&gt;风格约束：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;参考《琅琊台刻石》的风格：&lt;strong&gt;器械一量，同书文字。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;多用四字短句，语气要&lt;strong&gt;峻急、斩钉截铁&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;核心逻辑是**“法度”&lt;strong&gt;和&lt;/strong&gt;“集权”**，而不是为了“方便百姓”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;禁止词汇：&lt;/strong&gt; 苍生、黎民、福泽。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;推荐词汇：&lt;/strong&gt; 黔首、法度、定极、海内。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;AI 的回答（V2.0）：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“六国既灭，海内定一。然异土异言，文字各别，法令难通，吏治不仅。
+凡大秦疆域之内，无论旧邦新地，皆废六国如蝌蚪之文，独尊小篆。
+敢有私习异文、乱我法度者，以律论罪。
+&lt;strong&gt;器械一量，同书文字。&lt;/strong&gt; 示万世之法，定海内之极。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;✅ 智通点评：&lt;/strong&gt;
+这一次的味道对了八成！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;“海内定一”&lt;/strong&gt;：典型的秦代宏大叙事。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“法令难通，吏治不仅”&lt;/strong&gt;：抓住了秦推行小篆的真实动机——为了行政效率。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;“敢有……以律论罪”&lt;/strong&gt;：这才是法家的铁腕手段，没有任何温情脉脉。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;四-实验结论&#34;&gt;四、 实验结论&lt;/h2&gt;
+&lt;p&gt;通过这次实验，我总结出用 AI 写“古文”的两个核心心法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;去道德化（De-moralization）：&lt;/strong&gt; AI 默认的模型包含太多现代的普世价值（爱、和平、方便）。写历史（特别是乱世或法家时代），必须强制关掉这些“道德滤镜”，回到那个时代的生存逻辑。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关键词锚定（Keyword Anchoring）：&lt;/strong&gt; 不要只说“写古文”，要扔给它具体的“词袋”。比如写秦朝，扔给它“黔首、六合、法度”；写宋朝，扔给它“勾栏、官家、且去”。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
     <item>
       <title>在信息洪流中修筑堤坝：AI时代的深度学习与“数字极简”</title>
       <link>http://localhost:1313/posts/2026-01-26-learn-ai2/</link>
