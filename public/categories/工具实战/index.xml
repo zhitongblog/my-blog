@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>工具实战 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7%E5%AE%9E%E6%88%98/</link>
+    <description>Recent content in 工具实战 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 30 Jan 2026 14:32:34 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%B7%A5%E5%85%B7%E5%AE%9E%E6%88%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【保姆级】人在国内，0门槛开通新加坡 OCBC 银行卡：全网最全避坑指南</title>
+      <link>http://localhost:1313/posts/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87claude-code-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E7%9C%9F%E6%AD%A3%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%A7%E5%93%81%E8%AF%A6%E8%A7%A3%E4%BB%8E%E5%8E%9F%E7%90%86%E5%88%B0%E5%AE%9E%E8%B7%B5%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Fri, 30 Jan 2026 14:32:34 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87claude-code-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E7%9C%9F%E6%AD%A3%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%A7%E5%93%81%E8%AF%A6%E8%A7%A3%E4%BB%8E%E5%8E%9F%E7%90%86%E5%88%B0%E5%AE%9E%E8%B7%B5%E7%9A%84%E5%85%A8%E9%9D%A2%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;p&gt;作为一名身在国内的产品经理，我深知“拥有一张海外银行卡”对我们意味着什么。&lt;/p&gt;
+&lt;p&gt;它是我们订阅 &lt;strong&gt;ChatGPT Plus / Claude Pro&lt;/strong&gt; 的通行证，是接收 &lt;strong&gt;Stripe / App Store&lt;/strong&gt; 美元收入的蓄水池，更是我们在全球化浪潮中配置资产的必需品。&lt;/p&gt;
+&lt;p&gt;但在过去，要想拥有一张正规的离岸账户，要么得存几十万买理财（如汇丰），要么得肉身飞一趟香港或新加坡。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;好消息是：现在有一个巨大的“上帝漏洞”——新加坡 OCBC（华侨银行）。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;哪怕你此刻正坐在北京的办公室里，穿着拖鞋，只要你有护照，15 分钟内你就能拥有一个新加坡账户。&lt;/p&gt;
+&lt;p&gt;今天，我就手把手教你如何“薅”这个羊毛，以及如何避开那些隐蔽的“管理费”大坑。&lt;/p&gt;
+&lt;h2 id=&#34;一-ocbc-是什么靠谱吗&#34;&gt;一、 OCBC 是什么？靠谱吗？&lt;/h2&gt;
+&lt;p&gt;很多朋友一听到“网申”，第一反应是：这是不是那种野鸡虚拟银行？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;绝对不是。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;地位：&lt;/strong&gt; OCBC 是新加坡第二大银行，东南亚第二大金融集团，评级（AA-）比国内很多股份制银行都要高。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全：&lt;/strong&gt; 你的钱是受**新加坡存款保险（SDIC）**保障的（最高 7.5 万新币，约合 40 万人民币）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性质：&lt;/strong&gt; 你申请到的是&lt;strong&gt;正规实体银行账户&lt;/strong&gt;，有独立的 Swift Code 和银行账号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;二-谁能申请门槛极低&#34;&gt;二、 谁能申请？（门槛极低）&lt;/h2&gt;
+&lt;p&gt;这就是我说的“漏洞”所在。目前 OCBC 对中国大陆用户的政策友好得令人发指。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;硬性条件只有 3 个：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;中国护照&lt;/strong&gt;（有效期 6 个月以上）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中国身份证&lt;/strong&gt;（二代）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一台带 NFC 功能的手机&lt;/strong&gt;（大部分 iPhone 和近 3 年的安卓机都有，用于感应读取护照芯片）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;不需要&lt;/strong&gt;长期签证，&lt;strong&gt;不需要&lt;/strong&gt;新加坡地址，&lt;strong&gt;不需要&lt;/strong&gt;存款证明。&lt;/p&gt;
+&lt;h2 id=&#34;三-费用详解全网最强避坑&#34;&gt;三、 费用详解（全网最强避坑）&lt;/h2&gt;
+&lt;p&gt;虽然&lt;strong&gt;开户免费&lt;/strong&gt;，但作为一家老牌资本主义银行，OCBC 的收费名目繁多。如果不注意，你的钱会被慢慢扣光。&lt;/p&gt;
+&lt;p&gt;请务必看懂下面这段**“智通保号秘籍”**。&lt;/p&gt;
+&lt;h3 id=&#34;1-默认账户的管理费陷阱&#34;&gt;1. 默认账户的“管理费”陷阱&lt;/h3&gt;
+&lt;p&gt;当你开户成功后，系统默认给你开通的是 &lt;strong&gt;Statement Savings Account (SSA)&lt;/strong&gt;，通常也叫 &lt;strong&gt;360 账户&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

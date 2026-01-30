@@ -148,5 +148,68 @@
       <guid>http://localhost:1313/tags/%E6%84%9F%E6%82%9F/</guid>
       <description></description>
     </item>
+    <item>
+      <title>ChatGPT Plus</title>
+      <link>http://localhost:1313/tags/chatgpt-plus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/chatgpt-plus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude</title>
+      <link>http://localhost:1313/tags/claude/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/claude/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cursor</title>
+      <link>http://localhost:1313/tags/cursor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cursor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OCBC</title>
+      <link>http://localhost:1313/tags/ocbc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ocbc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PM转型</title>
+      <link>http://localhost:1313/tags/pm%E8%BD%AC%E5%9E%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/pm%E8%BD%AC%E5%9E%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>低代码</title>
+      <link>http://localhost:1313/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>全栈开发</title>
+      <link>http://localhost:1313/tags/%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>海外账户</title>
+      <link>http://localhost:1313/tags/%E6%B5%B7%E5%A4%96%E8%B4%A6%E6%88%B7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E6%B5%B7%E5%A4%96%E8%B4%A6%E6%88%B7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>跨境支付</title>
+      <link>http://localhost:1313/tags/%E8%B7%A8%E5%A2%83%E6%94%AF%E4%BB%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E8%B7%A8%E5%A2%83%E6%94%AF%E4%BB%98/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
