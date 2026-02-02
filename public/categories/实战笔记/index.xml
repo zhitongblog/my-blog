@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>实战笔记 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 实战笔记 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 02 Feb 2026 15:30:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从 0 到 1：如何通过 MVP 真正验证你的核心假设？</title>
+      <link>http://localhost:1313/posts/mvp-validation/</link>
+      <pubDate>Mon, 02 Feb 2026 15:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/mvp-validation/</guid>
+      <description>&lt;p&gt;在产品初期，最危险的不是“功能做不完”，而是“做了一堆没人要的功能”。&lt;/p&gt;
+&lt;p&gt;很多 PM 对 &lt;strong&gt;MVP (Minimum Viable Product, 最小可行性产品)&lt;/strong&gt; 有误解，认为它只是“初级版”或“简陋版”。但实际上，MVP 的核心不在于 &lt;strong&gt;Product&lt;/strong&gt;，而在于 &lt;strong&gt;Validation (验证)&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;什么是-mvp-的本质&#34;&gt;什么是 MVP 的本质？&lt;/h2&gt;
+&lt;p&gt;MVP 不是把一个大蛋糕切下一块给用户吃，而是为了验证“用户是否喜欢甜食”。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;核心逻辑：&lt;/strong&gt;
+提出假设 -&amp;gt; 设定指标 -&amp;gt; 最小成本实验 -&amp;gt; 获取反馈 -&amp;gt; 迭代或放弃。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;验证核心假设的三个步骤&#34;&gt;验证核心假设的三个步骤&lt;/h2&gt;
+&lt;h3 id=&#34;1-识别最危险的假设&#34;&gt;1. 识别“最危险”的假设&lt;/h3&gt;
+&lt;p&gt;不要先去验证登录注册流，而要验证：&lt;strong&gt;用户真的愿意为解决这个问题付费/花时间吗？&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;需求假设：&lt;/strong&gt; 这个痛点真实存在吗？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;价值假设：&lt;/strong&gt; 我们的解决方案能提供足够的价值吗？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-选择合适的-mvp-类型&#34;&gt;2. 选择合适的 MVP 类型&lt;/h3&gt;
+&lt;p&gt;MVP 不一定要写代码，根据验证目的不同，可以分为以下几类：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;类型&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;说明&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;适用场景&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;冒烟测试 (Smoke Test)&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;一个简单的 Landing Page，观察点击率。&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;验证市场需求热度&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;礼宾部 MVP (Concierge)&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;人工手动执行后台逻辑。&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;验证服务流程的可行性&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;绿野仙踪 MVP (Wizard of Oz)&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;前端看起来是自动的，后台其实是人工。&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;验证复杂的算法或 AI 逻辑&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;单功能 MVP&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;只做一个最核心的功能。&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;验证核心交互和留存&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;3-定义成功失败的度量标准&#34;&gt;3. 定义成功/失败的度量标准&lt;/h3&gt;
+&lt;p&gt;在开始实验前，必须设定一个硬性指标。例如：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
