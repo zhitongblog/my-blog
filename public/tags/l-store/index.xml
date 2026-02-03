@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>L-Store on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/l-store/</link>
+    <description>Recent content in L-Store on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 02 Feb 2026 16:15:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/l-store/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【产品规划】L-Store：专注 .deb 生态的 Linux 应用分发引擎</title>
+      <link>http://localhost:1313/posts/linspire-product-roadmap/</link>
+      <pubDate>Mon, 02 Feb 2026 16:15:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/linspire-product-roadmap/</guid>
+      <description>&lt;h2 id=&#34;项目背景为什么坚持-deb&#34;&gt;项目背景：为什么坚持 .deb？&lt;/h2&gt;
+&lt;p&gt;在 Linux 领域，&lt;code&gt;.deb&lt;/code&gt; 格式拥有最广泛的兼容性和最成熟的社区积累。通过专注 .deb，我们可以实现：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;极致的安装速度&lt;/strong&gt;：原生包管理，无冗余运行时。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;深度的系统集成&lt;/strong&gt;：更好的权限管理与桌面通知适配。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;精准的依赖处理&lt;/strong&gt;：利用 &lt;code&gt;apt&lt;/code&gt; 的强大能力，解决库冲突。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;一-产品架构设计-architecture&#34;&gt;一、 产品架构设计 (Architecture)&lt;/h2&gt;
+&lt;p&gt;为了实现共创，我们将 L-Store 拆分为三个核心模块：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;L-Client (客户端)&lt;/strong&gt;：使用 Rust + GTK4 开发，负责 UI 展现和本地 &lt;code&gt;dpkg/apt&lt;/code&gt; 指令调度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L-Repo (云端仓库)&lt;/strong&gt;：一个去中心化的 .deb 索引服务器，记录软件包元数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;L-Builder (开发者工具)&lt;/strong&gt;：帮助开发者一键将源码打包为标准 .deb。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二-三阶段路线图-roadmap&#34;&gt;二、 三阶段路线图 (Roadmap)&lt;/h2&gt;
+&lt;h3 id=&#34;第一阶段种子期-m1-m2---打通闭环&#34;&gt;第一阶段：种子期 (M1-M2) - “打通闭环”&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;核心目标&lt;/strong&gt;：实现一个能搜索、能下载、能安装本地 .deb 的极简商店。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;功能点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;基础 UI 框架（侧边栏、搜索框、详情页）。&lt;/li&gt;
+&lt;li&gt;本地 &lt;code&gt;.deb&lt;/code&gt; 文件关联打开与安装。&lt;/li&gt;
+&lt;li&gt;集成 &lt;code&gt;apt-get&lt;/code&gt; 基础更新功能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;共创任务&lt;/strong&gt;：征集 10 个最常用的非官方 .deb 应用名单进行首批入驻测试。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;第二阶段成长期-m3-m5---生态赋能&#34;&gt;第二阶段：成长期 (M3-M5) - “生态赋能”&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;核心目标&lt;/strong&gt;：引入开发者自上架系统和社区评分。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;功能点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;L-Sign 机制&lt;/strong&gt;：为第三方 deb 包提供开发者签名验证，确保安全。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;差分更新&lt;/strong&gt;：通过算法只下载变动部分，节省流量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;社区评论区&lt;/strong&gt;：支持 Markdown 格式的用户评测。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;共创任务&lt;/strong&gt;：邀请开发者测试“一键上传”后台，收集交互建议。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;第三阶段成熟期-m6---价值闭环&#34;&gt;第三阶段：成熟期 (M6+) - “价值闭环”&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;核心目标&lt;/strong&gt;：商业化尝试与多端联动。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;功能点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;应用订阅制支持&lt;/strong&gt;：为付费软件提供 License 激活服务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;系统快照集成&lt;/strong&gt;：安装前自动创建 Timeshift 快照，防止系统崩溃。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跨设备同步&lt;/strong&gt;：同步已安装的应用列表。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;三-deb-仓库管理策略&#34;&gt;三、 .deb 仓库管理策略&lt;/h2&gt;
+&lt;p&gt;为了保证网站（商店）内全是 .deb 包，我们将采取以下技术手段：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
