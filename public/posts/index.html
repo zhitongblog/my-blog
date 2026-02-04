@@ -143,6 +143,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">【架构选型】L-Store 应该用 Rust 还是 C&#43;&#43;？一场关于安全与性能的博弈
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、 核心维度深度对比 1. 内存安全性 (Memory Safety) C&#43;&#43;：拥有极高的自由度，但手动管理内存容易导致缓冲区溢出或野指针。对于一个需要处理第三方软件包（可能存在恶意构造）的商店来说，这是一个潜在的安全隐患。 Rust：其核心卖点是“所有权系统”。在编译阶段就能杜绝内存泄漏和并发竞争。 PM 视角：这意味着我们的 App Store 会更少崩溃，安全性更高，尤其是在处理高权限操作时。 2. UI 框架兼容性 (UI Toolkit Integration) C&#43;&#43;：与 Qt 是天生一对。如果你想做一个像 KDE 一样华丽、功能极其复杂的商店，C&#43;&#43; &#43; Qt 是目前最成熟的方案。 Rust：通过 gtk-rs 与 GTK4/Libadwaita 配合得越来越完美。它是 GNOME 生态目前极力推崇的方案。 现状：目前主流的 Linux 新生代应用（如 Fragments, Shortwave）都在向 Rust &#43; GTK4 靠拢。 3. 开发效率与社区贡献 C&#43;&#43;：虽然人才多，但现代 C&#43;&#43; 的包管理（vcpkg/conan）依然不如 Rust 的 Cargo 好用。 Rust：Cargo 是目前世界上最好用的包管理工具之一。这对于“共创”项目至关重要——新开发者只需要几秒钟就能配置好开发环境。 二、 性能与打包体积 在 Linux 环境下，用户对“轻量化”有着近乎执着的追求。
+维度 C&#43;&#43; (Qt6) Rust (GTK4) 启动速度 极快 极快 冷启动内存占用 约 40MB-60MB 约 20MB-40MB 静态链接体积 较大 (包含 Qt 库) 适中 依赖链 依赖系统 Qt 环境 依赖系统 GTK 库 三、 为什么我倾向于 Rust？ 作为本项目的发起人，我初步倾向于选择 Rust &#43; GTK4，理由如下：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-04 10:30:00 +0800 CST'>February 4, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 【架构选型】L-Store 应该用 Rust 还是 C&#43;&#43;？一场关于安全与性能的博弈" href="http://localhost:1313/posts/tech-selection-rust-vs-cpp/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">【产品规划】L-Store：专注 .deb 生态的 Linux 应用分发引擎
     </h2>
   </header>
@@ -338,35 +352,6 @@ AI 默认的“豪放”，往往等于“喊口号”。但真正的豪放，�
   </div>
   <footer class="entry-footer"><span title='2026-01-26 09:30:00 +0800 CST'>January 26, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>智通</span></footer>
   <a class="entry-link" aria-label="post link to 【AI与古文·02】当AI遇上辛弃疾：如何用算法算出“醉里挑灯看剑”的悲凉？" href="http://localhost:1313/posts/2026-01-27-use-ai3/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">【AI与古文写作】拒绝“戏说味”：如何用AI还原秦代的“法家冷峻风”
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>在写历史小说时，很多作者（包括我）都会遇到一个两难的困境：写得太白话，像披着古装的现代人；写得太文言，读者的阅读门槛又太高。
-尤其是写秦朝。
-秦代的文风不同于汉赋的华丽，更不同于明清小说的通俗。秦尚法家，文风**“辞意峻激，质朴无华”**。那种透在骨子里的霸道和冷峻，非常难拿捏。
-今天，作为“AI 与古文”系列的第一期，我做了一个实验：能不能让 AI 忘掉那些电视剧台词，真正写出“秦风”？
-一、 实验目标 场景： 秦始皇刚刚统一六国，要颁布“书同文”的诏书。 难点： 避免出现“奉天承运”（这是明清才有的）、“天下苍生”（太儒家了，秦不吃这一套）等穿越词汇。
-二、 第一轮测试：惨不忍睹的“古装剧风” 我首先尝试了直接提问（Zero-shot）：
-指令： “请模仿秦始皇的语气，写一道推行小篆、统一文字的诏书。”
-AI 的回答（节选）：
-“朕自登基以来，心系天下苍生。今六国文字混乱，百姓交流不便，朕心甚痛。特此昭告天下，废除六国异文，皆用小篆，以利千秋万代……”
-❌ 智通点评： 这完全是把清宫剧的台词套到了秦始皇头上。
-“心系天下苍生”： 这是儒家的仁爱思想，不是法家的逻辑。秦始皇的逻辑应该是“便于统治”、“法令严明”。 “朕心甚痛”： 始皇帝不会这么情绪化。 三、 第二轮测试：投喂“语料”进行风格迁移 为了纠正 AI 的“口音”，我必须给它喂招。我找来了李斯的《谏逐客书》和琅琊台刻石的原文，提取了其中的高频词和句式。
-优化后的 Prompt（提示词）：
-角色设定： 你是秦朝丞相李斯，正在草拟诏书。 风格约束：
-参考《琅琊台刻石》的风格：器械一量，同书文字。 多用四字短句，语气要峻急、斩钉截铁。 核心逻辑是**“法度”和“集权”**，而不是为了“方便百姓”。 禁止词汇： 苍生、黎民、福泽。 推荐词汇： 黔首、法度、定极、海内。 AI 的回答（V2.0）：
-“六国既灭，海内定一。然异土异言，文字各别，法令难通，吏治不仅。 凡大秦疆域之内，无论旧邦新地，皆废六国如蝌蚪之文，独尊小篆。 敢有私习异文、乱我法度者，以律论罪。 器械一量，同书文字。 示万世之法，定海内之极。”
-✅ 智通点评： 这一次的味道对了八成！
-“海内定一”：典型的秦代宏大叙事。 “法令难通，吏治不仅”：抓住了秦推行小篆的真实动机——为了行政效率。 “敢有……以律论罪”：这才是法家的铁腕手段，没有任何温情脉脉。 四、 实验结论 通过这次实验，我总结出用 AI 写“古文”的两个核心心法：
-去道德化（De-moralization）： AI 默认的模型包含太多现代的普世价值（爱、和平、方便）。写历史（特别是乱世或法家时代），必须强制关掉这些“道德滤镜”，回到那个时代的生存逻辑。 关键词锚定（Keyword Anchoring）： 不要只说“写古文”，要扔给它具体的“词袋”。比如写秦朝，扔给它“黔首、六合、法度”；写宋朝，扔给它“勾栏、官家、且去”。 </p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-27 20:50:00 +0800 CST'>January 27, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 【AI与古文写作】拒绝“戏说味”：如何用AI还原秦代的“法家冷峻风”" href="http://localhost:1313/posts/2026-01-27-use-ai2/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -6,8 +6,75 @@
     <description>Recent content in Posts on 智通和你一起学AI</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 02 Feb 2026 16:15:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 Feb 2026 10:30:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【架构选型】L-Store 应该用 Rust 还是 C&#43;&#43;？一场关于安全与性能的博弈</title>
+      <link>http://localhost:1313/posts/tech-selection-rust-vs-cpp/</link>
+      <pubDate>Wed, 04 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/tech-selection-rust-vs-cpp/</guid>
+      <description>&lt;h2 id=&#34;一-核心维度深度对比&#34;&gt;一、 核心维度深度对比&lt;/h2&gt;
+&lt;h3 id=&#34;1-内存安全性-memory-safety&#34;&gt;1. 内存安全性 (Memory Safety)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C++&lt;/strong&gt;：拥有极高的自由度，但手动管理内存容易导致缓冲区溢出或野指针。对于一个需要处理第三方软件包（可能存在恶意构造）的商店来说，这是一个潜在的安全隐患。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rust&lt;/strong&gt;：其核心卖点是“所有权系统”。在编译阶段就能杜绝内存泄漏和并发竞争。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PM 视角&lt;/strong&gt;：这意味着我们的 App Store 会更少崩溃，安全性更高，尤其是在处理高权限操作时。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-ui-框架兼容性-ui-toolkit-integration&#34;&gt;2. UI 框架兼容性 (UI Toolkit Integration)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C++&lt;/strong&gt;：与 &lt;strong&gt;Qt&lt;/strong&gt; 是天生一对。如果你想做一个像 KDE 一样华丽、功能极其复杂的商店，C++ + Qt 是目前最成熟的方案。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rust&lt;/strong&gt;：通过 &lt;code&gt;gtk-rs&lt;/code&gt; 与 &lt;strong&gt;GTK4/Libadwaita&lt;/strong&gt; 配合得越来越完美。它是 GNOME 生态目前极力推崇的方案。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;现状&lt;/strong&gt;：目前主流的 Linux 新生代应用（如 Fragments, Shortwave）都在向 Rust + GTK4 靠拢。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-开发效率与社区贡献&#34;&gt;3. 开发效率与社区贡献&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C++&lt;/strong&gt;：虽然人才多，但现代 C++ 的包管理（vcpkg/conan）依然不如 Rust 的 &lt;strong&gt;Cargo&lt;/strong&gt; 好用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rust&lt;/strong&gt;：Cargo 是目前世界上最好用的包管理工具之一。这对于“共创”项目至关重要——新开发者只需要几秒钟就能配置好开发环境。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二-性能与打包体积&#34;&gt;二、 性能与打包体积&lt;/h2&gt;
+&lt;p&gt;在 Linux 环境下，用户对“轻量化”有着近乎执着的追求。&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;维度&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;C++ (Qt6)&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;Rust (GTK4)&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;启动速度&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;极快&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;极快&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;冷启动内存占用&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;约 40MB-60MB&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;约 20MB-40MB&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;静态链接体积&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;较大 (包含 Qt 库)&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;适中&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;依赖链&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;依赖系统 Qt 环境&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;依赖系统 GTK 库&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;三-为什么我倾向于-rust&#34;&gt;三、 为什么我倾向于 Rust？&lt;/h2&gt;
+&lt;p&gt;作为本项目的发起人，我初步倾向于选择 &lt;strong&gt;Rust + GTK4&lt;/strong&gt;，理由如下：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>【产品规划】L-Store：专注 .deb 生态的 Linux 应用分发引擎</title>
       <link>http://localhost:1313/posts/linspire-product-roadmap/</link>
