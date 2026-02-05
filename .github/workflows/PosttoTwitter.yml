@@ -13,34 +13,62 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Get latest post info
-        id: post_info
-        run: |
-          # 查找 content/posts/ 目录下新增或修改的 .md 文件
-          FILE=$(git diff --name-only HEAD^ HEAD | grep 'content/posts/.*\.md' | head -n 1)
-          
-          if [ -z "$FILE" ]; then
-            echo "未检测到新文章提交，跳过发帖。"
-            exit 0
-          fi
-          
-          # 提取标题并处理引号
-          TITLE=$(grep '^title: ' "$FILE" | head -1 | sed 's/title: //;s/"//g;s/'\''//g')
-          
-          # 获取文件名作为 Slug
-          SLUG=$(basename "$FILE" .md)
-          URL="https://zhitong.uk/posts/$SLUG/"
-          
-          echo "tweet_text=$TITLE $URL" >> $GITHUB_OUTPUT
-          echo "准备发布的推文: $TITLE $URL"
-
-      - name: Send Tweet
-        if: steps.post_info.outputs.tweet_text != ''
-        # 使用这个更稳定的 Action
-        uses: bluebird-back/twitter-post-action@v1
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          twitter_consumer_key: ${{ secrets.TWITTER_CONSUMER_KEY }}
-          twitter_consumer_secret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
-          twitter_access_token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          twitter_access_token_secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
-          twitter_status: ${{ steps.post_info.outputs.tweet_text }}
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install tweepy
+
+      - name: Get latest post and Tweet
+        env:
+          TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        run: |
+          python - <<EOF
+          import os
+          import tweepy
+          import subprocess
+
+          # 1. 获取变更文件
+          try:
+              diff = subprocess.check_output(['git', 'diff', '--name-only', 'HEAD^', 'HEAD']).decode('utf-8')
+              files = [f for f in diff.split('\n') if f.startswith('content/posts/') and f.endswith('.md')]
+              if not files:
+                  print("未发现新文章。")
+                  exit(0)
+              
+              target_file = files[0]
+              print(f"检测到新文件: {target_file}")
+
+              # 2. 提取标题
+              title = ""
+              with open(target_file, 'r', encoding='utf-8') as f:
+                  for line in f:
+                      if line.startswith('title:'):
+                          title = line.replace('title:', '').strip().strip('"').strip("'")
+                          break
+              
+              # 3. 构造 URL (请确保域名正确)
+              slug = os.path.basename(target_file).replace('.md', '')
+              url = f"https://zhitong.uk/posts/{slug}/"
+              tweet_content = f"{title} {url}"
+              print(f"即将发布: {tweet_content}")
+
+              # 4. 调用 Twitter API v2 发帖
+              client = tweepy.Client(
+                  consumer_key=os.environ['TWITTER_CONSUMER_KEY'],
+                  consumer_secret=os.environ['TWITTER_CONSUMER_SECRET'],
+                  access_token=os.environ['TWITTER_ACCESS_TOKEN'],
+                  access_token_secret=os.environ['TWITTER_ACCESS_TOKEN_SECRET']
+              )
+              client.create_tweet(text=tweet_content)
+              print("推文发布成功！")
+
+          except Exception as e:
+              print(f"发生错误: {e}")
+              exit(1)
+          EOF
