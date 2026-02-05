@@ -16,31 +16,31 @@ jobs:
       - name: Get latest post info
         id: post_info
         run: |
-          # 查找 content/posts/ 目录下新增的 .md 文件
+          # 查找 content/posts/ 目录下新增或修改的 .md 文件
           FILE=$(git diff --name-only HEAD^ HEAD | grep 'content/posts/.*\.md' | head -n 1)
           
           if [ -z "$FILE" ]; then
-            echo "未检测到新文章提交。"
+            echo "未检测到新文章提交，跳过发帖。"
             exit 0
           fi
           
-          # 提取标题 (假设 frontmatter 格式为 title: "xxx")
-          TITLE=$(grep '^title: ' "$FILE" | head -1 | sed 's/title: //;s/"//g;s/ //')
+          # 提取标题并处理引号
+          TITLE=$(grep '^title: ' "$FILE" | head -1 | sed 's/title: //;s/"//g;s/'\''//g')
           
-          # 构造 URL (请将 zhitong.uk 换成你的实际域名)
+          # 获取文件名作为 Slug
           SLUG=$(basename "$FILE" .md)
           URL="https://zhitong.uk/posts/$SLUG/"
           
           echo "tweet_text=$TITLE $URL" >> $GITHUB_OUTPUT
-          echo "即将发布的推文内容: $TITLE $URL"
+          echo "准备发布的推文: $TITLE $URL"
 
       - name: Send Tweet
         if: steps.post_info.outputs.tweet_text != ''
-        uses: rtCamp/action-tweet@v1
-        env:
-          # 注意：这个 Action 必须使用 env 且参数名必须为小写
-          status: ${{ steps.post_info.outputs.tweet_text }}
-          api_key: ${{ secrets.TWITTER_CONSUMER_KEY }}
-          api_key_secret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
-          access_token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          access_token_secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        # 使用这个更稳定的 Action
+        uses: bluebird-back/twitter-post-action@v1
+        with:
+          twitter_consumer_key: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          twitter_consumer_secret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          twitter_access_token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          twitter_access_token_secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          twitter_status: ${{ steps.post_info.outputs.tweet_text }}
