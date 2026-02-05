@@ -1,0 +1,39 @@
+name: Post to Twitter
+on:
+  push:
+    branches: [ main ] # 当你推送新文章到主分支时触发
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # 需获取前一次提交以对比变化
+
+      - name: Get latest post info
+        id: post_info
+        run: |
+          # 寻找 content/posts 目录下新增加的 md 文件 (根据你的路径修改)
+          FILE=$(git diff --name-only HEAD^ HEAD | grep 'content/posts/.*\.md' | head -n 1)
+          if [ -z "$FILE" ]; then
+            echo "No new post found."
+            exit 0
+          fi
+          # 提取标题（假设在 frontmatter 中）
+          TITLE=$(grep '^title: ' "$FILE" | head -1 | sed 's/title: //;s/"//g')
+          # 构造 URL (根据你的域名规则)
+          SLUG=$(basename "$FILE" .md)
+          URL="https://你的域名.com/posts/$SLUG/"
+          echo "tweet_text=$TITLE $URL" >> $GITHUB_OUTPUT
+
+      - name: Send Tweet
+        if: steps.post_info.outputs.tweet_text != ''
+        uses: ethinkers/post-tweet-action@v1
+        with:
+          status: ${{ steps.post_info.outputs.tweet_text }}
+          consumer-key: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          consumer-secret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
