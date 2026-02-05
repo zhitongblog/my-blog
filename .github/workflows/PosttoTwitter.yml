@@ -28,12 +28,12 @@ jobs:
           URL="https://你的域名.com/posts/$SLUG/"
           echo "tweet_text=$TITLE $URL" >> $GITHUB_OUTPUT
 
-      - name: Send Tweet
+- name: Send Tweet
         if: steps.post_info.outputs.tweet_text != ''
-        uses: ethinkers/post-tweet-action@v1
-        with:
+        uses: rtCamp/action-tweet@v1
+        env:
           status: ${{ steps.post_info.outputs.tweet_text }}
-          consumer-key: ${{ secrets.TWITTER_CONSUMER_KEY }}
-          consumer-secret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
-          access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          api_key: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          api_key_secret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          access_token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          access_token_secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
