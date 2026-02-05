@@ -6,8 +6,59 @@
     <description>Recent content in Posts on 智通和你一起学AI</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 05 Feb 2026 12:43:06 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Feb 2026 14:37:12 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从SK海力士近30倍奖金，看2026年AI产品经理的掘金路径</title>
+      <link>http://localhost:1313/posts/2026-02-05-%E4%BB%8Esk%E6%B5%B7%E5%8A%9B%E5%A3%AB%E8%BF%9130%E5%80%8D%E5%A5%96%E9%87%91-%E7%9C%8B2026%E5%B9%B4ai%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84%E6%8E%98%E9%87%91%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Thu, 05 Feb 2026 14:37:12 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-05-%E4%BB%8Esk%E6%B5%B7%E5%8A%9B%E5%A3%AB%E8%BF%9130%E5%80%8D%E5%A5%96%E9%87%91-%E7%9C%8B2026%E5%B9%B4ai%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84%E6%8E%98%E9%87%91%E8%B7%AF%E5%BE%84/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/2026-02-05-%E4%BB%8Esk%E6%B5%B7%E5%8A%9B%E5%A3%AB%E8%BF%9130%E5%80%8D%E5%A5%96%E9%87%91-%E7%9C%8B2026%E5%B9%B4ai%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84%E6%8E%98%E9%87%91%E8%B7%AF%E5%BE%84/featured.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;从sk海力士近30倍奖金看2026年ai产品经理的掘金路径&#34;&gt;从SK海力士近30倍奖金，看2026年AI产品经理的掘金路径&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;日期：2026-02-05&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2026年的春节刚过，科技圈就被一则薪酬消息炸醒了。韩国存储芯片巨头SK海力士宣布，向员工发放巨额奖金，部分员工拿到手的金额甚至接近年薪的30倍（按月基薪计算的极致绩效倍数）。&lt;/p&gt;
+&lt;p&gt;这笔“泼天富贵”的背后逻辑很简单：AI算力需求在2026年依然狂飙，作为英伟达HBM（高带宽内存）的核心供应商，SK海力士躺在了金矿上。&lt;/p&gt;
+&lt;p&gt;看着硬件厂商赚得盆满钵满，处于应用层的产品经理们（PM）难免焦虑。我们没有HBM的技术壁垒，也没赶上芯片制造的风口。但在2026年这个“马年”，AI行业已经从“大模型军备竞赛”进入了“应用落地与具身智能”的深水区。&lt;/p&gt;
+&lt;p&gt;作为产品经理，如果不希望在35岁前被优化，而是像新闻里那位“96年女生月入百万宣布30岁退休”一样掌握主动权，就必须看清2026年的三大掘金路径。&lt;/p&gt;
+&lt;h3 id=&#34;一-具身智能爆发从屏幕pm转型空间pm&#34;&gt;一、 具身智能爆发：从“屏幕PM”转型“空间PM”&lt;/h3&gt;
+&lt;p&gt;如果说2023-2024是LLM（大语言模型）的元年，那么2026年绝对是具身智能（Embodied AI）的爆发年。&lt;/p&gt;
+&lt;p&gt;就在最近，沉寂许久的贾跃亭再次杀回视野，发布了起售价19990美元的人形机器人。不管你是否看好他的商业信誉，但这一价格点不仅击穿了行业底线，更释放了一个强烈信号：&lt;strong&gt;AI正在长出“手脚”，走出屏幕，进入物理世界。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对于产品经理而言，这是一个巨大的范式转移。&lt;/p&gt;
+&lt;p&gt;过去十年，PM的工作核心是“屏幕交互”——设计App界面、优化点击率、调整文字排版。但在2026年，随着人形机器人和智能硬件的普及，PM需要进化为“空间PM”：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;理解多模态感知&lt;/strong&gt;：你不再只是处理文本输入，而是要处理视觉、听觉、触觉甚至平衡感。你需要定义机器人“看到”障碍物时的决策逻辑，而不仅仅是弹窗提示。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;软硬结合的思维&lt;/strong&gt;：贾跃亭的机器人之所以能把价格打下来，核心在于软硬解耦与供应链控制。PM需要懂得，哪些功能靠边缘算力解决，哪些靠云端大模型，如何在延迟（Latency）和精度之间做取舍。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;场景即产品&lt;/strong&gt;：不再是“用户在手机上点外卖”，而是“机器人如何规划路径去门口取外卖并摆上桌”。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你还停留在画Axure线框图，那只能被时代淘汰；现在的PM，需要懂传感器、懂SLAM（即时定位与地图构建）的应用场景。&lt;/p&gt;
+&lt;h3 id=&#34;二-信任经济在这个摆拍泛滥的时代做鉴真产品&#34;&gt;二、 信任经济：在这个“摆拍”泛滥的时代做“鉴真”产品&lt;/h3&gt;
+&lt;p&gt;AI生成的能级在2026年达到了顶峰，但也带来了巨大的副作用：信息污染。&lt;/p&gt;
+&lt;p&gt;看看最近的热搜：“摆拍孩子险被人贩子拐走博主被罚”、“‘醒酒饮料’一瓶快速解酒？假的”。虚假内容、伪科学营销、AI合成的诈骗视频充斥网络。甚至连爱泼斯坦案的视频中都出现了令人匪夷所思的细节，真假难辨。&lt;/p&gt;
+&lt;p&gt;在这种环境下，&lt;strong&gt;“可信度”成为了2026年最稀缺的产品属性。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;AI产品经理的一个重要掘金方向，就是&lt;strong&gt;构建基于信任的AI产品&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;内容溯源与水印技术&lt;/strong&gt;：如果你的产品涉及内容生成，必须内置不可篡改的标识。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;反向AI应用&lt;/strong&gt;：开发能够识别“摆拍”、识别Deepfake、识别营销谎言的工具。用户愿意为“真相”付费。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全合规壁垒&lt;/strong&gt;：随着国家对数据安全和互联网内容的监管收紧（如对摆拍博主的处罚），懂合规、能设计出符合伦理规范的AI产品的PM，身价将水涨船高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不要只想着怎么用AI生成爆款文章，去思考怎么用AI帮用户过滤掉99%的垃圾信息，这才是2026年的刚需。&lt;/p&gt;
+&lt;h3 id=&#34;三-超级个体不仅是工具的使用者更是资源的调度者&#34;&gt;三、 超级个体：不仅是工具的使用者，更是资源的调度者&lt;/h3&gt;
+&lt;p&gt;“96年女生月入百万宣布30岁退休”的新闻虽然有幸存者偏差，但它揭示了AI时代的一个核心红利：&lt;strong&gt;超级个体的崛起。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在2026年，一个优秀的AI产品经理，其产出应该等于过去的一个团队。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;需求分析&lt;/strong&gt;：利用Agent自动爬取竞品数据、分析用户评论（参考“《年少有为》热播带动原著阅读热”这类文化现象，AI能瞬间分析出用户的情绪high点）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;原型设计&lt;/strong&gt;：通过自然语言直接生成UI/UX原型。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开发落地&lt;/strong&gt;：利用Cursor等AI编程工具，独立完成MVP（最小可行性产品）的开发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然而，很多PM陷入了误区，以为会写Prompt就是AI PM。错！&lt;strong&gt;真正的核心竞争力是“判断力”和“资源调度能力”。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;随着我国“多举措扩大进口”，全球供应链更加开放，信息差依然存在。优秀的产品经理不再局限于国内内卷，而是利用AI打破语言障碍，将国内成熟的“马元素产品”（借着马年热度）快速出海，或者将国外的优质技术（如先进的开源模型）引入国内垂直场景。&lt;/p&gt;
+&lt;p&gt;你不仅要会用AI干活，更要像CEO一样思考：&lt;strong&gt;如果我有无限的算力及无数的AI员工，我该解决什么问题？&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;小结快马加鞭但不要脱缰&#34;&gt;小结：快马加鞭，但不要脱缰&lt;/h3&gt;
+&lt;p&gt;2026年是农历马年，市场上各种“马元素”产品正在快马加鞭地上新。这恰恰是AI产品经理当下的写照：&lt;strong&gt;速度要快，但在高速奔跑中不能失控。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;正如“车辆高速强行变道，后车直接撞了”这则新闻的警示，盲目追逐风口（如盲目跟风做大模型基座）只会导致惨烈的事故。&lt;/p&gt;
+&lt;p&gt;SK海力士的员工拿到了30倍奖金，那是属于基础设施建设者的红利。而作为应用层的产品经理，我们的红利在于&lt;strong&gt;将冰冷的算力转化为有温度、可信任、能解决物理世界问题的产品。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不要因为立陶宛承认错误、美俄条约失效等宏观新闻而感到无力，也不要因为别人退休而焦虑。在2026年，只要你以此为基点，从屏幕走向空间，从生成走向鉴真，从执行者走向决策者，你就是那个掘金的人。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>职场扎心真相：45岁PM如何从“悲催打工人”变身“超级个体”？</title>
       <link>http://localhost:1313/posts/2026-02-05-%E8%81%8C%E5%9C%BA%E6%89%8E%E5%BF%83%E7%9C%9F%E7%9B%B8-45%E5%B2%81pm%E5%A6%82%E4%BD%95%E4%BB%8E-%E6%82%B2%E5%82%AC%E6%89%93%E5%B7%A5%E4%BA%BA-%E5%8F%98%E8%BA%AB-%E8%B6%85%E7%BA%A7%E4%B8%AA%E4%BD%93/</link>
