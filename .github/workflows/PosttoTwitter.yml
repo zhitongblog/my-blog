@@ -33,32 +33,47 @@ jobs:
           import tweepy
           import subprocess
 
-          # 1. 获取变更文件
+
+          # 1. 获取变更文件（增加递归支持）
           try:
               diff = subprocess.check_output(['git', 'diff', '--name-only', 'HEAD^', 'HEAD']).decode('utf-8')
-              files = [f for f in diff.split('\n') if f.startswith('content/posts/') and f.endswith('.md')]
+              all_files = diff.split('\n')
+              
+              # 过滤出 content/posts 目录下的 md 文件
+              files = [f for f in all_files if f.startswith('content/posts/') and f.endswith('.md')]
+              
               if not files:
-                  print("未发现新文章。")
+                  print("未发现 posts 目录下的新文章。")
                   exit(0)
               
+              # 优先选择这次提交中的第一个 md 文件
               target_file = files[0]
-              print(f"检测到新文件: {target_file}")
+              print(f"检测到变更文件: {target_file}")
 
               # 2. 提取标题
               title = ""
               with open(target_file, 'r', encoding='utf-8') as f:
                   for line in f:
                       if line.startswith('title:'):
+                          # 移除 title: 标签和前后的引号
                           title = line.replace('title:', '').strip().strip('"').strip("'")
                           break
               
-              # 3. 构造 URL (请确保域名正确)
-              slug = os.path.basename(target_file).replace('.md', '')
+              # 3. 构造智能 URL
+              # 如果是 index.md，Slug 应该是文件夹的名字；否则是文件名的名字
+              file_name = os.path.basename(target_file)
+              if file_name == "index.md" or file_name == "_index.md":
+                  # 获取文件夹名：content/posts/my-post/index.md -> my-post
+                  slug = os.path.basename(os.path.dirname(target_file))
+              else:
+                  # 获取文件名：content/posts/my-post.md -> my-post
+                  slug = file_name.replace('.md', '')
+              
               url = f"https://zhitong.uk/posts/{slug}/"
               tweet_content = f"{title} {url}"
-              print(f"即将发布: {tweet_content}")
+              print(f"生成的推文内容: {tweet_content}")
 
-              # 4. 调用 Twitter API v2 发帖
+              # 4. 调用 Twitter API (X API v2)
               client = tweepy.Client(
                   consumer_key=os.environ['TWITTER_CONSUMER_KEY'],
                   consumer_secret=os.environ['TWITTER_CONSUMER_SECRET'],
@@ -69,6 +84,7 @@ jobs:
               print("推文发布成功！")
 
           except Exception as e:
-              print(f"发生错误: {e}")
+              print(f"运行出错: {e}")
               exit(1)
+
           EOF
