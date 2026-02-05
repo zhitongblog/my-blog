@@ -2,7 +2,7 @@ name: Post to Twitter
 on:
   push:
     branches: [ main ] # 当你推送新文章到主分支时触发
-
+workflow_dispatch:
 jobs:
   tweet:
     runs-on: ubuntu-latest
