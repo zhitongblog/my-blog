@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>职业转型 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E8%81%8C%E4%B8%9A%E8%BD%AC%E5%9E%8B/</link>
+    <description>Recent content in 职业转型 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 05 Feb 2026 17:22:04 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%81%8C%E4%B8%9A%E8%BD%AC%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>像追觅CEO那样“贴脸开大”：2026产品经理的AI进化实录</title>
+      <link>http://localhost:1313/posts/2026-02-05-%E5%83%8F%E8%BF%BD%E8%A7%85ceo%E9%82%A3%E6%A0%B7-%E8%B4%B4%E8%84%B8%E5%BC%80%E5%A4%A7-2026%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84ai%E8%BF%9B%E5%8C%96%E5%AE%9E%E5%BD%95/</link>
+      <pubDate>Thu, 05 Feb 2026 17:22:04 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-05-%E5%83%8F%E8%BF%BD%E8%A7%85ceo%E9%82%A3%E6%A0%B7-%E8%B4%B4%E8%84%B8%E5%BC%80%E5%A4%A7-2026%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84ai%E8%BF%9B%E5%8C%96%E5%AE%9E%E5%BD%95/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/2026-02-05-%E5%83%8F%E8%BF%BD%E8%A7%85ceo%E9%82%A3%E6%A0%B7-%E8%B4%B4%E8%84%B8%E5%BC%80%E5%A4%A7-2026%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84ai%E8%BF%9B%E5%8C%96%E5%AE%9E%E5%BD%95/featured.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;像追觅ceo那样贴脸开大2026产品经理的ai进化实录&#34;&gt;像追觅CEO那样“贴脸开大”：2026产品经理的AI进化实录&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;时间：2026年2月5日&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果说三年前的AI浪潮是一场突如其来的海啸，那么站在2026年的今天，我们已经学会在海面上冲浪。&lt;/p&gt;
+&lt;p&gt;最近，一段追觅CEO在央视节目中“贴脸开大”撒贝宁的视频再次在科技圈刷屏。面对镜头的严苛审视，CEO没有玩弄虚无缥缈的概念，而是直接用产品的硬核实力——机械臂的极限操作——在现场完成了“贴脸”式的演示。这种极度的自信，不只是因为营销，更源于对技术边界的精准把控。&lt;/p&gt;
+&lt;p&gt;对于2026年的产品经理（PM）而言，这种“贴脸开大”的底气，正是我们在这个AI全面渗透的时代最稀缺的品质。当大模型已经成为像水电一样的基础设施，当Cursor和Devin等AI工程师已经接管了大部分基础代码，产品经理的护城河究竟在哪里？&lt;/p&gt;
+&lt;p&gt;是时候重新定义我们的生态位了。&lt;/p&gt;
+&lt;h2 id=&#34;一-祛魅从提示词工程师到业务架构师&#34;&gt;一、 祛魅：从“提示词工程师”到“业务架构师”&lt;/h2&gt;
+&lt;p&gt;回望2023、2024年，彼时的产品经理们还在为如何写出完美的Prompt（提示词）而焦虑，甚至有人戏称PM要转型为“提示词工程师”。&lt;/p&gt;
+&lt;p&gt;到了2026年，这种焦虑显得有些可笑。随着模型理解能力的指数级跃升，意图识别已经不再依赖复杂的咒语。现在的AI，如果你需要对它“PUA”半天才能干活，那说明这个模型本身就不合格。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2026年的产品经理，必须戒掉“工具崇拜”。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们看到，现在的市场上充斥着大量同质化的AI应用，依然有不少PM停留在“拿着锤子找钉子”的阶段，试图在所有功能里都塞进一个对话框。这不叫AI原生，这叫偷懒。&lt;/p&gt;
+&lt;p&gt;真正的“贴脸开大”，是像那位CEO一样，深入到底层逻辑中去。你需要思考的不再是“怎么用AI生成一个PRD”，而是“如何重构业务流，让AI成为决策链条的一环”。例如，在近期火爆的&lt;strong&gt;冰雪经济&lt;/strong&gt;中，一个优秀的产品经理不会只做一个“滑雪攻略生成器”，而是会利用AI实时分析天气、交通流和雪场承载力，构建一个动态调度的资源分配系统。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;从“会用工具”进化到“设计系统”，这是PM保住饭碗的第一步。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;二-进化驯化agent而非被agent替代&#34;&gt;二、 进化：驯化Agent，而非被Agent替代&lt;/h2&gt;
+&lt;p&gt;2026年的职场环境发生了一个有趣的现象：初级执行类的工作正在消失。以前需要PM手搓的原型图、需要甚至甚至SQL查询的数据分析，现在只需对公司的私有化Agent说一句话：“帮我拉取上季度用户留存数据，并生成归因分析报告。”&lt;/p&gt;
+&lt;p&gt;五分钟后，报告就在你的桌面上。&lt;/p&gt;
+&lt;p&gt;于是，恐慌论再次袭来：产品经理要失业了？&lt;/p&gt;
+&lt;p&gt;恰恰相反。&lt;strong&gt;当执行成本趋近于零，决策成本就变得昂贵无比。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这就好比&lt;strong&gt;追觅CEO演示机械臂&lt;/strong&gt;，机械臂是执行者（Agent），但决定“在什么场景下演示”、“解决什么痛点”的人是CEO。产品经理现在的角色，更像是一个“AI团队的Team Leader”。你需要管理手下的文案Agent、设计Agent、数据Agent，审查它们的产出，并为最终结果负责。&lt;/p&gt;
+&lt;p&gt;这种能力叫“AI协同力”。你需要具备识别AI“幻觉”的能力，你需要知道什么时候该让AI“闭嘴”，什么时候该让它“发散”。在2026年，&lt;strong&gt;只会提需求而不懂验收逻辑的PM，才是第一批被淘汰的人。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;三-核心在算法的黑盒里找回人味&#34;&gt;三、 核心：在算法的黑盒里找回“人味”&lt;/h2&gt;
+&lt;p&gt;技术越是冰冷，人性的温度就越值钱。&lt;/p&gt;
+&lt;p&gt;最近有一则暖新闻冲上热搜：&lt;strong&gt;6岁姐姐带妹妹买新衣，老板一人送了一件&lt;/strong&gt;。这种由于人类之间微妙的情感连接而产生的决策——老板的恻隐之心、姐姐的责任感——是目前任何顶级大模型都无法完美模拟的。&lt;/p&gt;
+&lt;p&gt;AI擅长逻辑，擅长概率，擅长在海量数据中寻找最优解。但产品经理的核心竞争力，往往在于发现那些“非最优解”中的机会。&lt;/p&gt;
+&lt;p&gt;如果完全依赖AI做产品决策，它可能会告诉你：“根据数据，这类低消费力用户应该被降权。”但作为人类PM，你会意识到这里面蕴含的品牌温情和社会责任，甚至可能通过这种温情设计出爆款的公益营销活动。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;“贴脸开大”的自信，源于对人性的深刻洞察。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在这个算法统治的年代，产品经理是最后一道防线。我们要防止产品变成冷冰冰的效率机器。无论是处理像**“女婴小洛熙离世”&lt;strong&gt;这样敏感悲痛的社会事件相关的社区治理，还是面对&lt;/strong&gt;“摆拍孩子险被人贩子拐走”**这种挑战伦理底线的流量博弈，AI只能提供审核辅助，而制定规则、划定道德红线的，必须是有血有肉的产品经理。&lt;/p&gt;
+&lt;h2 id=&#34;四-破局像ceo一样思考&#34;&gt;四、 破局：像CEO一样思考&lt;/h2&gt;
+&lt;p&gt;为什么追觅CEO能“贴脸开大”？因为他对自己产品的每一个螺丝钉都了如指掌，他对市场需求有着绝对的判断。&lt;/p&gt;
+&lt;p&gt;2026年的产品经理，必须具备“CEO思维”。&lt;/p&gt;
+&lt;p&gt;以前我们常说PM是“无授权的CEO”，这在AI时代更加贴切。因为AI赋予了你单兵作战拥有千军万马的能力。以前你想做一个Demo，需要跪求开发排期、跪求UI出图。现在，你自己就是一个开发团队。&lt;/p&gt;
+&lt;p&gt;这同时也意味着，你没有借口了。你不能再说“因为资源不足所以产品烂”，也不能说“因为技术实现不了所以砍需求”。&lt;/p&gt;
+&lt;p&gt;看看那些热门新闻：&lt;strong&gt;新能源车侧滑起火路人砸窗救人&lt;/strong&gt;，那是由于极端的物理场景挑战；&lt;strong&gt;上海政协委员谈取消中高考&lt;/strong&gt;，那是教育制度的顶层思考。作为产品人，我们的视野不能局限在App的这一个按钮放左边还是右边。&lt;/p&gt;
+&lt;p&gt;你需要关注宏观经济（如&lt;strong&gt;立陶宛承认错误&lt;/strong&gt;对跨境电商链路的影响），你需要关注社会情绪（如&lt;strong&gt;男子因等电梯卖房&lt;/strong&gt;背后的居住焦虑）。将这些洞察转化为产品力，结合AI的高效执行力，这才是2026年PM的生存之道。&lt;/p&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
+&lt;p&gt;2026年，是AI祛魅的一年，也是产品经理价值回归的一年。&lt;/p&gt;
+&lt;p&gt;不要做那个对着ChatGPT发呆的提问者，要做那个敢于在市场面前“贴脸开大”的操盘手。&lt;/p&gt;
+&lt;p&gt;我们不再需要为了写文档而熬夜，但我们需要为了洞察人心而失眠。当AI接管了平庸，卓越才刚刚开始。这就是2026年，属于产品经理的最好时代，也是最残酷的时代。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;准备好你的“大招”了吗？&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
