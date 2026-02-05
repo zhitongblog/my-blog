@@ -1,7 +1,8 @@
 name: Post to Twitter
 on:
   push:
-    branches: [ main ] # 当你推送新文章到主分支时触发
+    branches: [ main ]
+  workflow_dispatch: 
 
 jobs:
   tweet:
@@ -10,28 +11,34 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2 # 需获取前一次提交以对比变化
+          fetch-depth: 2
 
       - name: Get latest post info
         id: post_info
         run: |
-          # 寻找 content/posts 目录下新增加的 md 文件 (根据你的路径修改)
+          # 查找 content/posts/ 目录下新增的 .md 文件
           FILE=$(git diff --name-only HEAD^ HEAD | grep 'content/posts/.*\.md' | head -n 1)
+          
           if [ -z "$FILE" ]; then
-            echo "No new post found."
+            echo "未检测到新文章提交。"
             exit 0
           fi
-          # 提取标题（假设在 frontmatter 中）
-          TITLE=$(grep '^title: ' "$FILE" | head -1 | sed 's/title: //;s/"//g')
-          # 构造 URL (根据你的域名规则)
+          
+          # 提取标题 (假设 frontmatter 格式为 title: "xxx")
+          TITLE=$(grep '^title: ' "$FILE" | head -1 | sed 's/title: //;s/"//g;s/ //')
+          
+          # 构造 URL (请将 zhitong.uk 换成你的实际域名)
           SLUG=$(basename "$FILE" .md)
-          URL="https://你的域名.com/posts/$SLUG/"
+          URL="https://zhitong.uk/posts/$SLUG/"
+          
           echo "tweet_text=$TITLE $URL" >> $GITHUB_OUTPUT
+          echo "即将发布的推文内容: $TITLE $URL"
 
-- name: Send Tweet
+      - name: Send Tweet
         if: steps.post_info.outputs.tweet_text != ''
         uses: rtCamp/action-tweet@v1
         env:
+          # 注意：这个 Action 必须使用 env 且参数名必须为小写
           status: ${{ steps.post_info.outputs.tweet_text }}
           api_key: ${{ secrets.TWITTER_CONSUMER_KEY }}
           api_key_secret: ${{ secrets.TWITTER_CONSUMER_SECRET }}
