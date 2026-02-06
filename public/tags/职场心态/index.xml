@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>职场心态 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E8%81%8C%E5%9C%BA%E5%BF%83%E6%80%81/</link>
+    <description>Recent content in 职场心态 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 06 Feb 2026 11:07:25 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%81%8C%E5%9C%BA%E5%BF%83%E6%80%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从苏翊鸣惊险晋级，看优秀PM的MVP迭代与抗压心态</title>
+      <link>http://localhost:1313/posts/2026-02-06-%E4%BB%8E%E8%8B%8F%E7%BF%8A%E9%B8%A3%E6%83%8A%E9%99%A9%E6%99%8B%E7%BA%A7-%E7%9C%8B%E4%BC%98%E7%A7%80pm%E7%9A%84mvp%E8%BF%AD%E4%BB%A3%E4%B8%8E%E6%8A%97%E5%8E%8B%E5%BF%83%E6%80%81/</link>
+      <pubDate>Fri, 06 Feb 2026 11:07:25 +0800</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-06-%E4%BB%8E%E8%8B%8F%E7%BF%8A%E9%B8%A3%E6%83%8A%E9%99%A9%E6%99%8B%E7%BA%A7-%E7%9C%8B%E4%BC%98%E7%A7%80pm%E7%9A%84mvp%E8%BF%AD%E4%BB%A3%E4%B8%8E%E6%8A%97%E5%8E%8B%E5%BF%83%E6%80%81/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/2026-02-06-%E4%BB%8E%E8%8B%8F%E7%BF%8A%E9%B8%A3%E6%83%8A%E9%99%A9%E6%99%8B%E7%BA%A7-%E7%9C%8B%E4%BC%98%E7%A7%80pm%E7%9A%84mvp%E8%BF%AD%E4%BB%A3%E4%B8%8E%E6%8A%97%E5%8E%8B%E5%BF%83%E6%80%81/featured.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;从苏翊鸣惊险晋级看优秀pm的mvp迭代与抗压心态&#34;&gt;从苏翊鸣惊险晋级，看优秀PM的MVP迭代与抗压心态&lt;/h1&gt;
+&lt;p&gt;今天是2026年2月6日，米兰冬奥会的硝烟正浓。在刚刚结束的大跳台资格赛中，我们再次见证了“小栓子”苏翊鸣的大心脏时刻。&lt;/p&gt;
+&lt;p&gt;这一幕对于许多关注者来说或许是惊心动魄的体育瞬间：第一跳意外摔倒，形势瞬间跌入谷底；第二跳顶住压力，稳扎稳打；第三跳惊险过关，拿到决赛门票。但对于身处互联网行业，特别是产品经理（PM）这一角色的从业者而言，苏翊鸣的这场资格赛，简直就是一场教科书级别的&lt;strong&gt;产品全生命周期管理与危机公关实录&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在这个新春将至、年味渐浓的时刻，我们不妨借着冬奥的热度，聊聊在一个充满不确定性的市场环境中，怎么才算一个优秀的产品经理。&lt;/p&gt;
+&lt;h2 id=&#34;一-mvp思维先活下来再谈完美&#34;&gt;一、 MVP思维：先活下来，再谈“完美”&lt;/h2&gt;
+&lt;p&gt;苏翊鸣在第一跳尝试高难度动作摔倒后，面临着一个巨大的决策分岔路口：是继续死磕最高难度动作以追求第一名晋级，还是调整策略，用一个相对稳健的动作确保进入决赛？&lt;/p&gt;
+&lt;p&gt;这正是产品经理在打造MVP（Minimum Viable Product，最小可行性产品）时常犯的错误——&lt;strong&gt;过度设计&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;很多PM在产品初期，恨不得把所有的酷炫功能（高难度动作）一次性塞给用户。结果往往是开发周期拉长，上线后BUG频出（像第一跳一样“摔倒”），直接导致项目夭折。&lt;/p&gt;
+&lt;p&gt;苏翊鸣的策略调整给了我们很好的启示：&lt;strong&gt;在资格赛阶段（产品验证期），目标是“晋级”（活下来/验证核心需求），而不是“夺金”（市场占有率第一）。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一个优秀的产品经理，必须懂得&lt;strong&gt;做减法&lt;/strong&gt;。就像最近“QQ农场回归”引发的热议一样，这款十几年前的“老古董”为何能让大家半夜定闹钟偷菜？因为它足够简单，核心玩法（MVP）极其稳固——种植、收获、社交互动。它没有复杂的3D建模，没有繁琐的剧情，但它精准击中了用户的社交与消遣需求。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;启示：&lt;/strong&gt; 优秀PM懂得在资源受限和风险极高的情况下，剥离非必要功能，确保核心流程跑通。先拿到决赛的入场券，比在资格赛就因为炫技而淘汰要重要得多。&lt;/p&gt;
+&lt;h2 id=&#34;二-快速迭代基于反馈的热修复能力&#34;&gt;二、 快速迭代：基于反馈的“热修复”能力&lt;/h2&gt;
+&lt;p&gt;第一跳摔倒，对于PM来说，等同于产品上线后遭遇了核心功能崩溃，或者用户数据断崖式下跌。&lt;/p&gt;
+&lt;p&gt;普通PM会陷入恐慌，或者忙着甩锅给开发；而优秀PM会立刻进入“Debug模式”。苏翊鸣在短短十几分钟的间隔期内，显然完成了对雪况、风速以及自身状态的复盘与分析。第二跳和第三跳的调整，本质上就是一次&lt;strong&gt;基于数据的快速迭代（Hotfix）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在2026年的今天，市场变化极快。比如最近关于“你会为省钱选择绿皮火车吗”的话题讨论，展现了用户需求的分层。以前我们以为用户都追求“快”，都在卷高铁、卷飞机，但数据反馈告诉我们，在经济下行周期或特定场景下，“低价”和“慢节奏”也是一种强需求。&lt;/p&gt;
+&lt;p&gt;如果PM不懂得像苏翊鸣那样根据现场反馈调整动作，而是一味坚持“我觉得用户需要这个”，那么产品注定失败。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;启示：&lt;/strong&gt; 市场反馈就是裁判打分。当第一版本（第一跳）数据不佳时，能否在下一版本（下一跳）迅速调整策略？是降级体验以换取稳定性，还是针对特定用户群（如绿皮车受众）做精细化运营？这种动态调整的能力，是衡量PM段位的试金石。&lt;/p&gt;
+&lt;h2 id=&#34;三-抗压与情绪管理做团队的定海神针&#34;&gt;三、 抗压与情绪管理：做团队的“定海神针”&lt;/h2&gt;
+&lt;p&gt;“苏翊鸣回应惊险晋级”迅速冲上了热搜，他在采访中表现出的淡定与成熟，让人很难相信这是一位年轻的运动员。在只有一次机会如果不成功就回家的绝境下，心态崩了，动作必变形。&lt;/p&gt;
+&lt;p&gt;在产品研发过程中，PM往往是压力的汇聚点：上级催数据，开发怼需求，运营要资源，用户骂体验。&lt;/p&gt;
+&lt;p&gt;当你负责的项目在上线前夜发现重大漏洞；当你信心满满的功能上线后日活不增反降；当竞争对手突然发布了碾压级的新品（就像对手跳出了1980）。这时候，团队里所有人的眼睛都盯着PM。&lt;/p&gt;
+&lt;p&gt;如果PM慌了，传递焦虑，整个团队的士气就会瞬间瓦解。一个优秀的产品经理，必须具备极高的&lt;strong&gt;情绪智力（EQ）&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;对内：&lt;/strong&gt; 像苏翊鸣调整呼吸一样，屏蔽干扰，明确当下的唯一目标（Fix bug/上线/晋级），而不是纠结于过去的失误。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对外：&lt;/strong&gt; 无论内部乱成什么样，对外（向老板、向用户）必须展现出掌控力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;启示：&lt;/strong&gt; 技术可以学，方法论可以背，但那种“泰山崩于前而色不变”并能迅速理清头绪的抗压能力，是顶级PM与普通PM的分水岭。&lt;/p&gt;
+&lt;h2 id=&#34;四-总结&#34;&gt;四、 总结&lt;/h2&gt;
+&lt;p&gt;2026年的春天即将到来，无论是正在备战决赛的苏翊鸣，还是正在规划年度Roadmap的产品经理，我们面临的挑战本质上是相通的。&lt;/p&gt;
+&lt;p&gt;所谓优秀的产品经理，不是那个只会画原型图的人，也不是那个只会写文档的人。&lt;/p&gt;
+&lt;p&gt;优秀，意味着你像苏翊鸣一样：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;拥有MVP思维&lt;/strong&gt;，知道什么时候该稳健晋级，什么时候该放手一搏。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;具备快速迭代能力&lt;/strong&gt;，能从“摔倒”的数据中提取教训，在下一次发布中精准修正。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拥有强大的抗压心态&lt;/strong&gt;，在不确定性中寻找确定性，带领团队穿越周期。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;大跳台的决赛还在后面，产品的生命周期也还在继续。愿每一位PM都能在自己的赛场上，落地生根，稳稳站住。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
