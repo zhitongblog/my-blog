@@ -2,6 +2,7 @@
 title: 代码已死，创意永生：Claude Code 开启全员产品经理时代
 date: 2026-02-06T11:40:57+08:00
 draft: false
+comments: true
 images:
   - /images/20260206-113842-dmyscyysclaudecodekqqycpjlsd.png
 categories:
