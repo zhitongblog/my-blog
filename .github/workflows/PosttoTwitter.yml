@@ -1,4 +1,4 @@
-name: Post to Twitter
+name: Post to Twitter with Image
 on:
   push:
     branches: [ main ]
@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 获取完整历史，确保 diff 准确
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -35,61 +35,67 @@ jobs:
           import glob
 
           def get_target_file():
-              # 尝试通过 git diff 获取变更
               try:
                   diff = subprocess.check_output(['git', 'diff', '--name-only', 'HEAD^', 'HEAD']).decode('utf-8')
                   files = [f for f in diff.split('\n') if f.startswith('content/posts/') and f.endswith('.md')]
-                  if files:
-                      print(f"Git Diff 发现文件: {files[0]}")
-                      return files[0]
-              except:
-                  pass
-
-              # 备选方案：如果 diff 没找到，直接找 content/posts 下最新修改的 .md 文件
+                  if files: return files[0]
+              except: pass
               all_md = glob.glob('content/posts/**/*.md', recursive=True)
-              if all_md:
-                  latest_file = max(all_md, key=os.path.getmtime)
-                  print(f"备选方案发现最新文件: {latest_file}")
-                  return latest_file
-              return None
+              return max(all_md, key=os.path.getmtime) if all_md else None
 
           target_file = get_target_file()
           if not target_file:
-              print("未发现任何文章，跳过。")
+              print("未发现文章。")
               exit(0)
 
-          # 提取标题
+          # 1. 提取标题和图片路径
           title = "New Post"
+          image_path = "static/images/default-share.png"  # 这里设置你的默认图片本地路径
+          
           with open(target_file, 'r', encoding='utf-8') as f:
               for line in f:
                   if line.startswith('title:'):
                       title = line.replace('title:', '').strip().strip('"').strip("'")
-                      break
+                  if line.startswith('image:'): # 尝试从 front matter 获取文章自定义图片
+                      custom_img = line.replace('image:', '').strip().strip('"').strip("'")
+                      # 如果是相对路径，可能需要拼接，这里假设图片在 static 下
+                      full_custom_path = os.path.join('static', custom_img.lstrip('/'))
+                      if os.path.exists(full_custom_path):
+                          image_path = full_custom_path
 
-          # 构造 URL
+          # 2. 构造 URL
           path_parts = target_file.split('/')
-          # 处理 content/posts/folder/index.md 或 content/posts/file.md
-          if path_parts[-1] in ["index.md", "_index.md"]:
-              slug = path_parts[-2] # 取文件夹名
-          else:
-              slug = path_parts[-1].replace('.md', '')
-          
+          slug = path_parts[-2] if path_parts[-1] in ["index.md", "_index.md"] else path_parts[-1].replace('.md', '')
           url = f"https://zhitong.uk/posts/{slug}/"
-          content = f"{title}\n{url}"
+          tweet_content = f"{title}\n{url}"
 
-          print(f"准备发布内容:\n{content}")
-
+          # 3. 认证并发布
           try:
-              client = tweepy.Client(
+              # 图片上传必须使用 v1.1 认证
+              auth = tweepy.OAuth1UserHandler(
+                  os.environ['TWITTER_CONSUMER_KEY'], os.environ['TWITTER_CONSUMER_SECRET'],
+                  os.environ['TWITTER_ACCESS_TOKEN'], os.environ['TWITTER_ACCESS_TOKEN_SECRET']
+              )
+              api_v1 = tweepy.API(auth)
+              
+              # 发帖建议使用 v2
+              client_v2 = tweepy.Client(
                   consumer_key=os.environ['TWITTER_CONSUMER_KEY'],
                   consumer_secret=os.environ['TWITTER_CONSUMER_SECRET'],
                   access_token=os.environ['TWITTER_ACCESS_TOKEN'],
                   access_token_secret=os.environ['TWITTER_ACCESS_TOKEN_SECRET']
               )
-              client.create_tweet(text=content)
-              print("✅ 推文发布成功！")
+
+              # 第一步：上传图片
+              print(f"正在上传图片: {image_path}")
+              media = api_v1.media_upload(filename=image_path)
+              media_id = media.media_id
+
+              # 第二步：发布带图片的推文
+              client_v2.create_tweet(text=tweet_content, media_ids=[media_id])
+              print("✅ 带图片的推文发布成功！")
+              
           except Exception as e:
               print(f"❌ 发布失败: {e}")
-              # 如果还是 402，说明是 X 账户权限/额度问题，不是代码问题
               exit(1)
           EOF
