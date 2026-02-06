@@ -1,6 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "@waline/cloud-storage": "latest"
-  }
-}
