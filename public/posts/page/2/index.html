@@ -143,6 +143,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">【架构选型】L-Store 应该用 Rust 还是 C&#43;&#43;？一场关于安全与性能的博弈
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、 核心维度深度对比 1. 内存安全性 (Memory Safety) C&#43;&#43;：拥有极高的自由度，但手动管理内存容易导致缓冲区溢出或野指针。对于一个需要处理第三方软件包（可能存在恶意构造）的商店来说，这是一个潜在的安全隐患。 Rust：其核心卖点是“所有权系统”。在编译阶段就能杜绝内存泄漏和并发竞争。 PM 视角：这意味着我们的 App Store 会更少崩溃，安全性更高，尤其是在处理高权限操作时。 2. UI 框架兼容性 (UI Toolkit Integration) C&#43;&#43;：与 Qt 是天生一对。如果你想做一个像 KDE 一样华丽、功能极其复杂的商店，C&#43;&#43; &#43; Qt 是目前最成熟的方案。 Rust：通过 gtk-rs 与 GTK4/Libadwaita 配合得越来越完美。它是 GNOME 生态目前极力推崇的方案。 现状：目前主流的 Linux 新生代应用（如 Fragments, Shortwave）都在向 Rust &#43; GTK4 靠拢。 3. 开发效率与社区贡献 C&#43;&#43;：虽然人才多，但现代 C&#43;&#43; 的包管理（vcpkg/conan）依然不如 Rust 的 Cargo 好用。 Rust：Cargo 是目前世界上最好用的包管理工具之一。这对于“共创”项目至关重要——新开发者只需要几秒钟就能配置好开发环境。 二、 性能与打包体积 在 Linux 环境下，用户对“轻量化”有着近乎执着的追求。
+维度 C&#43;&#43; (Qt6) Rust (GTK4) 启动速度 极快 极快 冷启动内存占用 约 40MB-60MB 约 20MB-40MB 静态链接体积 较大 (包含 Qt 库) 适中 依赖链 依赖系统 Qt 环境 依赖系统 GTK 库 三、 为什么我倾向于 Rust？ 作为本项目的发起人，我初步倾向于选择 Rust &#43; GTK4，理由如下：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-04 10:30:00 +0800 CST'>February 4, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 【架构选型】L-Store 应该用 Rust 还是 C&#43;&#43;？一场关于安全与性能的博弈" href="http://localhost:1313/posts/tech-selection-rust-vs-cpp/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">今日立春：这是产品经理开启“一人公司”的最佳时机
     </h2>
   </header>
@@ -345,36 +359,6 @@ L-Client (客户端)：使用 Rust &#43; GTK4 开发，负责 UI 展现和本地
   </div>
   <footer class="entry-footer"><span title='2026-01-27 11:00:00 +0800 CST'>January 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
   <a class="entry-link" aria-label="post link to AI 时代的“一人公司”实战指南：如何用极简配置撬动最大价值" href="http://localhost:1313/posts/2026-01-28-use-ai1/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">【AI与古文·02】当AI遇上辛弃疾：如何用算法算出“醉里挑灯看剑”的悲凉？
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>上一次，我们用“去道德化”和“关键词锚定”搞定了秦始皇的冷峻诏书。 这一次，我们要挑战一个更感性、更复杂的对手——辛弃疾（稼轩）。
-在写我的小说《新宋：稼轩长歌》时，我无数次尝试用 AI 生成几首类似《破阵子》的词。结果？大多数时候，AI 只能给我生成这种东西：
-“壮志凌云冲九霄，宝剑出鞘斩妖娆。江山如画多娇媚，英雄豪杰乐逍遥。”
-❌ 智通点评： 这哪是辛弃疾？这是“老干部退休书画展”的题词。 它只有“豪”的皮毛（大嗓门），没有“放”的骨架，更没有稼轩词里最核心的那种——把栏杆拍遍，无人会，登临意的孤独与悲凉。
-AI 默认的“豪放”，往往等于“喊口号”。但真正的豪放，是剧烈的反差。
-一、 实验目标 场景： 辛弃疾晚年被贬闲居带湖，深夜看剑，想起当年率领五十骑突袭金营的往事。 难点： 要体现出**“心在天山，身老沧洲”**的撕裂感。不能只有杀伐气，必须要有无力感。
-二、 失败的尝试：只会堆砌“金戈铁马” 如果你只是告诉 AI：“写一首辛弃疾风格的词，要豪放，写打仗。” AI 会给你堆砌一堆：金戈、铁马、战鼓、雷鸣、血染战袍。
-这些词本身没错，但堆在一起就成了**“陈词滥调（Cliché）”**。因为 AI 没有痛觉，它不知道“挑灯看剑”时，那个“灯”是昏暗的，那个“剑”是冷的，看剑的人是白发的。
-三、 成功的策略：意象注入与“反差蒙太奇” 为了让 AI 懂辛弃疾，我总结了一套**“反差蒙太奇”**的 Prompt 技巧。
-辛弃疾的词往往是由两组蒙太奇镜头组成的：
-镜头 A（现实）： 白发、草屋、病体、昏灯。 镜头 B（回忆/理想）： 骏马、快刀、弓弦、烈火。 优化后的 Prompt（提示词）：
-角色设定： 你是南宋词人辛弃疾，晚年闲居。 情感基调： 悲壮（不仅仅是豪放）。核心冲突是肉体的衰老 vs 精神的亢奋。 强制意象（Imagery）：
-不要写空泛的“壮志”，要写具体的**“生锈的铁甲”、“半夜的灯花”**。 不要写“我想报国”，要写**“梦回吹角连营”**。 结构要求： 上片写深夜失眠的寂静，下片写梦中杀敌的狂热，最后一句要跌回现实，写头上的白发。 词牌名： 《破阵子》 AI 的回答（V2.0）：
-《破阵子·夜雨感怀》
-窗外雨打芭蕉，如闻万马如潮。 醉里摩挲旧时铠，寒光犹照当年袍，梦随吴钩刀。
-曾记沙场点兵，一骑飞渡临洮。 欲挽天河洗胡虏，不仅空余两鬓毛，青山共寂寥。
-✅ 智通点评： 这一次，味道出来了。
-“摩挲旧时铠”：有了动作细节，不再是空喊口号。 “不仅空余两鬓毛”：抓住了辛弃疾晚年“可怜白发生”的神韵。 “万马如潮”与“青山寂寥”：形成了动与静、梦与真的强烈反差。 虽然这一首词还比不上稼轩原本的“八百里分麾下炙”，但在情绪的颗粒度上，已经从“喊口号的莽夫”进化成了“失意的英雄”。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-01-26 09:30:00 +0800 CST'>January 26, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 【AI与古文·02】当AI遇上辛弃疾：如何用算法算出“醉里挑灯看剑”的悲凉？" href="http://localhost:1313/posts/2026-01-27-use-ai3/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
