@@ -34,6 +34,7 @@ theme = 'PaperMod'
 [params]
   description = "这是智通成长的历程"
   author = "智通"
+  comments = true
   
   # 首页信息
   [params.homeInfoParams]
