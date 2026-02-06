@@ -1,0 +1,11 @@
+<div id="waline"></div>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+  init({
+    el: '#waline',
+    serverURL: '{{ .Site.Params.comments.serverURL }}',
+    // 更多配置可以参考官方文档
+    dark: 'auto', // 自动适配深色模式
+  });
+</script>

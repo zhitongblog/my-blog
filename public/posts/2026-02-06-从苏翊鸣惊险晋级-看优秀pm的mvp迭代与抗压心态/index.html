@@ -233,7 +233,17 @@
       <li><a href="http://localhost:1313/tags/%E8%81%8C%E5%9C%BA%E5%BF%83%E6%80%81/">职场心态</a></li>
       <li><a href="http://localhost:1313/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/">方法论</a></li>
     </ul>
-  </footer>
+  </footer><div id="waline"></div>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+  init({
+    el: '#waline',
+    serverURL: 'waline-api.lixd220.workers.dev',
+    
+    dark: 'auto', 
+  });
+</script>
 </article>
     </main>
     

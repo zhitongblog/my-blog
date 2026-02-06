@@ -298,7 +298,17 @@ AI 会给你堆砌一堆：<em>金戈、铁马、战鼓、雷鸣、血染战袍<
   </a>
 </nav>
 
-  </footer>
+  </footer><div id="waline"></div>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+  init({
+    el: '#waline',
+    serverURL: 'waline-api.lixd220.workers.dev',
+    
+    dark: 'auto', 
+  });
+</script>
 </article>
     </main>
     

@@ -231,7 +231,17 @@
       <li><a href="http://localhost:1313/tags/%E4%B8%AA%E4%BD%93%E8%B5%8B%E8%83%BD/">个体赋能</a></li>
       <li><a href="http://localhost:1313/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/">效率工具</a></li>
     </ul>
-  </footer>
+  </footer><div id="waline"></div>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+  init({
+    el: '#waline',
+    serverURL: 'waline-api.lixd220.workers.dev',
+    
+    dark: 'auto', 
+  });
+</script>
 </article>
     </main>
     

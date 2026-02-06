@@ -275,7 +275,17 @@
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
-  </footer>
+  </footer><div id="waline"></div>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+  init({
+    el: '#waline',
+    serverURL: 'waline-api.lixd220.workers.dev',
+    
+    dark: 'auto', 
+  });
+</script>
 </article>
     </main>
     

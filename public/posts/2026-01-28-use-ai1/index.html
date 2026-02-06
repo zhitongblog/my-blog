@@ -277,7 +277,17 @@
       <li><a href="http://localhost:1313/tags/ai%E5%B7%A5%E5%85%B7/">AI工具</a></li>
       <li><a href="http://localhost:1313/tags/%E8%A2%AB%E5%8A%A8%E6%94%B6%E5%85%A5/">被动收入</a></li>
     </ul>
-  </footer>
+  </footer><div id="waline"></div>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+  init({
+    el: '#waline',
+    serverURL: 'waline-api.lixd220.workers.dev',
+    
+    dark: 'auto', 
+  });
+</script>
 </article>
     </main>
     

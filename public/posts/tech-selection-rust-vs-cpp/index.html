@@ -322,7 +322,17 @@ Rust：Cargo 是目前世界上最好用的包管理工具之一。这对于“�
       <li><a href="http://localhost:1313/tags/c&#43;&#43;/">C&#43;&#43;</a></li>
       <li><a href="http://localhost:1313/tags/linux%E5%BC%80%E5%8F%91/">Linux开发</a></li>
     </ul>
-  </footer>
+  </footer><div id="waline"></div>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+  init({
+    el: '#waline',
+    serverURL: 'waline-api.lixd220.workers.dev',
+    
+    dark: 'auto', 
+  });
+</script>
 </article>
     </main>
     

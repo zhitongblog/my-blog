@@ -247,7 +247,17 @@ SK海力士的员工拿到了30倍奖金，那是属于基础设施建设者的�
       <li><a href="http://localhost:1313/tags/%E7%AE%97%E5%8A%9B%E7%A1%AC%E4%BB%B6/">算力硬件</a></li>
       <li><a href="http://localhost:1313/tags/%E8%81%8C%E5%9C%BA%E8%BF%9B%E9%98%B6/">职场进阶</a></li>
     </ul>
-  </footer>
+  </footer><div id="waline"></div>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css"/>
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+  init({
+    el: '#waline',
+    serverURL: 'waline-api.lixd220.workers.dev',
+    
+    dark: 'auto', 
+  });
+</script>
 </article>
     </main>
     
