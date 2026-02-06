@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0 # 获取完整历史，确保 diff 准确
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -32,59 +32,64 @@ jobs:
           import os
           import tweepy
           import subprocess
+          import glob
 
+          def get_target_file():
+              # 尝试通过 git diff 获取变更
+              try:
+                  diff = subprocess.check_output(['git', 'diff', '--name-only', 'HEAD^', 'HEAD']).decode('utf-8')
+                  files = [f for f in diff.split('\n') if f.startswith('content/posts/') and f.endswith('.md')]
+                  if files:
+                      print(f"Git Diff 发现文件: {files[0]}")
+                      return files[0]
+              except:
+                  pass
 
-          # 1. 获取变更文件（增加递归支持）
+              # 备选方案：如果 diff 没找到，直接找 content/posts 下最新修改的 .md 文件
+              all_md = glob.glob('content/posts/**/*.md', recursive=True)
+              if all_md:
+                  latest_file = max(all_md, key=os.path.getmtime)
+                  print(f"备选方案发现最新文件: {latest_file}")
+                  return latest_file
+              return None
+
+          target_file = get_target_file()
+          if not target_file:
+              print("未发现任何文章，跳过。")
+              exit(0)
+
+          # 提取标题
+          title = "New Post"
+          with open(target_file, 'r', encoding='utf-8') as f:
+              for line in f:
+                  if line.startswith('title:'):
+                      title = line.replace('title:', '').strip().strip('"').strip("'")
+                      break
+
+          # 构造 URL
+          path_parts = target_file.split('/')
+          # 处理 content/posts/folder/index.md 或 content/posts/file.md
+          if path_parts[-1] in ["index.md", "_index.md"]:
+              slug = path_parts[-2] # 取文件夹名
+          else:
+              slug = path_parts[-1].replace('.md', '')
+          
+          url = f"https://zhitong.uk/posts/{slug}/"
+          content = f"{title}\n{url}"
+
+          print(f"准备发布内容:\n{content}")
+
           try:
-              diff = subprocess.check_output(['git', 'diff', '--name-only', 'HEAD^', 'HEAD']).decode('utf-8')
-              all_files = diff.split('\n')
-              
-              # 过滤出 content/posts 目录下的 md 文件
-              files = [f for f in all_files if f.startswith('content/posts/') and f.endswith('.md')]
-              
-              if not files:
-                  print("未发现 posts 目录下的新文章。")
-                  exit(0)
-              
-              # 优先选择这次提交中的第一个 md 文件
-              target_file = files[0]
-              print(f"检测到变更文件: {target_file}")
-
-              # 2. 提取标题
-              title = ""
-              with open(target_file, 'r', encoding='utf-8') as f:
-                  for line in f:
-                      if line.startswith('title:'):
-                          # 移除 title: 标签和前后的引号
-                          title = line.replace('title:', '').strip().strip('"').strip("'")
-                          break
-              
-              # 3. 构造智能 URL
-              # 如果是 index.md，Slug 应该是文件夹的名字；否则是文件名的名字
-              file_name = os.path.basename(target_file)
-              if file_name == "index.md" or file_name == "_index.md":
-                  # 获取文件夹名：content/posts/my-post/index.md -> my-post
-                  slug = os.path.basename(os.path.dirname(target_file))
-              else:
-                  # 获取文件名：content/posts/my-post.md -> my-post
-                  slug = file_name.replace('.md', '')
-              
-              url = f"https://zhitong.uk/posts/{slug}/"
-              tweet_content = f"{title} {url}"
-              print(f"生成的推文内容: {tweet_content}")
-
-              # 4. 调用 Twitter API (X API v2)
               client = tweepy.Client(
                   consumer_key=os.environ['TWITTER_CONSUMER_KEY'],
                   consumer_secret=os.environ['TWITTER_CONSUMER_SECRET'],
                   access_token=os.environ['TWITTER_ACCESS_TOKEN'],
                   access_token_secret=os.environ['TWITTER_ACCESS_TOKEN_SECRET']
               )
-              client.create_tweet(text=tweet_content)
-              print("推文发布成功！")
-
+              client.create_tweet(text=content)
+              print("✅ 推文发布成功！")
           except Exception as e:
-              print(f"运行出错: {e}")
+              print(f"❌ 发布失败: {e}")
+              # 如果还是 402，说明是 X 账户权限/额度问题，不是代码问题
               exit(1)
-
           EOF
