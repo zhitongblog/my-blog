@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>股票投资 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84/</link>
+    <description>Recent content in 股票投资 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 08 Feb 2026 19:30:49 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%82%A1%E7%A5%A8%E6%8A%95%E8%B5%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>年，产品经理如何用AI模型在股市“降维打击”？</title>
+      <link>http://localhost:1313/posts/20260208-193049-ncpjlrhyaimxzgsjwdj/</link>
+      <pubDate>Sun, 08 Feb 2026 19:30:49 +0800</pubDate>
+      <guid>http://localhost:1313/posts/20260208-193049-ncpjlrhyaimxzgsjwdj/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/20260208-192915-ncpjlrhyaimxzgsjwdj.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;2026年产品经理如何用ai模型在股市降维打击&#34;&gt;2026年，产品经理如何用AI模型在股市“降维打击”？&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;时间：2026-02-08&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在这个万物皆可AI的2026年，如果你还认为产品经理（PM）的核心竞争力仅仅是画原型、写文档或者和开发吵架，那你可能已经掉队了。随着大模型技术的指数级迭代，曾经属于量化交易员（Quants）的神秘黑盒，如今正逐渐成为懂技术、懂逻辑的产品经理手中的利器。&lt;/p&gt;
+&lt;p&gt;最近有一条热搜引起了我的注意：&lt;strong&gt;“北京一危旧楼改建后有业主挂牌1200万”&lt;/strong&gt;。这其实是一个典型的“价值重估”案例——在普通人眼中破旧不堪的资产，经过改造（产品化）后，价值翻倍。股市亦是如此，而在2026年，产品经理利用AI模型在股市进行的，正是一场用系统思维对抗散户情绪的“降维打击”。&lt;/p&gt;
+&lt;h2 id=&#34;一-把交易策略当做产品来设计&#34;&gt;一、 把交易策略当做“产品”来设计&lt;/h2&gt;
+&lt;p&gt;大多数散户亏钱的原因，是因为他们把炒股当成了“赌博”或“消费”。看到**“李亚鹏连续两天直播销售额双双破亿”&lt;strong&gt;的新闻，就脑热去追网红概念股；看到&lt;/strong&gt;“亚洲杯国乒男队年轻人外战全输”**，就恐慌性抛售体育板块。这种情绪化的操作，在产品经理眼中，属于典型的“用户需求分析错误”。&lt;/p&gt;
+&lt;p&gt;产品经理在这个时代的最大优势，是&lt;strong&gt;系统化思维&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;在2026年，我们不需要自己去写复杂的Python代码。PM要做的是定义产品的“MVP”（最小可行性产品），即你的交易策略：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;用户画像（标的选择）：&lt;/strong&gt; 你要交易的是成长股（如&lt;strong&gt;谷爱凌代言的“中国风”运动品牌&lt;/strong&gt;背后的新消费赛道），还是稳健的红利股？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心功能（买卖逻辑）：&lt;/strong&gt; 是基于技术面突破，还是基于基本面财报？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;异常处理（风控模型）：&lt;/strong&gt; 遇到**“外卖小哥打翻32杯奶茶”**这种突发“黑天鹅”事件时，你的止损线在哪里？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;PM不需要成为算法工程师，但必须成为&lt;strong&gt;AI Agent（智能体）的架构师&lt;/strong&gt;。你负责制定逻辑，AI负责执行。&lt;/p&gt;
+&lt;h2 id=&#34;二-舆情分析利用ai做实时的用户调研&#34;&gt;二、 舆情分析：利用AI做实时的“用户调研”&lt;/h2&gt;
+&lt;p&gt;2026年的股市，信息差依然存在，但处理信息的速度决定了胜负。&lt;/p&gt;
+&lt;p&gt;传统的散户看新闻，是线性的、滞后的。当你在热搜上看到**“中方回应巴基斯坦首都爆炸事件”**时，市场可能已经消化了这一地缘政治风险。但对于善用AI的产品经理来说，这只是数据输入的一个节点。&lt;/p&gt;
+&lt;p&gt;我们可以利用定制的AI Agent，构建一个实时的舆情监控系统：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;全网爬取：&lt;/strong&gt; 24小时监控从CBA赛场（如&lt;strong&gt;上海VS山东&lt;/strong&gt;的赞助商曝光）到国际新闻联播的实时数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NLP情感分析：&lt;/strong&gt; 2026年的模型已经能精准识别情绪。比如，当**“苏翊鸣领奖后落泪拥抱父母”**的视频刷屏时，AI能迅速分析出该品牌在Z世代中的情感连接度，预判相关消费电子或运动装备股的短期情绪溢价。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;去伪存真：&lt;/strong&gt; 就像我们需要分辨**“重庆民政局招聘系谣言”**一样，AI模型能快速交叉验证财经小作文的真实性，避免被假消息割韭菜。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这种将非结构化数据（新闻、视频、评论）瞬间转化为结构化交易信号的能力，就是对只看K线图的传统股民的降维打击。&lt;/p&gt;
+&lt;h2 id=&#34;三-回测与迭代像做ab-test一样做交易&#34;&gt;三、 回测与迭代：像做A/B Test一样做交易&lt;/h2&gt;
+&lt;p&gt;产品经理最熟悉的流程是什么？是“上线-数据分析-迭代”。&lt;/p&gt;
+&lt;p&gt;很多股民亏钱是因为“一把梭”，这在产品开发中叫“全量发布未测试的代码”，是大忌。在2026年，依托算力平台，PM可以零代码进行策略回测。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;历史环境模拟：&lt;/strong&gt; 将你的策略扔进过去5年的数据中跑一遍。如果你的策略在2024年的大跌中没扛住，在2025年的反弹中没跟上，那么它就不具备“上线”资格。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;参数调优：&lt;/strong&gt; 就像调整APP的按钮颜色一样，通过AI调整你的移动止盈点、仓位管理比例。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;小流量测试：&lt;/strong&gt; 不要一开始就满仓。先用小资金（灰度发布）验证策略的有效性，确认收益曲线稳定后，再逐步放大资金量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最近**“我国成功发射可复用试验航天器”&lt;strong&gt;，这意味着高精尖技术正在走向可重复、低成本化。同理，一个好的交易策略，必须是&lt;/strong&gt;“可复用”**的，而不是靠运气的。如果你的赚钱逻辑无法在AI回测中复现，那就是随机漫步，迟早会亏回去。&lt;/p&gt;
+&lt;h2 id=&#34;四-情绪管理把ai当做绝对理性的项目经理&#34;&gt;四、 情绪管理：把AI当做绝对理性的“项目经理”&lt;/h2&gt;
+&lt;p&gt;人性的弱点是交易中最大的敌人。贪婪时不想卖，恐惧时不敢买。&lt;/p&gt;
+&lt;p&gt;还记得那个**“女子吐槽飞机餐仅一根青菜配米饭”**的热搜吗？人在情绪激动时，往往会做出非理性的评价和行为。股市中，这种情绪会被无限放大。&lt;/p&gt;
+&lt;p&gt;产品经理要学会将执行权移交。在2026年，成熟的交易者会设定好“条件单”和“智能网格”。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当股价触及止损线，AI会自动卖出，它不会像人类一样心存侥幸“再等等”。&lt;/li&gt;
+&lt;li&gt;当机会来临时，AI会像执行**“全国铁路预计发送旅客1325万人次”**调度任务一样，精准、冷酷地执行买入指令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这种“硅基理性”对战“碳基情绪”，结果不言而喻。&lt;/p&gt;
+&lt;h2 id=&#34;五-总结&#34;&gt;五、 总结&lt;/h2&gt;
+&lt;p&gt;2026年，对于产品经理而言，股市不再是一个单纯的K线博弈场，而是一个巨大的数据产品。&lt;/p&gt;
+&lt;p&gt;我们不需要比别人更懂KDJ或MACD，我们需要的是发挥产品经理的核心优势：&lt;strong&gt;洞察需求（市场方向）、架构系统（交易策略）、数据驱动（回测迭代）以及利用工具（AI模型）。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当别人还在为**“如何看待女性占用男厕现象”**这种社会资源分配问题在网上争论不休时，具备产品思维的你，应该已经利用AI模型，在资源错配的资本市场中，找到了属于你的那份超额收益。&lt;/p&gt;
+&lt;p&gt;记住，工具再强，核心依然是背后的“产品逻辑”。在这个时代，不是AI在炒股，而是你作为超级产品经理，指挥着一支AI军团在战斗。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

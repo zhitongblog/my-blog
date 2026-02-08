@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>商业逻辑 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E5%95%86%E4%B8%9A%E9%80%BB%E8%BE%91/</link>
+    <description>Recent content in 商业逻辑 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 08 Feb 2026 19:26:49 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%95%86%E4%B8%9A%E9%80%BB%E8%BE%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>拒绝当韭菜：2026年PM用AI搭建量化系统的赚钱逻辑</title>
+      <link>http://localhost:1313/posts/20260208-192649-jjdjc2026npmyaidjlhxtdzqlj/</link>
+      <pubDate>Sun, 08 Feb 2026 19:26:49 +0800</pubDate>
+      <guid>http://localhost:1313/posts/20260208-192649-jjdjc2026npmyaidjlhxtdzqlj/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/20260208-192448-jjdjc2026npmyaidjlhxtdzqlj.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;拒绝当韭菜2026年pm用ai搭建量化系统的赚钱逻辑&#34;&gt;拒绝当韭菜：2026年PM用AI搭建量化系统的赚钱逻辑&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;日期：2026-02-08&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在这个刚刚过完春节、大家还在回味春晚和假期的节点，不少人的心思已经活络起来了。看着新闻里&lt;strong&gt;李亚鹏连续两天直播销售额双双破亿&lt;/strong&gt;，你可能会感叹流量变现的疯狂；看着&lt;strong&gt;北京一危旧楼改建后有业主挂牌1200万&lt;/strong&gt;，你可能会焦虑资产增值的赛道到底在哪里。&lt;/p&gt;
+&lt;p&gt;作为产品经理（PM），我们习惯了分析用户痛点、设计系统逻辑、追求MVP（最小可行性产品）快速迭代。而在2026年的今天，当AI已经进化到能够自主完成复杂推理和代码生成的阶段，你是否想过：&lt;strong&gt;其实你手中掌握的PM思维，正是股市中最稀缺的“量化圣经”？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;今天我们不谈枯燥的K线技术，只谈在这个AI高度成熟的2026年，产品经理如何利用自己的职业天赋，搭建一套拒绝当“韭菜”的量化赚钱系统。&lt;/p&gt;
+&lt;h2 id=&#34;一-把股市当成一个待解决的需求&#34;&gt;一、 把股市当成一个“待解决的需求”&lt;/h2&gt;
+&lt;p&gt;很多散户之所以亏钱，是因为他们把股市当成了赌场，凭感觉下注。比如看到&lt;strong&gt;亚洲杯国乒男队年轻人外战全输&lt;/strong&gt;的新闻，就情绪化地看空体育概念股；或者看到&lt;strong&gt;女子吐槽飞机餐仅一根青菜配米饭&lt;/strong&gt;，就无脑做空航空股。这种基于碎片化信息的情绪交易，就是典型的“韭菜行为”。&lt;/p&gt;
+&lt;p&gt;在PM眼里，股市是一个充满噪音的巨大数据库，而我们的目标是**“从噪音中提取信号”**。&lt;/p&gt;
+&lt;p&gt;2026年的PM做量化，核心优势在于&lt;strong&gt;系统化思维&lt;/strong&gt;。你不需要是数学博士，也不需要是Python大神（因为AI会帮你写代码），你需要做的是写好一份“量化交易系统的PRD（产品需求文档）”。&lt;/p&gt;
+&lt;p&gt;你的PRD里应该包含：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;用户场景（市场环境）：&lt;/strong&gt; 是牛市、熊市还是震荡市？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心功能（策略逻辑）：&lt;/strong&gt; 是做趋势跟踪，还是做均值回归？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;异常处理（风控机制）：&lt;/strong&gt; 就像&lt;strong&gt;外卖小哥打翻32杯奶茶原地发愣&lt;/strong&gt;一样，市场也会出现“黑天鹅”，你的系统有没有熔断机制？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;二-2026年的工具革命ai是你的开发团队&#34;&gt;二、 2026年的工具革命：AI是你的开发团队&lt;/h2&gt;
+&lt;p&gt;回想几年前，做量化还需要自己搭建数据库、清洗数据、编写复杂的Python脚本。但到了2026年，情况完全变了。&lt;/p&gt;
+&lt;p&gt;现在的AI大模型不仅仅是聊天机器人，它们是你的&lt;strong&gt;全栈工程师&lt;/strong&gt;。你只需要充当Product Owner的角色。&lt;/p&gt;
+&lt;h3 id=&#34;1-数据清洗像处理用户反馈一样处理财报&#34;&gt;1. 数据清洗：像处理用户反馈一样处理财报&lt;/h3&gt;
+&lt;p&gt;以前看财报要人工摘录，现在你可以直接把几千份财报丢给AI，让它提取关键指标。比如，你可以让AI分析所有上市公司在**《新闻联播》&lt;strong&gt;被提及的频率与股价波动的相关性，或者分析&lt;/strong&gt;我国成功发射可复用试验航天器**这一事件背后，航天军工产业链的资金流向。AI能在一分钟内帮你完成过去需要一周的数据清洗工作。&lt;/p&gt;
+&lt;h3 id=&#34;2-策略生成用自然语言编写算法&#34;&gt;2. 策略生成：用自然语言编写算法&lt;/h3&gt;
+&lt;p&gt;你不需要写代码，你只需要描述逻辑。
+例如：“帮我设计一个策略，当某只股票的社交媒体讨论热度突然上升（类似&lt;strong&gt;谷爱凌介绍中国风雪服&lt;/strong&gt;这种破圈效应），且主力资金净流入超过1000万时，买入并在涨幅达到5%时止盈。”&lt;/p&gt;
+&lt;p&gt;AI会自动将这段话转化为可执行的量化代码，并在历史数据中进行回测。如果回测结果显示这个策略在过去三年会亏掉底裤，AI会直接告诉你：此路不通，请修改需求。&lt;/p&gt;
+&lt;h2 id=&#34;三-核心打法mvp迭代与ab测试&#34;&gt;三、 核心打法：MVP迭代与A/B测试&lt;/h2&gt;
+&lt;p&gt;PM最懂的一个词叫&lt;strong&gt;MVP（Minimum Viable Product，最小可行性产品）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;很多“韭菜”一上来就满仓梭哈，这就像是一个刚毕业的产品经理，还没做用户调研就想开发一个像微信一样的超级APP，结果必然是惨败。&lt;/p&gt;
+&lt;h3 id=&#34;1-小资金验证mvp&#34;&gt;1. 小资金验证（MVP）&lt;/h3&gt;
+&lt;p&gt;在2026年，利用AI搭建好策略后，千万不要急着投入全部积蓄。先用模拟盘或极小资金进行实盘验证。这就像&lt;strong&gt;全国铁路预计发送旅客1325万人次&lt;/strong&gt;一样，流量是一点点跑出来的，系统的稳定性也是一点点测出来的。&lt;/p&gt;
+&lt;h3 id=&#34;2-策略的ab测试&#34;&gt;2. 策略的A/B测试&lt;/h3&gt;
+&lt;p&gt;不要只依赖一种策略。你可以让AI同时运行两套逻辑：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A组策略（保守型）：&lt;/strong&gt; 类似&lt;strong&gt;退休后与子女相处&lt;/strong&gt;的智慧，追求稳健、低频、高胜率，主抓高分红蓝筹股。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;B组策略（激进型）：&lt;/strong&gt; 类似&lt;strong&gt;一汽红旗奖励运动员豪车&lt;/strong&gt;的营销打法，甚至可以捕捉一些短期热点，比如针对&lt;strong&gt;苏翊鸣领奖后落泪&lt;/strong&gt;带来的冰雪经济短期爆发进行博弈。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过对比A/B两组策略在不同市场环境下的表现，动态调整资金配比。这就是PM最擅长的灰度发布和数据调优。&lt;/p&gt;
+&lt;h2 id=&#34;四-警惕幻觉风控是产品的生命线&#34;&gt;四、 警惕“幻觉”：风控是产品的生命线&lt;/h2&gt;
+&lt;p&gt;虽然AI很强，但2026年的AI依然存在“幻觉”问题，就像**“重庆民政局招聘”系谣言**这种假新闻一样，AI有时会根据错误的数据推导出离谱的结论。&lt;/p&gt;
+&lt;p&gt;作为PM，你必须是那个&lt;strong&gt;最后把关的人&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;反脆弱设计：&lt;/strong&gt; 当你看到&lt;strong&gt;研究员分析俄军中将遇刺暴露安保漏洞&lt;/strong&gt;时，要联想到自己的系统是否存在安全漏洞。如果交易所接口断了怎么办？如果AI数据源污染了怎么办？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不要过度拟合：&lt;/strong&gt; AI很容易在历史数据上跑出完美的曲线，但在未来失效。这就像有些人看到&lt;strong&gt;北京危旧楼卖出1200万&lt;/strong&gt;就以为所有老破小都能发财一样，这是典型的幸存者偏差。你要强制AI在“样本外数据”进行测试，确保策略的普适性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;五-总结从打工者到资产管理者&#34;&gt;五、 总结：从打工者到资产管理者&lt;/h2&gt;
+&lt;p&gt;在这个时代，&lt;strong&gt;22岁大学生可以20天骑行千里返乡&lt;/strong&gt;，凭的是毅力和规划；产品经理想要在股市赚钱，凭的是逻辑和工具。&lt;/p&gt;
+&lt;p&gt;2026年，拒绝当韭菜的核心，不再是去打听小道消息，而是利用AI将你的投资逻辑&lt;strong&gt;产品化、自动化&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这一套逻辑的闭环是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;需求分析：&lt;/strong&gt; 识别市场机会（如政策利好、事件驱动）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;产品设计：&lt;/strong&gt; 用AI生成交易策略。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开发测试：&lt;/strong&gt; 回测数据，验证MVP。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;上线运营：&lt;/strong&gt; 实盘交易，严格风控。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据复盘：&lt;/strong&gt; 定期优化迭代。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当你把炒股不再看作是“炒”，而是看作是在&lt;strong&gt;运营一款名为“我的资产”的产品&lt;/strong&gt;时，你就已经战胜了市场上90%的竞争对手。别让你的PM思维只停留在写周报和画原型上，用它来为自己构建财富壁垒吧。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
