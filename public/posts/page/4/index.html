@@ -142,6 +142,105 @@
 </header>
 
 <article class="post-entry"> 
+<figure class="entry-cover">
+            <img loading="lazy" src="http://localhost:1313/posts/%E5%AE%9E%E6%88%98%E5%A4%8D%E7%9B%98%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%86%99%E4%BB%A3%E7%A0%81%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C%E8%AE%B0%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAai%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91%E5%8E%86%E7%A8%8B/unnamed%20%2825%29.jpg" alt="">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">实战复盘】产品经理写代码是一种什么体验？记我的第一个AI工具开发历程
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在上一篇文章里，我豪言壮语地说要“Build in Public”。今天，是时候兑现承诺了。
+作为一名产品经理（PM），我过去的工作是动嘴皮子和画原型图，然后把文档甩给开发。但当我决定做一名“独立开发者”时，我发现——没人可甩了。
+我的第一个练手项目是 “StoryGlint（小说大纲助手）” 的一个核心模块：角色一致性检查器。 痛点很明确：写长篇小说时，经常写着写着就把配角的瞳色搞错了，或者把反派的性格写崩了。我想做一个工具，能自动扫描章节，对比人设卡，指出不一致的地方。
+听起来很简单，对吧？ 然而，现实给了我三记响亮的耳光。
+第一关：不仅要会写代码，还要会修环境 我在 Google Cloud 的 Vertex AI Workbench 上搭建了开发环境。我以为有 AI 辅助写代码（Code Generation），我只需要负责复制粘贴。
+现实是：AI 写的代码是对的，但环境是错的。
+前几天，在调试 Gemini CLI 工具时，我一直遇到一个诡异的报错： TypeError: fetch failed 以及随后的 400 INVALID_ARGUMENT。
+如果我有技术合伙人，我此时应该在 Slack 上 @他 骂街了。但现在，我只能盯着那个黑底白字的终端发呆。 我不得不花了一整天时间去查文档、去 Stack Overflow 翻答案，最后发现是 API 调用参数格式的问题，以及本地网络代理的配置冲突。
+启示： AI 可以帮你写出逻辑完美的 Python 函数，但它无法帮你解决“网线没插好”这种物理世界的环境问题。作为独立开发者，Debug 环境的能力比写算法更重要。
+第二关：数据灾难与“时光倒流” 1 月 24 日那天，我经历了一个所有开发者的噩梦：误删代码。
+在一次重构文件目录时，我手滑覆盖了核心的逻辑文件。更糟糕的是，我当时还没来得及推送到 GitHub。 看着瞬间变空的代码框，我脑子里一片空白。
+那一刻，我被迫学会了如何使用 Google Cloud 的快照功能。我疯狂地搜索“Vertex AI Workbench restore version”，在经过惊心动魄的半小时操作后，终于把项目回滚到了三天前的版本。
+启示： 也是从那天起，我养成了每写完一个功能就 git commit 的肌肉记忆。数据备份，是比代码质量更底层的生存法则。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-29 12:26:09.384868 +0800 CST'>January 29, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 实战复盘】产品经理写代码是一种什么体验？记我的第一个AI工具开发历程" href="http://localhost:1313/posts/%E5%AE%9E%E6%88%98%E5%A4%8D%E7%9B%98%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E5%86%99%E4%BB%A3%E7%A0%81%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C%E8%AE%B0%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAai%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91%E5%8E%86%E7%A8%8B/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+            <img loading="lazy" src="http://localhost:1313/posts/ai-%E5%88%9B%E4%B8%9A%E4%B8%8B%E5%8D%8A%E5%9C%BA%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A5%97%E5%A3%B3%E5%BF%85%E6%AD%BB%E8%80%8C%E5%9C%BA%E6%99%AF%E6%B0%B8%E7%94%9F/unnamed%20%2824%29.jpg" alt="">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">AI 创业下半场：为什么“套壳”必死，而“场景”永生？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在过去的两三年里，AI 创业圈流行着一个残酷的笑话：
+“你的创业项目很棒，直到 OpenAI 开了一场发布会。”
+这并非危言耸听。还记得那些主打“PDF 阅读总结”的初创公司吗？当 ChatGPT 上线文档上传功能的那一刻，它们的估值瞬间归零。还记得那些做“AI 视频生成”的小团队吗？Sora 和 Veo 的出现让它们显得像个玩具。
+这就是 “套壳（Wrapper）” 的宿命。
+作为一名产品经理，我经常被问到：“智通，现在入局 AI 创业，是不是只能给巨头做嫁衣？”
+我的答案是：如果你只是在卖“模型的能力”，你必死无疑；但如果你在卖“解决问题的方案”，这才是黄金时代的开始。
+今天，我想聊聊在 AI 创业的下半场，我们该如何构建真正的护城河。
+一、 警惕“薄层封装”陷阱 什么是“薄层封装”（Thin Wrapper）？ 简单说，就是你的产品核心价值完全来自于调用 API，你只是做了一个 UI 界面（User Interface）。
+典型特征：
+用户输入 -&gt; 你的 Prompt -&gt; GPT 返回 -&gt; 展示给用户。 如果 OpenAI 的 API 挂了，你的产品就成了砖头。 为什么它没有未来？ 因为“模型能力”是像电力一样的基础设施。电网公司（OpenAI/Google）会不断降低电费，并提供更稳的电压。如果你只是一个“转售电力的二道贩子”，当电网直接把插座修到用户家里时，你就没有存在的必要了。
+二、 真正的机会：垂直场景（Vertical SaaS） 巨头的模型是**“通才”，它们懂莎士比亚，懂量子力学，但它们不懂“义乌小商品城的发货流程”，也不懂“中国三甲医院的病历合规标准”**。
+这，就是创业者的机会。
+1. 窄度即深度 不要做“AI 写作助手”，要做“跨境电商亚马逊 Listing 优化助手”。
+前者是红海，你要和微软 Copilot 竞争。 后者是蓝海，你需要通过微调（Fine-tuning）让 AI 懂得什么是 A9 算法，什么是高转化率的关键词，什么是违禁词。 智通心法： 你的目标客户越具体，你的 Prompt 和工作流就越难以被通用模型替代。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-29 12:11:15.081079 +0800 CST'>January 29, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to AI 创业下半场：为什么“套壳”必死，而“场景”永生？" href="http://localhost:1313/posts/ai-%E5%88%9B%E4%B8%9A%E4%B8%8B%E5%8D%8A%E5%9C%BA%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A5%97%E5%A3%B3%E5%BF%85%E6%AD%BB%E8%80%8C%E5%9C%BA%E6%99%AF%E6%B0%B8%E7%94%9F/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">AI 时代的“一人公司”实战指南：如何用极简配置撬动最大价值
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在 AI 时代，创办一人公司的本质，就是把‘你自己’当作一个产品去打磨。本文为您梳理了从定位到增长的五步实战 SOP。</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-27 11:00:00 +0800 CST'>January 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to AI 时代的“一人公司”实战指南：如何用极简配置撬动最大价值" href="http://localhost:1313/posts/2026-01-28-use-ai1/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">【AI与古文·02】当AI遇上辛弃疾：如何用算法算出“醉里挑灯看剑”的悲凉？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>上一次，我们用“去道德化”和“关键词锚定”搞定了秦始皇的冷峻诏书。 这一次，我们要挑战一个更感性、更复杂的对手——辛弃疾（稼轩）。
+在写我的小说《新宋：稼轩长歌》时，我无数次尝试用 AI 生成几首类似《破阵子》的词。结果？大多数时候，AI 只能给我生成这种东西：
+“壮志凌云冲九霄，宝剑出鞘斩妖娆。江山如画多娇媚，英雄豪杰乐逍遥。”
+❌ 智通点评： 这哪是辛弃疾？这是“老干部退休书画展”的题词。 它只有“豪”的皮毛（大嗓门），没有“放”的骨架，更没有稼轩词里最核心的那种——把栏杆拍遍，无人会，登临意的孤独与悲凉。
+AI 默认的“豪放”，往往等于“喊口号”。但真正的豪放，是剧烈的反差。
+一、 实验目标 场景： 辛弃疾晚年被贬闲居带湖，深夜看剑，想起当年率领五十骑突袭金营的往事。 难点： 要体现出**“心在天山，身老沧洲”**的撕裂感。不能只有杀伐气，必须要有无力感。
+二、 失败的尝试：只会堆砌“金戈铁马” 如果你只是告诉 AI：“写一首辛弃疾风格的词，要豪放，写打仗。” AI 会给你堆砌一堆：金戈、铁马、战鼓、雷鸣、血染战袍。
+这些词本身没错，但堆在一起就成了**“陈词滥调（Cliché）”**。因为 AI 没有痛觉，它不知道“挑灯看剑”时，那个“灯”是昏暗的，那个“剑”是冷的，看剑的人是白发的。
+三、 成功的策略：意象注入与“反差蒙太奇” 为了让 AI 懂辛弃疾，我总结了一套**“反差蒙太奇”**的 Prompt 技巧。
+辛弃疾的词往往是由两组蒙太奇镜头组成的：
+镜头 A（现实）： 白发、草屋、病体、昏灯。 镜头 B（回忆/理想）： 骏马、快刀、弓弦、烈火。 优化后的 Prompt（提示词）：
+角色设定： 你是南宋词人辛弃疾，晚年闲居。 情感基调： 悲壮（不仅仅是豪放）。核心冲突是肉体的衰老 vs 精神的亢奋。 强制意象（Imagery）：
+不要写空泛的“壮志”，要写具体的**“生锈的铁甲”、“半夜的灯花”**。 不要写“我想报国”，要写**“梦回吹角连营”**。 结构要求： 上片写深夜失眠的寂静，下片写梦中杀敌的狂热，最后一句要跌回现实，写头上的白发。 词牌名： 《破阵子》 AI 的回答（V2.0）：
+《破阵子·夜雨感怀》
+窗外雨打芭蕉，如闻万马如潮。 醉里摩挲旧时铠，寒光犹照当年袍，梦随吴钩刀。
+曾记沙场点兵，一骑飞渡临洮。 欲挽天河洗胡虏，不仅空余两鬓毛，青山共寂寥。
+✅ 智通点评： 这一次，味道出来了。
+“摩挲旧时铠”：有了动作细节，不再是空喊口号。 “不仅空余两鬓毛”：抓住了辛弃疾晚年“可怜白发生”的神韵。 “万马如潮”与“青山寂寥”：形成了动与静、梦与真的强烈反差。 虽然这一首词还比不上稼轩原本的“八百里分麾下炙”，但在情绪的颗粒度上，已经从“喊口号的莽夫”进化成了“失意的英雄”。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-26 09:30:00 +0800 CST'>January 26, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 【AI与古文·02】当AI遇上辛弃疾：如何用算法算出“醉里挑灯看剑”的悲凉？" href="http://localhost:1313/posts/2026-01-27-use-ai3/"></a>
+</article>
+
+<article class="post-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">【AI与古文写作】拒绝“戏说味”：如何用AI还原秦代的“法家冷峻风”
     </h2>
