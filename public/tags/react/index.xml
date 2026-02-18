@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>React on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/react/</link>
+    <description>Recent content in React on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Feb 2026 05:44:20 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从‘试用’到‘投产’：一位全栈工程师的Claude Code工程化实践避坑手册</title>
+      <link>http://localhost:1313/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/</link>
+      <pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/</guid>
+      <description>一位全栈工程师亲历的Claude Code工程化落地避坑实录：从本地试用到生产部署，详解DNS超时、环境变量失效、Hook依赖错误等真实故障根因与可复用的加固方案。</description>
+    </item>
+  </channel>
+</rss>

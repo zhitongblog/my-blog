@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>从‘试用’到‘投产’：一位全栈工程师的Claude Code工程化实践避坑手册 | 智通和你一起学AI</title>
+<meta name="keywords" content="Claude, DevOps, React, Docker, CI/CD, 全栈开发">
+<meta name="description" content="一位全栈工程师亲历的Claude Code工程化落地避坑实录：从本地试用到生产部署，详解DNS超时、环境变量失效、Hook依赖错误等真实故障根因与可复用的加固方案。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' 
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      从‘试用’到‘投产’：一位全栈工程师的Claude Code工程化实践避坑手册
+    </h1>
+    <div class="post-description">
+      一位全栈工程师亲历的Claude Code工程化落地避坑实录：从本地试用到生产部署，详解DNS超时、环境变量失效、Hook依赖错误等真实故障根因与可复用的加固方案。
+    </div>
+    <div class="post-meta"><span title='2026-02-18 05:44:20.652 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="一为什么试用很爽上线就崩我的三次翻车现场实录">一、为什么“试用很爽，上线就崩”？——我的三次翻车现场实录<a hidden class="anchor" aria-hidden="true" href="#一为什么试用很爽上线就崩我的三次翻车现场实录">#</a></h2>
+<p>2024.03.12 上午10:23 —— CI流水线突然卡死在 <code>claude-plugin:run</code> 步骤。本地 <code>npx claude-gen --component Header</code> 三秒出结果，CI里却卡住 90 秒后被 Kubernetes OOMKilled。日志最后一行是：</p>
+<pre tabindex="0"><code class="language-log" data-lang="log">[claude-plugin] timeout after 60s waiting for Claude API response (retry=3)
+</code></pre><p>没人想到，我们给插件配的 <code>CLAUDE_TIMEOUT=60</code> 是硬编码进 Dockerfile 的，而 CI 环境 DNS 解析慢了 200ms，叠加重试逻辑直接超时。更讽刺的是，本地 <code>.env</code> 里写了 <code>CLAUDE_TIMEOUT=120</code>，但插件根本没读——它只认环境变量，不读文件。</p>
+<p>2024.04.05 下午16:47 —— 生产监控告警：<code>useEffect dependency warning</code> 爆发式增长。React DevTools 里一切正常，但 Sentry 报出上千条：</p>
+<pre tabindex="0"><code>Warning: React has detected a change in the order of Hooks called by MyDataGrid.
+This will lead to bugs and errors if not fixed.
+   at MyDataGrid (src/components/MyDataGrid.tsx:42:3)
+   at useEffect (react.development.js:2439)
+</code></pre><p>翻代码才发现：Claude生成的组件里，<code>useEffect(() =&gt; { loadData(); }, [searchTerm])</code> 被写成了 <code>useEffect(() =&gt; { loadData(); }, [])</code> —— 因为 prompt 里我只写了“加个搜索功能”，没明确说“依赖项必须包含 searchTerm”。开发时 <code>searchTerm</code> 恰好是全局常量，所以没报错；生产环境它是从 URL 参数动态解析的，一变就崩。</p>
+<p>2024.05.18 凌晨03:12 —— Airflow DAG <code>etl_user_enrichment</code> 连续失败，Pod 内存飙升到 16GB，OOMKilled。脚本开头赫然写着：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Generated by Claude 3.5 Sonnet on 2024-05-17</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;/data/raw/users.csv&#34;</span>)  <span style="color:#75715e"># 23GB file</span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>merge(pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;/data/raw/profiles.csv&#34;</span>), on<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user_id&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... 7 more .read_csv() calls</span>
+</span></span></code></pre></div><p>它甚至没加 <code>chunksize</code>，也没做类型推断优化。我们以为只是“小数据清洗”，结果它把整个用户库全 load 进内存——而 Airflow worker 只配了 4GB。</p>
+<p>当时我以为只是配置疏忽，后来才懂：这不是 bug，是<strong>人机协作的系统性断层</strong>——AI 在“解题”，而我在“交作业”。</p>
+<p><img alt="CI流水线超时日志截图" loading="lazy" src="IMAGE_PLACEHOLDER_1"></p>
+<h2 id="二别再把ai当高级ctrlcv工程化前必须划清的三条红线">二、别再把AI当‘高级Ctrl+C/V’——工程化前必须划清的三条红线<a hidden class="anchor" aria-hidden="true" href="#二别再把ai当高级ctrlcv工程化前必须划清的三条红线">#</a></h2>
+<p>我们踩坑后开了三次复盘会，最终把血泪教训焊进流程：</p>
+<p>① <strong>「不可绕过Code Review」</strong>：现在每份 PR 必须带 <code>AI-REVIEW</code> 标签，且强制填写：</p>
+<ul>
+<li><code>[ ] 人类确认：第12行 </code>fetchUsers()<code> 是否应加 loading 状态？</code></li>
+<li><code>[ ] 人类确认：第28行 </code>handleError(e)<code> 是否覆盖了网络超时场景？</code><br>
+PR 模板已固化进 GitHub repo settings，未填满不许提交。Git 钩子还会扫描 <code>// AI-GENERATED</code> 注释，自动插入 checklist。</li>
+</ul>
+<p>② <strong>「禁止直连生产数据源」</strong>：上周 Claude 在 SQL 脚本里偷偷加了 <code>SELECT * FROM users WHERE created_at &gt; '2024-01-01'</code>。幸亏我们接入了 <code>mockdb-schemadiff</code> 工具——它比对了开发环境 MockDB Schema 和线上 prod schema，发现 <code>users</code> 表多了 <code>password_hash</code> 字段（本地 mock 里没这列），立刻阻断 CI，并在 PR 评论里贴出差异：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span><span style="color:#f92672">- columns: [id, name, email]
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+ columns: [id, name, email, password_hash, updated_at, ...]
+</span></span></span></code></pre></div><p>现在所有 SQL 必须先跑 <code>sqlc generate</code> 生成 type-safe query，再喂给 Claude 补充业务逻辑。</p>
+<p>③ <strong>「函数级隔离」</strong>：所有 AI 产出必须封装进 <code>/ai-generated/</code> 目录，且对外暴露接口必须通过 OpenAPI 3.0 校验。比如这个 Claude 写的支付回调处理函数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># /ai-generated/payment/handler.yml</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">post</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">summary</span>: <span style="color:#ae81ff">Handle Alipay async notification</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">requestBody</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">content</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">application/x-www-form-urlencoded</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">schema</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">type</span>: <span style="color:#ae81ff">object</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">required</span>: [<span style="color:#ae81ff">notify_id, sign, trade_status]</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">properties</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">notify_id</span>: { <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string }</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">sign</span>: { <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string }</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">trade_status</span>: { <span style="color:#f92672">enum</span>: [<span style="color:#ae81ff">TRADE_SUCCESS, TRADE_CLOSED] }</span> <span style="color:#75715e"># ← Claude漏写了这个枚举！校验器当场报错</span>
+</span></span></code></pre></div><p>Swagger UI 自动生成的接口文档，和实际代码强绑定。<img alt="OpenAPI校验对比图：左侧AI生成未校验版，右侧通过校验的终版" loading="lazy" src="IMAGE_PLACEHOLDER_2"></p>
+<h2 id="三我的claude工作流不是提问粘贴而是预埋验证缝合">三、我的Claude工作流：不是“提问→粘贴”，而是“预埋→验证→缝合”<a hidden class="anchor" aria-hidden="true" href="#三我的claude工作流不是提问粘贴而是预埋验证缝合">#</a></h2>
+<p>我现在的工作流像搭乐高：先铸模具，再灌浆，最后拧螺丝。</p>
+<ul>
+<li>
+<p><strong>前端组件生成</strong>：<br>
+周一 10:00 → 手写 <code>UserCardProps.ts</code> interface 和 Storybook CSF 文件（含 3 个状态）；<br>
+10:15 → 喂给 Claude 的 prompt 是：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>基于以下 TS 接口和 Storybook CSF（已提供），生成 React 组件：
+</span></span><span style="display:flex;"><span>- 必须用 TypeScript + Emotion CSS；
+</span></span><span style="display:flex;"><span>- 禁止使用任何第三方 UI 库；
+</span></span><span style="display:flex;"><span>- 所有 props 必须显式声明，不得 any；
+</span></span><span style="display:flex;"><span>- 加载态需显示 skeleton，错误态显示 fallback。
+</span></span></code></pre></div><p>10:22 → <code>npm run lint &amp;&amp; npm run storybook:test</code> 全绿；<br>
+10:28 → 提 PR，标题带 <code>[AI] UserCard v1.2</code>。</p>
+</li>
+<li>
+<p><strong>后端API补全</strong>：<br>
+Postman Collection 里已定义好 <code>/v1/orders/{id}/refund</code> 的全部请求头、参数、响应体结构；OpenAPI Schema 里约束了 <code>refund_reason</code> 必须是 <code>enum: [&quot;damaged&quot;, &quot;wrong_item&quot;, &quot;cancelled&quot;]</code>。Claude 只能在这个框里填逻辑，不能改契约。</p>
+</li>
+<li>
+<p><strong>运维脚本</strong>：<br>
+所有 <code>.sh</code> 或 <code>.py</code> 文件提交前必跑：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>shellcheck -s bash deploy.sh <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>pylint --errors-only --disable<span style="color:#f92672">=</span>all --enable<span style="color:#f92672">=</span>E1101,E0602,E1123 ./scripts/cleanup.py
+</span></span></code></pre></div><p>一次 <code>pylint</code> 报出 <code>E1123: Unexpected keyword argument 'timeout'</code> —— 原来 Claude 给 <code>requests.get()</code> 加了 <code>timeout=30</code>，但脚本用的是 <code>urllib3</code>，根本没这参数。</p>
+</li>
+</ul>
+<p>慢下来，反而每天多交付 2 个模块。因为返工少了。</p>
+<h2 id="四那些没人告诉你的幽灵坑环境权限可观测性的暗礁清单">四、那些没人告诉你的‘幽灵坑’——环境、权限、可观测性的暗礁清单<a hidden class="anchor" aria-hidden="true" href="#四那些没人告诉你的幽灵坑环境权限可观测性的暗礁清单">#</a></h2>
+<p>这些坑不报错，但会让你半夜爬起来修：</p>
+<p>① <strong>Docker Alpine 版本陷阱</strong>：<br>
+Claude 默认写 <code>FROM alpine:latest</code>，但 <code>alpine:latest</code> 是 3.20，而我们基础镜像用 <code>glibc 2.38</code>，它只兼容 <code>alpine:3.19</code>。检测命令：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run --rm alpine:latest ldd --version  <span style="color:#75715e"># 输出 ldd (GNU libc) 2.39</span>
+</span></span><span style="display:flex;"><span>docker run --rm alpine:3.19 ldd --version      <span style="color:#75715e"># 输出 ldd (GNU libc) 2.38 ✅</span>
+</span></span></code></pre></div><p>一键修复：<code>sed -i 's/alpine:latest/alpine:3.19/g' Dockerfile</code></p>
+<p>② <strong>VS Code Remote-SSH 环境变量黑洞</strong>：<br>
+Claude 插件在远程 SSH 里读不到 <code>.env.local</code>，但本地 IDE 可以。debug 命令：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo $CLAUDE_API_KEY  <span style="color:#75715e"># 远程返回空，本地有值</span>
+</span></span></code></pre></div><p>修复：在 <code>~/.bashrc</code> 里加 <code>export CLAUDE_API_KEY=$(cat .env.local | grep CLAUDE_API_KEY | cut -d= -f2)</code></p>
+<p>③ <strong>K8s tmpfs 临时文件失效</strong>：<br>
+Claude写的 <code>tempfile.mkstemp()</code> 生成的文件，在 Pod 重启后消失，但清理逻辑假设文件还在。检测：<code>df -h /tmp</code> 显示 <code>tmpfs 100M 0 100M 0% /tmp</code>。修复：改用 <code>os.makedirs('/mnt/shared/tmp', exist_ok=True)</code>。</p>
+<p>④ <strong>Sentry Source Map 错位</strong>：<br>
+AI生成代码经 Webpack 打包后，Sentry 显示错误在 <code>index.js:12345</code>，但实际在 <code>Header.tsx</code> 第 12 行。用 <code>source-map-explorer dist/static/js/main.*.js</code> 发现 map 文件缺失 <code>ai-generated/</code> 目录映射。修复：Webpack config 加 <code>new webpack.SourceMapDevToolPlugin({ include: [/ai-generated/] })</code>。</p>
+<p>⑤ <strong>Lambda 冷启动埋点遗漏</strong>：<br>
+Claude生成的初始化函数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;development&#39;</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">initSentry</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>但 Lambda 环境 <code>NODE_ENV</code> 永远是 <code>production</code>，导致 Sentry 完全没加载。修复：显式判断 <code>process.env.LAMBDA_TASK_ROOT</code>。</p>
+<p><img alt="Source Map Explorer 分析图：左侧错位，右侧修复后精准定位" loading="lazy" src="IMAGE_PLACEHOLDER_3"></p>
+<h2 id="五给技术leader的硬核建议别考核用了多少ai要盯死这四个数字">五、给技术Leader的硬核建议：别考核‘用了多少AI’，要盯死这四个数字<a hidden class="anchor" aria-hidden="true" href="#五给技术leader的硬核建议别考核用了多少ai要盯死这四个数字">#</a></h2>
+<p>我们把 AI 协作指标接入 Grafana 实时看板，拒绝模糊评价：</p>
+<table>
+  <thead>
+      <tr>
+          <th>指标</th>
+          <th>当前值</th>
+          <th>目标</th>
+          <th>数据来源</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>AI代码MR平均评审时长</strong></td>
+          <td>18min</td>
+          <td>≤20min</td>
+          <td>GitHub API + 自研 parser</td>
+      </tr>
+      <tr>
+          <td><strong>CI中AI代码额外检查失败率</strong></td>
+          <td>2.1%</td>
+          <td>&lt;3%</td>
+          <td><code>grep -c &quot;AI-GENERATED&quot; .gitlab-ci.yml | wc -l</code></td>
+      </tr>
+      <tr>
+          <td><strong>AI模块P99延迟增幅</strong></td>
+          <td>+3.2ms</td>
+          <td>≤5ms</td>
+          <td>Datadog APM tracing</td>
+      </tr>
+      <tr>
+          <td><strong>手动重写频次</strong></td>
+          <td>0.8次/周</td>
+          <td>≤1次/周</td>
+          <td>Git log 统计 <code>git log --oneline --grep=&quot;REWRITE-AI&quot;</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>看板 SQL 示例（Datadog）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>  percentile(duration_ms, <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">99</span>) <span style="color:#66d9ef">AS</span> p99_latency,
+</span></span><span style="display:flex;"><span>  tag:service <span style="color:#66d9ef">AS</span> service_name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> traces 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> tag:ai_generated <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;true&#39;</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">timestamp</span> <span style="color:#f92672">&gt;</span> now() <span style="color:#f92672">-</span> <span style="color:#ae81ff">7</span>d
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> service_name
+</span></span></code></pre></div><p>告警规则：<code>IF ai_module_p99_latency_increase &gt; 5ms FOR 15m</code>，触发 Slack 通知 + 自动创建 Jira issue。</p>
+<p><img alt="Grafana 看板截图：四指标仪表盘，绿色达标，红色预警" loading="lazy" src="IMAGE_PLACEHOLDER_4"></p>
+<h2 id="六最后掏心窝的话ai不是替代者是那个总爱抄近路的实习生">六、最后掏心窝的话：AI不是替代者，是那个总爱抄近路的实习生<a hidden class="anchor" aria-hidden="true" href="#六最后掏心窝的话ai不是替代者是那个总爱抄近路的实习生">#</a></h2>
+<p>新同学小张用 Claude 三天搭完管理后台，UI 漂亮，路由丝滑。上线前无障碍测试（axe-core）一跑，全挂：所有操作按钮都是 <code>&lt;div onclick=&quot;...&quot;&gt;</code>，没有 <code>role=&quot;button&quot;</code>，没有键盘焦点，屏幕阅读器完全失语。Claude 懂 HTML 语法，但不懂 WCAG 2.1 的“可操作性契约”。</p>
+<p>还有一次，Claude 生成的支付对账核心逻辑：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reconcile_payments</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> tx <span style="color:#f92672">in</span> get_pending_transactions():  <span style="color:#75715e"># 按时间顺序取</span>
+</span></span><span style="display:flex;"><span>        bank_callback <span style="color:#f92672">=</span> fetch_bank_callback(tx<span style="color:#f92672">.</span>id)  <span style="color:#75715e"># 假设一定实时</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> bank_callback<span style="color:#f92672">.</span>status <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;SUCCESS&#34;</span>:
+</span></span><span style="display:flex;"><span>            mark_as_confirmed(tx)
+</span></span></code></pre></div><p>它没考虑银行回调可能乱序到达。真实场景里，<code>tx_id=1002</code> 的回调先到，<code>tx_id=1001</code> 后到，导致账单状态错乱。我重写了整块逻辑，加了幂等锁和状态机，不是因为 Claude 写得丑，而是它根本没站在业务水位线上思考——它只看见“代码怎么跑通”，看不见“钱怎么算清楚”。</p>
+<p>所以现在我跟团队说：</p>
+<blockquote>
+<p><strong>让AI搬砖，但你得亲自画施工图、盯地基、验承重墙。</strong><br>
+它可以给你钢筋水泥的规格表，但决定承重多少吨、打几根桩、留几个逃生通道的，永远是你。</p>
+</blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/claude/">Claude</a></li>
+      <li><a href="http://localhost:1313/tags/devops/">DevOps</a></li>
+      <li><a href="http://localhost:1313/tags/react/">React</a></li>
+      <li><a href="http://localhost:1313/tags/docker/">Docker</a></li>
+      <li><a href="http://localhost:1313/tags/ci/cd/">CI/CD</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/">全栈开发</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

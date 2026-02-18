@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>CLAUDE.md配置终极手册：打造你的专属AI编程Agent | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="在AI辅助编程日益普及的今天，如何让大模型真正理解你的项目上下文、编码规范和开发偏好，成为提升效率的关键。Anthropic 推出的 CLAUDE.md 机制正是为此而生——它就像 .gitignore 之于 Git，或 Dockerfile 之于容器，是一个系统级指令文件，用于为 Claude AI 定制专属行为。本文将手把手教你从零构建并优化你的 CLAUDE.md，打造一个高度一致、高效响应的 AI 编程 Agent。
+
+1. 引言：为什么你需要一个CLAUDE.md文件？
+Claude 的 Custom Instructions（自定义指令） 功能允许用户通过自然语言设定 AI 的行为准则。而 CLAUDE.md 则是这一机制的工程化落地：它以结构化 Markdown 文件形式存在于项目根目录，自动被支持的平台加载，无需每次手动输入指令。
+使用 CLAUDE.md 的核心价值在于：
+
+一致性：确保 AI 在整个项目生命周期中遵循统一规范；
+效率：省去重复说明“我们用 FastAPI”“请写单元测试”等上下文；
+减少沟通成本：AI 不再“猜”你的意图，而是按预设规则行动。
+
+简言之，你不是在调用一个通用 AI，而是在与一个专属于你项目的编程 Agent 协作。
+
+2. 基础准备：环境与工具要求
+在开始前，请确认以下前提：
+
+支持平台：
+
+官方：Claude Web（claude.ai）、Claude Desktop（macOS/Windows）
+第三方：Cursor、Windsurf、Continue.dev 等 IDE 插件（需启用 CLAUDE.md 支持）
+
+
+文件命名与位置：
+
+必须命名为 CLAUDE.md（全大写，含扩展名）
+必须位于项目根目录（如与 package.json 或 requirements.txt 同级）
+
+
+编辑器推荐：
+
+VS Code（支持 Markdown 预览与语法高亮）
+JetBrains 系列（PyCharm/WebStorm 等，可安装 Markdown 插件）
+
+
+注意事项：
+
+并非所有平台都完全支持 CLAUDE.md，建议在 Claude 官方客户端验证效果；
+第三方工具可能有缓存机制，修改后需重启或刷新。
+
+
+
+
+3. CLAUDE.md核心结构详解
+标准 CLAUDE.md 采用以下区块结构，每个区块以一级标题（#）开头：">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-02-18-claudemdpzzjscdzndzsaibcagent/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-02-18-claudemdpzzjscdzndzsaibcagent/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' 
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      CLAUDE.md配置终极手册：打造你的专属AI编程Agent
+    </h1>
+    <div class="post-meta"><span title='2026-02-18 04:38:41.093 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>在AI辅助编程日益普及的今天，如何让大模型真正理解你的项目上下文、编码规范和开发偏好，成为提升效率的关键。Anthropic 推出的 <strong>CLAUDE.md</strong> 机制正是为此而生——它就像 <code>.gitignore</code> 之于 Git，或 <code>Dockerfile</code> 之于容器，是一个<strong>系统级指令文件</strong>，用于为 Claude AI 定制专属行为。本文将手把手教你从零构建并优化你的 <code>CLAUDE.md</code>，打造一个高度一致、高效响应的 AI 编程 Agent。</p>
+<hr>
+<h2 id="1-引言为什么你需要一个claudemd文件">1. 引言：为什么你需要一个CLAUDE.md文件？<a hidden class="anchor" aria-hidden="true" href="#1-引言为什么你需要一个claudemd文件">#</a></h2>
+<p>Claude 的 <strong>Custom Instructions（自定义指令）</strong> 功能允许用户通过自然语言设定 AI 的行为准则。而 <code>CLAUDE.md</code> 则是这一机制的<strong>工程化落地</strong>：它以结构化 Markdown 文件形式存在于项目根目录，自动被支持的平台加载，无需每次手动输入指令。</p>
+<p>使用 <code>CLAUDE.md</code> 的核心价值在于：</p>
+<ul>
+<li><strong>一致性</strong>：确保 AI 在整个项目生命周期中遵循统一规范；</li>
+<li><strong>效率</strong>：省去重复说明“我们用 FastAPI”“请写单元测试”等上下文；</li>
+<li><strong>减少沟通成本</strong>：AI 不再“猜”你的意图，而是按预设规则行动。</li>
+</ul>
+<p>简言之，你不是在调用一个通用 AI，而是在与一个<strong>专属于你项目的编程 Agent</strong> 协作。</p>
+<hr>
+<h2 id="2-基础准备环境与工具要求">2. 基础准备：环境与工具要求<a hidden class="anchor" aria-hidden="true" href="#2-基础准备环境与工具要求">#</a></h2>
+<p>在开始前，请确认以下前提：</p>
+<ul>
+<li><strong>支持平台</strong>：
+<ul>
+<li>官方：Claude Web（claude.ai）、Claude Desktop（macOS/Windows）</li>
+<li>第三方：Cursor、Windsurf、Continue.dev 等 IDE 插件（需启用 CLAUDE.md 支持）</li>
+</ul>
+</li>
+<li><strong>文件命名与位置</strong>：
+<ul>
+<li>必须命名为 <code>CLAUDE.md</code>（全大写，含扩展名）</li>
+<li>必须位于<strong>项目根目录</strong>（如与 <code>package.json</code> 或 <code>requirements.txt</code> 同级）</li>
+</ul>
+</li>
+<li><strong>编辑器推荐</strong>：
+<ul>
+<li>VS Code（支持 Markdown 预览与语法高亮）</li>
+<li>JetBrains 系列（PyCharm/WebStorm 等，可安装 Markdown 插件）</li>
+</ul>
+</li>
+<li><strong>注意事项</strong>：
+<ul>
+<li>并非所有平台都完全支持 <code>CLAUDE.md</code>，建议在 Claude 官方客户端验证效果；</li>
+<li>第三方工具可能有缓存机制，修改后需重启或刷新。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3-claudemd核心结构详解">3. CLAUDE.md核心结构详解<a hidden class="anchor" aria-hidden="true" href="#3-claudemd核心结构详解">#</a></h2>
+<p>标准 <code>CLAUDE.md</code> 采用以下区块结构，每个区块以一级标题（<code>#</code>）开头：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Role
+</span></span><span style="display:flex;"><span># Goals
+</span></span><span style="display:flex;"><span># Constraints
+</span></span><span style="display:flex;"><span># Output Format
+</span></span><span style="display:flex;"><span># Examples
+</span></span></code></pre></div><p>各区块作用如下：</p>
+<table>
+  <thead>
+      <tr>
+          <th>区块</th>
+          <th>作用</th>
+          <th>是否必填</th>
+          <th>最佳实践</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>Role</code></td>
+          <td>定义 AI 的角色身份</td>
+          <td>✅ 建议必填</td>
+          <td>具体到技术栈，如“React + TypeScript 前端专家”</td>
+      </tr>
+      <tr>
+          <td><code>Goals</code></td>
+          <td>明确任务目标</td>
+          <td>✅ 建议必填</td>
+          <td>聚焦可衡量结果，如“生成可测试的组件”</td>
+      </tr>
+      <tr>
+          <td><code>Constraints</code></td>
+          <td>限制行为边界</td>
+          <td>✅ 强烈建议</td>
+          <td>列出禁止项与强制项，避免模糊表述</td>
+      </tr>
+      <tr>
+          <td><code>Output Format</code></td>
+          <td>规定响应格式</td>
+          <td>✅ 建议必填</td>
+          <td>结构化输出，如“先解释 → 再代码 → 最后测试”</td>
+      </tr>
+      <tr>
+          <td><code>Examples</code></td>
+          <td>提供示例（可选）</td>
+          <td>❌ 可选</td>
+          <td>用于复杂场景，展示期望输入/输出</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>💡 支持 HTML 注释语法：<code>&lt;!-- 这是一条注释，不会被 Claude 读取 --&gt;</code></p>
+</blockquote>
+<hr>
+<h2 id="4-手把手从零创建你的第一个claudemd">4. 手把手：从零创建你的第一个CLAUDE.md<a hidden class="anchor" aria-hidden="true" href="#4-手把手从零创建你的第一个claudemd">#</a></h2>
+<p>让我们以一个 Python FastAPI 项目为例，逐步创建配置：</p>
+<h3 id="步骤1新建文件">步骤1：新建文件<a hidden class="anchor" aria-hidden="true" href="#步骤1新建文件">#</a></h3>
+<p>在项目根目录执行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch CLAUDE.md
+</span></span></code></pre></div><h3 id="步骤2-5填充内容">步骤2-5：填充内容<a hidden class="anchor" aria-hidden="true" href="#步骤2-5填充内容">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Role
+</span></span><span style="display:flex;"><span>你是资深 Python 后端工程师，专注于使用 FastAPI 构建高性能、类型安全的 RESTful API。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Goals
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 编写符合 PEP8 规范的代码
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 所有函数必须带类型注解
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 每个新功能必须附带 pytest 单元测试
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 优先使用 async/await 实现异步处理
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Constraints
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 禁止使用全局变量
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 禁止硬编码字符串（如数据库 URL），应使用环境变量
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 不得使用 print()，应使用 logging
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 函数行数不得超过 30 行
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Output Format
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 先用中文简要说明实现思路；
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 提供完整、可运行的 Python 代码；
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> 附上对应的 pytest 测试用例；
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">4.</span> 所有代码必须包含 docstring。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Examples
+</span></span><span style="display:flex;"><span>&lt;!-- 示例略，可根据需要添加 --&gt;
+</span></span></code></pre></div><p>保存后，在支持的平台中提问：“帮我写一个用户注册接口”，Claude 将自动遵循上述规则生成代码。</p>
+<hr>
+<h2 id="5-高级配置技巧定制你的ai编程agent">5. 高级配置技巧：定制你的AI编程Agent<a hidden class="anchor" aria-hidden="true" href="#5-高级配置技巧定制你的ai编程agent">#</a></h2>
+<p>进阶用法可显著提升精准度：</p>
+<ul>
+<li>
+<p><strong>动态占位符</strong>：<br>
+使用 <code>{{PROJECT_NAME}}</code>、<code>{{API_VERSION}}</code> 等变量（需平台支持），实现上下文注入。</p>
+</li>
+<li>
+<p><strong>技术栈集成</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Role
+</span></span><span style="display:flex;"><span>Next.js 14 (App Router) + TypeScript + Tailwind CSS 全栈开发者
+</span></span></code></pre></div></li>
+<li>
+<p><strong>代码风格指南</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Constraints
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> React 组件必须使用函数式组件 + hooks
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Tailwind 类名按功能分组，禁止内联 style
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 遵循 Airbnb JavaScript 风格指南
+</span></span></code></pre></div></li>
+<li>
+<p><strong>错误处理偏好</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 所有异步操作必须包裹 try/catch
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 错误需记录到 Sentry，并返回标准化 JSON 错误响应
+</span></span></code></pre></div></li>
+</ul>
+<blockquote>
+<p>📌 <strong>数据科学项目示例片段</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Goals
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 使用 pandas 进行数据清洗，避免 for 循环
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 所有分析脚本必须可复现（设置 random_state）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 输出图表使用 Plotly，配色符合公司品牌
+</span></span></code></pre></div></blockquote>
+<hr>
+<h2 id="6-调试与优化如何让claudemd更有效">6. 调试与优化：如何让CLAUDE.md更有效？<a hidden class="anchor" aria-hidden="true" href="#6-调试与优化如何让claudemd更有效">#</a></h2>
+<p>常见问题排查方法：</p>
+<ul>
+<li>
+<p><strong>验证是否生效</strong>：<br>
+提问“你当前的角色是什么？”，观察回答是否匹配 <code>Role</code> 内容。</p>
+</li>
+<li>
+<p><strong>调试技巧</strong>：<br>
+逐段注释区块（用 <code>&lt;!-- --&gt;</code>），定位哪部分指令导致异常行为。</p>
+</li>
+<li>
+<p><strong>避免冲突指令</strong>：<br>
+❌ 错误：“代码要简洁” + “请详细解释每一步”<br>
+✅ 正确：“先用一段话总结逻辑，再提供简洁代码”</p>
+</li>
+<li>
+<p><strong>优化原则</strong>：</p>
+<ul>
+<li>具体 &gt; 模糊（“函数&lt;30行” vs “写好代码”）</li>
+<li>可操作 &gt; 抽象（“使用 pathlib 而非 os.path”）</li>
+</ul>
+</li>
+<li>
+<p><strong>工具推荐</strong>：<br>
+使用 <code>diff</code> 或 VS Code 的“比较文件”功能，对比不同版本 <code>CLAUDE.md</code> 的输出差异。</p>
+</li>
+</ul>
+<hr>
+<h2 id="7-常见问题faq与陷阱规避">7. 常见问题（FAQ）与陷阱规避<a hidden class="anchor" aria-hidden="true" href="#7-常见问题faq与陷阱规避">#</a></h2>
+<p><strong>Q: CLAUDE.md 在子目录中生效吗？</strong><br>
+A: 目前仅读取<strong>项目根目录</strong>下的文件，子目录中的无效。</p>
+<p><strong>Q: 文件过大是否影响性能？</strong><br>
+A: 建议控制在 <strong>500 行以内</strong>，过长可能导致指令被截断或忽略。</p>
+<p><strong>Q: 能否覆盖全局 Custom Instructions？</strong><br>
+A: 是的，<code>CLAUDE.md</code> 的优先级<strong>高于</strong>账户级自定义指令。</p>
+<p><strong>典型陷阱</strong>：</p>
+<ul>
+<li>使用模糊词汇：“写高质量代码” → 应改为“通过 mypy 静态检查”</li>
+<li>写入敏感信息：<strong>切勿</strong>在文件中包含 API 密钥、密码等</li>
+</ul>
+<hr>
+<h2 id="8-实战案例三个典型场景的claudemd模板">8. 实战案例：三个典型场景的CLAUDE.md模板<a hidden class="anchor" aria-hidden="true" href="#8-实战案例三个典型场景的claudemd模板">#</a></h2>
+<h3 id="案例1web全栈开发nextjs--prisma--tailwind">案例1：Web全栈开发（Next.js + Prisma + Tailwind）<a hidden class="anchor" aria-hidden="true" href="#案例1web全栈开发nextjs--prisma--tailwind">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Role
+</span></span><span style="display:flex;"><span>Next.js 14 全栈开发者，使用 App Router、Prisma ORM 和 Tailwind CSS
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Goals
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 页面组件使用 Server Components
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 数据获取通过 Prisma Client
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> UI 遵循响应式设计，支持暗色模式
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Constraints
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 禁止使用 any 类型
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 所有 API 路由必须验证输入（Zod）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Tailwind 类名按布局 → 样式 → 交互排序
+</span></span></code></pre></div><h3 id="案例2python数据管道pandas--airflow--pytest">案例2：Python数据管道（Pandas + Airflow + Pytest）<a hidden class="anchor" aria-hidden="true" href="#案例2python数据管道pandas--airflow--pytest">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Role
+</span></span><span style="display:flex;"><span>数据工程师，负责构建可调度、可监控的 ETL 管道
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Constraints
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 使用 pd.DataFrame 而非原始循环
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 所有 DAG 必须包含 on_failure_callback
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 测试覆盖率 ≥ 80%
+</span></span></code></pre></div><h3 id="案例3嵌入式c开发freertos--hal库">案例3：嵌入式C开发（FreeRTOS + HAL库）<a hidden class="anchor" aria-hidden="true" href="#案例3嵌入式c开发freertos--hal库">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># Role
+</span></span><span style="display:flex;"><span>STM32 嵌入式 C 开发者，基于 FreeRTOS 和 HAL 库
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Constraints
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 禁止动态内存分配（malloc/free）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 所有全局变量加 <span style="color:#e6db74">`g_`</span> 前缀
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 中断服务函数（ISR）必须 ≤ 10 行
+</span></span></code></pre></div><blockquote>
+<p>✅ 使用说明：复制模板到项目根目录，根据实际需求微调即可。</p>
+</blockquote>
+<hr>
+<h2 id="9-结语持续迭代你的ai编程伙伴">9. 结语：持续迭代你的AI编程伙伴<a hidden class="anchor" aria-hidden="true" href="#9-结语持续迭代你的ai编程伙伴">#</a></h2>
+<p><code>CLAUDE.md</code> 不是一次性配置，而是一份<strong>活文档</strong>。随着项目演进、团队规范更新，你也应定期优化它。建议：</p>
+<ul>
+<li>每次 Code Review 后反思：哪些指令可加入 <code>CLAUDE.md</code>？</li>
+<li>在 GitHub 上分享你的模板（如 <a href="https://github.com/example">awesome-claude-md</a>）</li>
+<li>关注 Anthropic 官方动态，未来可能支持跨平台标准化</li>
+</ul>
+<p>让 AI 成为你最默契的编程搭档，从写好 <code>CLAUDE.md</code> 开始。</p>
+<hr>
+<h2 id="附录claudemd速查表">附录：CLAUDE.md速查表<a hidden class="anchor" aria-hidden="true" href="#附录claudemd速查表">#</a></h2>
+<h3 id="标准区块清单">标准区块清单<a hidden class="anchor" aria-hidden="true" href="#标准区块清单">#</a></h3>
+<ul>
+<li><code># Role</code>（必填）</li>
+<li><code># Goals</code>（必填）</li>
+<li><code># Constraints</code>（强烈建议）</li>
+<li><code># Output Format</code>（建议）</li>
+<li><code># Examples</code>（可选）</li>
+</ul>
+<h3 id="常用约束短语库">常用约束短语库<a hidden class="anchor" aria-hidden="true" href="#常用约束短语库">#</a></h3>
+<ul>
+<li>“禁止使用全局变量”</li>
+<li>“所有函数必须带类型注解”</li>
+<li>“优先使用 async/await”</li>
+<li>“代码必须通过 [工具名] 检查”</li>
+</ul>
+<h3 id="支持平台兼容性矩阵">支持平台兼容性矩阵<a hidden class="anchor" aria-hidden="true" href="#支持平台兼容性矩阵">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>平台</th>
+          <th>支持</th>
+          <th>备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Claude Web</td>
+          <td>✅</td>
+          <td>完整支持</td>
+      </tr>
+      <tr>
+          <td>Cursor</td>
+          <td>✅</td>
+          <td>需开启设置</td>
+      </tr>
+      <tr>
+          <td>Windsurf</td>
+          <td>✅</td>
+          <td>自动加载</td>
+      </tr>
+      <tr>
+          <td>VS Code 插件</td>
+          <td>⚠️</td>
+          <td>部分支持</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="推荐学习资源">推荐学习资源<a hidden class="anchor" aria-hidden="true" href="#推荐学习资源">#</a></h3>
+<ul>
+<li><a href="https://docs.anthropic.com">Anthropic 官方文档 - Custom Instructions</a></li>
+<li><a href="https://github.com/claude-md-templates">GitHub: claude-md-templates</a></li>
+<li><a href="https://www.reddit.com/r/ClaudeAI/">Reddit r/ClaudeAI 社区讨论</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -18,7 +18,6 @@ tags:
 
 ![](/images/20260217-205716-bjtgbz2026cpjlclaudecodesdjjsc.png)
 
-# 比金条更保值！2026产品经理Claude Code深度进阶手册
 
 **文/资深产品观察员**
 

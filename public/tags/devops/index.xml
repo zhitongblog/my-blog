@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DevOps on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/devops/</link>
+    <description>Recent content in DevOps on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Feb 2026 05:44:20 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验</title>
+      <link>http://localhost:1313/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</link>
+      <pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</guid>
+      <description>本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。</description>
+    </item>
+  </channel>
+</rss>
