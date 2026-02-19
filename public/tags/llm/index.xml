@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>LLM on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/llm/</link>
+    <description>Recent content in LLM on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Feb 2026 08:35:09 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力</title>
+      <link>http://localhost:1313/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</link>
+      <pubDate>Wed, 18 Feb 2026 08:35:09 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</guid>
+      <description>本文探讨Claude Code如何赋能Shell脚本开发，让Bash直接理解PRD需求，填补CLI层AI自动化空白，提升运维脚本的可审计性、可复用性与工程规范性。</description>
+    </item>
+  </channel>
+</rss>
