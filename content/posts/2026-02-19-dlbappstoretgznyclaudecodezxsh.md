@@ -24,7 +24,7 @@ Apple 审核团队每年处理超 200 万次提交，而据《2023 App Store 审
 - **第5.1.1条（隐私说明）**：截图若展示权限弹窗（如相册/定位），审核文案必须同步说明触发路径与用途；
 - **第5.2.3条（截图规范）**：每张截图需配15–30字符说明，且必须体现真实 UI 状态（禁用占位符、模糊水印、未完成动效）。
 
-![对比真实案例：左侧为模糊截图+通用文案导致被拒；右侧为场景化截图+Claude生成的精准文案一次过审](https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/6f/20260219/d23adf3d/2ff339d4-bbcb-4c66-bf48-98c1f1a906261345102731.png?Expires=1772103987&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=xysbh%2ByuoZGXPTr07LfCws7N0uc%3D)
+![对比真实案例：左侧为模糊截图+通用文案导致被拒；右侧为场景化截图+Claude生成的精准文案一次过审]
 
 我们曾跟踪两个同架构工具类 App 的提交记录：
 - **App A（被拒）**：截图仅用 iPhone 模拟器默认背景，文案写“Login to get started”；因无法验证登录流程真实性，被援引 5.1.1 条拒审；
@@ -205,7 +205,7 @@ claude-code \
 - **修复后执行 diff**：`diff original-captions.txt fixed-captions.txt`，确认仅修改违规项；
 - **警惕过度删减**：若 Claude 建议删除“offline sync”描述，需人工确认该功能是否仍在 build 中——否则将触发「功能缺失」二次拒审（Guideline 2.3）。
 
-![Claude Code 迭代工作流：拒审邮件 → 精准Prompt → 合规输出 → diff验证 → 重新提交](https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/a6/20260219/d23adf3d/0d8fb516-ef7c-4d9f-8daf-d9934c55dee53235927257.png?Expires=1772104003&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=CB76OLHUD3%2Fb7Ae%2FGVfwFGM2onM%3D)
+![Claude Code 迭代工作流：拒审邮件 → 精准Prompt → 合规输出 → diff验证 → 重新提交]
 
 ---
 
