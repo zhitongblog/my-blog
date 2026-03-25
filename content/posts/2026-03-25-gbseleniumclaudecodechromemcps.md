@@ -31,7 +31,6 @@ categories:
 
 直到公司内部 Hackathon 上，隔壁组小哥用 Claude Code + Chrome MCP，10 分钟做完同一件事。更魔幻的是——产品同学现场语音说：“把刚才脚本改成去小红书搜‘降噪耳机测评’，只取笔记标题和点赞数”，他敲了三行指令，回车，跑通。页面结构早因灰度改版变了个样，但脚本没崩，因为 LLM 理解了“标题”和“点赞数”的语义，而不是死磕 `class="note-title"`。那一刻我关掉了 PyCharm，打开了终端。  
 
-![深夜崩溃的Selenium报错日志截图](https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/36/20260325/d23adf3d/459d739c-6396-42b4-af9a-0fa2543d2d04851997011.png?Expires=1775045577&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=rDaE43UmTJkwWFibem2abul7%2BrU%3D)  
 
 ## 🔧 我的零代码自动化工作流长啥样？（附真实终端录屏思维导图）  
 
@@ -62,9 +61,6 @@ alias mcp-start='chrome-mcp --port 3000 --headless=false & sleep 1 && claude-cod
 
 整个过程无 selector、无显式等待、无 driver.quit()。  
 
-![零代码工作流架构图：自然语言→Claude→MCP→Chrome CDP](https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/d5/20260325/d23adf3d/e2ec47a3-4eee-4d8b-9581-bfb9f34e82bc2903972625.png?Expires=1775045595&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=yajXt1NhJBIphqWVVN8FNV82pZg%3D)  
-
-## 💥 第一次跑通就翻车的 4 个“意料之外”  
 
 兴奋劲儿还没过，现实就给了我四记重拳：  
 
