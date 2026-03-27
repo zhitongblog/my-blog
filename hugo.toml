@@ -35,6 +35,7 @@ theme = 'PaperMod'
   description = "这是智通成长的历程"
   author = "智通"
   comments = true
+  enableAds = true  # 设为 false 可关闭广告
   
   # 首页信息
   [params.homeInfoParams]
