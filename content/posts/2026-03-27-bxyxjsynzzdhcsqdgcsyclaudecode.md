@@ -1,6 +1,6 @@
 ---
 title: "不写一行JS，也能做自动化测试：前端工程师用Claude Code完成全流程回归验证"
-date: 2026-03-25T12:57:16.542Z
+date: 2026-03-27T12:57:16.542Z
 draft: false
 description: "本文展示前端工程师如何利用Claude Code零JavaScript编码完成全流程回归测试，覆盖登录、购物车、支付等27个核心路径，解决Ant Design升级引发的校验链断裂问题，大幅提升验证效率与准确性。"
 tags:

@@ -1,32 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Claude on 智通和你一起学AI</title>
-    <link>http://localhost:1313/tags/claude/</link>
-    <description>Recent content in Claude on 智通和你一起学AI</description>
-    <generator>Hugo -- 0.154.5</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Feb 2026 20:58:22 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/claude/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>比金条更保值！2026产品经理Claude Code深度进阶手册</title>
-      <link>http://localhost:1313/posts/20260217-205822-bjtgbz2026cpjlclaudecodesdjjsc/</link>
-      <pubDate>Tue, 17 Feb 2026 20:58:22 +0800</pubDate>
-      <guid>http://localhost:1313/posts/20260217-205822-bjtgbz2026cpjlclaudecodesdjjsc/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/20260217-205716-bjtgbz2026cpjlclaudecodesdjjsc.png&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;比金条更保值2026产品经理claude-code深度进阶手册&#34;&gt;比金条更保值！2026产品经理Claude Code深度进阶手册&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Claude on 智通和你一起学AI</title><link>https://zhitong.uk/tags/claude/</link><description>Recent content in Claude on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/claude/index.xml" rel="self" type="application/rss+xml"/><item><title>从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？</title><link>https://zhitong.uk/posts/2026-03-27-cpromptdpagedclaudecodeljbwfxj/</link><pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-27-cpromptdpagedclaudecodeljbwfxj/</guid><description>揭秘AI代码助手如何真正理解并执行复杂前端性能分析指令——从模糊Prompt到可落地的竞品LCP/CLS对比报告，详解提示工程、上下文构建与结果结构化关键实践。</description></item><item><title>安全红线在哪？Claude Code + BrowserCat MCP的权限控制、沙箱隔离与审计日志实践</title><link>https://zhitong.uk/posts/2026-03-27-aqhxznclaudecodebrowsercatmcpd/</link><pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-27-aqhxznclaudecodebrowsercatmcpd/</guid><description>本文深入剖析Claude Code与BrowserCat MCP协同场景下的生产级安全实践，涵盖细粒度权限控制、运行时沙箱隔离机制及全链路审计日志方案，助你守住AI代码助手的安全红线。</description></item><item><title>零代码≠低能力：Claude Code BrowserCat MCP在电商数据采集中的实战压测报告</title><link>https://zhitong.uk/posts/2026-03-26-ldmdnlclaudecodebrowsercatmcpz/</link><pubDate>Thu, 26 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-26-ldmdnlclaudecodebrowsercatmcpz/</guid><description>本文详述使用Claude+BrowserCat+MCP零代码方案，在72小时内完成5大电商平台实时价格、库存与SKU变更监控的压测全过程，验证零代码在高对抗场景下的工程可靠性与团队提效价值。</description></item><item><title>AI接管浏览器不是梦：Claude Code自动化已支持登录/采集/截图/性能分析四合一</title><link>https://zhitong.uk/posts/2026-03-25-aijgllqbsmclaudecodezdhyzcdlcj/</link><pubDate>Wed, 25 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-25-aijgllqbsmclaudecodezdhyzcdlcj/</guid><description>本文解析Claude Code如何实现AI驱动的浏览器自动化，支持登录、数据采集、截图与性能分析四合一，突破传统工具在语义理解、UI变更适应和维护成本上的瓶颈。</description></item><item><title>不是所有AI编排都叫OpenClaw：深度解析它如何为Claude Code注入任务分解、状态追踪与错误自愈能力</title><link>https://zhitong.uk/posts/2026-03-20-bssyaibpdjopenclawsdjxtrhwclau/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-bssyaibpdjopenclawsdjxtrhwclau/</guid><description>深度解析OpenClaw如何突破传统AI编码局限，为Claude Code赋予任务分解、跨步骤状态追踪与运行时错误自愈能力，解决真实项目中异步逻辑错乱、重试缺失、异常处理失效等典型卡壳问题。</description></item><item><title>从Prompt工程师到AI流程架构师：一人开发团队用OpenClaw重构Claude Code使用范式</title><link>https://zhitong.uk/posts/2026-03-20-cpromptgcsdailcjgsyrkftdyopenc/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-cpromptgcsdailcjgsyrkftdyopenc/</guid><description>本文讲述单人开发者如何通过OpenClaw工具重构Claude Code使用范式，从基础Prompt工程师升级为AI流程架构师，实现Spring Boot 3.2接口的零协作、端到端自动生成与验证。</description></item><item><title>本地运行、飞书直连、MCP即插即用：OpenClaw让Claude Code真正扎根企业工作流</title><link>https://zhitong.uk/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/</guid><description>OpenClaw实现Claude Code在企业环境的本地化运行，支持飞书直连与MCP协议即插即用，打通Ansible等运维工具链，真正将AI编码能力嵌入生产级工作流。</description></item><item><title>当AI不再需要你‘教它写代码’：Claude Code的Vibe Coding哲学，正在杀死Cursor式的‘人机协作幻觉’</title><link>https://zhitong.uk/posts/2026-02-23-daibzxynjtxdmclaudecodedvibeco/</link><pubDate>Mon, 23 Feb 2026 11:08:10 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-23-daibzxynjtxdmclaudecodedvibeco/</guid><description>本文剖析Claude Code提出的&amp;#39;Vibe Coding&amp;#39;哲学，揭示其如何通过意图理解与上下文坍缩取代传统人机协作模式，挑战Cursor、Copilot等辅助编程工具的底层假设。</description></item><item><title>从Stable Diffusion到Claude Agent：AIGC应用产品的5次范式跃迁，你的产品卡在哪一代？</title><link>https://zhitong.uk/posts/2026-02-19-cstablediffusiondclaudeagentai/</link><pubDate>Thu, 19 Feb 2026 08:13:25 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-cstablediffusiondclaudeagentai/</guid><description>解析AIGC应用从L1单点提效到L5自主协同的5次范式跃迁，揭示Stable Diffusion与Claude Agent背后的价值链重构逻辑，助产品团队定位代际卡点并突破ROI瓶颈。</description></item><item><title>工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成</title><link>https://zhitong.uk/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/</link><pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/</guid><description>详解在VS Code中深度集成Claude Code的完整流程：从环境校验、Anthropic API密钥配置，到智能代码补全与自动生成文档的实战配置，助力工程师提升编码效率与工程化水平。</description></item><item><title>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计</title><link>https://zhitong.uk/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</link><pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</guid><description>本文深入解析Claude Code如何超越传统代码补全，成为TDD实践与技术方案设计的智能协作者——通过逆向解析测试契约驱动架构决策、策略抽象与可维护实现。</description></item><item><title>精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力</title><link>https://zhitong.uk/posts/2026-02-19-jztwdysypromptengineeringjycla/</link><pubDate>Thu, 19 Feb 2026 04:51:18 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-jztwdysypromptengineeringjycla/</guid><description>本文详解如何通过精准Prompt Engineering激活Claude 3.5 Sonnet的深层代码理解能力，涵盖类型提示解析、框架模式识别与长上下文利用，避免模糊提问导致的安全退避与错误输出。</description></item><item><title>快速上手：5分钟配置Claude Code并完成首个代码生成任务</title><link>https://zhitong.uk/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/</link><pubDate>Thu, 19 Feb 2026 04:37:13 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/</guid><description>本文手把手教你5分钟完成Claude Code的本地配置与首个代码生成任务，涵盖系统要求、OAuth登录、VS Code插件安装及基础使用技巧，助开发者快速上手AI编程助手。</description></item><item><title>初识Claude Code：告别传统编码，拥抱AI结对编程</title><link>https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</link><pubDate>Thu, 19 Feb 2026 03:34:10 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</guid><description>本文详解Claude Code插件的安装配置流程，涵盖VS Code与JetBrains IDE支持、四步验证法及国内用户账号绑定要点，助开发者快速开启AI结对编程新体验。</description></item><item><title>终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力</title><link>https://zhitong.uk/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</link><pubDate>Wed, 18 Feb 2026 08:35:09 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</guid><description>本文探讨Claude Code如何赋能Shell脚本开发，让Bash直接理解PRD需求，填补CLI层AI自动化空白，提升运维脚本的可审计性、可复用性与工程规范性。</description></item><item><title>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验</title><link>https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</link><pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</guid><description>本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。</description></item><item><title>从‘试用’到‘投产’：一位全栈工程师的Claude Code工程化实践避坑手册</title><link>https://zhitong.uk/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/</link><pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/</guid><description>一位全栈工程师亲历的Claude Code工程化落地避坑实录：从本地试用到生产部署，详解DNS超时、环境变量失效、Hook依赖错误等真实故障根因与可复用的加固方案。</description></item><item><title>比金条更保值！2026产品经理Claude Code深度进阶手册</title><link>https://zhitong.uk/posts/20260217-205822-bjtgbz2026cpjlclaudecodesdjjsc/</link><pubDate>Tue, 17 Feb 2026 20:58:22 +0800</pubDate><guid>https://zhitong.uk/posts/20260217-205822-bjtgbz2026cpjlclaudecodesdjjsc/</guid><description>&lt;p&gt;&lt;img loading="lazy" src="https://zhitong.uk/images/20260217-205716-bjtgbz2026cpjlclaudecodesdjjsc.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;文/资深产品观察员&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;发布日期：2026年2月17日&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;春节假期的余温尚未散去，北京菜百首饰的一则新闻却让打工人的焦虑感陡增：1000克重的金条竟然卖断货了！在这个充满不确定性的2026年开局，人们似乎都在寻找一种名为“安全感”的硬通货。&lt;/p&gt;
 &lt;p&gt;然而，对于身处互联网核心地带的产品经理（PM）而言，囤黄金或许能抵御通胀，但无法抵御职业生涯的“技术性贬值”。当外媒还在惊叹中国人形机器人发展速度、宇树科技春晚同款机器人卖出20多万元的高价时，真正的行业变革已经悄然发生在你我的工位上。&lt;/p&gt;
 &lt;p&gt;2026年，产品经理的“硬通货”不再是画得漂亮的Axure原型，也不是长达百页的PRD文档，而是驾驭AI直接产出可用产品的能力。Claude Code作为今年最强劲的辅助编程与逻辑构建工具，正是你手中的点金石。本文将避开枯燥的参数，结合春节期间的热点现象，为你带来一份实战级的Claude Code进阶指南。&lt;/p&gt;
-&lt;h2 id=&#34;一-从点菜到主理人思维模式的根本转变&#34;&gt;一、 从“点菜”到“主理人”：思维模式的根本转变&lt;/h2&gt;
+&lt;h2 id="一-从点菜到主理人思维模式的根本转变"&gt;一、 从“点菜”到“主理人”：思维模式的根本转变&lt;/h2&gt;
 &lt;p&gt;今年春节有一个有趣的现象：越来越多的年轻人取代长辈，当起了年夜饭的“主理人”。他们不再是被动等待投喂的食客，而是掌控全局的操盘手。&lt;/p&gt;
 &lt;p&gt;这正是2026年产品经理在使用Claude Code时必须具备的思维——&lt;strong&gt;你不是在给程序员提需求，你是在亲自“做菜”&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;在过去，PM的工作流是“需求-文档-沟通-开发”。而在Claude Code时代，链路被压缩为“想法-逻辑约束-成品”。许多PM抱怨AI写出的代码跑不通或逻辑混乱，根本原因在于他们仍停留在“点菜思维”，只给出了模糊的指令。&lt;/p&gt;
 &lt;p&gt;进阶的第一步，是学会用&lt;strong&gt;结构化逻辑&lt;/strong&gt;代替&lt;strong&gt;自然语言描述&lt;/strong&gt;。当你要求Claude Code构建一个“类似春节档票房统计的实时大屏”时，不要只描述外观。你需要像那位虽然没钱上春晚但依然营销拉满的转转App一样，精准切入痛点：定义数据源接口标准、明确高并发下的缓存策略、规定前端图表的刷新频率。&lt;/p&gt;
 &lt;p&gt;只有当你以“技术合伙人”而非“甲方”的姿态与Claude Code对话，它才能交付出让你惊艳的MVP（最小可行性产品）。&lt;/p&gt;
-&lt;h2 id=&#34;二-拒绝春晚魔术不仅要看效果更要懂原理&#34;&gt;二、 拒绝“春晚魔术”：不仅要看效果，更要懂原理&lt;/h2&gt;
+&lt;h2 id="二-拒绝春晚魔术不仅要看效果更要懂原理"&gt;二、 拒绝“春晚魔术”：不仅要看效果，更要懂原理&lt;/h2&gt;
 &lt;p&gt;今年大学生春晚的魔术表演被网友调侃“和央视一样”，其实背后的潜台词是：只要通过了图灵测试，谁在表演并不重要。但对于使用Claude Code的产品经理来说，&lt;strong&gt;黑盒是最大的隐患&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;很多PM在使用Claude Code生成功能模块时，往往只看最后跑出来的界面——看起来很美，像极了沈腾在春晚小品里“赢麻了”的表面风光。但一旦遇到异常数据，系统可能就会像那位给姑姑倒立拜年翻车的侄子一样，瞬间崩溃。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;进阶核心：建立代码审查的“白盒意识”。&lt;/strong&gt;&lt;/p&gt;
@@ -37,7 +21,7 @@
 &lt;li&gt;&lt;strong&gt;安全性校验&lt;/strong&gt;：2026年的网络环境依然复杂，网警刚刚通报了打击谣言的行动，你的产品同样需要防范数据注入和隐私泄露。显式地要求Claude加入安全校验层，是专业PM的基本素养。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;不要被AI生成的华丽界面迷惑，只有经得起逻辑推敲的代码，才是真正“保值”的资产。&lt;/p&gt;
-&lt;h2 id=&#34;三-像讽刺小品一样精准prompt的颗粒度艺术&#34;&gt;三、 像“讽刺小品”一样精准：Prompt的颗粒度艺术&lt;/h2&gt;
+&lt;h2 id="三-像讽刺小品一样精准prompt的颗粒度艺术"&gt;三、 像“讽刺小品”一样精准：Prompt的颗粒度艺术&lt;/h2&gt;
 &lt;p&gt;今年春晚的小品因为“讽刺拉满、尺度不小”而广受好评，原因在于它精准地刺中了现实生活的痛点，没有废话。这恰恰是高阶PM使用Claude Code的秘诀：&lt;strong&gt;Prompt（提示词）的颗粒度决定产出的含金量&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;初级PM的指令通常是泛泛而谈：“帮我写一个用户登录功能。”
 而高阶PM的指令则像那个让外国女婿惊呆的“饺子就酒”一样，充满了具体的文化与场景约束：&lt;/p&gt;
@@ -47,26 +31,19 @@
 &lt;li&gt;&lt;strong&gt;异常处理风格&lt;/strong&gt;：定义报错提示的语气（是冷冰冰的系统错误，还是幽默的引导文案）。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;当你像编写剧本一样编写Prompt，将每一个交互细节、每一个数据字段的校验规则都“喂”给Claude Code时，它就不再是一个冰冷的生成器，而是一个懂你心意的资深工程师。记住，AI的上限取决于你指令的下限。&lt;/p&gt;
-&lt;h2 id=&#34;四-结语做那个手里有金条的人&#34;&gt;四、 结语：做那个“手里有金条”的人&lt;/h2&gt;
+&lt;h2 id="四-结语做那个手里有金条的人"&gt;四、 结语：做那个“手里有金条”的人&lt;/h2&gt;
 &lt;p&gt;看着北京卫视春晚上的欢声笑语，在这个AI技术日新月异的2026年，产品经理的焦虑是真实的，但机遇也是前所未有的。&lt;/p&gt;
 &lt;p&gt;当别人还在纠结于文档格式、在冗长的排期会议中消耗生命时，掌握Claude Code深度用法的你，已经能够在一下午的时间里，独立完成从需求分析到原型落地的全过程。这种“一人抵千军”的生产力，比柜台里被抢空的1000克金条更加保值，也更加稀缺。&lt;/p&gt;
-&lt;p&gt;新的一年已经开始，愿每一位产品经理都能在AI浪潮中，找到属于自己的“核心资产”。开工大吉，不仅要抢红包，更要抢占技术的制高点。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Claude Code助你产品进阶：除夕夜打造爆款应用！</title>
-      <link>http://localhost:1313/posts/20260216-130709-claudecodezncpjjcxydzbkyy/</link>
-      <pubDate>Mon, 16 Feb 2026 13:07:09 +0800</pubDate>
-      <guid>http://localhost:1313/posts/20260216-130709-claudecodezncpjjcxydzbkyy/</guid>
-      <description>&lt;h2 id=&#34;claude-code助你产品进阶除夕夜打造爆款应用&#34;&gt;Claude Code助你产品进阶：除夕夜打造爆款应用！&lt;/h2&gt;
+&lt;p&gt;新的一年已经开始，愿每一位产品经理都能在AI浪潮中，找到属于自己的“核心资产”。开工大吉，不仅要抢红包，更要抢占技术的制高点。&lt;/p&gt;</description></item><item><title>Claude Code助你产品进阶：除夕夜打造爆款应用！</title><link>https://zhitong.uk/posts/20260216-130709-claudecodezncpjjcxydzbkyy/</link><pubDate>Mon, 16 Feb 2026 13:07:09 +0800</pubDate><guid>https://zhitong.uk/posts/20260216-130709-claudecodezncpjjcxydzbkyy/</guid><description>&lt;h2 id="claude-code助你产品进阶除夕夜打造爆款应用"&gt;Claude Code助你产品进阶：除夕夜打造爆款应用！&lt;/h2&gt;
 &lt;p&gt;想象一下，2026年的除夕夜，当大家都在忙着准备年夜饭、观看春晚的时候，你却用 Claude Code 打造出一款爆款应用，让你的产品能力更上一层楼，成为真正的产品高手。这并非遥不可及的梦想，只要掌握正确的方法和工具，你就能实现。Claude Code，作为一款强大的辅助编程工具，可以极大地提升你的开发效率，让你在短时间内完成高质量的产品。&lt;/p&gt;
-&lt;h2 id=&#34;前置要求&#34;&gt;前置要求&lt;/h2&gt;
+&lt;h2 id="前置要求"&gt;前置要求&lt;/h2&gt;
 &lt;p&gt;在开始之前，你需要：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;[要求1] 拥有一个 Claude API 账号，并完成相关的认证和设置。&lt;/li&gt;
 &lt;li&gt;[要求2] 具备一定的编程基础，例如 Python、JavaScript 等，熟悉常用的开发框架。&lt;/li&gt;
 &lt;li&gt;[要求3] 明确你的产品目标，并对目标用户群体有深入的了解。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;步骤一产品创意构思与需求分析&#34;&gt;步骤一：产品创意构思与需求分析&lt;/h2&gt;
+&lt;h2 id="步骤一产品创意构思与需求分析"&gt;步骤一：产品创意构思与需求分析&lt;/h2&gt;
 &lt;p&gt;在利用 Claude Code 开始编码之前，最重要的是确定你的产品创意并进行详细的需求分析。除夕夜应用，可以围绕节日主题展开，比如：定制拜年短信生成器、家庭照片视频合成工具、新年运势预测小游戏等等。&lt;/p&gt;
 &lt;p&gt;详细的需求分析包括：&lt;/p&gt;
 &lt;ul&gt;
@@ -75,37 +52,34 @@
 &lt;li&gt;&lt;strong&gt;用户体验：&lt;/strong&gt; 操作是否简单易懂，界面是否美观。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;技术可行性：&lt;/strong&gt; 现有技术能否实现你的想法，是否需要引入新的技术。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;步骤二利用-claude-code-进行代码生成&#34;&gt;步骤二：利用 Claude Code 进行代码生成&lt;/h2&gt;
+&lt;h2 id="步骤二利用-claude-code-进行代码生成"&gt;步骤二：利用 Claude Code 进行代码生成&lt;/h2&gt;
 &lt;p&gt;有了明确的需求分析，就可以开始利用 Claude Code 进行代码生成了。Claude Code 可以根据你的描述，自动生成相应的代码片段，大大减少了你的编码工作量。&lt;/p&gt;
 &lt;p&gt;例如，你想开发一个定制拜年短信生成器，你可以这样描述你的需求：&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;请生成一个 Python 函数，该函数接收用户输入的姓名、祝福对象、祝福语风格等参数，并根据这些参数生成一条定制的拜年短信。祝福语风格包括幽默、温馨、正式等。&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Claude Code 会自动生成类似下面的代码：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;generate_greeting_message&lt;/span&gt;(name, recipient, style):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    根据用户输入的参数生成定制的拜年短信。
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Args:
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        name: 用户姓名。
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        recipient: 祝福对象。
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        style: 祝福语风格 (幽默, 温馨, 正式).
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Returns:
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        生成的拜年短信。
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; style &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;幽默&amp;#34;&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        message &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;recipient&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;，新年快乐！祝你新的一年笑口常开，好运连连！不过要小心，别笑掉大牙哦！来自 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;name&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; 的祝福。&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; style &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;温馨&amp;#34;&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        message &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;亲爱的 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;recipient&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;，新年快乐！愿新的一年里，你被幸福包围，被爱意环绕。&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;name&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; 祝你一切都好。&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; style &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;正式&amp;#34;&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        message &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;尊敬的 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;recipient&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;，恭祝新年快乐，万事如意！&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;name&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; 敬上。&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        message &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;新年快乐！&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 默认祝福语&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; message
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 示例&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;message &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; generate_greeting_message(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;小明&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;老王&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;幽默&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(message)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你可以根据 Claude Code 生成的代码进行修改和完善，使其更符合你的需求。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;generate_greeting_message&lt;/span&gt;(name, recipient, style):
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; 根据用户输入的参数生成定制的拜年短信。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; Args:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; name: 用户姓名。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; recipient: 祝福对象。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; style: 祝福语风格 (幽默, 温馨, 正式).
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; Returns:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; 生成的拜年短信。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt; &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; style &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;幽默&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; message &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;recipient&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;，新年快乐！祝你新的一年笑口常开，好运连连！不过要小心，别笑掉大牙哦！来自 &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;name&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt; 的祝福。&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;elif&lt;/span&gt; style &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;温馨&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; message &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;亲爱的 &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;recipient&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;，新年快乐！愿新的一年里，你被幸福包围，被爱意环绕。&lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;name&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt; 祝你一切都好。&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;elif&lt;/span&gt; style &lt;span style="color:#f92672"&gt;==&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;正式&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; message &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;f&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;尊敬的 &lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;recipient&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;，恭祝新年快乐，万事如意！&lt;/span&gt;&lt;span style="color:#e6db74"&gt;{&lt;/span&gt;name&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt; 敬上。&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; message &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;新年快乐！&amp;#34;&lt;/span&gt; &lt;span style="color:#75715e"&gt;# 默认祝福语&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; message
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 示例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;message &lt;span style="color:#f92672"&gt;=&lt;/span&gt; generate_greeting_message(&lt;span style="color:#e6db74"&gt;&amp;#34;小明&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;老王&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;幽默&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(message)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你可以根据 Claude Code 生成的代码进行修改和完善，使其更符合你的需求。&lt;/p&gt;</description></item></channel></rss>

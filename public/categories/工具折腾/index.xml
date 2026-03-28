@@ -1,21 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>工具折腾 on 智通和你一起学AI</title>
-    <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7%E6%8A%98%E8%85%BE/</link>
-    <description>Recent content in 工具折腾 on 智通和你一起学AI</description>
-    <generator>Hugo -- 0.154.5</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Thu, 05 Feb 2026 19:15:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E5%B7%A5%E5%85%B7%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>【出海基建】2026 跨境保号指南：低成本持有海外实体 SIM 卡全攻略</title>
-      <link>http://localhost:1313/posts/2026-25-simcard/</link>
-      <pubDate>Thu, 05 Feb 2026 19:15:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/2026-25-simcard/</guid>
-      <description>&lt;p&gt;在折腾海外银行卡、注册 OpenAI 或保障 Telegram 账号安全时，很多人会被“验证码”挡在门外。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>工具折腾 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/%E5%B7%A5%E5%85%B7%E6%8A%98%E8%85%BE/</link><description>Recent content in 工具折腾 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Feb 2026 19:15:00 +0800</lastBuildDate><atom:link href="https://zhitong.uk/categories/%E5%B7%A5%E5%85%B7%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml"/><item><title>【出海基建】2026 跨境保号指南：低成本持有海外实体 SIM 卡全攻略</title><link>https://zhitong.uk/posts/2026-25-simcard/</link><pubDate>Thu, 05 Feb 2026 19:15:00 +0800</pubDate><guid>https://zhitong.uk/posts/2026-25-simcard/</guid><description>&lt;p&gt;在折腾海外银行卡、注册 OpenAI 或保障 Telegram 账号安全时，很多人会被“验证码”挡在门外。&lt;/p&gt;
 &lt;p&gt;虽然市面上有很多接码平台，但作为长期主义者，我们需要一个&lt;strong&gt;专属且稳定&lt;/strong&gt;的实体号码。今天为大家评测三款目前国内申请最火、成本最低的海外 SIM 卡。&lt;/p&gt;
-&lt;h2 id=&#34;一-英国-giffgaff0-月租的神卡&#34;&gt;一、 英国 giffgaff：0 月租的“神卡”&lt;/h2&gt;
+&lt;h2 id="一-英国-giffgaff0-月租的神卡"&gt;一、 英国 giffgaff：0 月租的“神卡”&lt;/h2&gt;
 &lt;p&gt;giffgaff 是目前国内极客圈持有量最大的一张卡。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;获取成本：&lt;/strong&gt; &lt;strong&gt;免费&lt;/strong&gt;（通过官网申请平信邮寄，但容易丢件）或 &lt;strong&gt;约 20-40 元&lt;/strong&gt;（从某宝/闲鱼购买现货）。&lt;/li&gt;
@@ -33,36 +18,29 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;避坑指南：&lt;/strong&gt; 激活需充值 10 英镑，这 10 镑会作为余额留在卡里，够你发几年的保号短信。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;二-美国-skinny-新西兰卡-或-ultra-mobile-paygo&#34;&gt;二、 美国 Skinny (新西兰卡) 或 Ultra Mobile PayGo&lt;/h2&gt;
+&lt;h2 id="二-美国-skinny-新西兰卡-或-ultra-mobile-paygo"&gt;二、 美国 Skinny (新西兰卡) 或 Ultra Mobile PayGo&lt;/h2&gt;
 &lt;p&gt;如果你需要一个物理上的美国/新西兰号码，这两个是目前的“常青树”。&lt;/p&gt;
-&lt;h3 id=&#34;1-skinny-新西兰&#34;&gt;1. Skinny (新西兰)&lt;/h3&gt;
+&lt;h3 id="1-skinny-新西兰"&gt;1. Skinny (新西兰)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;成本：&lt;/strong&gt; 购卡约 100 元，&lt;strong&gt;0 月租&lt;/strong&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;保号：&lt;/strong&gt; 每一年消费一次即可（比如发条短信）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;评价：&lt;/strong&gt; 性价比极高，适合长期接验证码。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;2-ultra-mobile-paygo-美国&#34;&gt;2. Ultra Mobile PayGo (美国)&lt;/h3&gt;
+&lt;h3 id="2-ultra-mobile-paygo-美国"&gt;2. Ultra Mobile PayGo (美国)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;成本：&lt;/strong&gt; 购卡约 200-250 元。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;月租：&lt;/strong&gt; &lt;strong&gt;3 美元/月&lt;/strong&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;评价：&lt;/strong&gt; 虽然有月租，但它是&lt;strong&gt;真正的美国实体号&lt;/strong&gt;，对于某些极度挑剔环境的美国银行（如 Chase）或特定的美国应用，这是唯一的解决方案。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;三-方案对比我该选哪一张&#34;&gt;三、 方案对比：我该选哪一张？&lt;/h2&gt;
+&lt;h2 id="三-方案对比我该选哪一张"&gt;三、 方案对比：我该选哪一张？&lt;/h2&gt;
 &lt;p&gt;| 维度 | giffgaff (英国) | Skinny (新西兰) | Ultra Mobile (美国) |
 | &lt;strong&gt;初期成本&lt;/strong&gt; | 极低 (约 30 元) | 中 (约 100 元) | 高 (约 200 元+) |
 | &lt;strong&gt;月租&lt;/strong&gt; | &lt;strong&gt;0&lt;/strong&gt; | &lt;strong&gt;0&lt;/strong&gt; | $3 (约 22 元) |
 | &lt;strong&gt;保号要求&lt;/strong&gt; | 6 个月发一次短信 | 1 年消费一次 | 自动扣月租 |
-| &lt;strong&gt;适用场景&lt;/strong&gt; | 绝大多数 AI/社交软件 | 注册海外银行 | 纯美区业务/美通卡 |&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>【2026 更新版】WildCard 停运后，中国境内如何申请海外银行卡刷 AI？</title>
-      <link>http://localhost:1313/posts/2026-02-04-%E6%B5%B7%E5%A4%96%E5%8A%9E%E5%8D%A1%E6%8C%87%E5%8D%97/</link>
-      <pubDate>Wed, 04 Feb 2026 14:30:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/2026-02-04-%E6%B5%B7%E5%A4%96%E5%8A%9E%E5%8D%A1%E6%8C%87%E5%8D%97/</guid>
-      <description>&lt;p&gt;曾被很多人推崇的 WildCard 已经成为历史。随着风控收紧，曾经“躺着开卡”的时代结束了。但作为开发者和 AI 重度用户，我们依然需要稳定的支付手段。&lt;/p&gt;
+| &lt;strong&gt;适用场景&lt;/strong&gt; | 绝大多数 AI/社交软件 | 注册海外银行 | 纯美区业务/美通卡 |&lt;/p&gt;</description></item><item><title>【2026 更新版】WildCard 停运后，中国境内如何申请海外银行卡刷 AI？</title><link>https://zhitong.uk/posts/2026-02-04-%E6%B5%B7%E5%A4%96%E5%8A%9E%E5%8D%A1%E6%8C%87%E5%8D%97/</link><pubDate>Wed, 04 Feb 2026 14:30:00 +0800</pubDate><guid>https://zhitong.uk/posts/2026-02-04-%E6%B5%B7%E5%A4%96%E5%8A%9E%E5%8D%A1%E6%8C%87%E5%8D%97/</guid><description>&lt;p&gt;曾被很多人推崇的 WildCard 已经成为历史。随着风控收紧，曾经“躺着开卡”的时代结束了。但作为开发者和 AI 重度用户，我们依然需要稳定的支付手段。&lt;/p&gt;
 &lt;p&gt;经过实测，我整理了目前 &lt;strong&gt;2026 年依然存活且好用&lt;/strong&gt; 的三大替代方案。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;一-方案-a目前最稳的正规军--新加坡-ocbc-华侨银行&#34;&gt;一、 方案 A：目前最稳的“正规军” —— 新加坡 OCBC (华侨银行)&lt;/h2&gt;
+&lt;h2 id="一-方案-a目前最稳的正规军--新加坡-ocbc-华侨银行"&gt;一、 方案 A：目前最稳的“正规军” —— 新加坡 OCBC (华侨银行)&lt;/h2&gt;
 &lt;p&gt;这是目前国内用户&lt;strong&gt;唯一&lt;/strong&gt;能远程开立的、正规实体受监管的海外银行账户。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;申请条件：&lt;/strong&gt; 护照（必须）、手机带 NFC 功能、大陆手机号。&lt;/li&gt;
@@ -76,7 +54,7 @@
 &lt;li&gt;&lt;strong&gt;注意事项：&lt;/strong&gt; 账户需要入金（约 1000 新币）激活以豁免首年管理费。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;二-方案-b最像虚拟卡的新宠--redotpay-红点&#34;&gt;二、 方案 B：最像虚拟卡的“新宠” —— RedotPay (红点)&lt;/h2&gt;
+&lt;h2 id="二-方案-b最像虚拟卡的新宠--redotpay-红点"&gt;二、 方案 B：最像虚拟卡的“新宠” —— RedotPay (红点)&lt;/h2&gt;
 &lt;p&gt;如果你的护照还没办下来，或者想找一个像 WildCard 一样快速开卡的工具，RedotPay 是目前的替代首选。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;申请条件：&lt;/strong&gt; 身份证即可，需通过 KYC 认证。&lt;/li&gt;
@@ -89,8 +67,5 @@
 &lt;li&gt;&lt;strong&gt;缺点：&lt;/strong&gt; 它是加密货币预付卡，每次消费会有转换费，适合作为“消耗卡”使用。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;三-方案-c全球资金中转站--wise-大名鼎鼎&#34;&gt;三、 方案 C：全球资金中转站 —— Wise (大名鼎鼎)&lt;/h2&gt;
-&lt;p&gt;如果你已经有了 OCBC 或其他外币账户，Wise 是你节省手续费的神器。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;h2 id="三-方案-c全球资金中转站--wise-大名鼎鼎"&gt;三、 方案 C：全球资金中转站 —— Wise (大名鼎鼎)&lt;/h2&gt;
+&lt;p&gt;如果你已经有了 OCBC 或其他外币账户，Wise 是你节省手续费的神器。&lt;/p&gt;</description></item></channel></rss>

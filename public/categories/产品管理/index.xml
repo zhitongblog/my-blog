@@ -1,29 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>产品管理 on 智通和你一起学AI</title>
-    <link>http://localhost:1313/categories/%E4%BA%A7%E5%93%81%E7%AE%A1%E7%90%86/</link>
-    <description>Recent content in 产品管理 on 智通和你一起学AI</description>
-    <generator>Hugo -- 0.154.5</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Feb 2026 10:18:49 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E4%BA%A7%E5%93%81%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>年PM告别加班：AI全自动生成PRD实操指南</title>
-      <link>http://localhost:1313/posts/20260211-101849-npmgbjbaiqzdscprdsczn/</link>
-      <pubDate>Wed, 11 Feb 2026 10:18:49 +0800</pubDate>
-      <guid>http://localhost:1313/posts/20260211-101849-npmgbjbaiqzdscprdsczn/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/20260211-101724-npmgbjbaiqzdscprdsczn.png&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;5年pm告别加班ai全自动生成prd实操指南&#34;&gt;5年PM告别加班：AI全自动生成PRD实操指南&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>产品管理 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/%E4%BA%A7%E5%93%81%E7%AE%A1%E7%90%86/</link><description>Recent content in 产品管理 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sat, 21 Feb 2026 09:58:34 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/%E4%BA%A7%E5%93%81%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>告别功能列表！用智能体编排图替代PRD：下一代产品文档长这样</title><link>https://zhitong.uk/posts/2026-02-22-gbgnlbyzntbpttdprdxydcpwdzzy/</link><pubDate>Sat, 21 Feb 2026 09:58:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-22-gbgnlbyzntbpttdprdxydcpwdzzy/</guid><description>本文揭示传统PRD在AI时代失效的深层原因，提出以可视化智能体编排图替代冗长功能列表，实现状态可追溯、逻辑可执行、协作可对齐的下一代产品文档实践。</description></item><item><title>第8篇：从Figma到开发交付——产品经理如何高效协同技术团队</title><link>https://zhitong.uk/posts/2026-02-21-d8pcfigmadkfjfcpjlrhgxxtjstd/</link><pubDate>Fri, 20 Feb 2026 16:16:58 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-21-d8pcfigmadkfjfcpjlrhgxxtjstd/</guid><description>本文揭秘Figma设计稿到前端落地的常见断层，提供可落地的标注规范、状态覆盖清单与协作Checklist，帮助产品经理打通设计-开发交付链路，减少返工，提升跨职能协同效率。</description></item><item><title>未来十年没有‘产品经理’，只有‘智能体编排师’：当低代码AI平台让每个人都是PM，真正的壁垒是什么？</title><link>https://zhitong.uk/posts/2026-02-19-wlsnmycpjlzyzntbpsdddmaiptrmgr/</link><pubDate>Thu, 19 Feb 2026 08:13:25 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-wlsnmycpjlzyzntbpsdddmaiptrmgr/</guid><description>本文探讨低代码AI平台如何重塑产品经理角色，分析‘智能体编排师’这一新兴职能的核心能力，并揭示在PRD消失时代真正的竞争壁垒——语义对齐、约束建模与跨模态意图理解。</description></item><item><title>年PM告别加班：AI全自动生成PRD实操指南</title><link>https://zhitong.uk/posts/20260211-101849-npmgbjbaiqzdscprdsczn/</link><pubDate>Wed, 11 Feb 2026 10:18:49 +0800</pubDate><guid>https://zhitong.uk/posts/20260211-101849-npmgbjbaiqzdscprdsczn/</guid><description>&lt;p&gt;&lt;img loading="lazy" src="https://zhitong.uk/images/20260211-101724-npmgbjbaiqzdscprdsczn.png"&gt;&lt;/p&gt;
+&lt;h1 id="5年pm告别加班ai全自动生成prd实操指南"&gt;5年PM告别加班：AI全自动生成PRD实操指南&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;日期：2026年2月11日&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;最近社交媒体上有个热梗，说是有男子买到了“2026年3月1日生产的面包”，网友调侃这是吃到了“未来粮”。虽然这只是个食品安全的乌龙，但对于我们互联网人来说，2026年的今天，我们确实已经生活在一个曾经被认为是“未来”的时代。&lt;/p&gt;
 &lt;p&gt;看看最近科技圈的动静，视频模型 &lt;strong&gt;Seedance 2.0&lt;/strong&gt; 横空出世，被业内称为“颠覆行业”，生成的画面连物理逻辑都完美复刻；&lt;strong&gt;西部战区年度宣传片&lt;/strong&gt;里无人机布满天空，那种集群智能的震撼感让人头皮发麻。既然AI已经能理解复杂的物理世界和战术编队，难道还搞不定一份PRD（产品需求文档）吗？&lt;/p&gt;
 &lt;p&gt;作为一名在行业摸爬滚打5年的产品经理（PM），我曾经也是“文档纺织工”，每天在Word和Axure之间反复横跳。但今年，我彻底告别了机械式的加班。今天，我就把这套“2026版AI全自动生成PRD”的实操心法分享给大家。&lt;/p&gt;
-&lt;h2 id=&#34;一-思维升级从对话到代理&#34;&gt;一、 思维升级：从“对话”到“代理”&lt;/h2&gt;
+&lt;h2 id="一-思维升级从对话到代理"&gt;一、 思维升级：从“对话”到“代理”&lt;/h2&gt;
 &lt;p&gt;在2023年或2024年，PM使用AI的方式通常是“Chat（聊天）”，也就是把AI当成一个百科全书，问它“电商购物车有哪些功能点”。&lt;/p&gt;
 &lt;p&gt;但在2026年，如果你还这么用，就太浪费了。现在的AI模型（如GPT-6或Claude-5等效水平）已经进化为&lt;strong&gt;Agent（智能体）&lt;/strong&gt;。它们不仅能“说话”，还能“执行”。&lt;/p&gt;
 &lt;p&gt;想象一下最近&lt;strong&gt;停产12年的奇瑞QQ复活后爆火&lt;/strong&gt;的新闻，老产品加上新理念能焕发新生，我们的工作流也一样。我们需要把AI从“咨询顾问”变成“执行专员”。在这个阶段，核心心法是：&lt;strong&gt;不要让AI去构思，而要让AI去“翻译”你的决策。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;二-实操第一步全模态信息的暴力投喂&#34;&gt;二、 实操第一步：全模态信息的“暴力投喂”&lt;/h2&gt;
+&lt;h2 id="二-实操第一步全模态信息的暴力投喂"&gt;二、 实操第一步：全模态信息的“暴力投喂”&lt;/h2&gt;
 &lt;p&gt;写PRD最痛苦的是什么？是将会议上的口沫横飞、白板上的鬼画符，转化成结构化的文字。以前这需要人肉转录，现在是全自动的。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;操作指南：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -36,7 +21,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;“作为一个高级产品经理助理，请阅读附件中的会议纪要和白板草图。提取其中的核心业务逻辑，识别出‘用户端’与‘管理端’的功能差异，并指出可能存在的逻辑漏洞。”&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;三-实操第二步结构化输出与填空题&#34;&gt;三、 实操第二步：结构化输出与“填空题”&lt;/h2&gt;
+&lt;h2 id="三-实操第二步结构化输出与填空题"&gt;三、 实操第二步：结构化输出与“填空题”&lt;/h2&gt;
 &lt;p&gt;当AI理解了你的意图后，千万不要让它直接“写一份PRD”，否则你会得到一篇全是废话的通稿。你需要利用2026年AI强大的&lt;strong&gt;逻辑推理能力&lt;/strong&gt;，让它按模块生成。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;推荐的模块化生成顺序：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -48,7 +33,7 @@
 这是最耗时的部分。你可以指令AI：“针对‘用户下单’这一环节，请穷举所有异常状态（如库存不足、支付超时、网络中断），并给出相应的交互反馈描述。”&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;这就像最近火爆的 &lt;strong&gt;Seedance 2.0&lt;/strong&gt;，它之所以强，是因为它懂物理世界的规律。同理，现在的AI也懂“业务世界的规律”，它比你更擅长穷举边缘情况（Edge Case）。&lt;/p&gt;
-&lt;h2 id=&#34;四-实操第三步人机协同的最后10&#34;&gt;四、 实操第三步：人机协同的“最后10%”&lt;/h2&gt;
+&lt;h2 id="四-实操第三步人机协同的最后10"&gt;四、 实操第三步：人机协同的“最后10%”&lt;/h2&gt;
 &lt;p&gt;AI生成了90%的内容后，剩下的10%才是你作为5年陈PM的核心价值。&lt;/p&gt;
 &lt;p&gt;最近有个新闻，&lt;strong&gt;飞行员把铃声当警报咣一下站起来&lt;/strong&gt;，这是职业本能。我们在审核AI写的PRD时，也要有这种“职业敏感度”。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;你需要Check的地方：&lt;/strong&gt;&lt;/p&gt;
@@ -57,19 +42,12 @@
 &lt;li&gt;&lt;strong&gt;情感化交互：&lt;/strong&gt; 比如错误提示语，AI写得很生硬，你需要把它改得更有温度，符合品牌调性。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;政治与合规性：&lt;/strong&gt; 就像&lt;strong&gt;中方回应对华鹰派涌入荷兰新内阁&lt;/strong&gt;一样，外部环境复杂多变。你需要确保产品设计符合最新的法律法规（特别是2026年更严格的数据隐私法）。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;五-总结把时间留给思考而不是打字&#34;&gt;五、 总结：把时间留给思考，而不是打字&lt;/h2&gt;
+&lt;h2 id="五-总结把时间留给思考而不是打字"&gt;五、 总结：把时间留给思考，而不是打字&lt;/h2&gt;
 &lt;p&gt;2026年的今天，技术已经不仅是辅助，而是成为了生产力的基座。连&lt;strong&gt;妈妈外出3岁宝宝都能看店卖出一包烟&lt;/strong&gt;，人类的适应能力是无穷的。&lt;/p&gt;
 &lt;p&gt;如果说过去写PRD是“手搓”，现在就是“盾构机推进”。通过&lt;strong&gt;全模态输入 -&amp;gt; 结构化生成 -&amp;gt; 人工核心校验&lt;/strong&gt;这三步走，一份高质量的PRD可以在30分钟内完成初稿。&lt;/p&gt;
 &lt;p&gt;我们要像那位&lt;strong&gt;美“商品大王”坚守金银铜&lt;/strong&gt;一样，坚守PM的核心价值——洞察用户、权衡商业、制定决策，而不是坚守由于低效工具带来的“虚假繁忙”。&lt;/p&gt;
 &lt;p&gt;在这个&lt;strong&gt;春节前迎来一轮超猛大回暖&lt;/strong&gt;的季节（虽然现在是2月，但寓意行业回暖），希望大家都能掌握这套AI工作流。别再加班写文档了，早点下班，无论是去哈尔滨看冰灯，还是去&lt;strong&gt;涠洲岛看那只网红鲸鱼“刀疤哥”&lt;/strong&gt;，去感受真实的世界，这才是产品灵感的真正来源。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;告别加班，从今天开始。&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>告别传统PRD？微软CPO揭秘AI时代产品经理新角色</title>
-      <link>http://localhost:1313/posts/20260207-104853-gbctprdwrcpojmaisdcpjlxjs/</link>
-      <pubDate>Sat, 07 Feb 2026 10:48:53 +0800</pubDate>
-      <guid>http://localhost:1313/posts/20260207-104853-gbctprdwrcpojmaisdcpjlxjs/</guid>
-      <description>&lt;h2 id=&#34;告别传统prd微软cpo揭秘ai时代产品经理新角色&#34;&gt;告别传统PRD？微软CPO揭秘AI时代产品经理新角色&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;告别加班，从今天开始。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>告别传统PRD？微软CPO揭秘AI时代产品经理新角色</title><link>https://zhitong.uk/posts/20260207-104853-gbctprdwrcpojmaisdcpjlxjs/</link><pubDate>Sat, 07 Feb 2026 10:48:53 +0800</pubDate><guid>https://zhitong.uk/posts/20260207-104853-gbctprdwrcpojmaisdcpjlxjs/</guid><description>&lt;h2 id="告别传统prd微软cpo揭秘ai时代产品经理新角色"&gt;告别传统PRD？微软CPO揭秘AI时代产品经理新角色&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;背景：AI浪潮下的产品研发范式转移&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;2026年，人工智能已经深度渗透到各个行业，产品研发领域自然也不例外。我们正经历一场由AI驱动的深刻变革，过去依赖于经验、市场调研和线性迭代的产品开发模式，正面临着颠覆性的挑战。曾经被视为产品经理“圣经”的Product Requirements Document (PRD)，其地位也开始动摇。在AI的赋能下，用户行为分析更加精准、需求预测更加智能、原型设计更加高效，传统PRD那种繁琐、静态、滞后的弊端日益凸显。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;现状：传统PRD的困境与AI带来的机遇&lt;/strong&gt;&lt;/p&gt;
@@ -89,20 +67,13 @@
 &lt;p&gt;&lt;strong&gt;展望：拥抱AI，开启产品经理的新篇章&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;未来，我们或许将看到一种全新的产品开发模式，它不再依赖于厚重的PRD文档，而是基于AI驱动的实时数据分析、智能预测和动态原型设计。产品经理将更多地参与到产品的早期探索和用户体验设计中，而不是仅仅在后期进行需求定义。&lt;/p&gt;
 &lt;p&gt;AI时代的产品经理，将更加注重与用户之间的持续沟通和反馈，利用AI工具分析用户行为，并根据用户反馈不断优化产品。他们将成为产品增长的驱动者，通过AI技术实现用户增长和商业价值的最大化。&lt;/p&gt;
-&lt;p&gt;告别传统PRD，并非意味着否定过去，而是拥抱未来。AI为产品经理提供了强大的工具和无限的可能。只有勇于拥抱变革，不断学习和提升自身能力，才能在AI时代的产品研发浪潮中乘风破浪，开创属于产品经理的新篇章。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>拒绝AI泡沫“摆拍”：2026实战型产品经理的突围路径图</title>
-      <link>http://localhost:1313/posts/2026-02-06-%E6%8B%92%E7%BB%9Dai%E6%B3%A1%E6%B2%AB-%E6%91%86%E6%8B%8D-2026%E5%AE%9E%E6%88%98%E5%9E%8B%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84%E7%AA%81%E5%9B%B4%E8%B7%AF%E5%BE%84%E5%9B%BE/</link>
-      <pubDate>Fri, 06 Feb 2026 10:22:03 +0800</pubDate>
-      <guid>http://localhost:1313/posts/2026-02-06-%E6%8B%92%E7%BB%9Dai%E6%B3%A1%E6%B2%AB-%E6%91%86%E6%8B%8D-2026%E5%AE%9E%E6%88%98%E5%9E%8B%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84%E7%AA%81%E5%9B%B4%E8%B7%AF%E5%BE%84%E5%9B%BE/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/2026-02-06-%E6%8B%92%E7%BB%9Dai%E6%B3%A1%E6%B2%AB-%E6%91%86%E6%8B%8D-2026%E5%AE%9E%E6%88%98%E5%9E%8B%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84%E7%AA%81%E5%9B%B4%E8%B7%AF%E5%BE%84%E5%9B%BE/featured.png&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;拒绝ai泡沫摆拍2026实战型产品经理的突围路径图&#34;&gt;拒绝AI泡沫“摆拍”：2026实战型产品经理的突围路径图&lt;/h1&gt;
+&lt;p&gt;告别传统PRD，并非意味着否定过去，而是拥抱未来。AI为产品经理提供了强大的工具和无限的可能。只有勇于拥抱变革，不断学习和提升自身能力，才能在AI时代的产品研发浪潮中乘风破浪，开创属于产品经理的新篇章。&lt;/p&gt;</description></item><item><title>拒绝AI泡沫“摆拍”：2026实战型产品经理的突围路径图</title><link>https://zhitong.uk/posts/2026-02-06-%E6%8B%92%E7%BB%9Dai%E6%B3%A1%E6%B2%AB-%E6%91%86%E6%8B%8D-2026%E5%AE%9E%E6%88%98%E5%9E%8B%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84%E7%AA%81%E5%9B%B4%E8%B7%AF%E5%BE%84%E5%9B%BE/</link><pubDate>Fri, 06 Feb 2026 10:22:03 +0800</pubDate><guid>https://zhitong.uk/posts/2026-02-06-%E6%8B%92%E7%BB%9Dai%E6%B3%A1%E6%B2%AB-%E6%91%86%E6%8B%8D-2026%E5%AE%9E%E6%88%98%E5%9E%8B%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84%E7%AA%81%E5%9B%B4%E8%B7%AF%E5%BE%84%E5%9B%BE/</guid><description>&lt;p&gt;&lt;img loading="lazy" src="https://zhitong.uk/posts/2026-02-06-%E6%8B%92%E7%BB%9Dai%E6%B3%A1%E6%B2%AB-%E6%91%86%E6%8B%8D-2026%E5%AE%9E%E6%88%98%E5%9E%8B%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E7%9A%84%E7%AA%81%E5%9B%B4%E8%B7%AF%E5%BE%84%E5%9B%BE/featured.png"&gt;&lt;/p&gt;
+&lt;h1 id="拒绝ai泡沫摆拍2026实战型产品经理的突围路径图"&gt;拒绝AI泡沫“摆拍”：2026实战型产品经理的突围路径图&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;日期：2026年2月6日&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如果说2023年是AI的“元雷”，2024年是“狂热期”，那么站在2026年2月的当下，我们正处于一个关键的“去伪存真”时刻。&lt;/p&gt;
 &lt;p&gt;窗外，江浙沪皖正在迎接今年最大的雨雪，而科技圈的寒风也从未停止过对泡沫的清洗。最近的一则热门新闻发人深省：某博主为博流量，竟策划“摆拍孩子险被人贩子拐走”的视频，最终被警方处罚。这则新闻在产品圈引起了不小的共鸣——过去两年，有多少所谓的“AI产品”，其实也是一种“摆拍”？&lt;/p&gt;
 &lt;p&gt;仅靠套壳大模型、硬塞一个对话框、演示视频酷炫但落地即崩的“摆拍式”产品，在2026年已经彻底失去了市场。对于产品经理（PM）而言，单纯的“AI布道者”身份已不再吃香，市场迫切需要的是能够驾驭算法、落地场景的“实战派”。&lt;/p&gt;
-&lt;h2 id=&#34;一-告别摆拍思维从演示demo到交付价值&#34;&gt;一、 告别“摆拍”思维：从演示Demo到交付价值&lt;/h2&gt;
+&lt;h2 id="一-告别摆拍思维从演示demo到交付价值"&gt;一、 告别“摆拍”思维：从演示Demo到交付价值&lt;/h2&gt;
 &lt;p&gt;回望过去，很多PM陷入了一个误区：认为只要接上了API，产品就有了AI灵魂。这就好比最近那个“摆拍人贩子”的博主，有了剧本和演员（大模型能力），却制造了一场虚假的社会焦虑（伪需求）。&lt;/p&gt;
 &lt;p&gt;在2026年，企业和用户已经极度理智。他们不再为“能写诗”的聊天机器人买单，他们关心的是ROI（投资回报率）。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;拒绝“为了AI而AI”：&lt;/strong&gt;
@@ -113,7 +84,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;警惕“除了快一无是处”：&lt;/strong&gt;
 近期“新能源车侧滑起火”的新闻再次提醒我们，技术发展的底线是安全与稳定。2024年时，很多AI产品因为幻觉问题（Hallucination）导致数据错误，最终被企业客户抛弃。2026年的PM，必须把**“AI的可控性”**列为最高优先级。你不能交付一个偶尔会“发疯”的系统给B端客户，正如不能交付一辆随时会失控的汽车。&lt;/p&gt;
-&lt;h2 id=&#34;二-2026年pm的能力重构不仅是画图更是驯兽&#34;&gt;二、 2026年PM的能力重构：不仅是画图，更是“驯兽”&lt;/h2&gt;
+&lt;h2 id="二-2026年pm的能力重构不仅是画图更是驯兽"&gt;二、 2026年PM的能力重构：不仅是画图，更是“驯兽”&lt;/h2&gt;
 &lt;p&gt;上海政协委员近期提出“取消中高考是早晚的事”，这一观点折射出教育评价体系的变革。同样的变革也发生在我们产品经理的职场评价体系中。死记硬背（单纯画原型、写文档）的技能正在贬值，而创造性思维和对新工具的掌控力成为核心。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;1. 从“指令员”进阶为“架构师”&lt;/strong&gt;
 两年前，我们会写Prompt（提示词）就很厉害。现在，Prompt Engineering已是基本功。2026年的PM需要掌握的是**Agentic Workflow（智能体工作流）**的设计。
@@ -121,7 +92,7 @@
 &lt;p&gt;&lt;strong&gt;2. 建立“私有数据”的护城河&lt;/strong&gt;
 公有大模型的能力已经趋同，就像现在的自来水一样普及。产品的差异化，取决于你喂给AI什么数据。
 实战型PM需要懂得如何清洗、标注、利用企业内部的私有数据。比如在医疗、法律或垂直电商领域，谁拥有更精准的“小数据”，谁就能调教出更懂业务的模型。这比单纯比拼模型参数量要重要得多。&lt;/p&gt;
-&lt;h2 id=&#34;三-突围路径在冰雪中燃起真火&#34;&gt;三、 突围路径：在“冰雪”中燃起真火&lt;/h2&gt;
+&lt;h2 id="三-突围路径在冰雪中燃起真火"&gt;三、 突围路径：在“冰雪”中燃起真火&lt;/h2&gt;
 &lt;p&gt;正如最近冰雪经济“燃”起来一样，即便在资本的寒冬期，只要找对场景，依然能火热爆发。2026年的产品突围，关键在于“场景颗粒度”。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;路径一：重塑“非对话式”交互&lt;/strong&gt;
 早期的AI产品几乎清一色是Chatbot（聊天框）。但现在我们发现，用户并不想一直打字。&lt;/p&gt;
@@ -132,10 +103,7 @@
 &lt;p&gt;&lt;strong&gt;路径二：情绪价值与伦理红线&lt;/strong&gt;
 近期“爱泼斯坦案”相关文件曝光以及“女婴小洛熙离世”的悲剧，让社会对伦理和人性有了更深的思考。AI产品不仅是冷冰冰的工具，更涉及到伦理边界。
 未来的PM在设计陪伴型、内容型AI产品时，必须置入严格的伦理护栏。同时，AI不应只是效率工具，更应提供正向的情绪价值。比如针对老年人的AI看护产品，重点不在于“监控”，而在于“关怀与连接”。&lt;/p&gt;
-&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
+&lt;h2 id="结语"&gt;结语&lt;/h2&gt;
 &lt;p&gt;2026年，AI已经祛魅。它不再是那个只需在PPT上画个大饼就能拿到融资的神话。&lt;/p&gt;
 &lt;p&gt;对于产品经理而言，这反而是最好的时代。因为市场不再喧嚣，我们可以沉下心来，拒绝那些花哨的“摆拍”功能，去解决那些真正棘手的问题——就像那位在雨雪天里还要处理复杂路况的司机，或者那位在寒冬中点燃冰雪经济的创业者。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;别做那个“在电梯口等20分钟”的被动者（参考男子住40层卖房新闻），要做那个主动砸窗救人的破局者。&lt;/strong&gt; 带上你的实战经验，去定义真正属于AI时代的超级产品。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;p&gt;&lt;strong&gt;别做那个“在电梯口等20分钟”的被动者（参考男子住40层卖房新闻），要做那个主动砸窗救人的破局者。&lt;/strong&gt; 带上你的实战经验，去定义真正属于AI时代的超级产品。&lt;/p&gt;</description></item></channel></rss>

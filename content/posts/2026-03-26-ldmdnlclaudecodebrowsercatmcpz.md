@@ -1,6 +1,6 @@
 ---
 title: "零代码≠低能力：Claude Code BrowserCat MCP在电商数据采集中的实战压测报告"
-date: 2026-03-25T12:57:16.542Z
+date: 2026-03-26T12:57:16.542Z
 draft: false
 description: "本文详述使用Claude+BrowserCat+MCP零代码方案，在72小时内完成5大电商平台实时价格、库存与SKU变更监控的压测全过程，验证零代码在高对抗场景下的工程可靠性与团队提效价值。"
 tags:

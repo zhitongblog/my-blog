@@ -1,6 +1,6 @@
 ---
 title: "从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？"
-date: 2026-03-25T12:57:16.542Z
+date: 2026-03-27T12:57:16.542Z
 draft: false
 description: "揭秘AI代码助手如何真正理解并执行复杂前端性能分析指令——从模糊Prompt到可落地的竞品LCP/CLS对比报告，详解提示工程、上下文构建与结果结构化关键实践。"
 tags:

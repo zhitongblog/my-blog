@@ -1,289 +1,94 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验 | 智通和你一起学AI</title>
-<meta name="keywords" content="Claude, AI编程, Git钩子, Python, DevOps, API集成">
-<meta name="description" content="本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。">
-<meta name="author" content="智通">
-<link rel="canonical" href="http://localhost:1313/posts/2026-02-18-claudecodeszznclpzclaudemddgit/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-02-18-claudecodeszznclpzclaudemddgit/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' 
-        data-cf-beacon='{"token": "你的token"}'></script>
-
-
-</head>
-<body id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="http://localhost:1313/" title="首页">
-                    <span>首页</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/posts/" title="文章">
-                    <span>文章</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/archives/" title="归档">
-                    <span>归档</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/tags/" title="标签">
-                    <span>标签</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/about/" title="关于">
-                    <span>关于</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验
-    </h1>
-    <div class="post-description">
-      本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。
-    </div>
-    <div class="post-meta"><span title='2026-02-18 05:44:20.652 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span>
-
-</div>
-  </header> 
-  <div class="post-content"><h2 id="1-环境准备与claude-api接入">1. 环境准备与Claude API接入<a hidden class="anchor" aria-hidden="true" href="#1-环境准备与claude-api接入">#</a></h2>
-<p>让我们从零开始，快速打通本地开发环境与 Claude 的 AI 能力。这一步是后续所有自动化能力的地基，务必稳扎稳打。</p>
-<p>首先安装官方 SDK（推荐使用 Python 3.9+）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install anthropic python-dotenv
-</span></span></code></pre></div><blockquote>
-<p>✅ <code>python-dotenv</code> 非必需但强烈推荐——它能安全加载 <code>.env</code> 文件，避免 API Key 硬编码或意外提交。</p>
-</blockquote>
-<p>接着，访问 <a href="https://console.anthropic.com">Anthropic Console</a> → <strong>API Keys</strong> → 点击 <strong>Create Key</strong>，复制生成的密钥（形如 <code>sk-ant-api03-...</code>）。<strong>切勿截图、勿存 GitHub、勿发群聊！</strong></p>
-<p>在项目根目录创建 <code>.env</code> 文件（注意：文件名以 <code>.</code> 开头，隐藏）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-env" data-lang="env"><span style="display:flex;"><span>ANTHROPIC_API_KEY<span style="color:#f92672">=</span>sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-</span></span></code></pre></div><p>最后，编写最小验证脚本 <code>test_claude.py</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># test_claude.py</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> dotenv <span style="color:#f92672">import</span> load_dotenv
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> anthropic
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>load_dotenv()  <span style="color:#75715e"># 加载 .env 中的 ANTHROPIC_API_KEY</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>client <span style="color:#f92672">=</span> anthropic<span style="color:#f92672">.</span>Anthropic()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
-</span></span><span style="display:flex;"><span>    message <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>messages<span style="color:#f92672">.</span>create(
-</span></span><span style="display:flex;"><span>        model<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;claude-3-5-sonnet-20240620&#34;</span>,
-</span></span><span style="display:flex;"><span>        max_tokens<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>,
-</span></span><span style="display:flex;"><span>        messages<span style="color:#f92672">=</span>[{<span style="color:#e6db74">&#34;role&#34;</span>: <span style="color:#e6db74">&#34;user&#34;</span>, <span style="color:#e6db74">&#34;content&#34;</span>: <span style="color:#e6db74">&#34;请用中文说一句打招呼的话&#34;</span>}]
-</span></span><span style="display:flex;"><span>    )
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;✅ 成功调用 Claude：&#34;</span>, message<span style="color:#f92672">.</span>content[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>strip())
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;❌ 调用失败：&#34;</span>, e)
-</span></span></code></pre></div><p>运行 <code>python test_claude.py</code>，应输出类似：<br>
-<code>✅ 成功调用 Claude：你好！我是 Claude，很高兴为你提供帮助。</code></p>
-<p><img alt="展示 test_claude.py 运行成功的终端截图" loading="lazy" src="IMAGE_PLACEHOLDER_1"></p>
-<p>⚠️ <strong>关键注意事项</strong>：</p>
-<ul>
-<li>Anthropic API 当前<strong>仅支持 <code>us-east-1</code> 区域</strong>，若使用代理/企业网关，请确保出口 IP 可达该区域；</li>
-<li>免费额度为新账号赠送 $5（约可处理 50 万输入 tokens），可在 <a href="https://console.anthropic.com/usage">Console → Usage</a> 实时查看；</li>
-<li>API Key 权限默认为 <code>full_access</code>，生产环境建议在 Console 中创建最小权限 Key（目前暂不支持细粒度 RBAC）。</li>
-</ul>
-<p>❓ <strong>常见问题速查</strong>：</p>
-<ul>
-<li><code>AuthenticationError: Invalid API key</code>？检查 <code>.env</code> 是否被正确加载（<code>print(os.getenv(&quot;ANTHROPIC_API_KEY&quot;))</code>）、Key 前后有无空格或换行；</li>
-<li>企业内网无法连接？配置系统级 HTTP 代理：<code>export HTTP_PROXY=http://your-proxy:8080</code>（Linux/macOS）或在代码中显式传入 <code>httpx.Client(transport=...)</code>。</li>
-</ul>
-<hr>
-<h2 id="2-创建-claudemd项目级ai协作规范文件">2. 创建 CLAUDE.md：项目级AI协作规范文件<a hidden class="anchor" aria-hidden="true" href="#2-创建-claudemd项目级ai协作规范文件">#</a></h2>
-<p><code>CLAUDE.md</code> 不是一份给人读的文档，而是一个<strong>专为 Claude 设计的「行为契约」</strong>——它让大模型理解“在这个项目里，你该怎么做”。</p>
-<p>它的核心价值在于：<strong>将团队约定（编码风格、安全红线、上下文依赖）转化为 Claude 可解析、可执行的指令集</strong>，避免每次请求都重复粘贴规则。</p>
-<p>标准模板如下（保存为项目根目录的 <code>CLAUDE.md</code>）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>model: claude-3-5-sonnet-20240620
-</span></span><span style="display:flex;"><span>max_tokens: 1024
-</span></span><span style="display:flex;"><span>temperature: 0.2
-</span></span><span style="display:flex;"><span>rules:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> &#34;用中文回复，禁用英文术语（如 &#39;callback&#39; → &#39;回调函数&#39;）&#34;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> &#34;所有函数必须添加 Type Hints 和 Google 风格 docstring&#34;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> &#34;禁止硬编码数字（魔法数字），必须定义常量&#34;
-</span></span><span style="display:flex;"><span>context_files:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> &#34;pyproject.toml&#34;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> &#34;src/utils/__init__.py&#34;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> &#34;docs/ARCHITECTURE.md&#34;
-</span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span># 项目AI协作协议  
-</span></span><span style="display:flex;"><span>此文件定义 Claude 在本仓库中的行为边界：  
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 仅分析已提交或暂存的代码；  
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 不修改任何文件，只提供建议；  
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 对 <span style="color:#e6db74">`tests/`</span> 目录下的文件，额外启用单元测试规范检查。
-</span></span></code></pre></div><p>在代码中读取该配置（示例 <code>config.py</code>）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> yaml
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_claude_config</span>() <span style="color:#f92672">-&gt;</span> dict:
-</span></span><span style="display:flex;"><span>    config_path <span style="color:#f92672">=</span> Path(<span style="color:#e6db74">&#34;CLAUDE.md&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> config_path<span style="color:#f92672">.</span>exists():
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">FileNotFoundError</span>(<span style="color:#e6db74">&#34;CLAUDE.md 未找到，请在项目根目录创建&#34;</span>)
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    content <span style="color:#f92672">=</span> config_path<span style="color:#f92672">.</span>read_text(encoding<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> content<span style="color:#f92672">.</span>startswith(<span style="color:#e6db74">&#34;---&#34;</span>):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;CLAUDE.md 缺少 YAML frontmatter 分隔符 ---&#34;</span>)
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    frontmatter, _ <span style="color:#f92672">=</span> content<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;---&#34;</span>, <span style="color:#ae81ff">2</span>)[<span style="color:#ae81ff">1</span>:]  <span style="color:#75715e"># 取第一个 --- 后、第二个 --- 前的内容</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> yaml<span style="color:#f92672">.</span>safe_load(frontmatter)
-</span></span></code></pre></div><p>⚠️ <strong>严格守则</strong>：</p>
-<ul>
-<li>YAML 缩进必须为 <strong>空格</strong>（非 Tab），<code>rules</code> 和 <code>context_files</code> 下每项需 <code>- </code> 开头；</li>
-<li><code>context_files</code> 中路径为<strong>相对于项目根目录</strong>（即 <code>CLAUDE.md</code> 所在位置）；</li>
-<li><strong>严禁在 <code>CLAUDE.md</code> 中写入密码、Token、内部 API 地址等敏感信息</strong>——它可能被意外提交至公开仓库。</li>
-</ul>
-<p>❓ <strong>排障提示</strong>：</p>
-<ul>
-<li><code>yaml.scanner.ScannerError</code>？检查是否用了中文全角空格、是否漏了 <code>---</code> 或缩进错位；</li>
-<li>中文乱码？用 VS Code 确认文件编码为 <strong>UTF-8 without BOM</strong>（右下角点击编码 → 选择 “Save with Encoding” → UTF-8）。</li>
-</ul>
-<hr>
-<h2 id="3-构建本地ai校验工具claude-lint-cli">3. 构建本地AI校验工具：claude-lint CLI<a hidden class="anchor" aria-hidden="true" href="#3-构建本地ai校验工具claude-lint-cli">#</a></h2>
-<p>现在，我们将 <code>CLAUDE.md</code> 的约束力落地为可执行的命令行工具 —— <code>claude-lint</code>，一个融合静态分析与 AI 推理的智能 linter。</p>
-<p>创建 <code>claude_lint.py</code>（支持 Python 3.9+）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env python3</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> argparse
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> List, Dict, Any
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> anthropic
-</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> dotenv <span style="color:#f92672">import</span> load_dotenv
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> yaml
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>load_dotenv()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_claude_config</span>() <span style="color:#f92672">-&gt;</span> Dict[str, Any]:
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># （复用上节的 load_claude_config 逻辑）</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build_prompt</span>(file_path: str, code: str, config: dict) <span style="color:#f92672">-&gt;</span> str:
-</span></span><span style="display:flex;"><span>    rules <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>join(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;- </span><span style="color:#e6db74">{</span>r<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">for</span> r <span style="color:#f92672">in</span> config<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;rules&#34;</span>, []))
-</span></span><span style="display:flex;"><span>    context <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> ctx_file <span style="color:#f92672">in</span> config<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;context_files&#34;</span>, []):
-</span></span><span style="display:flex;"><span>        p <span style="color:#f92672">=</span> Path(ctx_file)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> p<span style="color:#f92672">.</span>exists():
-</span></span><span style="display:flex;"><span>            context <span style="color:#f92672">+=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">=== </span><span style="color:#e6db74">{</span>ctx_file<span style="color:#e6db74">}</span><span style="color:#e6db74"> ===</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">{</span>p<span style="color:#f92672">.</span>read_text()[:<span style="color:#ae81ff">500</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">...</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;&#34;&#34;你是一名资深 Python 工程师，请严格按以下规则审查代码：
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{</span>rules<span style="color:#e6db74">}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">当前待审文件：</span><span style="color:#e6db74">{</span>file_path<span style="color:#e6db74">}</span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">文件内容：
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">```python
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">{</span>code<span style="color:#e6db74">}</span><span style="color:#e6db74">
-</span></span></span></code></pre></div><p>{context}</p>
-<p>请严格返回标准 JSON 格式，仅含一个对象，键为 &ldquo;issues&rdquo;，值为数组，每个元素含 line（行号，整数）、message（中文描述）、severity（&ldquo;error&rdquo;|&ldquo;warning&rdquo;）。禁止任何额外文本、解释或 Markdown 格式。&quot;&quot;&quot;</p>
-<p>def main():
+<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验 | 智通和你一起学AI</title><meta name=keywords content="Claude,AI编程,Git钩子,Python,DevOps,API集成"><meta name=description content="本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验"><meta property="og:description" content="本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-02-18T05:44:20+00:00"><meta property="article:modified_time" content="2026-02-18T05:44:20+00:00"><meta property="article:tag" content="Claude"><meta property="article:tag" content="AI编程"><meta property="article:tag" content="Git钩子"><meta property="article:tag" content="Python"><meta property="article:tag" content="DevOps"><meta property="article:tag" content="API集成"><meta name=twitter:card content="summary"><meta name=twitter:title content="Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验"><meta name=twitter:description content="本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://zhitong.uk/posts/"},{"@type":"ListItem","position":2,"name":"Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验","item":"https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验","name":"Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验","description":"本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。","keywords":["Claude","AI编程","Git钩子","Python","DevOps","API集成"],"articleBody":"1. 环境准备与Claude API接入 让我们从零开始，快速打通本地开发环境与 Claude 的 AI 能力。这一步是后续所有自动化能力的地基，务必稳扎稳打。\n首先安装官方 SDK（推荐使用 Python 3.9+）：\npip install anthropic python-dotenv ✅ python-dotenv 非必需但强烈推荐——它能安全加载 .env 文件，避免 API Key 硬编码或意外提交。\n接着，访问 Anthropic Console → API Keys → 点击 Create Key，复制生成的密钥（形如 sk-ant-api03-...）。切勿截图、勿存 GitHub、勿发群聊！\n在项目根目录创建 .env 文件（注意：文件名以 . 开头，隐藏）：\nANTHROPIC_API_KEY=sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 最后，编写最小验证脚本 test_claude.py：\n# test_claude.py import os from dotenv import load_dotenv import anthropic load_dotenv() # 加载 .env 中的 ANTHROPIC_API_KEY client = anthropic.Anthropic() try: message = client.messages.create( model=\"claude-3-5-sonnet-20240620\", max_tokens=100, messages=[{\"role\": \"user\", \"content\": \"请用中文说一句打招呼的话\"}] ) print(\"✅ 成功调用 Claude：\", message.content[0].text.strip()) except Exception as e: print(\"❌ 调用失败：\", e) 运行 python test_claude.py，应输出类似：\n✅ 成功调用 Claude：你好！我是 Claude，很高兴为你提供帮助。\n⚠️ 关键注意事项：\nAnthropic API 当前仅支持 us-east-1 区域，若使用代理/企业网关，请确保出口 IP 可达该区域； 免费额度为新账号赠送 $5（约可处理 50 万输入 tokens），可在 Console → Usage 实时查看； API Key 权限默认为 full_access，生产环境建议在 Console 中创建最小权限 Key（目前暂不支持细粒度 RBAC）。 ❓ 常见问题速查：\nAuthenticationError: Invalid API key？检查 .env 是否被正确加载（print(os.getenv(\"ANTHROPIC_API_KEY\"))）、Key 前后有无空格或换行； 企业内网无法连接？配置系统级 HTTP 代理：export HTTP_PROXY=http://your-proxy:8080（Linux/macOS）或在代码中显式传入 httpx.Client(transport=...)。 2. 创建 CLAUDE.md：项目级AI协作规范文件 CLAUDE.md 不是一份给人读的文档，而是一个专为 Claude 设计的「行为契约」——它让大模型理解“在这个项目里，你该怎么做”。\n它的核心价值在于：将团队约定（编码风格、安全红线、上下文依赖）转化为 Claude 可解析、可执行的指令集，避免每次请求都重复粘贴规则。\n标准模板如下（保存为项目根目录的 CLAUDE.md）：\n--- model: claude-3-5-sonnet-20240620 max_tokens: 1024 temperature: 0.2 rules: - \"用中文回复，禁用英文术语（如 'callback' → '回调函数'）\" - \"所有函数必须添加 Type Hints 和 Google 风格 docstring\" - \"禁止硬编码数字（魔法数字），必须定义常量\" context_files: - \"pyproject.toml\" - \"src/utils/__init__.py\" - \"docs/ARCHITECTURE.md\" --- # 项目AI协作协议 此文件定义 Claude 在本仓库中的行为边界： - 仅分析已提交或暂存的代码； - 不修改任何文件，只提供建议； - 对 `tests/` 目录下的文件，额外启用单元测试规范检查。 在代码中读取该配置（示例 config.py）：\nimport yaml from pathlib import Path def load_claude_config() -\u003e dict: config_path = Path(\"CLAUDE.md\") if not config_path.exists(): raise FileNotFoundError(\"CLAUDE.md 未找到，请在项目根目录创建\") content = config_path.read_text(encoding=\"utf-8\") if not content.startswith(\"---\"): raise ValueError(\"CLAUDE.md 缺少 YAML frontmatter 分隔符 ---\") frontmatter, _ = content.split(\"---\", 2)[1:] # 取第一个 --- 后、第二个 --- 前的内容 return yaml.safe_load(frontmatter) ⚠️ 严格守则：\nYAML 缩进必须为 空格（非 Tab），rules 和 context_files 下每项需 - 开头； context_files 中路径为相对于项目根目录（即 CLAUDE.md 所在位置）； 严禁在 CLAUDE.md 中写入密码、Token、内部 API 地址等敏感信息——它可能被意外提交至公开仓库。 ❓ 排障提示：\nyaml.scanner.ScannerError？检查是否用了中文全角空格、是否漏了 --- 或缩进错位； 中文乱码？用 VS Code 确认文件编码为 UTF-8 without BOM（右下角点击编码 → 选择 “Save with Encoding” → UTF-8）。 3. 构建本地AI校验工具：claude-lint CLI 现在，我们将 CLAUDE.md 的约束力落地为可执行的命令行工具 —— claude-lint，一个融合静态分析与 AI 推理的智能 linter。\n创建 claude_lint.py（支持 Python 3.9+）：\n#!/usr/bin/env python3 import argparse import json import sys from pathlib import Path from typing import List, Dict, Any import anthropic from dotenv import load_dotenv import yaml load_dotenv() def read_claude_config() -\u003e Dict[str, Any]: # （复用上节的 load_claude_config 逻辑） pass def build_prompt(file_path: str, code: str, config: dict) -\u003e str: rules = \"\\n\".join(f\"- {r}\" for r in config.get(\"rules\", [])) context = \"\" for ctx_file in config.get(\"context_files\", []): p = Path(ctx_file) if p.exists(): context += f\"\\n=== {ctx_file} ===\\n{p.read_text()[:500]}...\\n\" return f\"\"\"你是一名资深 Python 工程师，请严格按以下规则审查代码： {rules} 当前待审文件：{file_path} 文件内容： ```python {code} {context}\n请严格返回标准 JSON 格式，仅含一个对象，键为 “issues”，值为数组，每个元素含 line（行号，整数）、message（中文描述）、severity（“error”|“warning”）。禁止任何额外文本、解释或 Markdown 格式。\"\"\"\ndef main(): parser = argparse.ArgumentParser(description=“Claude AI-powered code linter”) parser.add_argument(\"–file\", help=“指定单个文件路径”) parser.add_argument(\"–staged\", action=“store_true”, help=“检查 Git 暂存区文件”) parser.add_argument(\"–dry-run\", action=“store_true”, help=“仅打印 prompt，不调用 API”) args = parser.parse_args()\nconfig = read_claude_config() client = anthropic.Anthropic() files_to_check = [] if args.file: files_to_check = [Path(args.file)] elif args.staged: # 获取暂存文件（简化版，生产环境建议用 gitpython） import subprocess result = subprocess.run([\"git\", \"diff\", \"--cached\", \"--name-only\", \"--diff-filter=ACM\"], capture_output=True, text=True) files_to_check = [Path(f) for f in result.stdout.strip().split(\"\\n\") if f.endswith(\".py\")] for fp in files_to_check: if not fp.exists(): continue code = fp.read_text() prompt = build_prompt(str(fp), code, config) if args.dry_run: print(f\"\\n📄 {fp} Prompt:\\n{prompt[:300]}...\\n\") continue try: msg = client.messages.create( model=config[\"model\"], max_tokens=config[\"max_tokens\"], temperature=config[\"temperature\"], messages=[{\"role\": \"user\", \"content\": prompt}] ) # 解析 JSON 响应（Claude 可能包裹在 ```json ... ``` 中） resp_text = msg.content[0].text.strip() if resp_text.startswith(\"```json\"): resp_text = resp_text[7:-3].strip() result = json.loads(resp_text) if result.get(\"issues\"): print(f\"\\n🔍 {fp}:\") for issue in result[\"issues\"]: print(f\" ⚠️ L{issue['line']}: {issue['message']} ({issue['severity']})\") sys.exit(1) except json.JSONDecodeError as e: print(f\"❌ JSON 解析失败（Claude 返回非标准格式）: {e}\") print(\"Raw response:\", msg.content[0].text[:200]) except Exception as e: print(f\"❌ API 调用异常: {e}\") if name == “main”: main()\n赋予可执行权限（Linux/macOS）： ```bash chmod +x claude_lint.py ⚠️ 关键工程实践：\nToken 安全：对超长文件（\u003e2000 行）做 AST 预扫描，仅提取函数签名、docstring、核心逻辑块送入 Claude； --dry-run 是调试神器，可快速验证 prompt 效果； 生产环境务必加 timeout=120 参数到 client.messages.create()。 ❓ 高频问题：\nClaude 返回 \"issues\": [] 却仍报错？检查 JSON 中是否混入了注释（如 // 无问题），AI 严格遵循“仅返回 JSON”指令； 大文件超时？增加重试逻辑（tenacity 库）或启用流式分块分析。 4. 集成Git预提交钩子（Pre-commit Hook） 让 AI 校验成为开发流程的“空气”——无需手动触发，每次 git commit 自动运行。\n在项目根目录创建 .pre-commit-config.yaml：\nrepos: - repo: local hooks: - id: claude-lint name: Claude AI Code Review entry: python claude_lint.py --staged language: system types: [python] pass_filenames: false # ⚠️ 注意：Windows 用户可改为 `entry: python claude_lint.py --staged` # 若 claude_lint.py 不在 PATH，用绝对路径：`entry: python /abs/path/to/claude_lint.py` 安装并启用钩子：\npip install pre-commit pre-commit install 验证效果：\necho \"def hello(): return 'world'\" \u003e bad.py git add bad.py git commit -m \"test: add bad code\" # 此时应被拦截并报出类型缺失警告 进阶技巧：\n临时跳过：SKIP=claude-lint git commit -m \"skip ai check\"； 手动触发：pre-commit run claude-lint --hook-stage manual； 性能兜底：在 .pre-commit-config.yaml 中为该 hook 添加 timeout: 120。 ⚠️ 避坑指南：\n钩子工作目录始终为 Git 仓库根目录，所有路径（如 CLAUDE.md）均以此为基准； Windows 下若提示 python: command not found，改用 entry: python3 或完整路径 C:\\Python39\\python.exe。 5. 实战案例：修复一个真实PR中的AI校验问题 假设某 PR 新增 src/math.py：\n# src/math.py def calculate(a, b): # ❌ 无类型提示 return a * b + 5 # ❌ 魔法数字 5 运行校验：\npython claude_lint.py --file src/math.py Claude 返回（模拟）：\n{ \"issues\": [ { \"line\": 1, \"message\": \"函数 calculate 缺少类型提示，请补充参数和返回值类型\", \"severity\": \"error\" }, { \"line\": 2, \"message\": \"第2行出现魔法数字 5，应定义为常量 MAX_MULTIPLY_OFFSET\", \"severity\": \"warning\" } ] } 修复后 src/math.py：\n# src/math.py MAX_MULTIPLY_OFFSET = 5 def calculate(a: float, b: float) -\u003e float: \"\"\"计算 a 与 b 的乘积并加上偏移量\"\"\" return a * b + MAX_MULTIPLY_OFFSET 再次 git commit，钩子输出：\n✅ No issues found — Claude AI review passed.\n⚠️ 人机协同黄金法则：\nAI 是“高级协作者”，不是“代码警察”——开发者有权否决建议（如某处故意不用类型提示）； CLAUDE.md 中的 rules 应聚焦可判定、可共识、可自动化的规范，避免主观表述（如“代码要优雅”）。 ❓ 典型误报场景：\n规则写成 \"禁止 print()\"，但日志调试需 print() → 应细化为 \"禁止在 production 代码中使用 print，改用 logging\"； 多文件逻辑（如 utils.py 中函数被 api.py 调用）未纳入 context_files → 补充相关路径即可。 6. 运维与调优指南 让 claude-lint 在团队中长期稳定服役，需关注三件事：可观测、可降级、可优化。\n✅ 成本监控 在 claude_lint.py 的 API 调用后添加日志：\nprint(f\"[STATS] Input: {msg.usage.input_tokens}, Output: {msg.usage.output_tokens}\") with open(\"claude-stats.log\", \"a\") as f: f.write(f\"{datetime.now()},{fp},{msg.usage.input_tokens},{msg.usage.output_tokens}\\n\") ✅ 降级策略 当 Anthropic API 不可用时，fallback 到传统 linter：\nexcept anthropic.APIConnectionError: print(\"⚠️ Claude 不可用，降级执行 pylint...\") subprocess.run([\"pylint\", \"--errors-only\", str(fp)]) ✅ 性能优化 对 .py 文件先做 AST 快速扫描：\nimport ast tree = ast.parse(code) # 仅提取 FunctionDef、ClassDef、Assign 节点，跳过字符串/注释 ✅ 安全加固 校验 CLAUDE.md 中的 context_files 是否在白名单内：\nSAFE_PATTERNS = [\"*.py\", \"*.toml\", \"*.md\"] for p in config.get(\"context_files\", []): if not any(Path(p).match(pat) for pat in SAFE_PATTERNS): raise ValueError(f\"不安全的上下文文件路径: {p}\") ⚠️ CI/CD 特别提醒：\nGitHub Actions 中，永远通过 Secrets 注入 ANTHROPIC_API_KEY，禁止明文写入 workflow YAML； 设置 --max-files 3 限制单次校验数量，防止单次 PR 触发过多 API 调用； 企业防火墙？提前在 CI runner 上配置可信 CA 证书或允许 api.anthropic.com:443 出站。 至此，你已构建了一套开箱即用、安全可控、可持续演进的 AI 增强型代码质量体系。它不替代工程师的判断，而是把重复、机械、易疏漏的审查工作交给 AI，让人专注在真正需要创造力的地方——设计、权衡与突破。\n","wordCount":"917","inLanguage":"en","datePublished":"2026-02-18T05:44:20.652Z","dateModified":"2026-02-18T05:44:20.652Z","author":{"@type":"Person","name":"智通"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/"},"publisher":{"@type":"Organization","name":"智通和你一起学AI","logo":{"@type":"ImageObject","url":"https://zhitong.uk/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验</h1><div class=post-description>本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。</div><div class=post-meta><span title='2026-02-18 05:44:20.652 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span></div></header><div class=post-content><h2 id=1-环境准备与claude-api接入>1. 环境准备与Claude API接入<a hidden class=anchor aria-hidden=true href=#1-环境准备与claude-api接入>#</a></h2><p>让我们从零开始，快速打通本地开发环境与 Claude 的 AI 能力。这一步是后续所有自动化能力的地基，务必稳扎稳打。</p><p>首先安装官方 SDK（推荐使用 Python 3.9+）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>pip install anthropic python-dotenv
+</span></span></code></pre></div><blockquote><p>✅ <code>python-dotenv</code> 非必需但强烈推荐——它能安全加载 <code>.env</code> 文件，避免 API Key 硬编码或意外提交。</p></blockquote><p>接着，访问 <a href=https://console.anthropic.com>Anthropic Console</a> → <strong>API Keys</strong> → 点击 <strong>Create Key</strong>，复制生成的密钥（形如 <code>sk-ant-api03-...</code>）。<strong>切勿截图、勿存 GitHub、勿发群聊！</strong></p><p>在项目根目录创建 <code>.env</code> 文件（注意：文件名以 <code>.</code> 开头，隐藏）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-env data-lang=env><span style=display:flex><span>ANTHROPIC_API_KEY<span style=color:#f92672>=</span>sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+</span></span></code></pre></div><p>最后，编写最小验证脚本 <code>test_claude.py</code>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># test_claude.py</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> dotenv <span style=color:#f92672>import</span> load_dotenv
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> anthropic
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>load_dotenv()  <span style=color:#75715e># 加载 .env 中的 ANTHROPIC_API_KEY</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>client <span style=color:#f92672>=</span> anthropic<span style=color:#f92672>.</span>Anthropic()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>    message <span style=color:#f92672>=</span> client<span style=color:#f92672>.</span>messages<span style=color:#f92672>.</span>create(
+</span></span><span style=display:flex><span>        model<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;claude-3-5-sonnet-20240620&#34;</span>,
+</span></span><span style=display:flex><span>        max_tokens<span style=color:#f92672>=</span><span style=color:#ae81ff>100</span>,
+</span></span><span style=display:flex><span>        messages<span style=color:#f92672>=</span>[{<span style=color:#e6db74>&#34;role&#34;</span>: <span style=color:#e6db74>&#34;user&#34;</span>, <span style=color:#e6db74>&#34;content&#34;</span>: <span style=color:#e6db74>&#34;请用中文说一句打招呼的话&#34;</span>}]
+</span></span><span style=display:flex><span>    )
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;✅ 成功调用 Claude：&#34;</span>, message<span style=color:#f92672>.</span>content[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>text<span style=color:#f92672>.</span>strip())
+</span></span><span style=display:flex><span><span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span> <span style=color:#66d9ef>as</span> e:
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;❌ 调用失败：&#34;</span>, e)
+</span></span></code></pre></div><p>运行 <code>python test_claude.py</code>，应输出类似：<br><code>✅ 成功调用 Claude：你好！我是 Claude，很高兴为你提供帮助。</code></p><p><img alt="展示 test_claude.py 运行成功的终端截图" loading=lazy src=IMAGE_PLACEHOLDER_1></p><p>⚠️ <strong>关键注意事项</strong>：</p><ul><li>Anthropic API 当前<strong>仅支持 <code>us-east-1</code> 区域</strong>，若使用代理/企业网关，请确保出口 IP 可达该区域；</li><li>免费额度为新账号赠送 $5（约可处理 50 万输入 tokens），可在 <a href=https://console.anthropic.com/usage>Console → Usage</a> 实时查看；</li><li>API Key 权限默认为 <code>full_access</code>，生产环境建议在 Console 中创建最小权限 Key（目前暂不支持细粒度 RBAC）。</li></ul><p>❓ <strong>常见问题速查</strong>：</p><ul><li><code>AuthenticationError: Invalid API key</code>？检查 <code>.env</code> 是否被正确加载（<code>print(os.getenv("ANTHROPIC_API_KEY"))</code>）、Key 前后有无空格或换行；</li><li>企业内网无法连接？配置系统级 HTTP 代理：<code>export HTTP_PROXY=http://your-proxy:8080</code>（Linux/macOS）或在代码中显式传入 <code>httpx.Client(transport=...)</code>。</li></ul><hr><h2 id=2-创建-claudemd项目级ai协作规范文件>2. 创建 CLAUDE.md：项目级AI协作规范文件<a hidden class=anchor aria-hidden=true href=#2-创建-claudemd项目级ai协作规范文件>#</a></h2><p><code>CLAUDE.md</code> 不是一份给人读的文档，而是一个<strong>专为 Claude 设计的「行为契约」</strong>——它让大模型理解“在这个项目里，你该怎么做”。</p><p>它的核心价值在于：<strong>将团队约定（编码风格、安全红线、上下文依赖）转化为 Claude 可解析、可执行的指令集</strong>，避免每次请求都重复粘贴规则。</p><p>标准模板如下（保存为项目根目录的 <code>CLAUDE.md</code>）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown><span style=display:flex><span>---
+</span></span><span style=display:flex><span>model: claude-3-5-sonnet-20240620
+</span></span><span style=display:flex><span>max_tokens: 1024
+</span></span><span style=display:flex><span>temperature: 0.2
+</span></span><span style=display:flex><span>rules:
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> &#34;用中文回复，禁用英文术语（如 &#39;callback&#39; → &#39;回调函数&#39;）&#34;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> &#34;所有函数必须添加 Type Hints 和 Google 风格 docstring&#34;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> &#34;禁止硬编码数字（魔法数字），必须定义常量&#34;
+</span></span><span style=display:flex><span>context_files:
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> &#34;pyproject.toml&#34;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> &#34;src/utils/__init__.py&#34;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> &#34;docs/ARCHITECTURE.md&#34;
+</span></span><span style=display:flex><span>---
+</span></span><span style=display:flex><span># 项目AI协作协议  
+</span></span><span style=display:flex><span>此文件定义 Claude 在本仓库中的行为边界：  
+</span></span><span style=display:flex><span><span style=color:#66d9ef>-</span> 仅分析已提交或暂存的代码；  
+</span></span><span style=display:flex><span><span style=color:#66d9ef>-</span> 不修改任何文件，只提供建议；  
+</span></span><span style=display:flex><span><span style=color:#66d9ef>-</span> 对 <span style=color:#e6db74>`tests/`</span> 目录下的文件，额外启用单元测试规范检查。
+</span></span></code></pre></div><p>在代码中读取该配置（示例 <code>config.py</code>）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> yaml
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> pathlib <span style=color:#f92672>import</span> Path
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>load_claude_config</span>() <span style=color:#f92672>-&gt;</span> dict:
+</span></span><span style=display:flex><span>    config_path <span style=color:#f92672>=</span> Path(<span style=color:#e6db74>&#34;CLAUDE.md&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> config_path<span style=color:#f92672>.</span>exists():
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>FileNotFoundError</span>(<span style=color:#e6db74>&#34;CLAUDE.md 未找到，请在项目根目录创建&#34;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    content <span style=color:#f92672>=</span> config_path<span style=color:#f92672>.</span>read_text(encoding<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;utf-8&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> content<span style=color:#f92672>.</span>startswith(<span style=color:#e6db74>&#34;---&#34;</span>):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>ValueError</span>(<span style=color:#e6db74>&#34;CLAUDE.md 缺少 YAML frontmatter 分隔符 ---&#34;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    frontmatter, _ <span style=color:#f92672>=</span> content<span style=color:#f92672>.</span>split(<span style=color:#e6db74>&#34;---&#34;</span>, <span style=color:#ae81ff>2</span>)[<span style=color:#ae81ff>1</span>:]  <span style=color:#75715e># 取第一个 --- 后、第二个 --- 前的内容</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> yaml<span style=color:#f92672>.</span>safe_load(frontmatter)
+</span></span></code></pre></div><p>⚠️ <strong>严格守则</strong>：</p><ul><li>YAML 缩进必须为 <strong>空格</strong>（非 Tab），<code>rules</code> 和 <code>context_files</code> 下每项需 <code>- </code>开头；</li><li><code>context_files</code> 中路径为<strong>相对于项目根目录</strong>（即 <code>CLAUDE.md</code> 所在位置）；</li><li><strong>严禁在 <code>CLAUDE.md</code> 中写入密码、Token、内部 API 地址等敏感信息</strong>——它可能被意外提交至公开仓库。</li></ul><p>❓ <strong>排障提示</strong>：</p><ul><li><code>yaml.scanner.ScannerError</code>？检查是否用了中文全角空格、是否漏了 <code>---</code> 或缩进错位；</li><li>中文乱码？用 VS Code 确认文件编码为 <strong>UTF-8 without BOM</strong>（右下角点击编码 → 选择 “Save with Encoding” → UTF-8）。</li></ul><hr><h2 id=3-构建本地ai校验工具claude-lint-cli>3. 构建本地AI校验工具：claude-lint CLI<a hidden class=anchor aria-hidden=true href=#3-构建本地ai校验工具claude-lint-cli>#</a></h2><p>现在，我们将 <code>CLAUDE.md</code> 的约束力落地为可执行的命令行工具 —— <code>claude-lint</code>，一个融合静态分析与 AI 推理的智能 linter。</p><p>创建 <code>claude_lint.py</code>（支持 Python 3.9+）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e>#!/usr/bin/env python3</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> argparse
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> json
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> sys
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> pathlib <span style=color:#f92672>import</span> Path
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> typing <span style=color:#f92672>import</span> List, Dict, Any
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> anthropic
+</span></span><span style=display:flex><span><span style=color:#f92672>from</span> dotenv <span style=color:#f92672>import</span> load_dotenv
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> yaml
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>load_dotenv()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>read_claude_config</span>() <span style=color:#f92672>-&gt;</span> Dict[str, Any]:
+</span></span><span style=display:flex><span>    <span style=color:#75715e># （复用上节的 load_claude_config 逻辑）</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>pass</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>build_prompt</span>(file_path: str, code: str, config: dict) <span style=color:#f92672>-&gt;</span> str:
+</span></span><span style=display:flex><span>    rules <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span><span style=color:#f92672>.</span>join(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;- </span><span style=color:#e6db74>{</span>r<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span> <span style=color:#66d9ef>for</span> r <span style=color:#f92672>in</span> config<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;rules&#34;</span>, []))
+</span></span><span style=display:flex><span>    context <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> ctx_file <span style=color:#f92672>in</span> config<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;context_files&#34;</span>, []):
+</span></span><span style=display:flex><span>        p <span style=color:#f92672>=</span> Path(ctx_file)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> p<span style=color:#f92672>.</span>exists():
+</span></span><span style=display:flex><span>            context <span style=color:#f92672>+=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>=== </span><span style=color:#e6db74>{</span>ctx_file<span style=color:#e6db74>}</span><span style=color:#e6db74> ===</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>{</span>p<span style=color:#f92672>.</span>read_text()[:<span style=color:#ae81ff>500</span>]<span style=color:#e6db74>}</span><span style=color:#e6db74>...</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;&#34;&#34;你是一名资深 Python 工程师，请严格按以下规则审查代码：
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>{</span>rules<span style=color:#e6db74>}</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>当前待审文件：</span><span style=color:#e6db74>{</span>file_path<span style=color:#e6db74>}</span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>文件内容：
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>```python
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>{</span>code<span style=color:#e6db74>}</span><span style=color:#e6db74>
+</span></span></span></code></pre></div><p>{context}</p><p>请严格返回标准 JSON 格式，仅含一个对象，键为 &ldquo;issues&rdquo;，值为数组，每个元素含 line（行号，整数）、message（中文描述）、severity（&ldquo;error&rdquo;|&ldquo;warning&rdquo;）。禁止任何额外文本、解释或 Markdown 格式。"""</p><p>def main():
 parser = argparse.ArgumentParser(description=&ldquo;Claude AI-powered code linter&rdquo;)
-parser.add_argument(&quot;&ndash;file&quot;, help=&ldquo;指定单个文件路径&rdquo;)
-parser.add_argument(&quot;&ndash;staged&quot;, action=&ldquo;store_true&rdquo;, help=&ldquo;检查 Git 暂存区文件&rdquo;)
-parser.add_argument(&quot;&ndash;dry-run&quot;, action=&ldquo;store_true&rdquo;, help=&ldquo;仅打印 prompt，不调用 API&rdquo;)
-args = parser.parse_args()</p>
-<pre><code>config = read_claude_config()
+parser.add_argument("&ndash;file", help=&ldquo;指定单个文件路径&rdquo;)
+parser.add_argument("&ndash;staged", action=&ldquo;store_true&rdquo;, help=&ldquo;检查 Git 暂存区文件&rdquo;)
+parser.add_argument("&ndash;dry-run", action=&ldquo;store_true&rdquo;, help=&ldquo;仅打印 prompt，不调用 API&rdquo;)
+args = parser.parse_args()</p><pre><code>config = read_claude_config()
 client = anthropic.Anthropic()
 
 files_to_check = []
@@ -329,240 +134,66 @@ for fp in files_to_check:
         print(&quot;Raw response:&quot;, msg.content[0].text[:200])
     except Exception as e:
         print(f&quot;❌ API 调用异常: {e}&quot;)
-</code></pre>
-<p>if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:
-main()</p>
-<pre tabindex="0"><code>
+</code></pre><p>if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:
+main()</p><pre tabindex=0><code>
 赋予可执行权限（Linux/macOS）：  
 ```bash
 chmod +x claude_lint.py
-</code></pre><p>⚠️ <strong>关键工程实践</strong>：</p>
-<ul>
-<li>Token 安全：对超长文件（&gt;2000 行）做 AST 预扫描，仅提取函数签名、docstring、核心逻辑块送入 Claude；</li>
-<li><code>--dry-run</code> 是调试神器，可快速验证 prompt 效果；</li>
-<li>生产环境务必加 <code>timeout=120</code> 参数到 <code>client.messages.create()</code>。</li>
-</ul>
-<p>❓ <strong>高频问题</strong>：</p>
-<ul>
-<li>Claude 返回 <code>&quot;issues&quot;: []</code> 却仍报错？检查 JSON 中是否混入了注释（如 <code>// 无问题</code>），AI 严格遵循“仅返回 JSON”指令；</li>
-<li>大文件超时？增加重试逻辑（<code>tenacity</code> 库）或启用流式分块分析。</li>
-</ul>
-<hr>
-<h2 id="4-集成git预提交钩子pre-commit-hook">4. 集成Git预提交钩子（Pre-commit Hook）<a hidden class="anchor" aria-hidden="true" href="#4-集成git预提交钩子pre-commit-hook">#</a></h2>
-<p>让 AI 校验成为开发流程的“空气”——无需手动触发，每次 <code>git commit</code> 自动运行。</p>
-<p>在项目根目录创建 <code>.pre-commit-config.yaml</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">repos</span>:
-</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">repo</span>: <span style="color:#ae81ff">local</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">hooks</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">id</span>: <span style="color:#ae81ff">claude-lint</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Claude AI Code Review</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">entry</span>: <span style="color:#ae81ff">python claude_lint.py --staged</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">language</span>: <span style="color:#ae81ff">system</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">types</span>: [<span style="color:#ae81ff">python]</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">pass_filenames</span>: <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># ⚠️ 注意：Windows 用户可改为 `entry: python claude_lint.py --staged`</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 若 claude_lint.py 不在 PATH，用绝对路径：`entry: python /abs/path/to/claude_lint.py`</span>
-</span></span></code></pre></div><p>安装并启用钩子：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install pre-commit
-</span></span><span style="display:flex;"><span>pre-commit install
-</span></span></code></pre></div><p>验证效果：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;def hello(): return &#39;world&#39;&#34;</span> &gt; bad.py
-</span></span><span style="display:flex;"><span>git add bad.py
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;test: add bad code&#34;</span>  <span style="color:#75715e"># 此时应被拦截并报出类型缺失警告</span>
-</span></span></code></pre></div><p>进阶技巧：</p>
-<ul>
-<li>临时跳过：<code>SKIP=claude-lint git commit -m &quot;skip ai check&quot;</code>；</li>
-<li>手动触发：<code>pre-commit run claude-lint --hook-stage manual</code>；</li>
-<li>性能兜底：在 <code>.pre-commit-config.yaml</code> 中为该 hook 添加 <code>timeout: 120</code>。</li>
-</ul>
-<p>⚠️ <strong>避坑指南</strong>：</p>
-<ul>
-<li>钩子工作目录始终为 Git 仓库根目录，所有路径（如 <code>CLAUDE.md</code>）均以此为基准；</li>
-<li>Windows 下若提示 <code>python: command not found</code>，改用 <code>entry: python3</code> 或完整路径 <code>C:\Python39\python.exe</code>。</li>
-</ul>
-<p><img alt="展示 pre-commit 钩子拦截违规提交的终端截图" loading="lazy" src="IMAGE_PLACEHOLDER_2"></p>
-<hr>
-<h2 id="5-实战案例修复一个真实pr中的ai校验问题">5. 实战案例：修复一个真实PR中的AI校验问题<a hidden class="anchor" aria-hidden="true" href="#5-实战案例修复一个真实pr中的ai校验问题">#</a></h2>
-<p>假设某 PR 新增 <code>src/math.py</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># src/math.py</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate</span>(a, b):  <span style="color:#75715e"># ❌ 无类型提示</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a <span style="color:#f92672">*</span> b <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span>  <span style="color:#75715e"># ❌ 魔法数字 5</span>
-</span></span></code></pre></div><p>运行校验：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python claude_lint.py --file src/math.py
-</span></span></code></pre></div><p>Claude 返回（模拟）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;issues&#34;</span>: [
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;line&#34;</span>: <span style="color:#ae81ff">1</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;函数 calculate 缺少类型提示，请补充参数和返回值类型&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;severity&#34;</span>: <span style="color:#e6db74">&#34;error&#34;</span>
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;line&#34;</span>: <span style="color:#ae81ff">2</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;第2行出现魔法数字 5，应定义为常量 MAX_MULTIPLY_OFFSET&#34;</span>,
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;severity&#34;</span>: <span style="color:#e6db74">&#34;warning&#34;</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  ]
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>修复后 <code>src/math.py</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># src/math.py</span>
-</span></span><span style="display:flex;"><span>MAX_MULTIPLY_OFFSET <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate</span>(a: float, b: float) <span style="color:#f92672">-&gt;</span> float:
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;计算 a 与 b 的乘积并加上偏移量&#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a <span style="color:#f92672">*</span> b <span style="color:#f92672">+</span> MAX_MULTIPLY_OFFSET
-</span></span></code></pre></div><p>再次 <code>git commit</code>，钩子输出：<br>
-<code>✅ No issues found — Claude AI review passed.</code></p>
-<p>⚠️ <strong>人机协同黄金法则</strong>：</p>
-<ul>
-<li>AI 是“高级协作者”，不是“代码警察”——开发者有权否决建议（如某处故意不用类型提示）；</li>
-<li><code>CLAUDE.md</code> 中的 <code>rules</code> 应聚焦<strong>可判定、可共识、可自动化</strong>的规范，避免主观表述（如“代码要优雅”）。</li>
-</ul>
-<p>❓ <strong>典型误报场景</strong>：</p>
-<ul>
-<li>规则写成 <code>&quot;禁止 print()&quot;</code>，但日志调试需 <code>print()</code> → 应细化为 <code>&quot;禁止在 production 代码中使用 print，改用 logging&quot;</code>；</li>
-<li>多文件逻辑（如 <code>utils.py</code> 中函数被 <code>api.py</code> 调用）未纳入 <code>context_files</code> → 补充相关路径即可。</li>
-</ul>
-<p><img alt="展示修复前后代码对比及通过校验的终端截图" loading="lazy" src="IMAGE_PLACEHOLDER_3"></p>
-<hr>
-<h2 id="6-运维与调优指南">6. 运维与调优指南<a hidden class="anchor" aria-hidden="true" href="#6-运维与调优指南">#</a></h2>
-<p>让 <code>claude-lint</code> 在团队中长期稳定服役，需关注三件事：<strong>可观测、可降级、可优化</strong>。</p>
-<h3 id="-成本监控">✅ 成本监控<a hidden class="anchor" aria-hidden="true" href="#-成本监控">#</a></h3>
-<p>在 <code>claude_lint.py</code> 的 API 调用后添加日志：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[STATS] Input: </span><span style="color:#e6db74">{</span>msg<span style="color:#f92672">.</span>usage<span style="color:#f92672">.</span>input_tokens<span style="color:#e6db74">}</span><span style="color:#e6db74">, Output: </span><span style="color:#e6db74">{</span>msg<span style="color:#f92672">.</span>usage<span style="color:#f92672">.</span>output_tokens<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;claude-stats.log&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>) <span style="color:#66d9ef">as</span> f:
-</span></span><span style="display:flex;"><span>    f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>datetime<span style="color:#f92672">.</span>now()<span style="color:#e6db74">}</span><span style="color:#e6db74">,</span><span style="color:#e6db74">{</span>fp<span style="color:#e6db74">}</span><span style="color:#e6db74">,</span><span style="color:#e6db74">{</span>msg<span style="color:#f92672">.</span>usage<span style="color:#f92672">.</span>input_tokens<span style="color:#e6db74">}</span><span style="color:#e6db74">,</span><span style="color:#e6db74">{</span>msg<span style="color:#f92672">.</span>usage<span style="color:#f92672">.</span>output_tokens<span style="color:#e6db74">}</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
-</span></span></code></pre></div><h3 id="-降级策略">✅ 降级策略<a hidden class="anchor" aria-hidden="true" href="#-降级策略">#</a></h3>
-<p>当 Anthropic API 不可用时，fallback 到传统 linter：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">except</span> anthropic<span style="color:#f92672">.</span>APIConnectionError:
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;⚠️  Claude 不可用，降级执行 pylint...&#34;</span>)
-</span></span><span style="display:flex;"><span>    subprocess<span style="color:#f92672">.</span>run([<span style="color:#e6db74">&#34;pylint&#34;</span>, <span style="color:#e6db74">&#34;--errors-only&#34;</span>, str(fp)])
-</span></span></code></pre></div><h3 id="-性能优化">✅ 性能优化<a hidden class="anchor" aria-hidden="true" href="#-性能优化">#</a></h3>
-<p>对 <code>.py</code> 文件先做 AST 快速扫描：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> ast
-</span></span><span style="display:flex;"><span>tree <span style="color:#f92672">=</span> ast<span style="color:#f92672">.</span>parse(code)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 仅提取 FunctionDef、ClassDef、Assign 节点，跳过字符串/注释</span>
-</span></span></code></pre></div><h3 id="-安全加固">✅ 安全加固<a hidden class="anchor" aria-hidden="true" href="#-安全加固">#</a></h3>
-<p>校验 <code>CLAUDE.md</code> 中的 <code>context_files</code> 是否在白名单内：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>SAFE_PATTERNS <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;*.py&#34;</span>, <span style="color:#e6db74">&#34;*.toml&#34;</span>, <span style="color:#e6db74">&#34;*.md&#34;</span>]
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> config<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;context_files&#34;</span>, []):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> any(Path(p)<span style="color:#f92672">.</span><span style="color:#66d9ef">match</span>(pat) <span style="color:#66d9ef">for</span> pat <span style="color:#f92672">in</span> SAFE_PATTERNS):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;不安全的上下文文件路径: </span><span style="color:#e6db74">{</span>p<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
-</span></span></code></pre></div><p>⚠️ <strong>CI/CD 特别提醒</strong>：</p>
-<ul>
-<li>GitHub Actions 中，<strong>永远通过 Secrets 注入 <code>ANTHROPIC_API_KEY</code></strong>，禁止明文写入 workflow YAML；</li>
-<li>设置 <code>--max-files 3</code> 限制单次校验数量，防止单次 PR 触发过多 API 调用；</li>
-<li>企业防火墙？提前在 CI runner 上配置可信 CA 证书或允许 <code>api.anthropic.com:443</code> 出站。</li>
-</ul>
-<p><img alt="展示 claude-stats.log 日志格式与 CI 配置示意图" loading="lazy" src="IMAGE_PLACEHOLDER_4"></p>
-<p>至此，你已构建了一套开箱即用、安全可控、可持续演进的 AI 增强型代码质量体系。它不替代工程师的判断，而是把重复、机械、易疏漏的审查工作交给 AI，让人专注在真正需要创造力的地方——设计、权衡与突破。</p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/claude/">Claude</a></li>
-      <li><a href="http://localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/">AI编程</a></li>
-      <li><a href="http://localhost:1313/tags/git%E9%92%A9%E5%AD%90/">Git钩子</a></li>
-      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
-      <li><a href="http://localhost:1313/tags/devops/">DevOps</a></li>
-      <li><a href="http://localhost:1313/tags/api%E9%9B%86%E6%88%90/">API集成</a></li>
-    </ul>
-  </footer><script src="https://giscus.app/client.js"
-        data-repo="zhitongblog/my-blog"
-        data-repo-id="R_kgDORBRArg"
-        data-category="Announcements"
-        data-category-id="DIC_kwDORBRArs4C188Z"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
-
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+</code></pre><p>⚠️ <strong>关键工程实践</strong>：</p><ul><li>Token 安全：对超长文件（>2000 行）做 AST 预扫描，仅提取函数签名、docstring、核心逻辑块送入 Claude；</li><li><code>--dry-run</code> 是调试神器，可快速验证 prompt 效果；</li><li>生产环境务必加 <code>timeout=120</code> 参数到 <code>client.messages.create()</code>。</li></ul><p>❓ <strong>高频问题</strong>：</p><ul><li>Claude 返回 <code>"issues": []</code> 却仍报错？检查 JSON 中是否混入了注释（如 <code>// 无问题</code>），AI 严格遵循“仅返回 JSON”指令；</li><li>大文件超时？增加重试逻辑（<code>tenacity</code> 库）或启用流式分块分析。</li></ul><hr><h2 id=4-集成git预提交钩子pre-commit-hook>4. 集成Git预提交钩子（Pre-commit Hook）<a hidden class=anchor aria-hidden=true href=#4-集成git预提交钩子pre-commit-hook>#</a></h2><p>让 AI 校验成为开发流程的“空气”——无需手动触发，每次 <code>git commit</code> 自动运行。</p><p>在项目根目录创建 <code>.pre-commit-config.yaml</code>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>repos</span>:
+</span></span><span style=display:flex><span>  - <span style=color:#f92672>repo</span>: <span style=color:#ae81ff>local</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>hooks</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>id</span>: <span style=color:#ae81ff>claude-lint</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Claude AI Code Review</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>entry</span>: <span style=color:#ae81ff>python claude_lint.py --staged</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>language</span>: <span style=color:#ae81ff>system</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>types</span>: [<span style=color:#ae81ff>python]</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>pass_filenames</span>: <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># ⚠️ 注意：Windows 用户可改为 `entry: python claude_lint.py --staged`</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># 若 claude_lint.py 不在 PATH，用绝对路径：`entry: python /abs/path/to/claude_lint.py`</span>
+</span></span></code></pre></div><p>安装并启用钩子：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>pip install pre-commit
+</span></span><span style=display:flex><span>pre-commit install
+</span></span></code></pre></div><p>验证效果：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>echo <span style=color:#e6db74>&#34;def hello(): return &#39;world&#39;&#34;</span> &gt; bad.py
+</span></span><span style=display:flex><span>git add bad.py
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;test: add bad code&#34;</span>  <span style=color:#75715e># 此时应被拦截并报出类型缺失警告</span>
+</span></span></code></pre></div><p>进阶技巧：</p><ul><li>临时跳过：<code>SKIP=claude-lint git commit -m "skip ai check"</code>；</li><li>手动触发：<code>pre-commit run claude-lint --hook-stage manual</code>；</li><li>性能兜底：在 <code>.pre-commit-config.yaml</code> 中为该 hook 添加 <code>timeout: 120</code>。</li></ul><p>⚠️ <strong>避坑指南</strong>：</p><ul><li>钩子工作目录始终为 Git 仓库根目录，所有路径（如 <code>CLAUDE.md</code>）均以此为基准；</li><li>Windows 下若提示 <code>python: command not found</code>，改用 <code>entry: python3</code> 或完整路径 <code>C:\Python39\python.exe</code>。</li></ul><p><img alt="展示 pre-commit 钩子拦截违规提交的终端截图" loading=lazy src=IMAGE_PLACEHOLDER_2></p><hr><h2 id=5-实战案例修复一个真实pr中的ai校验问题>5. 实战案例：修复一个真实PR中的AI校验问题<a hidden class=anchor aria-hidden=true href=#5-实战案例修复一个真实pr中的ai校验问题>#</a></h2><p>假设某 PR 新增 <code>src/math.py</code>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># src/math.py</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>calculate</span>(a, b):  <span style=color:#75715e># ❌ 无类型提示</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> a <span style=color:#f92672>*</span> b <span style=color:#f92672>+</span> <span style=color:#ae81ff>5</span>  <span style=color:#75715e># ❌ 魔法数字 5</span>
+</span></span></code></pre></div><p>运行校验：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>python claude_lint.py --file src/math.py
+</span></span></code></pre></div><p>Claude 返回（模拟）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;issues&#34;</span>: [
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;line&#34;</span>: <span style=color:#ae81ff>1</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;message&#34;</span>: <span style=color:#e6db74>&#34;函数 calculate 缺少类型提示，请补充参数和返回值类型&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;severity&#34;</span>: <span style=color:#e6db74>&#34;error&#34;</span>
+</span></span><span style=display:flex><span>    },
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;line&#34;</span>: <span style=color:#ae81ff>2</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;message&#34;</span>: <span style=color:#e6db74>&#34;第2行出现魔法数字 5，应定义为常量 MAX_MULTIPLY_OFFSET&#34;</span>,
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&#34;severity&#34;</span>: <span style=color:#e6db74>&#34;warning&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  ]
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>修复后 <code>src/math.py</code>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># src/math.py</span>
+</span></span><span style=display:flex><span>MAX_MULTIPLY_OFFSET <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>calculate</span>(a: float, b: float) <span style=color:#f92672>-&gt;</span> float:
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;&#34;&#34;计算 a 与 b 的乘积并加上偏移量&#34;&#34;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> a <span style=color:#f92672>*</span> b <span style=color:#f92672>+</span> MAX_MULTIPLY_OFFSET
+</span></span></code></pre></div><p>再次 <code>git commit</code>，钩子输出：<br><code>✅ No issues found — Claude AI review passed.</code></p><p>⚠️ <strong>人机协同黄金法则</strong>：</p><ul><li>AI 是“高级协作者”，不是“代码警察”——开发者有权否决建议（如某处故意不用类型提示）；</li><li><code>CLAUDE.md</code> 中的 <code>rules</code> 应聚焦<strong>可判定、可共识、可自动化</strong>的规范，避免主观表述（如“代码要优雅”）。</li></ul><p>❓ <strong>典型误报场景</strong>：</p><ul><li>规则写成 <code>"禁止 print()"</code>，但日志调试需 <code>print()</code> → 应细化为 <code>"禁止在 production 代码中使用 print，改用 logging"</code>；</li><li>多文件逻辑（如 <code>utils.py</code> 中函数被 <code>api.py</code> 调用）未纳入 <code>context_files</code> → 补充相关路径即可。</li></ul><p><img alt=展示修复前后代码对比及通过校验的终端截图 loading=lazy src=IMAGE_PLACEHOLDER_3></p><hr><h2 id=6-运维与调优指南>6. 运维与调优指南<a hidden class=anchor aria-hidden=true href=#6-运维与调优指南>#</a></h2><p>让 <code>claude-lint</code> 在团队中长期稳定服役，需关注三件事：<strong>可观测、可降级、可优化</strong>。</p><h3 id=-成本监控>✅ 成本监控<a hidden class=anchor aria-hidden=true href=#-成本监控>#</a></h3><p>在 <code>claude_lint.py</code> 的 API 调用后添加日志：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;[STATS] Input: </span><span style=color:#e6db74>{</span>msg<span style=color:#f92672>.</span>usage<span style=color:#f92672>.</span>input_tokens<span style=color:#e6db74>}</span><span style=color:#e6db74>, Output: </span><span style=color:#e6db74>{</span>msg<span style=color:#f92672>.</span>usage<span style=color:#f92672>.</span>output_tokens<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>with</span> open(<span style=color:#e6db74>&#34;claude-stats.log&#34;</span>, <span style=color:#e6db74>&#34;a&#34;</span>) <span style=color:#66d9ef>as</span> f:
+</span></span><span style=display:flex><span>    f<span style=color:#f92672>.</span>write(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;</span><span style=color:#e6db74>{</span>datetime<span style=color:#f92672>.</span>now()<span style=color:#e6db74>}</span><span style=color:#e6db74>,</span><span style=color:#e6db74>{</span>fp<span style=color:#e6db74>}</span><span style=color:#e6db74>,</span><span style=color:#e6db74>{</span>msg<span style=color:#f92672>.</span>usage<span style=color:#f92672>.</span>input_tokens<span style=color:#e6db74>}</span><span style=color:#e6db74>,</span><span style=color:#e6db74>{</span>msg<span style=color:#f92672>.</span>usage<span style=color:#f92672>.</span>output_tokens<span style=color:#e6db74>}</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>)
+</span></span></code></pre></div><h3 id=-降级策略>✅ 降级策略<a hidden class=anchor aria-hidden=true href=#-降级策略>#</a></h3><p>当 Anthropic API 不可用时，fallback 到传统 linter：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>except</span> anthropic<span style=color:#f92672>.</span>APIConnectionError:
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;⚠️  Claude 不可用，降级执行 pylint...&#34;</span>)
+</span></span><span style=display:flex><span>    subprocess<span style=color:#f92672>.</span>run([<span style=color:#e6db74>&#34;pylint&#34;</span>, <span style=color:#e6db74>&#34;--errors-only&#34;</span>, str(fp)])
+</span></span></code></pre></div><h3 id=-性能优化>✅ 性能优化<a hidden class=anchor aria-hidden=true href=#-性能优化>#</a></h3><p>对 <code>.py</code> 文件先做 AST 快速扫描：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> ast
+</span></span><span style=display:flex><span>tree <span style=color:#f92672>=</span> ast<span style=color:#f92672>.</span>parse(code)
+</span></span><span style=display:flex><span><span style=color:#75715e># 仅提取 FunctionDef、ClassDef、Assign 节点，跳过字符串/注释</span>
+</span></span></code></pre></div><h3 id=-安全加固>✅ 安全加固<a hidden class=anchor aria-hidden=true href=#-安全加固>#</a></h3><p>校验 <code>CLAUDE.md</code> 中的 <code>context_files</code> 是否在白名单内：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>SAFE_PATTERNS <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;*.py&#34;</span>, <span style=color:#e6db74>&#34;*.toml&#34;</span>, <span style=color:#e6db74>&#34;*.md&#34;</span>]
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> p <span style=color:#f92672>in</span> config<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#34;context_files&#34;</span>, []):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> any(Path(p)<span style=color:#f92672>.</span><span style=color:#66d9ef>match</span>(pat) <span style=color:#66d9ef>for</span> pat <span style=color:#f92672>in</span> SAFE_PATTERNS):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>raise</span> <span style=color:#a6e22e>ValueError</span>(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;不安全的上下文文件路径: </span><span style=color:#e6db74>{</span>p<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span></code></pre></div><p>⚠️ <strong>CI/CD 特别提醒</strong>：</p><ul><li>GitHub Actions 中，<strong>永远通过 Secrets 注入 <code>ANTHROPIC_API_KEY</code></strong>，禁止明文写入 workflow YAML；</li><li>设置 <code>--max-files 3</code> 限制单次校验数量，防止单次 PR 触发过多 API 调用；</li><li>企业防火墙？提前在 CI runner 上配置可信 CA 证书或允许 <code>api.anthropic.com:443</code> 出站。</li></ul><p><img alt="展示 claude-stats.log 日志格式与 CI 配置示意图" loading=lazy src=IMAGE_PLACEHOLDER_4></p><p>至此，你已构建了一套开箱即用、安全可控、可持续演进的 AI 增强型代码质量体系。它不替代工程师的判断，而是把重复、机械、易疏漏的审查工作交给 AI，让人专注在真正需要创造力的地方——设计、权衡与突破。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://zhitong.uk/tags/claude/>Claude</a></li><li><a href=https://zhitong.uk/tags/ai%E7%BC%96%E7%A8%8B/>AI编程</a></li><li><a href=https://zhitong.uk/tags/git%E9%92%A9%E5%AD%90/>Git钩子</a></li><li><a href=https://zhitong.uk/tags/python/>Python</a></li><li><a href=https://zhitong.uk/tags/devops/>DevOps</a></li><li><a href=https://zhitong.uk/tags/api%E9%9B%86%E6%88%90/>API集成</a></li></ul></footer><script src=https://giscus.app/client.js data-repo=zhitongblog/my-blog data-repo-id=R_kgDORBRArg data-category=Announcements data-category-id=DIC_kwDORBRArs4C188Z data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=bottom data-theme=light data-lang=zh-CN crossorigin=anonymous async></script></article></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>

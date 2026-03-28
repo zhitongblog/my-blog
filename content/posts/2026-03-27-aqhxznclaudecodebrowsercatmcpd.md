@@ -1,6 +1,6 @@
 ---
 title: "安全红线在哪？Claude Code + BrowserCat MCP的权限控制、沙箱隔离与审计日志实践"
-date: 2026-03-25T12:57:16.542Z
+date: 2026-03-27T12:57:16.542Z
 draft: false
 description: "本文深入剖析Claude Code与BrowserCat MCP协同场景下的生产级安全实践，涵盖细粒度权限控制、运行时沙箱隔离机制及全链路审计日志方案，助你守住AI代码助手的安全红线。"
 tags:

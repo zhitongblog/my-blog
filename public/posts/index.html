@@ -1,479 +1,119 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Posts | 智通和你一起学AI</title>
-<meta name="keywords" content="">
-<meta name="description" content="Posts - 智通和你一起学AI">
-<meta name="author" content="智通">
-<link rel="canonical" href="http://localhost:1313/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' 
-        data-cf-beacon='{"token": "你的token"}'></script>
-
-
-</head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="http://localhost:1313/" title="首页">
-                    <span>首页</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/posts/" title="文章">
-                    <span class="active">文章</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/archives/" title="归档">
-                    <span>归档</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/tags/" title="标签">
-                    <span>标签</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/about/" title="关于">
-                    <span>关于</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Posts
-  </h1>
-</header>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>引言：为什么Shell脚本需要“理解PRD”？——一个被长期忽视的工程断层 在 DevOps 工程实践中，Shell 脚本常被视为“胶水层”或“临时补丁”，其开发过程却长期游离于现代软件工程范式之外：一份清晰的产品需求文档（PRD）——例如 “每日凌晨2:15对 /data/app 目录执行增量备份至 nfs://backup-srv/weekly/，保留最近7个完整快照，失败时自动重试2次并告警” ——往往经由运维工程师人工“翻译”为一段裸露的 Bash 代码。这种转化高度依赖个体经验，缺乏可追溯性、不可审计、难以复用。
-我们观察到一种显著的工程断层：GUI 层已有 Figma AI 插件自动生成 React 组件，API 层有 Swagger &#43; LLM 自动生成 SDK 和测试用例；而占据生产环境 83% 自动化任务底座的 CLI/Shell 领域，仍停留在“PRD → 人脑 → vim backup.sh”的原始链路中。Linux 基金会 2024 年《Infrastructure Automation Maturity Report》指出：76% 的 Shell 脚本缺陷源于需求意图与实现逻辑之间的语义鸿沟（Semantic Gap），而非语法错误。
-真实案例对比极具说服力：某电商中台团队曾将上述“7天备份”PRD 手写为仅12行的脚本：
-#!/bin/bash tar -czf /backup/$(date &#43;%F).tar.gz /data/app find /backup -name &#34;*.tar.gz&#34; -mtime &#43;7 -delete 该脚本在上线后两周内触发3次 P1 故障：未处理 NFS 挂载失败、未加文件锁导致并发覆盖、find -delete 无 -maxdepth 1 导致误删上级目录。而同一 PRD 输入 Claude Code 后，生成的 38 行脚本自动包含：flock 排他锁、rsync --partial --delete-after 增量同步、$? 分级退出码处理、timeout 3600 防阻塞、以及 Prometheus backup_duration_seconds{target=&#34;app&#34;,status=&#34;success&#34;} 埋点。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-18 08:35:09.568 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力" href="http://localhost:1313/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">2026最新实测：内地见证开户全流程拆解，恒生/汇丰港卡远程申请避坑指南
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>一、为什么我今年（2026）又折腾了一次港卡？——真实动因坦白局 说实话，写这篇的时候我正盯着恒生APP里那笔刚到账的HKD 4,820 Freelance稿费发呆——不是因为钱多，而是因为这笔钱没被拦截、没被要求补材料、没卡在“反洗钱审核中”。而就在一年前，同样金额从Upwork打到我2023年开的汇丰内地见证户，足足卡了11天，最后还被降级成“非居民账户”，结汇额度直接砍半，PayPal提现失败两次后弹出红色警告：“Your account is restricted due to regulatory classification mismatch.”
-这不是玄学，是血淋淋的政策落地。2025年起，内地个人购汇申报系统全面接入“金税五期跨境模块”，朋友用中行做一笔USD 2,000的境外汇款，被连续三次退回，每次理由都不同：第一次要合同，第二次要发票&#43;完税证明，第三次干脆要求提供“服务交付过程视频记录”……而港卡，依然是那个沉默但可靠的“老伙计”：小额自由结汇（≤HKD 5万/月免申报）、多币种收付（USD/EUR/GBP/JPY全支持）、FPS秒到账——它不承诺暴富，但真能让你的钱流不被突然掐断。
-真正的转机出现在2026年3月。恒生银行悄悄上线了「视频见证&#43;密码信封邮寄」全线上流程——全程不用飞香港，连港澳通行证都不用亮。更关键的是，汇丰也同步优化了内地合作网点（北京/上海/深圳新增12家“港卡专属绿色通道”），但规则更苛刻：必须持有效港澳签注才能预约。对我这种常驻杭州、签证已过期的自由职业者来说，恒生成了唯一可行选项。
-💡 我的顿悟时刻：
-港卡不是“要不要开”的问题，而是“什么时候开、用哪家开、怎么避开雷区”的实操题。2023年图省事选汇丰见证户，结果2025年政策一收紧就裸泳；2026年咬牙重来，不是折腾，是补上资产流动性的最后一块拼图。
-二、实测对比：恒生 vs 汇丰，2026年谁真能“躺平开户”？ 别信宣传页上的“最快3天开户”。我用两台手机、两个邮箱、两套材料，平行实测了恒生和汇丰——以下是带时间戳的真实流水账（所有截图均存档可查）：
-✅ 流程耗时实录（附截图时间戳） 恒生：
-2026-04-01 10:12 预约成功（系统显示“当前排队0人”）
-2026-04-02 15:33 视频见证完成（审核员全程用粤语&#43;英文双语确认）
-2026-04-05 17:08 密码信封签收（顺丰单号SF123456789，物流显示“已签收”）
-2026-04-06 09:15 网银激活成功
-2026-04-12 11:22 首笔入金HKD 100到账
-→ 全程11天，含3天物流，无任何人工催办
-汇丰：
-2026-04-01 14:20 预约成功（提示“预计等待48小时”）
-2026-04-03 16:01 视频见证完成
-2026-04-08 10:00 实体卡寄达（EMS单号EE987654321）
-2026-04-10 15:44 客服来电：“您的密码信封未寄出，系统显示漏单，请重新提交地址”
-2026-04-12 09:00 密码信封补寄发出
-→ 卡在物流环节，比恒生多耗5天，且全程需主动电话追单
-✅ 材料准备差异（血泪教训） 无犯罪记录证明：
-恒生接受「支付宝电子版公证」（路径：支付宝→市民中心→公安服务→无犯罪记录证明→下载PDF&#43;公证处电子章扫描件）。我上传后10分钟通过。
-汇丰？必须纸质原件&#43;双语翻译件&#43;翻译公司盖章&#43;公证处骑缝章——我跑了3家翻译社，光翻译费花了¥380。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-18 07:52:19.88 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 2026最新实测：内地见证开户全流程拆解，恒生/汇丰港卡远程申请避坑指南" href="http://localhost:1313/posts/2026-02-18-2026zxscndjzkhqlccjhshfgkycsqb/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>1. 环境准备与Claude API接入 让我们从零开始，快速打通本地开发环境与 Claude 的 AI 能力。这一步是后续所有自动化能力的地基，务必稳扎稳打。
-首先安装官方 SDK（推荐使用 Python 3.9&#43;）：
-pip install anthropic python-dotenv ✅ python-dotenv 非必需但强烈推荐——它能安全加载 .env 文件，避免 API Key 硬编码或意外提交。
-接着，访问 Anthropic Console → API Keys → 点击 Create Key，复制生成的密钥（形如 sk-ant-api03-...）。切勿截图、勿存 GitHub、勿发群聊！
-在项目根目录创建 .env 文件（注意：文件名以 . 开头，隐藏）：
-ANTHROPIC_API_KEY=sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 最后，编写最小验证脚本 test_claude.py：
-# test_claude.py import os from dotenv import load_dotenv import anthropic load_dotenv() # 加载 .env 中的 ANTHROPIC_API_KEY client = anthropic.Anthropic() try: message = client.messages.create( model=&#34;claude-3-5-sonnet-20240620&#34;, max_tokens=100, messages=[{&#34;role&#34;: &#34;user&#34;, &#34;content&#34;: &#34;请用中文说一句打招呼的话&#34;}] ) print(&#34;✅ 成功调用 Claude：&#34;, message.content[0].text.strip()) except Exception as e: print(&#34;❌ 调用失败：&#34;, e) 运行 python test_claude.py，应输出类似：
-✅ 成功调用 Claude：你好！我是 Claude，很高兴为你提供帮助。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-18 05:44:20.652 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验" href="http://localhost:1313/posts/2026-02-18-claudecodeszznclpzclaudemddgit/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">从‘试用’到‘投产’：一位全栈工程师的Claude Code工程化实践避坑手册
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>一、为什么“试用很爽，上线就崩”？——我的三次翻车现场实录 2024.03.12 上午10:23 —— CI流水线突然卡死在 claude-plugin:run 步骤。本地 npx claude-gen --component Header 三秒出结果，CI里却卡住 90 秒后被 Kubernetes OOMKilled。日志最后一行是：
-[claude-plugin] timeout after 60s waiting for Claude API response (retry=3) 没人想到，我们给插件配的 CLAUDE_TIMEOUT=60 是硬编码进 Dockerfile 的，而 CI 环境 DNS 解析慢了 200ms，叠加重试逻辑直接超时。更讽刺的是，本地 .env 里写了 CLAUDE_TIMEOUT=120，但插件根本没读——它只认环境变量，不读文件。
-2024.04.05 下午16:47 —— 生产监控告警：useEffect dependency warning 爆发式增长。React DevTools 里一切正常，但 Sentry 报出上千条：
-Warning: React has detected a change in the order of Hooks called by MyDataGrid. This will lead to bugs and errors if not fixed. at MyDataGrid (src/components/MyDataGrid.tsx:42:3) at useEffect (react.development.js:2439) 翻代码才发现：Claude生成的组件里，useEffect(() =&gt; { loadData(); }, [searchTerm]) 被写成了 useEffect(() =&gt; { loadData(); }, []) —— 因为 prompt 里我只写了“加个搜索功能”，没明确说“依赖项必须包含 searchTerm”。开发时 searchTerm 恰好是全局常量，所以没报错；生产环境它是从 URL 参数动态解析的，一变就崩。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-18 05:44:20.652 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 从‘试用’到‘投产’：一位全栈工程师的Claude Code工程化实践避坑手册" href="http://localhost:1313/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">CLAUDE.md配置终极手册：打造你的专属AI编程Agent
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>在AI辅助编程日益普及的今天，如何让大模型真正理解你的项目上下文、编码规范和开发偏好，成为提升效率的关键。Anthropic 推出的 CLAUDE.md 机制正是为此而生——它就像 .gitignore 之于 Git，或 Dockerfile 之于容器，是一个系统级指令文件，用于为 Claude AI 定制专属行为。本文将手把手教你从零构建并优化你的 CLAUDE.md，打造一个高度一致、高效响应的 AI 编程 Agent。
-1. 引言：为什么你需要一个CLAUDE.md文件？ Claude 的 Custom Instructions（自定义指令） 功能允许用户通过自然语言设定 AI 的行为准则。而 CLAUDE.md 则是这一机制的工程化落地：它以结构化 Markdown 文件形式存在于项目根目录，自动被支持的平台加载，无需每次手动输入指令。
-使用 CLAUDE.md 的核心价值在于：
-一致性：确保 AI 在整个项目生命周期中遵循统一规范； 效率：省去重复说明“我们用 FastAPI”“请写单元测试”等上下文； 减少沟通成本：AI 不再“猜”你的意图，而是按预设规则行动。 简言之，你不是在调用一个通用 AI，而是在与一个专属于你项目的编程 Agent 协作。
-2. 基础准备：环境与工具要求 在开始前，请确认以下前提：
-支持平台： 官方：Claude Web（claude.ai）、Claude Desktop（macOS/Windows） 第三方：Cursor、Windsurf、Continue.dev 等 IDE 插件（需启用 CLAUDE.md 支持） 文件命名与位置： 必须命名为 CLAUDE.md（全大写，含扩展名） 必须位于项目根目录（如与 package.json 或 requirements.txt 同级） 编辑器推荐： VS Code（支持 Markdown 预览与语法高亮） JetBrains 系列（PyCharm/WebStorm 等，可安装 Markdown 插件） 注意事项： 并非所有平台都完全支持 CLAUDE.md，建议在 Claude 官方客户端验证效果； 第三方工具可能有缓存机制，修改后需重启或刷新。 3. CLAUDE.md核心结构详解 标准 CLAUDE.md 采用以下区块结构，每个区块以一级标题（#）开头：
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-18 04:38:41.093 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to CLAUDE.md配置终极手册：打造你的专属AI编程Agent" href="http://localhost:1313/posts/2026-02-18-claudemdpzzjscdzndzsaibcagent/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">比金条更保值！2026产品经理Claude Code深度进阶手册
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>
-文/资深产品观察员
-发布日期：2026年2月17日
-春节假期的余温尚未散去，北京菜百首饰的一则新闻却让打工人的焦虑感陡增：1000克重的金条竟然卖断货了！在这个充满不确定性的2026年开局，人们似乎都在寻找一种名为“安全感”的硬通货。
-然而，对于身处互联网核心地带的产品经理（PM）而言，囤黄金或许能抵御通胀，但无法抵御职业生涯的“技术性贬值”。当外媒还在惊叹中国人形机器人发展速度、宇树科技春晚同款机器人卖出20多万元的高价时，真正的行业变革已经悄然发生在你我的工位上。
-2026年，产品经理的“硬通货”不再是画得漂亮的Axure原型，也不是长达百页的PRD文档，而是驾驭AI直接产出可用产品的能力。Claude Code作为今年最强劲的辅助编程与逻辑构建工具，正是你手中的点金石。本文将避开枯燥的参数，结合春节期间的热点现象，为你带来一份实战级的Claude Code进阶指南。
-一、 从“点菜”到“主理人”：思维模式的根本转变 今年春节有一个有趣的现象：越来越多的年轻人取代长辈，当起了年夜饭的“主理人”。他们不再是被动等待投喂的食客，而是掌控全局的操盘手。
-这正是2026年产品经理在使用Claude Code时必须具备的思维——你不是在给程序员提需求，你是在亲自“做菜”。
-在过去，PM的工作流是“需求-文档-沟通-开发”。而在Claude Code时代，链路被压缩为“想法-逻辑约束-成品”。许多PM抱怨AI写出的代码跑不通或逻辑混乱，根本原因在于他们仍停留在“点菜思维”，只给出了模糊的指令。
-进阶的第一步，是学会用结构化逻辑代替自然语言描述。当你要求Claude Code构建一个“类似春节档票房统计的实时大屏”时，不要只描述外观。你需要像那位虽然没钱上春晚但依然营销拉满的转转App一样，精准切入痛点：定义数据源接口标准、明确高并发下的缓存策略、规定前端图表的刷新频率。
-只有当你以“技术合伙人”而非“甲方”的姿态与Claude Code对话，它才能交付出让你惊艳的MVP（最小可行性产品）。
-二、 拒绝“春晚魔术”：不仅要看效果，更要懂原理 今年大学生春晚的魔术表演被网友调侃“和央视一样”，其实背后的潜台词是：只要通过了图灵测试，谁在表演并不重要。但对于使用Claude Code的产品经理来说，黑盒是最大的隐患。
-很多PM在使用Claude Code生成功能模块时，往往只看最后跑出来的界面——看起来很美，像极了沈腾在春晚小品里“赢麻了”的表面风光。但一旦遇到异常数据，系统可能就会像那位给姑姑倒立拜年翻车的侄子一样，瞬间崩溃。
-进阶核心：建立代码审查的“白盒意识”。
-你不需要精通每一行代码的语法，但你必须具备“逻辑验毒”的能力。在使用Claude Code生成业务逻辑后，请务必追加以下几个步骤：
-边界条件测试：要求Claude解释在极端情况下（如用户输入了非法字符、网络断连）的处理逻辑。 数据流向追踪：让AI用伪代码或流程图的形式，反向复述数据是如何在各个模块间流转的。 安全性校验：2026年的网络环境依然复杂，网警刚刚通报了打击谣言的行动，你的产品同样需要防范数据注入和隐私泄露。显式地要求Claude加入安全校验层，是专业PM的基本素养。 不要被AI生成的华丽界面迷惑，只有经得起逻辑推敲的代码，才是真正“保值”的资产。
-三、 像“讽刺小品”一样精准：Prompt的颗粒度艺术 今年春晚的小品因为“讽刺拉满、尺度不小”而广受好评，原因在于它精准地刺中了现实生活的痛点，没有废话。这恰恰是高阶PM使用Claude Code的秘诀：Prompt（提示词）的颗粒度决定产出的含金量。
-初级PM的指令通常是泛泛而谈：“帮我写一个用户登录功能。” 而高阶PM的指令则像那个让外国女婿惊呆的“饺子就酒”一样，充满了具体的文化与场景约束：
-场景预设：明确产品的使用环境（是弱网的户外，还是高频操作的后台）。 技术栈约束：指定使用2026年主流的轻量级框架，避免引入过时的重型库。 异常处理风格：定义报错提示的语气（是冷冰冰的系统错误，还是幽默的引导文案）。 当你像编写剧本一样编写Prompt，将每一个交互细节、每一个数据字段的校验规则都“喂”给Claude Code时，它就不再是一个冰冷的生成器，而是一个懂你心意的资深工程师。记住，AI的上限取决于你指令的下限。
-四、 结语：做那个“手里有金条”的人 看着北京卫视春晚上的欢声笑语，在这个AI技术日新月异的2026年，产品经理的焦虑是真实的，但机遇也是前所未有的。
-当别人还在纠结于文档格式、在冗长的排期会议中消耗生命时，掌握Claude Code深度用法的你，已经能够在一下午的时间里，独立完成从需求分析到原型落地的全过程。这种“一人抵千军”的生产力，比柜台里被抢空的1000克金条更加保值，也更加稀缺。
-新的一年已经开始，愿每一位产品经理都能在AI浪潮中，找到属于自己的“核心资产”。开工大吉，不仅要抢红包，更要抢占技术的制高点。
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-17 20:58:22 +0800 CST'>February 17, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 比金条更保值！2026产品经理Claude Code深度进阶手册" href="http://localhost:1313/posts/20260217-205822-bjtgbz2026cpjlclaudecodesdjjsc/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Claude Code助你产品进阶：除夕夜打造爆款应用！
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Claude Code助你产品进阶：除夕夜打造爆款应用！ 想象一下，2026年的除夕夜，当大家都在忙着准备年夜饭、观看春晚的时候，你却用 Claude Code 打造出一款爆款应用，让你的产品能力更上一层楼，成为真正的产品高手。这并非遥不可及的梦想，只要掌握正确的方法和工具，你就能实现。Claude Code，作为一款强大的辅助编程工具，可以极大地提升你的开发效率，让你在短时间内完成高质量的产品。
-前置要求 在开始之前，你需要：
-[要求1] 拥有一个 Claude API 账号，并完成相关的认证和设置。 [要求2] 具备一定的编程基础，例如 Python、JavaScript 等，熟悉常用的开发框架。 [要求3] 明确你的产品目标，并对目标用户群体有深入的了解。 步骤一：产品创意构思与需求分析 在利用 Claude Code 开始编码之前，最重要的是确定你的产品创意并进行详细的需求分析。除夕夜应用，可以围绕节日主题展开，比如：定制拜年短信生成器、家庭照片视频合成工具、新年运势预测小游戏等等。
-详细的需求分析包括：
-目标用户： 年龄、性别、职业、兴趣爱好等。 核心功能： 应用的核心价值是什么，解决用户什么痛点。 用户体验： 操作是否简单易懂，界面是否美观。 技术可行性： 现有技术能否实现你的想法，是否需要引入新的技术。 步骤二：利用 Claude Code 进行代码生成 有了明确的需求分析，就可以开始利用 Claude Code 进行代码生成了。Claude Code 可以根据你的描述，自动生成相应的代码片段，大大减少了你的编码工作量。
-例如，你想开发一个定制拜年短信生成器，你可以这样描述你的需求：
-“请生成一个 Python 函数，该函数接收用户输入的姓名、祝福对象、祝福语风格等参数，并根据这些参数生成一条定制的拜年短信。祝福语风格包括幽默、温馨、正式等。”
-Claude Code 会自动生成类似下面的代码：
-def generate_greeting_message(name, recipient, style): &#34;&#34;&#34; 根据用户输入的参数生成定制的拜年短信。 Args: name: 用户姓名。 recipient: 祝福对象。 style: 祝福语风格 (幽默, 温馨, 正式). Returns: 生成的拜年短信。 &#34;&#34;&#34; if style == &#34;幽默&#34;: message = f&#34;{recipient}，新年快乐！祝你新的一年笑口常开，好运连连！不过要小心，别笑掉大牙哦！来自 {name} 的祝福。&#34; elif style == &#34;温馨&#34;: message = f&#34;亲爱的 {recipient}，新年快乐！愿新的一年里，你被幸福包围，被爱意环绕。{name} 祝你一切都好。&#34; elif style == &#34;正式&#34;: message = f&#34;尊敬的 {recipient}，恭祝新年快乐，万事如意！{name} 敬上。&#34; else: message = &#34;新年快乐！&#34; # 默认祝福语 return message # 示例 message = generate_greeting_message(&#34;小明&#34;, &#34;老王&#34;, &#34;幽默&#34;) print(message) 你可以根据 Claude Code 生成的代码进行修改和完善，使其更符合你的需求。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-16 13:07:09 +0800 CST'>February 16, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to Claude Code助你产品进阶：除夕夜打造爆款应用！" href="http://localhost:1313/posts/20260216-130709-claudecodezncpjjcxydzbkyy/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">稳定币争霸：2026年谁将主导数字金融未来？
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>稳定币争霸：2026年谁将主导数字金融未来？
-稳定币市场在过去几年经历了爆炸式增长，如今已成为数字金融领域不可或缺的一部分。进入2026年，这场关于稳定币主导权的争夺战愈发激烈。那么，稳定币究竟是不是真正的风口？谁又将在未来的数字金融格局中占据主导地位？
-稳定币：风口依旧？ 稳定币作为一种与法定货币或其他价值锚定物挂钩的加密货币，旨在提供数字资产的稳定性和便利性。其核心优势在于降低了加密货币的波动性，使其更易于被用于日常交易和价值存储。
-2026年，稳定币的应用场景持续拓展。除了传统的加密货币交易和DeFi（去中心化金融）领域，我们看到稳定币在跨境支付、供应链金融、以及新兴的元宇宙经济中扮演着越来越重要的角色。例如，多家跨国企业已经开始试点使用稳定币结算跨境贸易款项，以提高效率、降低成本。同时，一些国家和地区也在积极探索基于稳定币的数字货币发行。
-然而，稳定币市场也面临着诸多挑战。监管的不确定性是最大的障碍之一。各国政府对稳定币的态度不一，有的持开放态度，有的则采取严格监管措施。此外，稳定币的安全性、透明度和储备资产的合规性也是投资者关注的重点。一些早期出现的稳定币项目因审计问题或储备不足而面临信任危机，这警示着整个行业需要更加重视风险管理。
-稳定币市场格局：谁将胜出？ 目前，稳定币市场呈现出多元化的竞争格局。USDT、USDC等中心化稳定币依然占据主导地位，但算法稳定币、超额抵押稳定币等新型稳定币也在不断涌现。
-中心化稳定币的优势在于其流动性高、用户基础广泛。然而，其中心化的特性也使其面临监管审查和单点故障的风险。2026年，监管机构对中心化稳定币的合规要求更加严格，促使发行商不断加强透明度和风险控制。
-算法稳定币试图通过算法自动调节供应量来维持价格稳定。尽管一些算法稳定币项目取得了短暂的成功，但其脆弱性和潜在的死亡螺旋风险也暴露无遗。2026年，人们对算法稳定币的信任度普遍下降，更多投资者转向抵押型稳定币。
-超额抵押稳定币则通过抵押超过发行量的加密资产来确保价格稳定。这种模式相对安全，但资本效率较低。2026年，我们看到一些超额抵押稳定币项目通过引入更高效的抵押机制和治理模式来提高竞争力。
-此外，一些金融科技公司和传统金融机构也开始涉足稳定币领域。例如，某大型券商在2026年初宣布推出其自主研发的稳定币，旨在为机构客户提供更高效的数字资产结算方案。这种来自传统金融力量的入局，无疑将加速稳定币市场的成熟和规范化。
-技术创新与未来展望 技术创新将是稳定币未来发展的关键驱动力。例如，零知识证明等隐私保护技术的应用，可以提升稳定币的隐私性和安全性。分片技术等扩展性解决方案，可以提高稳定币的交易速度和吞吐量。
-2026年，我们看到稳定币与AI技术的结合也初露端倪。一些稳定币项目开始探索利用AI算法进行风险评估、反洗钱监控和智能交易执行。这些创新有望提升稳定币的效率和安全性，并拓展其应用场景。
-展望未来，稳定币市场将更加成熟和规范化。监管的逐步明确、技术的不断创新以及传统金融力量的入局，都将推动稳定币在数字金融领域发挥更大的作用。
-结语 稳定币无疑是数字金融领域的重要风口，但能否真正主导未来，取决于其能否解决安全、合规和技术等方面的挑战。2026年，稳定币市场正处于激烈的竞争和转型时期，谁能最终胜出，让我们拭目以待。
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-16 09:15:02 +0800 CST'>February 16, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 稳定币争霸：2026年谁将主导数字金融未来？" href="http://localhost:1313/posts/20260216-091502-wdbzb2026nsjzdszjrwl/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">稳定币争霸：2026年谁将主导数字金融未来？
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>稳定币争霸：2026年谁将主导数字金融未来？
-稳定币市场在过去几年经历了爆炸式增长，如今已成为数字金融领域不可或缺的一部分。进入2026年，这场关于稳定币主导权的争夺战愈发激烈。那么，稳定币究竟是不是真正的风口？谁又将在未来的数字金融格局中占据主导地位？
-稳定币：风口依旧？ 稳定币作为一种与法定货币或其他价值锚定物挂钩的加密货币，旨在提供数字资产的稳定性和便利性。其核心优势在于降低了加密货币的波动性，使其更易于被用于日常交易和价值存储。
-2026年，稳定币的应用场景持续拓展。除了传统的加密货币交易和DeFi（去中心化金融）领域，我们看到稳定币在跨境支付、供应链金融、以及新兴的元宇宙经济中扮演着越来越重要的角色。例如，多家跨国企业已经开始试点使用稳定币结算跨境贸易款项，以提高效率、降低成本。同时，一些国家和地区也在积极探索基于稳定币的数字货币发行。
-然而，稳定币市场也面临着诸多挑战。监管的不确定性是最大的障碍之一。各国政府对稳定币的态度不一，有的持开放态度，有的则采取严格监管措施。此外，稳定币的安全性、透明度和储备资产的合规性也是投资者关注的重点。一些早期出现的稳定币项目因审计问题或储备不足而面临信任危机，这警示着整个行业需要更加重视风险管理。
-稳定币市场格局：谁将胜出？ 目前，稳定币市场呈现出多元化的竞争格局。USDT、USDC等中心化稳定币依然占据主导地位，但算法稳定币、超额抵押稳定币等新型稳定币也在不断涌现。
-中心化稳定币的优势在于其流动性高、用户基础广泛。然而，其中心化的特性也使其面临监管审查和单点故障的风险。2026年，监管机构对中心化稳定币的合规要求更加严格，促使发行商不断加强透明度和风险控制。
-算法稳定币试图通过算法自动调节供应量来维持价格稳定。尽管一些算法稳定币项目取得了短暂的成功，但其脆弱性和潜在的死亡螺旋风险也暴露无遗。2026年，人们对算法稳定币的信任度普遍下降，更多投资者转向抵押型稳定币。
-超额抵押稳定币则通过抵押超过发行量的加密资产来确保价格稳定。这种模式相对安全，但资本效率较低。2026年，我们看到一些超额抵押稳定币项目通过引入更高效的抵押机制和治理模式来提高竞争力。
-此外，一些金融科技公司和传统金融机构也开始涉足稳定币领域。例如，某大型券商在2026年初宣布推出其自主研发的稳定币，旨在为机构客户提供更高效的数字资产结算方案。这种来自传统金融力量的入局，无疑将加速稳定币市场的成熟和规范化。
-技术创新与未来展望 技术创新将是稳定币未来发展的关键驱动力。例如，零知识证明等隐私保护技术的应用，可以提升稳定币的隐私性和安全性。分片技术等扩展性解决方案，可以提高稳定币的交易速度和吞吐量。
-2026年，我们看到稳定币与AI技术的结合也初露端倪。一些稳定币项目开始探索利用AI算法进行风险评估、反洗钱监控和智能交易执行。这些创新有望提升稳定币的效率和安全性，并拓展其应用场景。
-展望未来，稳定币市场将更加成熟和规范化。监管的逐步明确、技术的不断创新以及传统金融力量的入局，都将推动稳定币在数字金融领域发挥更大的作用。
-结语 稳定币无疑是数字金融领域的重要风口，但能否真正主导未来，取决于其能否解决安全、合规和技术等方面的挑战。2026年，稳定币市场正处于激烈的竞争和转型时期，谁能最终胜出，让我们拭目以待。
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-16 09:14:25 +0800 CST'>February 16, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 稳定币争霸：2026年谁将主导数字金融未来？" href="http://localhost:1313/posts/20260216-091425-wdbzb2026nsjzdszjrwl/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">别再纠结谁重要！AI时代程序员和产品经理正在“合体”
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>
-别再纠结谁重要！AI时代程序员和产品经理正在“合体” 日期：2026年2月16日
-春节的喜庆氛围还未完全散去，2026年的开工周已经带着现实的压力扑面而来。
-刚刚过去的春节假期里，我们还在津津乐道于“2026川渝春节联欢晚会”的精彩，或者看着热搜上“高速堵车小伙点外卖骑手真送来了”的趣闻感慨生活的不易。但当你坐在工位上，打开电脑，看着屏幕上闪烁的光标，一个更现实、更紧迫的问题摆在了所有互联网从业者面前：
-在这个AI全面渗透的2026年，到底是写代码的程序员重要，还是画原型的产品经理重要？
-过去十年，这似乎是一场永无止境的“战争”。程序员嫌弃产品经理“不懂技术瞎指挥”，产品经理抱怨程序员“不懂业务只在那儿死磕代码”。然而，随着大模型能力的指数级跃升，这场争论在今年显得有些过时了。
-答案或许有些残酷，但也充满了机遇：别再纠结谁重要了，因为这两个角色正在消亡——或者更准确地说，他们正在“合体”。
-一、 “酱鸭思维”：从交付功能到交付价值 在这个春节，有一条热搜引起了我的注意：“老板3个月卖3万只酱鸭9年没回家过年”。这位老板之所以成功，不是因为他鸭子切得有多快（技术实现），也不是因为他PPT做得有多漂亮（产品规划），而是因为他精准地完成了从产品打磨到市场变现的闭环。
-在AI时代，这就是我们每个人需要具备的“超级个体”思维。
-过去，程序员的护城河是“只有我能把这个功能做出来”。但在2026年的今天，只要你描述清晰，AI辅助编程工具能帮你完成80%以上的代码构建。如果你还只是把自己定位为“代码翻译机”，那你的价值甚至不如一台顶配的服务器。
-同样，产品经理过去依靠“信息不对称”和“文档撰写能力”生存。但在今天，如果你只是提出一个模糊的想法，AI生成的原型可能比你想得还快、还完善。
-技术壁垒的降低，意味着“交付功能”不再是核心竞争力，“交付价值”才是。
-程序员必须向前一步，像那个卖酱鸭的老板一样思考：我写的这行代码，到底能不能卖出去？能不能带来用户？产品经理必须向后一步，深入理解AI的技术边界，因为现在可以直接通过Prompt（提示词）“写”出产品，而不是只停留在Axure的原型图上。
-二、 沟通成本的“崩盘”与中间层的消失 最近还有个热搜很有意思：“谈好330万签约前一夜买家再砍40万”。这反映了传统交易中极高的沟通和博弈成本。
-在传统的软件开发模式中，产品经理就是那个“房产中介”，程序员是“装修队”。需求从老板传给产品，产品翻译成文档给开发，开发做出来再给测试……每一个环节都在进行信息的耗损和博弈，就像那临门一脚被砍掉的40万一样，充满了不确定性。
-AI的出现，直接击穿了这条冗长的链条。
-2026年的开发工具早已不再是单纯的编辑器，而是智能化的创造平台。一个懂业务的程序员，可以直接利用AI生成需求文档并快速验证代码；一个懂技术逻辑的产品经理，可以直接用自然语言指挥AI生成可用的MVP（最小可行性产品）。
-当中间的“翻译”环节被AI取代，纯粹为了“传话”而存在的岗位就变得岌岌可危。
-就像热搜里说的“才知道眼镜布不是用来擦眼镜的”，我们也才恍然大悟：原来产品经理和程序员的分类，并不是软件工程的铁律，而是在技术生产力不足时代的妥协产物。 当生产力足够强大时，这两个角色势必会融合。
-三、 全新的物种：产品工程师（Product Engineer） 那么，未来的方向是什么？
-如果你关注最近的行业招聘，你会发现“产品工程师”或者“独立创造者”的需求正在激增。这是一种新型的复合人才：
-具备“由点及面”的架构能力： 就像我们为了网速快会研究“路由器到底怎么摆”，新时代的开发者需要懂得如何布局AI组件，如何调用API，如何优化系统架构，而不是纠结于某一个具体的算法实现。 拥有敏锐的市场嗅觉： 能够像捕捉“中方将对加拿大英国实施免签政策”带来的旅游红利一样，迅速捕捉技术变革带来的商业机会。 极强的执行力： 不再等待排期，不再推诿扯皮，有了想法，立刻利用AI工具落地。 在这个时代，程序员需要懂产品，产品经理需要懂代码逻辑。这并不是单纯的“内卷”，而是工具进化赋予我们的权利。
-结语 2026年的春天已经到来，万物复苏。
-就像“王搏因《没出息》而出息了”一样，很多时候，打破常规才能迎来新生。不要再把自己局限在“我是写Java的”或者“我是画原型的”这样狭隘的标签里。
-在这个AI算力如水电般普及的年代，重要的不是你的职位Title，而是你利用AI解决问题的能力。
-程序员和产品经理的“合体”并非一方吃掉另一方，而是一次进化的共生。当你既能像程序员一样严谨地构建系统，又能像产品经理一样敏锐地洞察人心，你就是这个AI时代最稀缺的“超级个体”。
-开工大吉，愿你在2026年，成为那个不可替代的“合体”强者。
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-16 08:51:06 +0800 CST'>February 16, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 别再纠结谁重要！AI时代程序员和产品经理正在“合体”" href="http://localhost:1313/posts/20260216-085106-bzjjszyaisdcxyhcpjlzzht/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="http://localhost:1313/posts/page/2/">Next&nbsp;&nbsp;»
-    </a>
-  </nav>
-</footer>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Posts | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="Posts - 智通和你一起学AI"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/posts/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/posts/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/posts/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/posts/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="Posts"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="Posts"><meta name=twitter:description content="这是智通成长的历程"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://zhitong.uk/posts/"}]}</script></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span class=active>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>Posts</h1></header><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>不写一行JS，也能做自动化测试：前端工程师用Claude Code完成全流程回归验证</h2></header><div class=entry-content><p>起因：我们被“回归测试”拖垮的那周 那是上个月17号，周五晚九点。
+服务器监控告警刚消，产研群消息已炸成红色瀑布流：“支付成功率跌到92%！”“订单页价格显示为NaN！”“发票模块白屏！”——三个紧急热修复塞进发布窗口，外加两个UI组件重构（Ant Design 5.x 升级引发的表单校验链断裂）。
+我打开测试清单：27个核心路径，从登录态保持、搜索联想、购物车增删，到跨端同步、异常网络兜底……全靠手动点。四人轮班，手机支架架在MacBook上录屏，咖啡机24小时待命。凌晨两点，小王在测“优惠券叠加逻辑”，漏掉了“满300减50+店铺红包”组合下，结算页底部“立减¥50”文案未高亮；凌晨三点，我卡在“发票申请表单提交后，邮箱校验提示应为红色且聚焦”，却忘了验证“连续两次错误输入后，防暴击锁30秒”的交互状态。
+崩溃发生在三点十七分。我盯着Playwright控制台里第12次重跑的test:regression套件，看着它又花47秒加载整个首页、跳转用户中心、展开侧边栏、点击“开发设置”——就为了验证一个按钮颜色从#1890ff改成了#1677ff。
+我抓起保温杯砸向软垫（没真砸），吼出那句后来被截图传遍公司IM群的话：
+“连改个按钮颜色都要重跑整套E2E？这哪是测试，这是体力活！”
+就在我瘫在椅子上刷手机想转移注意力时，手指无意识点开了Claude Code的网页版，把一段刚写的、带三处waitForSelector的脚本粘了进去。它没直接给答案，反而弹出一句反问：
+“你是否考虑过用自然语言描述验证逻辑，由AI生成可执行断言？”
+我愣住。手指悬在键盘上方三秒。
+不是“怎么写代码”，而是“怎么说人话”。
+那一刻，我忽然意识到：我们花了80%时间把需求翻译成Playwright语法，却只留20%时间思考——这个需求，到底值不值得测？
+尝试：从“写代码”到“说人话”的第一次迁移 我翻出Confluence里那份叫《V2.3核心回归用例》的Word表格——最后编辑时间是2021年8月，作者是已离职的前QA leader。里面写着：
+搜索功能：输入关键词，展示结果，数据应合理 订单页：价格计算正确，支持修改数量 发票申请：邮箱格式校验，错误时提示明确 我把整页复制进Claude，写下prompt：
+“请基于以下业务规则，生成可在Playwright中直接运行的端到端断言代码，不修改页面交互步骤，只补充验证逻辑。所有选择器必须使用data-testid，禁用ID和class。若规则表述模糊，请先追问业务含义。”
+它立刻回问：
+❓ “‘数据应合理’具体指什么？例如：搜索‘苹果’是否应排除‘苹果手机’？结果数是否需大于0？是否有排序规则（如销量优先）？”
+我愣了——这问题直戳痛点。我拉上产品经理，在茶水间白板上画了15分钟：原来“合理”=“匹配度>0.7且按GMV降序”，而这条规则，三年来只存在于他脑内。
+接着它输出代码。但第一版栽在选择器上：
+// ❌ AI默认生成（错！项目不用id） await page.waitForSelector('div#loading'); expect(await page.locator('span.price').textContent()).toContain('¥'); 而我们项目规范是：
+// ✅ 正确写法（data-testid） await page.locator('[data-testid="loading-spinner"]').waitFor({ state: 'visible' }); expect(await page.locator('[data-testid="product-price"]').textContent()).toContain('¥'); 踩坑总结：AI没有上下文记忆。你没给它CSS规范文档，它就按Stack Overflow最高票答案猜。
+实战：用Claude Code跑通真实回归流水线 我们决定拿最痛的“搜索结果页”开刀。流程如下：
+Step 1：语音转文字，拒绝脑内编译
+我打开iPhone语音备忘录，对着麦克风说：
+“搜索框输入‘发票’，结果页顶部显示‘共12条匹配’，且第1条标题含‘电子发票’字样，点击第1条后URL包含/invoice/detail?id=，页面标题是‘电子发票详情’。”
+转文字后粘贴进Claude，加一句：
+“生成Playwright断言块，要求：1）使用locator.waitFor({ state: 'visible' })替代waitForTimeout；2）对文本断言加.trim()；3）URL校验用正则，注释说明匹配逻辑。”
+Step 2：Claude输出（带注释，可直接抄）
+// ✅ 验证搜索结果总数（容错：空格、换行、中文数字） const totalCount = await page.locator('[data-testid="search-result-count"]').textContent(); expect(totalCount?.trim()).toMatch(/共\s*\d+\s*条匹配/); // ✅ 验证首条标题含关键词（避免误匹配“纸质发票”） const firstTitle = await page.locator('[data-testid="search-result-item"]').first().locator('h3').textContent(); expect(firstTitle?.trim()).toContain('电子发票'); // ✅ 验证跳转URL（正则确保?id=后跟数字） await page.locator('[data-testid="search-result-item"]').first().click(); await page.waitForURL(/\/invoice\/detail\?id=\d+/); expect(await page.title()).toBe('电子发票详情'); Step 3：注入现有测试文件，仅改2处变量名
+...</p></div><footer class=entry-footer><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 不写一行JS，也能做自动化测试：前端工程师用Claude Code完成全流程回归验证" href=https://zhitong.uk/posts/2026-03-27-bxyxjsynzzdhcsqdgcsyclaudecode/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？</h2></header><div class=entry-content><p>🌟 一个“看似简单”的Prompt，差点让我在客户面前当场社死 那是上周五下午3:17，钉钉消息弹窗还没消，客户微信就甩来一句：
+“帮我们分析下竞品首页的 LCP 和 CLS？最好能对比三家——XX优选、YY严选、ZZ快购。急，投资人下周要看性能基线。”
+我秒回：“好的！让 Claude Code 跑一下 👌”，顺手复制粘贴进 Claude 的代码沙盒，敲下这行“自信满满”的 Prompt：
+请分析三个竞品网站的LCP和CLS指标，并给出优化建议。 30分钟后，我点开输出——满屏是教科书式回答：
+“LCP（最大内容绘制）衡量页面主内容加载速度，建议使用 Chrome DevTools 的 Performance 面板录制……”
+“CLS（累积布局偏移）反映视觉稳定性，可通过 Web Vitals 扩展实时监控……”
+“优化方向包括预加载关键资源、设置图片宽高属性、避免动态插入内容……”
+我盯着屏幕，手心发潮。客户团队5个人全在等报告——而他们连 Chrome DevTools 都没打开过（团队共4人：CEO、运营、产品、后端，没有前端工程师）。更扎心的是，就在前一天，我还用 Claude Code 成功调试了自家后台的 CSS 动画卡顿问题，顺手发了条朋友圈：“AI 前端助理已上线 ✅”。
+那一刻我意识到：我把“人话需求”当成了“可执行指令”。
+不是 Claude 不行，是我没给它上岗前的工牌、工位和任务单。
+🔍 Claude Code不是翻译器，它是需要“喂数据”的实习生 复盘时我翻出原始对话记录，发现失败根源根本不在模型能力——而在我的输入像一份空简历：
+❌ 没写“公司名”（竞品具体是哪三家？） ❌ 没贴“工位地址”（URL？带协议吗？有登录跳转吗？） ❌ 没说明“办公环境”（手机还是PC？4G还是3G？） ❌ 没定义“交付物长啥样”（要数字？要截图？要DOM路径？） 于是我把两版 Prompt 拉出来做了对比：
+原始 Prompt（失败版） 优化后 Prompt（生产可用版） 请分析三个竞品网站的LCP和CLS指标，并给出优化建议。 请基于以下三组Lighthouse JSON报告（已附），分析各站首页在“iPhone SE + 3G慢网”条件下的LCP与CLS：&lt;br>• XX优选：https://xx-youxuan.com/ （公开可访问）&lt;br>• YY严选：https://yy-yanxuan.com/ （需绕过登录页，已提供无认证直链）&lt;br>• ZZ快购：https://zz-kuai.com/ （注意：该站首页含动态广告位，CLS易受其影响）&lt;br>输出要求：&lt;br>① 表格列出LCP数值（ms）、CLS值、LCP元素类型（img/text/video）及DOM路径；&lt;br>② 对CLS > 0.05的站点，定位导致偏移的具体元素（如：.ad-banner插入时机）；&lt;br>③ 每条建议必须绑定到具体HTML/CSS/JS行（示例：“第82行 缺少 width/height 属性”） 标红的关键缺失项：
+① 可访问的竞品URL（必须公开可抓取！曾因 URL 是 https://admin.xx.com/login?next=/home，Claude 循环重定向12次后报错 Failed to fetch）
+② 明确的设备与网络模拟参数（Lighthouse 默认是“桌面+宽带”，但电商80%流量来自低端安卓机，不指定等于白测）
+③ 期望输出格式（Claude 不会猜你要一页PPT还是JSON字段——它只认结构化指令）
+...</p></div><footer class=entry-footer><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？" href=https://zhitong.uk/posts/2026-03-27-cpromptdpagedclaudecodeljbwfxj/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>安全红线在哪？Claude Code + BrowserCat MCP的权限控制、沙箱隔离与审计日志实践</h2></header><div class=entry-content><p>场景切入：当AI代码助手要访问生产数据库时，谁来按住暂停键？ 上周三晚9点17分，某电商平台的订单履约系统突发告警：orders, shipments, payments 三张核心表在37秒内被连续清空。DBA紧急熔断连接池后发现，罪魁祸首并非人为误操作，而是一次由Claude Code驱动的自动化SQL优化任务——它在分析慢查询日志时，基于一条模糊Prompt（“请优化这个JOIN性能，必要时可重建索引或清理冗余数据”），生成并自动执行了如下语句：
+DROP TABLE IF EXISTS orders_old; CREATE TABLE orders AS SELECT * FROM orders_backup WHERE updated_at > '2024-05-01'; -- 后续误将 orders_backup 识别为临时表，触发级联DROP... 更致命的是，该任务通过BrowserCat MCP（Model Control Protocol）直连了生产环境数据库连接池，且未启用任何运行时权限拦截。故障导致2.3万笔当日订单状态丢失，回滚耗时4小时。
+这不是理论风险，而是正在发生的权限失控。所谓“安全红线”，从来不是写在OKR里的抽象原则，而是具体到每一行代码的边界：
+✅ 允许：SELECT COUNT(*) FROM /analytics/daily_orders;
+❌ 禁止：DELETE FROM /prod/orders WHERE status = 'pending';
+❌ 禁止：curl -X POST https://api.internal/payments/charge
+当时团队的应急响应流程暴露了关键缺口：
+检测滞后：依赖数据库审计日志（延迟>90s），而非MCP层实时策略拦截； 阻断失效：BrowserCat默认策略为allow_all，未声明resource_patterns约束； 溯源困难：日志中缺失原始Prompt哈希与模型输出ID的关联字段。 权限控制实战：用MCP Policy Engine定义“能做什么”与“不能做什么” BrowserCat MCP的policy.yaml是权限控制的第一道闸门。它采用声明式配置，将安全规则转化为可版本化、可测试的代码资产。我们摒弃了“先放行再审计”的被动模式，转而用action_whitelist和resource_patterns主动收口。
+以下是我们在v1.2策略中落地的生产级配置（已脱敏）：
+# policy.yaml version: "1.2" rules: - id: "sql_read_only_analytics" description: "仅允许对/analytics/路径下表的只读SELECT" action_whitelist: ["SELECT"] resource_patterns: - "/analytics/.*" deny_if: - contains: ["INSERT", "UPDATE", "DELETE", "DROP", "TRUNCATE"] - regex: ".*;\\s*SELECT.*" # 禁止多语句 - id: "no_system_calls" action_whitelist: [] capability_whitelist: ["http_get", "file_read"] deny_if: - capability: "os_exec" - capability: "network_bind" 关键在于将策略注入模型认知层。我们在Claude Code的system prompt中嵌入策略摘要，并强制其输出携带合规性签名：
+...</p></div><footer class=entry-footer><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 安全红线在哪？Claude Code + BrowserCat MCP的权限控制、沙箱隔离与审计日志实践" href=https://zhitong.uk/posts/2026-03-27-aqhxznclaudecodebrowsercatmcpd/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</h2></header><div class=entry-content><p>为什么我一开始死磕“本地模式”却连浏览器都打不开？ 上周三下午三点十七分，我盯着 VS Code 里第 17 次报错的终端窗口，手边咖啡凉透，心里只剩一个念头：这破 puppeteer-core 怎么连 localhost 都连不上？
+Error: net::ERR_CONNECTION_REFUSED at http://localhost:9222/json at navigate (/node_modules/puppeteer-core/lib/cjs/puppeteer/common/Frame.js:138:25) 我翻遍 Puppeteer 文档、Chrome 启动参数、Docker 网络配置，甚至重装了 Chromium……直到凌晨一点，偶然在 Claude Code 的 MCP 插件设置页底部发现一行小字：
+⚠️ MCP Server 默认禁用本地进程 spawn（出于安全策略），需手动启用 mcp.allowLocalProcess=true
+——原来不是 Chrome 没起来，是 MCP 根本没让它起！puppeteer-core 在等一个永远不会出现的调试端口。
+那一刻我顿悟：MCP 的三种模式，根本不是“技术选型”，而是权限与上下文的分层契约。
+“谁在调”？是 IDE 插件、CI 脚本，还是用户点击的按钮？ “在哪调”？是开发机、K8s Pod，还是客户浏览器里的 Web Worker？ “以谁的身份调”？是 root、普通用户、还是被 seccomp 锁死的 sandbox 用户？ 这才是真正的设计原点。
+下面这张对比表，是我贴在工位显示器边框上的速查便签（手写体，带咖啡渍）：
+场景 推荐模式 关键约束 我的便签原文 调试前端组件（如 Storybook 快照） ✅ 本地模式 仅限本机，无网络访问权 本地=快但受限 批量爬取公开电商页面（含 JS 渲染） ✅ 远程模式 需自维 Grid/Selenium，证书自己管 远程=自由但要管证书 渲染用户上传的 HTML 报表模板 ✅ 沙箱模式 DOM 可操作，但 fetch/open/print 全受白名单控制 沙箱=安全但没 DOM 操作权 ...</p></div><footer class=entry-footer><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）" href=https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>零代码≠低能力：Claude Code BrowserCat MCP在电商数据采集中的实战压测报告</h2></header><div class=entry-content><p>引子：我们为什么“不信邪”地选了零代码方案？ 上季度大促前72小时，运营总监冲进站会室，把一张Excel甩在投影幕布上：“老板刚签的竞品监控SOP，5家平台——淘宝联盟（反爬刚升到v3.2）、京东商智（接口灰度中）、拼多多API（文档还没公开）、抖音电商罗盘、小红书商家后台。要实时抓价格、库存、SKU上架状态变更，数据进BI看板，今晚12点前跑通首条链路。”
+我们团队当时什么配置？1个写过三年Scrapy的老Pythoner（我），2个从天猫运营转岗半年的“半技术人”——小陈能改JS埋点，阿哲会写基础SQL但分不清协程和线程。开发排期？前端在赶大促弹窗动效，后端在修订单超时漏单，老板微信只回了一句话：“能用Claude+BrowserCat搞定就别拉人。”
+我嘴上说“行，试试”，转身关上门就搜“BrowserCat docker m2 crash”。心里直打鼓：零代码？听着像给产品经理准备的玩具，真敢拿它扛生产级采集？凌晨两点，我盯着终端里滚动的ERROR: browser context closed，第一次怀疑自己是不是被“低代码”三个字骗进了坑。
+环境搭建：从“点开就用”到“卡死在第一步”的血泪三小时 BrowserCat安装翻车实录
+Mac M2芯片下，Docker Desktop启动BrowserCat容器后必崩——不是报错，是直接无响应。反复重装、换镜像、降Docker版本，全无效。直到在docker logs browsercat里看到一行被刷屏淹没的关键词：
+[0512/032412.887654:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. 原来Chrome沙箱在M2上默认触发内核保护机制。解决方案？不是改Dockerfile，而是在docker run命令末尾硬加：
+--cap-add=SYS_ADMIN --security-opt seccomp=unconfined （顺手把--no-sandbox也加上了，虽然不安全，但大促当前，先活下来）
+Claude API Key踩坑
+免费试用版Key调用computer_use工具时，永远返回：
+{"type":"error","error":{"type":"permission_denied","message":"Tool 'computer_use' is not enabled for this API key"}} 翻遍Anthropic文档、GitHub Issues、Discord频道……最后在控制台右上角用户头像→Settings → API Keys → Edit → Advanced Permissions → ✅ Enable computer_use 才找到开关。那个藏得比“删除账号”还深的复选框，让我删了三次Key重试。
+MCP配置玄学
+本地跑MCP workflow时死活报no browser context。.env文件里明明写了：
+BROWSERCAT_URL=localhost:8000 查源码才发现——BrowserCat SDK底层用的是fetch()，而localhost:8000会被当作相对路径处理！必须写成：
+BROWSERCAT_URL=http://localhost:8000 # 注意 http://！ 这个细节，官方文档连提都没提。
+...</p></div><footer class=entry-footer><span title='2026-03-26 12:57:16.542 +0000 UTC'>March 26, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 零代码≠低能力：Claude Code BrowserCat MCP在电商数据采集中的实战压测报告" href=https://zhitong.uk/posts/2026-03-26-ldmdnlclaudecodebrowsercatmcpz/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>AI接管浏览器不是梦：Claude Code自动化已支持登录/采集/截图/性能分析四合一</h2></header><div class=entry-content><p>引言：为什么“AI接管浏览器”不再是科幻命题？ 过去十年，浏览器自动化始终困在一条狭窄的路径上：Selenium 写 XPath，Puppeteer 注入 document.querySelector，Playwright 等待 page.waitForSelector('.loading:visible')……这些工具强大却疲惫——它们不理解“登录”，只认识“点击按钮#login-btn”；它们无法应对验证码刷新后 DOM ID 变更，更难以从一个弹窗跳转、一次 token 重定向、一段动态渲染的 React 列表中自主恢复流程。我们投入大量人力维护脚本：当京东把 .btn-login 改为 [data-qa="auth-submit"]，当 Cloudflare 更新挑战 JS 版本，当 Vue 页面用 &lt;Suspense> 延迟加载关键数据——自动化就集体“失明”。
+这暴露了传统方案的三大结构性瓶颈：
+🔹 人类脚本维护成本高：每处 UI 变更都需人工定位、重写选择器、更新等待逻辑；
+🔹 语义理解弱：无法将“输入手机号并获取验证码”映射到真实页面中的输入框+按钮组合，依赖硬编码定位；
+🔹 异常恢复差：遇到网络抖动、MFA 弹窗、403 重定向等非预期状态，多数脚本直接抛出 TimeoutError 或静默失败。
+而 Claude Code 的出现，标志着范式跃迁：它不再执行“指令”，而是追求“目标”。当你输入 “帮我登录知乎，进入我的收藏夹，截图前3条含‘大模型’关键词的回答，并记录页面加载性能”，Claude Code 不解析为 7 行 Puppeteer 代码，而是启动一个闭环推理系统——理解“知乎登录”在视觉与 DOM 中的多模态表征，推断当前处于哪一认证阶段，动态生成动作序列，并在环境变化时自主降级或重试。
+这种转变的背后，是三项关键技术的协同突破：
+✅ 多模态推理：联合处理网页截图（视觉token）与 DOM 树结构（语义token）；
+✅ 浏览器 DOM 语义理解：将 &lt;button class="LoginButton">登录&lt;/button> 映射为向量空间中与“用户认证入口”高度对齐的节点；
+✅ 运行时环境感知：实时监听 mutationObserver、performance.navigation、beforeunload 等事件流，构建动态上下文图谱。
+下表对比了四类典型任务中，传统方案与 Claude Code 的实测表现（基于 500 次跨站点重复测试）：
+...</p></div><footer class=entry-footer><span title='2026-03-25 12:57:16.542 +0000 UTC'>March 25, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to AI接管浏览器不是梦：Claude Code自动化已支持登录/采集/截图/性能分析四合一" href=https://zhitong.uk/posts/2026-03-25-aijgllqbsmclaudecodezdhyzcdlcj/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>MCP协议爆发元年：深度拆解Claude Code如何通过Chrome MCP接管浏览器全链路</h2></header><div class=entry-content><p>一、为什么是“MCP协议爆发元年”？——时代背景与范式迁移的必然性 2024年Q2，当Chrome Canary用户在地址栏输入 chrome://flags/#mcp-experimental 并启用实验标志后，一个微小的开关悄然撬动了AI Agent的演进轨迹。这不是又一个API封装或SDK升级，而是一场基础设施层的范式迁移：AI Agent 正从“被调用的应用插件”，转向“可协商、可验证、可编排的运行时伙伴”。
+MCP（Model Communication Protocol）并非凭空诞生。它脱胎于2023年Q3 Anthropic与开源社区联合提出的《Agent Interoperability Manifesto》，初衷直指三大现实瓶颈：
+WebExtensions 架构僵化：权限粒度粗（如 "tabs" 权限即授予全部标签页读写权），无法表达“仅读取当前活动标签页URL”这类细粒度意图； Agent SDK 封闭割裂：LangChain Tools、LlamaIndex Connectors 各自为政，同一工具需为不同框架重复适配； RAG 调用语义失焦：检索结果作为上下文喂给LLM，但LLM输出仍是自由文本，缺乏对“执行浏览器下载”“切换到指定Tab”等原子操作的确定性表达能力。 真正的拐点出现在2024年：
+Q1：Anthropic正式发布 MCP Specification v1.0 —— 首个开放、中立、面向生产环境的Agent通信协议标准； Q2初：Chrome 124 开始在 chrome://flags 中暴露 MCP 实验支持，并同步更新 WebExtensions Manifest v3.1，新增 mcp_capabilities 字段； Q2中：Claude Code 正式集成 MCP Host，成为首个通过 MCP 协议直接调用浏览器原生能力的生产级AI编码助手——它不再依赖模拟点击或DOM遍历，而是向 Chrome 主进程发起经签名的 mcp:tool:browser.downloads.download 请求。 这一系列动作的本质，是将AI Agent的协作逻辑上移至协议层。过去，Agent与宿主环境的交互像“黑盒对话”（HTTP POST → JSON响应）；如今，它变成一份可验证的运行时契约：双方在会话建立前即协商能力边界，所有操作具备可审计的URI标识与结构化Schema。这正是“爆发元年”的底层逻辑——不是技术更炫，而是信任基建终于成型。
+...</p></div><footer class=entry-footer><span title='2026-03-25 12:16:38.414 +0000 UTC'>March 25, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to MCP协议爆发元年：深度拆解Claude Code如何通过Chrome MCP接管浏览器全链路" href=https://zhitong.uk/posts/2026-03-25-mcpxybfynsdcjclaudecoderhtgchr/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>2026开发者新宠：用一句‘登录淘宝并截图订单页’唤醒Claude Code的BrowserCat MCP</h2></header><div class=entry-content><p>开篇：那句“登录淘宝并截图订单页”是怎么把我整破防的 2025年11月17日，凌晨2:17。
+电脑风扇在耳边嘶吼，屏幕右下角显示CPU 98%，Claude Code窗口弹出第7次报错：[ERROR] MCP execution failed: browser.screenshot() returned null。我揉了揉发酸的眼角，把刚热好的枸杞水推到一边，点开BrowserCat的实时日志——一行刺眼的红色文字正缓缓滚动：
+[ERR] no active browser context 不是Demo，不是练手，是救火。
+1小时前，运营同事在钉钉里甩来一条消息：“合规审计加急！30个用户订单凭证，明早9点前要PDF归档，账号密码已发你邮箱。”
+我深吸一口气，把鼠标移到Claude对话框，敲下那句看似无比朴素、却让我之后连续熬了三个通宵的指令：
+“登录淘宝并截图订单页”
+没有URL，没有订单号，没有cookie路径——就这8个字。它本该是AI时代最自然的交互，结果成了压垮我的最后一根稻草。
+为什么非得是BrowserCat？——我试过的4种方案全翻车了 别信“浏览器自动化随便选”的鬼话。我真的一一踩过坑，还录了失败时的内存监控曲线（峰值均超4.2GB）。下面是真实对比表，标红的是当场让任务流产的致命缺陷：
+方案 启动耗时 Cookie继承 截图返回方式 致命坑 Puppeteer 2.1s ❌ 需手动注入 page.setCookie() page.screenshot({encoding:'base64'}) ✅ 淘宝检测navigator.webdriver，直接跳转风控页 Playwright 1.8s ❌ MCP沙箱无法读取本地~/.config/BraveSoftware/Brave-Browser/Default/Cookies page.screenshot() 返回Buffer ❌ CI里读不到宿主机cookie文件，报ENOENT Selenium + ChromeDriver 3.4s ⚠️ 可用add_cookie()但需先访问域名触发domain校验 必须save_screenshot('/tmp/x.png') → 再open()读取 → base64编码 ❌ Claude在MCP里OOM崩溃（日志：FATAL ERROR: Ineffective mark-compacts near heap limit） Claude内置浏览器插件 &lt;1s ✅ 自动复用当前会话 screenshot() 返回base64 ✅ 仅支持静态页面，淘宝订单页JS动态渲染后截图永远是白屏 BrowserCat赢在两个“原生”：
+✅ 自动继承Claude当前会话态——它根本不用碰cookie文件，直接复用Claude已认证的OAuth2 token和session storage；
+✅ browser.screenshot() 原生返回base64字符串——省掉文件IO、磁盘写入、路径拼接、读取解码共27行胶水代码（我删掉的代码截图里，光fs.writeFileSync就占了9行）。
+...</p></div><footer class=entry-footer><span title='2026-03-25 11:49:54.22 +0000 UTC'>March 25, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 2026开发者新宠：用一句‘登录淘宝并截图订单页’唤醒Claude Code的BrowserCat MCP" href=https://zhitong.uk/posts/2026-03-25-2026kfzxcyyjdltbbjtddyhxclaude/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>告别Selenium！Claude Code + Chrome MCP 实现自然语言驱动的零代码浏览器自动化</h2></header><div class=entry-content><p>🌟 为什么我决定扔掉 Selenium？——一个被 selector 失败、隐式等待和 CI 崩溃折磨三年的自白 凌晨2:47，手机震了第七次。
+钉钉弹出告警：“【大促价格监控】任务 #JD-HEADPHONES-03 —— FAILED（StaleElementReferenceException）”。我抓了把头发，盯着终端里那行熟悉的红字：Message: stale element reference: element is not attached to the page document。再往下翻，是另一个幽灵：TimeoutException: Message: timeout: Timed out receiving message from renderer。
+这不是演习。这是双十一大促前夜的真实战况。我们用 Selenium 写的 12 个核心电商页面价格巡检脚本，在 Chrome v125 升级后的首波流量高峰中集体“诈尸”——不是全挂，而是间歇性抽风：有时能跑通，有时卡在搜索框输入后不点搜索按钮，有时点了却把“加入购物车”误点成页脚的“联系我们”。排查三天，发现根源竟是：某平台首页悄悄把 &lt;button class="btn-buy"> 改成了 &lt;div class="action-btn js-buy-btn">，而我们的 WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "btn-buy"))) 直接哑火。
+不是 Selenium 不好。它稳、成熟、生态全。但我的需求变了。老板甩来一句话：“帮我点开京东首页→搜‘无线耳机’→拉到第3个商品→截图价格”，我却要花 42 行代码：
+启动 ChromeOptions 加一堆规避检测参数 等首页加载完再等搜索框可点击 输入后显式等搜索按钮出现再 click 解析商品列表时得用 XPath 定位“第3个含‘自营’且非广告”的节点 滚动到该元素再截图…… 直到公司内部 Hackathon 上，隔壁组小哥用 Claude Code + Chrome MCP，10 分钟做完同一件事。更魔幻的是——产品同学现场语音说：“把刚才脚本改成去小红书搜‘降噪耳机测评’，只取笔记标题和点赞数”，他敲了三行指令，回车，跑通。页面结构早因灰度改版变了个样，但脚本没崩，因为 LLM 理解了“标题”和“点赞数”的语义，而不是死磕 class="note-title"。那一刻我关掉了 PyCharm，打开了终端。
+...</p></div><footer class=entry-footer><span title='2026-03-25 11:49:54.22 +0000 UTC'>March 25, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 告别Selenium！Claude Code + Chrome MCP 实现自然语言驱动的零代码浏览器自动化" href=https://zhitong.uk/posts/2026-03-25-gbseleniumclaudecodechromemcps/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>SkillsHub开发者实测：部署3小时，崩溃5次——OpenClaw的稳定性幻觉</h2></header><div class=entry-content><p>核心观点：OpenClaw并非“开箱即稳”，其宣称的生产就绪性存在显著预期差——稳定性幻觉源于测试场景窄、监控缺位与社区支持断层 在SkillsHub团队将OpenClaw v0.4.1接入智能工单路由Agent流水线的第37分钟，系统首次崩溃——Killed process (python3) total-vm:5212348kB, anon-rss:4721924kB。此后3小时内，我们复现了5次完全一致的OOM终止（间隔均值37±4分钟），全部发生在多工具链深度调用阶段。这组实测数据，直接锚定了一个被厂商白皮书刻意模糊的关键事实：OpenClaw的“高可用”承诺，仅成立在单轮Demo、无状态Mock、CPU负载&lt;30%的真空环境中。
+我们将其定义为——稳定性幻觉（Stability Illusion）：一种由文档完备性、Demo流畅度与Benchmark分数共同构建的认知偏差。当开发者看到《OpenClaw Architecture Guide》中详尽的状态机图、quickstart.py里3秒完成天气+股票+翻译三跳调用、以及MLPerf-Agents榜单上亮眼的89.2分吞吐时，极易误判其在真实业务流中的鲁棒性。这种幻觉不是偶然疏忽，而是系统性验证缺位的结果。
+为剥离幻觉、回归工程本质，我们在完全一致的硬件环境（AWS c6i.4xlarge, 16vCPU/32GB RAM, Ubuntu 22.04）下，对三大主流LLM编排框架进行同负载压力对照测试（模拟客服对话Agent：每轮触发2–4个外部Tool，含HTTP调用、JSON解析、异步状态同步）：
+框架 版本 测试时长 崩溃次数 典型故障现象 OpenClaw 0.4.1 3h 5 Killed process, JSONDecodeError, RuntimeError: Event loop is closed LangChain v0.1.20 3h 0 稳定运行，RSS波动&lt;8%，P99延迟≤1.2s LlamaIndex 0.10.42 3h 1 软故障：TimeoutError后自动重试恢复，无进程退出 这一结果绝非偶然。它揭示了一个残酷现实：框架的“生产就绪”不能由功能完备性背书，而必须由故障耐受性定义。当LangChain在同等压力下零崩溃，而OpenClaw每37分钟必然倒下一次时，“开箱即稳”已不再是营销话术，而是需要被严肃质疑的技术债务信号。
+实测复盘：5次崩溃的根因图谱（非随机故障，而是系统性设计缺陷） 我们对5次崩溃日志、/proc/[pid]/status快照、py-spy record火焰图及strace -e trace=memory输出进行了交叉溯源，发现所有故障均可归入三类可复现、可预防的设计缺陷，而非偶发环境异常：
+▪️ 内存泄漏型（3次）：Agent调度器的“渐进式窒息” 当Agent执行>12轮连续多工具调用（如：查订单→调物流API→解析轨迹→生成摘要→发送通知），agent_scheduler.py 中的 _schedule_next_step() 方法持续向 self._pending_tasks 列表追加未清理的 asyncio.Task 对象。更致命的是，其 ToolExecutor 缓存机制未实现LRU淘汰，导致每个工具实例（含完整HTTP Session、Response Body副本）被永久驻留内存。
+...</p></div><footer class=entry-footer><span title='2026-03-21 02:54:08.176 +0000 UTC'>March 21, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to SkillsHub开发者实测：部署3小时，崩溃5次——OpenClaw的稳定性幻觉" href=https://zhitong.uk/posts/2026-03-21-skillshubkfzscbs3xsbk5copencla/></a></article><footer class=page-footer><nav class=pagination><a class=next href=https://zhitong.uk/posts/page/2/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>

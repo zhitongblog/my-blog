@@ -1,26 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>深度工作 on 智通和你一起学AI</title>
-    <link>http://localhost:1313/tags/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C/</link>
-    <description>Recent content in 深度工作 on 智通和你一起学AI</description>
-    <generator>Hugo -- 0.154.5</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Mon, 27 Jan 2025 20:50:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>【AI与古文写作】拒绝“戏说味”：如何用AI还原秦代的“法家冷峻风”</title>
-      <link>http://localhost:1313/posts/2026-01-27-use-ai2/</link>
-      <pubDate>Mon, 27 Jan 2025 20:50:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/2026-01-27-use-ai2/</guid>
-      <description>&lt;p&gt;在写历史小说时，很多作者（包括我）都会遇到一个两难的困境：写得太白话，像披着古装的现代人；写得太文言，读者的阅读门槛又太高。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>深度工作 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C/</link><description>Recent content in 深度工作 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Jan 2025 20:50:00 +0800</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E6%B7%B1%E5%BA%A6%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>【AI与古文写作】拒绝“戏说味”：如何用AI还原秦代的“法家冷峻风”</title><link>https://zhitong.uk/posts/2026-01-27-use-ai2/</link><pubDate>Mon, 27 Jan 2025 20:50:00 +0800</pubDate><guid>https://zhitong.uk/posts/2026-01-27-use-ai2/</guid><description>&lt;p&gt;在写历史小说时，很多作者（包括我）都会遇到一个两难的困境：写得太白话，像披着古装的现代人；写得太文言，读者的阅读门槛又太高。&lt;/p&gt;
 &lt;p&gt;尤其是写&lt;strong&gt;秦朝&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;秦代的文风不同于汉赋的华丽，更不同于明清小说的通俗。秦尚法家，文风**“辞意峻激，质朴无华”**。那种透在骨子里的霸道和冷峻，非常难拿捏。&lt;/p&gt;
 &lt;p&gt;今天，作为“AI 与古文”系列的第一期，我做了一个实验：&lt;strong&gt;能不能让 AI 忘掉那些电视剧台词，真正写出“秦风”？&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;一-实验目标&#34;&gt;一、 实验目标&lt;/h2&gt;
+&lt;h2 id="一-实验目标"&gt;一、 实验目标&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;场景：&lt;/strong&gt; 秦始皇刚刚统一六国，要颁布“书同文”的诏书。
 &lt;strong&gt;难点：&lt;/strong&gt; 避免出现“奉天承运”（这是明清才有的）、“天下苍生”（太儒家了，秦不吃这一套）等穿越词汇。&lt;/p&gt;
-&lt;h2 id=&#34;二-第一轮测试惨不忍睹的古装剧风&#34;&gt;二、 第一轮测试：惨不忍睹的“古装剧风”&lt;/h2&gt;
+&lt;h2 id="二-第一轮测试惨不忍睹的古装剧风"&gt;二、 第一轮测试：惨不忍睹的“古装剧风”&lt;/h2&gt;
 &lt;p&gt;我首先尝试了直接提问（Zero-shot）：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;指令：&lt;/strong&gt; “请模仿秦始皇的语气，写一道推行小篆、统一文字的诏书。”&lt;/p&gt;
@@ -35,7 +20,7 @@
 &lt;li&gt;&lt;strong&gt;“心系天下苍生”：&lt;/strong&gt; 这是儒家的仁爱思想，不是法家的逻辑。秦始皇的逻辑应该是“便于统治”、“法令严明”。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;“朕心甚痛”：&lt;/strong&gt; 始皇帝不会这么情绪化。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;三-第二轮测试投喂语料进行风格迁移&#34;&gt;三、 第二轮测试：投喂“语料”进行风格迁移&lt;/h2&gt;
+&lt;h2 id="三-第二轮测试投喂语料进行风格迁移"&gt;三、 第二轮测试：投喂“语料”进行风格迁移&lt;/h2&gt;
 &lt;p&gt;为了纠正 AI 的“口音”，我必须给它喂招。我找来了李斯的《谏逐客书》和琅琊台刻石的原文，提取了其中的高频词和句式。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;优化后的 Prompt（提示词）：&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -63,19 +48,12 @@
 &lt;li&gt;&lt;strong&gt;“法令难通，吏治不仅”&lt;/strong&gt;：抓住了秦推行小篆的真实动机——为了行政效率。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;“敢有……以律论罪”&lt;/strong&gt;：这才是法家的铁腕手段，没有任何温情脉脉。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;四-实验结论&#34;&gt;四、 实验结论&lt;/h2&gt;
+&lt;h2 id="四-实验结论"&gt;四、 实验结论&lt;/h2&gt;
 &lt;p&gt;通过这次实验，我总结出用 AI 写“古文”的两个核心心法：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;去道德化（De-moralization）：&lt;/strong&gt; AI 默认的模型包含太多现代的普世价值（爱、和平、方便）。写历史（特别是乱世或法家时代），必须强制关掉这些“道德滤镜”，回到那个时代的生存逻辑。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;关键词锚定（Keyword Anchoring）：&lt;/strong&gt; 不要只说“写古文”，要扔给它具体的“词袋”。比如写秦朝，扔给它“黔首、六合、法度”；写宋朝，扔给它“勾栏、官家、且去”。&lt;/li&gt;
-&lt;/ol&gt;</description>
-    </item>
-    <item>
-      <title>在信息洪流中修筑堤坝：AI时代的深度学习与“数字极简”</title>
-      <link>http://localhost:1313/posts/2026-01-26-learn-ai2/</link>
-      <pubDate>Sun, 26 Jan 2025 20:50:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/2026-01-26-learn-ai2/</guid>
-      <description>&lt;hr&gt;
+&lt;/ol&gt;</description></item><item><title>在信息洪流中修筑堤坝：AI时代的深度学习与“数字极简”</title><link>https://zhitong.uk/posts/2026-01-26-learn-ai2/</link><pubDate>Sun, 26 Jan 2025 20:50:00 +0800</pubDate><guid>https://zhitong.uk/posts/2026-01-26-learn-ai2/</guid><description>&lt;hr&gt;
 &lt;p&gt;如果你关注了几个科技媒体或 AI 领域的博主，你的早晨大概率是这样开始的：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“重磅！GPT-5 疑似泄露，能力逆天！”
@@ -85,20 +63,20 @@
 &lt;p&gt;每天醒来，我们都被迫面对一场信息的海啸。在 AI 时代，技术迭代的单位从“年”变成了“周”，甚至是“天”。这种**“加速主义”&lt;strong&gt;带来了一种普遍的群体性焦虑——不仅是害怕被替代，更是害怕&lt;/strong&gt;“跟不上”**。&lt;/p&gt;
 &lt;p&gt;于是，我们成了患有“数字松鼠症”的人：收藏了上百个工具网站，保存了几 T 的教程视频，但内心却越来越空虚。&lt;/p&gt;
 &lt;p&gt;作为这个博客“开篇三部曲”的终章，我想聊聊一个看似矛盾的话题：&lt;strong&gt;在 AI 拼命加速的时候，我们需要学会“减速”。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;一-收藏不等于拥有吞咽不等于消化&#34;&gt;一、 收藏不等于拥有，吞咽不等于消化&lt;/h2&gt;
+&lt;h2 id="一-收藏不等于拥有吞咽不等于消化"&gt;一、 收藏不等于拥有，吞咽不等于消化&lt;/h2&gt;
 &lt;p&gt;我在学习日语（备战 N1）的过程中，曾犯过一个典型的错误。&lt;/p&gt;
 &lt;p&gt;我下载了各种 AI 翻译插件、语音识别工具，甚至用 AI 生成了数千张单词卡片。看起来我的装备无比精良，但在做听力真题时，我依然听不懂那些细微的语感差别。&lt;/p&gt;
 &lt;p&gt;后来，我关掉了所有 AI 辅助工具，回归到最笨的方法：&lt;strong&gt;听写（Dictation）&lt;/strong&gt;。哪怕一个句子要听十遍，哪怕手写得手腕酸痛。&lt;/p&gt;
 &lt;p&gt;神奇的是，正是这种“笨功夫”，让我真正掌握了语言的节奏。&lt;/p&gt;
 &lt;p&gt;这让我意识到：&lt;strong&gt;AI 可以帮我们无限地压缩“产出”的时间，但它无法压缩我们要“内化”一项技能所必须付出的认知成本。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;知识的获取可以加速，但智慧的生长必须从容。当我们忙着吞咽信息流时，其实丧失了反刍和消化的能力。&lt;/p&gt;
-&lt;h2 id=&#34;二-弱水三千只取一瓢&#34;&gt;二、 弱水三千，只取一瓢&lt;/h2&gt;
+&lt;h2 id="二-弱水三千只取一瓢"&gt;二、 弱水三千，只取一瓢&lt;/h2&gt;
 &lt;p&gt;面对每天涌现的新工具，我的策略是：&lt;strong&gt;极度的克制。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;不要试图做一个“万能工具通”。你不需要知道市面上那 500 个写作 AI 哪一个更好，你只需要挑选&lt;strong&gt;最顺手的一个&lt;/strong&gt;，然后把它用到极致。&lt;/p&gt;
 &lt;p&gt;曾有一位武术宗师说过：“我不怕练过一万种踢腿的人，我只怕把一种踢腿练过一万次的人。”&lt;/p&gt;
 &lt;p&gt;在 AI 时代，这句话依然是真理。一个能把 ChatGPT 的逻辑推理挖掘到极限的人，远比那些每天换一个新工具尝鲜、却只会在对话框里打“你好”的人，更有竞争力。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;数字极简主义，不是拒绝工具，而是拒绝被工具的更迭牵着鼻子走。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;三-保留一片不插电的自留地&#34;&gt;三、 保留一片“不插电”的自留地&lt;/h2&gt;
+&lt;h2 id="三-保留一片不插电的自留地"&gt;三、 保留一片“不插电”的自留地&lt;/h2&gt;
 &lt;p&gt;作为一名小说创作者，我发现过度依赖 AI 会带来一个副作用：&lt;strong&gt;想象力的同质化。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;因为 AI 的底层逻辑是概率，它总是倾向于给出“最大公约数”的平庸答案。如果你长期浸泡在 AI 生成的内容里，你的审美会被不知不觉地拉向平庸。&lt;/p&gt;
 &lt;p&gt;所以，我给自己定了一个规矩：&lt;strong&gt;每日必有“离线时刻”。&lt;/strong&gt;&lt;/p&gt;
@@ -106,8 +84,5 @@
 可能是读几页纸质书，可能是用钢笔在笔记本上乱涂乱画，也可能只是看着窗外发呆。&lt;/p&gt;
 &lt;p&gt;在这个疯狂加速的时代，“无聊”成了一种奢侈品。但请记住，&lt;strong&gt;人类最伟大的灵感，往往不是在疯狂点击鼠标时产生的，而是在发呆、散步、淋浴这些大脑“离线”的时刻涌现的。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;我们要利用 AI 来处理那些重复、繁琐的垃圾时间，正是为了把我们自己从琐事中解放出来，去享受那些真正属于人类的高质量思考时间。&lt;/p&gt;
-&lt;h2 id=&#34;四-结语&#34;&gt;四、 结语&lt;/h2&gt;
-&lt;p&gt;技术是一条奔腾的河流，我们很容易被它裹挟而下，不知所踪。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;h2 id="四-结语"&gt;四、 结语&lt;/h2&gt;
+&lt;p&gt;技术是一条奔腾的河流，我们很容易被它裹挟而下，不知所踪。&lt;/p&gt;</description></item></channel></rss>

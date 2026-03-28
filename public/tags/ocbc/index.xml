@@ -1,22 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>OCBC on 智通和你一起学AI</title>
-    <link>http://localhost:1313/tags/ocbc/</link>
-    <description>Recent content in OCBC on 智通和你一起学AI</description>
-    <generator>Hugo -- 0.154.5</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 04 Feb 2026 14:30:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ocbc/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>【2026 更新版】WildCard 停运后，中国境内如何申请海外银行卡刷 AI？</title>
-      <link>http://localhost:1313/posts/2026-02-04-%E6%B5%B7%E5%A4%96%E5%8A%9E%E5%8D%A1%E6%8C%87%E5%8D%97/</link>
-      <pubDate>Wed, 04 Feb 2026 14:30:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/2026-02-04-%E6%B5%B7%E5%A4%96%E5%8A%9E%E5%8D%A1%E6%8C%87%E5%8D%97/</guid>
-      <description>&lt;p&gt;曾被很多人推崇的 WildCard 已经成为历史。随着风控收紧，曾经“躺着开卡”的时代结束了。但作为开发者和 AI 重度用户，我们依然需要稳定的支付手段。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>OCBC on 智通和你一起学AI</title><link>https://zhitong.uk/tags/ocbc/</link><description>Recent content in OCBC on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Wed, 04 Feb 2026 14:30:00 +0800</lastBuildDate><atom:link href="https://zhitong.uk/tags/ocbc/index.xml" rel="self" type="application/rss+xml"/><item><title>【2026 更新版】WildCard 停运后，中国境内如何申请海外银行卡刷 AI？</title><link>https://zhitong.uk/posts/2026-02-04-%E6%B5%B7%E5%A4%96%E5%8A%9E%E5%8D%A1%E6%8C%87%E5%8D%97/</link><pubDate>Wed, 04 Feb 2026 14:30:00 +0800</pubDate><guid>https://zhitong.uk/posts/2026-02-04-%E6%B5%B7%E5%A4%96%E5%8A%9E%E5%8D%A1%E6%8C%87%E5%8D%97/</guid><description>&lt;p&gt;曾被很多人推崇的 WildCard 已经成为历史。随着风控收紧，曾经“躺着开卡”的时代结束了。但作为开发者和 AI 重度用户，我们依然需要稳定的支付手段。&lt;/p&gt;
 &lt;p&gt;经过实测，我整理了目前 &lt;strong&gt;2026 年依然存活且好用&lt;/strong&gt; 的三大替代方案。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;一-方案-a目前最稳的正规军--新加坡-ocbc-华侨银行&#34;&gt;一、 方案 A：目前最稳的“正规军” —— 新加坡 OCBC (华侨银行)&lt;/h2&gt;
+&lt;h2 id="一-方案-a目前最稳的正规军--新加坡-ocbc-华侨银行"&gt;一、 方案 A：目前最稳的“正规军” —— 新加坡 OCBC (华侨银行)&lt;/h2&gt;
 &lt;p&gt;这是目前国内用户&lt;strong&gt;唯一&lt;/strong&gt;能远程开立的、正规实体受监管的海外银行账户。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;申请条件：&lt;/strong&gt; 护照（必须）、手机带 NFC 功能、大陆手机号。&lt;/li&gt;
@@ -30,7 +15,7 @@
 &lt;li&gt;&lt;strong&gt;注意事项：&lt;/strong&gt; 账户需要入金（约 1000 新币）激活以豁免首年管理费。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;二-方案-b最像虚拟卡的新宠--redotpay-红点&#34;&gt;二、 方案 B：最像虚拟卡的“新宠” —— RedotPay (红点)&lt;/h2&gt;
+&lt;h2 id="二-方案-b最像虚拟卡的新宠--redotpay-红点"&gt;二、 方案 B：最像虚拟卡的“新宠” —— RedotPay (红点)&lt;/h2&gt;
 &lt;p&gt;如果你的护照还没办下来，或者想找一个像 WildCard 一样快速开卡的工具，RedotPay 是目前的替代首选。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;申请条件：&lt;/strong&gt; 身份证即可，需通过 KYC 认证。&lt;/li&gt;
@@ -43,21 +28,14 @@
 &lt;li&gt;&lt;strong&gt;缺点：&lt;/strong&gt; 它是加密货币预付卡，每次消费会有转换费，适合作为“消耗卡”使用。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;三-方案-c全球资金中转站--wise-大名鼎鼎&#34;&gt;三、 方案 C：全球资金中转站 —— Wise (大名鼎鼎)&lt;/h2&gt;
-&lt;p&gt;如果你已经有了 OCBC 或其他外币账户，Wise 是你节省手续费的神器。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>【保姆级】人在国内，0门槛开通新加坡 OCBC 银行卡：全网最全避坑指南</title>
-      <link>http://localhost:1313/posts/%E5%A6%82%E4%BD%95%E5%8A%9E%E7%90%86%E4%B8%80%E5%BC%A0%E6%B5%B7%E5%A4%96%E9%93%B6%E8%A1%8C%E5%8D%A1/</link>
-      <pubDate>Fri, 30 Jan 2026 14:32:34 +0800</pubDate>
-      <guid>http://localhost:1313/posts/%E5%A6%82%E4%BD%95%E5%8A%9E%E7%90%86%E4%B8%80%E5%BC%A0%E6%B5%B7%E5%A4%96%E9%93%B6%E8%A1%8C%E5%8D%A1/</guid>
-      <description>&lt;p&gt;作为一名身在国内的产品经理，我深知“拥有一张海外银行卡”对我们意味着什么。&lt;/p&gt;
+&lt;h2 id="三-方案-c全球资金中转站--wise-大名鼎鼎"&gt;三、 方案 C：全球资金中转站 —— Wise (大名鼎鼎)&lt;/h2&gt;
+&lt;p&gt;如果你已经有了 OCBC 或其他外币账户，Wise 是你节省手续费的神器。&lt;/p&gt;</description></item><item><title>【保姆级】人在国内，0门槛开通新加坡 OCBC 银行卡：全网最全避坑指南</title><link>https://zhitong.uk/posts/%E5%A6%82%E4%BD%95%E5%8A%9E%E7%90%86%E4%B8%80%E5%BC%A0%E6%B5%B7%E5%A4%96%E9%93%B6%E8%A1%8C%E5%8D%A1/</link><pubDate>Fri, 30 Jan 2026 14:32:34 +0800</pubDate><guid>https://zhitong.uk/posts/%E5%A6%82%E4%BD%95%E5%8A%9E%E7%90%86%E4%B8%80%E5%BC%A0%E6%B5%B7%E5%A4%96%E9%93%B6%E8%A1%8C%E5%8D%A1/</guid><description>&lt;p&gt;作为一名身在国内的产品经理，我深知“拥有一张海外银行卡”对我们意味着什么。&lt;/p&gt;
 &lt;p&gt;它是我们订阅 &lt;strong&gt;ChatGPT Plus / Claude Pro&lt;/strong&gt; 的通行证，是接收 &lt;strong&gt;Stripe / App Store&lt;/strong&gt; 美元收入的蓄水池，更是我们在全球化浪潮中配置资产的必需品。&lt;/p&gt;
 &lt;p&gt;但在过去，要想拥有一张正规的离岸账户，要么得存几十万买理财（如汇丰），要么得肉身飞一趟香港或新加坡。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;好消息是：现在有一个巨大的“上帝漏洞”——新加坡 OCBC（华侨银行）。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;哪怕你此刻正坐在北京的办公室里，穿着拖鞋，只要你有护照，15 分钟内你就能拥有一个新加坡账户。&lt;/p&gt;
 &lt;p&gt;今天，我就手把手教你如何“薅”这个羊毛，以及如何避开那些隐蔽的“管理费”大坑。&lt;/p&gt;
-&lt;h2 id=&#34;一-ocbc-是什么靠谱吗&#34;&gt;一、 OCBC 是什么？靠谱吗？&lt;/h2&gt;
+&lt;h2 id="一-ocbc-是什么靠谱吗"&gt;一、 OCBC 是什么？靠谱吗？&lt;/h2&gt;
 &lt;p&gt;很多朋友一听到“网申”，第一反应是：这是不是那种野鸡虚拟银行？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;绝对不是。&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -65,7 +43,7 @@
 &lt;li&gt;&lt;strong&gt;安全：&lt;/strong&gt; 你的钱是受**新加坡存款保险（SDIC）**保障的（最高 7.5 万新币，约合 40 万人民币）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;性质：&lt;/strong&gt; 你申请到的是&lt;strong&gt;正规实体银行账户&lt;/strong&gt;，有独立的 Swift Code 和银行账号。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;二-谁能申请门槛极低&#34;&gt;二、 谁能申请？（门槛极低）&lt;/h2&gt;
+&lt;h2 id="二-谁能申请门槛极低"&gt;二、 谁能申请？（门槛极低）&lt;/h2&gt;
 &lt;p&gt;这就是我说的“漏洞”所在。目前 OCBC 对中国大陆用户的政策友好得令人发指。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;硬性条件只有 3 个：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -74,11 +52,8 @@
 &lt;li&gt;&lt;strong&gt;一台带 NFC 功能的手机&lt;/strong&gt;（大部分 iPhone 和近 3 年的安卓机都有，用于感应读取护照芯片）。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;不需要&lt;/strong&gt;长期签证，&lt;strong&gt;不需要&lt;/strong&gt;新加坡地址，&lt;strong&gt;不需要&lt;/strong&gt;存款证明。&lt;/p&gt;
-&lt;h2 id=&#34;三-费用详解全网最强避坑&#34;&gt;三、 费用详解（全网最强避坑）&lt;/h2&gt;
+&lt;h2 id="三-费用详解全网最强避坑"&gt;三、 费用详解（全网最强避坑）&lt;/h2&gt;
 &lt;p&gt;虽然&lt;strong&gt;开户免费&lt;/strong&gt;，但作为一家老牌资本主义银行，OCBC 的收费名目繁多。如果不注意，你的钱会被慢慢扣光。&lt;/p&gt;
 &lt;p&gt;请务必看懂下面这段**“智通保号秘籍”**。&lt;/p&gt;
-&lt;h3 id=&#34;1-默认账户的管理费陷阱&#34;&gt;1. 默认账户的“管理费”陷阱&lt;/h3&gt;
-&lt;p&gt;当你开户成功后，系统默认给你开通的是 &lt;strong&gt;Statement Savings Account (SSA)&lt;/strong&gt;，通常也叫 &lt;strong&gt;360 账户&lt;/strong&gt;。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;h3 id="1-默认账户的管理费陷阱"&gt;1. 默认账户的“管理费”陷阱&lt;/h3&gt;
+&lt;p&gt;当你开户成功后，系统默认给你开通的是 &lt;strong&gt;Statement Savings Account (SSA)&lt;/strong&gt;，通常也叫 &lt;strong&gt;360 账户&lt;/strong&gt;。&lt;/p&gt;</description></item></channel></rss>

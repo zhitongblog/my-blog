@@ -1,6 +1,6 @@
 ---
 title: "开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）"
-date: 2026-03-25T12:57:16.542Z
+date: 2026-03-27T12:57:16.542Z
 draft: false
 description: "详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。"
 tags:

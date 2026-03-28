@@ -1,43 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>职场 on 智通和你一起学AI</title>
-    <link>http://localhost:1313/categories/%E8%81%8C%E5%9C%BA/</link>
-    <description>Recent content in 职场 on 智通和你一起学AI</description>
-    <generator>Hugo -- 0.154.5</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sun, 15 Feb 2026 23:41:28 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E8%81%8C%E5%9C%BA/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>职场残酷真相：AI浪潮下，哪种人最先被踢出局？</title>
-      <link>http://localhost:1313/posts/20260215-234128-zcckzxailcxnzrzxbtcj/</link>
-      <pubDate>Sun, 15 Feb 2026 23:41:28 +0800</pubDate>
-      <guid>http://localhost:1313/posts/20260215-234128-zcckzxailcxnzrzxbtcj/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/20260215-234052-zcckzxailcxnzrzxbtcj.png&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;职场残酷真相ai浪潮下哪种人最先被踢出局&#34;&gt;职场残酷真相：AI浪潮下，哪种人最先被踢出局？&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>职场 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/%E8%81%8C%E5%9C%BA/</link><description>Recent content in 职场 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sun, 15 Feb 2026 23:41:28 +0800</lastBuildDate><atom:link href="https://zhitong.uk/categories/%E8%81%8C%E5%9C%BA/index.xml" rel="self" type="application/rss+xml"/><item><title>职场残酷真相：AI浪潮下，哪种人最先被踢出局？</title><link>https://zhitong.uk/posts/20260215-234128-zcckzxailcxnzrzxbtcj/</link><pubDate>Sun, 15 Feb 2026 23:41:28 +0800</pubDate><guid>https://zhitong.uk/posts/20260215-234128-zcckzxailcxnzrzxbtcj/</guid><description>&lt;p&gt;&lt;img loading="lazy" src="https://zhitong.uk/images/20260215-234052-zcckzxailcxnzrzxbtcj.png"&gt;&lt;/p&gt;
+&lt;h1 id="职场残酷真相ai浪潮下哪种人最先被踢出局"&gt;职场残酷真相：AI浪潮下，哪种人最先被踢出局？&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;时间：2026年2月15日&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;刚刚过去的这个春节，似乎比往年多了一些复杂的味道。大家都在讨论“2026川渝春节联欢晚会”上的精彩节目，感慨“年味，热气腾腾”的久违回归。然而，随着正月过去，复工的闹钟响起，职场人不得不从温馨的节日氛围中迅速抽离，面对那个老生常谈却又日益紧迫的问题：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;在AI全面渗透业务流的2026年，到底是写代码的程序员重要，还是画原型的产品经理重要？&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如果不把这层窗户纸捅破，很多人可能连自己是怎么“死”的都不知道。今天，我们就借着复工这杯“醒脑茶”，聊聊这个残酷的真相。&lt;/p&gt;
-&lt;h2 id=&#34;误区你以为的护城河其实只是眼镜布&#34;&gt;误区：你以为的“护城河”，其实只是“眼镜布”&lt;/h2&gt;
+&lt;h2 id="误区你以为的护城河其实只是眼镜布"&gt;误区：你以为的“护城河”，其实只是“眼镜布”&lt;/h2&gt;
 &lt;p&gt;最近热搜上有一个冷知识：“才知道眼镜布不是用来擦眼镜的”。原来，眼镜布的主要功能是包裹眼镜，防止镜片在眼镜盒里被磨损。如果你一直拿粗糙的眼镜布使劲擦镜片，只会越擦越花。&lt;/p&gt;
 &lt;p&gt;这个隐喻放在2026年的职场再合适不过了。&lt;/p&gt;
 &lt;p&gt;在过去两年AI大模型爆发式迭代的背景下，程序员和产品经理的很多传统职能，就像那块“被误用的眼镜布”。&lt;/p&gt;
 &lt;p&gt;对于程序员来说，如果你还认为自己的核心价值是“熟练背诵API”或“手写增删改查（CRUD）代码”，那你已经站在了悬崖边上。现在的AI辅助编程工具，生成一段完美运行的基础业务代码只需几秒钟。&lt;strong&gt;拼手速、拼记忆力？你拼不过硅基生命。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;对于产品经理（PM）来说，如果你把写PRD文档、画线框图当作看家本领，那你同样危险。现在的AI不仅能根据简短指令生成详尽的需求文档，甚至能直接输出高保真的UI界面。&lt;/p&gt;
 &lt;p&gt;所以，争论“谁更重要”本身就是个伪命题。&lt;strong&gt;真正被踢出局的，不是某个职位，而是那些抱着旧技能包、充当“二传手”和“搬运工”的人。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;程序员的危机从建筑师退化为装修工&#34;&gt;程序员的危机：从“建筑师”退化为“装修工”&lt;/h2&gt;
+&lt;h2 id="程序员的危机从建筑师退化为装修工"&gt;程序员的危机：从“建筑师”退化为“装修工”&lt;/h2&gt;
 &lt;p&gt;到了2026年，技术的门槛看似降低了，实则对“深度”的要求极高。&lt;/p&gt;
 &lt;p&gt;我见过不少被裁掉的程序员，他们最大的问题在于**“离业务太远，离代码太近”**。他们沉迷于技术实现的细节，却不关心这行代码到底创造了什么商业价值。&lt;/p&gt;
 &lt;p&gt;AI时代，代码不再是稀缺资源，&lt;strong&gt;系统架构设计能力&lt;/strong&gt;和&lt;strong&gt;复杂问题的工程化解法&lt;/strong&gt;才是。&lt;/p&gt;
 &lt;p&gt;那些只会等着PM喂饭、接到需求不假思索就开始敲键盘的程序员，正在迅速贬值。相反，那些能够利用AI工具一人抵一个团队，不仅懂技术还能理解业务逻辑的“全栈工程师”，正成为企业疯抢的对象。他们不再是单纯的执行者，而是通过AI指挥千军万马的“指挥官”。&lt;/p&gt;
-&lt;h2 id=&#34;产品经理的困境只会传话的人没有未来&#34;&gt;产品经理的困境：只会“传话”的人没有未来&lt;/h2&gt;
+&lt;h2 id="产品经理的困境只会传话的人没有未来"&gt;产品经理的困境：只会“传话”的人没有未来&lt;/h2&gt;
 &lt;p&gt;再看产品经理。前几天有个热搜新闻：“谈好330万签约前一夜买家再砍40万”。这反映了真实商业世界的复杂性——充满了博弈、情绪和非理性。&lt;/p&gt;
 &lt;p&gt;这恰恰是AI目前最难攻克的领域，也是优秀产品经理的生存空间。&lt;/p&gt;
 &lt;p&gt;然而，现实中大量PM的工作状态是什么？是“传声筒”。老板说要做个A功能，他转头告诉开发；运营说B功能不好用，他转头让开发改。这种缺乏独立判断、仅做信息中转的PM，在2026年就是第一批“优化”对象。&lt;/p&gt;
 &lt;p&gt;因为AI处理信息的效率比你高一万倍。如果只是整理需求、输出文档，企业完全可以训练一个垂类模型来替代你。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;能够留下的PM，必须具备一种AI无法模拟的能力：洞察人性与商业博弈。&lt;/strong&gt; 你要能像处理那桩房产交易一样，在各方利益冲突中找到平衡点，在模糊不清的市场信号中做出决策。&lt;/p&gt;
-&lt;h2 id=&#34;路由器哲学谁能打通价值谁就是赢家&#34;&gt;“路由器”哲学：谁能打通价值，谁就是赢家&lt;/h2&gt;
+&lt;h2 id="路由器哲学谁能打通价值谁就是赢家"&gt;“路由器”哲学：谁能打通价值，谁就是赢家&lt;/h2&gt;
 &lt;p&gt;这就引出了另一个有趣的话题：“路由器到底怎么摆网速才更快”。&lt;/p&gt;
 &lt;p&gt;在职场这张大网中，最有价值的人，往往就是那个摆放位置最正确的“路由器”。&lt;/p&gt;
 &lt;p&gt;2026年的赢家，既不是纯粹的技术极客，也不是只会画饼的PPT大师，而是**“技术型产品人”&lt;strong&gt;或&lt;/strong&gt;“产品型开发者”**。&lt;/p&gt;
@@ -46,36 +31,29 @@
 &lt;li&gt;&lt;strong&gt;对产品经理而言&lt;/strong&gt;：你要懂技术边界。你不需要会写代码，但你必须理解AI的能力上限在哪里，如何利用现有的技术栈以最低成本实现目标。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;界限正在模糊。老板们只关心一件事：&lt;strong&gt;谁能用最少的人工成本，把这事儿给办成了。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;结语别做工具的奴隶做工具的主人&#34;&gt;结语：别做工具的奴隶，做工具的主人&lt;/h2&gt;
+&lt;h2 id="结语别做工具的奴隶做工具的主人"&gt;结语：别做工具的奴隶，做工具的主人&lt;/h2&gt;
 &lt;p&gt;回到开头的问题：哪种人最先被踢出局？&lt;/p&gt;
 &lt;p&gt;答案是：&lt;strong&gt;那些试图与AI比拼“执行力”的人。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如果你的工作产出是可以被标准化的（无论是标准的代码块，还是标准的文档），那你就是那个即将被替代的“标准件”。&lt;/p&gt;
 &lt;p&gt;正如那位“3个月卖3万只酱鸭9年没回家过年”的老板一样，他成功的核心不是因为他切鸭子比机器快，而是他懂得经营、懂得坚持、懂得在这个充满烟火气的人世间建立连接。&lt;/p&gt;
 &lt;p&gt;在2026年，无论你是写代码的，还是提需求的，请记住：&lt;strong&gt;AI是你的副驾驶，不要让它把着方向盘。你的不可替代性，藏在你对业务的深刻理解、对人性的精准把握，以及解决复杂问题的决策力里。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;别再纠结谁重要了。&lt;strong&gt;能解决问题的人，最重要。&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>特斯拉断电与无人洗车纠纷：2026年硬件PM的职业容错率正在归零。</title>
-      <link>http://localhost:1313/posts/20260209-155509-tslddywrxcjf2026nyjpmdzyrclzzgl/</link>
-      <pubDate>Mon, 09 Feb 2026 15:55:09 +0800</pubDate>
-      <guid>http://localhost:1313/posts/20260209-155509-tslddywrxcjf2026nyjpmdzyrclzzgl/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/20260209-154122-tslddywrxcjf2026nyjpmdzyrclzzgl.png&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;特斯拉断电与无人洗车纠纷2026年硬件pm的职业容错率正在归零&#34;&gt;特斯拉断电与无人洗车纠纷：2026年硬件PM的职业容错率正在归零&lt;/h2&gt;
+&lt;p&gt;别再纠结谁重要了。&lt;strong&gt;能解决问题的人，最重要。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>特斯拉断电与无人洗车纠纷：2026年硬件PM的职业容错率正在归零。</title><link>https://zhitong.uk/posts/20260209-155509-tslddywrxcjf2026nyjpmdzyrclzzgl/</link><pubDate>Mon, 09 Feb 2026 15:55:09 +0800</pubDate><guid>https://zhitong.uk/posts/20260209-155509-tslddywrxcjf2026nyjpmdzyrclzzgl/</guid><description>&lt;p&gt;&lt;img loading="lazy" src="https://zhitong.uk/images/20260209-154122-tslddywrxcjf2026nyjpmdzyrclzzgl.png"&gt;&lt;/p&gt;
+&lt;h2 id="特斯拉断电与无人洗车纠纷2026年硬件pm的职业容错率正在归零"&gt;特斯拉断电与无人洗车纠纷：2026年硬件PM的职业容错率正在归零&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;日期：2026-02-09&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;在这个小年刚过的初春，科技圈并没有迎来预想中的“开门红”，而是被几起令人心惊的硬件事故刷屏。一边是特斯拉车主在高速上续航显示剩余72公里时突然断电，险些酿成大祸；另一边是无人洗车机因感应逻辑故障，“洗”坏了用户的车辆，引发万元赔偿纠纷。&lt;/p&gt;
 &lt;p&gt;如果放在五年前，这些可能被归结为“早期技术迭代的阵痛”，但在2026年的今天，这些事故不仅是产品的灾难，更是产品经理（PM）职业生涯的终结符。随着行业进入存量博弈阶段，硬件产品经理，尤其是涉及自动化、智能硬件领域的PM，正在面临一场前所未有的“职业容错率归零”危机。&lt;/p&gt;
-&lt;h3 id=&#34;告别mvp时代硬件不再允许先发布后修复&#34;&gt;告别MVP时代：硬件不再允许“先发布后修复”&lt;/h3&gt;
+&lt;h3 id="告别mvp时代硬件不再允许先发布后修复"&gt;告别MVP时代：硬件不再允许“先发布后修复”&lt;/h3&gt;
 &lt;p&gt;曾几何时，互联网思维中的“MVP（最小可行性产品）”和“小步快跑，迭代更新”被奉为圭臬。然而，2026年的市场环境已经彻底粉碎了这一逻辑在硬件领域的适用性。&lt;/p&gt;
 &lt;p&gt;近日引发热议的“特斯拉高速断电”事件，本质上是BMS（电池管理系统）策略与用户交互界面（UI）的信息脱节。在2026年，电动车早已不是新鲜事物，用户对于“显示续航”的信任度等同于油表。当显示还有72公里却突然失去动力，这在产品定义阶段属于“致命级缺陷（P0）”。&lt;/p&gt;
 &lt;p&gt;对于硬件PM而言，这意味着传统的“软件思维”正在失效。你不能指望通过OTA（空中下载技术）来修复用户在高速公路上失去动力的心理阴影，也不能通过发一个优惠券来弥补无人洗车机压坏车顶的物理损伤。&lt;/p&gt;
 &lt;p&gt;在2026年，硬件产品的交付标准从“可用”变成了“无感且完美”。一旦出现像无人洗车机这种“边缘场景（Corner Case）”覆盖不全导致的物理损毁，企业面临的不仅是类似“无人洗车洗出万元损失谁买单”的法律纠纷，更是品牌信誉的崩塌。而作为定义产品逻辑的PM，往往是问责链条上的第一张多米诺骨牌。&lt;/p&gt;
-&lt;h3 id=&#34;极致内卷下的防御性产品学&#34;&gt;极致内卷下的“防御性产品学”&lt;/h3&gt;
+&lt;h3 id="极致内卷下的防御性产品学"&gt;极致内卷下的“防御性产品学”&lt;/h3&gt;
 &lt;p&gt;2026年的职场环境有多严苛？看看新闻便知。开年以来已有11名中管干部被查，各行各业都在强化“合规”与“问责”。这种风气传导至科技行业，表现为企业对产品事故的零容忍。&lt;/p&gt;
 &lt;p&gt;硬件PM的工作重心，正在从“创新”向“风控”转移。&lt;/p&gt;
 &lt;p&gt;以前，PM的KPI是“上线了多少新功能”、“提升了多少DAU”；现在，硬件PM的核心竞争力变成了“预判了多少种死法”。以无人洗车为例，2026年的PM不仅要懂清洗流程，更要懂法律边界、保险条款以及极端情况下的传感器冗余逻辑。&lt;/p&gt;
 &lt;p&gt;如果是几年前，洗车机故障可能被视为工程部的传感器选型问题。但在今天，老板会问PM：“你在PRD（产品需求文档）里有没有定义异形车辆的识别逻辑？有没有设计紧急回退机制？如果没有，这就是你的产品设计失职。”&lt;/p&gt;
 &lt;p&gt;当下，50万亿存款迎来“搬家潮”，消费者手中的钱变得更加谨慎和挑剔。他们不会为“半成品”买单，更不会容忍因为产品设计缺陷导致的财产损失。这种市场情绪倒逼企业在招聘和考核硬件PM时，将“严谨性”置于“创造性”之上。一个极具创意的功能如果伴随着1%的严重故障率，在2026年会被毫不犹豫地砍掉，连同提出这个方案的PM一起。&lt;/p&gt;
-&lt;h3 id=&#34;职业生存指南不仅要懂技术更要懂人性恶&#34;&gt;职业生存指南：不仅要懂技术，更要懂“人性恶”&lt;/h3&gt;
+&lt;h3 id="职业生存指南不仅要懂技术更要懂人性恶"&gt;职业生存指南：不仅要懂技术，更要懂“人性恶”&lt;/h3&gt;
 &lt;p&gt;面对容错率归零的现状，2026年的硬件PM该如何避免失业风险？&lt;/p&gt;
 &lt;p&gt;首先，&lt;strong&gt;必须抛弃“理想化场景”思维。&lt;/strong&gt;
 特斯拉断电事件的教训在于，产品设计不能只看实验室里的放电曲线。PM必须考虑到电池老化、低温、高速高负荷等叠加因素下的极端工况。在撰写文档时，如果不把“最坏情况”作为默认场景，就是给自己埋雷。&lt;/p&gt;
@@ -83,9 +61,6 @@
 在无人洗车纠纷中，模糊的责任界定是导致舆论危机的关键。优秀的硬件PM在设计自动化流程时，必须同步设计“取证逻辑”。当事故发生时，产品必须能自证清白（例如完善的日志记录、多角度监控留存）。这虽然听起来不像产品经理该干的事，但在2026年，这是保住饭碗的护城河。&lt;/p&gt;
 &lt;p&gt;最后，&lt;strong&gt;敬畏物理世界的不可逆性。&lt;/strong&gt;
 软件出了Bug可以回滚，硬件出了Bug可能就是人命或巨额赔偿。近期关于“塔吊折断”的谣言虽已被辟谣，但它映射出的公众对工程安全的焦虑是真实的。硬件PM必须对物理定律保持敬畏，在成本控制（Cost Down）的大棒下，坚守安全的底线。&lt;/p&gt;
-&lt;h3 id=&#34;结语&#34;&gt;结语&lt;/h3&gt;
+&lt;h3 id="结语"&gt;结语&lt;/h3&gt;
 &lt;p&gt;2026年的春天，对于硬件产品经理来说有些寒意。当“特斯拉断电”和“洗车机伤车”成为热搜，它们实际上是行业发出的一份最后通牒：&lt;/p&gt;
-&lt;p&gt;那个靠画大饼、堆参数就能混日子的时代彻底结束了。现在的市场，不仅要求你会做产品，更要求你做的产品能经得起法律、物理规律和极端人性的三重审判。在这个“零容错”的年份里，平庸的PM将被算法优化，唯有那些能在这个充满不确定性的世界里交付确定性的PM，才能穿越周期，留在这个牌桌上。&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;p&gt;那个靠画大饼、堆参数就能混日子的时代彻底结束了。现在的市场，不仅要求你会做产品，更要求你做的产品能经得起法律、物理规律和极端人性的三重审判。在这个“零容错”的年份里，平庸的PM将被算法优化，唯有那些能在这个充满不确定性的世界里交付确定性的PM，才能穿越周期，留在这个牌桌上。&lt;/p&gt;</description></item></channel></rss>

@@ -1,322 +1,94 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Posts | 智通和你一起学AI</title>
-<meta name="keywords" content="">
-<meta name="description" content="Posts - 智通和你一起学AI">
-<meta name="author" content="智通">
-<link rel="canonical" href="http://localhost:1313/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' 
-        data-cf-beacon='{"token": "你的token"}'></script>
-
-
-</head>
-<body class="list" id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="http://localhost:1313/" title="首页">
-                    <span>首页</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/posts/" title="文章">
-                    <span class="active">文章</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/archives/" title="归档">
-                    <span>归档</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/tags/" title="标签">
-                    <span>标签</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/about/" title="关于">
-                    <span>关于</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Posts
-  </h1>
-</header>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">我和 AI “吵”了一架，才写出了满意的方案
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>很多朋友问我：“智通，你用 AI 辅助写作，是不是几分钟就能生成一章？”
-我的回答通常让他们失望：“不，有时候比我自己写还要慢。因为通过图灵测试容易，通过我的‘审美测试’很难。”
-前几天，我在构思我的新历史小说的一个关键章节时，和 AI 发生了一场激烈的“争吵”。正是这场争吵，让我意识到：人机协作的本质，不是它替你干活，而是它陪你打磨。
-一、 第一回合：平庸的“电视剧台词” 当时我想写一场重头戏：一位古代帝王（主角）在朝堂上遭遇臣子逼宫，但他必须在不动声色中掌控全局。
-我给 AI 的指令很简单：“请写一段帝王面对臣子质疑时的心理描写，要体现出他的霸气和深沉。”
-AI 很快给出了回复。我读完差点笑了——那是典型的三流古装剧台词。充满了“朕意已决”、“大胆狂徒”这种脸谱化的词汇，心理活动全是“哼，我看你怎么演”这种浅白的吐槽。
-如果我直接用了这段文字，我的小说就毁了。
-二、 第二回合：即使是 AI，也怕“较真”的产品经理 我没有重新生成，而是像一个挑剔的主编一样，开始给它下“修改意见”（或者说是找茬）：
-智通的反馈： “太肤浅了。把你生成的这段删掉。
-去掉所有形容词： 不要用‘霸气’、‘威严’这种词，要用动作细节来表现。 增加权谋感： 他不应该愤怒，他应该觉得好笑。他看到的不是一个臣子在说话，而是一颗棋子在跳动。 加入感官描写： 此时大殿很安静，写写他听到的声音，或者手里把玩的东西。” AI 沉默了几秒，重新生成了第二版。
-这一次，它写道：“皇帝轻轻转动着拇指上的玉扳指，听着台下臣子激昂的陈词，嘴角微微上扬……”
-好了一些，但还是不够。那个“嘴角上扬”太俗套了，那是反派的标准动作，不是帝王的城府。
-三、 第三回合：互相逼迫，直至“涌现” 我继续和它“吵”：
-“不要嘴角上扬！那是情绪的泄露。真正的掌控是面无表情。 让他关注一个不相干的细节，比如大殿地砖上的光影，或者窗外的一声蝉鸣。通过这种‘走神’，来反衬他对局势的绝对把控——因为这些臣子的生死，对他来说还不如一只蝉重要。”
-这一次，AI 似乎终于“听懂”了我的逻辑。它给出的第三版描述，让我眼前一亮：
-“他没有看那位跪地痛哭的御史，目光落在了大殿金砖缝隙里的一粒微尘上。日头偏西，光影把那粒灰尘拉得很长。殿下的声音很嘈杂，但在他耳中，却像隔着一层水的闷响。他甚至有些走神地想：负责打扫今日大殿的那个小太监，大概是要挨板子了。”
-这正是我想要的感觉——举重若轻的残忍，漫不经心的威压。
-四、 启示：好的答案是“磨”出来的 这场“争吵”持续了二十分钟。如果我自己写，可能也就半小时。但我依然觉得这二十分钟无比超值。
-为什么？
-因为在不断驳斥 AI 的过程中，我自己的创作意图也被逼得越来越清晰。 一开始，我只知道我要“霸气”； 在反驳它的过程中，我才意识到我真正要的是“举重若轻的残忍”。
-不是 AI 给了我灵感，而是为了驳倒它平庸的回答，我被迫调动了更深层的思考。
-五、 结语 在 AI 时代，我们不缺生成内容的工具，缺的是有品位的把关人。
-如果你用 AI，它给你什么你就收什么，那你迟早会被它同化成一个平庸的复制品。 只有当你敢于质疑它、否定它、向它提出极其苛刻的要求时，它才会从一个“废话生成器”，变成你真正的“灵感磨刀石”。
-不要怕和 AI “吵架”，真理和好作品，往往都在第 N 次修改之后。
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-26 20:03:00 +0800 CST'>January 26, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 我和 AI “吵”了一架，才写出了满意的方案" href="http://localhost:1313/posts/2026-01-26-learn-ai/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">别做“提示词工程师”，要做“AI时代的提问者
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>在过去的一年里，我见过无数人疯狂地收藏各种“AI 咒语大全”——那些长达几千字的 Prompt（提示词）模板，仿佛只要把它们复制粘贴进对话框，AI 就能瞬间吐出完美的方案，把我们从繁重的工作中解救出来。
-但现实往往是：你用着和别人一样的神级模板，却只得到了一个平庸的答案。
-为什么？因为我们搞错了一个根本逻辑。我们太急于成为一名懂技巧的“提示词工程师”，却忘记了在 AI 面前，我们首先应该是一个懂得思考的“提问者”。
-一、 AI 不是许愿池，它是你的“镜子” 很多人把 AI 当作许愿池，扔进去一个硬币（简单指令），就期待它从水里冒出来送你一把金斧头。 比如，你告诉 AI：“帮我写一篇关于时间管理的文章。” AI 会给你一篇四平八稳、全是车轱辘话的废话文学。
-因为你的大脑是模糊的，AI 的反馈自然就是混沌的。
-在 AI 时代，大模型本质上是一面镜子。它反射的不仅仅是你的知识储备，更是你的逻辑清晰度。如果你自己都没想清楚“这篇文章是写给谁看的”、“要解决什么核心痛点”、“风格是严肃还是幽默”，AI 再强大，也只能基于概率给你一个“平均数”答案。
-二、 所谓“神级提示词”，本质是思维的结构化 我研究过那些被奉为圭臬的高效 Prompt，抛开花哨的格式，它们的核心都在做一件事：结构化思维（Structured Thinking）。
-与其背诵咒语，不如掌握一套通用的**“智通提问心法”**。无论模型如何迭代，这套底层逻辑是不变的：
-1. 设定身份（Who）：给 AI 穿上“制服” 不要只说“写个代码”或“写段小说”。 要说：“你是一位拥有10年经验的资深产品经理”或者“你是一位擅长营造悬疑氛围的畅销书作家”。身份决定了 AI 调取数据的维度。
-2. 锚定背景（Context）：把 AI 拉入“现场” 即使是真的一对一咨询，你不给背景，专家也无法诊断。 告诉它：“我正在为一群刚入职的大学生做培训，他们普遍有拖延症，且对说教很反感。”
-3. 明确任务与约束（Constraints）：画出“红线” 这是最容易被忽略的一步。 “请给我三个可执行的建议，不要虚大空的理论。每个建议必须包含一个具体案例。总字数控制在 800 字以内。”
-把这三点串联起来，你其实是在教 AI 如何像你一样思考，而不是仅仅替你干活。
-三、 哪怕不懂代码，也要懂逻辑 常有人问我：“智通，我不会写代码，是不是就没法深入使用 AI？”
-我的回答恰恰相反。在未来，逻辑语言（Logic）比编程语言（Code）更重要。
-当你能够清晰地拆解一个复杂问题——把“写一部小说”拆解为“大纲设计-角色小传-冲突构建-章节填充”；把“开发一个APP”拆解为“需求分析-功能列表-交互逻辑”时，你就是那个发号施令的指挥官。
-AI 能够弥补我们在技能上的短板（比如它能瞬间写出我不会的 Python 爬虫代码），但它无法弥补我们在思维上的懒惰。
-四、 结语 不要迷信那些“一键生成”的魔法。AI 时代最大的护城河，不是你手里掌握了多少个 Prompt 模板，而是你面对一个复杂问题时，能够抽丝剥茧、提出高质量问题的能力。
-机器可以回答一切，但只有人类能够提出真正有价值的问题。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-26 20:02:00 +0800 CST'>January 26, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 别做“提示词工程师”，要做“AI时代的提问者" href="http://localhost:1313/posts/my-second-post/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">我的第一篇博客
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>为什么写博客 你好，我是智通。欢迎来到我的精神角落。
-如果在三年前，有人告诉我人工智能将以如此惊人的速度重构我们的工作与生活，我可能会觉得那是科幻电影的脚本。但今天，当大模型开始写代码、绘画、甚至进行逻辑推理时，我们都必须承认：未来已来，而且它不讲客气。
-站在这个时代的风口浪尖，很多人感到焦虑。我们习惯了用“经验”来构筑护城河，但AI的出现，瞬间填平了许多依靠死记硬背和重复劳动建立起来的沟壑。
-在这个时代，什么才是真正的护城河？
-我的答案很简单，也是我开设这个博客的初衷：唯有不断学习，保持精进。
-但这里的“学习”，不再是单纯的知识堆砌——因为在存储知识方面，我们永远赢不了硬盘。AI时代的学习，是认知的升级，是思维模型的重塑，是提出好问题的能力，更是将散落的信息串联成智慧的“通达”之力。 正如我的名字“智通”所寄托的寓意：
-智（Wisdom）： 在信息过载中甄别真伪，汲取智慧；
-通（Connection）： 融会贯通，将技术工具与人文思考相结合，打通认知的任督二脉。
-在这个博客里，我不会贩卖焦虑，也不会盲目鼓吹技术。我希望记录下在AI浪潮中，一个普通个体如何通过持续学习来迭代自己。
-这里会有我对新技术的测评与思考，有关于个人成长的读书笔记，也许还会有一些试错的教训。我希望这里能成为一个“思维补给站”。
-种一棵树最好的时间是十年前，其次是现在。
-在这个瞬息万变的时代，原地踏步就是最大的风险。让我们不再做时代的旁观者，而是做一个终身学习的实践者。
-保持饥渴，保持精进。
-我是智通，期待与你在路上相遇。
-博客内容规划 AI技术分享 AI技能技巧 AI世界大事追踪 思考 学习感悟 AI世界预测 未来展望 希望我们一起成为AI时代的幸存者！
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-26 20:01:00 +0800 CST'>January 26, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>智通</span></footer>
-  <a class="entry-link" aria-label="post link to 我的第一篇博客" href="http://localhost:1313/posts/my-first-post/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="prev" href="http://localhost:1313/posts/page/6/">
-      «&nbsp;Prev&nbsp;
-    </a>
-  </nav>
-</footer>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Posts | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="Posts - 智通和你一起学AI"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/posts/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/posts/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/posts/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/posts/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="Posts"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="Posts"><meta name=twitter:description content="这是智通成长的历程"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://zhitong.uk/posts/"}]}</script></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span class=active>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>Posts</h1></header><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>第2篇：从0画出第一张蓝图——EJU备考APP核心功能MVP清单</h2></header><div class=entry-content><p>一、用户痛点深挖：EJU考生到底卡在哪一步？ 我们曾以为“刷题不够多”是EJU备考失败的主因。直到2023年，团队联合东京、大阪、名古屋12所语言学校，对1,247名真实备考者展开结构化问卷 + 32场90分钟以上深度访谈（含屏幕共享录屏+错题本翻拍分析），才撕开理想主义假设的表皮——崩溃从来不是从放弃开始的，而是从一次无效点击、一页空白错题本、一个被删掉第4次的周计划开始的。
+调研数据指向三个高频断点，它们像三道隐形玻璃墙，挡在“知道”和“做到”之间：
+“题海迷航”：76%的考生明确表示“能搜到真题，但无法判断哪套题匹配我当前N3中上/接近N2的水平”；更严峻的是，仅11%能准确说出自己近3次模考中重复出错的知识点类型（如「～にあたる」vs「～に当たる」的汉字书写混淆）； “错题黑洞”：平均每位考生手写错题本留存周期为5.7天，且76%在错题本停留时间＜90秒——多数人只抄题干、划答案，不标注错误原因，更无后续追踪； “计划脆性”：82%的考生承认“计划写得越细，放弃得越快”。他们平均每周手动调整学习计划3.2次，但其中82%的调整未带来实际行为改变（后台埋点显示：计划修改后24小时内，对应模块的实际练习完成率仅提升0.7%）。 为具象化这种割裂，我们绘制了对比场景图（见下图），左侧是教育机构宣传页上的“理想备考流”：目标清晰→计划自动同步→错题即时归因→能力雷达动态更新；右侧则是真实用户手机屏幕录屏拼接的“崩溃时刻链”：凌晨1:23，某考生反复刷新某题库网站，页面卡在“加载中…”；1:27，她退出App，打开Excel手动标红3个语法点；1:31，她关闭文档，微信发消息：“今天又没学成……”
+这不是意志力问题，而是工具层缺失——当系统无法把“我错了”翻译成“我卡在动词使役形接续规则的第三变体”，用户就只能用疲惫对抗模糊。
+二、MVP功能定义：三道红线筛出不可删减的核心能力 基于上述洞察，我们给MVP立下铁律三红线：
+必须直击TOP3痛点中的任一核心断点（非泛需求）； 单功能可独立验证价值（可AB测试、可观测行为转化）； 开发周期≤2人周（拒绝“先搭中台再迭代”的幻觉）。 按此标准，我们砍掉了所有看起来“高级”但实则冗余的功能。例如：
+❌ AI作文批改：用户测试中NPS贡献度为-23（大量用户反馈“批注太学术，看不懂怎么改”）； ❌ 直播课预约：仅12%用户在首周打开该Tab，且预约后实际参与率不足29%，属典型“伪启动动作”。 最终入选的三项能力，构成最小可行闭环骨架：
+功能名称 解决痛点 验证方式 A/B测试初版效果 红线符合性 错题智能归因引擎 错题反复错，无归因路径 用户提交错题→返回知识点标签+教材页码 复练完成率↑41%，错题本有效使用时长↑2.8倍 ✔️ 全满足 动态难度题库 找不到适配日语水平的真题 每次答题后实时调整下一题难度系数δ N3水平用户首次模考正确率方差缩小63% ✔️ 全满足 计划韧性调节器 备考计划三天热度，缺乏动态反馈 计划偏离＞15%时，自动生成3种弹性方案 计划周完成率从44%→71%，且87%用户采纳推荐方案 ✔️ 全满足 关键决策逻辑在于：归因引擎不是“加功能”，而是重建认知接口——它把“这道题错了”转化为“你对『～てしまう』的语义强调功能理解偏差（教材P102），相似题已备好”。代码层面，我们采用轻量级规则引擎+小样本微调模型（仅1200条标注数据），规避大模型延迟与幻觉风险：
+# 归因引擎核心逻辑（简化版） def generate_diagnosis(question_id: str, user_answer: str) -> Dict: rule_match = match_grammar_rule(question_id) # 基于EJU真题知识图谱 if rule_match.confidence > 0.85: return { "label": rule_match.tag, # e.g., "て-form_emphasis" "source": f"《新完全掌握语法N2》P{rule_match.page}", "similar_questions": fetch_similar_by_tag(rule_match.tag, limit=3) } else: fallback_to_llm_fewshot(user_answer, question_id) # 仅兜底调用 三、最小闭环验证：从“能用”到“愿用”的关键转折点 MVP上线灰度期（500名种子用户），我们放弃传统“功能使用时长”指标，聚焦一个极简行为闭环：
+用户提交错题 → 系统3秒内返回知识点标签+3道相似题 → 用户点击任一相似题即计为闭环完成。
+...</p></div><footer class=entry-footer><span title='2026-02-20 09:28:03.523 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第2篇：从0画出第一张蓝图——EJU备考APP核心功能MVP清单" href=https://zhitong.uk/posts/2026-02-20-d2pc0hcdyzltejubkapphxgnmvpqd/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Claude Code + Xcode 26.3：我用三句话描述需求，10分钟上架了首个iPhone应用</h2></header><div class=entry-content><p>准备工作：环境搭建与账号配置 开发一个能上架 App Store 的 SwiftUI 应用，第一步不是写代码，而是铺好“地基”。跳过这步或草率配置，后续 90% 的报错（签名失败、模拟器白屏、TestFlight 拒绝上传）都源于此。
+最低系统要求必须严格满足：
+macOS Sonoma 14.5 或更高版本（低于此版本无法运行 Xcode 16.3 的 Swift 5.9 运行时） Xcode 16.3（2024 年 5 月最新稳定版，支持 iOS 17.5 SDK 及 SwiftUI 新特性） Apple Developer 账号：个人账号即可完成开发、真机调试与 TestFlight 内部测试；但若需邀请外部测试员（>100 人）或正式上架，组织账号更稳妥（个人账号的 External TestFlight 需 Apple 审核邀请邮件，平均延迟 2–3 工作日） ✅ 安装验证：打开终端执行
+xcodebuild -version # 输出应为：Xcode 16.3 Build version 16E214 Apple ID 与开发者证书手动配置（关键！）：
+打开 Xcode → Preferences → Accounts → “+” 添加 Apple ID（确保该 ID 已加入 Apple Developer Program） 选择账号 → 点击右下角 “Manage Certificates…” → 点击 “+” → 选择 “Apple Development” → 自动生成签名证书 启用自动签名：新建项目后，在 Project Navigator 中选中项目根节点 → Signing & Capabilities → 勾选 “Automatically manage signing”，并选择对应 Team ⚠️ 重要注意事项：
+...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to Claude Code + Xcode 26.3：我用三句话描述需求，10分钟上架了首个iPhone应用" href=https://zhitong.uk/posts/2026-02-19-claudecodexcode263wysjhmsxq10f/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>第一步：破除玄学迷雾——用Claude Code理解算命App的技术本质</h2></header><div class=entry-content><p>引言：为什么算命App不是玄学，而是可拆解的软件系统 你是否曾点开一款八字排盘App，输入出生时间后，几秒内就生成密密麻麻的“年柱辛亥、日主甲木、正官格、时带偏财”等术语？界面飘着水墨风卷轴，背景音是古琴泛音——很容易让人误以为背后运转的是失传千年的秘术。
+但真相是：它和天气App一样，是个标准的三层Web应用。
+用户输入地理坐标 → 调用气象局API → 渲染降水概率热力图；
+用户输入生辰八字 → 调用干支推算服务 → 渲染十神关系拓扑图。
+上图是我们对某主流八字App（「测测」Web版）进行抓包分析后标注的技术分层。你会发现：
+用户输入层：仅收集birth_time、location、gender三个字段，甚至不校验农历闰月； 逻辑计算层：核心是POST /v1/bazi/calculate接口，返回结构化JSON（含day_master、hidden_stems、ten_gods等键）； 结果展示层：前端用D3.js绘制天干地支环，再用模板引擎拼接《穷通宝鉴》语录片段。 这根本不是黑箱玄学，而是一个典型的「规则引擎 + 数据映射 + UI渲染」系统。本教程将带你用Claude Code作为“数字解剖刀”，反向解析其核心算法逻辑——不逆向APK，不破解加密，只通过公开Web接口与开发者工具，还原真实代码实现。你将亲手写出能验证原App结果的本地验证器，并理解每一行命理术语背后的Python函数。
+准备工作：环境搭建与样本获取 我们坚持“最小侵入”原则：无需安装任何逆向工具，不触碰手机App，全程在浏览器+Claude Code中完成。
+工具链确认 ✅ Claude Code Web版（免费）或VS Code Pro插件（推荐，支持Code Interpreter沙盒） ✅ Chrome浏览器（F12打开开发者工具） ✅ Python 3.9+（仅用于本地验证，非必需） ⚠️ 重要提醒：所有操作均在无登录态的游客模式下进行。禁用Network面板中的“Preserve log”，避免Cookie泄露；所有cURL请求手动添加 -H "User-Agent: test" 和 --cookie ""，确保零状态依赖。
+操作步骤（以「测测」Web版为例） 打开 https://www.cece.cn/bazi（注意：使用PC端，移动端常为WebView跳转，抓包困难） F12 → Network → 切换到 XHR/Fetch 标签页 填写测试生日（如1995-08-15 14:30），点击“立即排盘” 在Network列表中找到响应体含"day_master"的请求（通常为/v1/bazi/calculate），右键 → Copy → Copy as cURL (bash) 将cURL粘贴至Claude Code的Code Interpreter窗口，它会自动解析为结构化请求： # Claude Code自动解析结果（已脱敏） import requests headers = { "User-Agent": "test", "Content-Type": "application/json" } data = { "birth_time": "1995-08-15T14:30:00Z", # 注意：这是UTC时间！ "location": {"lng": 116.4, "lat": 39.9}, "gender": "male" } response = requests.post("https://api.cece.cn/v1/bazi/calculate", headers=headers, json=data) print(response.json()) 执行后，你将获得原始JSON响应——这就是我们全部的“命理源数据”。接下来，所有算法解析都基于此展开。
+...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第一步：破除玄学迷雾——用Claude Code理解算命App的技术本质" href=https://zhitong.uk/posts/2026-02-19-dybpcxxmwyclaudecodeljsmappdjs/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>第七步：不止于算命——扩展星座/塔罗模块与用户画像分析（可选功能演进）</h2></header><div class=entry-content><p>1. 模块演进目标与设计原则 传统“星座运势”类应用常陷入“算命陷阱”：用户打开App → 输入生日 → 获取一段静态文本 → 关闭。这种单次、无状态、低参与的交互，既无法沉淀用户价值，也难以支撑长期产品迭代。我们的演进目标很明确：不止于算命，而在于构建可生长的「灵性体验智能体」——以用户为中心，将星座、塔罗等符号系统转化为动态理解用户的语义接口。
+为此，我们确立三大刚性设计原则：
+✅ 可扩展性：新占卜体系（如北欧符文、印度Jyotish）应能在不重启服务、不修改核心逻辑的前提下，通过配置+插件方式接入；
+✅ 隐私合规：默认遵循GDPR与《个人信息保护法》，所有PII字段强制加密，数据采集遵循“最小必要+显式授权”双基线；
+✅ 低耦合：星座偏好、塔罗行为、解读风格等维度必须物理隔离，禁止跨模块直接读库或共享内存。
+架构对比一目了然：
+基础版（v1.0）：单体后端直连MySQL，/api/v1/horoscope?sign=libra&amp;date=today 返回JSON文本，无用户上下文； 增强版（v2.0）：前端调用统一网关 /api/v2/reading?context=career → 网关路由至 insight-service → 并行调用 astro-service + tarot-service + user-profile-service → 融合生成个性化解读。 演进路线图清晰分阶段：
+v1.0（已上线）：支持单次占卜、基础埋点、本地用户存储； v1.5（Q3交付）：上线用户画像服务、Flink实时特征管道、OpenID Connect鉴权； v2.0（Q4 GA）：完成微服务拆分、混合推荐引擎上线、GDPR自动化擦除接口就绪。 ⚠️ 注意事项：OpenID Connect 必须启用 prompt=consent 强制二次确认；所有敏感操作（如生日录入）需单独弹窗声明用途，并提供“跳过”选项；配置中心（如Nacos）统一管理星座标签、塔罗牌组映射表，严禁硬编码。
+2. 用户画像数据模型设计（含代码示例） 用户画像不是“打标签”，而是构建可计算的行为语义空间。我们定义三个核心实体：
+UserProfile：用户主干身份（不可变ID + 可变特征快照）； BehaviorLog：原子事件流（抽牌、停留、分享、跳过），带毫秒级时间戳与会话ID； TraitVector：从行为聚合出的向量化特征（如“直觉型解读倾向得分”），供推荐引擎消费。 以下是生产级 Pydantic v2 模型（支持动态字段扩展与校验）：
+from pydantic import BaseModel, Field, validator from typing import Literal, Optional, Dict, Any from datetime import datetime class UserTrait(BaseModel): astro_sign: Optional[Literal[ "aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces" ]] = None tarot_engagement_score: float = Field(ge=0, le=100, description="0-100加权分，基于点击/收藏/分享/停留时长") interpretive_style: Literal["intuitive", "analytical", "narrative"] = "intuitive" @validator('astro_sign', always=True) def default_unknown(cls, v): return v or "unknown" class UserProfile(BaseModel): user_id: str = Field(..., min_length=12, max_length=32, regex=r'^[a-zA-Z0-9_]+$') traits: UserTrait updated_at: datetime # 敏感字段不在此处定义！生日、手机号等走独立加密存储通道 双数据库实现策略：
+...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第七步：不止于算命——扩展星座/塔罗模块与用户画像分析（可选功能演进）" href=https://zhitong.uk/posts/2026-02-19-dqbbzysmkzxztlmkyyhhxfxkxgnyj/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>第三步：五行八卦上手——集成本地命理算法（八字排盘逻辑）</h2></header><div class=entry-content><p>一、前置知识与环境准备 命理推演的本质是时间坐标的精密转换与关系建模，而非玄学黑箱。本方案严格遵循《渊海子平》《滴天髓》等经典框架，将八字四柱（年、月、日、时）视为一个可计算的时空坐标系——输入是用户提供的公历出生时间与地理经度（如 "1992-02-05 14:30:00", "116.4"），输出是结构化命理数据：四柱干支、十神关系、五行旺衰分值、先天八卦映射编号。整个流程完全离线运行，不依赖任何网络API，既保障用户隐私（出生信息永不离开本地），也支持无网环境下的学术复现与教学演示。
+⚠️ 关键边界声明：
+输入：datetime 对象（已带 pytz 时区） + 精确到0.1°的东经度数（如北京116.4°E，上海121.5°E） 输出：JSON 可序列化字典，含 {'year': '壬申', 'month': '壬寅', 'day': '戊辰', 'hour': '己未', 'ten_gods': [...], 'element_strength': {'wood': 0.82, ...}, 'bagua_number': 6} 必需依赖与环境配置 我们禁用所有网络请求类库（如 requests, httpx），仅选用轻量、确定性高的科学计算基础包：
+# 推荐 Python 版本：3.9+（兼容 `zoneinfo` 且避免旧版 `pytz` 时区陷阱） python3.9 -m venv bazi-env source bazi-env/bin/activate # Linux/macOS # bazi-env\Scripts\activate # Windows pip install julian pytz numpy julian：提供高精度儒略日（JD）计算，误差 &lt; 0.001秒，是节气时刻推算的基石 pytz：处理中国标准时间（CST, Asia/Shanghai）与真太阳时转换 numpy：用于五行旺衰的向量化加权计算（后续章节详述） 时区与真太阳时校正：为什么经度不可省略？ 中国全境统一使用 Asia/Shanghai（UTC+8），但真太阳时（True Solar Time）取决于实际地理经度。北京时间以东经120°为基准，每偏离1°，时间差约4分钟。例如：
+...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第三步：五行八卦上手——集成本地命理算法（八字排盘逻辑）" href=https://zhitong.uk/posts/2026-02-19-dsbwxbgssjcbdmlsfbzpplj/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型</h2></header><div class=entry-content><p>准备工作：环境与工具配置 在正式进入命理应用开发前，必须搭建一个稳定、可预测、与 Claude Code 高度协同的开发环境。这不是简单的“装好 Xcode 就行”，而是为 AI 编程建立清晰的边界和契约——让 Claude 知道它在什么系统上运行、用什么语法、遵循什么约束。
+首先，确认你的 macOS 版本 ≥ Ventura（13.0），并在终端执行以下命令验证 Xcode 命令行工具完整性：
+xcode-select --install # 若提示已安装，则跳过；否则按向导完成安装 sw_vers && xcodebuild -version ✅ 正确输出应类似：
+ProductName: macOS ProductVersion: 14.5 BuildVersion: 23F79 Xcode 15.4 Build version 15F31d 接着，下载并安装 Cursor IDE（v0.48+ 推荐）。它对 Claude Code 的集成最成熟：打开设置 → Settings → Extensions → 搜索 “Claude Code” → 启用插件。API Key 配置入口位于：
+Settings → Extensions → Claude Code → API Key（⚠️ 不是 Cursor 自带的 “Claude” 插件，务必认准官方图标）
+...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型" href=https://zhitong.uk/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>第五步：隐私即信仰——在iOS中安全存储生辰与命理结果（Keychain+CoreData）</h2></header><div class=entry-content><p>一、为什么“生辰与命理数据”必须用Keychain而非UserDefaults或普通文件？ 在命理类App中，用户输入的「出生时间（Date）」和「出生地点（String）」看似普通，实则构成生物识别级敏感信息链：精确到分钟的出生时间 + 城市级地点 → 可反推经纬度（误差≤1km）、本地时区、真太阳时（影响八字排盘精度），甚至结合公开气象数据库推算出生时刻光照/地磁参数。这已远超《个人信息保护法》第二十八条定义的“敏感个人信息”范畴——它具备强唯一性、不可变更性与高度可识别性。
+而明文存储风险触目惊心：
+UserDefaults 和 plist 文件以明文形式存于沙盒 Library/Preferences/，越狱设备可通过 iMazing 或 Apple Configurator 2 直接导出全部键值； 沙盒内普通 .json 文件在备份时（iTunes/iCloud）被完整打包，若用户启用“未加密本地备份”，攻击者仅需访问其Mac电脑即可读取所有命理数据； CoreData 默认 SQLite 数据库不启用加密（即使勾选“Use Core Data for storage”，其 .sqlite 文件仍为明文）。我们曾复现某款八字App泄露事件：攻击者通过越狱iPhone提取沙盒，用 DB Browser for SQLite 打开 PersistentStore.sqlite，直接看到 birth_year INTEGER, birth_city TEXT 等明文字段，批量导出超2.3万用户生辰数据并在暗网出售。 Apple官方文档明确指出：“Keychain Services provides a secure container for storing small pieces of sensitive data, such as passwords and cryptographic keys. Items stored in the keychain are encrypted by the system and protected with the user’s device passcode.”（Keychain Services Programming Guide）——其核心是系统级加密隔离：Keychain条目由Secure Enclave协同加密，即使设备被越狱且获得root权限，也无法解密其他应用的Keychain数据。
+...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第五步：隐私即信仰——在iOS中安全存储生辰与命理结果（Keychain+CoreData）" href=https://zhitong.uk/posts/2026-02-19-dwbysjxyzioszaqccscymljgkeycha/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>第六步：App Store通关指南——用Claude Code撰写审核文案、截图说明与元数据</h2></header><div class=entry-content><p>🎯 为什么审核文案、截图与元数据决定App Store上架成败 Apple 审核团队每年处理超 200 万次提交，而据《2023 App Store 审核透明度报告》及第三方审计机构 (AppFigures, 2024) 统计，在所有「首次提交即被拒」的案例中，72% 的拒绝直接源于元数据、截图或审核文案问题——而非崩溃、卡顿或隐私违规等技术缺陷。更关键的是：这些「非功能类拒审」100% 可通过前置合规优化规避。
+这背后有明确的规则依据。Apple《App Review Guidelines》明文约束：
+第4.3条（重复应用）：要求元数据（标题、副标题、描述）必须真实反映核心功能，禁止使用泛化词（如“all-in-one”）、排名宣称（“#1 app”）或模糊价值主张； 第5.1.1条（隐私说明）：截图若展示权限弹窗（如相册/定位），审核文案必须同步说明触发路径与用途； 第5.2.3条（截图规范）：每张截图需配15–30字符说明，且必须体现真实 UI 状态（禁用占位符、模糊水印、未完成动效）。 ![对比真实案例：左侧为模糊截图+通用文案导致被拒；右侧为场景化截图+Claude生成的精准文案一次过审]
+我们曾跟踪两个同架构工具类 App 的提交记录：
+App A（被拒）：截图仅用 iPhone 模拟器默认背景，文案写“Login to get started”；因无法验证登录流程真实性，被援引 5.1.1 条拒审； App B（一次过审）：截图聚焦「Tab Bar > Profile > Export Button」操作链，文案由 Claude Code 生成：“Demo account with pre-filled credentials logs in automatically → taps ‘Export’ in top-right corner → selects PDF format → confirms via system share sheet”。全程无主观形容词，全用 iOS 原生控件命名，48 小时内通过审核。 为何 Claude Code 在此场景胜出？它并非通用大模型，而是专为开发者工作流优化的 CLI 工具：
+...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第六步：App Store通关指南——用Claude Code撰写审核文案、截图说明与元数据" href=https://zhitong.uk/posts/2026-02-19-dlbappstoretgznyclaudecodezxsh/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>第四步：丝滑动效加持——用Claude Code优化Lottie动画与交互反馈</h2></header><div class=entry-content><p>一、前置准备：环境搭建与依赖确认 在开始优化 Lottie 动效前，必须确保开发环境干净、工具链统一、AI 辅助能力就绪——这直接决定后续重构效率与代码质量。我们不追求“能跑就行”，而是为可维护、可压测、可回滚的动效系统打下基础。
+首先检查 Node.js 版本（Lottie Web v2.12+ 及现代 React/Vue 生态强烈依赖 ES2022+ 特性）：
+node -v # 必须 ≥ v18.0.0（推荐 v20.11+） npm -v # npm ≥ 9.6，或使用 pnpm ≥ 8.15（更稳定） 接着安装核心依赖。根据技术栈选择其一（不建议混用）：
+✅ React 项目：优先选用 lottie-react（轻量、TypeScript 原生支持、自动销毁） npm install lottie-react # 或按需引入 lottie-web（更灵活但需手动管理生命周期） npm install lottie-web ✅ Vue 3 / 原生 Web：直接使用 lottie-web ✅ 轻量替代方案（静态/简单交互动效）：@lottiefiles/lottie-player（Web Component，零 JS bundle 开销） npm install @lottiefiles/lottie-player 图：lottie-web、lottie-react、lottie-player 适用场景对比（体积/控制粒度/SSR 支持）
+Claude Code 配置是本教程的关键加速器。我们强烈推荐使用 VS Code 官方扩展 “Claude Code”（v1.4+），并完成以下配置：
+...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第四步：丝滑动效加持——用Claude Code优化Lottie动画与交互反馈" href=https://zhitong.uk/posts/2026-02-19-dsbshdxjcyclaudecodeyhlottiedh/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>别再学Prompt Engineering了！真正稀缺的是‘AGI商业翻译官’——解码大模型商业化最后一公里</h2></header><div class=entry-content><p>一、我亲手把Prompt工程课讲爆满，却看着客户项目在验收前崩盘 2023年6月，我在深圳南山某联合办公空间连讲三场《Prompt工程实战营》，报名链接被秒光，朋友圈刷屏“王工的黄金模板太神了”。彼时我刚交付完某全国连锁药店的“智能问药助手”项目——17版prompt迭代，测试集准确率92.3%，A/B测试显示平均响应快了2.4秒。我们甚至做了个炫酷的可视化看板：绿色进度条一路拉满，团队合影里每个人都比着大拇指。
+结果上线第5天，客服中心总监凌晨两点给我发了条语音：“王工，你们那个‘助手’，把‘孕妇慎用’全答成‘孕妇禁用’了。今天已经有7位孕妈投诉到药监局官网，法务部刚开了紧急会……你看看这个截图。”
+我点开那张图：用户问“这个感冒药我怀孕三个月能吃吗？”，模型回复加粗标红：“❌ 禁用！孕妇全程禁止服用，否则可能导致胎儿畸形。”
+而药品说明书原文是：“本品含伪麻黄碱，妊娠期妇女慎用，建议咨询医师。”
+不是模型不会读——它完美识别了“孕妇”和“感冒药”；也不是prompt没写清——第12版里我甚至加了&lt;RULE>所有‘慎用’类表述必须原样保留，禁止升级为‘禁用’或‘禁忌’&lt;/RULE>。问题出在哪？
+出在没人把模型输出，和药店《客户服务话术红线手册》第3.2.1条（“涉及用药安全表述，须与国家药监局备案说明书逐字对齐”）、法务部《AI生成内容合规白皮书》附录B（“禁用‘可能’‘会导致’等因果强断言，改用‘建议’‘可考虑’”），以及一线药师晨会反复强调的“三不原则”（不诊断、不替代医嘱、不放大风险）——做对齐。
+我当时还在朋友圈晒那张写着“Prompt Golden Template v17”的截图，配文：“调优的本质是让LLM学会敬畏”。殊不知客户要的不是黄金，是保险单。
+二、“AGI商业翻译官”不是新岗位，是我在三次救火中长出来的肌肉记忆 “AGI商业翻译官”这名字是我被客户第7次喊去救火后，在高铁上用备忘录敲出来的。它不是HR新设的JD，而是我左手抓着LLM的token概率分布图，右手攥着客户会议室白板上油性笔写的OKR，硬生生磨出来的双语切换能力。
+① 制造业救火现场（2023.09，华东某注塑机厂）
+客户需求：“设备异常预测”。技术团队给的方案是：边缘计算节点每5秒上传128维振动频谱特征，模型输出“轴承失效概率>85%”即告警。
+但车间主任盯着屏幕直摇头：“啥叫‘概率85%’？我徒弟看到就关掉弹窗——他只认‘温度超95℃’‘异响分贝>80’这种能抄表的数。”
+我的翻译动作：
+把F1-score指标 → 拆解为产线KPI：“首次告警准确率≥92%”（对应质检返工率下降阈值） 把“概率>85%” → 改写成IoT协议字段：{"alert_code": "BEARING_OVERHEAT", "action": "STOP_IMMEDIATELY"} 协调IoT团队重写边缘日志格式，新增temperature_rise_rate字段——因为老师傅说：“不是温度高，是升温太快才要停！” ② 教培公司救火现场（2023.11，成都某K12机构）
+需求：“个性化学习路径”。教研总监甩来一页PDF，全是“认知负荷理论”“最近发展区”“自适应知识图谱”。
+我拉着三位一线老师泡了两天茶馆，把“个性化”翻译成他们能立刻执行的动作：
+✅ 5类干预动作：暂停视频（触发条件：连续2题点击“再看一遍”）、推送同类题（触发：错题后3秒内未重做）、弹出知识点地图（触发：同一概念错3次）、自动降难度（触发：正确率&lt;40%持续5分钟）、人工介入提醒（触发：情绪识别模型检测到叹气声≥2次/分钟） ✅ 3种话术触发条件：当学生输入“我不会”时，禁用“别着急”，改用“咱们拆成三步，第一步先圈出题目里的数字——你试试？”（匹配教研SOP第4.7条） ③ 银行救火现场（2024.02，某股份制银行信用卡中心）
+反欺诈模型输出：“用户交易置信度0.91，特征权重TOP3：IP地址变更频次（0.32）、单日跨省消费次数（0.28）、商户类别偏离度（0.21）”。
+客户经理拿着这份报告只会皱眉：“这玩意儿我怎么跟客户解释？说‘你的IP权重0.32’？客户以为我在念密码！”
+我的翻译动作：
+删除所有术语，重构为电话脚本： “X先生您好，系统监测到您近期有几笔异地消费，为保障账户安全，我们需要核实下——您昨天下午3点在杭州西湖边买的龙井茶，是自己去买的，还是帮家人代付呢？”
+把“置信度0.91” → 转化为服务承诺：“只要您确认是本人操作，我们3分钟内解除临时风控，不影响后续刷卡。” 核心从来不是多懂Transformer，而是听懂业务方没说出口的恐惧：怕担责、怕培训难、怕系统不兼容。
+三、别再背“Role-Instruction-Context”了！真正该练的3个野路子技能 我撕掉了贴在笔记本首页三年的“Prompt万能公式”。现在白板上只贴着三张泛黄便利贴，每张角落都用红笔写着“这里崩过3次”。
+▪️ 技能1：画“风险断点图”
+找一面白板，用不同颜色便利贴贴出客户真实业务流（不是流程图！是真实发生过的场景）。比如电商售后环节：
+黄色贴纸：“用户问‘7天无理由退货，今天第7天算不算？’” 红色爆炸贴纸压在上面：“若模型答‘算工作日’→ 用户寄回超时→ 平台罚款200元/单” 蓝色贴纸补在旁边：“此处必须调用订单系统API查物流签收时间戳，禁止自由发挥”
+▪️ 技能2：写“人肉fallback脚本”
+模型不可控时，你的第一反应不该是调参，而是接管话术。我给所有客户交付包里都塞着这个Excel：
+场景 模型危险输出特征 人肉接管3句话（必须背熟） 执行人 用药安全咨询 出现“禁用”“禁忌”“会导致” “您提到的问题需要药师人工复核，我已同步转交XX专家，2小时内给您回电。” 客服组长 金融产品收益承诺 含“保本”“稳赚”“预期收益” “所有产品收益以合同为准，我马上为您预约理财经理，带您逐条解读条款。” 理财顾问 ▪️ 技能3：建“业务词典Excel”
+动态维护，每日更新。某车企项目里：
+...</p></div><footer class=entry-footer><span title='2026-02-19 08:34:58.414 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 别再学Prompt Engineering了！真正稀缺的是‘AGI商业翻译官’——解码大模型商业化最后一公里" href=https://zhitong.uk/posts/2026-02-19-bzxpromptengineeringlzzxqdsagi/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://zhitong.uk/posts/page/6/>«&nbsp;Prev&nbsp;
+</a><a class=next href=https://zhitong.uk/posts/page/8/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
