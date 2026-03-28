@@ -32,7 +32,7 @@ Apple官方文档明确指出：*“Keychain Services provides a secure containe
 ✅ `[String: Any]` 结构的紫微斗数/八字解析结果（经JSON序列化后的`Data`）  
 ❌ 用户昵称、头像URL等非敏感元数据（交由CoreData明文存储）
 
-![Keychain vs UserDefaults 安全对比示意图](https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/a2/20260219/d23adf3d/cd74c467-0222-41c1-8cf6-d8fbc9b723af3991621063.png?Expires=1772103386&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=i7TPw6I3oePuHAYnNd2N9AbogPk%3D)
+![Keychain vs UserDefaults 安全对比示意图]()
 
 ## 二、架构设计：Keychain + CoreData双层安全模型
 
@@ -214,8 +214,7 @@ extension PersonEntity {
 ① 在`NSPersistentCloudKitContainerOptions`中设 `automaticallyMigrateHistory = false`；  
 ② 改用CloudKit私有数据库，上传前调用 `encrypt(...)`，下载后调用 `decrypt(...)`。
 
-![CoreData加密模型配置截图](https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/1b/20260219/d23adf3d/14c009f9-9b2c-4e85-9e7c-f9d0ec6db8271488925099.png?Expires=1772103403&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=gA7qE8sNKaG%2FhaCy56SfnQ7FA3w%3D)  
-![Keychain调试断点验证流程图](https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/37/20260219/d23adf3d/cdb432a2-5d6c-439a-a01f-66d860e48b70662012154.png?Expires=1772103420&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=Vsr8YREniDu7s92NoBpwiR%2FxeAc%3D)
+
 
 附录：性能基准（A15芯片，100次操作）  
 - `KeychainSwift.set()`：平均3.2ms/次  
