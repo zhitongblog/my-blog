@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Chrome MCP on 智通和你一起学AI</title><link>https://zhitong.uk/tags/chrome-mcp/</link><description>Recent content in Chrome MCP on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Mar 2026 11:49:54 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/chrome-mcp/index.xml" rel="self" type="application/rss+xml"/><item><title>告别Selenium！Claude Code + Chrome MCP 实现自然语言驱动的零代码浏览器自动化</title><link>https://zhitong.uk/posts/2026-03-25-gbseleniumclaudecodechromemcps/</link><pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-25-gbseleniumclaudecodechromemcps/</guid><description>告别Selenium繁琐定位与不稳定等待！本文详解如何用Claude Code结合Chrome MCP，通过自然语言指令实现稳定、可维护的零代码浏览器自动化，解决电商价格监控等真实场景中的StaleElement和Timeout顽疾。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Chrome MCP on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/chrome-mcp/</link>
+    <description>Recent content in Chrome MCP on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 25 Mar 2026 11:49:54 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/chrome-mcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>告别Selenium！Claude Code &#43; Chrome MCP 实现自然语言驱动的零代码浏览器自动化</title>
+      <link>http://localhost:1313/posts/2026-03-25-gbseleniumclaudecodechromemcps/</link>
+      <pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-25-gbseleniumclaudecodechromemcps/</guid>
+      <description>告别Selenium繁琐定位与不稳定等待！本文详解如何用Claude Code结合Chrome MCP，通过自然语言指令实现稳定、可维护的零代码浏览器自动化，解决电商价格监控等真实场景中的StaleElement和Timeout顽疾。</description>
+    </item>
+  </channel>
+</rss>

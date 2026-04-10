@@ -1,1 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AI开发工具 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/ai%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</link><description>Recent content in AI开发工具 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/ai%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？</title><link>https://zhitong.uk/posts/2026-03-27-cpromptdpagedclaudecodeljbwfxj/</link><pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-27-cpromptdpagedclaudecodeljbwfxj/</guid><description>揭秘AI代码助手如何真正理解并执行复杂前端性能分析指令——从模糊Prompt到可落地的竞品LCP/CLS对比报告，详解提示工程、上下文构建与结果结构化关键实践。</description></item><item><title>2026开发者新宠：用一句‘登录淘宝并截图订单页’唤醒Claude Code的BrowserCat MCP</title><link>https://zhitong.uk/posts/2026-03-25-2026kfzxcyyjdltbbjtddyhxclaude/</link><pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-25-2026kfzxcyyjdltbbjtddyhxclaude/</guid><description>揭秘2026年开发者新宠BrowserCat MCP如何通过自然语言指令驱动浏览器自动化——以‘登录淘宝并截图订单页’实战为例，解析Claude Code集成、上下文失效排错与生产级调试经验。</description></item><item><title>OpenClaw × Claude Code：一人公司如何用AI数字员工实现日均50+代码提交？</title><link>https://zhitong.uk/posts/2026-03-20-openclawclaudecodeyrgsrhyaiszy/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-openclawclaudecodeyrgsrhyaiszy/</guid><description>揭秘一人公司如何通过OpenClaw与Claude Code协同构建AI数字员工，将日均代码提交量从12.3提升至50+，自动化PR撰写、边界测试生成与CI/CD验证，显著降低认知负荷与交付熵增。</description></item><item><title>当AI不再需要你‘教它写代码’：Claude Code的Vibe Coding哲学，正在杀死Cursor式的‘人机协作幻觉’</title><link>https://zhitong.uk/posts/2026-02-23-daibzxynjtxdmclaudecodedvibeco/</link><pubDate>Mon, 23 Feb 2026 11:08:10 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-23-daibzxynjtxdmclaudecodedvibeco/</guid><description>本文剖析Claude Code提出的&amp;#39;Vibe Coding&amp;#39;哲学，揭示其如何通过意图理解与上下文坍缩取代传统人机协作模式，挑战Cursor、Copilot等辅助编程工具的底层假设。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI开发工具 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/ai%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in AI开发工具 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Apr 2026 07:16:44 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ai%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开篇：为什么用Claude Code造一个MD编辑器？</title>
+      <link>http://localhost:1313/posts/2026-04-10-kpwsmyclaudecodezygmdbjq/</link>
+      <pubDate>Fri, 10 Apr 2026 07:16:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-10-kpwsmyclaudecodezygmdbjq/</guid>
+      <description>本文详解如何利用Claude 3.5 Sonnet的Code模式零环境搭建MD编辑器，无需本地配置、npm或Python，依托内置JS运行时与DOM API在Cursor等平台快速实现可运行原型。</description>
+    </item>
+    <item>
+      <title>从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？</title>
+      <link>http://localhost:1313/posts/2026-03-27-cpromptdpagedclaudecodeljbwfxj/</link>
+      <pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-27-cpromptdpagedclaudecodeljbwfxj/</guid>
+      <description>揭秘AI代码助手如何真正理解并执行复杂前端性能分析指令——从模糊Prompt到可落地的竞品LCP/CLS对比报告，详解提示工程、上下文构建与结果结构化关键实践。</description>
+    </item>
+    <item>
+      <title>2026开发者新宠：用一句‘登录淘宝并截图订单页’唤醒Claude Code的BrowserCat MCP</title>
+      <link>http://localhost:1313/posts/2026-03-25-2026kfzxcyyjdltbbjtddyhxclaude/</link>
+      <pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-25-2026kfzxcyyjdltbbjtddyhxclaude/</guid>
+      <description>揭秘2026年开发者新宠BrowserCat MCP如何通过自然语言指令驱动浏览器自动化——以‘登录淘宝并截图订单页’实战为例，解析Claude Code集成、上下文失效排错与生产级调试经验。</description>
+    </item>
+    <item>
+      <title>OpenClaw × Claude Code：一人公司如何用AI数字员工实现日均50&#43;代码提交？</title>
+      <link>http://localhost:1313/posts/2026-03-20-openclawclaudecodeyrgsrhyaiszy/</link>
+      <pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-20-openclawclaudecodeyrgsrhyaiszy/</guid>
+      <description>揭秘一人公司如何通过OpenClaw与Claude Code协同构建AI数字员工，将日均代码提交量从12.3提升至50&#43;，自动化PR撰写、边界测试生成与CI/CD验证，显著降低认知负荷与交付熵增。</description>
+    </item>
+    <item>
+      <title>当AI不再需要你‘教它写代码’：Claude Code的Vibe Coding哲学，正在杀死Cursor式的‘人机协作幻觉’</title>
+      <link>http://localhost:1313/posts/2026-02-23-daibzxynjtxdmclaudecodedvibeco/</link>
+      <pubDate>Mon, 23 Feb 2026 11:08:10 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-23-daibzxynjtxdmclaudecodedvibeco/</guid>
+      <description>本文剖析Claude Code提出的&amp;#39;Vibe Coding&amp;#39;哲学，揭示其如何通过意图理解与上下文坍缩取代传统人机协作模式，挑战Cursor、Copilot等辅助编程工具的底层假设。</description>
+    </item>
+  </channel>
+</rss>

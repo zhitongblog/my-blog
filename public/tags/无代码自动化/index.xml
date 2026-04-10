@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>无代码自动化 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E6%97%A0%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E5%8C%96/</link><description>Recent content in 无代码自动化 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E6%97%A0%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>不写一行JS，也能做自动化测试：前端工程师用Claude Code完成全流程回归验证</title><link>https://zhitong.uk/posts/2026-03-27-bxyxjsynzzdhcsqdgcsyclaudecode/</link><pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-27-bxyxjsynzzdhcsqdgcsyclaudecode/</guid><description>本文展示前端工程师如何利用Claude Code零JavaScript编码完成全流程回归测试，覆盖登录、购物车、支付等27个核心路径，解决Ant Design升级引发的校验链断裂问题，大幅提升验证效率与准确性。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>无代码自动化 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E6%97%A0%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E5%8C%96/</link>
+    <description>Recent content in 无代码自动化 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%97%A0%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不写一行JS，也能做自动化测试：前端工程师用Claude Code完成全流程回归验证</title>
+      <link>http://localhost:1313/posts/2026-03-27-bxyxjsynzzdhcsqdgcsyclaudecode/</link>
+      <pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-27-bxyxjsynzzdhcsqdgcsyclaudecode/</guid>
+      <description>本文展示前端工程师如何利用Claude Code零JavaScript编码完成全流程回归测试，覆盖登录、购物车、支付等27个核心路径，解决Ant Design升级引发的校验链断裂问题，大幅提升验证效率与准确性。</description>
+    </item>
+  </channel>
+</rss>

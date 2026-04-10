@@ -1,1 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AI工程 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/ai%E5%B7%A5%E7%A8%8B/</link><description>Recent content in AI工程 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Mar 2026 10:15:34 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/ai%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>从Prompt工程师到AI流程架构师：一人开发团队用OpenClaw重构Claude Code使用范式</title><link>https://zhitong.uk/posts/2026-03-20-cpromptgcsdailcjgsyrkftdyopenc/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-cpromptgcsdailcjgsyrkftdyopenc/</guid><description>本文讲述单人开发者如何通过OpenClaw工具重构Claude Code使用范式，从基础Prompt工程师升级为AI流程架构师，实现Spring Boot 3.2接口的零协作、端到端自动生成与验证。</description></item><item><title>2026年不转型AI架构师？你的PRD可能正在被智能体自动重写</title><link>https://zhitong.uk/posts/2026-02-21-2026nbzxaijgsndprdknzzbzntzdzx/</link><pubDate>Sat, 21 Feb 2026 09:58:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-21-2026nbzxaijgsndprdknzzbzntzdzx/</guid><description>2026年AI架构师成为产品交付链关键守门人：PRD正由智能体自主生成与迭代，核心能力转向智能体契约设计。本文解析AI驱动的需求范式变革与企业落地趋势。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI工程 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/ai%E5%B7%A5%E7%A8%8B/</link>
+    <description>Recent content in AI工程 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 03 Apr 2026 07:53:28 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ai%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kairos不是神话！源码级解析Claude的长期记忆实现：TensorFlow&#43;Rust混合内存管理全曝光</title>
+      <link>http://localhost:1313/posts/2026-04-03-kairosbsshymjjxclaudedzqjysxte/</link>
+      <pubDate>Fri, 03 Apr 2026 07:53:28 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-03-kairosbsshymjjxclaudedzqjysxte/</guid>
+      <description>深度解析Claude‘Kairos’长期记忆模块的源码级实现，揭秘TensorFlow与Rust协同的可寻址、版本化、垃圾回收式记忆图谱设计，直击LLM工程化中的状态持久化瓶颈。</description>
+    </item>
+    <item>
+      <title>Buddy电子宠物藏在3721行里：Claude Code中被忽略的拟人化交互协议与情感状态机设计</title>
+      <link>http://localhost:1313/posts/2026-04-02-buddydzcwcz3721xlclaudecodezbh/</link>
+      <pubDate>Thu, 02 Apr 2026 04:10:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-02-buddydzcwcz3721xlclaudecodezbh/</guid>
+      <description>揭秘Claude Code中隐藏的3721行Buddy电子宠物模块，解析其拟人化交互协议与情感状态机设计，探讨AI助手在确定性系统中嵌入情感建模的工程权衡与实践启示。</description>
+    </item>
+    <item>
+      <title>别只看模型参数！Claude Code泄露揭示的‘提示即API’实践革命：137个标准化Prompt接口设计模式</title>
+      <link>http://localhost:1313/posts/2026-04-02-bzkmxcsclaudecodexljsdtsjapisj/</link>
+      <pubDate>Thu, 02 Apr 2026 03:28:19 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-02-bzkmxcsclaudecodexljsdtsjapisj/</guid>
+      <description>揭秘Claude Code泄露事件揭示的‘提示即API’范式革命：137个标准化Prompt接口设计模式，涵盖版本控制、Schema约束、A/B测试与回滚语义，推动LLM应用从模型调用迈向可编排、可验证的提示契约时代。</description>
+    </item>
+    <item>
+      <title>Anthropic工程师没说出口的真相：为什么Claude Code用Rust写推理层、Python写编排层？跨语言协同架构深度复盘</title>
+      <link>http://localhost:1313/posts/2026-04-01-anthropicgcsmsckdzxwsmclaudeco/</link>
+      <pubDate>Wed, 01 Apr 2026 04:22:58 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-01-anthropicgcsmsckdzxwsmclaudeco/</guid>
+      <description>深度解析Claude Code为何用Rust实现高性能推理层、Python构建灵活编排层——聚焦‘计算契约’这一被忽视的设计哲学，揭示延迟、内存、并发与错误责任的分层治理逻辑。</description>
+    </item>
+    <item>
+      <title>从Prompt工程师到AI流程架构师：一人开发团队用OpenClaw重构Claude Code使用范式</title>
+      <link>http://localhost:1313/posts/2026-03-20-cpromptgcsdailcjgsyrkftdyopenc/</link>
+      <pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-20-cpromptgcsdailcjgsyrkftdyopenc/</guid>
+      <description>本文讲述单人开发者如何通过OpenClaw工具重构Claude Code使用范式，从基础Prompt工程师升级为AI流程架构师，实现Spring Boot 3.2接口的零协作、端到端自动生成与验证。</description>
+    </item>
+    <item>
+      <title>2026年不转型AI架构师？你的PRD可能正在被智能体自动重写</title>
+      <link>http://localhost:1313/posts/2026-02-21-2026nbzxaijgsndprdknzzbzntzdzx/</link>
+      <pubDate>Sat, 21 Feb 2026 09:58:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-21-2026nbzxaijgsndprdknzzbzntzdzx/</guid>
+      <description>2026年AI架构师成为产品交付链关键守门人：PRD正由智能体自主生成与迭代，核心能力转向智能体契约设计。本文解析AI驱动的需求范式变革与企业落地趋势。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>单元测试 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link><description>Recent content in 单元测试 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Mar 2026 10:15:34 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenClaw × Claude Code：一人公司如何用AI数字员工实现日均50+代码提交？</title><link>https://zhitong.uk/posts/2026-03-20-openclawclaudecodeyrgsrhyaiszy/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-openclawclaudecodeyrgsrhyaiszy/</guid><description>揭秘一人公司如何通过OpenClaw与Claude Code协同构建AI数字员工，将日均代码提交量从12.3提升至50+，自动化PR撰写、边界测试生成与CI/CD验证，显著降低认知负荷与交付熵增。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>单元测试 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 单元测试 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 06 Apr 2026 13:49:44 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计</title>
+      <link>http://localhost:1313/posts/2026-04-06-cyfzyclaudecodeqdtddzdhcsyjsfa/</link>
+      <pubDate>Mon, 06 Apr 2026 13:49:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-cyfzyclaudecodeqdtddzdhcsyjsfa/</guid>
+      <description>本文深入探讨Claude Code（3.5 Sonnet）如何超越传统代码补全，真正赋能测试驱动开发（TDD）、自动化测试编写与技术方案设计，实现‘测试即契约’的智能协同开发范式。</description>
+    </item>
+    <item>
+      <title>OpenClaw × Claude Code：一人公司如何用AI数字员工实现日均50&#43;代码提交？</title>
+      <link>http://localhost:1313/posts/2026-03-20-openclawclaudecodeyrgsrhyaiszy/</link>
+      <pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-20-openclawclaudecodeyrgsrhyaiszy/</guid>
+      <description>揭秘一人公司如何通过OpenClaw与Claude Code协同构建AI数字员工，将日均代码提交量从12.3提升至50&#43;，自动化PR撰写、边界测试生成与CI/CD验证，显著降低认知负荷与交付熵增。</description>
+    </item>
+  </channel>
+</rss>

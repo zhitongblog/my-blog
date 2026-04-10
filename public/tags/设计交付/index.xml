@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>设计交付 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E8%AE%BE%E8%AE%A1%E4%BA%A4%E4%BB%98/</link><description>Recent content in 设计交付 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Feb 2026 16:16:58 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E8%AE%BE%E8%AE%A1%E4%BA%A4%E4%BB%98/index.xml" rel="self" type="application/rss+xml"/><item><title>第8篇：从Figma到开发交付——产品经理如何高效协同技术团队</title><link>https://zhitong.uk/posts/2026-02-21-d8pcfigmadkfjfcpjlrhgxxtjstd/</link><pubDate>Fri, 20 Feb 2026 16:16:58 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-21-d8pcfigmadkfjfcpjlrhgxxtjstd/</guid><description>本文揭秘Figma设计稿到前端落地的常见断层，提供可落地的标注规范、状态覆盖清单与协作Checklist，帮助产品经理打通设计-开发交付链路，减少返工，提升跨职能协同效率。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>设计交付 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E8%AE%BE%E8%AE%A1%E4%BA%A4%E4%BB%98/</link>
+    <description>Recent content in 设计交付 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 20 Feb 2026 16:16:58 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%AE%BE%E8%AE%A1%E4%BA%A4%E4%BB%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第8篇：从Figma到开发交付——产品经理如何高效协同技术团队</title>
+      <link>http://localhost:1313/posts/2026-02-21-d8pcfigmadkfjfcpjlrhgxxtjstd/</link>
+      <pubDate>Fri, 20 Feb 2026 16:16:58 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-21-d8pcfigmadkfjfcpjlrhgxxtjstd/</guid>
+      <description>本文揭秘Figma设计稿到前端落地的常见断层，提供可落地的标注规范、状态覆盖清单与协作Checklist，帮助产品经理打通设计-开发交付链路，减少返工，提升跨职能协同效率。</description>
+    </item>
+  </channel>
+</rss>

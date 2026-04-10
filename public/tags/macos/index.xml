@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>MacOS on 智通和你一起学AI</title><link>https://zhitong.uk/tags/macos/</link><description>Recent content in MacOS on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sun, 22 Feb 2026 12:07:15 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/macos/index.xml" rel="self" type="application/rss+xml"/><item><title>不越狱、不虚拟机：macOS原生部署OpenClaw全指南（Node.js 24.13.0实测）</title><link>https://zhitong.uk/posts/2026-02-22-byybxnjmacosysbsopenclawqznnod/</link><pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-22-byybxnjmacosysbsopenclawqznnod/</guid><description>本指南详解在不越狱、不使用虚拟机的前提下，于macOS原生环境（Apple Silicon/Intel+Rosetta）部署OpenClaw，基于Node.js 24.13.0实测验证，涵盖系统检查、权限配置与构建全流程。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MacOS on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/macos/</link>
+    <description>Recent content in MacOS on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 22 Feb 2026 12:07:15 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不越狱、不虚拟机：macOS原生部署OpenClaw全指南（Node.js 24.13.0实测）</title>
+      <link>http://localhost:1313/posts/2026-02-22-byybxnjmacosysbsopenclawqznnod/</link>
+      <pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-22-byybxnjmacosysbsopenclawqznnod/</guid>
+      <description>本指南详解在不越狱、不使用虚拟机的前提下，于macOS原生环境（Apple Silicon/Intel&#43;Rosetta）部署OpenClaw，基于Node.js 24.13.0实测验证，涵盖系统检查、权限配置与构建全流程。</description>
+    </item>
+  </channel>
+</rss>

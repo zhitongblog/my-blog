@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>回测框架 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E5%9B%9E%E6%B5%8B%E6%A1%86%E6%9E%B6/</link><description>Recent content in 回测框架 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Tue, 10 Mar 2026 04:01:48 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E5%9B%9E%E6%B5%8B%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenClaw实盘爆火背后：拆解‘2万变4000万’可复现的AI量化策略闭环</title><link>https://zhitong.uk/posts/2026-03-10-openclawspbhbhcj2wb4000wkfxdai/</link><pubDate>Tue, 10 Mar 2026 04:01:48 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-10-openclawspbhbhcj2wb4000wkfxdai/</guid><description>深度拆解OpenClaw实盘爆火背后的AI量化策略闭环，详解如何从2万本金稳健增长至4000万，涵盖数据获取、信号生成、实盘执行与风控迭代等可复现关键环节。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>回测框架 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E5%9B%9E%E6%B5%8B%E6%A1%86%E6%9E%B6/</link>
+    <description>Recent content in 回测框架 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 10 Mar 2026 04:01:48 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%9B%9E%E6%B5%8B%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenClaw实盘爆火背后：拆解‘2万变4000万’可复现的AI量化策略闭环</title>
+      <link>http://localhost:1313/posts/2026-03-10-openclawspbhbhcj2wb4000wkfxdai/</link>
+      <pubDate>Tue, 10 Mar 2026 04:01:48 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-10-openclawspbhbhcj2wb4000wkfxdai/</guid>
+      <description>深度拆解OpenClaw实盘爆火背后的AI量化策略闭环，详解如何从2万本金稳健增长至4000万，涵盖数据获取、信号生成、实盘执行与风控迭代等可复现关键环节。</description>
+    </item>
+  </channel>
+</rss>

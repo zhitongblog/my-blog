@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AI工具 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/ai%E5%B7%A5%E5%85%B7/</link><description>Recent content in AI工具 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sun, 22 Feb 2026 12:07:15 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/ai%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>新手友好但高手惊叹：Mac一键部署OpenClaw后，我删掉了所有AI SaaS订阅</title><link>https://zhitong.uk/posts/2026-02-23-xsyhdgsjtmacyjbsopenclawhwsdls/</link><pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-23-xsyhdgsjtmacyjbsopenclawhwsdls/</guid><description>本文详解在Mac上一键部署OpenClaw开源AI工具的完整流程，实测替代Notion AI、Copy.ai等SaaS服务，高效处理会议纪要、扫描合同条款识别等复杂办公场景，兼顾新手友好性与专业级能力。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI工具 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/ai%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in AI工具 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 29 Mar 2026 06:05:28 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ai%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>写了50篇稿后，它居然学会了我的文风？</title>
+      <link>http://localhost:1313/posts/2026-03-29-xl50pghtjrxhlwdwf/</link>
+      <pubDate>Sun, 29 Mar 2026 06:05:28 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-29-xl50pghtjrxhlwdwf/</guid>
+      <description>本文记录作者训练AI模仿个人文风的真实过程：从50篇人工改稿到AI自主复现标志性句式与表达习惯，揭秘文风迁移、提示词优化与效果评估的关键实践。</description>
+    </item>
+    <item>
+      <title>写了100篇稿后，它居然学会了我的文风！</title>
+      <link>http://localhost:1313/posts/2026-03-28-xl100pghtjrxhlwdwf/</link>
+      <pubDate>Sat, 28 Mar 2026 04:45:47 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-28-xl100pghtjrxhlwdwf/</guid>
+      <description>分享使用StoryAlter训练AI模仿个人文风的真实经历：上传3篇旧稿后，AI在第100篇稿件中精准复刻口语化表达、破折号节奏与原创金句，实现从‘交作业’到‘像本人说话’的质变。</description>
+    </item>
+    <item>
+      <title>新手友好但高手惊叹：Mac一键部署OpenClaw后，我删掉了所有AI SaaS订阅</title>
+      <link>http://localhost:1313/posts/2026-02-23-xsyhdgsjtmacyjbsopenclawhwsdls/</link>
+      <pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-23-xsyhdgsjtmacyjbsopenclawhwsdls/</guid>
+      <description>本文详解在Mac上一键部署OpenClaw开源AI工具的完整流程，实测替代Notion AI、Copy.ai等SaaS服务，高效处理会议纪要、扫描合同条款识别等复杂办公场景，兼顾新手友好性与专业级能力。</description>
+    </item>
+  </channel>
+</rss>

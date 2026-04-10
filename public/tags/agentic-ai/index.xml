@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Agentic AI on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/agentic-ai/</link>
+    <description>Recent content in Agentic AI on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 30 Mar 2026 02:07:48 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/agentic-ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>告别Copilot式辅助！Agentic Coding真正在终端跑起来：Claude Code从Hello World到生产级智能体部署</title>
+      <link>http://localhost:1313/posts/2026-03-30-gbcopilotsfzagenticcodingzzzzd/</link>
+      <pubDate>Mon, 30 Mar 2026 02:07:48 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-30-gbcopilotsfzagenticcodingzzzzd/</guid>
+      <description>本文详解如何在终端本地部署Claude驱动的Agentic Coding智能体，覆盖环境搭建、Hello World实现到生产级应用部署，支持macOS、Ubuntu和WSL2，强调零歧义可验证的实操流程。</description>
+    </item>
+  </channel>
+</rss>

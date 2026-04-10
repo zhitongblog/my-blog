@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>零基础起步：用Claude Code快速搭建广告文案生成器 | 智通和你一起学AI</title>
+<meta name="keywords" content="Claude, AI文案生成, Prompt工程, 小红书运营, AI工具对比, 低代码开发">
+<meta name="description" content="零基础实操指南：用Claude Code快速搭建广告文案生成器，对比ChatGPT与Copilot在真实营销场景中的表现，详解Prompt设计、本地部署与小红书风格文案批量生成技巧。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-04-08-ljcqbyclaudecodeksdjggwascq/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-04-08-ljcqbyclaudecodeksdjggwascq/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      零基础起步：用Claude Code快速搭建广告文案生成器
+    </h1>
+    <div class="post-description">
+      零基础实操指南：用Claude Code快速搭建广告文案生成器，对比ChatGPT与Copilot在真实营销场景中的表现，详解Prompt设计、本地部署与小红书风格文案批量生成技巧。
+    </div>
+    <div class="post-meta"><span title='2026-04-08 05:35:25.976 +0000 UTC'>April 8, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="为什么我选claude-code而不是chatgpt或copilot">为什么我选Claude Code而不是ChatGPT或Copilot？<a hidden class="anchor" aria-hidden="true" href="#为什么我选claude-code而不是chatgpt或copilot">#</a></h2>
+<p>上个月帮朋友的小茶饮店改春季新品文案，我真·拉了个三工具对照组：ChatGPT（网页版+Plus）、GitHub Copilot（VS Code插件）、Claude Code（官方桌面App）。需求就一行：“给‘青梅冰柠茶’‘芋泥波波牛乳’‘脆皮乳鸽联名限定款’写5条小红书风格短文案，突出‘不加香精’‘现萃茶底’‘联名稀缺性’，每条≤30字，带emoji和行动指令。”</p>
+<p>结果——</p>
+<ul>
+<li><strong>ChatGPT</strong> 输出的5条里，3条开头是“匠心手作，东方美学邂逅岭南风味…”，剩下2条硬塞了“非遗工艺”“茶道哲思”。朋友老板看完说：“这哪是卖奶茶？这是要开禅修班？”</li>
+<li><strong>GitHub Copilot</strong> 在本地写prompt时卡得像在加载1998年的拨号上网。我敲完<code>/ask 小红书风格文案</code>，光标闪了8秒才弹出建议框，再等3秒才开始生成…而我朋友在微信那头已经发来第4个催稿表情包。</li>
+<li><strong>Claude Code</strong> —— 我粘贴完产品表（3行CSV格式）+ 需求文本，右键→“Ask Claude”，输入指令，Ctrl+Enter，2.3秒后5条文案全出来。更绝的是：它自动识别出“脆皮乳鸽”是联名核心记忆点，3条文案都用“鸽”字造梗（“鸽系少女速来报到🕊️”“别鸽！最后一盒乳鸽冻干送完了！”），其中3条当天就被老板直接发朋友圈，评论区清一色“链接呢？！”“求代购！”</li>
+</ul>
+<p><img alt="Claude Code vs ChatGPT vs Copilot 同一任务输出对比截图：左侧Claude文案简洁带梗，中间ChatGPT堆砌虚词，右侧Copilot界面卡在loading状态" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/03/20260408/d23adf3d/cc4c68dc-d5c9-993d-ae89-08bfcafde2161653724363.png?Expires=1776229340&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=4JI3j7JLHITegIqutm9Yad0SyjY%3D"></p>
+<p>但必须泼一盆冷水：<strong>别信“Claude更懂中文”的营销话术！</strong> 它对粤语、潮汕话、东北黑话、甚至“绝绝子”“尊嘟假嘟”这种网络热梗，照样一脸懵。第一次让它写“脆皮乳鸽”文案，它真·逐字翻译成 <em>“crispy pigeon skin”</em>……我当场瞳孔地震。后来摸清门道：所有中文文案任务，开头必加两行强制约束：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>【用简体中文，禁用英文术语】  
+</span></span><span style="display:flex;"><span>【禁止音译/意译菜品名，原样保留“脆皮乳鸽”四字】
+</span></span></code></pre></div><p>加完立刻正常。AI不是人，是规则驱动的精密流水线——你给它铁轨，它才跑得稳。</p>
+<hr>
+<h2 id="从零开始10分钟搭出能跑的最小原型">从零开始：10分钟搭出能跑的最小原型<a hidden class="anchor" aria-hidden="true" href="#从零开始10分钟搭出能跑的最小原型">#</a></h2>
+<p>别被“AI文案系统”吓住。我搭第一个可用原型，只用了9分47秒（手机计时器为证）。操作流如下：</p>
+<ol>
+<li>
+<p>VS Code 新建空白文件 <code>tea-copy-test.md</code></p>
+</li>
+<li>
+<p>粘贴3行示例数据（真实业务最小闭环）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csv" data-lang="csv"><span style="display:flex;"><span><span style="color:#e6db74">品牌名</span>,<span style="color:#e6db74">核心卖点</span>,<span style="color:#e6db74">目标人群  </span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">青梅冰柠茶</span>,<span style="color:#e6db74">现萃青梅汁+冷泡乌龙</span>,<span style="color:#e6db74">怕酸怕涩的甜党  </span>
+</span></span></code></pre></div></li>
+<li>
+<p>全选这3行 → 右键 → “Ask Claude”</p>
+</li>
+<li>
+<p>输入指令（一字不差复制）：</p>
+<blockquote>
+<p>按小红书风格生成3条文案，每条≤30字，带emoji和行动指令（如“戳我下单”“蹲链接”）</p>
+</blockquote>
+</li>
+<li>
+<p>Ctrl+Enter，完成。</p>
+</li>
+</ol>
+<p><img alt="VS Code中Claude Code插件右键菜单高亮显示“Ask Claude”，光标悬停在3行CSV数据上" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/07/20260408/d23adf3d/af091f98-9fff-96fc-bd1e-a12ba571a5284251234111.png?Expires=1776229357&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=wNqYRtzaFp847xRP5JKFmj%2B3w8k%3D"></p>
+<p>⚠️ <strong>血泪关键细节：必须手动删掉默认system prompt！</strong><br>
+Claude Code会偷偷在你提问前加一段：</p>
+<blockquote>
+<p><em>“你是一个乐于助人的AI助手，擅长用温暖专业的语言提供帮助…”</em></p>
+</blockquote>
+<p>这句看似无害，实则是文案“假大空”元凶！我被坑过2次：生成的奶茶文案开头全是“亲爱的顾客您好～感谢选择我们…”——小红书用户刷到这句直接划走。解决方案：每次打开对话框，第一件事就是按 <code>Cmd+A</code> 全选 → <code>Backspace</code> 清空默认提示词，再粘贴自己的指令。</p>
+<p>✅ <strong>实用建议：用“测试三件套”验稳定性</strong><br>
+别急着批量生成！先做三次原子级验证：<br>
+① 换1个卖点词：把“现萃青梅汁”改成“整颗青梅手捣”<br>
+② 改1个目标人群：“怕酸怕涩的甜党” → “备考期不敢喝咖啡的学生党”<br>
+③ 增1个限制条件：“不出现‘健康’二字”</p>
+<p>三次都成功输出合理文案，才算通过“最小可行性验证”。通不过？说明你的prompt结构有漏洞，回退重调。</p>
+<hr>
+<h2 id="我的提示词模板抄就能用的广告文案流水线">我的提示词模板：抄就能用的“广告文案流水线”<a hidden class="anchor" aria-hidden="true" href="#我的提示词模板抄就能用的广告文案流水线">#</a></h2>
+<p>经过7版迭代（含2次被客户打回重写），我压箱底的模板长这样——已适配茶饮、烘焙、零食等快消品类：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>【角色】你是10年经验的快消品文案总监，专攻下沉市场，服务过喜茶、蜜雪冰城区域加盟商  
+</span></span><span style="display:flex;"><span>【输入】青梅冰柠茶｜整颗青梅手捣+冷泡乌龙｜怕酸怕涩的甜党｜小红书  
+</span></span><span style="display:flex;"><span>【输出】3条，每条含：  
+</span></span><span style="display:flex;"><span>• 1个反常识钩子（例：“酸=解腻加速器”）  
+</span></span><span style="display:flex;"><span>• 1个具体场景（例：“下午三点眼皮打架时”）  
+</span></span><span style="display:flex;"><span>• 1个动词指令（例：“戳我领免单券”）  
+</span></span><span style="display:flex;"><span>• 2个emoji（必须与场景强相关，禁用✨🎉）  
+</span></span></code></pre></div><p>💡 <strong>血泪教训：永远别写“请写出吸引人的文案”！</strong><br>
+Claude会当真去调用它的“吸引力心理学知识库”……上次让它写螺蛳粉文案，它回了我一篇800字《多巴胺分泌与臭味营销：论阈下嗅觉刺激对冲动消费的神经调控》。我读到第三段就关掉了页面。</p>
+<p>🔧 <strong>偷懒技巧：把参数做成代码块注释</strong><br>
+在VS Code里，我习惯这样写：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 平台=抖音 # 人群=18-25岁学生党 # 禁用词=正宗、爆款、天花板  
+</span></span><span style="display:flex;"><span># 钩子要求=用数字制造反差（例：“1颗青梅=3倍维C”）  
+</span></span><span style="display:flex;"><span># emoji规则=食物类用🍎🍋，动作类用👉🔥  
+</span></span></code></pre></div><p>Claude Code能精准识别这些<code>#</code>注释并执行。比写冗长自然语言高效10倍。</p>
+<hr>
+<h2 id="真实翻车现场3个让我凌晨三点改prompt的bug">真实翻车现场：3个让我凌晨三点改prompt的Bug<a hidden class="anchor" aria-hidden="true" href="#真实翻车现场3个让我凌晨三点改prompt的bug">#</a></h2>
+<h3 id="bug1批量生成时失忆">Bug1：批量生成时“失忆”<a hidden class="anchor" aria-hidden="true" href="#bug1批量生成时失忆">#</a></h3>
+<p>生成第1-4条正常，第5条开始无限复读第1条内容。查日志发现：Claude Code窗口缓存未刷新，旧上下文污染新请求。<strong>解法粗暴有效：关掉整个App，重启。</strong>（别笑，我试过清缓存、重装插件，都不如重启快）</p>
+<h3 id="bug2委婉语癌晚期">Bug2：委婉语癌晚期<a hidden class="anchor" aria-hidden="true" href="#bug2委婉语癌晚期">#</a></h3>
+<p>客户要“减脂代餐燕麦杯”文案，Claude输出：“开启轻盈生活新方式🌿”“拥抱自在能量节奏💫”。客户怒问：“这算哪门子减脂？我要的是‘吃这个能瘦’四个字！”<br>
+<strong>解法：在prompt末尾加粗写</strong></p>
+<blockquote>
+<p>【禁止使用委婉语、概念词、生活方式表述；直说功效，动词+结果，例：“吃1杯瘦0.2斤”】</p>
+</blockquote>
+<h3 id="bug3错别字幽灵">Bug3：错别字幽灵<a hidden class="anchor" aria-hidden="true" href="#bug3错别字幽灵">#</a></h3>
+<p>文案里“爆浆麻薯”反复变成“爆桨麻薯”。查遍模型设置，最后发现是字体渲染bug：Mac系统下用系统默认<code>SF Mono</code>字体时，<code>浆</code>字的“水”旁会被误判为“桨”字。<strong>换字体立竿见影：VS Code设置里把字体改为<code>Fira Code</code>，错字消失。</strong></p>
+<hr>
+<h2 id="进阶玩法让文案自己进化的土办法">进阶玩法：让文案自己“进化”的土办法<a hidden class="anchor" aria-hidden="true" href="#进阶玩法让文案自己进化的土办法">#</a></h2>
+<p>真正的高手，早就不靠“一次写好”，而是构建<strong>反馈驱动的进化闭环</strong>。我的野路子如下：</p>
+<p>🔹 <strong>用真实用户吐槽训练AI</strong><br>
+把生成的文案发到小红书笔记评论区，截图用户真实反馈（比如“求链接！”“这个口味真的踩雷”“包装太丑不想晒”），拖进Claude Code窗口，输入：</p>
+<blockquote>
+<p>“根据用户吐槽优化第2条文案，重点解决‘不好买’‘怕踩雷’两个顾虑，保留原钩子‘酸=解腻加速器’，新增1个信任背书（如‘127人回购’）”</p>
+</blockquote>
+<p>🔹 <strong>零成本竞品分析</strong><br>
+装VS Code插件 <code>Paste as Markdown</code>，把竞品公众号推文一键转成表格，Claude Code自动解析：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>| 品牌 | 文案高频词 | 出现次数 |  
+</span></span><span style="display:flex;"><span>|------|------------|----------|  
+</span></span><span style="display:flex;"><span>| A    | 不加香精   | 14       |  
+</span></span><span style="display:flex;"><span>| B    | 现煮茶底   | 9        |  
+</span></span></code></pre></div><p>我们茶饮店立刻跟进——所有prompt加一句：“必须强调‘不加香精’，且放在首句”。</p>
+<p>⚠️ <strong>警惕甜蜜陷阱：别追求“一次生成100条”！</strong><br>
+我实测过：生成15条后，质量断崖下跌（第16条开始出现“本品富含宇宙能量”这种玄学表达）。现在固定流程：<br>
+<code>15条 → 人工筛出3条优质文案 → 把这3条+用户反馈作为新prompt的【正样本】 → 让Claude强化学习</code><br>
+闭环跑通后，单条文案落地率从42%飙升至79%。</p>
+<hr>
+<h2 id="给新手的3句大实话">给新手的3句大实话<a hidden class="anchor" aria-hidden="true" href="#给新手的3句大实话">#</a></h2>
+<p><strong>第一句：别纠结模型选型！</strong><br>
+你花2小时调教Claude，不如花20分钟坐下来，和老板/店员/常客喝杯茶，问清楚：“年轻人怕什么？”<br>
+我们茶饮店最终发现——他们根本不怕胖，是怕“喝完一杯奶茶，下午开会时打嗝飘出柠檬味，不敢抬头看老板”。文案从此转向：“社恐友好｜喝完0气味｜开会不破防 👩‍💻➡️🤫”</p>
+<p><strong>第二句：所有“高级功能”都是纸老虎。</strong><br>
+Claude Code的“代码解释”按钮对我写文案毫无用处；但“选中文字→右键Ask”这个动作，让我日均产出效率翻了3倍。<strong>最强大的功能，永远是离你手指最近的那个。</strong></p>
+<p><strong>第三句：真正的护城河不是AI，是你电脑里那个叫<code>客户吐槽合集.txt</code>的文件。</strong><br>
+我把它设为Claude Code的默认参考文档（路径：<code>Settings &gt; Default Context &gt; Add File</code>），每次生成前自动加载。里面存着372条真实吐槽：“甜度像在喝糖浆”“吸管太细刮嘴”“小程序下单要填12项”。<br>
+AI不会编故事，但它会把“372条恐惧”翻译成“372种钩子”。</p>
+<p>这才是人机协作的本质：<br>
+<strong>你提供人性，它放大效率。</strong><br>
+其他一切，都是噪音。</p>
+
+
+  </div>
+
+  
+
+
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/claude/">Claude</a></li>
+      <li><a href="http://localhost:1313/tags/ai%E6%96%87%E6%A1%88%E7%94%9F%E6%88%90/">AI文案生成</a></li>
+      <li><a href="http://localhost:1313/tags/prompt%E5%B7%A5%E7%A8%8B/">Prompt工程</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%B0%8F%E7%BA%A2%E4%B9%A6%E8%BF%90%E8%90%A5/">小红书运营</a></li>
+      <li><a href="http://localhost:1313/tags/ai%E5%B7%A5%E5%85%B7%E5%AF%B9%E6%AF%94/">AI工具对比</a></li>
+      <li><a href="http://localhost:1313/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/">低代码开发</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

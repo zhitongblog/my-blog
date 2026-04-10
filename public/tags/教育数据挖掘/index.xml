@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>教育数据挖掘 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E6%95%99%E8%82%B2%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/</link><description>Recent content in 教育数据挖掘 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Feb 2026 10:38:01 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E6%95%99%E8%82%B2%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/index.xml" rel="self" type="application/rss+xml"/><item><title>第4篇：错题本如何真正‘懂你’？——基于学习行为的数据建模实践</title><link>https://zhitong.uk/posts/2026-02-20-d4pctbrhzzdnjyxxxwdsjjmsj/</link><pubDate>Fri, 20 Feb 2026 10:38:01 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-20-d4pctbrhzzdnjyxxxwdsjjmsj/</guid><description>本文通过真实学生案例与中学调研数据，揭示传统错题本的三大结构性失能，并介绍如何利用学习行为数据建模实现错题本的精准归因、细粒度标签与动态复习调度，让工具真正‘懂你’的认知需求。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>教育数据挖掘 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E6%95%99%E8%82%B2%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/</link>
+    <description>Recent content in 教育数据挖掘 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 20 Feb 2026 10:38:01 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%95%99%E8%82%B2%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第4篇：错题本如何真正‘懂你’？——基于学习行为的数据建模实践</title>
+      <link>http://localhost:1313/posts/2026-02-20-d4pctbrhzzdnjyxxxwdsjjmsj/</link>
+      <pubDate>Fri, 20 Feb 2026 10:38:01 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-20-d4pctbrhzzdnjyxxxwdsjjmsj/</guid>
+      <description>本文通过真实学生案例与中学调研数据，揭示传统错题本的三大结构性失能，并介绍如何利用学习行为数据建模实现错题本的精准归因、细粒度标签与动态复习调度，让工具真正‘懂你’的认知需求。</description>
+    </item>
+  </channel>
+</rss>

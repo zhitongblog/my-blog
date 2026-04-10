@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>TDD on 智通和你一起学AI</title><link>https://zhitong.uk/tags/tdd/</link><description>Recent content in TDD on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Thu, 19 Feb 2026 07:47:37 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/tdd/index.xml" rel="self" type="application/rss+xml"/><item><title>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计</title><link>https://zhitong.uk/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</link><pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</guid><description>本文深入解析Claude Code如何超越传统代码补全，成为TDD实践与技术方案设计的智能协作者——通过逆向解析测试契约驱动架构决策、策略抽象与可维护实现。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TDD on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/tdd/</link>
+    <description>Recent content in TDD on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 06 Apr 2026 13:49:44 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计</title>
+      <link>http://localhost:1313/posts/2026-04-06-cyfzyclaudecodeqdtddzdhcsyjsfa/</link>
+      <pubDate>Mon, 06 Apr 2026 13:49:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-cyfzyclaudecodeqdtddzdhcsyjsfa/</guid>
+      <description>本文深入探讨Claude Code（3.5 Sonnet）如何超越传统代码补全，真正赋能测试驱动开发（TDD）、自动化测试编写与技术方案设计，实现‘测试即契约’的智能协同开发范式。</description>
+    </item>
+    <item>
+      <title>吴恩达×Anthropic联手引爆AI编程革命：《Claude Code》短课全链路拆解（含CLAUDE.md实战速查）</title>
+      <link>http://localhost:1313/posts/2026-03-30-wedanthropiclsybaibcgmclaudeco/</link>
+      <pubDate>Mon, 30 Mar 2026 02:04:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-30-wedanthropiclsybaibcgmclaudeco/</guid>
+      <description>深度拆解吴恩达与Anthropic联合推出的《Claude Code》短课，揭秘其‘反向教学系统’如何重构开发者思维回路，提升代码生成准确率47%，含CLAUDE.md实战速查与TDD测试桩工作流。</description>
+    </item>
+    <item>
+      <title>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计</title>
+      <link>http://localhost:1313/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</link>
+      <pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</guid>
+      <description>本文深入解析Claude Code如何超越传统代码补全，成为TDD实践与技术方案设计的智能协作者——通过逆向解析测试契约驱动架构决策、策略抽象与可维护实现。</description>
+    </item>
+  </channel>
+</rss>

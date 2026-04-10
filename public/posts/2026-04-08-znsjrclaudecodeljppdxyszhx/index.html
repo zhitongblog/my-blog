@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>智能升级：让Claude Code理解品牌调性与受众画像 | 智通和你一起学AI</title>
+<meta name="keywords" content="Claude, AI提示工程, 品牌营销, 大模型微调, 内容生成, LLM应用">
+<meta name="description" content="本文揭秘如何通过结构化提示、受众画像嵌入与风格约束，让Claude Code真正理解品牌调性，避免黑话堆砌，生成符合真实用户语境的营销文案。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-04-08-znsjrclaudecodeljppdxyszhx/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-04-08-znsjrclaudecodeljppdxyszhx/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      智能升级：让Claude Code理解品牌调性与受众画像
+    </h1>
+    <div class="post-description">
+      本文揭秘如何通过结构化提示、受众画像嵌入与风格约束，让Claude Code真正理解品牌调性，避免黑话堆砌，生成符合真实用户语境的营销文案。
+    </div>
+    <div class="post-meta"><span title='2026-04-08 06:26:49.602 +0000 UTC'>April 8, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="一为什么我一开始觉得让ai懂品牌调性是玄学">一、为什么我一开始觉得“让AI懂品牌调性”是玄学？<a hidden class="anchor" aria-hidden="true" href="#一为什么我一开始觉得让ai懂品牌调性是玄学">#</a></h2>
+<p>第一次给 Claude Code 喂品牌资料时，我信心满满——20页PDF，含VI手册、SOP文案范例、三年社媒热帖合集，连字体字号都标了色值。结果它交来一篇618电商主图文案，开头就是：</p>
+<blockquote>
+<p>“以用户为中心，深度耦合消费场景，构建可持续增长飞轮，实现价值闭环与体验升维……”</p>
+</blockquote>
+<p>客户微信秒回一张截图，配文：“这是在写互联网黑话词典？还是我们家卖的是‘赋能型睫毛膏’？”</p>
+<p><img alt="失败文案对比截图：左侧是AI生成的黑话堆砌段落，右侧是客户手写批注“请停止抽象化表达”" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/9d/20260408/d23adf3d/48e2fad0-a0f3-96ab-bb8c-52dfcbc3d6d62878075418.png?Expires=1776232457&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=4g5yi0fkjCNO5glO6EvNPdLlic0%3D"></p>
+<p>那一刻我盯着屏幕，手心发潮。不是模型不行——它刚用同一套资料，精准复现了某竞品小红书评论区的emoji节奏和分段呼吸感；而是我犯了个致命错误：<strong>把“品牌调性”当成了可打包上传的静态知识库，而不是需要被翻译成模型能感知的“语言指纹”</strong>。</p>
+<p>调性不是文档里的形容词（“年轻”“专业”“松弛”），而是动词：它怎么断句？爱用什么语气词？拒绝哪类修辞？在什么语境下会突然变短？</p>
+<p>我翻出那20页手册里唯一被划了三道横线的一页——创始人手写的会议纪要：“别写‘尊享’，写‘喏，给你留了最后一盒’；别提‘科技成分’，说‘这玩意儿我试了17次才敢给你’。”</p>
+<p>原来，“调性”藏在人话的褶皱里，不在PPT的标题栏里。</p>
+<p>多数人卡在第一步，不是因为不会写Prompt，而是没意识到：<strong>“请写出有松弛感的文案” ≈ “请凭空召唤空气”，而“每句≤12字，句尾带‘哎’‘哈’‘喏’，禁用‘之’‘其’‘乃’”才是指令</strong>。</p>
+<hr>
+<h2 id="二我的三步实操法从说不清到喂得准">二、我的三步实操法：从“说不清”到“喂得准”<a hidden class="anchor" aria-hidden="true" href="#二我的三步实操法从说不清到喂得准">#</a></h2>
+<h3 id="第一步把调性翻译成人话特征清单">第一步：把调性翻译成“人话特征清单”<a hidden class="anchor" aria-hidden="true" href="#第一步把调性翻译成人话特征清单">#</a></h3>
+<p>某新消费茶饮品牌要求“松弛感”。市场总监口头强调三次，但文案组始终写不出味道。我拉来他们最火的3条小红书笔记，逐字拆解：</p>
+<table>
+  <thead>
+      <tr>
+          <th>特征维度</th>
+          <th>具体表现</th>
+          <th>反例（自动过滤）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>句长</strong></td>
+          <td>平均9.2字/句，最长11字（如：“冰块咔嚓，一口透心凉”）</td>
+          <td>&gt;14字（如：“这款冷泡茶采用高山云雾嫩芽经低温慢萃工艺制成”）</td>
+      </tr>
+      <tr>
+          <td><strong>叹词</strong></td>
+          <td>每150字必出现1次“哎”“哈”“喏”“呀”（口语锚点）</td>
+          <td>零叹词，或滥用“哦～”“呢～”（显幼稚）</td>
+      </tr>
+      <tr>
+          <td><strong>修辞</strong></td>
+          <td>拒绝成语/四字词；用生活化比喻（“像偷喝老爸冰箱里的汽水”）</td>
+          <td>“沁人心脾”“回味悠长”“匠心独运”</td>
+      </tr>
+  </tbody>
+</table>
+<p>→ 直接塞进Prompt：</p>
+<pre tabindex="0"><code class="language-prompt" data-lang="prompt">你是一名资深新消费文案，为「山野茶事」品牌服务。请严格遵守以下3条铁律：  
+1. 每句≤12字，禁止换行句超过2行；  
+2. 每段必含1个口语叹词（仅限：哎/哈/喏/呀/嚯）；  
+3. 禁用任何成语、四字词、文言虚词（之/其/乃/遂）。  
+现在为新品「青梅气泡茶」写3条小红书标题（带emoji）：  
+</code></pre><h3 id="第二步用正反例对撞法训练模型">第二步：用“正反例对撞法”训练模型<a hidden class="anchor" aria-hidden="true" href="#第二步用正反例对撞法训练模型">#</a></h3>
+<p>只给正面案例？等于放AI去自由发挥。我吃过亏——喂了10条“松弛感”范例，它产出一句：“尊享青梅暴击体验！💥”，还自信加了emoji。</p>
+<p><strong>关键动作：每1条正例，必须配1条错例+批注</strong>。例如：</p>
+<blockquote>
+<p>✅ 正例：“喏，青梅味儿刚上头，气泡就来捣乱～”<br>
+❌ 错例：“尊享青梅暴击体验！💥” → 批注：违反“去高端化”原则，“尊享”制造距离感，“暴击”过度用力，丢失松弛呼吸感</p>
+</blockquote>
+<p>Claude Code 对批注极其敏感。当我把这类“错例+原因”批量喂入，它的错误率从37%降到6%。</p>
+<h3 id="第三步绑定受众画像做动态校验">第三步：绑定受众画像做动态校验<a hidden class="anchor" aria-hidden="true" href="#第三步绑定受众画像做动态校验">#</a></h3>
+<p>“针对年轻人”？太宽泛。我们给Claude Code加了个“受众触发器”：</p>
+<pre tabindex="0"><code class="language-prompt" data-lang="prompt">当文案中出现以下任一关键词时，自动切换模式：  
+- 出现「早八人」「通勤」「地铁」→ 启用「咖啡渍emoji☕+碎片短句」模式（例：“闹钟响了☕ 嘴里还有青梅味儿”）  
+- 出现「加班」「方案」「PPT」→ 加入自嘲梗（例：“改第8版PPT时，这杯茶救了我命”）  
+- 出现「闺蜜」「拍照」「打卡」→ 插入视觉提示（例：“瓶身绿得像你手机相册里那张莫奈”）  
+</code></pre><p><img alt="正反例对撞Prompt结构示意图：左侧正例+右侧错例+红色批注框" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/67/20260408/d23adf3d/c594d09e-5236-9453-a1c4-65d9a33a5edd2822226606.png?Expires=1776232474&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=eENVh3U0sNgPKuFomOQ3am%2FMNfw%3D"></p>
+<p><strong>真实效果对比</strong>（同一需求：新品上市朋友圈文案）：</p>
+<table>
+  <thead>
+      <tr>
+          <th>维度</th>
+          <th>旧版（抽象指令）</th>
+          <th>新版（三步法）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>调性匹配度</td>
+          <td>52%（客户打回2次）</td>
+          <td>91%（1次过稿）</td>
+      </tr>
+      <tr>
+          <td>受众代入感</td>
+          <td>“像在看广告”</td>
+          <td>“像朋友发来的语音转文字”</td>
+      </tr>
+      <tr>
+          <td>生成稳定性</td>
+          <td>每次风格漂移</td>
+          <td>连续5次输出保持一致语感</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="三那些让我连夜改prompt的隐形雷区">三、那些让我连夜改prompt的“隐形雷区”<a hidden class="anchor" aria-hidden="true" href="#三那些让我连夜改prompt的隐形雷区">#</a></h2>
+<h3 id="雷区1调性关键词自相矛盾">雷区1：调性关键词自相矛盾<a hidden class="anchor" aria-hidden="true" href="#雷区1调性关键词自相矛盾">#</a></h3>
+<p><strong>案例</strong>：医疗健康品牌要求“专业但亲切”。Claude Code把“本品获FDA认证”写成：“这个小糖丸超靠谱哦～✨”。市场总监电话里吼：“FDA认证是能‘哦～’出来的吗？！”</p>
+<p>✅ <strong>避坑口诀：专业信息不抢主语，括号备注是安全带</strong><br>
+→ 改后Prompt：</p>
+<pre tabindex="0"><code class="language-prompt" data-lang="prompt">主文案全程口语化（用“咱”“你”“哈”），所有专业信息强制放入括号：  
+例：“喝完嘴不干（含玻尿酸钠，临床验证保湿力↑300%）”  
+禁用“权威认证”“尖端科技”等抽象词，括号外不出现任何数据/机构名。  
+</code></pre><h3 id="雷区2忽略渠道特性导致调性错位">雷区2：忽略渠道特性导致调性错位<a hidden class="anchor" aria-hidden="true" href="#雷区2忽略渠道特性导致调性错位">#</a></h3>
+<p><strong>血泪教训</strong>：把小红书爆款文案“救命！这睫毛膏焊在眼睛上！🌧️（下雨都不晕染）”直接复用到公众号推文，老板怒删：“品牌要稳重，不是要焊工执照！”</p>
+<p>✅ <strong>避坑口诀：渠道即语境，Prompt开头必写渠道身份</strong><br>
+→ 强制声明：</p>
+<pre tabindex="0"><code class="language-prompt" data-lang="prompt">【你当前身份】：公众号主编（非小红书博主）。读者正在午休刷手机，耐心≤8秒。  
+禁用感叹号密集阵、网络热梗、夸张动词（“焊”“炸”“杀疯了”）。  
+用“静悄悄”“不声不响”“自己就稳住了”替代绝对化表述。  
+</code></pre><h3 id="雷区3受众画像太宽泛等于没画">雷区3：受众画像太宽泛等于没画<a hidden class="anchor" aria-hidden="true" href="#雷区3受众画像太宽泛等于没画">#</a></h3>
+<p><strong>原始画像</strong>：“25-35岁女性，一线/新一线城市，关注护肤”。<br>
+→ AI产出：“姐妹们快冲！这精华水让你白成一道光！”（完全没戳中任何人）</p>
+<p>✅ <strong>避坑口诀：画像要具体到能叫出她地铁站名</strong><br>
+→ 改进后：</p>
+<pre tabindex="0"><code class="language-prompt" data-lang="prompt">目标用户：上海浦东新区·养猫·通勤地铁40分钟·小红书收藏夹有17个护肤合集·上周刚被老板push改方案3次的职场新人。  
+她刷手机时单手操作，看到“玻尿酸”会翻白眼，看到“不用等吸收，挤完就去赶地铁”会停住。  
+</code></pre><p><img alt="受众画像细化对比图：左侧模糊标签云，右侧具体场景快照（地铁+猫+手机界面）" loading="lazy" src="IMAGE_PLACEHOLDER_3"></p>
+<hr>
+<h2 id="四我们最终跑通的sop让claude-code成为品牌调性守门员">四、我们最终跑通的SOP：让Claude Code成为品牌“调性守门员”<a hidden class="anchor" aria-hidden="true" href="#四我们最终跑通的sop让claude-code成为品牌调性守门员">#</a></h2>
+<p>现在，我们团队的文案流程已固化为5步人机协作流水线：</p>
+<pre tabindex="0"><code>收到需求 → 拆解为3个特征词 → 调取历史正反例库 → 生成初稿 → 用预设校验清单过筛（含5个必检项） → 人工微调  
+</code></pre><p><strong>校验清单5必检项</strong>（Claude Code自检+人工复核）：</p>
+<ol>
+<li>✅ 句长是否超12字？（用<code>len()</code>函数粗筛）</li>
+<li>✅ 是否缺失叹词？（grep “哎|哈|喏|呀”）</li>
+<li>✅ 括号外是否出现专业术语？（正则匹配：<code>(?&lt;!\().*(FDA|临床|浓度|μg).*?(?!\))</code>）</li>
+<li>✅ 渠道关键词是否触发对应模式？（if “早八人” in text → check ☕ emoji）</li>
+<li>✅ 是否出现画像禁止词？（黑名单：“姐妹”“冲”“绝了”“yyds”）</li>
+</ol>
+<p><strong>工具包已开源</strong>（团队内部）：</p>
+<ul>
+<li>📋 <strong>《调性特征速查表》</strong>：32个高频词直译（例：“高级感”≠“奢华”，而是“名词前置+弱动词+留白标点” → “羊绒。不扎。静音。”）</li>
+<li>🧩 <strong>《受众画像快填模板》</strong>：6个问题直击决策场景：
+<blockquote>
+<p>① 她最近一次焦虑是什么事？（例：改PPT到凌晨）<br>
+② 她手机相册最新3张截图是什么？（例：地铁拥挤照/猫吐毛球/咖啡渍键盘）<br>
+③ 她收藏夹里最多的3个话题？（例：通勤穿搭/猫粮测评/Excel技巧）<br>
+……（略）</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>效果验证</strong>：上线3个月，市场部文案返工率↓67%，客户反馈原话：“终于不用反复说‘再年轻一点’了——你们的AI比我还懂我们品牌。”</p>
+<p>最后说句实在话：<strong>我们不要全自动，只要确定性</strong>。</p>
+<ul>
+<li>✅ <strong>特征库维护</strong>：由文案组长+设计主管双签，每月更新正反例</li>
+<li>✅ <strong>终审权限</strong>：市场总监保留最终否决权，但只审“是否越界”，不改字词</li>
+<li>✅ <strong>Claude Code角色</strong>：不是写手，是“调性守门员”——它不创造风格，只严防死守风格不漂移</li>
+</ul>
+<p>毕竟，品牌调性不是AI该发明的东西，而是人类用20年时间刻进消费者神经里的条件反射。我们的任务，只是帮AI听清那声细微却坚定的“咔哒”——锁扣闭合的声音。</p>
+<p><img alt="SOP流程图：五步循环箭头，中心标注“人机协作确定性”" loading="lazy" src="IMAGE_PLACEHOLDER_4"></p>
+
+
+  </div>
+
+  
+
+
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/claude/">Claude</a></li>
+      <li><a href="http://localhost:1313/tags/ai%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/">AI提示工程</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%93%81%E7%89%8C%E8%90%A5%E9%94%80/">品牌营销</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83/">大模型微调</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90/">内容生成</a></li>
+      <li><a href="http://localhost:1313/tags/llm%E5%BA%94%E7%94%A8/">LLM应用</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

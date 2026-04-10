@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Python开发 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/python%E5%BC%80%E5%8F%91/</link><description>Recent content in Python开发 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Thu, 19 Feb 2026 04:51:18 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/python%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml"/><item><title>精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力</title><link>https://zhitong.uk/posts/2026-02-19-jztwdysypromptengineeringjycla/</link><pubDate>Thu, 19 Feb 2026 04:51:18 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-jztwdysypromptengineeringjycla/</guid><description>本文详解如何通过精准Prompt Engineering激活Claude 3.5 Sonnet的深层代码理解能力，涵盖类型提示解析、框架模式识别与长上下文利用，避免模糊提问导致的安全退避与错误输出。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python开发 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/python%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in Python开发 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 19 Feb 2026 04:51:18 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/python%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力</title>
+      <link>http://localhost:1313/posts/2026-02-19-jztwdysypromptengineeringjycla/</link>
+      <pubDate>Thu, 19 Feb 2026 04:51:18 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-jztwdysypromptengineeringjycla/</guid>
+      <description>本文详解如何通过精准Prompt Engineering激活Claude 3.5 Sonnet的深层代码理解能力，涵盖类型提示解析、框架模式识别与长上下文利用，避免模糊提问导致的安全退避与错误输出。</description>
+    </item>
+  </channel>
+</rss>

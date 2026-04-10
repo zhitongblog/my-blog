@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>跨语言编程 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E8%B7%A8%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 跨语言编程 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 01 Apr 2026 04:22:58 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%B7%A8%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anthropic工程师没说出口的真相：为什么Claude Code用Rust写推理层、Python写编排层？跨语言协同架构深度复盘</title>
+      <link>http://localhost:1313/posts/2026-04-01-anthropicgcsmsckdzxwsmclaudeco/</link>
+      <pubDate>Wed, 01 Apr 2026 04:22:58 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-01-anthropicgcsmsckdzxwsmclaudeco/</guid>
+      <description>深度解析Claude Code为何用Rust实现高性能推理层、Python构建灵活编排层——聚焦‘计算契约’这一被忽视的设计哲学，揭示延迟、内存、并发与错误责任的分层治理逻辑。</description>
+    </item>
+  </channel>
+</rss>

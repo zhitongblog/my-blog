@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>隐私保护 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4/</link><description>Recent content in 隐私保护 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Thu, 19 Feb 2026 10:02:44 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4/index.xml" rel="self" type="application/rss+xml"/><item><title>第七步：不止于算命——扩展星座/塔罗模块与用户画像分析（可选功能演进）</title><link>https://zhitong.uk/posts/2026-02-19-dqbbzysmkzxztlmkyyhhxfxkxgnyj/</link><pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-dqbbzysmkzxztlmkyyhhxfxkxgnyj/</guid><description>本文探讨如何将星座/塔罗等灵性符号系统升级为可扩展、隐私优先的智能用户理解模块，通过插件化架构、低耦合设计与合规数据策略，构建动态生长的灵性体验智能体。</description></item><item><title>第三步：五行八卦上手——集成本地命理算法（八字排盘逻辑）</title><link>https://zhitong.uk/posts/2026-02-19-dsbwxbgssjcbdmlsfbzpplj/</link><pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-dsbwxbgssjcbdmlsfbzpplj/</guid><description>本文详解如何在本地离线实现传统八字排盘算法，基于公历时间与地理经度精准推算四柱干支、十神、五行旺衰及八卦映射，全程不联网，保障用户隐私并支持学术复现。</description></item><item><title>第五步：隐私即信仰——在iOS中安全存储生辰与命理结果（Keychain+CoreData）</title><link>https://zhitong.uk/posts/2026-02-19-dwbysjxyzioszaqccscymljgkeycha/</link><pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-dwbysjxyzioszaqccscymljgkeycha/</guid><description>详解iOS中如何用Keychain+CoreData安全存储用户生辰与命理数据，规避UserDefaults明文风险，满足《个人信息保护法》对敏感信息的强保护要求。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>隐私保护 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4/</link>
+    <description>Recent content in 隐私保护 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 19 Feb 2026 10:02:44 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第七步：不止于算命——扩展星座/塔罗模块与用户画像分析（可选功能演进）</title>
+      <link>http://localhost:1313/posts/2026-02-19-dqbbzysmkzxztlmkyyhhxfxkxgnyj/</link>
+      <pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-dqbbzysmkzxztlmkyyhhxfxkxgnyj/</guid>
+      <description>本文探讨如何将星座/塔罗等灵性符号系统升级为可扩展、隐私优先的智能用户理解模块，通过插件化架构、低耦合设计与合规数据策略，构建动态生长的灵性体验智能体。</description>
+    </item>
+    <item>
+      <title>第三步：五行八卦上手——集成本地命理算法（八字排盘逻辑）</title>
+      <link>http://localhost:1313/posts/2026-02-19-dsbwxbgssjcbdmlsfbzpplj/</link>
+      <pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-dsbwxbgssjcbdmlsfbzpplj/</guid>
+      <description>本文详解如何在本地离线实现传统八字排盘算法，基于公历时间与地理经度精准推算四柱干支、十神、五行旺衰及八卦映射，全程不联网，保障用户隐私并支持学术复现。</description>
+    </item>
+    <item>
+      <title>第五步：隐私即信仰——在iOS中安全存储生辰与命理结果（Keychain&#43;CoreData）</title>
+      <link>http://localhost:1313/posts/2026-02-19-dwbysjxyzioszaqccscymljgkeycha/</link>
+      <pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-dwbysjxyzioszaqccscymljgkeycha/</guid>
+      <description>详解iOS中如何用Keychain&#43;CoreData安全存储用户生辰与命理数据，规避UserDefaults明文风险，满足《个人信息保护法》对敏感信息的强保护要求。</description>
+    </item>
+  </channel>
+</rss>

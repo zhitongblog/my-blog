@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AI智能体 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/ai%E6%99%BA%E8%83%BD%E4%BD%93/</link><description>Recent content in AI智能体 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sat, 14 Mar 2026 05:46:38 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/ai%E6%99%BA%E8%83%BD%E4%BD%93/index.xml" rel="self" type="application/rss+xml"/><item><title>AI牛市新主线？从大模型到智能体，‘龙虾热’正在重写技术投资逻辑</title><link>https://zhitong.uk/posts/2026-03-14-ainsxzxcdmxdzntlxrzzzxjstzlj/</link><pubDate>Sat, 14 Mar 2026 05:46:38 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-14-ainsxzxcdmxdzntlxrzzzxjstzlj/</guid><description>本文剖析AI投资逻辑从大模型向智能体（Agent）的范式转移，解读‘龙虾热’背后资本市场对自主决策与闭环执行能力的重定价，揭示Agent Layer融资首超基础模型层的技术拐点。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI智能体 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/ai%E6%99%BA%E8%83%BD%E4%BD%93/</link>
+    <description>Recent content in AI智能体 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 14 Mar 2026 05:46:38 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai%E6%99%BA%E8%83%BD%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI牛市新主线？从大模型到智能体，‘龙虾热’正在重写技术投资逻辑</title>
+      <link>http://localhost:1313/posts/2026-03-14-ainsxzxcdmxdzntlxrzzzxjstzlj/</link>
+      <pubDate>Sat, 14 Mar 2026 05:46:38 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-14-ainsxzxcdmxdzntlxrzzzxjstzlj/</guid>
+      <description>本文剖析AI投资逻辑从大模型向智能体（Agent）的范式转移，解读‘龙虾热’背后资本市场对自主决策与闭环执行能力的重定价，揭示Agent Layer融资首超基础模型层的技术拐点。</description>
+    </item>
+  </channel>
+</rss>

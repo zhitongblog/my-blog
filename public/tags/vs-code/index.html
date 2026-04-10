@@ -1,35 +1,442 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>VS Code | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/tags/vs-code/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/tags/vs-code/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/tags/vs-code/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/tags/vs-code/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="VS Code"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="VS Code"><meta name=twitter:description content="这是智通成长的历程"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>VS Code</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</h2></header><div class=entry-content><p>为什么我一开始死磕“本地模式”却连浏览器都打不开？ 上周三下午三点十七分，我盯着 VS Code 里第 17 次报错的终端窗口，手边咖啡凉透，心里只剩一个念头：这破 puppeteer-core 怎么连 localhost 都连不上？
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>VS Code | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/tags/vs-code/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/vs-code/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/vs-code/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    VS Code
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第一步：零配置启动——用Claude Code生成项目脚手架
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、前置准备：环境与权限确认 在开始使用 Claude Code 生成项目脚手架前，请务必完成以下环境校验——这不是可跳过的“安装步骤”，而是决定整个 AI 编程体验是否稳定、合规、可落地的关键前提。
+首先需要明确一个常见混淆点：Claude Code 并非独立 CLI 工具，也不是网页版 Claude 的增强功能，更不是 Anthropic 官方发布的 anthropic Python SDK 的子模块。它是 Anthropic 官方为 VS Code 深度定制的 IDE 扩展（Extension），其核心能力依赖于 VS Code 的语言服务上下文、文件系统监听和实时编辑器状态感知。这意味着它无法在终端中执行 claude code init（该命令根本不存在），也无法通过 curl 调用 API 替代——它的智能，始于你光标所在的 .ts 文件、当前打开的 package.json、甚至未保存的临时草稿。
+✅ 必需环境清单（缺一不可）：
+VS Code 版本 ≥ 1.85（需支持 Webview2 渲染与新版 Extension Host API） 安装官方扩展：Claude Code（v0.8.0&#43;，截至 2024 年 7 月最新为 v0.8.3） 已登录 Anthropic 账户（使用 Ctrl&#43;Shift&#43;P → Claude: Sign in） ✅ 账户权限验证：
+登录后，进入 Anthropic Console → Settings → Code Assistant，确认：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-10 13:46:09.089 +0000 UTC'>April 10, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第一步：零配置启动——用Claude Code生成项目脚手架" href="http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 前置准备：环境与权限检查 在正式启用 Claude Code 之前，请务必完成以下系统级验证——这一步常被跳过，却是后续所有功能稳定运行的基石。切记：Claude Code 是 Anthropic 官方维护的 VS Code 扩展（ID: anthropic.claude-code），不是第三方“Claude for VS Code”“Claude AI Assistant”等非签名插件。后者存在 API Key 窃取、请求劫持等高危风险，本文全程仅支持官方渠道。
+✅ 最低环境要求 VS Code ≥ 1.85（需支持 Webview2 及新的 Secrets API） Node.js ≥ 18.17.0（执行 node -v 验证；低于此版本将导致扩展启动失败） 操作系统 HTTPS 支持完备：Windows 10&#43; / macOS 12&#43; / Linux（glibc ≥ 2.31） 若身处网络受限区域，需提前配置系统级代理（非仅浏览器代理）：确保终端 curl、VS Code 内置终端、扩展后台进程均可访问 https://api.anthropic.com 🔑 账户与密钥准备 访问 Anthropic 控制台 → 登录账户（支持 Google / GitHub 快捷登录） 确认账户状态：免费用户享有每月 $5 额度（约 120 万输入 tokens），Pro 用户享更高优先级与速率限制豁免 点击 Create Key → 复制生成的 sk-ant-api03-... 密钥（⚠️ 切勿截图、勿存入 Git、勿共享） 🖥️ 权限与连通性实操验证 系统 关键注意事项 macOS 首次启动 VS Code 时若弹出“已损坏，无法打开”，请右键 App → “显示简介” → 勾选“仍要打开”；Gatekeeper 会拦截未公证的二进制文件 Windows 确保 Windows Defender 或第三方杀软未将 claude-code 相关进程标记为可疑（可临时添加信任目录） Linux 检查 libsecret-1.so 是否安装（Ubuntu/Debian: sudo apt install libsecret-1-dev） ✅ 终端连通性自检（必做）：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-06 13:19:25.684 +0000 UTC'>April 6, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成" href="http://localhost:1313/posts/2026-04-06-gchjjzvscodezsdjcclaudecodesxz/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、准备工作：配置Claude Code环境与接入遗留项目 在接手一个上线5年、文档缺失、技术栈混杂的遗留系统时，第一道坎往往不是代码本身，而是“如何让AI真正听懂它”。Claude Code（非第三方魔改版）是目前少数能深度理解多语言上下文、支持精细作用域控制的编程助手。但它的威力高度依赖精准的初始配置——配置失误，轻则返回泛泛而谈的废话，重则意外上传敏感代码。
+首先，确认你的主力IDE：VS Code 是当前唯一官方完整支持的环境（截至2024年Q3）。打开 VS Code → 扩展市场 → 搜索 Claude Code → 认准发布者为 Anthropic 的官方插件（图标为紫色渐变C字徽标），点击安装并重启。⚠️ 切勿安装名称近似但发布者为个人或不明组织的插件——它们可能劫持API密钥或注入恶意payload。
+安装后，通过 Cmd&#43;Shift&#43;P（Mac）或 Ctrl&#43;Shift&#43;P（Win/Linux）打开命令面板，输入 Claude: Configure，首次运行会引导你创建项目级配置文件 .claude-code/config.json。这是你掌控AI行为的核心开关：
+{ &#34;model&#34;: &#34;claude-3-5-sonnet-20240620&#34;, &#34;maxTokens&#34;: 2048, &#34;contextWindowSize&#34;: 16384, &#34;scope&#34;: &#34;currentFile&#34; } model：明确指定模型版本，避免因默认升级导致行为突变（如旧版sonnet对TypeScript泛型理解更稳定）； maxTokens：设为2048可平衡响应速度与细节密度，过大会拖慢反馈； contextWindowSize：16K是安全阈值，超大会触发截断，丢失关键上下文； scope: &#34;currentFile&#34; 是最关键的安全部署项！必须手动将默认的 &#34;workspace&#34; 改为此值，强制Claude只读取当前打开的单个文件，杜绝自动扫描整个仓库的风险。 接着，在项目根目录创建 .claude-code/ignore.json，主动屏蔽噪音源：
+{ &#34;patterns&#34;: [ &#34;**/node_modules/**&#34;, &#34;**/dist/**&#34;, &#34;**/build/**&#34;, &#34;**/*.log&#34;, &#34;**/coverage/**&#34;, &#34;**/vendor/**&#34;, &#34;**/tmp/**&#34; ] } ⚠️ 生死线提醒：
+禁用任何“自动上传整个仓库”的选项（插件设置中搜索 upload，确保 autoUploadWorkspace 为 false）； 若项目运行于未加密内网（如某银行测试环境），请额外在 config.json 中添加 &#34;disableTelemetry&#34;: true； 敏感代码切勿粘贴到聊天框——使用 @file:src/utils/auth.js 语法引用本地文件，数据全程不离开发机。 二、第一步：让Claude Code“读懂”陌生遗留代码（静态理解） 面对一段无注释、无单元测试、混合了Flask路由、SQLAlchemy查询和手动JSON序列化的Python函数，人类工程师平均需23分钟理清逻辑。Claude Code可在8秒内给出结构化解构：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-06 13:06:12.152 +0000 UTC'>April 6, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码" href="http://localhost:1313/posts/2026-04-06-zgydslqrclaudecodebnddyhhxfyld/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">快速上手：5分钟配置Claude Code并完成首个代码生成任务
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 前置准备：环境与权限检查 在正式接入 Claude Code（Anthropic 官方推出的代码专用智能体，非通用 Claude Web 界面或基础 API）前，请务必完成以下四步验证——这将避免 90% 的“安装成功但无法使用”类问题。Claude Code 是专为开发者设计的本地化代码协作者，它深度集成于 IDE 或桌面环境，能理解上下文、读取文件、生成可运行脚本，并自动处理依赖假设；而通用 Claude API（如通过 anthropic Python SDK 调用）需手动管理提示工程、流式响应、错误重试等，本文全程聚焦前者（即 Claude Desktop App 和 Claude for VS Code 插件）。
+✅ 系统与硬件要求（最低&#43;推荐）
+操作系统：macOS 12 Monterey 及以上（Apple Silicon / Intel 均支持）、Windows 10 21H2 或 Windows 11、Linux x64（Ubuntu 20.04&#43;/Debian 11&#43;，需 glibc ≥2.31） 内存：≥8GB RAM（推荐 16GB；低于 6GB 可能触发频繁 swap，导致响应延迟） 磁盘空间：≥500MB 可用空间（含缓存与模型元数据） ✅ 软件依赖检查
+若使用 OAuth 登录流程（所有方式均需），请确保已安装并更新至最新版： Chrome（v120&#43;）或 Firefox（v115&#43;）——用于安全跳转授权页 若选用 VS Code 方式，需 VS Code v1.85&#43;（下载地址） ✅ 账户准备（关键！）
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-06 10:44:43.623 +0000 UTC'>April 6, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 快速上手：5分钟配置Claude Code并完成首个代码生成任务" href="http://localhost:1313/posts/2026-04-06-ksss5fzpzclaudecodebwcsgdmscrw/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">社区自救行动：GitHub上悄然兴起的ClaudeCode替代方案清单（含轻量微调指南）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🚨 37小时！ClaudeCode突然下线，21万开发者连夜 fork 仓库 北京时间 2024年6月18日 14:23
+Anthropic 官方未发公告，API 突然返回 403 Forbidden。
+不是维护，不是升级，是静默断连。
+GitHub 上 anthropic/claude-code 仓库 404。
+镜像站流量在 17 分钟内暴涨 1800%。
+213,891 名开发者——
+在 37 小时内完成：
+✅ 542 个高质量 fork（含 27 个中文适配分支）
+✅ 19 个社区托管 API 网关上线（全部 HTTPS &#43; JWT 鉴权）
+✅ 第一个可运行的 VS Code 插件 claude-code-alive 发布 v0.1.0
+“不是停服，是断供——AI 编程权正在被收编”
+—— @zhangyue_dev 在 Hugging Face 论坛的首条评论（已被 2417 人点赞）
+这不是一次服务中断。
+是一次基础设施主权的警报。
+而响应速度，快过所有官方 SLA。
+🔍 真实可用的5大替代方案（已实测｜零付费墙） 我们逐行 git clone、make test、npm run dev 验证——
+只收录：
+✔️ main 分支已合并最新修复
+✔️ 支持 ollama run / llama-server 本地部署
+✔️ 中文 README 完整覆盖安装&#43;配置&#43;故障排查
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-05 16:07:36.888 +0000 UTC'>April 5, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 社区自救行动：GitHub上悄然兴起的ClaudeCode替代方案清单（含轻量微调指南）" href="http://localhost:1313/posts/2026-04-06-sqzjxdgithubsqrxqdclaudecodetd/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">51万行Claude Code源码泄露实录：8大隐藏功能代码级拆解（附GitHub可运行Demo）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引言：一场“意外”背后的代码考古学 2024年3月17日，一个匿名GitHub账号 @dev-archaeologist 上传了名为 claude-local-bridge 的私有仓库镜像——51.2万行混编代码（Python 68% / TypeScript 29% / Rust 3%），包含完整构建脚本、CI流水线定义及本地Docker Compose配置。社区最初误判为Anthropic官方泄露，但经多团队交叉验证（包括对git log --pretty=fuller提交指纹的哈希比对、pyproject.toml中anthropic==0.32.0与官方SDK v0.35.0的版本断层、以及/bridge/server.py中硬编码的# INTERNAL-EXPERIMENTAL: DO NOT DISTRIBUTE注释），确认其真实身份：某头部IDE厂商内部孵化的Claude本地化桥接实验项目，核心目标是将Claude API能力无缝注入VS Code，同时支持Ollama/LM Studio等本地模型后端。
+这不是商业机密的窃取，而是一次珍贵的“工程化石”发掘。我们团队耗时11天完成三阶段清洗：① 剥离所有硬编码API密钥与内网域名；② 替换闭源依赖（如自研AST解析器）为开源等效实现（Tree-sitter &#43; Pydantic AST visitor）；③ 构建可复现的Docker环境（含VS Code Web Server沙箱）。最终产出的claude-local-bridge-v2-clean仓库已通过CI全链路验证：从编辑器插件安装、桥接服务启动，到成功调用Llama-3-8B完成跨文件补全。
+图1：代码可信度三维验证矩阵。Git提交指纹（SHA256前8位）与原始泄露包完全一致；构建产物dist/bridge-server的ELF符号表与反编译逻辑吻合；所有第三方依赖均通过poetry lock --no-dev锁定精确版本（如transformers==4.38.2），杜绝了“依赖漂移”导致的分析失真。
+架构总览：三层洋葱模型与数据流拓扑 该架构彻底摒弃了传统LLM插件的“前端直连云端”模式，转而采用严格的三层洋葱模型：
+外层：VS Code Extension（TypeScript） —— 负责UI渲染、编辑器事件监听（onDidChangeTextDocument）、以及用户意图提取（如选中文本时自动触发@ref:引用解析）； 中层：Claude Bridge Server（Python &#43; FastAPI） —— 核心智能代理，承载动态路由、上下文熔断、RAG缓存等8大隐藏功能； 内层：Model Adapter（Rust &#43; Python FFI） —— 提供统一抽象接口，当前支持Ollama（HTTP）、LM Studio（WebSocket）、以及本地PyTorch模型（共享内存IPC）。 各层间通信协议经过精密设计：前端↔桥接层使用WebSocket流式传输（保障实时性）；桥接层↔模型适配器批量请求走HTTP/2（减少TLS握手开销）；而本地模型绑定则采用Unix Domain Socket &#43; mmap共享内存（规避序列化损耗）。
+图2：分层架构图。对比Copilot架构（虚线框），本方案通过Bridge Server解耦模型协议，使同一前端可无缝切换Claude-3、Llama-3或Phi-3，真正实现“模型无关性”。一次Ctrl&#43;Enter补全请求，将穿越8个关键处理节点：编辑器指令→AST上下文提取→跨文件引用图谱查询→意图分类→噪声过滤→模型路由→流式接收→反向因果推导（若启用调试模式）。
+隐藏功能#1：上下文感知的自动摘要压缩 当对话历史超32K tokens时，传统截断（tail truncation）会破坏代码结构完整性——例如删掉class User:定义却保留其方法调用，导致LLM生成错误逻辑。本方案在/bridge/context/compressor.py中实现AST驱动的语义压缩：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-04 02:27:25.755 +0000 UTC'>April 4, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 51万行Claude Code源码泄露实录：8大隐藏功能代码级拆解（附GitHub可运行Demo）" href="http://localhost:1313/posts/2026-04-04-51wxclaudecodeymxlsl8dycgndmjc/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>为什么我一开始死磕“本地模式”却连浏览器都打不开？ 上周三下午三点十七分，我盯着 VS Code 里第 17 次报错的终端窗口，手边咖啡凉透，心里只剩一个念头：这破 puppeteer-core 怎么连 localhost 都连不上？
 Error: net::ERR_CONNECTION_REFUSED at http://localhost:9222/json at navigate (/node_modules/puppeteer-core/lib/cjs/puppeteer/common/Frame.js:138:25) 我翻遍 Puppeteer 文档、Chrome 启动参数、Docker 网络配置，甚至重装了 Chromium……直到凌晨一点，偶然在 Claude Code 的 MCP 插件设置页底部发现一行小字：
 ⚠️ MCP Server 默认禁用本地进程 spawn（出于安全策略），需手动启用 mcp.allowLocalProcess=true
 ——原来不是 Chrome 没起来，是 MCP 根本没让它起！puppeteer-core 在等一个永远不会出现的调试端口。
 那一刻我顿悟：MCP 的三种模式，根本不是“技术选型”，而是权限与上下文的分层契约。
 “谁在调”？是 IDE 插件、CI 脚本，还是用户点击的按钮？ “在哪调”？是开发机、K8s Pod，还是客户浏览器里的 Web Worker？ “以谁的身份调”？是 root、普通用户、还是被 seccomp 锁死的 sandbox 用户？ 这才是真正的设计原点。
 下面这张对比表，是我贴在工位显示器边框上的速查便签（手写体，带咖啡渍）：
-场景 推荐模式 关键约束 我的便签原文 调试前端组件（如 Storybook 快照） ✅ 本地模式 仅限本机，无网络访问权 本地=快但受限 批量爬取公开电商页面（含 JS 渲染） ✅ 远程模式 需自维 Grid/Selenium，证书自己管 远程=自由但要管证书 渲染用户上传的 HTML 报表模板 ✅ 沙箱模式 DOM 可操作，但 fetch/open/print 全受白名单控制 沙箱=安全但没 DOM 操作权 ...</p></div><footer class=entry-footer><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）" href=https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成</h2></header><div class=entry-content><p>1. 前置准备：环境与权限校验 在正式启用 Claude 智能编程能力前，务必完成严谨的环境校验——这一步看似琐碎，却直接决定后续所有功能是否稳定可用。尤其对国内开发者而言，网络与权限配置是高频卡点。
-首先，确认 VS Code 版本 ≥ 1.85（2023年12月发布）。该版本起全面支持 Webview2 渲染引擎与 Language Server Protocol v18+，而 Claude Code 扩展依赖这两项底层能力实现低延迟交互与富文本响应。检查方式：Ctrl+Shift+P → 输入 Help: About → 查看第一行版本号。若低于 1.85，请前往 code.visualstudio.com 下载最新稳定版。
+场景 推荐模式 关键约束 我的便签原文 调试前端组件（如 Storybook 快照） ✅ 本地模式 仅限本机，无网络访问权 本地=快但受限 批量爬取公开电商页面（含 JS 渲染） ✅ 远程模式 需自维 Grid/Selenium，证书自己管 远程=自由但要管证书 渲染用户上传的 HTML 报表模板 ✅ 沙箱模式 DOM 可操作，但 fetch/open/print 全受白名单控制 沙箱=安全但没 DOM 操作权 ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）" href="http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 前置准备：环境与权限校验 在正式启用 Claude 智能编程能力前，务必完成严谨的环境校验——这一步看似琐碎，却直接决定后续所有功能是否稳定可用。尤其对国内开发者而言，网络与权限配置是高频卡点。
+首先，确认 VS Code 版本 ≥ 1.85（2023年12月发布）。该版本起全面支持 Webview2 渲染引擎与 Language Server Protocol v18&#43;，而 Claude Code 扩展依赖这两项底层能力实现低延迟交互与富文本响应。检查方式：Ctrl&#43;Shift&#43;P → 输入 Help: About → 查看第一行版本号。若低于 1.85，请前往 code.visualstudio.com 下载最新稳定版。
 接着，获取 Anthropic API Key：
 访问 Anthropic Console（需科学访问，国内用户建议配置系统级代理或使用可信企业级代理服务）； 注册/登录账户后，进入 API Keys → 点击 Create Key； 在 Key 名称中注明用途（如 vscode-claude-prod），生成后立即复制并安全保存（页面关闭后无法再次查看）； ✅ 推荐模型：claude-3-haiku-20240307（轻量、快响应，适合补全）或 claude-3-5-sonnet-20240620（强逻辑、长上下文，适合文档生成）。 验证 API 连通性（终端执行）：
-# 将 YOUR_API_KEY 替换为实际密钥（不带引号） export ANTHROPIC_API_KEY="sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" curl -X POST "https://api.anthropic.com/v1/messages" \ -H "x-api-key: ${ANTHROPIC_API_KEY}" \ -H "anthropic-version: 2023-06-01" \ -H "content-type: application/json" \ -d '{ "model": "claude-3-haiku-20240307", "max_tokens": 50, "messages": [{"role": "user", "content": "输出 OK"}] }' ✅ 成功响应将返回 JSON，含 "content":[{"type":"text","text":"OK"}]。若报 401 Unauthorized，请检查 Key 是否过期或被撤销；若超时（curl: (7) Failed to connect），请确认代理已全局生效（VS Code 需继承系统代理，可在设置中搜索 proxy 启用 http.proxySupport: override）。
-...</p></div><footer class=entry-footer><span title='2026-02-19 07:47:37.687 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成" href=https://zhitong.uk/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码</h2></header><div class=entry-content><p>一、准备工作：配置Claude Code环境与接入遗留项目 在接手一个上线8年、无文档、测试覆盖率&lt;5%的电商订单系统时，第一步不是写代码——而是让Claude Code真正“读懂”它。我们以VS Code为首选IDE（官方插件仅正式支持VS Code，JetBrains系列暂未开放集成），确保环境干净可控。
+# 将 YOUR_API_KEY 替换为实际密钥（不带引号） export ANTHROPIC_API_KEY=&#34;sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#34; curl -X POST &#34;https://api.anthropic.com/v1/messages&#34; \ -H &#34;x-api-key: ${ANTHROPIC_API_KEY}&#34; \ -H &#34;anthropic-version: 2023-06-01&#34; \ -H &#34;content-type: application/json&#34; \ -d &#39;{ &#34;model&#34;: &#34;claude-3-haiku-20240307&#34;, &#34;max_tokens&#34;: 50, &#34;messages&#34;: [{&#34;role&#34;: &#34;user&#34;, &#34;content&#34;: &#34;输出 OK&#34;}] }&#39; ✅ 成功响应将返回 JSON，含 &#34;content&#34;:[{&#34;type&#34;:&#34;text&#34;,&#34;text&#34;:&#34;OK&#34;}]。若报 401 Unauthorized，请检查 Key 是否过期或被撤销；若超时（curl: (7) Failed to connect），请确认代理已全局生效（VS Code 需继承系统代理，可在设置中搜索 proxy 启用 http.proxySupport: override）。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 07:47:37.687 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成" href="http://localhost:1313/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、准备工作：配置Claude Code环境与接入遗留项目 在接手一个上线8年、无文档、测试覆盖率&lt;5%的电商订单系统时，第一步不是写代码——而是让Claude Code真正“读懂”它。我们以VS Code为首选IDE（官方插件仅正式支持VS Code，JetBrains系列暂未开放集成），确保环境干净可控。
 ✅ 安装与激活（附截图指引）
-打开VS Code → Extensions（Ctrl+Shift+X）→ 搜索 Claude Code（开发者：Anthropic，非“Claude Assistant”或“CodeWithClaude”等第三方） 点击 Install → 重启VS Code 首次启动后，右下角弹出配置向导 → 点击 “Configure API Key” → 粘贴从 console.anthropic.com 获取的 sk-ant-api03-... 密钥（⚠️切勿提交至Git！建议存入系统密钥链） 📁 配置文件详解（.claude-code/config.json）
+打开VS Code → Extensions（Ctrl&#43;Shift&#43;X）→ 搜索 Claude Code（开发者：Anthropic，非“Claude Assistant”或“CodeWithClaude”等第三方） 点击 Install → 重启VS Code 首次启动后，右下角弹出配置向导 → 点击 “Configure API Key” → 粘贴从 console.anthropic.com 获取的 sk-ant-api03-... 密钥（⚠️切勿提交至Git！建议存入系统密钥链） 📁 配置文件详解（.claude-code/config.json）
 在项目根目录创建 .claude-code/config.json，关键字段需显式声明：
-{ "model": "claude-3-5-sonnet-20240620", "maxTokens": 2048, "contextWindowSize": 16384, "temperature": 0.1 } model：强制指定高精度模型（Sonnet 3.5在代码理解上显著优于Haiku） contextWindowSize：设为16384可覆盖中型模块（如含5个.py文件的Django app），避免截断关键上下文 🚫 精准排除干扰项（.claude-code/ignore.json）
-遗留项目常含巨型node_modules/（20GB+）、dist/构建产物、logs/实时日志。创建忽略规则：
-{ "patterns": [ "**/node_modules/**", "**/dist/**", "**/logs/*.log", "**/*.min.js", "**/coverage/**" ], "maxFileSizeMB": 5 } ⚠️ 安全红线：
+{ &#34;model&#34;: &#34;claude-3-5-sonnet-20240620&#34;, &#34;maxTokens&#34;: 2048, &#34;contextWindowSize&#34;: 16384, &#34;temperature&#34;: 0.1 } model：强制指定高精度模型（Sonnet 3.5在代码理解上显著优于Haiku） contextWindowSize：设为16384可覆盖中型模块（如含5个.py文件的Django app），避免截断关键上下文 🚫 精准排除干扰项（.claude-code/ignore.json）
+遗留项目常含巨型node_modules/（20GB&#43;）、dist/构建产物、logs/实时日志。创建忽略规则：
+{ &#34;patterns&#34;: [ &#34;**/node_modules/**&#34;, &#34;**/dist/**&#34;, &#34;**/logs/*.log&#34;, &#34;**/*.min.js&#34;, &#34;**/coverage/**&#34; ], &#34;maxFileSizeMB&#34;: 5 } ⚠️ 安全红线：
 禁用 Send clipboard content automatically（设置 → Claude Code → 取消勾选） 内网环境禁用 Auto-upload error stack traces，防止/var/log/app/路径泄露 敏感项目根目录名勿含prod-cred、bank-key等关键词（Claude可能在上下文摘要中提取） 二、读懂遗留代码：用Claude Code做结构化代码理解 面对一段无注释、变量名全为a, b, tmp的Python支付处理函数，传统方式需逐行调试2小时；Claude Code可将其转化为可执行文档。
-...</p></div><footer class=entry-footer><span title='2026-02-19 04:51:18.727 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码" href=https://zhitong.uk/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>快速上手：5分钟配置Claude Code并完成首个代码生成任务</h2></header><div class=entry-content><p>1. 前置准备：环境与权限检查 在正式接入 Claude Code（Anthropic 官方推出的代码专用智能体，区别于通用聊天接口 claude-3-opus 等模型）前，请务必完成以下环境核查。这一步看似简单，却是后续所有操作稳定运行的基石——许多“无法登录”“生成失败”问题，80% 源于前置条件未满足。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 04:51:18.727 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码" href="http://localhost:1313/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">快速上手：5分钟配置Claude Code并完成首个代码生成任务
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 前置准备：环境与权限检查 在正式接入 Claude Code（Anthropic 官方推出的代码专用智能体，区别于通用聊天接口 claude-3-opus 等模型）前，请务必完成以下环境核查。这一步看似简单，却是后续所有操作稳定运行的基石——许多“无法登录”“生成失败”问题，80% 源于前置条件未满足。
 ✅ 系统与硬件要求
-操作系统：macOS 12 Monterey 或更高版本（推荐 macOS 14 Sonoma）、Windows 10 22H2 / Windows 11（需启用 WSL2 支持可选）、Linux x64（Ubuntu 20.04+、Debian 11+，内核 ≥5.4） 内存：≥8GB RAM（若同时运行 VS Code + 浏览器 + 数据分析任务，建议 ≥16GB） 磁盘空间：桌面 App 占用约 350MB；VS Code 插件仅 12MB，但缓存会随使用增长 ✅ 软件依赖检查
-若使用 OAuth 登录流程（推荐方式），请确保已安装最新版 Chrome（v122+）或 Firefox（v123+）。旧版浏览器可能因 OAuth 2.1 协议不兼容导致授权中断。 若选择 VS Code 插件路径，请确认已安装 VS Code 1.85+（2024 年初起强制要求支持 WebAssembly 的新版 Electron 内核）。可通过 Help → About 查看版本号。 ✅ 账户与网络准入
-...</p></div><footer class=entry-footer><span title='2026-02-19 04:37:13.947 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 快速上手：5分钟配置Claude Code并完成首个代码生成任务" href=https://zhitong.uk/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>初识Claude Code：告别传统编码，拥抱AI结对编程</h2></header><div class=entry-content><p>1. 环境准备：安装Claude Code并完成首次配置 在正式开启AI结对编程前，稳定可靠的本地环境是高效协作的前提。Claude Code 官方插件目前原生支持 VS Code（v1.85+）和 JetBrains 全系 IDE（IntelliJ IDEA 2023.3+、PyCharm 2023.3+ 等），暂不支持 Vim/Neovim 原生集成或旧版编辑器。
-✅ 安装验证四步法：
-打开 VS Code → Extensions（Ctrl+Shift+X）→ 搜索 Claude Code → 点击 Install（官方发布者：Anthropic）； 安装完成后，右下角状态栏出现 🦾 图标（即 Claude 状态指示器）； 按 Ctrl+Shift+P 打开命令面板，输入 Claude，可见至少 8 个以 Claude: 开头的命令（如 Claude: Start Chat, Claude: Explain Selection）； 重启 VS Code（⚠️ 必须重启！部分功能依赖初始化服务端连接）。 🔐 账号绑定关键提醒（国内用户必读）：
-登录需使用 Anthropic 官方支持地区邮箱（如 .com 域名，Gmail/Outlook 推荐；国内企业邮箱或 QQ 邮箱易触发风控）； 若提示 “Region not supported”，请确认网络出口 IP 归属地（建议使用合规跨境访问服务，并确保 DNS 解析正常）； 登录入口：状态栏 🦾 图标 → Click → “Sign in with Anthropic”。 ⚙️ 两种连接模式对比与配置：
-...</p></div><footer class=entry-footer><span title='2026-02-19 03:34:10.97 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 初识Claude Code：告别传统编码，拥抱AI结对编程" href=https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+操作系统：macOS 12 Monterey 或更高版本（推荐 macOS 14 Sonoma）、Windows 10 22H2 / Windows 11（需启用 WSL2 支持可选）、Linux x64（Ubuntu 20.04&#43;、Debian 11&#43;，内核 ≥5.4） 内存：≥8GB RAM（若同时运行 VS Code &#43; 浏览器 &#43; 数据分析任务，建议 ≥16GB） 磁盘空间：桌面 App 占用约 350MB；VS Code 插件仅 12MB，但缓存会随使用增长 ✅ 软件依赖检查
+若使用 OAuth 登录流程（推荐方式），请确保已安装最新版 Chrome（v122&#43;）或 Firefox（v123&#43;）。旧版浏览器可能因 OAuth 2.1 协议不兼容导致授权中断。 若选择 VS Code 插件路径，请确认已安装 VS Code 1.85&#43;（2024 年初起强制要求支持 WebAssembly 的新版 Electron 内核）。可通过 Help → About 查看版本号。 ✅ 账户与网络准入
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 04:37:13.947 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 快速上手：5分钟配置Claude Code并完成首个代码生成任务" href="http://localhost:1313/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="http://localhost:1313/tags/vs-code/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

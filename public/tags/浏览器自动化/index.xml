@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>浏览器自动化 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/</link><description>Recent content in 浏览器自动化 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</title><link>https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</link><pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</guid><description>详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。</description></item><item><title>AI接管浏览器不是梦：Claude Code自动化已支持登录/采集/截图/性能分析四合一</title><link>https://zhitong.uk/posts/2026-03-25-aijgllqbsmclaudecodezdhyzcdlcj/</link><pubDate>Wed, 25 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-25-aijgllqbsmclaudecodezdhyzcdlcj/</guid><description>本文解析Claude Code如何实现AI驱动的浏览器自动化，支持登录、数据采集、截图与性能分析四合一，突破传统工具在语义理解、UI变更适应和维护成本上的瓶颈。</description></item><item><title>告别Selenium！Claude Code + Chrome MCP 实现自然语言驱动的零代码浏览器自动化</title><link>https://zhitong.uk/posts/2026-03-25-gbseleniumclaudecodechromemcps/</link><pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-25-gbseleniumclaudecodechromemcps/</guid><description>告别Selenium繁琐定位与不稳定等待！本文详解如何用Claude Code结合Chrome MCP，通过自然语言指令实现稳定、可维护的零代码浏览器自动化，解决电商价格监控等真实场景中的StaleElement和Timeout顽疾。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>浏览器自动化 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/</link>
+    <description>Recent content in 浏览器自动化 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</title>
+      <link>http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</link>
+      <pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</guid>
+      <description>详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。</description>
+    </item>
+    <item>
+      <title>AI接管浏览器不是梦：Claude Code自动化已支持登录/采集/截图/性能分析四合一</title>
+      <link>http://localhost:1313/posts/2026-03-25-aijgllqbsmclaudecodezdhyzcdlcj/</link>
+      <pubDate>Wed, 25 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-25-aijgllqbsmclaudecodezdhyzcdlcj/</guid>
+      <description>本文解析Claude Code如何实现AI驱动的浏览器自动化，支持登录、数据采集、截图与性能分析四合一，突破传统工具在语义理解、UI变更适应和维护成本上的瓶颈。</description>
+    </item>
+    <item>
+      <title>告别Selenium！Claude Code &#43; Chrome MCP 实现自然语言驱动的零代码浏览器自动化</title>
+      <link>http://localhost:1313/posts/2026-03-25-gbseleniumclaudecodechromemcps/</link>
+      <pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-25-gbseleniumclaudecodechromemcps/</guid>
+      <description>告别Selenium繁琐定位与不稳定等待！本文详解如何用Claude Code结合Chrome MCP，通过自然语言指令实现稳定、可维护的零代码浏览器自动化，解决电商价格监控等真实场景中的StaleElement和Timeout顽疾。</description>
+    </item>
+  </channel>
+</rss>

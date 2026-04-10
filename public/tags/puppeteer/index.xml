@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Puppeteer on 智通和你一起学AI</title><link>https://zhitong.uk/tags/puppeteer/</link><description>Recent content in Puppeteer on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/puppeteer/index.xml" rel="self" type="application/rss+xml"/><item><title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</title><link>https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</link><pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</guid><description>详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Puppeteer on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/puppeteer/</link>
+    <description>Recent content in Puppeteer on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/puppeteer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</title>
+      <link>http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</link>
+      <pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</guid>
+      <description>详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。</description>
+    </item>
+  </channel>
+</rss>

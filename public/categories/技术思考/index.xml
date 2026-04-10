@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>技术思考 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%80%9D%E8%80%83/</link>
+    <description>Recent content in 技术思考 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 29 Mar 2026 07:00:18 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%80%9D%E8%80%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么说这篇离职长文比Qwen3发布更值得AI工程师精读？——一位架构师的自我解构</title>
+      <link>http://localhost:1313/posts/2026-03-29-wsmszplzzwbqwen3fbgzdaigcsjdyw/</link>
+      <pubDate>Sun, 29 Mar 2026 07:00:18 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-29-wsmszplzzwbqwen3fbgzdaigcsjdyw/</guid>
+      <description>本文探讨一篇离职长文为何比Qwen3发布更值得AI工程师精读，剖析其在系统架构、契约设计、可观测性等工程实践中的高密度认知价值，揭示技术人文文本的深层生产力。</description>
+    </item>
+  </channel>
+</rss>

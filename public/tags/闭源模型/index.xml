@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>闭源模型 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E9%97%AD%E6%BA%90%E6%A8%A1%E5%9E%8B/</link>
+    <description>Recent content in 闭源模型 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 05 Apr 2026 15:12:49 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%97%AD%E6%BA%90%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anthropic为何死守ClaudeCode源码？一场关于AI编程霸权与开发者主权的暗战</title>
+      <link>http://localhost:1313/posts/2026-04-05-anthropicwhssclaudecodeymycgya/</link>
+      <pubDate>Sun, 05 Apr 2026 15:12:49 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-05-anthropicwhssclaudecodeymycgya/</guid>
+      <description>本文深度剖析Anthropic将ClaudeCode全面闭源的战略动因，对比GitHub Copilot、Tabnine与CodeLlama等开源替代方案，探讨AI编程工具演进中的技术透明度、可调试性与开发者生态主权之争。</description>
+    </item>
+  </channel>
+</rss>

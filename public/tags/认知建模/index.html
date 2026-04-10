@@ -1,12 +1,176 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>认知建模 | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/tags/%E8%AE%A4%E7%9F%A5%E5%BB%BA%E6%A8%A1/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/tags/%E8%AE%A4%E7%9F%A5%E5%BB%BA%E6%A8%A1/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/tags/%E8%AE%A4%E7%9F%A5%E5%BB%BA%E6%A8%A1/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/tags/%E8%AE%A4%E7%9F%A5%E5%BB%BA%E6%A8%A1/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="认知建模"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="认知建模"><meta name=twitter:description content="这是智通成长的历程"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>认知建模</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>第3篇：题库不是堆砌！——构建智能分级题库的底层逻辑</h2></header><div class=entry-content><p>引子：为什么“上传1000道题=智能题库”是个危险幻觉？ 某教育SaaS团队上线新功能时信心满满：将运营同事整理的1273道小学数学题（Excel格式）批量调用openai.ChatCompletion API，通过一句Prompt：“请给这道题打一个1–5分的难度分”，直接入库。结果上线第三天，客服后台炸了——家长投诉“孩子刚学乘法就被推了一道含因式分解+概率树状图的题”，教师端数据显示：同一知识点“分数加减法”下的题目，AI给出的难度分从0.21到0.89横跨4个档位；而一道标为“初中物理”的浮力题，竟被系统归入“高中难度”并匹配给高二学生做预习。
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>认知建模 | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/tags/%E8%AE%A4%E7%9F%A5%E5%BB%BA%E6%A8%A1/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/%E8%AE%A4%E7%9F%A5%E5%BB%BA%E6%A8%A1/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/%E8%AE%A4%E7%9F%A5%E5%BB%BA%E6%A8%A1/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    认知建模
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第3篇：题库不是堆砌！——构建智能分级题库的底层逻辑
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引子：为什么“上传1000道题=智能题库”是个危险幻觉？ 某教育SaaS团队上线新功能时信心满满：将运营同事整理的1273道小学数学题（Excel格式）批量调用openai.ChatCompletion API，通过一句Prompt：“请给这道题打一个1–5分的难度分”，直接入库。结果上线第三天，客服后台炸了——家长投诉“孩子刚学乘法就被推了一道含因式分解&#43;概率树状图的题”，教师端数据显示：同一知识点“分数加减法”下的题目，AI给出的难度分从0.21到0.89横跨4个档位；而一道标为“初中物理”的浮力题，竟被系统归入“高中难度”并匹配给高二学生做预习。
 这不是模型不聪明，而是工程逻辑断层：把题库存储当成能力建模，把API调用当作教育测量。题库不是数据桶，而是需要可解释锚点、可观测漂移、可闭环校准的动态认知仪表盘。人工标注成本高、主观性强；纯规则引擎又难以覆盖跨学科融合题；而盲目依赖大模型“自由发挥”，则丧失确定性与可审计性。
-本篇不谈IRT（项目反应理论）或认知诊断模型（CDM）的学术推导，聚焦一线工程师能立刻上手的AI工程化路径——用Prompt约束+轻量模型协同+数据反馈闭环，构建一条端到端可部署、可监控、可迭代的智能分级流水线。所有代码均可在Colab或本地GPU环境5分钟内跑通。
+本篇不谈IRT（项目反应理论）或认知诊断模型（CDM）的学术推导，聚焦一线工程师能立刻上手的AI工程化路径——用Prompt约束&#43;轻量模型协同&#43;数据反馈闭环，构建一条端到端可部署、可监控、可迭代的智能分级流水线。所有代码均可在Colab或本地GPU环境5分钟内跑通。
 一、定义“难度”的3个可计算维度（非主观打标） 难度不是感觉，是可提取、可复现、可归一化的信号。我们摒弃“专家打标”，设计三个从题干/答案中自动析出的计算维度，每个输出严格限定在[0,1]区间：
 1. 认知负荷（Cognitive Load） 衡量学生理解题干所需的心理资源。不看内容深度，只看语言结构复杂度：
-使用spaCy解析依存树，统计嵌套从句数（relcl, ccomp等关系节点深度） 调用textstat库计算dale_chall_score（针对中文需映射至CEFR词频表），对题干词汇按CEFR Level A1–C2加权平均 import spacy, textstat from collections import Counter nlp = spacy.load("zh_core_web_sm") cefr_map = {"A1": 0.1, "A2": 0.3, "B1": 0.5, "B2": 0.7, "C1": 0.85, "C2": 1.0} def cognitive_load(text: str) -> float: doc = nlp(text) # 统计从句嵌套深度（简化版） clause_depth = max([len([t for t in sent if t.dep_ in ["relcl", "ccomp"]]) for sent in doc.sents], default=0) # CEFR词汇抽象度（示例：用预加载的中文CEFR词典） words = [token.lemma_.lower() for token in doc if not token.is_punct] cefr_scores = [cefr_map.get(get_cefr_level(w), 0.2) for w in words] vocab_abstraction = sum(cefr_scores) / len(words) if words else 0.2 return min(1.0, (clause_depth * 0.4 + vocab_abstraction * 0.6)) 2. 解题路径复杂度（Solution Path） 专攻理科题。用SymPy符号解析数学表达式，构建变量依赖图：
-...</p></div><footer class=entry-footer><span title='2026-02-20 10:38:01.261 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第3篇：题库不是堆砌！——构建智能分级题库的底层逻辑" href=https://zhitong.uk/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>第4篇：错题本如何真正‘懂你’？——基于学习行为的数据建模实践</h2></header><div class=entry-content><p>场景切入：为什么传统错题本“不懂你”？ 每天晚上，高三学生林薇花47分钟整理5道数学错题：手动抄题、圈出错误步骤、在笔记本边缘潦草写下“三角函数—记混公式”，再翻三页找相似题重做。一周后月考，同一类“解三角形SSA多解判定”题再次失分——不是没练，而是“练错了方向”。
+使用spaCy解析依存树，统计嵌套从句数（relcl, ccomp等关系节点深度） 调用textstat库计算dale_chall_score（针对中文需映射至CEFR词频表），对题干词汇按CEFR Level A1–C2加权平均 import spacy, textstat from collections import Counter nlp = spacy.load(&#34;zh_core_web_sm&#34;) cefr_map = {&#34;A1&#34;: 0.1, &#34;A2&#34;: 0.3, &#34;B1&#34;: 0.5, &#34;B2&#34;: 0.7, &#34;C1&#34;: 0.85, &#34;C2&#34;: 1.0} def cognitive_load(text: str) -&gt; float: doc = nlp(text) # 统计从句嵌套深度（简化版） clause_depth = max([len([t for t in sent if t.dep_ in [&#34;relcl&#34;, &#34;ccomp&#34;]]) for sent in doc.sents], default=0) # CEFR词汇抽象度（示例：用预加载的中文CEFR词典） words = [token.lemma_.lower() for token in doc if not token.is_punct] cefr_scores = [cefr_map.get(get_cefr_level(w), 0.2) for w in words] vocab_abstraction = sum(cefr_scores) / len(words) if words else 0.2 return min(1.0, (clause_depth * 0.4 &#43; vocab_abstraction * 0.6)) 2. 解题路径复杂度（Solution Path） 专攻理科题。用SymPy符号解析数学表达式，构建变量依赖图：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-20 10:38:01.261 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第3篇：题库不是堆砌！——构建智能分级题库的底层逻辑" href="http://localhost:1313/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第4篇：错题本如何真正‘懂你’？——基于学习行为的数据建模实践
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>场景切入：为什么传统错题本“不懂你”？ 每天晚上，高三学生林薇花47分钟整理5道数学错题：手动抄题、圈出错误步骤、在笔记本边缘潦草写下“三角函数—记混公式”，再翻三页找相似题重做。一周后月考，同一类“解三角形SSA多解判定”题再次失分——不是没练，而是“练错了方向”。
 这不是个例。我们调研了12所中学的832名学生，发现传统错题本存在三个结构性失能：
 时间黑洞：平均单题归档耗时6.8分钟，其中42%用于重复誊抄与模糊分类（如仅标“函数”而非“含参二次函数零点分布的临界点分类讨论”）； 标签失焦：73%的错题标签停留在章节级（如“必修二·立体几何”），无法定位认知断点（如“误将斜二测直观图中线段长度等同于原图比例”）； 节奏错配：艾宾浩斯固定间隔复习导致“刚掌握即推送”或“遗忘殆尽才提醒”，某次A/B测试显示，学生在“向量投影方向性”知识点上，传统复习计划使7天后正确率仅51.2%，而真实遗忘拐点实际发生在第2.3天。 更深层的问题在于数据沉睡：一道错题原始数据包含题目文本、手写答案照片、提交时间戳、订正时间、重做对错、甚至后台日志里“是否在12:35秒暂停B站视频并截图”。但这些行为上下文从未被结构化关联——它是一堆未被翻译的“学习语言”。
 真正“懂你”的错题本，必须超越静态标签，建模三个动态维度：
@@ -16,20 +180,121 @@
 这不再是一个归档工具，而是一个实时演化的“个人认知镜像”。
 Prompt工程：让大模型读懂你的错题行为 把大模型变成教育专家，关键不在参数量，而在Prompt如何“提问”。我们放弃单次复杂指令，构建分阶段Prompt链——像老师批改作业一样层层深入。
 示例1：错题语义解析Prompt（OCR后首道关卡） 输入常是OCR识别的杂乱文本：“已知△ABC中，a=5,b=7,∠A=30°,求c？学生答c=8，正确答案c=2或8”。我们设计强约束Prompt，强制输出结构化JSON，并嵌入教育心理学few-shot示例：
-# 提示词片段（含few-shot示例） "你是一名数学教育专家，请严格按JSON格式提取以下错题的4个字段： - 'knowledge_point': 最细粒度知识点（如'余弦定理在SSA情形下的多解判定'） - 'error_type': 错误类型（计算失误/概念混淆/审题偏差/步骤遗漏/符号误用） - 'cognitive_trap': 学生典型思维陷阱（如'默认三角形为锐角'） - 'retrieval_hint': 10字内记忆锚点（如'SSA先算高再比边'） 题目：[题目文本]；学生答案：[答案]；正确答案：[答案]；错误选项：[选项]" 该Prompt在Qwen2-7B微调模型上将知识点识别F1提升至0.86（对比无约束自由生成的0.61），且retrieval_hint字段被92%学生反馈“真能瞬间唤醒记忆”。
+# 提示词片段（含few-shot示例） &#34;你是一名数学教育专家，请严格按JSON格式提取以下错题的4个字段： - &#39;knowledge_point&#39;: 最细粒度知识点（如&#39;余弦定理在SSA情形下的多解判定&#39;） - &#39;error_type&#39;: 错误类型（计算失误/概念混淆/审题偏差/步骤遗漏/符号误用） - &#39;cognitive_trap&#39;: 学生典型思维陷阱（如&#39;默认三角形为锐角&#39;） - &#39;retrieval_hint&#39;: 10字内记忆锚点（如&#39;SSA先算高再比边&#39;） 题目：[题目文本]；学生答案：[答案]；正确答案：[答案]；错误选项：[选项]&#34; 该Prompt在Qwen2-7B微调模型上将知识点识别F1提升至0.86（对比无约束自由生成的0.61），且retrieval_hint字段被92%学生反馈“真能瞬间唤醒记忆”。
 示例2：行为意图推断Prompt（连接动作与动机） 当系统捕获到一连串行为日志：
 提交错题时间：2024-05-12T20:14:03
 20:14:22打开note_math_chapter3.pdf（停留142秒，高亮第7行）
 20:17:05跳转至bilibili.com/video/xxx?t=755（即12:35处，播放37秒后暂停）
 22:21:18重做该题（正确）
 我们喂给模型的Prompt是：
-“基于以下行为序列，判断学生核心学习意图（选项：概念验证型复习 / 技能补漏型练习 / 焦虑驱动型刷题 / 其他）。输出JSON：{‘intent’: str, ‘confidence’: float(0~1), ‘suggested_action’: str}。注意：PDF高亮+精准视频定位→高度指向概念验证。”
+“基于以下行为序列，判断学生核心学习意图（选项：概念验证型复习 / 技能补漏型练习 / 焦虑驱动型刷题 / 其他）。输出JSON：{‘intent’: str, ‘confidence’: float(0~1), ‘suggested_action’: str}。注意：PDF高亮&#43;精准视频定位→高度指向概念验证。”
 模型输出：
-{"intent": "概念验证型复习", "confidence": 0.87, "suggested_action": "推送2道变式题（改变边角组合但保留SSA结构）+ 关联知识图谱节点：'三角形解的个数判定流程图'"} 这不再是“推荐相似题”，而是对学生思维路径的一次精准共情。
+{&#34;intent&#34;: &#34;概念验证型复习&#34;, &#34;confidence&#34;: 0.87, &#34;suggested_action&#34;: &#34;推送2道变式题（改变边角组合但保留SSA结构）&#43; 关联知识图谱节点：&#39;三角形解的个数判定流程图&#39;&#34;} 这不再是“推荐相似题”，而是对学生思维路径的一次精准共情。
 模型选型与轻量化部署实践 在教室场景中，“能跑起来”比“参数最大”更重要。我们在5000条真实中学错题数据集上实测三类模型：
-模型 知识点识别F1 错误类型准确率 推理延迟（ms） 显存占用 可部署性 GPT-4-turbo 0.92 0.89 1200 无法本地部署 ❌ 教育数据不出域 Qwen2-7B-Instruct（LoRA微调） 0.86 0.83 320 8GB（RTX4090） ✅ 学校机房/教师笔记本 Phi-3-mini（蒸馏版） 0.79 0.77 85 2.1GB（树莓派5） ⚠️ 适合边缘端，精度妥协 决策依据：Qwen2-7B在精度与成本间取得最优平衡。我们用2000条人工标注错题+教育心理学规则（如“所有‘符号误用’错误必须检查负号迁移与括号优先级”）进行LoRA微调，使cognitive_trap识别准确率从0.68提升至0.81。
-...</p></div><footer class=entry-footer><span title='2026-02-20 10:38:01.261 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第4篇：错题本如何真正‘懂你’？——基于学习行为的数据建模实践" href=https://zhitong.uk/posts/2026-02-20-d4pctbrhzzdnjyxxxwdsjjmsj/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+模型 知识点识别F1 错误类型准确率 推理延迟（ms） 显存占用 可部署性 GPT-4-turbo 0.92 0.89 1200 无法本地部署 ❌ 教育数据不出域 Qwen2-7B-Instruct（LoRA微调） 0.86 0.83 320 8GB（RTX4090） ✅ 学校机房/教师笔记本 Phi-3-mini（蒸馏版） 0.79 0.77 85 2.1GB（树莓派5） ⚠️ 适合边缘端，精度妥协 决策依据：Qwen2-7B在精度与成本间取得最优平衡。我们用2000条人工标注错题&#43;教育心理学规则（如“所有‘符号误用’错误必须检查负号迁移与括号优先级”）进行LoRA微调，使cognitive_trap识别准确率从0.68提升至0.81。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-20 10:38:01.261 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第4篇：错题本如何真正‘懂你’？——基于学习行为的数据建模实践" href="http://localhost:1313/posts/2026-02-20-d4pctbrhzzdnjyxxxwdsjjmsj/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TypeScript on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/typescript/</link>
+    <description>Recent content in TypeScript on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Apr 2026 13:46:09 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一步：零配置启动——用Claude Code生成项目脚手架</title>
+      <link>http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/</link>
+      <pubDate>Fri, 10 Apr 2026 13:46:09 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/</guid>
+      <description>本文详解如何通过Anthropic官方VS Code扩展Claude Code零配置生成项目脚手架，强调其IDE深度集成特性、环境依赖（VS Code ≥1.85）及与CLI/API的本质区别，助开发者规避常见认知误区。</description>
+    </item>
+    <item>
+      <title>从source map失误到工程启示：Claude Code泄露事件给AI研发团队的5条血泪安全守则</title>
+      <link>http://localhost:1313/posts/2026-04-04-csourcemapswdgcqsclaudecodexls/</link>
+      <pubDate>Sat, 04 Apr 2026 03:04:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-04-csourcemapswdgcqsclaudecodexls/</guid>
+      <description>剖析Claude Code source map泄露事件，揭示硬编码密钥、未移除调试端点等5大工程隐患，为AI研发团队提供可落地的构建安全与供应链防护守则。</description>
+    </item>
+    <item>
+      <title>51万行Claude Code源码泄露实录：8大隐藏功能代码级拆解（附GitHub可运行Demo）</title>
+      <link>http://localhost:1313/posts/2026-04-04-51wxclaudecodeymxlsl8dycgndmjc/</link>
+      <pubDate>Sat, 04 Apr 2026 02:27:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-04-51wxclaudecodeymxlsl8dycgndmjc/</guid>
+      <description>深度解析51万行Claude桥接项目源码，代码级拆解8大隐藏功能，涵盖本地化API桥接、多模型后端适配与IDE集成机制，并提供可运行GitHub Demo。</description>
+    </item>
+  </channel>
+</rss>

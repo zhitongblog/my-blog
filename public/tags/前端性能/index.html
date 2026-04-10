@@ -1,6 +1,158 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>前端性能 | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="前端性能"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="前端性能"><meta name=twitter:description content="这是智通成长的历程"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>前端性能</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？</h2></header><div class=entry-content><p>🌟 一个“看似简单”的Prompt，差点让我在客户面前当场社死 那是上周五下午3:17，钉钉消息弹窗还没消，客户微信就甩来一句：
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>前端性能 | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    前端性能
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🌟 一个“看似简单”的Prompt，差点让我在客户面前当场社死 那是上周五下午3:17，钉钉消息弹窗还没消，客户微信就甩来一句：
 “帮我们分析下竞品首页的 LCP 和 CLS？最好能对比三家——XX优选、YY严选、ZZ快购。急，投资人下周要看性能基线。”
 我秒回：“好的！让 Claude Code 跑一下 👌”，顺手复制粘贴进 Claude 的代码沙盒，敲下这行“自信满满”的 Prompt：
 请分析三个竞品网站的LCP和CLS指标，并给出优化建议。 30分钟后，我点开输出——满屏是教科书式回答：
@@ -12,24 +164,149 @@
 不是 Claude 不行，是我没给它上岗前的工牌、工位和任务单。
 🔍 Claude Code不是翻译器，它是需要“喂数据”的实习生 复盘时我翻出原始对话记录，发现失败根源根本不在模型能力——而在我的输入像一份空简历：
 ❌ 没写“公司名”（竞品具体是哪三家？） ❌ 没贴“工位地址”（URL？带协议吗？有登录跳转吗？） ❌ 没说明“办公环境”（手机还是PC？4G还是3G？） ❌ 没定义“交付物长啥样”（要数字？要截图？要DOM路径？） 于是我把两版 Prompt 拉出来做了对比：
-原始 Prompt（失败版） 优化后 Prompt（生产可用版） 请分析三个竞品网站的LCP和CLS指标，并给出优化建议。 请基于以下三组Lighthouse JSON报告（已附），分析各站首页在“iPhone SE + 3G慢网”条件下的LCP与CLS：&lt;br>• XX优选：https://xx-youxuan.com/ （公开可访问）&lt;br>• YY严选：https://yy-yanxuan.com/ （需绕过登录页，已提供无认证直链）&lt;br>• ZZ快购：https://zz-kuai.com/ （注意：该站首页含动态广告位，CLS易受其影响）&lt;br>输出要求：&lt;br>① 表格列出LCP数值（ms）、CLS值、LCP元素类型（img/text/video）及DOM路径；&lt;br>② 对CLS > 0.05的站点，定位导致偏移的具体元素（如：.ad-banner插入时机）；&lt;br>③ 每条建议必须绑定到具体HTML/CSS/JS行（示例：“第82行 缺少 width/height 属性”） 标红的关键缺失项：
+原始 Prompt（失败版） 优化后 Prompt（生产可用版） 请分析三个竞品网站的LCP和CLS指标，并给出优化建议。 请基于以下三组Lighthouse JSON报告（已附），分析各站首页在“iPhone SE &#43; 3G慢网”条件下的LCP与CLS：&lt;br&gt;• XX优选：https://xx-youxuan.com/ （公开可访问）&lt;br&gt;• YY严选：https://yy-yanxuan.com/ （需绕过登录页，已提供无认证直链）&lt;br&gt;• ZZ快购：https://zz-kuai.com/ （注意：该站首页含动态广告位，CLS易受其影响）&lt;br&gt;输出要求：&lt;br&gt;① 表格列出LCP数值（ms）、CLS值、LCP元素类型（img/text/video）及DOM路径；&lt;br&gt;② 对CLS &gt; 0.05的站点，定位导致偏移的具体元素（如：.ad-banner插入时机）；&lt;br&gt;③ 每条建议必须绑定到具体HTML/CSS/JS行（示例：“第82行 缺少 width/height 属性”） 标红的关键缺失项：
 ① 可访问的竞品URL（必须公开可抓取！曾因 URL 是 https://admin.xx.com/login?next=/home，Claude 循环重定向12次后报错 Failed to fetch）
-② 明确的设备与网络模拟参数（Lighthouse 默认是“桌面+宽带”，但电商80%流量来自低端安卓机，不指定等于白测）
+② 明确的设备与网络模拟参数（Lighthouse 默认是“桌面&#43;宽带”，但电商80%流量来自低端安卓机，不指定等于白测）
 ③ 期望输出格式（Claude 不会猜你要一页PPT还是JSON字段——它只认结构化指令）
-...</p></div><footer class=entry-footer><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？" href=https://zhitong.uk/posts/2026-03-27-cpromptdpagedclaudecodeljbwfxj/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>第6篇：模拟考试不只计分——打造高仿真EJU机考体验引擎</h2></header><div class=entry-content><p>场景痛点：为什么EJU机考模拟不能只靠静态题库？ 2023年东京某语言学校对327名EJU备考学生的深度访谈中，一个高频词反复出现：“卡住”——不是卡在语法点上，而是卡在系统行为里：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？" href="http://localhost:1313/posts/2026-03-27-cpromptdpagedclaudecodeljbwfxj/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第6篇：模拟考试不只计分——打造高仿真EJU机考体验引擎
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>场景痛点：为什么EJU机考模拟不能只靠静态题库？ 2023年东京某语言学校对327名EJU备考学生的深度访谈中，一个高频词反复出现：“卡住”——不是卡在语法点上，而是卡在系统行为里：
 “做到第5题时突然黑屏重载，再进来发现时间只剩47秒，但PDF题库从没教过我怎么应对这种中断。”
 “点击‘下一题’后界面没反应，等了3秒才跳转，结果考试当天真遇到1.8秒延迟，手心全是汗。”
-我们对72名受试者进行眼动+操作日志联合分析（n=72），发现72%的临场焦虑源于“体验断层”：传统PDF/网页模拟器无法复现EJU官方机考系统的四大动态特征：
-自适应难度跳转（如阅读理解模块根据前2题正确率动态调整第3题文本长度与设问层级）； 毫秒级时间压力反馈（倒计时每200ms刷新一次UI，并在剩余30秒时触发震动提示）； 强上下文界面逻辑（听力题播放中禁用返回键，作文题草稿区支持实时字数+语法错误高亮）； 错题即时解析路径（非简单显示答案，而是按错误类型→教材对应章节→同类题变式三级展开）。 这揭示了一个被长期忽视的真相：EJU备考的核心瓶颈，早已从“题目是否覆盖考点”，转向“体验是否仿真流程”。当考生在模考中从未经历过“超时强制提交→自动标记TIMEOUT→进入错题归因页”的完整链路，真实考场中0.5秒的界面响应延迟就足以触发认知过载。
+我们对72名受试者进行眼动&#43;操作日志联合分析（n=72），发现72%的临场焦虑源于“体验断层”：传统PDF/网页模拟器无法复现EJU官方机考系统的四大动态特征：
+自适应难度跳转（如阅读理解模块根据前2题正确率动态调整第3题文本长度与设问层级）； 毫秒级时间压力反馈（倒计时每200ms刷新一次UI，并在剩余30秒时触发震动提示）； 强上下文界面逻辑（听力题播放中禁用返回键，作文题草稿区支持实时字数&#43;语法错误高亮）； 错题即时解析路径（非简单显示答案，而是按错误类型→教材对应章节→同类题变式三级展开）。 这揭示了一个被长期忽视的真相：EJU备考的核心瓶颈，早已从“题目是否覆盖考点”，转向“体验是否仿真流程”。当考生在模考中从未经历过“超时强制提交→自动标记TIMEOUT→进入错题归因页”的完整链路，真实考场中0.5秒的界面响应延迟就足以触发认知过载。
 Prompt工程设计：构建三层语义锚定指令集 要让LLM成为可靠的“考试流程引擎”，必须超越“问答生成”，转向规则可执行、状态可追溯、情感可调控的指令体系。我们基于EJU官方《2024年度考试实施要项》V2.1版，设计三层语义锚定Prompt结构：
-&lt;SYSTEM> 你作为EJU官方认证模拟引擎（EJU-SIM v3.2），严格遵循&lt;EJU_RULES_V2.1>。禁止生成任何与指南矛盾的评分逻辑或界面行为。所有输出必须为JSON格式，含"next_action"字段。 &lt;/SYSTEM> &lt;USER> [用户操作] 点击“开始阅读理解” [当前状态] {"module": "reading", "time_left": 1500, "question_index": 1} &lt;/USER> &lt;ASSISTANT> { "next_action": "show_question", "question_id": "R2023-04-01", "text": "「〜たばかりだ」は、動作が完了した直後を表す……", "options": ["A. 助詞の格機能", "B. 動詞の完了態", "C. 形容動詞の連体形", "D. 接続助詞の並列用法"], "explanation": { "correct": "A. 助詞の格機能（『た』の完了意味を補足する格助詞『ばかり』の機能）", "distractors": [ "B. 動詞の完了態：『た』自体が完了態だが、『ばかり』は助詞であり動詞ではない", "C. 形容動詞の連体形：『ばかり』は形容動詞でないため該当しない" ] }, "emotion_hint": "neutral" } &lt;/ASSISTANT> 关键约束实现：
-...</p></div><footer class=entry-footer><span title='2026-02-20 12:09:15.819 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第6篇：模拟考试不只计分——打造高仿真EJU机考体验引擎" href=https://zhitong.uk/posts/2026-02-20-d6pmnksbzjfdzgfzejujktyyq/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>第四步：丝滑动效加持——用Claude Code优化Lottie动画与交互反馈</h2></header><div class=entry-content><p>一、前置准备：环境搭建与依赖确认 在开始优化 Lottie 动效前，必须确保开发环境干净、工具链统一、AI 辅助能力就绪——这直接决定后续重构效率与代码质量。我们不追求“能跑就行”，而是为可维护、可压测、可回滚的动效系统打下基础。
-首先检查 Node.js 版本（Lottie Web v2.12+ 及现代 React/Vue 生态强烈依赖 ES2022+ 特性）：
-node -v # 必须 ≥ v18.0.0（推荐 v20.11+） npm -v # npm ≥ 9.6，或使用 pnpm ≥ 8.15（更稳定） 接着安装核心依赖。根据技术栈选择其一（不建议混用）：
+&lt;SYSTEM&gt; 你作为EJU官方认证模拟引擎（EJU-SIM v3.2），严格遵循&lt;EJU_RULES_V2.1&gt;。禁止生成任何与指南矛盾的评分逻辑或界面行为。所有输出必须为JSON格式，含&#34;next_action&#34;字段。 &lt;/SYSTEM&gt; &lt;USER&gt; [用户操作] 点击“开始阅读理解” [当前状态] {&#34;module&#34;: &#34;reading&#34;, &#34;time_left&#34;: 1500, &#34;question_index&#34;: 1} &lt;/USER&gt; &lt;ASSISTANT&gt; { &#34;next_action&#34;: &#34;show_question&#34;, &#34;question_id&#34;: &#34;R2023-04-01&#34;, &#34;text&#34;: &#34;「〜たばかりだ」は、動作が完了した直後を表す……&#34;, &#34;options&#34;: [&#34;A. 助詞の格機能&#34;, &#34;B. 動詞の完了態&#34;, &#34;C. 形容動詞の連体形&#34;, &#34;D. 接続助詞の並列用法&#34;], &#34;explanation&#34;: { &#34;correct&#34;: &#34;A. 助詞の格機能（『た』の完了意味を補足する格助詞『ばかり』の機能）&#34;, &#34;distractors&#34;: [ &#34;B. 動詞の完了態：『た』自体が完了態だが、『ばかり』は助詞であり動詞ではない&#34;, &#34;C. 形容動詞の連体形：『ばかり』は形容動詞でないため該当しない&#34; ] }, &#34;emotion_hint&#34;: &#34;neutral&#34; } &lt;/ASSISTANT&gt; 关键约束实现：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-20 12:09:15.819 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第6篇：模拟考试不只计分——打造高仿真EJU机考体验引擎" href="http://localhost:1313/posts/2026-02-20-d6pmnksbzjfdzgfzejujktyyq/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第四步：丝滑动效加持——用Claude Code优化Lottie动画与交互反馈
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、前置准备：环境搭建与依赖确认 在开始优化 Lottie 动效前，必须确保开发环境干净、工具链统一、AI 辅助能力就绪——这直接决定后续重构效率与代码质量。我们不追求“能跑就行”，而是为可维护、可压测、可回滚的动效系统打下基础。
+首先检查 Node.js 版本（Lottie Web v2.12&#43; 及现代 React/Vue 生态强烈依赖 ES2022&#43; 特性）：
+node -v # 必须 ≥ v18.0.0（推荐 v20.11&#43;） npm -v # npm ≥ 9.6，或使用 pnpm ≥ 8.15（更稳定） 接着安装核心依赖。根据技术栈选择其一（不建议混用）：
 ✅ React 项目：优先选用 lottie-react（轻量、TypeScript 原生支持、自动销毁） npm install lottie-react # 或按需引入 lottie-web（更灵活但需手动管理生命周期） npm install lottie-web ✅ Vue 3 / 原生 Web：直接使用 lottie-web ✅ 轻量替代方案（静态/简单交互动效）：@lottiefiles/lottie-player（Web Component，零 JS bundle 开销） npm install @lottiefiles/lottie-player 图：lottie-web、lottie-react、lottie-player 适用场景对比（体积/控制粒度/SSR 支持）
-Claude Code 配置是本教程的关键加速器。我们强烈推荐使用 VS Code 官方扩展 “Claude Code”（v1.4+），并完成以下配置：
-...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第四步：丝滑动效加持——用Claude Code优化Lottie动画与交互反馈" href=https://zhitong.uk/posts/2026-02-19-dsbshdxjcyclaudecodeyhlottiedh/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+Claude Code 配置是本教程的关键加速器。我们强烈推荐使用 VS Code 官方扩展 “Claude Code”（v1.4&#43;），并完成以下配置：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第四步：丝滑动效加持——用Claude Code优化Lottie动画与交互反馈" href="http://localhost:1313/posts/2026-02-19-dsbshdxjcyclaudecodeyhlottiedh/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

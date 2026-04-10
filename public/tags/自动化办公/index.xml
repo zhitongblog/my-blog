@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>自动化办公 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/</link><description>Recent content in 自动化办公 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sun, 22 Feb 2026 12:07:15 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>新手友好但高手惊叹：Mac一键部署OpenClaw后，我删掉了所有AI SaaS订阅</title><link>https://zhitong.uk/posts/2026-02-23-xsyhdgsjtmacyjbsopenclawhwsdls/</link><pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-23-xsyhdgsjtmacyjbsopenclawhwsdls/</guid><description>本文详解在Mac上一键部署OpenClaw开源AI工具的完整流程，实测替代Notion AI、Copy.ai等SaaS服务，高效处理会议纪要、扫描合同条款识别等复杂办公场景，兼顾新手友好性与专业级能力。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>自动化办公 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/</link>
+    <description>Recent content in 自动化办公 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 22 Feb 2026 12:07:15 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>新手友好但高手惊叹：Mac一键部署OpenClaw后，我删掉了所有AI SaaS订阅</title>
+      <link>http://localhost:1313/posts/2026-02-23-xsyhdgsjtmacyjbsopenclawhwsdls/</link>
+      <pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-23-xsyhdgsjtmacyjbsopenclawhwsdls/</guid>
+      <description>本文详解在Mac上一键部署OpenClaw开源AI工具的完整流程，实测替代Notion AI、Copy.ai等SaaS服务，高效处理会议纪要、扫描合同条款识别等复杂办公场景，兼顾新手友好性与专业级能力。</description>
+    </item>
+  </channel>
+</rss>

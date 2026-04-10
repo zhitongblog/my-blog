@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>前端工程化 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/</link>
+    <description>Recent content in 前端工程化 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Apr 2026 13:46:09 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一步：零配置启动——用Claude Code生成项目脚手架</title>
+      <link>http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/</link>
+      <pubDate>Fri, 10 Apr 2026 13:46:09 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/</guid>
+      <description>本文详解如何通过Anthropic官方VS Code扩展Claude Code零配置生成项目脚手架，强调其IDE深度集成特性、环境依赖（VS Code ≥1.85）及与CLI/API的本质区别，助开发者规避常见认知误区。</description>
+    </item>
+  </channel>
+</rss>

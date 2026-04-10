@@ -1,1 +1,117 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AI应用 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/ai%E5%BA%94%E7%94%A8/</link><description>Recent content in AI应用 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Tue, 10 Mar 2026 04:01:48 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/ai%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenClaw实盘爆火背后：拆解‘2万变4000万’可复现的AI量化策略闭环</title><link>https://zhitong.uk/posts/2026-03-10-openclawspbhbhcj2wb4000wkfxdai/</link><pubDate>Tue, 10 Mar 2026 04:01:48 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-10-openclawspbhbhcj2wb4000wkfxdai/</guid><description>深度拆解OpenClaw实盘爆火背后的AI量化策略闭环，详解如何从2万本金稳健增长至4000万，涵盖数据获取、信号生成、实盘执行与风控迭代等可复现关键环节。</description></item><item><title>从招聘到购车：OpenClaw正在悄悄接管生活决策链——一场静默的人机协作范式革命</title><link>https://zhitong.uk/posts/2026-03-05-czpdgcopenclawzzqqjgshjclycjmd/</link><pubDate>Thu, 05 Mar 2026 09:08:44 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-05-czpdgcopenclawzzqqjgshjclycjmd/</guid><description>OpenClaw代表新一代嵌入式决策代理，以零界面、低感知方式深度介入招聘、购车等关键生活决策链，通过多源语义解析与跨系统自动执行，重构人机协作范式。</description></item><item><title>CoPaw vs OpenClaw终极PK：谁才是中国职场人的AI数字员工首选？</title><link>https://zhitong.uk/posts/2026-03-02-copawvsopenclawzjpkscszgzcrdai/</link><pubDate>Mon, 02 Mar 2026 11:19:19 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-02-copawvsopenclawzjpkscszgzcrdai/</guid><description>深度对比CoPaw与OpenClaw两大国产AI数字员工，聚焦中国职场真实场景——钉钉协同、红头文件处理、方言会议纪要、营改增条款援引等，以行政、HR、法务三类典型用户实测开箱即用性与中文语境适配力。</description></item><item><title>CoPaw vs OpenClaw终极PK：谁才是中国职场人的AI数字员工首选？</title><link>https://zhitong.uk/posts/2026-03-03-copawvsopenclawzjpkscszgzcrdai/</link><pubDate>Mon, 02 Mar 2026 11:19:19 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-03-copawvsopenclawzjpkscszgzcrdai/</guid><description>深度对比CoPaw与OpenClaw两大国产AI数字员工，聚焦中国职场真实场景——钉钉协同、红头文件处理、方言会议纪要、营改增条款援引等，以行政、HR、法务三类典型用户实测开箱即用性与中文语境适配力。</description></item><item><title>OpenClaw已杀入真实职场：AI打工人正在接管盯盘、回邮件、接电话</title><link>https://zhitong.uk/posts/2026-02-28-openclawysrzszcaidgrzzjgdphyjj/</link><pubDate>Sat, 28 Feb 2026 02:37:10 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-28-openclawysrzszcaidgrzzjgdphyjj/</guid><description>OpenClaw已落地真实企业环境，实现AI自动盯盘、回邮件、接电话等办公任务。本文揭秘其在私有服务器集群中的生产级部署实践，解析AI打工人如何理解语境、执行决策并协同人类工作流。</description></item><item><title>第9篇：上线前的关键一跃——EJU考生Beta测试的设计与数据验证</title><link>https://zhitong.uk/posts/2026-02-21-d9psxqdgjyyejuksbetacsdsjysjyz/</link><pubDate>Sat, 21 Feb 2026 00:17:01 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-21-d9psxqdgjyyejuksbetacsdsjysjyz/</guid><description>本文详解EJU考生专用AI备考工具上线前的Beta测试设计，聚焦作文评分一致性、方言ASR转写准确性等真实教育场景验证，强调教育有效性而非单纯技术指标，提供可复用的数据验证方法论。</description></item><item><title>第3篇：题库不是堆砌！——构建智能分级题库的底层逻辑</title><link>https://zhitong.uk/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</link><pubDate>Fri, 20 Feb 2026 10:38:01 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</guid><description>本文剖析构建智能分级题库的底层逻辑，揭示纯API调用式题库的工程缺陷，提出融合认知锚点、难度漂移监测与闭环校准的动态题库设计方法。</description></item><item><title>从Stable Diffusion到Claude Agent：AIGC应用产品的5次范式跃迁，你的产品卡在哪一代？</title><link>https://zhitong.uk/posts/2026-02-19-cstablediffusiondclaudeagentai/</link><pubDate>Thu, 19 Feb 2026 08:13:25 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-cstablediffusiondclaudeagentai/</guid><description>解析AIGC应用从L1单点提效到L5自主协同的5次范式跃迁，揭示Stable Diffusion与Claude Agent背后的价值链重构逻辑，助产品团队定位代际卡点并突破ROI瓶颈。</description></item><item><title>未来十年没有‘产品经理’，只有‘智能体编排师’：当低代码AI平台让每个人都是PM，真正的壁垒是什么？</title><link>https://zhitong.uk/posts/2026-02-19-wlsnmycpjlzyzntbpsdddmaiptrmgr/</link><pubDate>Thu, 19 Feb 2026 08:13:25 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-wlsnmycpjlzyzntbpsdddmaiptrmgr/</guid><description>本文探讨低代码AI平台如何重塑产品经理角色，分析‘智能体编排师’这一新兴职能的核心能力，并揭示在PRD消失时代真正的竞争壁垒——语义对齐、约束建模与跨模态意图理解。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI应用 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/ai%E5%BA%94%E7%94%A8/</link>
+    <description>Recent content in AI应用 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 08 Apr 2026 06:44:02 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ai%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>多模态突破：Claude Code驱动图文/视频广告自动合成</title>
+      <link>http://localhost:1313/posts/2026-04-08-dmttpclaudecodeqdtwspggzdhc/</link>
+      <pubDate>Wed, 08 Apr 2026 06:44:02 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-08-dmttpclaudecodeqdtwspggzdhc/</guid>
+      <description>本文实战解析如何利用Claude Code等多模态API构建图文/视频广告自动合成流水线，解决大促紧急需求下的跨模态对齐难题，涵盖错误归因、链路优化与生产级落地经验。</description>
+    </item>
+    <item>
+      <title>智能升级：让Claude Code理解品牌调性与受众画像</title>
+      <link>http://localhost:1313/posts/2026-04-08-znsjrclaudecodeljppdxyszhx/</link>
+      <pubDate>Wed, 08 Apr 2026 06:26:49 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-08-znsjrclaudecodeljppdxyszhx/</guid>
+      <description>本文揭秘如何通过结构化提示、受众画像嵌入与风格约束，让Claude Code真正理解品牌调性，避免黑话堆砌，生成符合真实用户语境的营销文案。</description>
+    </item>
+    <item>
+      <title>零基础起步：用Claude Code快速搭建广告文案生成器</title>
+      <link>http://localhost:1313/posts/2026-04-08-ljcqbyclaudecodeksdjggwascq/</link>
+      <pubDate>Wed, 08 Apr 2026 05:35:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-08-ljcqbyclaudecodeksdjggwascq/</guid>
+      <description>零基础实操指南：用Claude Code快速搭建广告文案生成器，对比ChatGPT与Copilot在真实营销场景中的表现，详解Prompt设计、本地部署与小红书风格文案批量生成技巧。</description>
+    </item>
+    <item>
+      <title>从卡壳到停不下来：我的专属写作分身养成记</title>
+      <link>http://localhost:1313/posts/2026-03-29-ckkdtbxlwdzsxzfsycj/</link>
+      <pubDate>Sun, 29 Mar 2026 06:07:42 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-29-ckkdtbxlwdzsxzfsycj/</guid>
+      <description>分享个人如何通过定制化Prompt与AI协同，打造专属写作分身，解决卡壳、人设不稳、风格断裂等痛点，实现从低效试错到稳定输出的跃迁。</description>
+    </item>
+    <item>
+      <title>写作卡壳时，你的‘第二大脑’在线吗？StoryAlter实测报告</title>
+      <link>http://localhost:1313/posts/2026-03-28-xzkksnddednzxmstoryalterscbg/</link>
+      <pubDate>Sat, 28 Mar 2026 03:46:11 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-28-xzkksnddednzxmstoryalterscbg/</guid>
+      <description>本文实测StoryAlter作为写作者‘第二大脑’的效果，解决灵感散乱、写作卡壳痛点，探讨其在素材聚合、上下文联想与叙事生成方面的实际表现与适用场景。</description>
+    </item>
+    <item>
+      <title>你的AI写作分身会‘进化’吗？3个信号说明它真懂你</title>
+      <link>http://localhost:1313/posts/2026-03-28-ndaixzfshjhm3gxhsmtzdn/</link>
+      <pubDate>Sat, 28 Mar 2026 03:42:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-28-ndaixzfshjhm3gxhsmtzdn/</guid>
+      <description>探讨AI写作工具如何通过RAG、持续微调与行为模仿实现个性化‘进化’，识别3个关键信号判断AI是否真正理解你的语言风格、思维节奏与表达习惯。</description>
+    </item>
+    <item>
+      <title>OpenClaw实盘爆火背后：拆解‘2万变4000万’可复现的AI量化策略闭环</title>
+      <link>http://localhost:1313/posts/2026-03-10-openclawspbhbhcj2wb4000wkfxdai/</link>
+      <pubDate>Tue, 10 Mar 2026 04:01:48 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-10-openclawspbhbhcj2wb4000wkfxdai/</guid>
+      <description>深度拆解OpenClaw实盘爆火背后的AI量化策略闭环，详解如何从2万本金稳健增长至4000万，涵盖数据获取、信号生成、实盘执行与风控迭代等可复现关键环节。</description>
+    </item>
+    <item>
+      <title>从招聘到购车：OpenClaw正在悄悄接管生活决策链——一场静默的人机协作范式革命</title>
+      <link>http://localhost:1313/posts/2026-03-05-czpdgcopenclawzzqqjgshjclycjmd/</link>
+      <pubDate>Thu, 05 Mar 2026 09:08:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-05-czpdgcopenclawzzqqjgshjclycjmd/</guid>
+      <description>OpenClaw代表新一代嵌入式决策代理，以零界面、低感知方式深度介入招聘、购车等关键生活决策链，通过多源语义解析与跨系统自动执行，重构人机协作范式。</description>
+    </item>
+    <item>
+      <title>CoPaw vs OpenClaw终极PK：谁才是中国职场人的AI数字员工首选？</title>
+      <link>http://localhost:1313/posts/2026-03-02-copawvsopenclawzjpkscszgzcrdai/</link>
+      <pubDate>Mon, 02 Mar 2026 11:19:19 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-02-copawvsopenclawzjpkscszgzcrdai/</guid>
+      <description>深度对比CoPaw与OpenClaw两大国产AI数字员工，聚焦中国职场真实场景——钉钉协同、红头文件处理、方言会议纪要、营改增条款援引等，以行政、HR、法务三类典型用户实测开箱即用性与中文语境适配力。</description>
+    </item>
+    <item>
+      <title>CoPaw vs OpenClaw终极PK：谁才是中国职场人的AI数字员工首选？</title>
+      <link>http://localhost:1313/posts/2026-03-03-copawvsopenclawzjpkscszgzcrdai/</link>
+      <pubDate>Mon, 02 Mar 2026 11:19:19 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-03-copawvsopenclawzjpkscszgzcrdai/</guid>
+      <description>深度对比CoPaw与OpenClaw两大国产AI数字员工，聚焦中国职场真实场景——钉钉协同、红头文件处理、方言会议纪要、营改增条款援引等，以行政、HR、法务三类典型用户实测开箱即用性与中文语境适配力。</description>
+    </item>
+    <item>
+      <title>OpenClaw已杀入真实职场：AI打工人正在接管盯盘、回邮件、接电话</title>
+      <link>http://localhost:1313/posts/2026-02-28-openclawysrzszcaidgrzzjgdphyjj/</link>
+      <pubDate>Sat, 28 Feb 2026 02:37:10 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-28-openclawysrzszcaidgrzzjgdphyjj/</guid>
+      <description>OpenClaw已落地真实企业环境，实现AI自动盯盘、回邮件、接电话等办公任务。本文揭秘其在私有服务器集群中的生产级部署实践，解析AI打工人如何理解语境、执行决策并协同人类工作流。</description>
+    </item>
+    <item>
+      <title>第9篇：上线前的关键一跃——EJU考生Beta测试的设计与数据验证</title>
+      <link>http://localhost:1313/posts/2026-02-21-d9psxqdgjyyejuksbetacsdsjysjyz/</link>
+      <pubDate>Sat, 21 Feb 2026 00:17:01 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-21-d9psxqdgjyyejuksbetacsdsjysjyz/</guid>
+      <description>本文详解EJU考生专用AI备考工具上线前的Beta测试设计，聚焦作文评分一致性、方言ASR转写准确性等真实教育场景验证，强调教育有效性而非单纯技术指标，提供可复用的数据验证方法论。</description>
+    </item>
+    <item>
+      <title>第3篇：题库不是堆砌！——构建智能分级题库的底层逻辑</title>
+      <link>http://localhost:1313/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</link>
+      <pubDate>Fri, 20 Feb 2026 10:38:01 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</guid>
+      <description>本文剖析构建智能分级题库的底层逻辑，揭示纯API调用式题库的工程缺陷，提出融合认知锚点、难度漂移监测与闭环校准的动态题库设计方法。</description>
+    </item>
+    <item>
+      <title>从Stable Diffusion到Claude Agent：AIGC应用产品的5次范式跃迁，你的产品卡在哪一代？</title>
+      <link>http://localhost:1313/posts/2026-02-19-cstablediffusiondclaudeagentai/</link>
+      <pubDate>Thu, 19 Feb 2026 08:13:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-cstablediffusiondclaudeagentai/</guid>
+      <description>解析AIGC应用从L1单点提效到L5自主协同的5次范式跃迁，揭示Stable Diffusion与Claude Agent背后的价值链重构逻辑，助产品团队定位代际卡点并突破ROI瓶颈。</description>
+    </item>
+    <item>
+      <title>未来十年没有‘产品经理’，只有‘智能体编排师’：当低代码AI平台让每个人都是PM，真正的壁垒是什么？</title>
+      <link>http://localhost:1313/posts/2026-02-19-wlsnmycpjlzyzntbpsdddmaiptrmgr/</link>
+      <pubDate>Thu, 19 Feb 2026 08:13:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-wlsnmycpjlzyzntbpsdddmaiptrmgr/</guid>
+      <description>本文探讨低代码AI平台如何重塑产品经理角色，分析‘智能体编排师’这一新兴职能的核心能力，并揭示在PRD消失时代真正的竞争壁垒——语义对齐、约束建模与跨模态意图理解。</description>
+    </item>
+  </channel>
+</rss>

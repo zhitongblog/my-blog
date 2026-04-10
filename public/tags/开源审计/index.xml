@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>开源审计 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E5%BC%80%E6%BA%90%E5%AE%A1%E8%AE%A1/</link>
+    <description>Recent content in 开源审计 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 02 Apr 2026 04:10:31 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%BC%80%E6%BA%90%E5%AE%A1%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Buddy电子宠物藏在3721行里：Claude Code中被忽略的拟人化交互协议与情感状态机设计</title>
+      <link>http://localhost:1313/posts/2026-04-02-buddydzcwcz3721xlclaudecodezbh/</link>
+      <pubDate>Thu, 02 Apr 2026 04:10:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-02-buddydzcwcz3721xlclaudecodezbh/</guid>
+      <description>揭秘Claude Code中隐藏的3721行Buddy电子宠物模块，解析其拟人化交互协议与情感状态机设计，探讨AI助手在确定性系统中嵌入情感建模的工程权衡与实践启示。</description>
+    </item>
+  </channel>
+</rss>

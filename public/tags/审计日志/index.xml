@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>审计日志 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E5%AE%A1%E8%AE%A1%E6%97%A5%E5%BF%97/</link><description>Recent content in 审计日志 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E5%AE%A1%E8%AE%A1%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml"/><item><title>安全红线在哪？Claude Code + BrowserCat MCP的权限控制、沙箱隔离与审计日志实践</title><link>https://zhitong.uk/posts/2026-03-27-aqhxznclaudecodebrowsercatmcpd/</link><pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-27-aqhxznclaudecodebrowsercatmcpd/</guid><description>本文深入剖析Claude Code与BrowserCat MCP协同场景下的生产级安全实践，涵盖细粒度权限控制、运行时沙箱隔离机制及全链路审计日志方案，助你守住AI代码助手的安全红线。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>审计日志 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E5%AE%A1%E8%AE%A1%E6%97%A5%E5%BF%97/</link>
+    <description>Recent content in 审计日志 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%AE%A1%E8%AE%A1%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安全红线在哪？Claude Code &#43; BrowserCat MCP的权限控制、沙箱隔离与审计日志实践</title>
+      <link>http://localhost:1313/posts/2026-03-27-aqhxznclaudecodebrowsercatmcpd/</link>
+      <pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-27-aqhxznclaudecodebrowsercatmcpd/</guid>
+      <description>本文深入剖析Claude Code与BrowserCat MCP协同场景下的生产级安全实践，涵盖细粒度权限控制、运行时沙箱隔离机制及全链路审计日志方案，助你守住AI代码助手的安全红线。</description>
+    </item>
+  </channel>
+</rss>

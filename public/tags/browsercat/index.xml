@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>BrowserCat on 智通和你一起学AI</title><link>https://zhitong.uk/tags/browsercat/</link><description>Recent content in BrowserCat on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/browsercat/index.xml" rel="self" type="application/rss+xml"/><item><title>安全红线在哪？Claude Code + BrowserCat MCP的权限控制、沙箱隔离与审计日志实践</title><link>https://zhitong.uk/posts/2026-03-27-aqhxznclaudecodebrowsercatmcpd/</link><pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-27-aqhxznclaudecodebrowsercatmcpd/</guid><description>本文深入剖析Claude Code与BrowserCat MCP协同场景下的生产级安全实践，涵盖细粒度权限控制、运行时沙箱隔离机制及全链路审计日志方案，助你守住AI代码助手的安全红线。</description></item><item><title>零代码≠低能力：Claude Code BrowserCat MCP在电商数据采集中的实战压测报告</title><link>https://zhitong.uk/posts/2026-03-26-ldmdnlclaudecodebrowsercatmcpz/</link><pubDate>Thu, 26 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-26-ldmdnlclaudecodebrowsercatmcpz/</guid><description>本文详述使用Claude+BrowserCat+MCP零代码方案，在72小时内完成5大电商平台实时价格、库存与SKU变更监控的压测全过程，验证零代码在高对抗场景下的工程可靠性与团队提效价值。</description></item><item><title>2026开发者新宠：用一句‘登录淘宝并截图订单页’唤醒Claude Code的BrowserCat MCP</title><link>https://zhitong.uk/posts/2026-03-25-2026kfzxcyyjdltbbjtddyhxclaude/</link><pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-25-2026kfzxcyyjdltbbjtddyhxclaude/</guid><description>揭秘2026年开发者新宠BrowserCat MCP如何通过自然语言指令驱动浏览器自动化——以‘登录淘宝并截图订单页’实战为例，解析Claude Code集成、上下文失效排错与生产级调试经验。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>BrowserCat on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/browsercat/</link>
+    <description>Recent content in BrowserCat on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/browsercat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安全红线在哪？Claude Code &#43; BrowserCat MCP的权限控制、沙箱隔离与审计日志实践</title>
+      <link>http://localhost:1313/posts/2026-03-27-aqhxznclaudecodebrowsercatmcpd/</link>
+      <pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-27-aqhxznclaudecodebrowsercatmcpd/</guid>
+      <description>本文深入剖析Claude Code与BrowserCat MCP协同场景下的生产级安全实践，涵盖细粒度权限控制、运行时沙箱隔离机制及全链路审计日志方案，助你守住AI代码助手的安全红线。</description>
+    </item>
+    <item>
+      <title>零代码≠低能力：Claude Code BrowserCat MCP在电商数据采集中的实战压测报告</title>
+      <link>http://localhost:1313/posts/2026-03-26-ldmdnlclaudecodebrowsercatmcpz/</link>
+      <pubDate>Thu, 26 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-26-ldmdnlclaudecodebrowsercatmcpz/</guid>
+      <description>本文详述使用Claude&#43;BrowserCat&#43;MCP零代码方案，在72小时内完成5大电商平台实时价格、库存与SKU变更监控的压测全过程，验证零代码在高对抗场景下的工程可靠性与团队提效价值。</description>
+    </item>
+    <item>
+      <title>2026开发者新宠：用一句‘登录淘宝并截图订单页’唤醒Claude Code的BrowserCat MCP</title>
+      <link>http://localhost:1313/posts/2026-03-25-2026kfzxcyyjdltbbjtddyhxclaude/</link>
+      <pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-25-2026kfzxcyyjdltbbjtddyhxclaude/</guid>
+      <description>揭秘2026年开发者新宠BrowserCat MCP如何通过自然语言指令驱动浏览器自动化——以‘登录淘宝并截图订单页’实战为例，解析Claude Code集成、上下文失效排错与生产级调试经验。</description>
+    </item>
+  </channel>
+</rss>

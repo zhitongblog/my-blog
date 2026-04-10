@@ -1,0 +1,314 @@
+/* Product Ads Styles */
+.product-ads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1.5rem 0;
+  margin: 1rem auto;
+  max-width: var(--main-width);
+}
+
+.product-ad {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.product-ad a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-ad a:hover {
+  transform: translateY(-2px);
+}
+
+/* StoryAlter - Purple Theme */
+.product-ad--storyalter a {
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  border: 1px solid #c4b5fd;
+}
+
+.product-ad--storyalter a:hover {
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.2);
+}
+
+.product-ad--storyalter .product-ad-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.product-ad--storyalter .product-ad-icon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.product-ad--storyalter .product-ad-badge {
+  background: #8b5cf6;
+  color: white;
+}
+
+.product-ad--storyalter .product-ad-title {
+  color: #6d28d9;
+}
+
+/* SoloMD - Orange Theme */
+.product-ad--solomd a {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border: 1px solid #fcd34d;
+}
+
+.product-ad--solomd a:hover {
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
+}
+
+.product-ad--solomd .product-ad-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.product-ad--solomd .solomd-logo {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.product-ad--solomd .solomd-hash {
+  color: #f59e0b;
+}
+
+.product-ad--solomd .solomd-md {
+  color: white;
+}
+
+.product-ad--solomd .product-ad-badge {
+  background: #f59e0b;
+  color: white;
+}
+
+.product-ad--solomd .product-ad-title {
+  color: #b45309;
+}
+
+/* Common Styles */
+.product-ad-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.product-ad-badge {
+  display: inline-block;
+  width: fit-content;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.product-ad-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.product-ad-desc {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .product-ad--storyalter a {
+  background: linear-gradient(135deg, #2e1065 0%, #1e1b4b 100%);
+  border-color: #6d28d9;
+}
+
+[data-theme="dark"] .product-ad--storyalter .product-ad-title {
+  color: #c4b5fd;
+}
+
+[data-theme="dark"] .product-ad--storyalter a:hover {
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
+}
+
+[data-theme="dark"] .product-ad--solomd a {
+  background: linear-gradient(135deg, #451a03 0%, #78350f 100%);
+  border-color: #b45309;
+}
+
+[data-theme="dark"] .product-ad--solomd .product-ad-title {
+  color: #fcd34d;
+}
+
+[data-theme="dark"] .product-ad--solomd a:hover {
+  box-shadow: 0 4px 16px rgba(251, 191, 36, 0.3);
+}
+
+[data-theme="dark"] .product-ad-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .product-ads {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .product-ad {
+    width: 100%;
+    max-width: none;
+  }
+
+  .product-ad-desc {
+    white-space: normal;
+  }
+}
+
+/* ========== Top Banner Styles ========== */
+.top-banner {
+  background: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
+
+.top-banner-inner {
+  max-width: var(--main-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.top-banner-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  background: #6c757d;
+  color: white;
+}
+
+.top-banner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.top-banner-link:hover {
+  opacity: 0.8;
+}
+
+.top-banner-link--storyalter {
+  color: #7c3aed;
+}
+
+.top-banner-link--storyalter svg {
+  stroke: #7c3aed;
+}
+
+.top-banner-link--solomd {
+  color: #b45309;
+}
+
+.top-banner-solomd-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.top-banner-solomd-icon .hash {
+  color: #f59e0b;
+}
+
+.top-banner-solomd-icon .md {
+  color: white;
+}
+
+.top-banner-sep {
+  color: #adb5bd;
+}
+
+/* Dark mode for top banner */
+[data-theme="dark"] .top-banner {
+  background: linear-gradient(90deg, #1a1a2e 0%, #16213e 100%);
+  border-bottom-color: #2d3748;
+}
+
+[data-theme="dark"] .top-banner-label {
+  background: #4a5568;
+}
+
+[data-theme="dark"] .top-banner-link--storyalter {
+  color: #a78bfa;
+}
+
+[data-theme="dark"] .top-banner-link--storyalter svg {
+  stroke: #a78bfa;
+}
+
+[data-theme="dark"] .top-banner-link--solomd {
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .top-banner-sep {
+  color: #4a5568;
+}
+
+/* Mobile responsive for top banner */
+@media (max-width: 600px) {
+  .top-banner {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .top-banner-inner {
+    gap: 0.5rem;
+  }
+
+  .top-banner-link {
+    font-size: 0.7rem;
+  }
+}

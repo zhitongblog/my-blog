@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>开篇：为什么用Claude Code造一个MD编辑器？ | 智通和你一起学AI</title>
+<meta name="keywords" content="Claude Code, Markdown编辑器, JavaScript, AI编程, 前端开发, 代码沙箱">
+<meta name="description" content="本文详解如何利用Claude 3.5 Sonnet的Code模式零环境搭建MD编辑器，无需本地配置、npm或Python，依托内置JS运行时与DOM API在Cursor等平台快速实现可运行原型。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-04-10-kpwsmyclaudecodezygmdbjq/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4c02a0216cd8a4fd1593dab253881726c1c6f89735f9d22227a564248a3ca39a.css" integrity="sha256-TAKgIWzYpP0Vk9qyU4gXJsHG&#43;Jc1&#43;dIiJ6VkJIo8o5o=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-04-10-kpwsmyclaudecodezygmdbjq/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body id="top">
+<div class="top-banner">
+  <div class="top-banner-inner">
+    <span class="top-banner-label">推荐</span>
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer" class="top-banner-link top-banner-link--storyalter">
+      <svg viewBox="0 0 24 24" fill="none" width="14" height="14">
+        <path d="M16.5 3.5C16.9 3.1 17.4 2.9 18 2.9C18.6 2.9 19.1 3.1 19.5 3.5C19.9 3.9 20.1 4.4 20.1 5C20.1 5.6 19.9 6.1 19.5 6.5L7 19L3 20L4 16L16.5 3.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      StoryAlter - AI写作分身
+    </a>
+    <span class="top-banner-sep">|</span>
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer" class="top-banner-link top-banner-link--solomd">
+      <span class="top-banner-solomd-icon"><span class="hash">#</span><span class="md">MD</span></span>
+      SoloMD - 极简Markdown编辑器
+    </a>
+  </div>
+</div>
+
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      开篇：为什么用Claude Code造一个MD编辑器？
+    </h1>
+    <div class="post-description">
+      本文详解如何利用Claude 3.5 Sonnet的Code模式零环境搭建MD编辑器，无需本地配置、npm或Python，依托内置JS运行时与DOM API在Cursor等平台快速实现可运行原型。
+    </div>
+    <div class="post-meta"><span title='2026-04-10 07:16:44.981 +0000 UTC'>April 10, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="1-前置准备环境与工具确认">1. 前置准备：环境与工具确认<a hidden class="anchor" aria-hidden="true" href="#1-前置准备环境与工具确认">#</a></h2>
+<p>在开始编码前，请先确认你正运行在<strong>支持代码执行的 Claude 环境</strong>中——这不是传统意义上的“本地开发”，而是利用 Anthropic 提供的智能沙箱能力，全程在浏览器或桌面客户端内完成构建、调试与迭代。关键认知：✅ <strong>无需安装 Claude 模型，无需配置 Python/Node 环境，甚至不需要 <code>npm install</code></strong>。Claude Code（即 Claude 3.5 Sonnet 在「Code」模式下）已内置完整 JavaScript 运行时、文件系统模拟（<code>localStorage</code>、<code>fetch</code>、DOM API）及 CDN 资源加载能力。</p>
+<h3 id="-推荐平台清单实测可用">✅ 推荐平台清单（实测可用）<a hidden class="anchor" aria-hidden="true" href="#-推荐平台清单实测可用">#</a></h3>
+<ul>
+<li><strong>Cursor v0.48+</strong>：启用「Claude Code」模型后，默认激活 Code Interpreter 插件，支持 <code>.html</code> 文件实时预览与 DOM 操作</li>
+<li><strong>Continue.dev v0.27+</strong>：在 <code>config.json</code> 中设置 <code>&quot;model&quot;: &quot;claude-3-5-sonnet-20240620&quot;</code>，并开启 <code>codeInterpreter: true</code></li>
+<li><strong>Claude Desktop（Beta）</strong>：macOS/Windows 官方桌面版，需在设置中开启实验性功能 → 「Enable Code Interpreter」</li>
+<li><strong>Claude in Browser（claude.ai）</strong>：⚠️ 仅当右下角出现「Code Interpreter」图标（⚡）且可点击时才可用；首次使用需手动开启（Settings → Experimental Features）</li>
+</ul>
+<h3 id="-明确排除场景">❌ 明确排除场景<a hidden class="anchor" aria-hidden="true" href="#-明确排除场景">#</a></h3>
+<ul>
+<li>纯网页版 <code>claude.ai</code>（未开启 Code Interpreter）：不支持 <code>localStorage</code> 写入、无法加载外部 CDN、无 <code>document</code> 对象访问权限</li>
+<li>移动端 Claude App：暂不支持代码执行沙箱</li>
+<li>使用 <code>claude-3-haiku</code> 或 <code>claude-3-opus</code> 模型：它们默认不启用 Code Interpreter 模式，必须显式切换为 <code>claude-3-5-sonnet</code> 并确认沙箱就绪</li>
+</ul>
+<h3 id="快速验证环境就绪">快速验证环境就绪<a hidden class="anchor" aria-hidden="true" href="#快速验证环境就绪">#</a></h3>
+<p>在 Claude Code 输入框中粘贴并运行以下命令（无需回车，Claude 会自动执行并返回结果）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Environment OK&#34;</span> <span style="color:#f92672">&amp;&amp;</span> which node 2&gt;/dev/null <span style="color:#f92672">||</span> echo <span style="color:#e6db74">&#34;(node not required — sandbox is ready)&#34;</span>
+</span></span></code></pre></div><p>若返回 <code>Environment OK</code>，说明沙箱已激活，可安全进入下一步。</p>
+<blockquote>
+<p>💡 小技巧：Claude Code 会自动缓存你本次会话中的所有文件（如 <code>editor.html</code>），关闭窗口后再次打开仍可继续编辑——它本质是一个带持久化状态的 Web IDE。</p>
+</blockquote>
+<p><img alt="展示 Claude Desktop 中 Code Interpreter 图标与 editor.html 文件树" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/81/20260410/d23adf3d/dd6674f5-a277-945f-a044-cb91bbaa78d12657040699.png?Expires=1776411092&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=haTi4b2nCrxCFh%2FKmsJtUlkX%2BgA%3D"></p>
+<h2 id="2-需求拆解一个极简但可用的-md-编辑器要什么">2. 需求拆解：一个极简但可用的 MD 编辑器要什么？<a hidden class="anchor" aria-hidden="true" href="#2-需求拆解一个极简但可用的-md-编辑器要什么">#</a></h2>
+<p>模糊目标是开发的最大敌人。我们让 Claude Code 执行一次「需求反推设计」：将“做个 Markdown 编辑器”这个产品经理式描述，转化为可验证、可编码、可测试的最小功能集。</p>
+<p>Claude Code 分析后输出如下 <code>FEATURES.md</code>（已由模型自动生成并格式化）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># FEATURES.md — Minimal Viable Markdown Editor
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## ✅ MUST-HAVE (v1.0)
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [x]</span> 双栏布局：左侧纯文本编辑区（<span style="color:#e6db74">`&lt;textarea&gt;`</span>），右侧实时 HTML 预览区（<span style="color:#e6db74">`&lt;div id=&#34;preview&#34;&gt;`</span>）  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [x]</span> 双向同步：编辑区内容变更 → 立即渲染；粘贴 Markdown 文本 → 自动触发渲染  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [x]</span> GitHub Flavored Markdown（GFM）兼容：表格、任务列表、自动链接  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [x]</span> 换行符转 <span style="color:#e6db74">`&lt;br&gt;`</span>（<span style="color:#e6db74">`marked.setOptions({ breaks: true })`</span>）  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [x]</span> 基础样式：等宽字体、灰阶边框、16px 基准字号  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## ⚠️ DEFERRED (v2.0+)
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> 导出 PDF（依赖 <span style="color:#e6db74">`jspdf`</span> + <span style="color:#e6db74">`html2canvas`</span>，增加体积）  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> 图床上传（需对接第三方 API，引入认证复杂度）  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> TOC 自动生成（需解析 AST，非渲染层职责）  
+</span></span></code></pre></div><p>这份清单不是文档，而是<strong>后续所有编码的验收标准</strong>。Claude Code 会严格按此优先级生成代码，跳过任何未标记 ✅ 的功能。</p>
+<h2 id="3-第一步创建-html-骨架与基础交互逻辑">3. 第一步：创建 HTML 骨架与基础交互逻辑<a hidden class="anchor" aria-hidden="true" href="#3-第一步创建-html-骨架与基础交互逻辑">#</a></h2>
+<p>现在，我们手写第一个可运行的 <code>editor.html</code>。Claude Code 不会“猜”结构，而是精准理解你的意图：“双栏 Flex 布局 + textarea + preview div + marked 渲染”。</p>
+<p>以下是完整、可直接复制运行的代码（Claude Code 已自动补全 CSS 重置、字体栈与响应式断点占位）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;zh-CN&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">title</span>&gt;Minimal MD Editor&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/marked/marked.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">*</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">box-sizing</span>: <span style="color:#66d9ef">border-box</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">body</span> { <span style="color:#66d9ef">font-family</span>: <span style="color:#f92672">-</span>apple-system, BlinkMacSystemFont, <span style="color:#e6db74">&#39;Segoe UI&#39;</span>, <span style="color:#66d9ef">sans-serif</span>; <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">1.6</span>; <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#333</span>; }
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">container</span> { <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>; <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vh</span>; }
+</span></span><span style="display:flex;"><span>    #editor { <span style="color:#66d9ef">flex</span>: <span style="color:#ae81ff">1</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">rem</span>; <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;SFMono-Regular&#39;</span>, Consolas, <span style="color:#66d9ef">monospace</span>; <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">14</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">border-right</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#eee</span>; <span style="color:#66d9ef">resize</span>: <span style="color:#66d9ef">none</span>; }
+</span></span><span style="display:flex;"><span>    #preview { <span style="color:#66d9ef">flex</span>: <span style="color:#ae81ff">1</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">rem</span>; <span style="color:#66d9ef">overflow-y</span>: <span style="color:#66d9ef">auto</span>; }
+</span></span><span style="display:flex;"><span>    @<span style="color:#66d9ef">media</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">768px</span><span style="color:#f92672">)</span> { .<span style="color:#a6e22e">container</span> { <span style="color:#66d9ef">flex-direction</span>: <span style="color:#66d9ef">column</span>; } }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* GFM 样式增强 */</span>
+</span></span><span style="display:flex;"><span>    #preview <span style="color:#f92672">h1</span><span style="color:#f92672">,</span> #preview <span style="color:#f92672">h2</span><span style="color:#f92672">,</span> #preview <span style="color:#f92672">h3</span> { <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">1.2</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0.6</span><span style="color:#66d9ef">em</span>; }
+</span></span><span style="display:flex;"><span>    #preview <span style="color:#f92672">pre</span> { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#f6f8fa</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">rem</span>; <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">overflow-x</span>: <span style="color:#66d9ef">auto</span>; }
+</span></span><span style="display:flex;"><span>    #preview <span style="color:#f92672">code</span> { <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#f6f8fa</span>; <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0.4</span><span style="color:#66d9ef">em</span>; <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">px</span>; }
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">style</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">textarea</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;editor&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;输入 Markdown...&#34;</span>&gt;# Hello World
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- 支持列表
+</span></span><span style="display:flex;"><span>- **加粗** 和 *斜体*
+</span></span><span style="display:flex;"><span>- [链接](https://example.com)&lt;/<span style="color:#f92672">textarea</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preview&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">marked</span>.<span style="color:#a6e22e">setOptions</span>({ <span style="color:#a6e22e">breaks</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> });
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">editor</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;editor&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">preview</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;preview&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">render</span>() {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">preview</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">marked</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;input&#39;</span>, <span style="color:#a6e22e">render</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 初始化渲染
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">render</span>();
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>✅ <strong>注意事项</strong></p>
+<ul>
+<li><code>marked.setOptions({ breaks: true })</code> 是关键：否则 <code>换行</code> 不会转为 <code>&lt;br&gt;</code>，段落会塌缩成一行</li>
+<li><code>marked.parse()</code> 默认对 HTML 标签进行转义，<strong>完全避免 XSS 风险</strong>（如输入 <code>&lt;script&gt;alert(1)&lt;/script&gt;</code> 会原样显示为文本）</li>
+</ul>
+<p>❌ <strong>常见问题</strong></p>
+<blockquote>
+<p>预览区空白？打开浏览器控制台（F12 → Console），若报错 <code>marked is not defined</code>，说明 CDN 加载失败。此时 Claude Code 会自动为你替换为备用链接：<code>https://unpkg.com/marked@12.0.2/lib/marked.umd.js</code></p>
+</blockquote>
+<h2 id="4-第二步增强渲染体验添加代码块高亮与数学公式支持">4. 第二步：增强渲染体验——添加代码块高亮与数学公式支持<a hidden class="anchor" aria-hidden="true" href="#4-第二步增强渲染体验添加代码块高亮与数学公式支持">#</a></h2>
+<p>基础渲染已就绪。现在让 Claude Code 基于当前 <code>editor.html</code> <strong>智能扩增</strong>，而非重写：它将识别现有 <code>marked.parse()</code> 调用点，并注入自定义 <code>Renderer</code>。</p>
+<p>新增 CDN 引入（追加到 <code>&lt;head&gt;</code> 中）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>替换 <code>&lt;script&gt;</code> 中的 <code>render()</code> 函数为：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">render</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">renderer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">marked</span>.<span style="color:#a6e22e">Renderer</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 代码块高亮
+</span></span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">renderer</span>.<span style="color:#a6e22e">code</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">code</span>, <span style="color:#a6e22e">lang</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">lang</span>) <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`&lt;pre&gt;&lt;code&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">marked</span>.<span style="color:#a6e22e">escape</span>(<span style="color:#a6e22e">code</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/code&gt;&lt;/pre&gt;`</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">highlighted</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">hljs</span>.<span style="color:#a6e22e">highlightAuto</span>(<span style="color:#a6e22e">code</span>, [<span style="color:#a6e22e">lang</span>]).<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`&lt;pre&gt;&lt;code class=&#34;hljs </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">lang</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">highlighted</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/code&gt;&lt;/pre&gt;`</span>;
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 数学公式支持（KaTeX）
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rawMarkup</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">marked</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">value</span>, { <span style="color:#a6e22e">renderer</span> });
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">preview</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rawMarkup</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 渲染 KaTeX（需在 innerHTML 设置后调用）
+</span></span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">renderMathInElement</span>(<span style="color:#a6e22e">preview</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>✅ <strong>注意事项</strong></p>
+<ul>
+<li><code>hljs.highlightAuto()</code> 会自动检测语言，但需确保 <code>highlight.min.js</code> 已加载全部语言（CDN 版本已内置）</li>
+<li><code>renderMathInElement(preview)</code> 是 KaTeX 的自动渲染函数，它会扫描 <code>$$...$$</code> 和 <code>$...$</code> 并替换为 MathML</li>
+</ul>
+<p>❌ <strong>常见问题</strong></p>
+<blockquote>
+<p>公式不渲染？检查 <code>&lt;head&gt;</code> 中 <code>katex.min.css</code> 是否在 <code>auto-render.min.js</code> 之前加载（CSS 必须前置，否则公式高度计算异常）</p>
+</blockquote>
+<h2 id="5-第三步保存与加载用-localstorage-实现本地持久化">5. 第三步：保存与加载——用 localStorage 实现本地持久化<a hidden class="anchor" aria-hidden="true" href="#5-第三步保存与加载用-localstorage-实现本地持久化">#</a></h2>
+<p>用户绝不愿丢失未保存的笔记。Claude Code 精准调用浏览器 API，实现零配置持久化：</p>
+<p>在 <code>&lt;script&gt;</code> 开头添加：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// 页面加载时读取
+</span></span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">saved</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#39;md-content&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">saved</span>) <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">saved</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">&#39;localStorage read failed:&#39;</span>, <span style="color:#a6e22e">e</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 编辑时自动保存（防抖 800ms）
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">saveTimer</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;input&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">clearTimeout</span>(<span style="color:#a6e22e">saveTimer</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">saveTimer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#39;md-content&#39;</span>, <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;QuotaExceededError&#39;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;存储空间已满，请清理浏览器数据&#39;</span>);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }, <span style="color:#ae81ff">800</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 离开页面前提示
+</span></span></span><span style="display:flex;"><span>window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;beforeunload&#39;</span>, (<span style="color:#a6e22e">e</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#39;md-content&#39;</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">returnValue</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>✅ <strong>注意事项</strong></p>
+<ul>
+<li><code>localStorage</code> 原生 UTF-8 安全，中文、emoji、Emoji ZWJ 序列均无乱码风险</li>
+<li><code>try/catch</code> 包裹是必需的：隐私模式下 <code>localStorage</code> 可能被禁用</li>
+</ul>
+<h2 id="6-进阶优化响应式布局与快捷键支持">6. 进阶优化：响应式布局与快捷键支持<a hidden class="anchor" aria-hidden="true" href="#6-进阶优化响应式布局与快捷键支持">#</a></h2>
+<p>最后一步，让编辑器真正“好用”。Claude Code 添加了移动端单栏适配（见第3步 CSS 中 <code>@media</code> 规则）和生产级快捷键：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Ctrl+B / Ctrl+I 快捷键
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;keydown&#39;</span>, (<span style="color:#a6e22e">e</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">ctrlKey</span>) <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">start</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">selectionStart</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">end</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">selectionEnd</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">newText</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">text</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">key</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;b&#39;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">newText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">text</span>.<span style="color:#a6e22e">substring</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">start</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">**</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">text</span>.<span style="color:#a6e22e">substring</span>(<span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">end</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">**</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">text</span>.<span style="color:#a6e22e">substring</span>(<span style="color:#a6e22e">end</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">key</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;i&#39;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">newText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">text</span>.<span style="color:#a6e22e">substring</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">start</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">*</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">text</span>.<span style="color:#a6e22e">substring</span>(<span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">end</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">*</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">text</span>.<span style="color:#a6e22e">substring</span>(<span style="color:#a6e22e">end</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">key</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;Enter&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">shiftKey</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Ctrl+Shift+Enter 切换焦点到预览区（方便阅读）
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">preview</span>.<span style="color:#a6e22e">focus</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">newText</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">text</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newText</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">editor</span>.<span style="color:#a6e22e">setSelectionRange</span>(<span style="color:#a6e22e">start</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">end</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>); <span style="color:#75715e">// 光标置于星号内
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">render</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="7-调试与部署从-claude-code-沙箱走向真实环境">7. 调试与部署：从 Claude Code 沙箱走向真实环境<a hidden class="anchor" aria-hidden="true" href="#7-调试与部署从-claude-code-沙箱走向真实环境">#</a></h2>
+<p>Claude Code 中运行正常 ≠ 本地双击打开正常。关键差异在于协议：沙箱用 <code>http://localhost:xxxx</code>，而双击是 <code>file://</code> 协议。</p>
+<p>✅ <strong>调试技巧</strong></p>
+<ul>
+<li>在 <code>render()</code> 函数开头插入 <code>console.log('rendering:', editor.value.slice(0,50));</code></li>
+<li>添加 <code>debugger</code> 语句，Claude Code 会自动在沙箱中触发断点</li>
+</ul>
+<p>✅ <strong>本地部署方案</strong></p>
+<ol>
+<li>将完整 HTML 复制保存为 <code>editor.html</code></li>
+<li><strong>推荐方式（免服务器）</strong>：终端执行
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx serve -s
+</span></span></code></pre></div>访问 <code>http://localhost:5000/editor.html</code></li>
+<li><strong>快速验证</strong>：若仅测试，Chrome 启动时加参数 <code>--unsafely-treat-insecure-origin-as-secure=&quot;file://&quot;</code>（仅限开发）</li>
+</ol>
+<p>❌ <strong>常见问题</strong></p>
+<blockquote>
+<p>白屏？99% 是 <code>file://</code> 协议下 CDN 被 CORS 拦截。解决方案：用 <code>npx serve</code>，或改用 <code>https://cdn.jsdelivr.net</code>（支持 <code>file://</code> 加载）</p>
+</blockquote>
+<h2 id="8-后续演进路线让-claude-code-成为你的长期协作者">8. 后续演进路线：让 Claude Code 成为你的长期协作者<a hidden class="anchor" aria-hidden="true" href="#8-后续演进路线让-claude-code-成为你的长期协作者">#</a></h2>
+<p>这个编辑器不是终点，而是协作起点。Claude Code 的真正价值，在于可持续演进：</p>
+<ul>
+<li>
+<p><strong>可扩展模块示例</strong>：</p>
+<ul>
+<li>Git 集成：<code>localStorage</code> → GitHub Gist API（OAuth 2.0）</li>
+<li>主题切换：CSS 变量 <code>--bg-color</code> + <code>prefers-color-scheme: dark</code> 媒体查询</li>
+<li>插件系统：<code>window.MDEditor.plugins = [{ name: 'emoji', fn: renderEmoji }]</code></li>
+</ul>
+</li>
+<li>
+<p><strong>复用提示词模板</strong>：</p>
+<blockquote>
+<p>“基于当前 <code>editor.html</code>，新增‘一键复制 HTML 渲染结果’按钮，要求兼容 Safari，并添加单元测试（使用 Jest 模拟 <code>navigator.clipboard.writeText</code>）”</p>
+</blockquote>
+</li>
+</ul>
+<p>✅ <strong>最佳实践</strong></p>
+<ul>
+<li>每次重大修改前，先 <code>git commit -m &quot;feat: add katex support&quot;</code>，Claude Code 能通过 Git 历史理解上下文</li>
+<li><strong>永远不要让 Claude 修改核心渲染逻辑</strong>（如 <code>marked.Renderer</code> 内部），应封装为插件，保障安全边界</li>
+</ul>
+<p><img alt="展示编辑器在 Cursor 中运行、右侧预览实时更新效果" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/6b/20260410/d23adf3d/710c7d41-e408-92d3-b1e9-e496c01ab3561052072976.png?Expires=1776411109&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=FwvcGilah21wJv0eF5PS3QqNhFQ%3D"><br>
+<img alt="开发者在 Claude Code 中输入提示词，右侧自动生成新功能代码" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/87/20260410/d23adf3d/c9bae10b-64a4-9fc9-98e5-86f9d12f9f35785124636.png?Expires=1776411126&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=v9TO96dRg6eH1nEfH9dfYuy3qPs%3D"></p>
+<p>你已掌握一种新型开发范式：<strong>以需求为输入，以 Claude Code 为编译器，以浏览器为运行时</strong>。接下来，只需一个提示词，就能让这个编辑器学会导出、协同、AI 辅助写作——而你，始终掌控架构与安全。</p>
+
+
+  </div>
+
+  
+
+
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/claude-code/">Claude Code</a></li>
+      <li><a href="http://localhost:1313/tags/markdown%E7%BC%96%E8%BE%91%E5%99%A8/">Markdown编辑器</a></li>
+      <li><a href="http://localhost:1313/tags/javascript/">JavaScript</a></li>
+      <li><a href="http://localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/">AI编程</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">前端开发</a></li>
+      <li><a href="http://localhost:1313/tags/%E4%BB%A3%E7%A0%81%E6%B2%99%E7%AE%B1/">代码沙箱</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad product-ad--storyalter">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 20H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16.5 3.50001C16.8978 3.10219 17.4374 2.87869 18 2.87869C18.2786 2.87869 18.5544 2.93356 18.8118 3.04017C19.0692 3.14677 19.303 3.30303 19.5 3.50001C19.697 3.697 19.8532 3.93085 19.9598 4.18822C20.0665 4.44559 20.1213 4.72144 20.1213 5.00001C20.1213 5.27859 20.0665 5.55444 19.9598 5.81181C19.8532 6.06918 19.697 6.30303 19.5 6.50001L7 19L3 20L4 16L16.5 3.50001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">培养你的专属写作分身，越写越懂你</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad product-ad--solomd">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-icon">
+        <span class="solomd-logo"><span class="solomd-hash">#</span><span class="solomd-md">MD</span></span>
+      </div>
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">一个文件，一个窗口，只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

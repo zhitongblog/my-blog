@@ -1,1 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>DevOps on 智通和你一起学AI</title><link>https://zhitong.uk/tags/devops/</link><description>Recent content in DevOps on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/devops/index.xml" rel="self" type="application/rss+xml"/><item><title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</title><link>https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</link><pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</guid><description>详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。</description></item><item><title>本地运行、飞书直连、MCP即插即用：OpenClaw让Claude Code真正扎根企业工作流</title><link>https://zhitong.uk/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/</guid><description>OpenClaw实现Claude Code在企业环境的本地化运行，支持飞书直连与MCP协议即插即用，打通Ansible等运维工具链，真正将AI编码能力嵌入生产级工作流。</description></item><item><title>告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）</title><link>https://zhitong.uk/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/</link><pubDate>Sat, 07 Mar 2026 05:33:27 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/</guid><description>告别繁琐编译！本文详解如何用Docker Compose 5分钟一键启动OpenClaw本地AI执行引擎，并深度解析Clawdbot 2026架构设计，显著降低AI机器人开发门槛。</description></item><item><title>终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力</title><link>https://zhitong.uk/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</link><pubDate>Wed, 18 Feb 2026 08:35:09 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</guid><description>本文探讨Claude Code如何赋能Shell脚本开发，让Bash直接理解PRD需求，填补CLI层AI自动化空白，提升运维脚本的可审计性、可复用性与工程规范性。</description></item><item><title>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验</title><link>https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</link><pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</guid><description>本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。</description></item><item><title>从‘试用’到‘投产’：一位全栈工程师的Claude Code工程化实践避坑手册</title><link>https://zhitong.uk/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/</link><pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/</guid><description>一位全栈工程师亲历的Claude Code工程化落地避坑实录：从本地试用到生产部署，详解DNS超时、环境变量失效、Hook依赖错误等真实故障根因与可复用的加固方案。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DevOps on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/devops/</link>
+    <description>Recent content in DevOps on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Apr 2026 04:27:56 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>闭环优化：基于A/B测试反馈的Claude Code自适应调优</title>
+      <link>http://localhost:1313/posts/2026-04-09-bhyhjyabcsfkdclaudecodezsydy/</link>
+      <pubDate>Thu, 09 Apr 2026 04:27:56 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-09-bhyhjyabcsfkdclaudecodezsydy/</guid>
+      <description>本文详解如何通过A/B测试构建闭环优化机制，针对Claude Code插件在SQL生成中出现的NULL比较bug，实施数据驱动的Prompt自适应调优，提升线上稳定性与语义准确性。</description>
+    </item>
+    <item>
+      <title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</title>
+      <link>http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</link>
+      <pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</guid>
+      <description>详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。</description>
+    </item>
+    <item>
+      <title>本地运行、飞书直连、MCP即插即用：OpenClaw让Claude Code真正扎根企业工作流</title>
+      <link>http://localhost:1313/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/</link>
+      <pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/</guid>
+      <description>OpenClaw实现Claude Code在企业环境的本地化运行，支持飞书直连与MCP协议即插即用，打通Ansible等运维工具链，真正将AI编码能力嵌入生产级工作流。</description>
+    </item>
+    <item>
+      <title>告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）</title>
+      <link>http://localhost:1313/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/</link>
+      <pubDate>Sat, 07 Mar 2026 05:33:27 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/</guid>
+      <description>告别繁琐编译！本文详解如何用Docker Compose 5分钟一键启动OpenClaw本地AI执行引擎，并深度解析Clawdbot 2026架构设计，显著降低AI机器人开发门槛。</description>
+    </item>
+    <item>
+      <title>终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力</title>
+      <link>http://localhost:1313/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</link>
+      <pubDate>Wed, 18 Feb 2026 08:35:09 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</guid>
+      <description>本文探讨Claude Code如何赋能Shell脚本开发，让Bash直接理解PRD需求，填补CLI层AI自动化空白，提升运维脚本的可审计性、可复用性与工程规范性。</description>
+    </item>
+    <item>
+      <title>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验</title>
+      <link>http://localhost:1313/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</link>
+      <pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</guid>
+      <description>本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。</description>
+    </item>
+    <item>
+      <title>从‘试用’到‘投产’：一位全栈工程师的Claude Code工程化实践避坑手册</title>
+      <link>http://localhost:1313/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/</link>
+      <pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/</guid>
+      <description>一位全栈工程师亲历的Claude Code工程化落地避坑实录：从本地试用到生产部署，详解DNS超时、环境变量失效、Hook依赖错误等真实故障根因与可复用的加固方案。</description>
+    </item>
+  </channel>
+</rss>

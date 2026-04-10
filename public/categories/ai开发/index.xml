@@ -1,1 +1,103 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AI开发 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/ai%E5%BC%80%E5%8F%91/</link><description>Recent content in AI开发 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/ai%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml"/><item><title>AI接管浏览器不是梦：Claude Code自动化已支持登录/采集/截图/性能分析四合一</title><link>https://zhitong.uk/posts/2026-03-25-aijgllqbsmclaudecodezdhyzcdlcj/</link><pubDate>Wed, 25 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-25-aijgllqbsmclaudecodezdhyzcdlcj/</guid><description>本文解析Claude Code如何实现AI驱动的浏览器自动化，支持登录、数据采集、截图与性能分析四合一，突破传统工具在语义理解、UI变更适应和维护成本上的瓶颈。</description></item><item><title>MCP协议爆发元年：深度拆解Claude Code如何通过Chrome MCP接管浏览器全链路</title><link>https://zhitong.uk/posts/2026-03-25-mcpxybfynsdcjclaudecoderhtgchr/</link><pubDate>Wed, 25 Mar 2026 12:16:38 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-25-mcpxybfynsdcjclaudecoderhtgchr/</guid><description>深度解析2024 MCP协议爆发元年背景，拆解Claude Code如何通过Chrome MCP实现浏览器全链路接管，涵盖范式迁移、细粒度权限控制与跨框架Agent互操作性。</description></item><item><title>告别多模型切换！OpenClaw作为本地AI网关，统一调度Claude Code的实战手记</title><link>https://zhitong.uk/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</guid><description>本文实战记录如何用OpenClaw作为本地AI网关统一调度Claude Code、Ollama与CodeLlama等多模型，解决端口冲突、密钥轮换、输出格式不一致等痛点，提升本地AI开发效率。</description></item><item><title>告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）</title><link>https://zhitong.uk/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/</link><pubDate>Sat, 07 Mar 2026 05:33:27 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/</guid><description>告别繁琐编译！本文详解如何用Docker Compose 5分钟一键启动OpenClaw本地AI执行引擎，并深度解析Clawdbot 2026架构设计，显著降低AI机器人开发门槛。</description></item><item><title>阿里云OpenClaw镜像+智谱GLM-5双模切换？Mac本地AI助理的进阶玩法揭秘</title><link>https://zhitong.uk/posts/2026-02-23-alyopenclawjxzpglm5smqhmacbdai/</link><pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-23-alyopenclawjxzpglm5smqhmacbdai/</guid><description>揭秘Mac本地双模AI助理搭建：基于阿里云OpenClaw镜像与智谱GLM-5模型无缝切换，解决云端API延迟、断网失效等痛点，实现低延迟、高隐私、离线可用的个人知识助理实践。</description></item><item><title>安全与边界：识别幻觉、规避风险，构建可信的AI编程协作范式</title><link>https://zhitong.uk/posts/2026-02-19-aqybjsbhjgbfxgjkxdaibcxzfs/</link><pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-aqybjsbhjgbfxgjkxdaibcxzfs/</guid><description>深入解析AI编程中的‘幻觉’本质——非事实性但语法合法的错误代码生成，剖析成因与风险，并提出融合人工校验、类型约束与上下文防护的可信协作范式。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI开发 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/ai%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in AI开发 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Apr 2026 04:27:56 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ai%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>闭环优化：基于A/B测试反馈的Claude Code自适应调优</title>
+      <link>http://localhost:1313/posts/2026-04-09-bhyhjyabcsfkdclaudecodezsydy/</link>
+      <pubDate>Thu, 09 Apr 2026 04:27:56 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-09-bhyhjyabcsfkdclaudecodezsydy/</guid>
+      <description>本文详解如何通过A/B测试构建闭环优化机制，针对Claude Code插件在SQL生成中出现的NULL比较bug，实施数据驱动的Prompt自适应调优，提升线上稳定性与语义准确性。</description>
+    </item>
+    <item>
+      <title>安全与边界：识别幻觉、规避风险，构建可信的AI编程协作范式</title>
+      <link>http://localhost:1313/posts/2026-04-06-aqybjsbhjgbfxgjkxdaibcxzfs/</link>
+      <pubDate>Mon, 06 Apr 2026 13:46:30 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-aqybjsbhjgbfxgjkxdaibcxzfs/</guid>
+      <description>深入剖析AI编程中的幻觉现象，解析其成因与典型表现，提供可落地的风险识别、边界控制与可信协作实践，助开发者在使用Copilot等工具时兼顾效率与系统可靠性。</description>
+    </item>
+    <item>
+      <title>Anthropic为何死守ClaudeCode源码？一场关于AI编程霸权与开发者主权的暗战</title>
+      <link>http://localhost:1313/posts/2026-04-05-anthropicwhssclaudecodeymycgya/</link>
+      <pubDate>Sun, 05 Apr 2026 15:12:49 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-05-anthropicwhssclaudecodeymycgya/</guid>
+      <description>本文深度剖析Anthropic将ClaudeCode全面闭源的战略动因，对比GitHub Copilot、Tabnine与CodeLlama等开源替代方案，探讨AI编程工具演进中的技术透明度、可调试性与开发者生态主权之争。</description>
+    </item>
+    <item>
+      <title>51万行Claude Code源码泄露实录：8大隐藏功能代码级拆解（附GitHub可运行Demo）</title>
+      <link>http://localhost:1313/posts/2026-04-04-51wxclaudecodeymxlsl8dycgndmjc/</link>
+      <pubDate>Sat, 04 Apr 2026 02:27:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-04-51wxclaudecodeymxlsl8dycgndmjc/</guid>
+      <description>深度解析51万行Claude桥接项目源码，代码级拆解8大隐藏功能，涵盖本地化API桥接、多模型后端适配与IDE集成机制，并提供可运行GitHub Demo。</description>
+    </item>
+    <item>
+      <title>51万行Claude Code源码泄露实录：8大隐藏功能代码级拆解（附GitHub可运行Demo）</title>
+      <link>http://localhost:1313/posts/2026-04-01-51wxclaudecodeymxlsl8dycgndmjc/</link>
+      <pubDate>Wed, 01 Apr 2026 04:15:56 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-01-51wxclaudecodeymxlsl8dycgndmjc/</guid>
+      <description>深度拆解51万行Claude Code泄露源码，揭示8大隐藏功能的实现细节，涵盖CUDA kernel调度、attention mask注入、LoRA梯度捕获等底层机制，并附可运行GitHub Demo。</description>
+    </item>
+    <item>
+      <title>告别Copilot式辅助！Agentic Coding真正在终端跑起来：Claude Code从Hello World到生产级智能体部署</title>
+      <link>http://localhost:1313/posts/2026-03-30-gbcopilotsfzagenticcodingzzzzd/</link>
+      <pubDate>Mon, 30 Mar 2026 02:07:48 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-30-gbcopilotsfzagenticcodingzzzzd/</guid>
+      <description>本文详解如何在终端本地部署Claude驱动的Agentic Coding智能体，覆盖环境搭建、Hello World实现到生产级应用部署，支持macOS、Ubuntu和WSL2，强调零歧义可验证的实操流程。</description>
+    </item>
+    <item>
+      <title>吴恩达×Anthropic联手引爆AI编程革命：《Claude Code》短课全链路拆解（含CLAUDE.md实战速查）</title>
+      <link>http://localhost:1313/posts/2026-03-30-wedanthropiclsybaibcgmclaudeco/</link>
+      <pubDate>Mon, 30 Mar 2026 02:04:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-30-wedanthropiclsybaibcgmclaudeco/</guid>
+      <description>深度拆解吴恩达与Anthropic联合推出的《Claude Code》短课，揭秘其‘反向教学系统’如何重构开发者思维回路，提升代码生成准确率47%，含CLAUDE.md实战速查与TDD测试桩工作流。</description>
+    </item>
+    <item>
+      <title>AI接管浏览器不是梦：Claude Code自动化已支持登录/采集/截图/性能分析四合一</title>
+      <link>http://localhost:1313/posts/2026-03-25-aijgllqbsmclaudecodezdhyzcdlcj/</link>
+      <pubDate>Wed, 25 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-25-aijgllqbsmclaudecodezdhyzcdlcj/</guid>
+      <description>本文解析Claude Code如何实现AI驱动的浏览器自动化，支持登录、数据采集、截图与性能分析四合一，突破传统工具在语义理解、UI变更适应和维护成本上的瓶颈。</description>
+    </item>
+    <item>
+      <title>MCP协议爆发元年：深度拆解Claude Code如何通过Chrome MCP接管浏览器全链路</title>
+      <link>http://localhost:1313/posts/2026-03-25-mcpxybfynsdcjclaudecoderhtgchr/</link>
+      <pubDate>Wed, 25 Mar 2026 12:16:38 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-25-mcpxybfynsdcjclaudecoderhtgchr/</guid>
+      <description>深度解析2024 MCP协议爆发元年背景，拆解Claude Code如何通过Chrome MCP实现浏览器全链路接管，涵盖范式迁移、细粒度权限控制与跨框架Agent互操作性。</description>
+    </item>
+    <item>
+      <title>告别多模型切换！OpenClaw作为本地AI网关，统一调度Claude Code的实战手记</title>
+      <link>http://localhost:1313/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</link>
+      <pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</guid>
+      <description>本文实战记录如何用OpenClaw作为本地AI网关统一调度Claude Code、Ollama与CodeLlama等多模型，解决端口冲突、密钥轮换、输出格式不一致等痛点，提升本地AI开发效率。</description>
+    </item>
+    <item>
+      <title>告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）</title>
+      <link>http://localhost:1313/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/</link>
+      <pubDate>Sat, 07 Mar 2026 05:33:27 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/</guid>
+      <description>告别繁琐编译！本文详解如何用Docker Compose 5分钟一键启动OpenClaw本地AI执行引擎，并深度解析Clawdbot 2026架构设计，显著降低AI机器人开发门槛。</description>
+    </item>
+    <item>
+      <title>阿里云OpenClaw镜像&#43;智谱GLM-5双模切换？Mac本地AI助理的进阶玩法揭秘</title>
+      <link>http://localhost:1313/posts/2026-02-23-alyopenclawjxzpglm5smqhmacbdai/</link>
+      <pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-23-alyopenclawjxzpglm5smqhmacbdai/</guid>
+      <description>揭秘Mac本地双模AI助理搭建：基于阿里云OpenClaw镜像与智谱GLM-5模型无缝切换，解决云端API延迟、断网失效等痛点，实现低延迟、高隐私、离线可用的个人知识助理实践。</description>
+    </item>
+    <item>
+      <title>安全与边界：识别幻觉、规避风险，构建可信的AI编程协作范式</title>
+      <link>http://localhost:1313/posts/2026-02-19-aqybjsbhjgbfxgjkxdaibcxzfs/</link>
+      <pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-aqybjsbhjgbfxgjkxdaibcxzfs/</guid>
+      <description>深入解析AI编程中的‘幻觉’本质——非事实性但语法合法的错误代码生成，剖析成因与风险，并提出融合人工校验、类型约束与上下文防护的可信协作范式。</description>
+    </item>
+  </channel>
+</rss>

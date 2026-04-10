@@ -1,1 +1,68 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AI编程 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/ai%E7%BC%96%E7%A8%8B/</link><description>Recent content in AI编程 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Mar 2026 11:49:54 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/ai%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>告别Selenium！Claude Code + Chrome MCP 实现自然语言驱动的零代码浏览器自动化</title><link>https://zhitong.uk/posts/2026-03-25-gbseleniumclaudecodechromemcps/</link><pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-25-gbseleniumclaudecodechromemcps/</guid><description>告别Selenium繁琐定位与不稳定等待！本文详解如何用Claude Code结合Chrome MCP，通过自然语言指令实现稳定、可维护的零代码浏览器自动化，解决电商价格监控等真实场景中的StaleElement和Timeout顽疾。</description></item><item><title>第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型</title><link>https://zhitong.uk/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</link><pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</guid><description>本文详解如何用Claude Code在Cursor IDE中零代码生成SwiftUI命理应用骨架与数据模型，涵盖macOS环境配置、Xcode命令行工具验证及Claude插件集成，助开发者快速启动AI协同iOS开发。</description></item><item><title>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计</title><link>https://zhitong.uk/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</link><pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</guid><description>本文深入解析Claude Code如何超越传统代码补全，成为TDD实践与技术方案设计的智能协作者——通过逆向解析测试契约驱动架构决策、策略抽象与可维护实现。</description></item><item><title>精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力</title><link>https://zhitong.uk/posts/2026-02-19-jztwdysypromptengineeringjycla/</link><pubDate>Thu, 19 Feb 2026 04:51:18 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-jztwdysypromptengineeringjycla/</guid><description>本文详解如何通过精准Prompt Engineering激活Claude 3.5 Sonnet的深层代码理解能力，涵盖类型提示解析、框架模式识别与长上下文利用，避免模糊提问导致的安全退避与错误输出。</description></item><item><title>初识Claude Code：告别传统编码，拥抱AI结对编程</title><link>https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</link><pubDate>Thu, 19 Feb 2026 03:34:10 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</guid><description>本文详解Claude Code插件的安装配置流程，涵盖VS Code与JetBrains IDE支持、四步验证法及国内用户账号绑定要点，助开发者快速开启AI结对编程新体验。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI编程 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/ai%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in AI编程 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Apr 2026 13:46:09 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ai%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一步：零配置启动——用Claude Code生成项目脚手架</title>
+      <link>http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/</link>
+      <pubDate>Fri, 10 Apr 2026 13:46:09 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/</guid>
+      <description>本文详解如何通过Anthropic官方VS Code扩展Claude Code零配置生成项目脚手架，强调其IDE深度集成特性、环境依赖（VS Code ≥1.85）及与CLI/API的本质区别，助开发者规避常见认知误区。</description>
+    </item>
+    <item>
+      <title>精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力</title>
+      <link>http://localhost:1313/posts/2026-04-06-jztwdysypromptengineeringjycla/</link>
+      <pubDate>Mon, 06 Apr 2026 11:17:39 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-jztwdysypromptengineeringjycla/</guid>
+      <description>本文深入解析如何通过精准Prompt Engineering激发Claude 3.5（尤其是Opus）在代码理解任务中的SOTA能力，结合AST解析、控制流识别等底层机制，避免安全退避，提升代码审查、调试与重构效率。</description>
+    </item>
+    <item>
+      <title>初识Claude Code：为什么开发者需要这个AI编程伙伴？</title>
+      <link>http://localhost:1313/posts/2026-04-06-csclaudecodewsmkfzxyzgaibchb/</link>
+      <pubDate>Mon, 06 Apr 2026 02:26:58 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-csclaudecodewsmkfzxyzgaibchb/</guid>
+      <description>本文通过真实调试案例，解析Claude Code如何以‘结对编程老炮儿’视角解决空指针等复杂问题，对比Copilot与CodeWhisperer的局限，揭示其上下文理解与工程化思维优势。</description>
+    </item>
+    <item>
+      <title>告别Selenium！Claude Code &#43; Chrome MCP 实现自然语言驱动的零代码浏览器自动化</title>
+      <link>http://localhost:1313/posts/2026-03-25-gbseleniumclaudecodechromemcps/</link>
+      <pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-25-gbseleniumclaudecodechromemcps/</guid>
+      <description>告别Selenium繁琐定位与不稳定等待！本文详解如何用Claude Code结合Chrome MCP，通过自然语言指令实现稳定、可维护的零代码浏览器自动化，解决电商价格监控等真实场景中的StaleElement和Timeout顽疾。</description>
+    </item>
+    <item>
+      <title>第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型</title>
+      <link>http://localhost:1313/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</link>
+      <pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</guid>
+      <description>本文详解如何用Claude Code在Cursor IDE中零代码生成SwiftUI命理应用骨架与数据模型，涵盖macOS环境配置、Xcode命令行工具验证及Claude插件集成，助开发者快速启动AI协同iOS开发。</description>
+    </item>
+    <item>
+      <title>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计</title>
+      <link>http://localhost:1313/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</link>
+      <pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</guid>
+      <description>本文深入解析Claude Code如何超越传统代码补全，成为TDD实践与技术方案设计的智能协作者——通过逆向解析测试契约驱动架构决策、策略抽象与可维护实现。</description>
+    </item>
+    <item>
+      <title>精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力</title>
+      <link>http://localhost:1313/posts/2026-02-19-jztwdysypromptengineeringjycla/</link>
+      <pubDate>Thu, 19 Feb 2026 04:51:18 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-jztwdysypromptengineeringjycla/</guid>
+      <description>本文详解如何通过精准Prompt Engineering激活Claude 3.5 Sonnet的深层代码理解能力，涵盖类型提示解析、框架模式识别与长上下文利用，避免模糊提问导致的安全退避与错误输出。</description>
+    </item>
+    <item>
+      <title>初识Claude Code：告别传统编码，拥抱AI结对编程</title>
+      <link>http://localhost:1313/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</link>
+      <pubDate>Thu, 19 Feb 2026 03:34:10 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</guid>
+      <description>本文详解Claude Code插件的安装配置流程，涵盖VS Code与JetBrains IDE支持、四步验证法及国内用户账号绑定要点，助开发者快速开启AI结对编程新体验。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>API网关 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/api%E7%BD%91%E5%85%B3/</link>
+    <description>Recent content in API网关 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 05 Apr 2026 16:07:36 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/api%E7%BD%91%E5%85%B3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>社区自救行动：GitHub上悄然兴起的ClaudeCode替代方案清单（含轻量微调指南）</title>
+      <link>http://localhost:1313/posts/2026-04-06-sqzjxdgithubsqrxqdclaudecodetd/</link>
+      <pubDate>Sun, 05 Apr 2026 16:07:36 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-sqzjxdgithubsqrxqdclaudecodetd/</guid>
+      <description>Anthropic静默下线ClaudeCode后，开发者社区48小时内自发构建替代生态：含500&#43; fork、19个托管API网关及轻量微调指南，探讨AI编程基础设施主权与开源自救实践。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>可观测性 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/</link>
+    <description>Recent content in 可观测性 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Apr 2026 11:51:27 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>生产就绪：构建高可用、可监控、支持灰度发布的广告自动化系统</title>
+      <link>http://localhost:1313/posts/2026-04-09-scjxgjgkykjkzchdfbdggzdhxt/</link>
+      <pubDate>Thu, 09 Apr 2026 11:51:27 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-09-scjxgjgkykjkzchdfbdggzdhxt/</guid>
+      <description>本文剖析广告自动化系统从‘能跑通’到‘生产就绪’的关键跃迁，涵盖高可用设计、连接池雪崩治理、K8s健康探针调优、灰度发布策略及全链路可观测性实践。</description>
+    </item>
+    <item>
+      <title>为什么说这篇离职长文比Qwen3发布更值得AI工程师精读？——一位架构师的自我解构</title>
+      <link>http://localhost:1313/posts/2026-03-29-wsmszplzzwbqwen3fbgzdaigcsjdyw/</link>
+      <pubDate>Sun, 29 Mar 2026 07:00:18 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-29-wsmszplzzwbqwen3fbgzdaigcsjdyw/</guid>
+      <description>本文探讨一篇离职长文为何比Qwen3发布更值得AI工程师精读，剖析其在系统架构、契约设计、可观测性等工程实践中的高密度认知价值，揭示技术人文文本的深层生产力。</description>
+    </item>
+  </channel>
+</rss>

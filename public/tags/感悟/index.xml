@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>感悟 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E6%84%9F%E6%82%9F/</link><description>Recent content in 感悟 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sun, 26 Jan 2025 20:01:00 +0800</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E6%84%9F%E6%82%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>我的第一篇博客</title><link>https://zhitong.uk/posts/my-first-post/</link><pubDate>Sun, 26 Jan 2025 20:01:00 +0800</pubDate><guid>https://zhitong.uk/posts/my-first-post/</guid><description>&lt;h2 id="为什么写博客"&gt;为什么写博客&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>感悟 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E6%84%9F%E6%82%9F/</link>
+    <description>Recent content in 感悟 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 26 Jan 2025 20:01:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%84%9F%E6%82%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的第一篇博客</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Sun, 26 Jan 2025 20:01:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;h2 id=&#34;为什么写博客&#34;&gt;为什么写博客&lt;/h2&gt;
 &lt;p&gt;你好，我是智通。欢迎来到我的精神角落。&lt;/p&gt;
 &lt;p&gt;如果在三年前，有人告诉我人工智能将以如此惊人的速度重构我们的工作与生活，我可能会觉得那是科幻电影的脚本。但今天，当大模型开始写代码、绘画、甚至进行逻辑推理时，我们都必须承认：未来已来，而且它不讲客气。&lt;/p&gt;
 &lt;p&gt;站在这个时代的风口浪尖，很多人感到焦虑。我们习惯了用“经验”来构筑护城河，但AI的出现，瞬间填平了许多依靠死记硬背和重复劳动建立起来的沟壑。&lt;/p&gt;
@@ -14,16 +29,19 @@
 &lt;p&gt;在这个瞬息万变的时代，原地踏步就是最大的风险。让我们不再做时代的旁观者，而是做一个终身学习的实践者。&lt;/p&gt;
 &lt;p&gt;保持饥渴，保持精进。&lt;/p&gt;
 &lt;p&gt;我是智通，期待与你在路上相遇。&lt;/p&gt;
-&lt;h2 id="博客内容规划"&gt;博客内容规划&lt;/h2&gt;
-&lt;h3 id="ai技术分享"&gt;AI技术分享&lt;/h3&gt;
+&lt;h2 id=&#34;博客内容规划&#34;&gt;博客内容规划&lt;/h2&gt;
+&lt;h3 id=&#34;ai技术分享&#34;&gt;AI技术分享&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;AI技能技巧&lt;/li&gt;
 &lt;li&gt;AI世界大事追踪&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="思考"&gt;思考&lt;/h3&gt;
+&lt;h3 id=&#34;思考&#34;&gt;思考&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;学习感悟&lt;/li&gt;
 &lt;li&gt;AI世界预测&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="未来展望"&gt;未来展望&lt;/h2&gt;
-&lt;p&gt;希望我们一起成为AI时代的幸存者！&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id=&#34;未来展望&#34;&gt;未来展望&lt;/h2&gt;
+&lt;p&gt;希望我们一起成为AI时代的幸存者！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

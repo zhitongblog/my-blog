@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>题库系统 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E9%A2%98%E5%BA%93%E7%B3%BB%E7%BB%9F/</link><description>Recent content in 题库系统 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Feb 2026 10:38:01 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E9%A2%98%E5%BA%93%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>第3篇：题库不是堆砌！——构建智能分级题库的底层逻辑</title><link>https://zhitong.uk/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</link><pubDate>Fri, 20 Feb 2026 10:38:01 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</guid><description>本文剖析构建智能分级题库的底层逻辑，揭示纯API调用式题库的工程缺陷，提出融合认知锚点、难度漂移监测与闭环校准的动态题库设计方法。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>题库系统 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E9%A2%98%E5%BA%93%E7%B3%BB%E7%BB%9F/</link>
+    <description>Recent content in 题库系统 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 20 Feb 2026 10:38:01 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%A2%98%E5%BA%93%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第3篇：题库不是堆砌！——构建智能分级题库的底层逻辑</title>
+      <link>http://localhost:1313/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</link>
+      <pubDate>Fri, 20 Feb 2026 10:38:01 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</guid>
+      <description>本文剖析构建智能分级题库的底层逻辑，揭示纯API调用式题库的工程缺陷，提出融合认知锚点、难度漂移监测与闭环校准的动态题库设计方法。</description>
+    </item>
+  </channel>
+</rss>

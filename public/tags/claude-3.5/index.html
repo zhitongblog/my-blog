@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Claude 3.5 | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/tags/claude-3.5/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/claude-3.5/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/claude-3.5/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Claude 3.5
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引言：为什么精准提问对Claude Code至关重要 Claude 3.5 Sonnet（尤其是Opus）在代码理解任务中展现出显著超越通用大模型的能力：它在HumanEval-X、CodeContests和SWE-Bench等专业基准上达到SOTA级表现，关键在于其深度训练于真实GitHub仓库&#43;编译器级AST解析数据，能准确识别控制流边界、变量生命周期、隐式类型传播与跨函数副作用。但这一优势有个前提——Claude不“猜”你的意图；它严格遵循Prompt中定义的语义契约。模糊提问不是“不够好”，而是直接触发模型的安全退避机制：当上下文不足时，它宁可输出谨慎的泛泛而谈，也不愿给出错误断言。
+来看一个真实对比案例：
+一段处理用户邮箱验证的Python函数（简化版）：
+def validate_email(s): if not s: return False parts = s.split(&#34;@&#34;) if len(parts) != 2: return False local, domain = parts return &#34;.&#34; in domain and local.isalnum() ❌ 模糊Prompt：“修一下这个bug”
+→ Claude响应：“可能存在空字符串或None输入导致split()报错……建议添加类型检查”（未定位行号，未指出local.isalnum()对含下划线邮箱（如user_name@domain.com）返回False的真实缺陷）
+✅ 结构化Prompt：
+你是一位专注Django表单验证的Python SRE，熟悉PEP 484和mypy 1.10&#43;。请分析以下函数：① 指出第7行local.isalnum()在何种合法邮箱输入下返回False（举例说明）；② 给出单行修复代码（保持函数签名不变）；③ 输出必须为：|问题行|输入示例|修复代码|
+→ Claude精准响应：
+问题行 输入示例 修复代码 7 &#34;user_name@domain.com&#34; return &#34;.&#34; in domain and re.match(r&#39;^[a-zA-Z0-9._%&#43;-]&#43;$&#39;, local) is not None 这并非模板魔法，而是人机协同的语义契约：你定义“什么是正确答案”，Claude负责在约束内穷尽推理。Prompt Engineering的本质，是把开发者脑中的隐性知识，显性编码为Claude可执行的指令集。
+第一步：解构你的代码理解需求——明确任务类型与边界 别再用“解释/优化/修bug”这类动词启动Prompt。Claude需要的是可判定的任务类型。我们将其归为4类原子任务，每类对应唯一输入输出契约：
+任务类型 输入约束 输出约束 典型失效反例 代码解释 必须指定目标粒度（函数/AST节点/字节码） 禁止主观评价，只输出可观测事实（如“L5: ast.Call → requests.get”） 将“添加日志”混入解释Prompt → Claude开始写logging代码 缺陷诊断 必须提供失败现象（报错信息/异常堆栈/测试用例） 必须定位到具体行号&#43;变量名&#43;传播路径 只说“性能差” → Claude分析算法复杂度而非找热点行 重构建议 必须声明约束条件（时间/空间复杂度、兼容性、架构风格） 禁止引入新依赖/新范式（如async） 要求“优化JSON序列化”，未禁用ujson → Claude推荐非标准库 生成补全 必须提供完整上下文（前缀&#43;后缀&#43;接口契约） 输出必须是语法合法、可直接插入的代码块 给半截函数体，要求“补全逻辑” → Claude发明不存在的参数 ✅ 决策树检查表（快速归类）：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-06 11:17:39.681 +0000 UTC'>April 6, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力" href="http://localhost:1313/posts/2026-04-06-jztwdysypromptengineeringjycla/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">吴恩达×Anthropic联手引爆AI编程革命：《Claude Code》短课全链路拆解（含CLAUDE.md实战速查）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🔥 3小时学完，代码生成准确率↑47%（Anthropic内部AB测试） 吴恩达团队实测：Claude 3.5 Sonnet在真实Code任务中F1分飙升47%。
+不是模型升级——是训练方式被重写了。
+这不是又一门AI课。
+而是首个由AI编程原生设计的「反向教学系统」。
+它不教你怎么用AI写代码。
+它重写你大脑里“思考代码”的神经回路。
+✅ 可截图金句：
+“教AI写代码的时代结束了；现在，AI教你重写‘思考代码’的神经回路。”
+🧩 为什么《Claude Code》根本不是「课程」？ 它没有讲师，没有章节，没有进度条。
+它是Anthropic用27万行真实PR评论训练出的「认知脚手架」。
+数据来自GitHub上2,143个高活跃开源项目——含React、Next.js、LangChain等核心仓库的真实评审语。
+无视频、无PPT、无讲师出镜。
+全靠一个文件驱动：CLAUDE.md。
+它不等你打开——它监听你的每一行注释。
+你敲下 //，它立刻推演你的意图。
+你输入 // @plan，它秒生成可执行的TDD测试桩。
+你删掉 //，它即刻沉默——零干扰，零幻觉，零越界。
+这不是响应式文档。
+这是双向对齐的认知接口。
+✅ 可截图金句：
+“你敲下//，它就递给你思维链；你删掉//，它立刻沉默——这才是真正的对齐。”
+⚙️ 四步原子工作流（附CLAUDE.md速查表） CLAUDE.md 不是静态手册。
+它是嵌入VS Code/Neovim的轻量运行时——每行注释即API调用。
+Step1：// @plan → 自动生成TDD测试桩&#43;边界Case矩阵 // @plan // 实现一个安全的JSON.parse()包装器，支持超时与schema校验 → 输出：
+✅ 6个可运行测试（含{}、null、&#34;{&#34;、超长字符串、循环引用、超时中断）
+✅ 每个测试带// [boundary], // [security], // [perf]标签
+✅ 所有断言使用Jest语法，一键npm test
+Step2：// @refine → 插入上下文感知的重构建议 在函数体内任意位置加注释：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-30 02:04:25.563 +0000 UTC'>March 30, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 吴恩达×Anthropic联手引爆AI编程革命：《Claude Code》短课全链路拆解（含CLAUDE.md实战速查）" href="http://localhost:1313/posts/2026-03-30-wedanthropiclsybaibcgmclaudeco/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

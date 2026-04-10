@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>调试优化 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E8%B0%83%E8%AF%95%E4%BC%98%E5%8C%96/</link>
+    <description>Recent content in 调试优化 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 06 Apr 2026 13:06:12 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%B0%83%E8%AF%95%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码</title>
+      <link>http://localhost:1313/posts/2026-04-06-zgydslqrclaudecodebnddyhhxfyld/</link>
+      <pubDate>Mon, 06 Apr 2026 13:06:12 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-zgydslqrclaudecodebnddyhhxfyld/</guid>
+      <description>本文详解如何在VS Code中安全配置官方Claude Code插件，精准接入复杂遗留项目，实现代码理解、自动化重构与智能调试，提升技术债治理效率。</description>
+    </item>
+  </channel>
+</rss>

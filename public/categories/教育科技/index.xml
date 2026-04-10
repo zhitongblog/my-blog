@@ -1,1 +1,68 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>教育科技 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/</link><description>Recent content in 教育科技 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sat, 21 Feb 2026 00:17:01 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/index.xml" rel="self" type="application/rss+xml"/><item><title>第10篇：750分不是终点——用LTV思维构建EJU长期成长陪伴体系</title><link>https://zhitong.uk/posts/2026-02-21-d10p750fbszdyltvswgjejuzqczpbt/</link><pubDate>Sat, 21 Feb 2026 00:17:01 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-21-d10p750fbszdyltvswgjejuzqczpbt/</guid><description>本文提出以LTV（生命周期价值）思维重构EJU日语备考体系，超越750分冲刺范式，构建支持长期能力成长的陪伴式学习系统，解决错题复现率高、能力停滞等结构性痛点。</description></item><item><title>第9篇：上线前的关键一跃——EJU考生Beta测试的设计与数据验证</title><link>https://zhitong.uk/posts/2026-02-21-d9psxqdgjyyejuksbetacsdsjysjyz/</link><pubDate>Sat, 21 Feb 2026 00:17:01 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-21-d9psxqdgjyyejuksbetacsdsjysjyz/</guid><description>本文详解EJU考生专用AI备考工具上线前的Beta测试设计，聚焦作文评分一致性、方言ASR转写准确性等真实教育场景验证，强调教育有效性而非单纯技术指标，提供可复用的数据验证方法论。</description></item><item><title>第5篇：日语语法图谱怎么画？——用知识图谱重构EJU语言考点</title><link>https://zhitong.uk/posts/2026-02-20-d5pryyftpzmhyzstpzgejuyykd/</link><pubDate>Fri, 20 Feb 2026 12:09:15 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-20-d5pryyftpzmhyzstpzgejuyykd/</guid><description>本文揭示EJU日语语法高错题率的深层原因，提出用知识图谱重构语法体系的方法，聚焦「～てある」「～ておく」等难点的三维语义维度建模，助力考生构建可迁移、可推理的语法认知结构。</description></item><item><title>第6篇：模拟考试不只计分——打造高仿真EJU机考体验引擎</title><link>https://zhitong.uk/posts/2026-02-20-d6pmnksbzjfdzgfzejujktyyq/</link><pubDate>Fri, 20 Feb 2026 12:09:15 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-20-d6pmnksbzjfdzgfzejujktyyq/</guid><description>揭秘高仿真EJU机考模拟引擎设计：解决静态题库无法复现的自适应难度跳转、毫秒级倒计时、系统中断响应等动态体验断层问题，提升考生临场稳定性与应试表现。</description></item><item><title>第7篇：如何让‘坚持学习’变成习惯？——游戏化激励系统设计拆解</title><link>https://zhitong.uk/posts/2026-02-21-d7prhrjcxxbcxgyxhjlxtsjcj/</link><pubDate>Fri, 20 Feb 2026 12:09:15 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-21-d7prhrjcxxbcxgyxhjlxtsjcj/</guid><description>拆解AI教育平台真实数据，揭示学习坚持难的底层动机衰减机制，详解如何通过游戏化激励系统（成就体系、进度可视化、即时反馈等）提升用户长期学习留存率。</description></item><item><title>第3篇：题库不是堆砌！——构建智能分级题库的底层逻辑</title><link>https://zhitong.uk/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</link><pubDate>Fri, 20 Feb 2026 10:38:01 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</guid><description>本文剖析构建智能分级题库的底层逻辑，揭示纯API调用式题库的工程缺陷，提出融合认知锚点、难度漂移监测与闭环校准的动态题库设计方法。</description></item><item><title>第1篇：为什么EJU考生需要专属APP？——需求洞察与市场破局</title><link>https://zhitong.uk/posts/2026-02-20-d1pwsmejuksxyzsappxqdcyscpj/</link><pubDate>Fri, 20 Feb 2026 09:28:03 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-20-d1pwsmejuksxyzsappxqdcyscpj/</guid><description>本文基于412名EJU考生真实行为日志与JASSO官方数据，揭示考生在多平台信息碎片化中的高频低效困境，论证专属备考APP在真题同步、跨平台聚合、实时通知等场景的不可替代性。</description></item><item><title>第2篇：从0画出第一张蓝图——EJU备考APP核心功能MVP清单</title><link>https://zhitong.uk/posts/2026-02-20-d2pc0hcdyzltejubkapphxgnmvpqd/</link><pubDate>Fri, 20 Feb 2026 09:28:03 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-20-d2pc0hcdyzltejubkapphxgnmvpqd/</guid><description>基于1247名EJU考生深度调研，本文拆解三大备考断点，输出可落地的核心功能MVP清单，聚焦解决题海迷航、错题黑洞与计划瘫痪等真实痛点。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>教育科技 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/</link>
+    <description>Recent content in 教育科技 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 21 Feb 2026 00:17:01 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第10篇：750分不是终点——用LTV思维构建EJU长期成长陪伴体系</title>
+      <link>http://localhost:1313/posts/2026-02-21-d10p750fbszdyltvswgjejuzqczpbt/</link>
+      <pubDate>Sat, 21 Feb 2026 00:17:01 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-21-d10p750fbszdyltvswgjejuzqczpbt/</guid>
+      <description>本文提出以LTV（生命周期价值）思维重构EJU日语备考体系，超越750分冲刺范式，构建支持长期能力成长的陪伴式学习系统，解决错题复现率高、能力停滞等结构性痛点。</description>
+    </item>
+    <item>
+      <title>第9篇：上线前的关键一跃——EJU考生Beta测试的设计与数据验证</title>
+      <link>http://localhost:1313/posts/2026-02-21-d9psxqdgjyyejuksbetacsdsjysjyz/</link>
+      <pubDate>Sat, 21 Feb 2026 00:17:01 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-21-d9psxqdgjyyejuksbetacsdsjysjyz/</guid>
+      <description>本文详解EJU考生专用AI备考工具上线前的Beta测试设计，聚焦作文评分一致性、方言ASR转写准确性等真实教育场景验证，强调教育有效性而非单纯技术指标，提供可复用的数据验证方法论。</description>
+    </item>
+    <item>
+      <title>第5篇：日语语法图谱怎么画？——用知识图谱重构EJU语言考点</title>
+      <link>http://localhost:1313/posts/2026-02-20-d5pryyftpzmhyzstpzgejuyykd/</link>
+      <pubDate>Fri, 20 Feb 2026 12:09:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-20-d5pryyftpzmhyzstpzgejuyykd/</guid>
+      <description>本文揭示EJU日语语法高错题率的深层原因，提出用知识图谱重构语法体系的方法，聚焦「～てある」「～ておく」等难点的三维语义维度建模，助力考生构建可迁移、可推理的语法认知结构。</description>
+    </item>
+    <item>
+      <title>第6篇：模拟考试不只计分——打造高仿真EJU机考体验引擎</title>
+      <link>http://localhost:1313/posts/2026-02-20-d6pmnksbzjfdzgfzejujktyyq/</link>
+      <pubDate>Fri, 20 Feb 2026 12:09:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-20-d6pmnksbzjfdzgfzejujktyyq/</guid>
+      <description>揭秘高仿真EJU机考模拟引擎设计：解决静态题库无法复现的自适应难度跳转、毫秒级倒计时、系统中断响应等动态体验断层问题，提升考生临场稳定性与应试表现。</description>
+    </item>
+    <item>
+      <title>第7篇：如何让‘坚持学习’变成习惯？——游戏化激励系统设计拆解</title>
+      <link>http://localhost:1313/posts/2026-02-21-d7prhrjcxxbcxgyxhjlxtsjcj/</link>
+      <pubDate>Fri, 20 Feb 2026 12:09:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-21-d7prhrjcxxbcxgyxhjlxtsjcj/</guid>
+      <description>拆解AI教育平台真实数据，揭示学习坚持难的底层动机衰减机制，详解如何通过游戏化激励系统（成就体系、进度可视化、即时反馈等）提升用户长期学习留存率。</description>
+    </item>
+    <item>
+      <title>第3篇：题库不是堆砌！——构建智能分级题库的底层逻辑</title>
+      <link>http://localhost:1313/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</link>
+      <pubDate>Fri, 20 Feb 2026 10:38:01 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-20-d3ptkbsdqgjznfjtkddclj/</guid>
+      <description>本文剖析构建智能分级题库的底层逻辑，揭示纯API调用式题库的工程缺陷，提出融合认知锚点、难度漂移监测与闭环校准的动态题库设计方法。</description>
+    </item>
+    <item>
+      <title>第1篇：为什么EJU考生需要专属APP？——需求洞察与市场破局</title>
+      <link>http://localhost:1313/posts/2026-02-20-d1pwsmejuksxyzsappxqdcyscpj/</link>
+      <pubDate>Fri, 20 Feb 2026 09:28:03 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-20-d1pwsmejuksxyzsappxqdcyscpj/</guid>
+      <description>本文基于412名EJU考生真实行为日志与JASSO官方数据，揭示考生在多平台信息碎片化中的高频低效困境，论证专属备考APP在真题同步、跨平台聚合、实时通知等场景的不可替代性。</description>
+    </item>
+    <item>
+      <title>第2篇：从0画出第一张蓝图——EJU备考APP核心功能MVP清单</title>
+      <link>http://localhost:1313/posts/2026-02-20-d2pc0hcdyzltejubkapphxgnmvpqd/</link>
+      <pubDate>Fri, 20 Feb 2026 09:28:03 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-20-d2pc0hcdyzltejubkapphxgnmvpqd/</guid>
+      <description>基于1247名EJU考生深度调研，本文拆解三大备考断点，输出可落地的核心功能MVP清单，聚焦解决题海迷航、错题黑洞与计划瘫痪等真实痛点。</description>
+    </item>
+  </channel>
+</rss>

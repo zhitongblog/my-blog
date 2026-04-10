@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>数据合规 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/%E6%95%B0%E6%8D%AE%E5%90%88%E8%A7%84/</link><description>Recent content in 数据合规 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Feb 2026 03:43:19 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/%E6%95%B0%E6%8D%AE%E5%90%88%E8%A7%84/index.xml" rel="self" type="application/rss+xml"/><item><title>数据合规不是枷锁，而是护城河：从GDPR到《生成式AI服务管理暂行办法》，谁在把合规做成产品？</title><link>https://zhitong.uk/posts/2026-02-26-sjhgbsjseshchcgdprdscsaifwglzx/</link><pubDate>Wed, 25 Feb 2026 03:43:19 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-26-sjhgbsjseshchcgdprdscsaifwglzx/</guid><description>本文剖析数据与AI合规如何从成本负担升级为可产品化的核心能力，解析GDPR、中国《生成式AI服务管理暂行办法》等框架下，微软Azure Purview、阿里云DataTrust等平台如何将合规能力API化、SDK化，推动合规成为企业护城河。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>数据合规 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E6%95%B0%E6%8D%AE%E5%90%88%E8%A7%84/</link>
+    <description>Recent content in 数据合规 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Apr 2026 11:48:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E6%95%B0%E6%8D%AE%E5%90%88%E8%A7%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>合规护航：用Claude Code自动审核广告内容与GDPR/CCPA合规性</title>
+      <link>http://localhost:1313/posts/2026-04-09-hghhyclaudecodezdshggnrygdprcc/</link>
+      <pubDate>Thu, 09 Apr 2026 11:48:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-09-hghhyclaudecodezdshggnrygdprcc/</guid>
+      <description>本文详解如何利用Claude Code实现广告文案、弹窗提示及SDK埋点的自动化GDPR/CCPA合规性审查，显著降低人工审核成本与法律风险。</description>
+    </item>
+    <item>
+      <title>数据合规不是枷锁，而是护城河：从GDPR到《生成式AI服务管理暂行办法》，谁在把合规做成产品？</title>
+      <link>http://localhost:1313/posts/2026-02-26-sjhgbsjseshchcgdprdscsaifwglzx/</link>
+      <pubDate>Wed, 25 Feb 2026 03:43:19 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-26-sjhgbsjseshchcgdprdscsaifwglzx/</guid>
+      <description>本文剖析数据与AI合规如何从成本负担升级为可产品化的核心能力，解析GDPR、中国《生成式AI服务管理暂行办法》等框架下，微软Azure Purview、阿里云DataTrust等平台如何将合规能力API化、SDK化，推动合规成为企业护城河。</description>
+    </item>
+  </channel>
+</rss>

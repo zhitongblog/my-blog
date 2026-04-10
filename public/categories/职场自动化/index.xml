@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>职场自动化 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/%E8%81%8C%E5%9C%BA%E8%87%AA%E5%8A%A8%E5%8C%96/</link><description>Recent content in 职场自动化 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sat, 28 Feb 2026 02:37:10 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/%E8%81%8C%E5%9C%BA%E8%87%AA%E5%8A%A8%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenClaw已杀入真实职场：AI打工人正在接管盯盘、回邮件、接电话</title><link>https://zhitong.uk/posts/2026-02-28-openclawysrzszcaidgrzzjgdphyjj/</link><pubDate>Sat, 28 Feb 2026 02:37:10 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-28-openclawysrzszcaidgrzzjgdphyjj/</guid><description>OpenClaw已落地真实企业环境，实现AI自动盯盘、回邮件、接电话等办公任务。本文揭秘其在私有服务器集群中的生产级部署实践，解析AI打工人如何理解语境、执行决策并协同人类工作流。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>职场自动化 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E8%81%8C%E5%9C%BA%E8%87%AA%E5%8A%A8%E5%8C%96/</link>
+    <description>Recent content in 职场自动化 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 28 Feb 2026 02:37:10 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E8%81%8C%E5%9C%BA%E8%87%AA%E5%8A%A8%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenClaw已杀入真实职场：AI打工人正在接管盯盘、回邮件、接电话</title>
+      <link>http://localhost:1313/posts/2026-02-28-openclawysrzszcaidgrzzjgdphyjj/</link>
+      <pubDate>Sat, 28 Feb 2026 02:37:10 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-28-openclawysrzszcaidgrzzjgdphyjj/</guid>
+      <description>OpenClaw已落地真实企业环境，实现AI自动盯盘、回邮件、接电话等办公任务。本文揭秘其在私有服务器集群中的生产级部署实践，解析AI打工人如何理解语境、执行决策并协同人类工作流。</description>
+    </item>
+  </channel>
+</rss>

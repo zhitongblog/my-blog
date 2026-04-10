@@ -1,96 +1,634 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta name=generator content="Hugo 0.154.5"><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>智通和你一起学AI</title><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/index.xml title=rss><link rel=alternate type=application/json href=https://zhitong.uk/index.json title=json><link rel=alternate hreflang=en href=https://zhitong.uk/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="智通和你一起学AI"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="智通和你一起学AI"><meta name=twitter:description content="这是智通成长的历程"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"智通和你一起学AI","url":"https://zhitong.uk/","description":"这是智通成长的历程","logo":"https://zhitong.uk/favicon.ico","sameAs":["https://github.com/zhitongblog","mailto:lixd220@gmail.com"]}</script></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span class=active>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>在信息洪流中修筑堤坝：AI时代的深度学习与“数字极简”</h2></header><div class=entry-content><p>如果你关注了几个科技媒体或 AI 领域的博主，你的早晨大概率是这样开始的：
-“重磅！GPT-5 疑似泄露，能力逆天！” “Midjourney 又更新了，设计师都要失业了？” “别学 Python 了，这个新工具一句话生成 APP……”
-每天醒来，我们都被迫面对一场信息的海啸。在 AI 时代，技术迭代的单位从“年”变成了“周”，甚至是“天”。这种**“加速主义”带来了一种普遍的群体性焦虑——不仅是害怕被替代，更是害怕“跟不上”**。
-于是，我们成了患有“数字松鼠症”的人：收藏了上百个工具网站，保存了几 T 的教程视频，但内心却越来越空虚。
-作为这个博客“开篇三部曲”的终章，我想聊聊一个看似矛盾的话题：在 AI 拼命加速的时候，我们需要学会“减速”。
-一、 收藏不等于拥有，吞咽不等于消化 我在学习日语（备战 N1）的过程中，曾犯过一个典型的错误。
-我下载了各种 AI 翻译插件、语音识别工具，甚至用 AI 生成了数千张单词卡片。看起来我的装备无比精良，但在做听力真题时，我依然听不懂那些细微的语感差别。
-后来，我关掉了所有 AI 辅助工具，回归到最笨的方法：听写（Dictation）。哪怕一个句子要听十遍，哪怕手写得手腕酸痛。
-神奇的是，正是这种“笨功夫”，让我真正掌握了语言的节奏。
-这让我意识到：AI 可以帮我们无限地压缩“产出”的时间，但它无法压缩我们要“内化”一项技能所必须付出的认知成本。
-知识的获取可以加速，但智慧的生长必须从容。当我们忙着吞咽信息流时，其实丧失了反刍和消化的能力。
-二、 弱水三千，只取一瓢 面对每天涌现的新工具，我的策略是：极度的克制。
-不要试图做一个“万能工具通”。你不需要知道市面上那 500 个写作 AI 哪一个更好，你只需要挑选最顺手的一个，然后把它用到极致。
-曾有一位武术宗师说过：“我不怕练过一万种踢腿的人，我只怕把一种踢腿练过一万次的人。”
-在 AI 时代，这句话依然是真理。一个能把 ChatGPT 的逻辑推理挖掘到极限的人，远比那些每天换一个新工具尝鲜、却只会在对话框里打“你好”的人，更有竞争力。
-数字极简主义，不是拒绝工具，而是拒绝被工具的更迭牵着鼻子走。
-三、 保留一片“不插电”的自留地 作为一名小说创作者，我发现过度依赖 AI 会带来一个副作用：想象力的同质化。
-因为 AI 的底层逻辑是概率，它总是倾向于给出“最大公约数”的平庸答案。如果你长期浸泡在 AI 生成的内容里，你的审美会被不知不觉地拉向平庸。
-所以，我给自己定了一个规矩：每日必有“离线时刻”。
-在那一个小时里，我关掉电脑，断开网络。 可能是读几页纸质书，可能是用钢笔在笔记本上乱涂乱画，也可能只是看着窗外发呆。
-在这个疯狂加速的时代，“无聊”成了一种奢侈品。但请记住，人类最伟大的灵感，往往不是在疯狂点击鼠标时产生的，而是在发呆、散步、淋浴这些大脑“离线”的时刻涌现的。
-我们要利用 AI 来处理那些重复、繁琐的垃圾时间，正是为了把我们自己从琐事中解放出来，去享受那些真正属于人类的高质量思考时间。
-四、 结语 技术是一条奔腾的河流，我们很容易被它裹挟而下，不知所踪。
-...</p></div><footer class=entry-footer><span title='2025-01-26 20:50:00 +0800 CST'>January 26, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 在信息洪流中修筑堤坝：AI时代的深度学习与“数字极简”" href=https://zhitong.uk/posts/2026-01-26-learn-ai2/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>我和 AI “吵”了一架，才写出了满意的方案</h2></header><div class=entry-content><p>很多朋友问我：“智通，你用 AI 辅助写作，是不是几分钟就能生成一章？”
-我的回答通常让他们失望：“不，有时候比我自己写还要慢。因为通过图灵测试容易，通过我的‘审美测试’很难。”
-前几天，我在构思我的新历史小说的一个关键章节时，和 AI 发生了一场激烈的“争吵”。正是这场争吵，让我意识到：人机协作的本质，不是它替你干活，而是它陪你打磨。
-一、 第一回合：平庸的“电视剧台词” 当时我想写一场重头戏：一位古代帝王（主角）在朝堂上遭遇臣子逼宫，但他必须在不动声色中掌控全局。
-我给 AI 的指令很简单：“请写一段帝王面对臣子质疑时的心理描写，要体现出他的霸气和深沉。”
-AI 很快给出了回复。我读完差点笑了——那是典型的三流古装剧台词。充满了“朕意已决”、“大胆狂徒”这种脸谱化的词汇，心理活动全是“哼，我看你怎么演”这种浅白的吐槽。
-如果我直接用了这段文字，我的小说就毁了。
-二、 第二回合：即使是 AI，也怕“较真”的产品经理 我没有重新生成，而是像一个挑剔的主编一样，开始给它下“修改意见”（或者说是找茬）：
-智通的反馈： “太肤浅了。把你生成的这段删掉。
-去掉所有形容词： 不要用‘霸气’、‘威严’这种词，要用动作细节来表现。 增加权谋感： 他不应该愤怒，他应该觉得好笑。他看到的不是一个臣子在说话，而是一颗棋子在跳动。 加入感官描写： 此时大殿很安静，写写他听到的声音，或者手里把玩的东西。” AI 沉默了几秒，重新生成了第二版。
-这一次，它写道：“皇帝轻轻转动着拇指上的玉扳指，听着台下臣子激昂的陈词，嘴角微微上扬……”
-好了一些，但还是不够。那个“嘴角上扬”太俗套了，那是反派的标准动作，不是帝王的城府。
-三、 第三回合：互相逼迫，直至“涌现” 我继续和它“吵”：
-“不要嘴角上扬！那是情绪的泄露。真正的掌控是面无表情。 让他关注一个不相干的细节，比如大殿地砖上的光影，或者窗外的一声蝉鸣。通过这种‘走神’，来反衬他对局势的绝对把控——因为这些臣子的生死，对他来说还不如一只蝉重要。”
-这一次，AI 似乎终于“听懂”了我的逻辑。它给出的第三版描述，让我眼前一亮：
-“他没有看那位跪地痛哭的御史，目光落在了大殿金砖缝隙里的一粒微尘上。日头偏西，光影把那粒灰尘拉得很长。殿下的声音很嘈杂，但在他耳中，却像隔着一层水的闷响。他甚至有些走神地想：负责打扫今日大殿的那个小太监，大概是要挨板子了。”
-这正是我想要的感觉——举重若轻的残忍，漫不经心的威压。
-四、 启示：好的答案是“磨”出来的 这场“争吵”持续了二十分钟。如果我自己写，可能也就半小时。但我依然觉得这二十分钟无比超值。
-为什么？
-因为在不断驳斥 AI 的过程中，我自己的创作意图也被逼得越来越清晰。 一开始，我只知道我要“霸气”； 在反驳它的过程中，我才意识到我真正要的是“举重若轻的残忍”。
-不是 AI 给了我灵感，而是为了驳倒它平庸的回答，我被迫调动了更深层的思考。
-五、 结语 在 AI 时代，我们不缺生成内容的工具，缺的是有品位的把关人。
-如果你用 AI，它给你什么你就收什么，那你迟早会被它同化成一个平庸的复制品。 只有当你敢于质疑它、否定它、向它提出极其苛刻的要求时，它才会从一个“废话生成器”，变成你真正的“灵感磨刀石”。
-不要怕和 AI “吵架”，真理和好作品，往往都在第 N 次修改之后。</p></div><footer class=entry-footer><span title='2025-01-26 20:03:00 +0800 CST'>January 26, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 我和 AI “吵”了一架，才写出了满意的方案" href=https://zhitong.uk/posts/2026-01-26-learn-ai/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>别做“提示词工程师”，要做“AI时代的提问者</h2></header><div class=entry-content><p>在过去的一年里，我见过无数人疯狂地收藏各种“AI 咒语大全”——那些长达几千字的 Prompt（提示词）模板，仿佛只要把它们复制粘贴进对话框，AI 就能瞬间吐出完美的方案，把我们从繁重的工作中解救出来。
-但现实往往是：你用着和别人一样的神级模板，却只得到了一个平庸的答案。
-为什么？因为我们搞错了一个根本逻辑。我们太急于成为一名懂技巧的“提示词工程师”，却忘记了在 AI 面前，我们首先应该是一个懂得思考的“提问者”。
-一、 AI 不是许愿池，它是你的“镜子” 很多人把 AI 当作许愿池，扔进去一个硬币（简单指令），就期待它从水里冒出来送你一把金斧头。 比如，你告诉 AI：“帮我写一篇关于时间管理的文章。” AI 会给你一篇四平八稳、全是车轱辘话的废话文学。
-因为你的大脑是模糊的，AI 的反馈自然就是混沌的。
-在 AI 时代，大模型本质上是一面镜子。它反射的不仅仅是你的知识储备，更是你的逻辑清晰度。如果你自己都没想清楚“这篇文章是写给谁看的”、“要解决什么核心痛点”、“风格是严肃还是幽默”，AI 再强大，也只能基于概率给你一个“平均数”答案。
-二、 所谓“神级提示词”，本质是思维的结构化 我研究过那些被奉为圭臬的高效 Prompt，抛开花哨的格式，它们的核心都在做一件事：结构化思维（Structured Thinking）。
-与其背诵咒语，不如掌握一套通用的**“智通提问心法”**。无论模型如何迭代，这套底层逻辑是不变的：
-1. 设定身份（Who）：给 AI 穿上“制服” 不要只说“写个代码”或“写段小说”。 要说：“你是一位拥有10年经验的资深产品经理”或者“你是一位擅长营造悬疑氛围的畅销书作家”。身份决定了 AI 调取数据的维度。
-2. 锚定背景（Context）：把 AI 拉入“现场” 即使是真的一对一咨询，你不给背景，专家也无法诊断。 告诉它：“我正在为一群刚入职的大学生做培训，他们普遍有拖延症，且对说教很反感。”
-3. 明确任务与约束（Constraints）：画出“红线” 这是最容易被忽略的一步。 “请给我三个可执行的建议，不要虚大空的理论。每个建议必须包含一个具体案例。总字数控制在 800 字以内。”
-把这三点串联起来，你其实是在教 AI 如何像你一样思考，而不是仅仅替你干活。
-三、 哪怕不懂代码，也要懂逻辑 常有人问我：“智通，我不会写代码，是不是就没法深入使用 AI？”
-我的回答恰恰相反。在未来，逻辑语言（Logic）比编程语言（Code）更重要。
-当你能够清晰地拆解一个复杂问题——把“写一部小说”拆解为“大纲设计-角色小传-冲突构建-章节填充”；把“开发一个APP”拆解为“需求分析-功能列表-交互逻辑”时，你就是那个发号施令的指挥官。
-AI 能够弥补我们在技能上的短板（比如它能瞬间写出我不会的 Python 爬虫代码），但它无法弥补我们在思维上的懒惰。
-四、 结语 不要迷信那些“一键生成”的魔法。AI 时代最大的护城河，不是你手里掌握了多少个 Prompt 模板，而是你面对一个复杂问题时，能够抽丝剥茧、提出高质量问题的能力。
-机器可以回答一切，但只有人类能够提出真正有价值的问题。
-...</p></div><footer class=entry-footer><span title='2025-01-26 20:02:00 +0800 CST'>January 26, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 别做“提示词工程师”，要做“AI时代的提问者" href=https://zhitong.uk/posts/my-second-post/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>我的第一篇博客</h2></header><div class=entry-content><p>为什么写博客 你好，我是智通。欢迎来到我的精神角落。
-如果在三年前，有人告诉我人工智能将以如此惊人的速度重构我们的工作与生活，我可能会觉得那是科幻电影的脚本。但今天，当大模型开始写代码、绘画、甚至进行逻辑推理时，我们都必须承认：未来已来，而且它不讲客气。
-站在这个时代的风口浪尖，很多人感到焦虑。我们习惯了用“经验”来构筑护城河，但AI的出现，瞬间填平了许多依靠死记硬背和重复劳动建立起来的沟壑。
-在这个时代，什么才是真正的护城河？
-我的答案很简单，也是我开设这个博客的初衷：唯有不断学习，保持精进。
-但这里的“学习”，不再是单纯的知识堆砌——因为在存储知识方面，我们永远赢不了硬盘。AI时代的学习，是认知的升级，是思维模型的重塑，是提出好问题的能力，更是将散落的信息串联成智慧的“通达”之力。 正如我的名字“智通”所寄托的寓意：
-智（Wisdom）： 在信息过载中甄别真伪，汲取智慧；
-通（Connection）： 融会贯通，将技术工具与人文思考相结合，打通认知的任督二脉。
-在这个博客里，我不会贩卖焦虑，也不会盲目鼓吹技术。我希望记录下在AI浪潮中，一个普通个体如何通过持续学习来迭代自己。
-这里会有我对新技术的测评与思考，有关于个人成长的读书笔记，也许还会有一些试错的教训。我希望这里能成为一个“思维补给站”。
-种一棵树最好的时间是十年前，其次是现在。
-在这个瞬息万变的时代，原地踏步就是最大的风险。让我们不再做时代的旁观者，而是做一个终身学习的实践者。
-保持饥渴，保持精进。
-我是智通，期待与你在路上相遇。
-博客内容规划 AI技术分享 AI技能技巧 AI世界大事追踪 思考 学习感悟 AI世界预测 未来展望 希望我们一起成为AI时代的幸存者！</p></div><footer class=entry-footer><span title='2025-01-26 20:01:00 +0800 CST'>January 26, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 我的第一篇博客" href=https://zhitong.uk/posts/my-first-post/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent></h2></header><div class=entry-content><p>用 AI 全自动写小说，最大的难题是什么？ 做了一年 AI 写作工具后，我终于明白为什么"一键生成长篇小说"是个伪命题。
-先说结论 AI 写小说最大的难题不是"写不好"，而是"记不住"。
-一个真实的翻车现场 上个月我用某 AI 工具写了一部修仙小说的前三章：
-第一章：主角叫张三，筑基期，师傅是青云宗长老 第二章：主角叫张三，金丹期（？），师傅变成了玄天宗掌门 第三章：主角叫李四（？？？），还俗下山了 AI 不是写不出华丽的文字，而是它压根不知道自己上一章写了什么。
-技术上，这叫"上下文窗口"问题 目前主流大模型的 context window：
-模型 上下文窗口 约等于字数 GPT-4 128K tokens ~6万字 Claude 200K tokens ~10万字 Gemini 1M tokens ~50万字 看起来很多？一部网文轻松 100-300 万字。
-就算是 Gemini 的 100 万 tokens，塞进去的不只是正文，还有：
-人物设定表 世界观设定 大纲和细纲 前情提要 写作风格样本 实际可用的"记忆空间"大打折扣。
-更致命的问题：一致性崩塌 长篇小说有三个一致性要求：
-1. 人物一致性 第10章：女主性格冷艳高贵 第50章：女主突然变成傻白甜 第100章：女主人设量子叠加态 2. 逻辑一致性 前文：主角被废了灵根 后文：主角突然施展了高阶法术 （作者：我觉得可以圆回来.jpg） 3. 风格一致性 第1卷：文笔细腻，节奏舒缓 第3卷：突然变成爽文风格 第5卷：开始混入各种流行梗 AI 每次生成都是"独立同分布"的，它不会自动维护这些约束。
-现有方案的困境 方案一：塞更多上下文 把所有前文都塞进 prompt，成本爆炸：
-...</p></div><footer class=entry-footer><span>智通</span></footer><a class=entry-link aria-label="post link to " href=https://zhitong.uk/posts/juejin-article-ai-novel-challenges/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://zhitong.uk/page/14/>«&nbsp;Prev&nbsp;</a></nav></footer></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.154.5"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>智通和你一起学AI</title>
+
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4c02a0216cd8a4fd1593dab253881726c1c6f89735f9d22227a564248a3ca39a.css" integrity="sha256-TAKgIWzYpP0Vk9qyU4gXJsHG&#43;Jc1&#43;dIiJ6VkJIo8o5o=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="http://localhost:1313/index.json" title="json">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+<div class="top-banner">
+  <div class="top-banner-inner">
+    <span class="top-banner-label">推荐</span>
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer" class="top-banner-link top-banner-link--storyalter">
+      <svg viewBox="0 0 24 24" fill="none" width="14" height="14">
+        <path d="M16.5 3.5C16.9 3.1 17.4 2.9 18 2.9C18.6 2.9 19.1 3.1 19.5 3.5C19.9 3.9 20.1 4.4 20.1 5C20.1 5.6 19.9 6.1 19.5 6.5L7 19L3 20L4 16L16.5 3.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      StoryAlter - AI写作分身
+    </a>
+    <span class="top-banner-sep">|</span>
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer" class="top-banner-link top-banner-link--solomd">
+      <span class="top-banner-solomd-icon"><span class="hash">#</span><span class="md">MD</span></span>
+      SoloMD - 极简Markdown编辑器
+    </a>
+  </div>
+</div>
+
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span class="active">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">马斯克xAI裁员背后：2026普通人反向搞钱的底层逻辑
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+马斯克xAI裁员背后：2026普通人反向搞钱的底层逻辑 日期：2026年2月12日
+刚刚过去的这个春节，对于科技圈而言并不平静。就在全网还在讨论“多种列车新场景丰富旅客春运路”的温馨时刻，大洋彼岸传来了一则令人咋舌的消息：马斯克旗下的xAI全员大会宣布大规模裁员。
+这听起来似乎不仅“不合逻辑”，甚至有些魔幻。毕竟，现在是2026年，AI技术早已渗透进生活的毛细血管，作为行业领头羊的xAI本该疯狂招兵买马，为何却反其道而行之？
+这其实是2026年给所有人敲响的第一记警钟，也是一个巨大的信号：AI行业的“基建红利期”已经结束，属于普通人的“应用收割期”才刚刚开始。 如果你还盯着怎么去大厂卷算法，那你就输了。今天，我们不谈那些宏大的“全球最大最贵的IPO”，只谈在这个刚刚开工的2月，普通人如何看懂局势，利用“反向逻辑”在2026年快速搞钱。
+祛魅2026：为什么AI公司要裁员？ 很多人看到裁员新闻，第一反应是“AI泡沫破了”。大错特错。
+马斯克裁员的逻辑非常冷酷且清晰：当AI的能力已经进化到可以自我迭代、自我纠错，甚至能够独立完成80%的中级代码编写和数据清洗工作时，由于“人效比”的巨大差异，维持庞大的人类初级工程师团队不仅没有必要，反而是累赘。
+这就是2026年的残酷真相：AI不再是工具，而是成了筛选器。
+过去我们认为的“金饭碗”——写代码、做基础设计、初级数据分析，在今年已经彻底沦为“边角料”。xAI的裁员告诉我们，通过“出卖单位时间劳动力”来换取高薪的时代彻底终结了。
+对于普通人来说，这是一个巨大的机会窗口。因为大厂在做“减法”，这意味着大量细分市场的需求被释放出来，而这些需求，大厂看不上，AI自己做不好，这正是“反向搞钱”的切入点。
+逻辑一：做“超级个体”，而不是“大厂螺丝钉” 最近有个热搜话题叫“德国急了，要学习中国好榜样”。这背后反映的是全球产业链逻辑的重构。在2026年，真正的机会不在于你去打造一个多大的团队，而在于你能不能一个人活成一支队伍。
+以前创业需要财务、法务、设计、运营、技术。现在，得益于2026年成熟的Agent（智能体）生态，你只需要懂“业务流”。
+反向搞钱的第一条法则：利用AI极度压低试错成本。
+不要再去学什么Python编程了（除非你是为了做架构师），你要学的是如何指挥AI。比如，你发现“&#43;”辆汽车回老家成为出行新选择，这是今年春运的一大特色。你是否敏锐地嗅到了其中的商机？
+传统逻辑： 开一家汽车租赁公司，重资产，高风险。 2026反向逻辑： 利用AI爬虫分析社交媒体数据，精准定位哪些三四线城市新能源充电桩缺口最大，然后做一个极简的小程序或信息聚合平台，连接私桩共享。代码由AI写，推广文案由AI出，客服由AI接管。你唯一的成本，就是你的洞察力和执行力。 这就是“超级个体”。只要你有一个idea，2026年的工具箱能让你在48小时内把产品落地。
+逻辑二：从“虚拟”回归“真实”，做AI做不到的事 虽然我们在谈论AI，但2026年最赚钱的生意，往往带有极强的“反AI”属性。
+看看最近的新闻，“全网都在祝李婷新婚快乐”，这种充满了人情味、烟火气的话题，AI是制造不出来的。再看“外卖员意外解锁碎碎平安成就”，这种充满了随机性和生活质感的故事，也是AI无法模拟的。
+反向搞钱的第二条法则：做高情感浓度、高物理交互的服务。
+当线上内容被AI生成的垃圾信息填满时，真实的人际链接变得前所未有的昂贵。
+情绪价值变现： 2026年，心理咨询、定制化旅行策划、甚至是“真人陪聊”的价格水涨船高。因为人们受够了和冷冰冰的Chatbot对话。如果你擅长倾听，擅长提供情绪价值，这在今年是绝对的蓝海。 “最后一百米”的物理服务： AI可以生成装修设计图，但AI贴不了瓷砖；AI可以诊断汽车故障，但AI换不了轮胎。在“山东高速小将王证”展现出的体育竞技精神背后，是实体产业和线下培训的巨大市场。掌握一门不可替代的手艺，结合AI进行获客和管理，是普通人致富最稳妥的路径。 逻辑三：赚“认知势能差”的钱 马斯克裁员，实际上是在释放技术红利到应用层。现在的AI，就像当年的电力。如果你在爱迪生发明灯泡的时候去卖蜡烛，你肯定会破产；但如果你去卖灯泡，或者去开一家“夜间营业”的工厂，你就发财了。
+在2026年，大部分人依然处于“因AI而焦虑”的状态，这就是你的机会。
+反向搞钱的第三条法则：成为“AI二传手”。
+不要试图去开发大模型，而是去寻找那些“还没有被AI改造的传统行业”。
+比如农业： 利用视觉AI帮助农民识别病虫害（参考玉渊谭天提到的国际贸易博弈，农业自主可控是刚需）。 比如银发经济： 2026年老龄化加剧，老年人不会用复杂的AI设备。如果你能开发出极简的、语音交互的适老化AI助理，帮助他们挂号、买药、联系子女，这就是巨大的功德和商机。 总结：行动是唯一的解药 2026年2月12日，站在新年的起点，马斯克的裁员信或许让很多人感到寒意，但对于觉醒者来说，这却是一声发令枪。
+普通人想要在AI时代快速致富，核心不在于比拼技术，而在于比拼对人性的理解和落地的速度。
+不要做那个在岸上观望“全球最大IPO”的看客，也不要做那个只会抱怨“12家火车票平台被约谈”的消费者。去成为那个利用AI工具武装自己、深入线下真实场景、提供独特情绪价值的“超级个体”。
+在这个时代，别让自己活成一个容易被替代的算法，要活成那个书写算法规则的人。开工大吉，愿你在2026年，反向突围，满载而归。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-12 12:44:57 +0800 CST'>February 12, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 马斯克xAI裁员背后：2026普通人反向搞钱的底层逻辑" href="http://localhost:1313/posts/20260212-124457-mskxaicybh2026ptrfxgqddclj/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">我们以为科技会让人人平等，结果 2026 年的阶级壁垒成了冷冰冰的代码
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+我们以为科技会让人人平等，结果 2026 年的阶级壁垒成了冷冰冰的代码 日期：2026年2月11日
+如果时间倒回十年前，我们对 2026 年的想象多半是乐观的：AI 解放劳动力，互联网抹平信息差，科技让山里的孩子和都市的精英拥有同样的起跑线。
+然而，当我们要真正站在 2026 年 2 月 11 日的这个节点上，看着那个“男子买到2026年3月1日产的面包”的新闻登上热搜时，一种魔幻的荒诞感油然而生。这仿佛是系统出了一个小小的 Bug，却无意中泄露了我们生活的真相：在这个被精密计算的时代，连时间都可以被贴上超前的标签，而生活在其中的我们，正被算法和代码悄无声息地划分在不同的折叠空间里。
+科技本该是打破壁垒的锤子，如今却成了砌墙的砖。
+被算法精准切割的消费阶梯 在这个春节刚过的日子里，四川某县城300元的客房涨到1200元引发了热议。在 2026 年，这不仅仅是供需关系的体现，更是“动态定价”算法的全面胜利。
+我们以为互联网带来了价格透明，结果迎来了极致的“看人下菜碟”。当你打开那个显示“房间紧张”的页面时，背后的代码早已分析了你的消费习惯、手机型号、甚至是你点击屏幕的急切程度。对于富裕阶层，科技提供的是极致的定制化服务；而对于普通大众，科技变成了精准收割的镰刀。
+这种壁垒是无形的。你不知道为什么你打车比别人贵，你不知道为什么你刷到的招聘信息永远是低薪岗位。算法构建了一个巨大的信息茧房，富人在茧房里享受资源的最优配置，而普通人则在茧房里为昂贵的溢价买单。正如那位美籍“商品大王”宣称绝不会卖掉金银铜一样，在算法主导的虚拟泡沫中，掌握实物资产和核心数据的人，早已筑起了护城河。
+算力在上，肉身在下：就业市场的两极分化 如果说消费上的不平等只是让人钱包缩水，那么就业市场上的技术鸿沟则更加令人心寒。
+看看今天的两条热门新闻，简直是魔幻现实主义的最佳注脚。一边是西部战区年度宣传片中，无人机如蜂群般布满天空，展示着令人生畏的高科技统治力；另一边，某地事业编招聘的要求竟然包含“能捕野牦牛”。
+这正是 2026 年就业市场的残酷写照：中间阶层被技术掏空，剩下的只有掌握核心算力的顶层精英，和不得不出卖原始体力的底层劳动者。
+科技确实进步了，无人机可以替代飞行员，AI 可以写出完美的文案，但它无法解决最原始的生存博弈。当技术门槛高到普通人无法企及，剩下的机会就变成了去高原捕野牦牛，或者是像乌克兰那样，允许60岁以上的人员合同制服役——当高精尖的战争机器耗尽，最后填上去的依然是年迈的肉身。
+李连杰在最近的采访中提到，造就一个王宝强是“百万分之一”的机会。在 2026 年，这个概率恐怕更低。因为在代码构建的壁垒面前，单纯的努力和天赋，往往敌不过系统权重的轻轻调整。
+复古潮背后的无声反抗 面对这种由代码构建的冰冷壁垒，人们开始寻找逃离的出口。
+停产12年的奇瑞QQ复活后爆火，绝不仅仅是因为情怀。在 2026 年，满大街都是拥有几十个传感器、不仅能自动驾驶还能时刻上传你行踪数据的“智能汽车”。人们厌倦了被系统监控，厌倦了每个功能都要付费订阅的“科技感”。
+购买一辆没有任何智能大屏、没有任何云端连接的老式小车，成了一种无声的反抗。人们渴望回到那个“车只是车，人还是人”的年代，渴望一种不被代码定义的自由。这与那个“一家4口车上挂横幅令无数游子动容”的场景本质上是一样的——在冰冷的数字时代，只有最原始的亲情和最简单的机械，能带给人心灵的慰藉。
+结语：打破代码的围墙 2026 年的今天，我们依然能看到跨山越海、“流动的中国”活力四射。河南矿山集团的员工开着小货车拉年货，充满了人间烟火气。这些鲜活的生命力证明，无论科技如何异化，人性的光辉和对美好生活的向往是无法被代码封锁的。
+我们不能否认科技的进步，但我们必须警惕科技被用作固化阶级的工具。当无人机遮蔽了天空，当算法决定了你的身价，当招聘要求变成了荒诞的生存挑战，我们需要反思：这是否是我们想要的未来？
+科技应当服务于人的平等，而不是成为权力和资本的新围墙。打破这道由冷冰冰的代码构成的壁垒，不靠更先进的算法，而靠我们对公平的坚守，和对“人”的价值的重新确认。不要让 2026 年，成为我们沦为数据奴隶的元年。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-11 12:12:10 +0800 CST'>February 11, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 我们以为科技会让人人平等，结果 2026 年的阶级壁垒成了冷冰冰的代码" href="http://localhost:1313/posts/20260211-121210-wmywkjhrrrpdjg2026ndjjblcllbbddm/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">年PM告别加班：AI全自动生成PRD实操指南
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+5年PM告别加班：AI全自动生成PRD实操指南 日期：2026年2月11日
+最近社交媒体上有个热梗，说是有男子买到了“2026年3月1日生产的面包”，网友调侃这是吃到了“未来粮”。虽然这只是个食品安全的乌龙，但对于我们互联网人来说，2026年的今天，我们确实已经生活在一个曾经被认为是“未来”的时代。
+看看最近科技圈的动静，视频模型 Seedance 2.0 横空出世，被业内称为“颠覆行业”，生成的画面连物理逻辑都完美复刻；西部战区年度宣传片里无人机布满天空，那种集群智能的震撼感让人头皮发麻。既然AI已经能理解复杂的物理世界和战术编队，难道还搞不定一份PRD（产品需求文档）吗？
+作为一名在行业摸爬滚打5年的产品经理（PM），我曾经也是“文档纺织工”，每天在Word和Axure之间反复横跳。但今年，我彻底告别了机械式的加班。今天，我就把这套“2026版AI全自动生成PRD”的实操心法分享给大家。
+一、 思维升级：从“对话”到“代理” 在2023年或2024年，PM使用AI的方式通常是“Chat（聊天）”，也就是把AI当成一个百科全书，问它“电商购物车有哪些功能点”。
+但在2026年，如果你还这么用，就太浪费了。现在的AI模型（如GPT-6或Claude-5等效水平）已经进化为Agent（智能体）。它们不仅能“说话”，还能“执行”。
+想象一下最近停产12年的奇瑞QQ复活后爆火的新闻，老产品加上新理念能焕发新生，我们的工作流也一样。我们需要把AI从“咨询顾问”变成“执行专员”。在这个阶段，核心心法是：不要让AI去构思，而要让AI去“翻译”你的决策。
+二、 实操第一步：全模态信息的“暴力投喂” 写PRD最痛苦的是什么？是将会议上的口沫横飞、白板上的鬼画符，转化成结构化的文字。以前这需要人肉转录，现在是全自动的。
+操作指南：
+会议录音直接转写： 开需求评审会或头脑风暴时，全程开启录音。现在的会议AI不仅能转文字，还能自动区分发言人，甚至能识别出“老板拍板”的关键节点。 视觉草图识别： 别再费劲画高保真原型了。你在白板上画的流程图，或者纸上画的草图，直接拍照上传给AI。 上下文拼接： 将上述“会议纪要（清洗版）”&#43;“草图照片”&#43;“竞品截图”打包喂给你的AI Agent。 这就像西部战区的无人机群，每一个信息点都是一架无人机，虽然乱，但在系统的指挥下能迅速形成战斗力。
+Prompt 核心逻辑：
+“作为一个高级产品经理助理，请阅读附件中的会议纪要和白板草图。提取其中的核心业务逻辑，识别出‘用户端’与‘管理端’的功能差异，并指出可能存在的逻辑漏洞。”
+三、 实操第二步：结构化输出与“填空题” 当AI理解了你的意图后，千万不要让它直接“写一份PRD”，否则你会得到一篇全是废话的通稿。你需要利用2026年AI强大的逻辑推理能力，让它按模块生成。
+推荐的模块化生成顺序：
+全局角色与流程图（Mermaid代码）： 让AI先把业务逻辑用Mermaid语法写出来，你直接复制到支持Markdown的文档里，流程图就自动生成了。如果逻辑不通，一眼就能看出来。 功能列表（Feature List）： 要求AI输出Excel格式的功能清单，包含：模块、功能点、优先级（P0/P1）、前置条件。 详细用例（Use Case）： 这是最耗时的部分。你可以指令AI：“针对‘用户下单’这一环节，请穷举所有异常状态（如库存不足、支付超时、网络中断），并给出相应的交互反馈描述。” 这就像最近火爆的 Seedance 2.0，它之所以强，是因为它懂物理世界的规律。同理，现在的AI也懂“业务世界的规律”，它比你更擅长穷举边缘情况（Edge Case）。
+四、 实操第三步：人机协同的“最后10%” AI生成了90%的内容后，剩下的10%才是你作为5年陈PM的核心价值。
+最近有个新闻，飞行员把铃声当警报咣一下站起来，这是职业本能。我们在审核AI写的PRD时，也要有这种“职业敏感度”。
+你需要Check的地方：
+数据埋点逻辑： AI虽然能写功能，但在具体的数据埋点（Event Tracking）上，往往缺乏对业务指标（KPI）的深刻理解。你需要手动调整埋点字段，确保能分析出转化率。 情感化交互： 比如错误提示语，AI写得很生硬，你需要把它改得更有温度，符合品牌调性。 政治与合规性： 就像中方回应对华鹰派涌入荷兰新内阁一样，外部环境复杂多变。你需要确保产品设计符合最新的法律法规（特别是2026年更严格的数据隐私法）。 五、 总结：把时间留给思考，而不是打字 2026年的今天，技术已经不仅是辅助，而是成为了生产力的基座。连妈妈外出3岁宝宝都能看店卖出一包烟，人类的适应能力是无穷的。
+如果说过去写PRD是“手搓”，现在就是“盾构机推进”。通过全模态输入 -&gt; 结构化生成 -&gt; 人工核心校验这三步走，一份高质量的PRD可以在30分钟内完成初稿。
+我们要像那位美“商品大王”坚守金银铜一样，坚守PM的核心价值——洞察用户、权衡商业、制定决策，而不是坚守由于低效工具带来的“虚假繁忙”。
+在这个春节前迎来一轮超猛大回暖的季节（虽然现在是2月，但寓意行业回暖），希望大家都能掌握这套AI工作流。别再加班写文档了，早点下班，无论是去哈尔滨看冰灯，还是去涠洲岛看那只网红鲸鱼“刀疤哥”，去感受真实的世界，这才是产品灵感的真正来源。
+告别加班，从今天开始。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-11 10:18:49 +0800 CST'>February 11, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 年PM告别加班：AI全自动生成PRD实操指南" href="http://localhost:1313/posts/20260211-101849-npmgbjbaiqzdscprdsczn/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">从“年终奖”到“优化包”：2026产品经理失业风险评估
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+从“年终奖”到“优化包”：2026产品经理失业风险评估 日期：2026年2月10日
+今天是农历腊月二十三，北方小年。
+若是往年，此时的互联网茶水间里，大家讨论的热门话题往往是“你更喜欢哪种形式的公司年会”或者互相打听年终奖的系数。然而，在这个被称为“史上最长的春节”即将到来之际，许多产品经理（PM）的心头却笼罩着一层阴霾。
+空气中弥漫的不是鞭炮味，而是焦虑感。当“年货清单”上新的喜悦被“裁员名单”的恐惧冲淡，当原本期待的“年终奖”变成了HR手中的“优化包（N&#43;1）”，我们不得不正视一个残酷的现实：2026年，产品经理的职业护城河正在经历前所未有的干涸与重构。
+在这个小年夜，我们不妨暂时放下手中的灶糖，来一场冷静的职业风险评估。
+一、 2026年的职场温差：为什么大家都在喊“难”？ 就在前几天，奥运冠军谷爱凌在采访中“1分钟说了六次‘难’”，这似乎成了2026年开局的某种隐喻。对于身处科技行业的产品经理而言，这种“难”体现在行业红利的彻底消失和技术范式的降维打击。
+到了2026年，AI不再是新鲜的玩具，而是像水电一样的基础设施。三年前我们还在讨论“AI会不会取代PM”，现在现实已经给出了答案：AI没有取代PM，但“会用AI Agent解决复杂问题的PM”正在取代“只会画原型的PM”。
+随着“老外来中国过年的订单爆了”，我们也看到了全球化市场的回暖与内卷的加剧。企业不再需要守着国内存量市场互搏的“功能堆砌型”产品经理，而是急需具备全球视野、能利用AI杠杆撬动海外增长的“超级个体”。
+在这个背景下，你的“年终奖”缩水甚至消失，往往不是因为你不够努力，而是因为你所创造的价值，在2026年的ROI（投资回报率）计算公式里，已经变得微不足道。
+二、 高危画像：谁在领“优化包”的路上？ 根据2026年Q1的行业观察，以下三类产品经理正处于失业风险的“红色预警区”：
+1. “传话筒”式PM：沟通价值归零 如果你的日常工作只是在业务方和研发之间做“人肉转译”，把老板的需求翻译成PRD文档，那么在2026年，你几乎没有生存空间。
+现在的企业级协同工具和AI助手已经能够自动生成高质量的需求文档，甚至直接将自然语言转化为代码框架。仅仅依靠“沟通协调”作为核心竞争力的PM，在降本增效的大刀面前，是第一批被列入“优化包”名单的人。
+2. “功能堆砌”狂魔：缺乏商业闭环能力 前几年，很多PM习惯于做加法，“年货清单”上有什么就往App里塞什么，不管用户需不需要。但在2026年，资本市场对“日活”祛魅，只看“利润”。
+如果你设计的每一个功能都无法清晰地计算出投入产出比（ROI），如果你不懂得如何从流量中榨出利润，而只是沉迷于做漂亮的界面和复杂的交互，那么你就是公司的“成本中心”。正如近期“12306回应无座票乘客被劝离静音车厢”所引发的规则讨论一样，商业世界也正在清理那些不遵守“价值规则”的占座者。
+3. 拒绝“技术祛魅”的古典PM 依然有人坚持认为“技术是研发的事，我只管体验”。在2026年，不懂模型边界、不会调试Prompt、不理解Agent工作流的PM，等同于文盲。当技术边界就是产品边界时，自我设限的古典PM将寸步难行。
+三、 生存指南：重写你的“年货清单” 面对“优化包”的威胁，焦虑无济于事。趁着这个“史上最长的春节”，产品经理们应该重新审视自己的技能树，将以下三项能力加入你的“年货清单”：
+1. 拥抱AI Native（原生）工作流 不要再把AI仅仅当成写文案的工具。你需要学会构建Agent，让AI成为你的“虚拟研发团队”。2026年的高级PM，实际上是一个指挥AI军团的“产品架构师”。你需要有能力一个人完成过去一个项目组的工作量。
+2. 回归商业本质：像CEO一样思考 不要只盯着转化率（CVR）看，要盯着利润表看。去研究那些“老外来中国过年”背后的商业逻辑，去分析跨境支付的痛点，去理解供应链的复杂性。未来的产品经理，必须是半个业务操盘手。
+3. 培养“反脆弱”的职业心态 正如人们讨论“人到老年什么才是最大的幸福”时提到的健康与心态，职业生涯的中场同样需要韧性。无论是面对“年终奖”的落差，还是职位的变动，保持学习力和适应力是唯一的解药。
+四、 结语 2026年的小年，注定是一个分水岭。
+对于一部分人来说，这可能是一个充满寒意的冬天，手中的“优化包”沉重而冰冷；但对于另一部分已经完成思维进化的产品经理来说，这却是一个去伪存真的好时代。
+当大潮退去，裸泳者离场，真正的建设者才能显现出价值。
+与其在年会上期待抽中大奖，不如利用这个假期，通过深度的复盘与学习，将自己从“待优化名单”中划去，重新写进核心人才的“白名单”。
+祝各位产品经理，小年快乐。愿我们都能在2026年的职场风暴中，不仅守住饭碗，更守住作为产品人的尊严与价值。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-10 15:26:57 +0800 CST'>February 10, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 从“年终奖”到“优化包”：2026产品经理失业风险评估" href="http://localhost:1313/posts/20260210-152657-cnzjdyhb2026cpjlsyfxpg/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">人到老年才谈幸福？2026产品经理眼下先谈如何不失业
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+谷爱凌1分钟连说6次“难”，2026产品经理的处境更难 日期：2026-02-10
+今天是2026年2月10日，农历腊月二十三，也就是北方的小年。
+窗外或许已经有了稀疏的鞭炮声，家家户户都在准备祭灶，为了迎接那个被称为“史上最长的春节”。然而，在职场的热搜榜上，气氛却并不轻松。刚刚结束的一场顶级滑雪赛事采访中，天才少女谷爱凌在短短1分钟内连说了6次“难”。
+连在冰雪世界里统治力极强的谷爱凌，面对不断涌现的新对手和更高难度的动作，都发出了如此感叹。这不禁让人联想到此时此刻的职场——特别是曾经风光无限，如今却在2026年的寒风中瑟瑟发抖的群体：产品经理（PM）。
+如果说谷爱凌的“难”是竞技体育攀登巅峰的阻力，那么2026年产品经理的“难”，则是一场关于生存权、话语权与职业未来的残酷保卫战。
+一、 祛魅的2026：从“CEO学前班”到“高危裁员区” 曾几何时，产品经理被誉为“CEO的学前班”，是互联网大厂最核心的引擎。但在2026年的今天，如果你打开招聘软件，会发现这个岗位的逻辑已经彻底变了。
+随着“年货清单”上新，企业的用人清单也在更新。在这个清单里，传统意义上的“功能型产品经理”正在被悄然移除。
+为什么难？因为信息不对称的红利彻底消失了。
+在五年前，画个原型图、写个PRD（需求文档）、做个项目排期，就能拿高薪。但在2026年，随着低代码平台和垂直行业模型的成熟，业务方自己就能通过AI生成原型，开发能够直接理解自然语言需求。那个曾经作为“业务”与“技术”之间翻译官的PM角色，不仅变得多余，甚至被视为效率的阻碍。
+正如热搜中提到的“12306回应无座票乘客被劝离静音车厢”一样，用户对体验的要求越来越苛刻，容错率极低。企业对PM的要求不再是“把功能做出来”，而是“能不能直接带来增长”。在这个存量博弈的时代，拿不出ROI（投资回报率）的产品经理，处境比静音车厢里大声喧哗的乘客还要尴尬——随时会被“请”下车。
+二、 神秘的“对手”：不仅仅是AI，还有全栈化的世界 在最近的比赛中，战胜谷爱凌的选手中出现了带有神秘“东方印记”的黑马。这在体育界是新老交替的常态，而在职场上，产品经理面对的“神秘对手”更加无形且致命。
+2026年的职场，产品经理面临的双重夹击：
+AI Agent 的降维打击： 现在，一个初级PM 80%的工作内容——竞品分析、数据埋点整理、会议纪要、甚至简单的交互设计，都可以由AI Agent在几秒钟内完成。AI不会觉得累，不会在春节前请假，更不会因为需求变更而与开发吵架。对于只会做执行层的PM来说，这不仅仅是竞争，而是替代。
+复合型人才的跨界打劫： “老外来中国过年的订单爆了”，这显示了跨境与跨文化的融合。在职场上，界限也在模糊。懂代码的运营、懂商业的UI、懂产品的开发，这些人正在瓜分传统PM的领地。纯粹的“策划型”PM，在2026年显得苍白无力。
+三、 2026年产品人的“年货清单”：如何避免失业风险？ 今天是小年，大家都忙着采买年货。对于产品经理来说，如果不想在“史上最长的春节”后收到辞退信，你的技能“年货清单”必须立即上新。
+1. 戒掉“画图思维”，重拾“商业嗅觉” 不要再炫耀你的Axure或Figma技巧了。2026年的核心竞争力是：你能不能像老板一样思考？你是否知道这一个改动能为公司省多少钱，或赚多少钱？如果说以前的PM是“功能设计师”，现在的PM必须是“业务操盘手”。
+2. 寻找“情绪价值”的护城河 热搜里提到“人到老年什么才是最大的幸福”，其实不仅是老年人，在这个高压的2026年，用户最缺的是情绪价值。AI可以写出完美的逻辑代码，但很难精准捕捉人类微妙的情感波动——比如那种“故意穿丑去相亲竟然被相中”的复杂心理。 未来的PM，必须是半个心理学家。通过对人性的深刻洞察，设计出有温度、能共情的产品，这是AI短期内无法攻破的堡垒。
+3. 拥抱“出海”与“下沉” 既然国内市场卷得像“东部战区空军与外军编队空中较量”一样激烈，不如换个战场。无论是老外来华的旅游热，还是中国企业出海的浪潮，具备国际化视野、了解跨文化产品的PM依然稀缺。不要局限于北上广的写字楼，广阔的海外市场和数字化转型的传统行业，仍有机会。
+四、 总结：接受“难”，才能不“烂” 谷爱凌连说6次“难”，但她依然在赛场上完成了高难度动作。她说“难”，是因为她在挑战极限，而不是在抱怨环境。
+2026年的产品经理，确实很难。 那个“人人都是产品经理”的泡沫时代已经破裂。 那个靠PPT和概念就能融资、扩招的时代已经终结。
+但也正因为“难”，行业正在进行一场残酷但必要的洗牌。混日子的“文档撰写员”将被淘汰，而真正具备商业洞察力、技术理解力和人性共情力的“产品操盘手”将变得更加珍贵。
+小年已至，糖瓜粘嘴。希望各位产品经理在吃下灶糖的时候，不仅能祈求来年“嘴甜”搞定业务方，更能静下心来磨练内功。
+毕竟，在这个变化的时代，唯一能保护你的，不是过去的title，而是你解决新问题的能力。2026，别让“失业风险”成为你的年度关键词，让“不可替代”成为你的新标签。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-10 12:17:08 +0800 CST'>February 10, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 人到老年才谈幸福？2026产品经理眼下先谈如何不失业" href="http://localhost:1313/posts/20260210-121708-rdlnctxf2026cpjlyxxtrhbsy/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">谷爱凌1分钟连说6次“难”，2026产品经理的处境更难
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+谷爱凌1分钟连说6次“难”，2026产品经理的处境更难 日期：2026-02-10
+今天是2026年2月10日，农历腊月二十三，也就是北方的小年。
+窗外或许已经有了稀疏的鞭炮声，家家户户都在准备祭灶，为了迎接那个被称为“史上最长的春节”。然而，在职场的热搜榜上，气氛却并不轻松。刚刚结束的一场顶级滑雪赛事采访中，天才少女谷爱凌在短短1分钟内连说了6次“难”。
+连在冰雪世界里统治力极强的谷爱凌，面对不断涌现的新对手和更高难度的动作，都发出了如此感叹。这不禁让人联想到此时此刻的职场——特别是曾经风光无限，如今却在2026年的寒风中瑟瑟发抖的群体：产品经理（PM）。
+如果说谷爱凌的“难”是竞技体育攀登巅峰的阻力，那么2026年产品经理的“难”，则是一场关于生存权、话语权与职业未来的残酷保卫战。
+一、 祛魅的2026：从“CEO学前班”到“高危裁员区” 曾几何时，产品经理被誉为“CEO的学前班”，是互联网大厂最核心的引擎。但在2026年的今天，如果你打开招聘软件，会发现这个岗位的逻辑已经彻底变了。
+随着“年货清单”上新，企业的用人清单也在更新。在这个清单里，传统意义上的“功能型产品经理”正在被悄然移除。
+为什么难？因为信息不对称的红利彻底消失了。
+在五年前，画个原型图、写个PRD（需求文档）、做个项目排期，就能拿高薪。但在2026年，随着低代码平台和垂直行业模型的成熟，业务方自己就能通过AI生成原型，开发能够直接理解自然语言需求。那个曾经作为“业务”与“技术”之间翻译官的PM角色，不仅变得多余，甚至被视为效率的阻碍。
+正如热搜中提到的“12306回应无座票乘客被劝离静音车厢”一样，用户对体验的要求越来越苛刻，容错率极低。企业对PM的要求不再是“把功能做出来”，而是“能不能直接带来增长”。在这个存量博弈的时代，拿不出ROI（投资回报率）的产品经理，处境比静音车厢里大声喧哗的乘客还要尴尬——随时会被“请”下车。
+二、 神秘的“对手”：不仅仅是AI，还有全栈化的世界 在最近的比赛中，战胜谷爱凌的选手中出现了带有神秘“东方印记”的黑马。这在体育界是新老交替的常态，而在职场上，产品经理面对的“神秘对手”更加无形且致命。
+2026年的职场，产品经理面临的双重夹击：
+AI Agent 的降维打击： 现在，一个初级PM 80%的工作内容——竞品分析、数据埋点整理、会议纪要、甚至简单的交互设计，都可以由AI Agent在几秒钟内完成。AI不会觉得累，不会在春节前请假，更不会因为需求变更而与开发吵架。对于只会做执行层的PM来说，这不仅仅是竞争，而是替代。
+复合型人才的跨界打劫： “老外来中国过年的订单爆了”，这显示了跨境与跨文化的融合。在职场上，界限也在模糊。懂代码的运营、懂商业的UI、懂产品的开发，这些人正在瓜分传统PM的领地。纯粹的“策划型”PM，在2026年显得苍白无力。
+三、 2026年产品人的“年货清单”：如何避免失业风险？ 今天是小年，大家都忙着采买年货。对于产品经理来说，如果不想在“史上最长的春节”后收到辞退信，你的技能“年货清单”必须立即上新。
+1. 戒掉“画图思维”，重拾“商业嗅觉” 不要再炫耀你的Axure或Figma技巧了。2026年的核心竞争力是：你能不能像老板一样思考？你是否知道这一个改动能为公司省多少钱，或赚多少钱？如果说以前的PM是“功能设计师”，现在的PM必须是“业务操盘手”。
+2. 寻找“情绪价值”的护城河 热搜里提到“人到老年什么才是最大的幸福”，其实不仅是老年人，在这个高压的2026年，用户最缺的是情绪价值。AI可以写出完美的逻辑代码，但很难精准捕捉人类微妙的情感波动——比如那种“故意穿丑去相亲竟然被相中”的复杂心理。 未来的PM，必须是半个心理学家。通过对人性的深刻洞察，设计出有温度、能共情的产品，这是AI短期内无法攻破的堡垒。
+3. 拥抱“出海”与“下沉” 既然国内市场卷得像“东部战区空军与外军编队空中较量”一样激烈，不如换个战场。无论是老外来华的旅游热，还是中国企业出海的浪潮，具备国际化视野、了解跨文化产品的PM依然稀缺。不要局限于北上广的写字楼，广阔的海外市场和数字化转型的传统行业，仍有机会。
+四、 总结：接受“难”，才能不“烂” 谷爱凌连说6次“难”，但她依然在赛场上完成了高难度动作。她说“难”，是因为她在挑战极限，而不是在抱怨环境。
+2026年的产品经理，确实很难。 那个“人人都是产品经理”的泡沫时代已经破裂。 那个靠PPT和概念就能融资、扩招的时代已经终结。
+但也正因为“难”，行业正在进行一场残酷但必要的洗牌。混日子的“文档撰写员”将被淘汰，而真正具备商业洞察力、技术理解力和人性共情力的“产品操盘手”将变得更加珍贵。
+小年已至，糖瓜粘嘴。希望各位产品经理在吃下灶糖的时候，不仅能祈求来年“嘴甜”搞定业务方，更能静下心来磨练内功。
+毕竟，在这个变化的时代，唯一能保护你的，不是过去的title，而是你解决新问题的能力。2026，别让“失业风险”成为你的年度关键词，让“不可替代”成为你的新标签。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-10 10:38:30 +0800 CST'>February 10, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 谷爱凌1分钟连说6次“难”，2026产品经理的处境更难" href="http://localhost:1313/posts/20260210-103830-gal1fzls6cn2026cpjldcjgn/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">沪银大涨与日股新高：2026年跨国赛道产品经理的机遇还是末路？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+沪银大涨与日股新高：2026年跨国赛道产品经理的机遇还是末路？ 时间：2026-02-09
+2026年的开年显得格外魔幻。就在今天，当大洋彼岸的日股创下历史新高，日元却跌至两周新低；与此同时，国内沪银主力合约强势涨停，而在银行端，高达“50万亿”的存款正迎来史上最大规模的“搬家潮”。
+资本市场的狂躁跳动，看似与坐在工位上画原型的产品经理（PM）无关，实则是悬在每个人头顶的达摩克利斯之剑。特别是对于身处跨国（Cross-border）赛道的产品经理而言，2026年究竟是乘风破浪的“大航海时代”，还是泡沫破裂后的“职业末路”？
+这不仅仅是一次宏观经济的震荡，更是一场针对产品经理职业价值的残酷清算。
+宏观叙事下的微观恐慌：资本不再相信“画图仔” 首先，我们需要看懂“日股新高”与“沪银大涨”背后的逻辑：避险与逐利的双重极致。资本在疯狂寻找高确定性的资产。
+折射到互联网职场，那种靠“讲故事”、“堆功能”就能拿到融资、扩招团队的时代彻底结束了。2026年的投资人像极了近期新闻中提到的“文玩杀猪盘”里的清醒买家——他们不再相信为普通人定制的“暴富剧本”，也不再相信为普通PM定制的“增长神话”。
+对于跨国赛道的产品经理，失业风险的第一个来源便是**“伪出海”泡沫的破灭**。
+过去几年，很多PM所谓的“跨国经验”仅仅是把国内的App翻译成外语，照搬国内的运营套路。但在2026年，随着全球合规门槛的提升和本地化竞争的加剧，这种“翻译官式”的产品经理正在批量失业。正如“日元贬值但日股新高”所揭示的，只有核心资产（优质企业/硬核产品力）才能在汇率波动中从容获利。
+如果你的核心竞争力还停留在Figma的熟练度上，而不是对目标市场金融政策、用户心理的深度洞察上，那么你就是那部分即将被“搬家”的存款——由于找不到高收益的去处，只能在贬值中焦虑。
+“特斯拉断电”式的警示：容错率归零 最近，“特斯拉续航剩72公里高速突然断电”的新闻引发热议。抛开具体品牌不谈，这在产品哲学上是一个巨大的隐喻：2026年的用户和市场，对“核心功能失效”的容忍度已降至冰点。
+这与产品经理的失业风险有何关系？关系巨大。
+在AI辅助编程和设计已经普及的2026年，构建一个产品的门槛极低，但打造一个“鲁棒性”极强产品的门槛极高。企业不再需要那种只会发散思维、搞头脑风暴的PM，而是需要能够像“种业振兴”一样，沉下心来花五年时间去打磨底层逻辑、确保极端场景下产品不“断电”的专家。
+很多中级PM面临失业，是因为他们习惯了做“锦上添花”的功能堆叠，却无法处理复杂的业务死结。比如最近“12306回应无座票乘客被劝离静音车厢”以及“买长乘短被阻拦”的争议，这背后其实是极其复杂的产品规则设计与人性博弈。
+未来的跨国PM，如果不能在产品规则层面解决“公平性”与“商业化”的冲突，不能在技术边界上预判风险，就会像那辆高速上断电的车一样，被公司和用户无情抛弃。
+赛道分化：谁在裸泳，谁在造船？ 当然，危机中藏着巨大的机遇。沪银大涨意味着大宗商品和贵金属交易的活跃，日股新高意味着全球资产配置的需求旺盛。
+2026年，两类跨国产品经理将成为稀缺资源，完全免疫失业风险：
+金融与合规复合型PM（FinTech &amp; Compliance）： 当50万亿存款要“搬家”，它们去哪了？理财、保险、跨境投资。能够设计出符合当地（如日本、东南亚、欧美）金融监管，同时又能承接巨大资金流动性产品的PM，年薪将轻松突破百万。他们懂的不是交互，而是“风控”和“套利逻辑”。
+深耕本地化的“土著”型PM： 不像过去那种“空军”式的出海，现在的企业需要的是能理解为何“日本人爱用现金”、“中东人为何热衷社交语聊”的深度本地化人才。这需要极强的文化共情能力，是AI目前无法取代的。
+相反，以下几类PM正处于“高危名单”：
+纯工具型PM： 还在纠结按钮放左边还是右边，这类工作已被AIGC接管。 流量二道贩子： 依靠买量投放做增长的跨国PM，随着全球隐私政策收紧，ROI崩塌，他们的价值也随之归零。 结语：告别“暴富剧本”，回归价值本身 2026年的春天，比以往来得更卷一些。
+王楚钦夺冠后“惊艳一指”是实力的外化，而普通产品经理想要在2026年不被淘汰，也需要练就自己的“杀手锏”。
+不要被“日股新高”的繁荣假象迷惑，以为出海就是捡钱；也不要被“失业潮”的恐慌吓退。现实是，市场正在进行一场残酷的“去肥增瘦”。那些试图通过简单复制粘贴、依靠信息差混日子的“文玩杀猪盘”式职业生涯已经结束了。
+对于跨国赛道的产品经理而言，机遇在于**“深度”**——对金融周期的理解深度，对技术边界的认知深度，以及对异国文化的共情深度。
+如果说2026年是普通人的“困难模式”，那对于真正的专业主义者来说，这或许是清洗掉竞争对手最好的年份。别做那个在高速上突然断电的电池，做那个即便在风浪中也能锚定价值的“硬通货”。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-09 16:37:47 +0800 CST'>February 9, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 沪银大涨与日股新高：2026年跨国赛道产品经理的机遇还是末路？" href="http://localhost:1313/posts/20260209-163747-hydzyrgxg2026nkgsdcpjldjyhsml/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">特斯拉断电与无人洗车纠纷：2026年硬件PM的职业容错率正在归零。
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+特斯拉断电与无人洗车纠纷：2026年硬件PM的职业容错率正在归零 日期：2026-02-09
+在这个小年刚过的初春，科技圈并没有迎来预想中的“开门红”，而是被几起令人心惊的硬件事故刷屏。一边是特斯拉车主在高速上续航显示剩余72公里时突然断电，险些酿成大祸；另一边是无人洗车机因感应逻辑故障，“洗”坏了用户的车辆，引发万元赔偿纠纷。
+如果放在五年前，这些可能被归结为“早期技术迭代的阵痛”，但在2026年的今天，这些事故不仅是产品的灾难，更是产品经理（PM）职业生涯的终结符。随着行业进入存量博弈阶段，硬件产品经理，尤其是涉及自动化、智能硬件领域的PM，正在面临一场前所未有的“职业容错率归零”危机。
+告别MVP时代：硬件不再允许“先发布后修复” 曾几何时，互联网思维中的“MVP（最小可行性产品）”和“小步快跑，迭代更新”被奉为圭臬。然而，2026年的市场环境已经彻底粉碎了这一逻辑在硬件领域的适用性。
+近日引发热议的“特斯拉高速断电”事件，本质上是BMS（电池管理系统）策略与用户交互界面（UI）的信息脱节。在2026年，电动车早已不是新鲜事物，用户对于“显示续航”的信任度等同于油表。当显示还有72公里却突然失去动力，这在产品定义阶段属于“致命级缺陷（P0）”。
+对于硬件PM而言，这意味着传统的“软件思维”正在失效。你不能指望通过OTA（空中下载技术）来修复用户在高速公路上失去动力的心理阴影，也不能通过发一个优惠券来弥补无人洗车机压坏车顶的物理损伤。
+在2026年，硬件产品的交付标准从“可用”变成了“无感且完美”。一旦出现像无人洗车机这种“边缘场景（Corner Case）”覆盖不全导致的物理损毁，企业面临的不仅是类似“无人洗车洗出万元损失谁买单”的法律纠纷，更是品牌信誉的崩塌。而作为定义产品逻辑的PM，往往是问责链条上的第一张多米诺骨牌。
+极致内卷下的“防御性产品学” 2026年的职场环境有多严苛？看看新闻便知。开年以来已有11名中管干部被查，各行各业都在强化“合规”与“问责”。这种风气传导至科技行业，表现为企业对产品事故的零容忍。
+硬件PM的工作重心，正在从“创新”向“风控”转移。
+以前，PM的KPI是“上线了多少新功能”、“提升了多少DAU”；现在，硬件PM的核心竞争力变成了“预判了多少种死法”。以无人洗车为例，2026年的PM不仅要懂清洗流程，更要懂法律边界、保险条款以及极端情况下的传感器冗余逻辑。
+如果是几年前，洗车机故障可能被视为工程部的传感器选型问题。但在今天，老板会问PM：“你在PRD（产品需求文档）里有没有定义异形车辆的识别逻辑？有没有设计紧急回退机制？如果没有，这就是你的产品设计失职。”
+当下，50万亿存款迎来“搬家潮”，消费者手中的钱变得更加谨慎和挑剔。他们不会为“半成品”买单，更不会容忍因为产品设计缺陷导致的财产损失。这种市场情绪倒逼企业在招聘和考核硬件PM时，将“严谨性”置于“创造性”之上。一个极具创意的功能如果伴随着1%的严重故障率，在2026年会被毫不犹豫地砍掉，连同提出这个方案的PM一起。
+职业生存指南：不仅要懂技术，更要懂“人性恶” 面对容错率归零的现状，2026年的硬件PM该如何避免失业风险？
+首先，必须抛弃“理想化场景”思维。 特斯拉断电事件的教训在于，产品设计不能只看实验室里的放电曲线。PM必须考虑到电池老化、低温、高速高负荷等叠加因素下的极端工况。在撰写文档时，如果不把“最坏情况”作为默认场景，就是给自己埋雷。
+其次，从“体验设计师”转型为“责任鉴定师”。 在无人洗车纠纷中，模糊的责任界定是导致舆论危机的关键。优秀的硬件PM在设计自动化流程时，必须同步设计“取证逻辑”。当事故发生时，产品必须能自证清白（例如完善的日志记录、多角度监控留存）。这虽然听起来不像产品经理该干的事，但在2026年，这是保住饭碗的护城河。
+最后，敬畏物理世界的不可逆性。 软件出了Bug可以回滚，硬件出了Bug可能就是人命或巨额赔偿。近期关于“塔吊折断”的谣言虽已被辟谣，但它映射出的公众对工程安全的焦虑是真实的。硬件PM必须对物理定律保持敬畏，在成本控制（Cost Down）的大棒下，坚守安全的底线。
+结语 2026年的春天，对于硬件产品经理来说有些寒意。当“特斯拉断电”和“洗车机伤车”成为热搜，它们实际上是行业发出的一份最后通牒：
+那个靠画大饼、堆参数就能混日子的时代彻底结束了。现在的市场，不仅要求你会做产品，更要求你做的产品能经得起法律、物理规律和极端人性的三重审判。在这个“零容错”的年份里，平庸的PM将被算法优化，唯有那些能在这个充满不确定性的世界里交付确定性的PM，才能穿越周期，留在这个牌桌上。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-09 15:55:09 +0800 CST'>February 9, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 特斯拉断电与无人洗车纠纷：2026年硬件PM的职业容错率正在归零。" href="http://localhost:1313/posts/20260209-155509-tslddywrxcjf2026nyjpmdzyrclzzgl/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">春运路上，产品经理是如何用AI自动化交易“赚回票价”的？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+春运路上，产品经理是如何用AI自动化交易“赚回票价”的？ 2026年2月9日，此刻的你，或许正挤在喧嚣的候机大厅，看着窗外的停机坪发呆；或许正坐在以350公里时速飞驰的复兴号上，刷着手机里的短视频。
+据官方数据，全国铁路今日预计发送旅客1325万人次。在这个庞大的人口迁徙数字背后，是无数个疲惫的灵魂和瘪下去的钱包。当你刷到热搜上**“女子吐槽飞机餐仅一根青菜配米饭”**的新闻时，可能会苦笑一声，感叹出行成本高企，服务体验却在降级。
+然而，在我身边的这位产品经理老张，却气定神闲。他没有抱怨票价，也没有刷剧，而是看着手机弹出的几条Push通知，嘴角微微上扬：“今天的机票钱和年货钱，AI已经帮我赚回来了。”
+在这个AI技术全面渗透生活的2026年，当大多数人还在讨论**“我国成功发射可复用试验航天器”**意味着什么宏大叙事时，一部分极具敏锐度的产品经理，已经将AI变成了自己的私人量化交易员。他们不写复杂的C&#43;&#43;底层代码，不盯盘，甚至不需要深厚的金融背景，仅仅是用做产品的思维，就完成了一次“资产端的MVP（最小可行性产品）”闭环。
+一、 像写PRD一样定义交易策略 对于产品经理而言，股票市场本质上就是一个**“高并发、强博弈、数据驱动”的复杂系统。而在2026年，利用AI炒股的核心，不在于你懂多少K线图，而在于你能否写好一份“交易策略PRD（产品需求文档）”**。
+老张的策略很简单，他把炒股看作是一个用户需求解决过程：
+用户痛点：人类在交易中容易情绪化，追涨杀跌。 解决方案：剥离情绪，全自动执行既定逻辑。 核心功能：基于新闻情绪分析 &#43; 资金流向监控。 他不需要自己去爬取数据。在如今的AI Agent（智能体）生态下，他只需要向AI助手下达指令：“每天早上9:30到11:30，监控科技板块的实时新闻。如果出现‘重大突破’、‘超预期’等正向关键词，且该股票主力资金净流入超过5000万，即执行买入操作，仓位控制在10%。”
+这听起来像是在跟人聊天，但现在的AI已经能将这段自然语言转化为可执行的策略逻辑。就像我们做产品时拆解用户路径一样，老张把交易拆解成了“触发器—判断逻辑—执行动作—反馈机制”。
+二、 低代码时代的“量化平权” 回退到五年前，量化交易还是数学博士和资深程序员的专利。但在2026年，AI让这一切发生了“平权”。
+现在的量化平台，允许用户通过拖拽模块或直接对话来生成策略。产品经理最擅长的**流程图（Flowchart）**思维在这里得到了完美应用。
+老张给我展示了他的“自动化流水线”：
+输入端：接入了各大财经新闻源和社交媒体API。虽然我们看到**“重庆民政局招聘系谣言”**这类信息满天飞，需要人工甄别，但AI在处理金融噪音方面的能力已经远超人类，它能瞬间过滤掉99%的无效信息，只抓取对股价有实质影响的核心因子。 处理端：利用大模型对非结构化数据（如财报会议纪要、高管讲话风格）进行情感打分。 风控端：这是产品经理最看重的“容错机制”。即便策略再好，也要防止“黑天鹅”。比如当系统检测到大盘指数急剧下挫，或者个股出现异常巨量抛单时，强制触发熔断止损。 老张打趣道：“看着外卖小哥打翻32杯奶茶原地发愣的新闻，我就在想，人工操作总会有失误的时候。但我的AI不会‘发愣’，到了止损线，它砍仓比谁都快，绝不心存侥幸。”
+三、 快速迭代与A/B测试 产品经理的另一个核心能力是数据分析与迭代。
+在春运回家的路上，老张并没有让AI全仓“梭哈”。他把资金分成了两部分，运行两个不同的AI Agent，进行A/B测试：
+策略A（激进型）：追逐热点题材，快进快出，类似做一款“爆款小程序”。 策略B（稳健型）：基于高股息和价值回归，类似做一个“SaaS工具产品”。 旅途的几个小时里，策略A抓住了某个科技股的短线反弹，小赚一笔；策略B则因为市场波动小幅回撤。老张根据后台的数据报表（Dashboard），在手机上即时调整了策略A的参数，降低了风险敞口。
+“你看，这和做产品发版一模一样。”老张指着屏幕说，“市场就是用户，收益率就是DAU（日活）。如果数据不好，我们就快速迭代，或者回滚版本。传统的股民是拿着钱在赌博，我们是用逻辑在验证假设。”
+四、 赚回票价，更赚回了时间 火车即将进站，广播里传来提醒旅客带好行李的声音。老张看了一眼账户，当天的收益正好覆盖了这趟商务座的票价，甚至还够给家里老人买两件像样的礼物。
+虽然这个收益比起**“李亚鹏直播带货双双破亿”的数字显得微不足道，也比不上“北京危旧楼改建后业主挂牌1200万”**那种资产增值的暴击，但对于一个普通的职场人来说，这是一种质的飞跃。
+产品经理利用AI炒股，最大的价值不在于暴富，而在于“解耦”。
+它将你从盯盘的焦虑中解耦出来，将赚钱这件事从“出卖时间”的线性逻辑中解耦出来。当你像老张一样，在春运拥挤的人潮中，能有一套并在云端7x24小时为你工作的系统时，你获得的不仅是票价，更是一种面对不确定未来的底气。
+小结
+2026年的春运，有人在抱怨，有人在等待，而懂技术、有产品思维的人正在行动。AI不是魔法，它只是一个超级高效的执行者。
+对于产品经理而言，与其担心35岁危机，不如思考如何将自己的逻辑能力、数据敏感度和流程设计能力，迁移到金融交易这个更广阔的“产品”中去。毕竟，在这个时代，最好的产品，就是一套能自动为你赚钱的系统。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-09 12:12:55 +0800 CST'>February 9, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 春运路上，产品经理是如何用AI自动化交易“赚回票价”的？" href="http://localhost:1313/posts/20260209-121255-cylscpjlsrhyaizdhjyzhpjd/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">“2026年，产品经理如何用AI模型在股市“降维打击”？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>
+2026年，产品经理如何用AI模型在股市“降维打击”？ 时间：2026-02-08
+在这个万物皆可AI的2026年，如果你还认为产品经理（PM）的核心竞争力仅仅是画原型、写文档或者和开发吵架，那你可能已经掉队了。随着大模型技术的指数级迭代，曾经属于量化交易员（Quants）的神秘黑盒，如今正逐渐成为懂技术、懂逻辑的产品经理手中的利器。
+最近有一条热搜引起了我的注意：“北京一危旧楼改建后有业主挂牌1200万”。这其实是一个典型的“价值重估”案例——在普通人眼中破旧不堪的资产，经过改造（产品化）后，价值翻倍。股市亦是如此，而在2026年，产品经理利用AI模型在股市进行的，正是一场用系统思维对抗散户情绪的“降维打击”。
+一、 把交易策略当做“产品”来设计 大多数散户亏钱的原因，是因为他们把炒股当成了“赌博”或“消费”。看到**“李亚鹏连续两天直播销售额双双破亿”的新闻，就脑热去追网红概念股；看到“亚洲杯国乒男队年轻人外战全输”**，就恐慌性抛售体育板块。这种情绪化的操作，在产品经理眼中，属于典型的“用户需求分析错误”。
+产品经理在这个时代的最大优势，是系统化思维。
+在2026年，我们不需要自己去写复杂的Python代码。PM要做的是定义产品的“MVP”（最小可行性产品），即你的交易策略：
+用户画像（标的选择）： 你要交易的是成长股（如谷爱凌代言的“中国风”运动品牌背后的新消费赛道），还是稳健的红利股？ 核心功能（买卖逻辑）： 是基于技术面突破，还是基于基本面财报？ 异常处理（风控模型）： 遇到**“外卖小哥打翻32杯奶茶”**这种突发“黑天鹅”事件时，你的止损线在哪里？ PM不需要成为算法工程师，但必须成为AI Agent（智能体）的架构师。你负责制定逻辑，AI负责执行。
+二、 舆情分析：利用AI做实时的“用户调研” 2026年的股市，信息差依然存在，但处理信息的速度决定了胜负。
+传统的散户看新闻，是线性的、滞后的。当你在热搜上看到**“中方回应巴基斯坦首都爆炸事件”**时，市场可能已经消化了这一地缘政治风险。但对于善用AI的产品经理来说，这只是数据输入的一个节点。
+我们可以利用定制的AI Agent，构建一个实时的舆情监控系统：
+全网爬取： 24小时监控从CBA赛场（如上海VS山东的赞助商曝光）到国际新闻联播的实时数据。 NLP情感分析： 2026年的模型已经能精准识别情绪。比如，当**“苏翊鸣领奖后落泪拥抱父母”**的视频刷屏时，AI能迅速分析出该品牌在Z世代中的情感连接度，预判相关消费电子或运动装备股的短期情绪溢价。 去伪存真： 就像我们需要分辨**“重庆民政局招聘系谣言”**一样，AI模型能快速交叉验证财经小作文的真实性，避免被假消息割韭菜。 这种将非结构化数据（新闻、视频、评论）瞬间转化为结构化交易信号的能力，就是对只看K线图的传统股民的降维打击。
+三、 回测与迭代：像做A/B Test一样做交易 产品经理最熟悉的流程是什么？是“上线-数据分析-迭代”。
+很多股民亏钱是因为“一把梭”，这在产品开发中叫“全量发布未测试的代码”，是大忌。在2026年，依托算力平台，PM可以零代码进行策略回测。
+历史环境模拟： 将你的策略扔进过去5年的数据中跑一遍。如果你的策略在2024年的大跌中没扛住，在2025年的反弹中没跟上，那么它就不具备“上线”资格。 参数调优： 就像调整APP的按钮颜色一样，通过AI调整你的移动止盈点、仓位管理比例。 小流量测试： 不要一开始就满仓。先用小资金（灰度发布）验证策略的有效性，确认收益曲线稳定后，再逐步放大资金量。 最近**“我国成功发射可复用试验航天器”，这意味着高精尖技术正在走向可重复、低成本化。同理，一个好的交易策略，必须是“可复用”**的，而不是靠运气的。如果你的赚钱逻辑无法在AI回测中复现，那就是随机漫步，迟早会亏回去。
+四、 情绪管理：把AI当做绝对理性的“项目经理” 人性的弱点是交易中最大的敌人。贪婪时不想卖，恐惧时不敢买。
+还记得那个**“女子吐槽飞机餐仅一根青菜配米饭”**的热搜吗？人在情绪激动时，往往会做出非理性的评价和行为。股市中，这种情绪会被无限放大。
+产品经理要学会将执行权移交。在2026年，成熟的交易者会设定好“条件单”和“智能网格”。
+当股价触及止损线，AI会自动卖出，它不会像人类一样心存侥幸“再等等”。 当机会来临时，AI会像执行**“全国铁路预计发送旅客1325万人次”**调度任务一样，精准、冷酷地执行买入指令。 这种“硅基理性”对战“碳基情绪”，结果不言而喻。
+五、 总结 2026年，对于产品经理而言，股市不再是一个单纯的K线博弈场，而是一个巨大的数据产品。
+我们不需要比别人更懂KDJ或MACD，我们需要的是发挥产品经理的核心优势：洞察需求（市场方向）、架构系统（交易策略）、数据驱动（回测迭代）以及利用工具（AI模型）。
+当别人还在为**“如何看待女性占用男厕现象”**这种社会资源分配问题在网上争论不休时，具备产品思维的你，应该已经利用AI模型，在资源错配的资本市场中，找到了属于你的那份超额收益。
+记住，工具再强，核心依然是背后的“产品逻辑”。在这个时代，不是AI在炒股，而是你作为超级产品经理，指挥着一支AI军团在战斗。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-08 19:32:36 +0800 CST'>February 8, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to “2026年，产品经理如何用AI模型在股市“降维打击”？" href="http://localhost:1313/posts/20260208-193236-ncpjlrhyaimxzgsjwdj/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/page/14/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/page/16/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad product-ad--storyalter">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 20H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16.5 3.50001C16.8978 3.10219 17.4374 2.87869 18 2.87869C18.2786 2.87869 18.5544 2.93356 18.8118 3.04017C19.0692 3.14677 19.303 3.30303 19.5 3.50001C19.697 3.697 19.8532 3.93085 19.9598 4.18822C20.0665 4.44559 20.1213 4.72144 20.1213 5.00001C20.1213 5.27859 20.0665 5.55444 19.9598 5.81181C19.8532 6.06918 19.697 6.30303 19.5 6.50001L7 19L3 20L4 16L16.5 3.50001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">培养你的专属写作分身，越写越懂你</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad product-ad--solomd">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-icon">
+        <span class="solomd-logo"><span class="solomd-hash">#</span><span class="solomd-md">MD</span></span>
+      </div>
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">一个文件，一个窗口，只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

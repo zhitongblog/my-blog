@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>低代码 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/</link><description>Recent content in 低代码 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Tue, 10 Mar 2026 04:01:48 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/index.xml" rel="self" type="application/rss+xml"/><item><title>不写一行代码也能跑OpenClaw：基于QMT的低门槛AI策略部署实战</title><link>https://zhitong.uk/posts/2026-03-10-bxyxdmynpopenclawjyqmtddmkaicl/</link><pubDate>Tue, 10 Mar 2026 04:01:48 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-10-bxyxdmynpopenclawjyqmtddmkaicl/</guid><description>本文详解如何在QMT平台上零代码部署OpenClaw AI策略，涵盖封装逻辑、可视化配置与实盘验证全流程，降低AI量化门槛，适合无编程基础的交易者快速上手实战。</description></item><item><title>未来十年没有‘产品经理’，只有‘智能体编排师’：当低代码AI平台让每个人都是PM，真正的壁垒是什么？</title><link>https://zhitong.uk/posts/2026-02-19-wlsnmycpjlzyzntbpsdddmaiptrmgr/</link><pubDate>Thu, 19 Feb 2026 08:13:25 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-wlsnmycpjlzyzntbpsdddmaiptrmgr/</guid><description>本文探讨低代码AI平台如何重塑产品经理角色，分析‘智能体编排师’这一新兴职能的核心能力，并揭示在PRD消失时代真正的竞争壁垒——语义对齐、约束建模与跨模态意图理解。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>低代码 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/</link>
+    <description>Recent content in 低代码 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 10 Mar 2026 04:01:48 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不写一行代码也能跑OpenClaw：基于QMT的低门槛AI策略部署实战</title>
+      <link>http://localhost:1313/posts/2026-03-10-bxyxdmynpopenclawjyqmtddmkaicl/</link>
+      <pubDate>Tue, 10 Mar 2026 04:01:48 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-10-bxyxdmynpopenclawjyqmtddmkaicl/</guid>
+      <description>本文详解如何在QMT平台上零代码部署OpenClaw AI策略，涵盖封装逻辑、可视化配置与实盘验证全流程，降低AI量化门槛，适合无编程基础的交易者快速上手实战。</description>
+    </item>
+    <item>
+      <title>未来十年没有‘产品经理’，只有‘智能体编排师’：当低代码AI平台让每个人都是PM，真正的壁垒是什么？</title>
+      <link>http://localhost:1313/posts/2026-02-19-wlsnmycpjlzyzntbpsdddmaiptrmgr/</link>
+      <pubDate>Thu, 19 Feb 2026 08:13:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-wlsnmycpjlzyzntbpsdddmaiptrmgr/</guid>
+      <description>本文探讨低代码AI平台如何重塑产品经理角色，分析‘智能体编排师’这一新兴职能的核心能力，并揭示在PRD消失时代真正的竞争壁垒——语义对齐、约束建模与跨模态意图理解。</description>
+    </item>
+  </channel>
+</rss>

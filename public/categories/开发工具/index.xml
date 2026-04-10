@@ -1,1 +1,166 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>开发工具 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</link><description>Recent content in 开发工具 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</title><link>https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</link><pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</guid><description>详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。</description></item><item><title>告别Selenium！Claude Code + Chrome MCP 实现自然语言驱动的零代码浏览器自动化</title><link>https://zhitong.uk/posts/2026-03-25-gbseleniumclaudecodechromemcps/</link><pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-25-gbseleniumclaudecodechromemcps/</guid><description>告别Selenium繁琐定位与不稳定等待！本文详解如何用Claude Code结合Chrome MCP，通过自然语言指令实现稳定、可维护的零代码浏览器自动化，解决电商价格监控等真实场景中的StaleElement和Timeout顽疾。</description></item><item><title>SkillsHub开发者实测：部署3小时，崩溃5次——OpenClaw的稳定性幻觉</title><link>https://zhitong.uk/posts/2026-03-21-skillshubkfzscbs3xsbk5copencla/</link><pubDate>Sat, 21 Mar 2026 02:54:08 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-21-skillshubkfzscbs3xsbk5copencla/</guid><description>SkillsHub实测揭示OpenClaw v0.4.1存在严重稳定性幻觉：3小时内崩溃5次，根源在于窄场景测试、缺失内存监控与社区支持断层。本文剖析OOM根因，打破‘开箱即稳’认知偏差，为AI Agent生产部署提供关键避坑指南。</description></item><item><title>不是所有AI编排都叫OpenClaw：深度解析它如何为Claude Code注入任务分解、状态追踪与错误自愈能力</title><link>https://zhitong.uk/posts/2026-03-20-bssyaibpdjopenclawsdjxtrhwclau/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-bssyaibpdjopenclawsdjxtrhwclau/</guid><description>深度解析OpenClaw如何突破传统AI编码局限，为Claude Code赋予任务分解、跨步骤状态追踪与运行时错误自愈能力，解决真实项目中异步逻辑错乱、重试缺失、异常处理失效等典型卡壳问题。</description></item><item><title>告别多模型切换！OpenClaw作为本地AI网关，统一调度Claude Code的实战手记</title><link>https://zhitong.uk/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</guid><description>本文实战记录如何用OpenClaw作为本地AI网关统一调度Claude Code、Ollama与CodeLlama等多模型，解决端口冲突、密钥轮换、输出格式不一致等痛点，提升本地AI开发效率。</description></item><item><title>本地运行、飞书直连、MCP即插即用：OpenClaw让Claude Code真正扎根企业工作流</title><link>https://zhitong.uk/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/</guid><description>OpenClaw实现Claude Code在企业环境的本地化运行，支持飞书直连与MCP协议即插即用，打通Ansible等运维工具链，真正将AI编码能力嵌入生产级工作流。</description></item><item><title>OpenClaw实战：3分钟搭建本地AI博客机器人，CSDN/掘金/公众号全自动发布</title><link>https://zhitong.uk/posts/2026-03-05-openclawsz3fzdjbdaibkjqrcsdnjj/</link><pubDate>Thu, 05 Mar 2026 08:28:35 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-05-openclawsz3fzdjbdaibkjqrcsdnjj/</guid><description>手把手教你用OpenClaw在3分钟内搭建本地AI博客机器人，自动适配CSDN、掘金、微信公众号等平台的格式与图片上传要求，解决Markdown乱码、资源404、防盗链失败等发布痛点。</description></item><item><title>工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成</title><link>https://zhitong.uk/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/</link><pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/</guid><description>详解在VS Code中深度集成Claude Code的完整流程：从环境校验、Anthropic API密钥配置，到智能代码补全与自动生成文档的实战配置，助力工程师提升编码效率与工程化水平。</description></item><item><title>重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码</title><link>https://zhitong.uk/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/</link><pubDate>Thu, 19 Feb 2026 04:51:18 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/</guid><description>本文详解如何用Claude Code官方插件快速理解、重构与修复高风险遗留代码，涵盖环境配置、API密钥安全实践、项目接入及典型调试场景，助力开发者高效应对无文档、低测试覆盖率的老系统。</description></item><item><title>快速上手：5分钟配置Claude Code并完成首个代码生成任务</title><link>https://zhitong.uk/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/</link><pubDate>Thu, 19 Feb 2026 04:37:13 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/</guid><description>本文手把手教你5分钟完成Claude Code的本地配置与首个代码生成任务，涵盖系统要求、OAuth登录、VS Code插件安装及基础使用技巧，助开发者快速上手AI编程助手。</description></item><item><title>初识Claude Code：告别传统编码，拥抱AI结对编程</title><link>https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</link><pubDate>Thu, 19 Feb 2026 03:34:10 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</guid><description>本文详解Claude Code插件的安装配置流程，涵盖VS Code与JetBrains IDE支持、四步验证法及国内用户账号绑定要点，助开发者快速开启AI结对编程新体验。</description></item><item><title>终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力</title><link>https://zhitong.uk/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</link><pubDate>Wed, 18 Feb 2026 08:35:09 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</guid><description>本文探讨Claude Code如何赋能Shell脚本开发，让Bash直接理解PRD需求，填补CLI层AI自动化空白，提升运维脚本的可审计性、可复用性与工程规范性。</description></item><item><title>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验</title><link>https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</link><pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</guid><description>本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>开发工具 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 开发工具 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Apr 2026 13:46:09 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一步：零配置启动——用Claude Code生成项目脚手架</title>
+      <link>http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/</link>
+      <pubDate>Fri, 10 Apr 2026 13:46:09 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/</guid>
+      <description>本文详解如何通过Anthropic官方VS Code扩展Claude Code零配置生成项目脚手架，强调其IDE深度集成特性、环境依赖（VS Code ≥1.85）及与CLI/API的本质区别，助开发者规避常见认知误区。</description>
+    </item>
+    <item>
+      <title>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计</title>
+      <link>http://localhost:1313/posts/2026-04-06-cyfzyclaudecodeqdtddzdhcsyjsfa/</link>
+      <pubDate>Mon, 06 Apr 2026 13:49:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-cyfzyclaudecodeqdtddzdhcsyjsfa/</guid>
+      <description>本文深入探讨Claude Code（3.5 Sonnet）如何超越传统代码补全，真正赋能测试驱动开发（TDD）、自动化测试编写与技术方案设计，实现‘测试即契约’的智能协同开发范式。</description>
+    </item>
+    <item>
+      <title>工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成</title>
+      <link>http://localhost:1313/posts/2026-04-06-gchjjzvscodezsdjcclaudecodesxz/</link>
+      <pubDate>Mon, 06 Apr 2026 13:19:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-gchjjzvscodezsdjcclaudecodesxz/</guid>
+      <description>详解在VS Code中安全集成官方Claude Code扩展，实现智能代码补全与自动化文档生成，涵盖环境校验、权限配置、网络代理设置及最佳实践。</description>
+    </item>
+    <item>
+      <title>重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码</title>
+      <link>http://localhost:1313/posts/2026-04-06-zgydslqrclaudecodebnddyhhxfyld/</link>
+      <pubDate>Mon, 06 Apr 2026 13:06:12 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-zgydslqrclaudecodebnddyhhxfyld/</guid>
+      <description>本文详解如何在VS Code中安全配置官方Claude Code插件，精准接入复杂遗留项目，实现代码理解、自动化重构与智能调试，提升技术债治理效率。</description>
+    </item>
+    <item>
+      <title>快速上手：5分钟配置Claude Code并完成首个代码生成任务</title>
+      <link>http://localhost:1313/posts/2026-04-06-ksss5fzpzclaudecodebwcsgdmscrw/</link>
+      <pubDate>Mon, 06 Apr 2026 10:44:43 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-ksss5fzpzclaudecodebwcsgdmscrw/</guid>
+      <description>本文手把手教你5分钟配置Claude Desktop App及VS Code插件，完成首个本地化代码生成任务，涵盖系统要求、权限验证与实操演示，专为开发者优化，不依赖通用API。</description>
+    </item>
+    <item>
+      <title>初识Claude Code：为什么开发者需要这个AI编程伙伴？</title>
+      <link>http://localhost:1313/posts/2026-04-06-csclaudecodewsmkfzxyzgaibchb/</link>
+      <pubDate>Mon, 06 Apr 2026 02:26:58 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-csclaudecodewsmkfzxyzgaibchb/</guid>
+      <description>本文通过真实调试案例，解析Claude Code如何以‘结对编程老炮儿’视角解决空指针等复杂问题，对比Copilot与CodeWhisperer的局限，揭示其上下文理解与工程化思维优势。</description>
+    </item>
+    <item>
+      <title>社区自救行动：GitHub上悄然兴起的ClaudeCode替代方案清单（含轻量微调指南）</title>
+      <link>http://localhost:1313/posts/2026-04-06-sqzjxdgithubsqrxqdclaudecodetd/</link>
+      <pubDate>Sun, 05 Apr 2026 16:07:36 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-sqzjxdgithubsqrxqdclaudecodetd/</guid>
+      <description>Anthropic静默下线ClaudeCode后，开发者社区48小时内自发构建替代生态：含500&#43; fork、19个托管API网关及轻量微调指南，探讨AI编程基础设施主权与开源自救实践。</description>
+    </item>
+    <item>
+      <title>51万行Claude Code源码泄露实录：8大隐藏功能代码级拆解（附GitHub可运行Demo）</title>
+      <link>http://localhost:1313/posts/2026-04-04-51wxclaudecodeymxlsl8dycgndmjc/</link>
+      <pubDate>Sat, 04 Apr 2026 02:27:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-04-51wxclaudecodeymxlsl8dycgndmjc/</guid>
+      <description>深度解析51万行Claude桥接项目源码，代码级拆解8大隐藏功能，涵盖本地化API桥接、多模型后端适配与IDE集成机制，并提供可运行GitHub Demo。</description>
+    </item>
+    <item>
+      <title>Buddy电子宠物藏在3721行里：Claude Code中被忽略的拟人化交互协议与情感状态机设计</title>
+      <link>http://localhost:1313/posts/2026-04-02-buddydzcwcz3721xlclaudecodezbh/</link>
+      <pubDate>Thu, 02 Apr 2026 04:10:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-02-buddydzcwcz3721xlclaudecodezbh/</guid>
+      <description>揭秘Claude Code中隐藏的3721行Buddy电子宠物模块，解析其拟人化交互协议与情感状态机设计，探讨AI助手在确定性系统中嵌入情感建模的工程权衡与实践启示。</description>
+    </item>
+    <item>
+      <title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</title>
+      <link>http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</link>
+      <pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</guid>
+      <description>详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。</description>
+    </item>
+    <item>
+      <title>告别Selenium！Claude Code &#43; Chrome MCP 实现自然语言驱动的零代码浏览器自动化</title>
+      <link>http://localhost:1313/posts/2026-03-25-gbseleniumclaudecodechromemcps/</link>
+      <pubDate>Wed, 25 Mar 2026 11:49:54 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-25-gbseleniumclaudecodechromemcps/</guid>
+      <description>告别Selenium繁琐定位与不稳定等待！本文详解如何用Claude Code结合Chrome MCP，通过自然语言指令实现稳定、可维护的零代码浏览器自动化，解决电商价格监控等真实场景中的StaleElement和Timeout顽疾。</description>
+    </item>
+    <item>
+      <title>SkillsHub开发者实测：部署3小时，崩溃5次——OpenClaw的稳定性幻觉</title>
+      <link>http://localhost:1313/posts/2026-03-21-skillshubkfzscbs3xsbk5copencla/</link>
+      <pubDate>Sat, 21 Mar 2026 02:54:08 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-21-skillshubkfzscbs3xsbk5copencla/</guid>
+      <description>SkillsHub实测揭示OpenClaw v0.4.1存在严重稳定性幻觉：3小时内崩溃5次，根源在于窄场景测试、缺失内存监控与社区支持断层。本文剖析OOM根因，打破‘开箱即稳’认知偏差，为AI Agent生产部署提供关键避坑指南。</description>
+    </item>
+    <item>
+      <title>不是所有AI编排都叫OpenClaw：深度解析它如何为Claude Code注入任务分解、状态追踪与错误自愈能力</title>
+      <link>http://localhost:1313/posts/2026-03-20-bssyaibpdjopenclawsdjxtrhwclau/</link>
+      <pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-20-bssyaibpdjopenclawsdjxtrhwclau/</guid>
+      <description>深度解析OpenClaw如何突破传统AI编码局限，为Claude Code赋予任务分解、跨步骤状态追踪与运行时错误自愈能力，解决真实项目中异步逻辑错乱、重试缺失、异常处理失效等典型卡壳问题。</description>
+    </item>
+    <item>
+      <title>告别多模型切换！OpenClaw作为本地AI网关，统一调度Claude Code的实战手记</title>
+      <link>http://localhost:1313/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</link>
+      <pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</guid>
+      <description>本文实战记录如何用OpenClaw作为本地AI网关统一调度Claude Code、Ollama与CodeLlama等多模型，解决端口冲突、密钥轮换、输出格式不一致等痛点，提升本地AI开发效率。</description>
+    </item>
+    <item>
+      <title>本地运行、飞书直连、MCP即插即用：OpenClaw让Claude Code真正扎根企业工作流</title>
+      <link>http://localhost:1313/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/</link>
+      <pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/</guid>
+      <description>OpenClaw实现Claude Code在企业环境的本地化运行，支持飞书直连与MCP协议即插即用，打通Ansible等运维工具链，真正将AI编码能力嵌入生产级工作流。</description>
+    </item>
+    <item>
+      <title>OpenClaw实战：3分钟搭建本地AI博客机器人，CSDN/掘金/公众号全自动发布</title>
+      <link>http://localhost:1313/posts/2026-03-05-openclawsz3fzdjbdaibkjqrcsdnjj/</link>
+      <pubDate>Thu, 05 Mar 2026 08:28:35 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-05-openclawsz3fzdjbdaibkjqrcsdnjj/</guid>
+      <description>手把手教你用OpenClaw在3分钟内搭建本地AI博客机器人，自动适配CSDN、掘金、微信公众号等平台的格式与图片上传要求，解决Markdown乱码、资源404、防盗链失败等发布痛点。</description>
+    </item>
+    <item>
+      <title>工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成</title>
+      <link>http://localhost:1313/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/</link>
+      <pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/</guid>
+      <description>详解在VS Code中深度集成Claude Code的完整流程：从环境校验、Anthropic API密钥配置，到智能代码补全与自动生成文档的实战配置，助力工程师提升编码效率与工程化水平。</description>
+    </item>
+    <item>
+      <title>重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码</title>
+      <link>http://localhost:1313/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/</link>
+      <pubDate>Thu, 19 Feb 2026 04:51:18 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/</guid>
+      <description>本文详解如何用Claude Code官方插件快速理解、重构与修复高风险遗留代码，涵盖环境配置、API密钥安全实践、项目接入及典型调试场景，助力开发者高效应对无文档、低测试覆盖率的老系统。</description>
+    </item>
+    <item>
+      <title>快速上手：5分钟配置Claude Code并完成首个代码生成任务</title>
+      <link>http://localhost:1313/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/</link>
+      <pubDate>Thu, 19 Feb 2026 04:37:13 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/</guid>
+      <description>本文手把手教你5分钟完成Claude Code的本地配置与首个代码生成任务，涵盖系统要求、OAuth登录、VS Code插件安装及基础使用技巧，助开发者快速上手AI编程助手。</description>
+    </item>
+    <item>
+      <title>初识Claude Code：告别传统编码，拥抱AI结对编程</title>
+      <link>http://localhost:1313/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</link>
+      <pubDate>Thu, 19 Feb 2026 03:34:10 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</guid>
+      <description>本文详解Claude Code插件的安装配置流程，涵盖VS Code与JetBrains IDE支持、四步验证法及国内用户账号绑定要点，助开发者快速开启AI结对编程新体验。</description>
+    </item>
+    <item>
+      <title>终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力</title>
+      <link>http://localhost:1313/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</link>
+      <pubDate>Wed, 18 Feb 2026 08:35:09 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</guid>
+      <description>本文探讨Claude Code如何赋能Shell脚本开发，让Bash直接理解PRD需求，填补CLI层AI自动化空白，提升运维脚本的可审计性、可复用性与工程规范性。</description>
+    </item>
+    <item>
+      <title>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验</title>
+      <link>http://localhost:1313/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</link>
+      <pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</guid>
+      <description>本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。</description>
+    </item>
+  </channel>
+</rss>

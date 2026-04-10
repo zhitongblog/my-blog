@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>写作工具 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E5%86%99%E4%BD%9C%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 写作工具 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 28 Mar 2026 03:46:11 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%86%99%E4%BD%9C%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>写作卡壳时，你的‘第二大脑’在线吗？StoryAlter实测报告</title>
+      <link>http://localhost:1313/posts/2026-03-28-xzkksnddednzxmstoryalterscbg/</link>
+      <pubDate>Sat, 28 Mar 2026 03:46:11 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-28-xzkksnddednzxmstoryalterscbg/</guid>
+      <description>本文实测StoryAlter作为写作者‘第二大脑’的效果，解决灵感散乱、写作卡壳痛点，探讨其在素材聚合、上下文联想与叙事生成方面的实际表现与适用场景。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,1 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Prompt工程 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/prompt%E5%B7%A5%E7%A8%8B/</link><description>Recent content in Prompt工程 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sun, 22 Feb 2026 12:07:15 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/prompt%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>警惕‘伪AI产品经理’陷阱：3个信号暴露你只是在给大模型写说明书</title><link>https://zhitong.uk/posts/2026-02-22-jtwaicpjlxj3gxhblnzszgdmxxsms/</link><pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-22-jtwaicpjlxj3gxhblnzszgdmxxsms/</guid><description>揭露‘伪AI产品经理’现象：68%从业者实为‘Prompt说明书工程师’。本文剖析3个关键信号，强调真AI PM需闭环‘问题-模型-场景-度量’四维系统，避免技术炫技脱离业务本质与风险可控性。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Prompt工程 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/prompt%E5%B7%A5%E7%A8%8B/</link>
+    <description>Recent content in Prompt工程 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Apr 2026 04:27:56 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/prompt%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>闭环优化：基于A/B测试反馈的Claude Code自适应调优</title>
+      <link>http://localhost:1313/posts/2026-04-09-bhyhjyabcsfkdclaudecodezsydy/</link>
+      <pubDate>Thu, 09 Apr 2026 04:27:56 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-09-bhyhjyabcsfkdclaudecodezsydy/</guid>
+      <description>本文详解如何通过A/B测试构建闭环优化机制，针对Claude Code插件在SQL生成中出现的NULL比较bug，实施数据驱动的Prompt自适应调优，提升线上稳定性与语义准确性。</description>
+    </item>
+    <item>
+      <title>零基础起步：用Claude Code快速搭建广告文案生成器</title>
+      <link>http://localhost:1313/posts/2026-04-08-ljcqbyclaudecodeksdjggwascq/</link>
+      <pubDate>Wed, 08 Apr 2026 05:35:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-08-ljcqbyclaudecodeksdjggwascq/</guid>
+      <description>零基础实操指南：用Claude Code快速搭建广告文案生成器，对比ChatGPT与Copilot在真实营销场景中的表现，详解Prompt设计、本地部署与小红书风格文案批量生成技巧。</description>
+    </item>
+    <item>
+      <title>从卡壳到停不下来：我的专属写作分身养成记</title>
+      <link>http://localhost:1313/posts/2026-03-29-ckkdtbxlwdzsxzfsycj/</link>
+      <pubDate>Sun, 29 Mar 2026 06:07:42 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-29-ckkdtbxlwdzsxzfsycj/</guid>
+      <description>分享个人如何通过定制化Prompt与AI协同，打造专属写作分身，解决卡壳、人设不稳、风格断裂等痛点，实现从低效试错到稳定输出的跃迁。</description>
+    </item>
+    <item>
+      <title>写了50篇稿后，它居然学会了我的文风？</title>
+      <link>http://localhost:1313/posts/2026-03-29-xl50pghtjrxhlwdwf/</link>
+      <pubDate>Sun, 29 Mar 2026 06:05:28 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-29-xl50pghtjrxhlwdwf/</guid>
+      <description>本文记录作者训练AI模仿个人文风的真实过程：从50篇人工改稿到AI自主复现标志性句式与表达习惯，揭秘文风迁移、提示词优化与效果评估的关键实践。</description>
+    </item>
+    <item>
+      <title>警惕‘伪AI产品经理’陷阱：3个信号暴露你只是在给大模型写说明书</title>
+      <link>http://localhost:1313/posts/2026-02-22-jtwaicpjlxj3gxhblnzszgdmxxsms/</link>
+      <pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-22-jtwaicpjlxj3gxhblnzszgdmxxsms/</guid>
+      <description>揭露‘伪AI产品经理’现象：68%从业者实为‘Prompt说明书工程师’。本文剖析3个关键信号，强调真AI PM需闭环‘问题-模型-场景-度量’四维系统，避免技术炫技脱离业务本质与风险可控性。</description>
+    </item>
+  </channel>
+</rss>

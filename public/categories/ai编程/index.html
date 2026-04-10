@@ -1,38 +1,401 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>AI编程 | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/categories/ai%E7%BC%96%E7%A8%8B/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/categories/ai%E7%BC%96%E7%A8%8B/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/categories/ai%E7%BC%96%E7%A8%8B/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/categories/ai%E7%BC%96%E7%A8%8B/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="AI编程"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="AI编程"><meta name=twitter:description content="这是智通成长的历程"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>AI编程</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>告别Selenium！Claude Code + Chrome MCP 实现自然语言驱动的零代码浏览器自动化</h2></header><div class=entry-content><p>🌟 为什么我决定扔掉 Selenium？——一个被 selector 失败、隐式等待和 CI 崩溃折磨三年的自白 凌晨2:47，手机震了第七次。
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>AI编程 | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/categories/ai%E7%BC%96%E7%A8%8B/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/ai%E7%BC%96%E7%A8%8B/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/categories/ai%E7%BC%96%E7%A8%8B/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    AI编程
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第一步：零配置启动——用Claude Code生成项目脚手架
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、前置准备：环境与权限确认 在开始使用 Claude Code 生成项目脚手架前，请务必完成以下环境校验——这不是可跳过的“安装步骤”，而是决定整个 AI 编程体验是否稳定、合规、可落地的关键前提。
+首先需要明确一个常见混淆点：Claude Code 并非独立 CLI 工具，也不是网页版 Claude 的增强功能，更不是 Anthropic 官方发布的 anthropic Python SDK 的子模块。它是 Anthropic 官方为 VS Code 深度定制的 IDE 扩展（Extension），其核心能力依赖于 VS Code 的语言服务上下文、文件系统监听和实时编辑器状态感知。这意味着它无法在终端中执行 claude code init（该命令根本不存在），也无法通过 curl 调用 API 替代——它的智能，始于你光标所在的 .ts 文件、当前打开的 package.json、甚至未保存的临时草稿。
+✅ 必需环境清单（缺一不可）：
+VS Code 版本 ≥ 1.85（需支持 Webview2 渲染与新版 Extension Host API） 安装官方扩展：Claude Code（v0.8.0&#43;，截至 2024 年 7 月最新为 v0.8.3） 已登录 Anthropic 账户（使用 Ctrl&#43;Shift&#43;P → Claude: Sign in） ✅ 账户权限验证：
+登录后，进入 Anthropic Console → Settings → Code Assistant，确认：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-10 13:46:09.089 +0000 UTC'>April 10, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第一步：零配置启动——用Claude Code生成项目脚手架" href="http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引言：为什么精准提问对Claude Code至关重要 Claude 3.5 Sonnet（尤其是Opus）在代码理解任务中展现出显著超越通用大模型的能力：它在HumanEval-X、CodeContests和SWE-Bench等专业基准上达到SOTA级表现，关键在于其深度训练于真实GitHub仓库&#43;编译器级AST解析数据，能准确识别控制流边界、变量生命周期、隐式类型传播与跨函数副作用。但这一优势有个前提——Claude不“猜”你的意图；它严格遵循Prompt中定义的语义契约。模糊提问不是“不够好”，而是直接触发模型的安全退避机制：当上下文不足时，它宁可输出谨慎的泛泛而谈，也不愿给出错误断言。
+来看一个真实对比案例：
+一段处理用户邮箱验证的Python函数（简化版）：
+def validate_email(s): if not s: return False parts = s.split(&#34;@&#34;) if len(parts) != 2: return False local, domain = parts return &#34;.&#34; in domain and local.isalnum() ❌ 模糊Prompt：“修一下这个bug”
+→ Claude响应：“可能存在空字符串或None输入导致split()报错……建议添加类型检查”（未定位行号，未指出local.isalnum()对含下划线邮箱（如user_name@domain.com）返回False的真实缺陷）
+✅ 结构化Prompt：
+你是一位专注Django表单验证的Python SRE，熟悉PEP 484和mypy 1.10&#43;。请分析以下函数：① 指出第7行local.isalnum()在何种合法邮箱输入下返回False（举例说明）；② 给出单行修复代码（保持函数签名不变）；③ 输出必须为：|问题行|输入示例|修复代码|
+→ Claude精准响应：
+问题行 输入示例 修复代码 7 &#34;user_name@domain.com&#34; return &#34;.&#34; in domain and re.match(r&#39;^[a-zA-Z0-9._%&#43;-]&#43;$&#39;, local) is not None 这并非模板魔法，而是人机协同的语义契约：你定义“什么是正确答案”，Claude负责在约束内穷尽推理。Prompt Engineering的本质，是把开发者脑中的隐性知识，显性编码为Claude可执行的指令集。
+第一步：解构你的代码理解需求——明确任务类型与边界 别再用“解释/优化/修bug”这类动词启动Prompt。Claude需要的是可判定的任务类型。我们将其归为4类原子任务，每类对应唯一输入输出契约：
+任务类型 输入约束 输出约束 典型失效反例 代码解释 必须指定目标粒度（函数/AST节点/字节码） 禁止主观评价，只输出可观测事实（如“L5: ast.Call → requests.get”） 将“添加日志”混入解释Prompt → Claude开始写logging代码 缺陷诊断 必须提供失败现象（报错信息/异常堆栈/测试用例） 必须定位到具体行号&#43;变量名&#43;传播路径 只说“性能差” → Claude分析算法复杂度而非找热点行 重构建议 必须声明约束条件（时间/空间复杂度、兼容性、架构风格） 禁止引入新依赖/新范式（如async） 要求“优化JSON序列化”，未禁用ujson → Claude推荐非标准库 生成补全 必须提供完整上下文（前缀&#43;后缀&#43;接口契约） 输出必须是语法合法、可直接插入的代码块 给半截函数体，要求“补全逻辑” → Claude发明不存在的参数 ✅ 决策树检查表（快速归类）：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-06 11:17:39.681 +0000 UTC'>April 6, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力" href="http://localhost:1313/posts/2026-04-06-jztwdysypromptengineeringjycla/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">初识Claude Code：为什么开发者需要这个AI编程伙伴？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>为什么我第一次用Claude Code就删掉了半屏代码？——从怀疑到真香的真实心路 凌晨1:23，咖啡凉透第三杯。我在一个临时接手的电商结算服务里卡了6小时——订单状态流转总在“已支付→待发货”环节静默失败，日志只有一行 NullPointerException，堆栈指向 OrderProcessor.java:147，而那行只是个看似无害的 order.getBuyer().getProfile().getPreferredLanguage()。
+我习惯性敲下 Ctrl&#43;Shift&#43;P 唤出 Copilot，输入注释 // Fix NPE when buyer profile is null……它生成了三行空安全判空，但漏掉了 getBuyer() 本身也可能是 null 的关键分支；换 CodeWhisperer，它热情地补全了 Optional.ofNullable(...) 链式调用，却把整个业务逻辑塞进 orElseThrow() 里，导致异常路径吞掉了上游传来的错误码。
+直到同事甩来链接：“试试 Claude Code，别当补全工具用，当‘结对编程的老炮儿’。”
+我半信半疑点开 VS Code 侧边栏的 Claude Code 面板，把报错日志、147行上下文、以及 OrderProcessor 类的 process() 方法完整粘贴进去，末尾加了一句：
+“请定位根本原因，不是表面修复。重点检查 Buyer 和 Profile 的初始化时机。”
+3秒后，它没生成任何代码——而是直接标红了 OrderProcessor 构造函数里一行被注释掉的 // TODO: init buyer profile lazily，并指出：“该服务在订单创建时未初始化 Buyer 对象（因异步下单流程跳过用户中心同步），导致后续所有 getBuyer() 调用返回 null。根本解法：在 Order 构建阶段强制关联 Buyer 实体，或在 process() 开头添加 Buyer 加载校验。”
+紧接着，它列出了3个必须覆盖的边界条件：
+Buyer 存在但 Profile 为 null（当前 NPE） Buyer 为 null 但订单来自游客（需走游客默认语言流） Buyer 存在且 Profile 有值，但 preferredLanguage 字段为空字符串（应 fallback 到系统默认） 我盯着屏幕，手指悬在键盘上，忘了呼吸。
+不是因为它“写对了代码”，而是它看懂了代码没写的上下文——那个被注释掉的 TODO，那个异步下单的隐含约束，那个没人文档化的游客流程。
+那一刻，我删掉了自己刚写的23行防御性判空，把光标移到构造函数，开始补全 Buyer 初始化逻辑。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-06 02:26:58.91 +0000 UTC'>April 6, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 初识Claude Code：为什么开发者需要这个AI编程伙伴？" href="http://localhost:1313/posts/2026-04-06-csclaudecodewsmkfzxyzgaibchb/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">告别Selenium！Claude Code &#43; Chrome MCP 实现自然语言驱动的零代码浏览器自动化
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🌟 为什么我决定扔掉 Selenium？——一个被 selector 失败、隐式等待和 CI 崩溃折磨三年的自白 凌晨2:47，手机震了第七次。
 钉钉弹出告警：“【大促价格监控】任务 #JD-HEADPHONES-03 —— FAILED（StaleElementReferenceException）”。我抓了把头发，盯着终端里那行熟悉的红字：Message: stale element reference: element is not attached to the page document。再往下翻，是另一个幽灵：TimeoutException: Message: timeout: Timed out receiving message from renderer。
-这不是演习。这是双十一大促前夜的真实战况。我们用 Selenium 写的 12 个核心电商页面价格巡检脚本，在 Chrome v125 升级后的首波流量高峰中集体“诈尸”——不是全挂，而是间歇性抽风：有时能跑通，有时卡在搜索框输入后不点搜索按钮，有时点了却把“加入购物车”误点成页脚的“联系我们”。排查三天，发现根源竟是：某平台首页悄悄把 &lt;button class="btn-buy"> 改成了 &lt;div class="action-btn js-buy-btn">，而我们的 WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "btn-buy"))) 直接哑火。
+这不是演习。这是双十一大促前夜的真实战况。我们用 Selenium 写的 12 个核心电商页面价格巡检脚本，在 Chrome v125 升级后的首波流量高峰中集体“诈尸”——不是全挂，而是间歇性抽风：有时能跑通，有时卡在搜索框输入后不点搜索按钮，有时点了却把“加入购物车”误点成页脚的“联系我们”。排查三天，发现根源竟是：某平台首页悄悄把 &lt;button class=&#34;btn-buy&#34;&gt; 改成了 &lt;div class=&#34;action-btn js-buy-btn&#34;&gt;，而我们的 WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, &#34;btn-buy&#34;))) 直接哑火。
 不是 Selenium 不好。它稳、成熟、生态全。但我的需求变了。老板甩来一句话：“帮我点开京东首页→搜‘无线耳机’→拉到第3个商品→截图价格”，我却要花 42 行代码：
-启动 ChromeOptions 加一堆规避检测参数 等首页加载完再等搜索框可点击 输入后显式等搜索按钮出现再 click 解析商品列表时得用 XPath 定位“第3个含‘自营’且非广告”的节点 滚动到该元素再截图…… 直到公司内部 Hackathon 上，隔壁组小哥用 Claude Code + Chrome MCP，10 分钟做完同一件事。更魔幻的是——产品同学现场语音说：“把刚才脚本改成去小红书搜‘降噪耳机测评’，只取笔记标题和点赞数”，他敲了三行指令，回车，跑通。页面结构早因灰度改版变了个样，但脚本没崩，因为 LLM 理解了“标题”和“点赞数”的语义，而不是死磕 class="note-title"。那一刻我关掉了 PyCharm，打开了终端。
-...</p></div><footer class=entry-footer><span title='2026-03-25 11:49:54.22 +0000 UTC'>March 25, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 告别Selenium！Claude Code + Chrome MCP 实现自然语言驱动的零代码浏览器自动化" href=https://zhitong.uk/posts/2026-03-25-gbseleniumclaudecodechromemcps/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型</h2></header><div class=entry-content><p>准备工作：环境与工具配置 在正式进入命理应用开发前，必须搭建一个稳定、可预测、与 Claude Code 高度协同的开发环境。这不是简单的“装好 Xcode 就行”，而是为 AI 编程建立清晰的边界和契约——让 Claude 知道它在什么系统上运行、用什么语法、遵循什么约束。
+启动 ChromeOptions 加一堆规避检测参数 等首页加载完再等搜索框可点击 输入后显式等搜索按钮出现再 click 解析商品列表时得用 XPath 定位“第3个含‘自营’且非广告”的节点 滚动到该元素再截图…… 直到公司内部 Hackathon 上，隔壁组小哥用 Claude Code &#43; Chrome MCP，10 分钟做完同一件事。更魔幻的是——产品同学现场语音说：“把刚才脚本改成去小红书搜‘降噪耳机测评’，只取笔记标题和点赞数”，他敲了三行指令，回车，跑通。页面结构早因灰度改版变了个样，但脚本没崩，因为 LLM 理解了“标题”和“点赞数”的语义，而不是死磕 class=&#34;note-title&#34;。那一刻我关掉了 PyCharm，打开了终端。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-25 11:49:54.22 +0000 UTC'>March 25, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 告别Selenium！Claude Code &#43; Chrome MCP 实现自然语言驱动的零代码浏览器自动化" href="http://localhost:1313/posts/2026-03-25-gbseleniumclaudecodechromemcps/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>准备工作：环境与工具配置 在正式进入命理应用开发前，必须搭建一个稳定、可预测、与 Claude Code 高度协同的开发环境。这不是简单的“装好 Xcode 就行”，而是为 AI 编程建立清晰的边界和契约——让 Claude 知道它在什么系统上运行、用什么语法、遵循什么约束。
 首先，确认你的 macOS 版本 ≥ Ventura（13.0），并在终端执行以下命令验证 Xcode 命令行工具完整性：
-xcode-select --install # 若提示已安装，则跳过；否则按向导完成安装 sw_vers && xcodebuild -version ✅ 正确输出应类似：
-ProductName: macOS ProductVersion: 14.5 BuildVersion: 23F79 Xcode 15.4 Build version 15F31d 接着，下载并安装 Cursor IDE（v0.48+ 推荐）。它对 Claude Code 的集成最成熟：打开设置 → Settings → Extensions → 搜索 “Claude Code” → 启用插件。API Key 配置入口位于：
+xcode-select --install # 若提示已安装，则跳过；否则按向导完成安装 sw_vers &amp;&amp; xcodebuild -version ✅ 正确输出应类似：
+ProductName: macOS ProductVersion: 14.5 BuildVersion: 23F79 Xcode 15.4 Build version 15F31d 接着，下载并安装 Cursor IDE（v0.48&#43; 推荐）。它对 Claude Code 的集成最成熟：打开设置 → Settings → Extensions → 搜索 “Claude Code” → 启用插件。API Key 配置入口位于：
 Settings → Extensions → Claude Code → API Key（⚠️ 不是 Cursor 自带的 “Claude” 插件，务必认准官方图标）
-...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型" href=https://zhitong.uk/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计</h2></header><div class=entry-content><p>引言：为什么Claude Code能成为TDD与设计的“协作者”而非“助手” 传统AI编程助手（如GitHub Copilot）本质是语法补全引擎：它观察你已写的几行代码，预测下一行最可能的token序列。当你敲下 if amount > 0:，它大概率补全 return amount * 0.1——但这只是对已有结构的延续，而非对业务契约的回应。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型" href="http://localhost:1313/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引言：为什么Claude Code能成为TDD与设计的“协作者”而非“助手” 传统AI编程助手（如GitHub Copilot）本质是语法补全引擎：它观察你已写的几行代码，预测下一行最可能的token序列。当你敲下 if amount &gt; 0:，它大概率补全 return amount * 0.1——但这只是对已有结构的延续，而非对业务契约的回应。
 而Claude Code的核心跃迁在于：它能逆向解析测试用例中的隐含契约，并据此主动发起设计对话。我们来看一个真实对比：
-需求：实现 calculateTax(amount: float, region: str) -> float
-Copilot 行为：你在空函数里输入 def calculateTax(，它立即补全 amount, region):；你再敲 if region == "CA":，它续上 return amount * 0.075；接着 elif region == "NY": → return amount * 0.08875……最终生成一堆硬编码分支，无法应对税率策略变更。
+需求：实现 calculateTax(amount: float, region: str) -&gt; float
+Copilot 行为：你在空函数里输入 def calculateTax(，它立即补全 amount, region):；你再敲 if region == &#34;CA&#34;:，它续上 return amount * 0.075；接着 elif region == &#34;NY&#34;: → return amount * 0.08875……最终生成一堆硬编码分支，无法应对税率策略变更。
 Claude Code 行为：当你输入相同需求后，它不写任何实现，而是反问：
 “为保障可扩展性，我建议先定义 TaxStrategy 接口。请确认：
 税率是否需从配置中心/数据库动态加载？ 是否需支持阶梯税率（如金额分段计税）？ 是否要求线程安全？
 我将基于您的回答生成接口定义及 FixedRateStrategy、ConfigurableStrategy、ProgressiveStrategy 三种实现。” 这种“先问约束，再给代码”的范式，标志着开发重心从“如何写对语法”转向“如何定义正确边界”。本文目标明确：将Claude Code嵌入开发生命周期的决策咽喉点——不是让它帮你写for循环，而是让它帮你决定要不要用for循环。
-准备工作：环境配置与Claude Code最佳实践设置 安装与密钥管理 VS Code：安装官方 Claude Code 插件 API密钥安全配置（严禁明文写入代码！）： # .env 文件（加入 .gitignore） CLAUDE_API_KEY=sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx // claude-config.json（项目根目录） { "model": "claude-3-5-sonnet-20240620", "temperature": 0.2, "max_tokens": 2048, "system_prompt": "你是一名资深Python后端工程师，专注TDD与微服务架构。所有输出必须包含可运行代码、明确假设列表、TODO标记，并禁用任何非标准库依赖。", "stop_sequences": ["\n\n", "```"] } 关键配置警告 ✅ 必须禁用自动提交：在插件设置中关闭 Auto Submit on Enter，所有输出需人工审查 ⚠️ stop_sequences 缺失会导致代码截断：例如生成的pytest测试缺了 assert 行 ⚠️ 忽略 tool_use 响应格式会解析失败：当Claude返回 { "type": "tool_use", "name": "python_interpreter", ... } 时，需用对应工具执行而非直接渲染 第一步：用Claude Code驱动TDD全流程（红→绿→重构） 以Flask用户API为例，完整演示三阶段闭环：
-...</p></div><footer class=entry-footer><span title='2026-02-19 07:47:37.687 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计" href=https://zhitong.uk/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力</h2></header><div class=entry-content><p>引言：为什么精准提问对Claude Code至关重要 Claude 3.5 Sonnet（尤其是其专为代码优化的 claude-3-5-sonnet-latest）在代码理解任务中展现出显著优势：它对Python类型提示、TypeScript接口推导、Django/Flask框架模式识别准确率比通用LLM高42%（Anthropic内部基准测试，2024 Q2），且能稳定处理长达200K token的上下文——但强大能力不等于鲁棒响应。模糊提问会直接触发模型的“安全退避机制”，导致输出泛化、遗漏关键路径，甚至虚构API行为。
+准备工作：环境配置与Claude Code最佳实践设置 安装与密钥管理 VS Code：安装官方 Claude Code 插件 API密钥安全配置（严禁明文写入代码！）： # .env 文件（加入 .gitignore） CLAUDE_API_KEY=sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx // claude-config.json（项目根目录） { &#34;model&#34;: &#34;claude-3-5-sonnet-20240620&#34;, &#34;temperature&#34;: 0.2, &#34;max_tokens&#34;: 2048, &#34;system_prompt&#34;: &#34;你是一名资深Python后端工程师，专注TDD与微服务架构。所有输出必须包含可运行代码、明确假设列表、TODO标记，并禁用任何非标准库依赖。&#34;, &#34;stop_sequences&#34;: [&#34;\n\n&#34;, &#34;```&#34;] } 关键配置警告 ✅ 必须禁用自动提交：在插件设置中关闭 Auto Submit on Enter，所有输出需人工审查 ⚠️ stop_sequences 缺失会导致代码截断：例如生成的pytest测试缺了 assert 行 ⚠️ 忽略 tool_use 响应格式会解析失败：当Claude返回 { &#34;type&#34;: &#34;tool_use&#34;, &#34;name&#34;: &#34;python_interpreter&#34;, ... } 时，需用对应工具执行而非直接渲染 第一步：用Claude Code驱动TDD全流程（红→绿→重构） 以Flask用户API为例，完整演示三阶段闭环：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 07:47:37.687 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计" href="http://localhost:1313/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引言：为什么精准提问对Claude Code至关重要 Claude 3.5 Sonnet（尤其是其专为代码优化的 claude-3-5-sonnet-latest）在代码理解任务中展现出显著优势：它对Python类型提示、TypeScript接口推导、Django/Flask框架模式识别准确率比通用LLM高42%（Anthropic内部基准测试，2024 Q2），且能稳定处理长达200K token的上下文——但强大能力不等于鲁棒响应。模糊提问会直接触发模型的“安全退避机制”，导致输出泛化、遗漏关键路径，甚至虚构API行为。
 典型失败场景俯拾皆是：
-❌ “修一下这个bug” → 模型无法定位未提供的异常堆栈或复现步骤； ❌ “优化这段代码” → 无性能指标（QPS/内存/延迟）、无约束条件（可读性优先？还是CPU热点？），结果可能用functools.lru_cache掩盖了根本的N+1查询问题； ❌ “解释这段代码” → 未声明粒度（函数级？数据流级？安全语义级？），返回变成教科书式语法复述，漏掉os.path.join()在Windows路径拼接中的空字节注入风险。 来看一个真实对比案例（基于Flask路由函数）：
-# 原始模糊Prompt： # “解释下面这段代码” def upload_file(): file = request.files['file'] filename = secure_filename(file.filename) file.save(os.path.join('/tmp', filename)) return jsonify({"status": "ok"}) → Claude Code响应（简化）：
+❌ “修一下这个bug” → 模型无法定位未提供的异常堆栈或复现步骤； ❌ “优化这段代码” → 无性能指标（QPS/内存/延迟）、无约束条件（可读性优先？还是CPU热点？），结果可能用functools.lru_cache掩盖了根本的N&#43;1查询问题； ❌ “解释这段代码” → 未声明粒度（函数级？数据流级？安全语义级？），返回变成教科书式语法复述，漏掉os.path.join()在Windows路径拼接中的空字节注入风险。 来看一个真实对比案例（基于Flask路由函数）：
+# 原始模糊Prompt： # “解释下面这段代码” def upload_file(): file = request.files[&#39;file&#39;] filename = secure_filename(file.filename) file.save(os.path.join(&#39;/tmp&#39;, filename)) return jsonify({&#34;status&#34;: &#34;ok&#34;}) → Claude Code响应（简化）：
 “这是一个文件上传路由，使用Flask接收文件，调用secure_filename过滤文件名，保存到/tmp目录并返回JSON。”
-⚠️ 缺失关键信息：未指出/tmp硬编码路径的安全隐患（任意用户可覆盖系统临时文件）、未警示request.files['file']缺少Content-Type校验、未说明secure_filename对Unicode路径的处理缺陷。
+⚠️ 缺失关键信息：未指出/tmp硬编码路径的安全隐患（任意用户可覆盖系统临时文件）、未警示request.files[&#39;file&#39;]缺少Content-Type校验、未说明secure_filename对Unicode路径的处理缺陷。
 而结构化Prompt：
-# ROLE: 资深Python安全工程师，专注Web应用渗透测试 # CONTEXT: Flask 2.3.3, Werkzeug 2.3.7, Python 3.11 # TASK: 按OWASP Top 10标准逐行标注安全风险点，明确漏洞类型、利用条件、修复建议 # CONSTRAINTS: 仅输出Markdown表格，含列：行号 | 代码片段 | 风险类型 | CVSSv3评分 | 修复方案 # EXAMPLE: # | 3 | file = request.files['file'] | 失效的访问控制 | 6.5 | 添加@auth_required装饰器并校验用户角色 | → 响应精准命中5处风险（含/tmp目录遍历、secure_filename绕过、MIME类型缺失等），并提供对应CVE编号与修复代码片段。
-...</p></div><footer class=entry-footer><span title='2026-02-19 04:51:18.727 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力" href=https://zhitong.uk/posts/2026-02-19-jztwdysypromptengineeringjycla/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>初识Claude Code：告别传统编码，拥抱AI结对编程</h2></header><div class=entry-content><p>1. 环境准备：安装Claude Code并完成首次配置 在正式开启AI结对编程前，稳定可靠的本地环境是高效协作的前提。Claude Code 官方插件目前原生支持 VS Code（v1.85+）和 JetBrains 全系 IDE（IntelliJ IDEA 2023.3+、PyCharm 2023.3+ 等），暂不支持 Vim/Neovim 原生集成或旧版编辑器。
+# ROLE: 资深Python安全工程师，专注Web应用渗透测试 # CONTEXT: Flask 2.3.3, Werkzeug 2.3.7, Python 3.11 # TASK: 按OWASP Top 10标准逐行标注安全风险点，明确漏洞类型、利用条件、修复建议 # CONSTRAINTS: 仅输出Markdown表格，含列：行号 | 代码片段 | 风险类型 | CVSSv3评分 | 修复方案 # EXAMPLE: # | 3 | file = request.files[&#39;file&#39;] | 失效的访问控制 | 6.5 | 添加@auth_required装饰器并校验用户角色 | → 响应精准命中5处风险（含/tmp目录遍历、secure_filename绕过、MIME类型缺失等），并提供对应CVE编号与修复代码片段。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 04:51:18.727 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力" href="http://localhost:1313/posts/2026-02-19-jztwdysypromptengineeringjycla/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">初识Claude Code：告别传统编码，拥抱AI结对编程
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 环境准备：安装Claude Code并完成首次配置 在正式开启AI结对编程前，稳定可靠的本地环境是高效协作的前提。Claude Code 官方插件目前原生支持 VS Code（v1.85&#43;）和 JetBrains 全系 IDE（IntelliJ IDEA 2023.3&#43;、PyCharm 2023.3&#43; 等），暂不支持 Vim/Neovim 原生集成或旧版编辑器。
 ✅ 安装验证四步法：
-打开 VS Code → Extensions（Ctrl+Shift+X）→ 搜索 Claude Code → 点击 Install（官方发布者：Anthropic）； 安装完成后，右下角状态栏出现 🦾 图标（即 Claude 状态指示器）； 按 Ctrl+Shift+P 打开命令面板，输入 Claude，可见至少 8 个以 Claude: 开头的命令（如 Claude: Start Chat, Claude: Explain Selection）； 重启 VS Code（⚠️ 必须重启！部分功能依赖初始化服务端连接）。 🔐 账号绑定关键提醒（国内用户必读）：
+打开 VS Code → Extensions（Ctrl&#43;Shift&#43;X）→ 搜索 Claude Code → 点击 Install（官方发布者：Anthropic）； 安装完成后，右下角状态栏出现 🦾 图标（即 Claude 状态指示器）； 按 Ctrl&#43;Shift&#43;P 打开命令面板，输入 Claude，可见至少 8 个以 Claude: 开头的命令（如 Claude: Start Chat, Claude: Explain Selection）； 重启 VS Code（⚠️ 必须重启！部分功能依赖初始化服务端连接）。 🔐 账号绑定关键提醒（国内用户必读）：
 登录需使用 Anthropic 官方支持地区邮箱（如 .com 域名，Gmail/Outlook 推荐；国内企业邮箱或 QQ 邮箱易触发风控）； 若提示 “Region not supported”，请确认网络出口 IP 归属地（建议使用合规跨境访问服务，并确保 DNS 解析正常）； 登录入口：状态栏 🦾 图标 → Click → “Sign in with Anthropic”。 ⚙️ 两种连接模式对比与配置：
-...</p></div><footer class=entry-footer><span title='2026-02-19 03:34:10.97 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 初识Claude Code：告别传统编码，拥抱AI结对编程" href=https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 03:34:10.97 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 初识Claude Code：告别传统编码，拥抱AI结对编程" href="http://localhost:1313/posts/2026-02-19-csclaudecodegbctbmybaijdbc/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

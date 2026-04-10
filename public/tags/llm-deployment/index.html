@@ -1,13 +1,266 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>LLM Deployment | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/tags/llm-deployment/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/tags/llm-deployment/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/tags/llm-deployment/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/tags/llm-deployment/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="LLM Deployment"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="LLM Deployment"><meta name=twitter:description content="这是智通成长的历程"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>LLM Deployment</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>AI架构师不是CTO替补，而是PM的‘超能力折叠’：Prompt工程×体验设计×系统权衡</h2></header><div class=entry-content><p>引子：一个失败的“智能客服升级”现场 上周五下午，某电商客服中台会议室里空气凝固。PM在大屏上划出一条刺眼的红色曲线——上线72小时后，“智能意图识别准确率”从基线81.3%跌至69.1%，投诉量环比激增22%。后台日志显示，近40%的用户在输入“截图发你了”“语音转的字不对”“上次那个蓝色的”后，系统直接返回“未识别到有效订单信息”，触发人工强插。
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>LLM Deployment | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/tags/llm-deployment/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/llm-deployment/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/llm-deployment/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    LLM Deployment
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">AI架构师不是CTO替补，而是PM的‘超能力折叠’：Prompt工程×体验设计×系统权衡
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引子：一个失败的“智能客服升级”现场 上周五下午，某电商客服中台会议室里空气凝固。PM在大屏上划出一条刺眼的红色曲线——上线72小时后，“智能意图识别准确率”从基线81.3%跌至69.1%，投诉量环比激增22%。后台日志显示，近40%的用户在输入“截图发你了”“语音转的字不对”“上次那个蓝色的”后，系统直接返回“未识别到有效订单信息”，触发人工强插。
 复盘会上，技术同学快速列出“根因”：
 Prompt仅有一版通用 system message：“你是一个专业客服助手，请友好、准确地回答用户问题。” 前端未做输入清洗：OCR截屏文字含乱码（如“订単号：A8X#2F”）、ASR转写错字率高达18%（“退货”→“退或”、“京东”→“京冻”）； 模型选型盲目：为“够用又省钱”，选用7B开源模型本地部署，但未压测真实链路——实测首字延迟（Time to First Token）P95达2.8s，用户平均等待3.2秒后二次点击，造成重复请求风暴。 真正的断点不在代码，而在角色真空：没人负责定义“当用户说‘那个’时，模型该追问还是该猜？”；没人校准“前端加载动画时长是否匹配LLM实际思考节奏”；更没人拍板：“为把首响压到1.5s内，是否接受语法纠错F1值下降0.03？”——这已不是API调用问题，而是语义契约、体验节奏与系统权衡三重能力的协同缺失。
 Prompt工程：不是写提示词，而是构建可验证的语义契约 Prompt不是给模型下命令，而是和它签一份带SLA的协作协议：明确输入容错边界、状态记忆规则、输出结构契约，以及越界时的兜底动作。
 以电商售后高频模糊请求“我要退货但没订单号”为例，我们放弃单轮泛化Prompt，改用三层防御式设计：
-Few-shot示例强制对齐语义（含噪声鲁棒性）； JSON Schema硬约束输出字段（避免自由发挥）； Guardrail Prompt拦截歧义（如用户说“上次买的那个蓝色的”，禁止提取SKU，必须触发追问）。 # OpenAI Function Calling v2 模板（精简版） system_prompt = """ 你是一个电商售后助手，严格按以下规则执行： 1. 输入可能含OCR错字、ASR乱码、指代模糊（如"那个"、"之前"），需主动澄清； 2. 输出必须为合法JSON，符合下方schema； 3. 若无法从输入确定订单号/商品ID/时间范围，字段置null并设置need_clarify=true； 4. 禁止虚构任何信息（如自行补全订单号、猜测SKU）。 """ functions = [{ "name": "submit_return_request", "parameters": { "type": "object", "properties": { "order_id": {"type": "string", "description": "纯数字订单号，长度12-16位，若无则为null"}, "sku_id": {"type": "string", "description": "商品编码，若指代模糊则为null"}, "reason": {"type": "string", "enum": ["质量问题", "发错货", "不想要了", "其他"]}, "need_clarify": {"type": "boolean", "description": "是否需用户补充信息"} }, "required": ["order_id", "sku_id", "reason", "need_clarify"] } }] 输入 模型输出（bad case） 修正后输出 “上次买的那个蓝色的，快递还没拆，要退” {"order_id":"20240512XXXX","sku_id":"SKU-BLUE-001",...} ❌（虚构） {"order_id":null,"sku_id":null,"reason":"不想要了","need_clarify":true} ✅ AB测试结果：结构化输出成功率从63%跃升至91%，人工兜底率下降40%。Prompt的终极目标不是让模型“更聪明”，而是让它“更守约”。
-...</p></div><footer class=entry-footer><span title='2026-02-21 09:58:34.814 +0000 UTC'>February 21, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to AI架构师不是CTO替补，而是PM的‘超能力折叠’：Prompt工程×体验设计×系统权衡" href=https://zhitong.uk/posts/2026-02-22-aijgsbsctotbespmdcnlzdpromptgc/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+Few-shot示例强制对齐语义（含噪声鲁棒性）； JSON Schema硬约束输出字段（避免自由发挥）； Guardrail Prompt拦截歧义（如用户说“上次买的那个蓝色的”，禁止提取SKU，必须触发追问）。 # OpenAI Function Calling v2 模板（精简版） system_prompt = &#34;&#34;&#34; 你是一个电商售后助手，严格按以下规则执行： 1. 输入可能含OCR错字、ASR乱码、指代模糊（如&#34;那个&#34;、&#34;之前&#34;），需主动澄清； 2. 输出必须为合法JSON，符合下方schema； 3. 若无法从输入确定订单号/商品ID/时间范围，字段置null并设置need_clarify=true； 4. 禁止虚构任何信息（如自行补全订单号、猜测SKU）。 &#34;&#34;&#34; functions = [{ &#34;name&#34;: &#34;submit_return_request&#34;, &#34;parameters&#34;: { &#34;type&#34;: &#34;object&#34;, &#34;properties&#34;: { &#34;order_id&#34;: {&#34;type&#34;: &#34;string&#34;, &#34;description&#34;: &#34;纯数字订单号，长度12-16位，若无则为null&#34;}, &#34;sku_id&#34;: {&#34;type&#34;: &#34;string&#34;, &#34;description&#34;: &#34;商品编码，若指代模糊则为null&#34;}, &#34;reason&#34;: {&#34;type&#34;: &#34;string&#34;, &#34;enum&#34;: [&#34;质量问题&#34;, &#34;发错货&#34;, &#34;不想要了&#34;, &#34;其他&#34;]}, &#34;need_clarify&#34;: {&#34;type&#34;: &#34;boolean&#34;, &#34;description&#34;: &#34;是否需用户补充信息&#34;} }, &#34;required&#34;: [&#34;order_id&#34;, &#34;sku_id&#34;, &#34;reason&#34;, &#34;need_clarify&#34;] } }] 输入 模型输出（bad case） 修正后输出 “上次买的那个蓝色的，快递还没拆，要退” {&#34;order_id&#34;:&#34;20240512XXXX&#34;,&#34;sku_id&#34;:&#34;SKU-BLUE-001&#34;,...} ❌（虚构） {&#34;order_id&#34;:null,&#34;sku_id&#34;:null,&#34;reason&#34;:&#34;不想要了&#34;,&#34;need_clarify&#34;:true} ✅ AB测试结果：结构化输出成功率从63%跃升至91%，人工兜底率下降40%。Prompt的终极目标不是让模型“更聪明”，而是让它“更守约”。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-21 09:58:34.814 +0000 UTC'>February 21, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to AI架构师不是CTO替补，而是PM的‘超能力折叠’：Prompt工程×体验设计×系统权衡" href="http://localhost:1313/posts/2026-02-22-aijgsbsctotbespmdcnlzdpromptgc/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

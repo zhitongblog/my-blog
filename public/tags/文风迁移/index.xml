@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>文风迁移 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E6%96%87%E9%A3%8E%E8%BF%81%E7%A7%BB/</link>
+    <description>Recent content in 文风迁移 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 29 Mar 2026 06:05:28 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%96%87%E9%A3%8E%E8%BF%81%E7%A7%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>写了50篇稿后，它居然学会了我的文风？</title>
+      <link>http://localhost:1313/posts/2026-03-29-xl50pghtjrxhlwdwf/</link>
+      <pubDate>Sun, 29 Mar 2026 06:05:28 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-29-xl50pghtjrxhlwdwf/</guid>
+      <description>本文记录作者训练AI模仿个人文风的真实过程：从50篇人工改稿到AI自主复现标志性句式与表达习惯，揭秘文风迁移、提示词优化与效果评估的关键实践。</description>
+    </item>
+    <item>
+      <title>写了100篇稿后，它居然学会了我的文风！</title>
+      <link>http://localhost:1313/posts/2026-03-28-xl100pghtjrxhlwdwf/</link>
+      <pubDate>Sat, 28 Mar 2026 04:45:47 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-28-xl100pghtjrxhlwdwf/</guid>
+      <description>分享使用StoryAlter训练AI模仿个人文风的真实经历：上传3篇旧稿后，AI在第100篇稿件中精准复刻口语化表达、破折号节奏与原创金句，实现从‘交作业’到‘像本人说话’的质变。</description>
+    </item>
+  </channel>
+</rss>

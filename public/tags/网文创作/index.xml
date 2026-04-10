@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>网文创作 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E7%BD%91%E6%96%87%E5%88%9B%E4%BD%9C/</link><description>Recent content in 网文创作 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Wed, 18 Mar 2026 02:39:57 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E7%BD%91%E6%96%87%E5%88%9B%E4%BD%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>网文作者集体换枪！StoryAlter实测：黄金三章通过率提升67%，比笔灵AI更懂编辑的‘毒舌’视角</title><link>https://zhitong.uk/posts/2026-03-18-wwzzjthqstoryalterschjsztglts6/</link><pubDate>Wed, 18 Mar 2026 02:39:57 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-18-wwzzjthqstoryalterschjsztglts6/</guid><description>实测StoryAlter对网文‘黄金三章’的优化效果：通过率提升67%，精准解析编辑拒稿潜台词，对比笔灵AI展现更强的行业语境理解与钩子设计能力。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>网文创作 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E7%BD%91%E6%96%87%E5%88%9B%E4%BD%9C/</link>
+    <description>Recent content in 网文创作 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Mar 2026 02:39:57 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%BD%91%E6%96%87%E5%88%9B%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网文作者集体换枪！StoryAlter实测：黄金三章通过率提升67%，比笔灵AI更懂编辑的‘毒舌’视角</title>
+      <link>http://localhost:1313/posts/2026-03-18-wwzzjthqstoryalterschjsztglts6/</link>
+      <pubDate>Wed, 18 Mar 2026 02:39:57 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-18-wwzzjthqstoryalterschjsztglts6/</guid>
+      <description>实测StoryAlter对网文‘黄金三章’的优化效果：通过率提升67%，精准解析编辑拒稿潜台词，对比笔灵AI展现更强的行业语境理解与钩子设计能力。</description>
+    </item>
+  </channel>
+</rss>

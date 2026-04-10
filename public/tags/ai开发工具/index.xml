@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AI开发工具 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/ai%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</link><description>Recent content in AI开发工具 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Thu, 19 Feb 2026 03:34:10 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/ai%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>初识Claude Code：告别传统编码，拥抱AI结对编程</title><link>https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</link><pubDate>Thu, 19 Feb 2026 03:34:10 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</guid><description>本文详解Claude Code插件的安装配置流程，涵盖VS Code与JetBrains IDE支持、四步验证法及国内用户账号绑定要点，助开发者快速开启AI结对编程新体验。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI开发工具 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/ai%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in AI开发工具 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 19 Feb 2026 03:34:10 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>初识Claude Code：告别传统编码，拥抱AI结对编程</title>
+      <link>http://localhost:1313/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</link>
+      <pubDate>Thu, 19 Feb 2026 03:34:10 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</guid>
+      <description>本文详解Claude Code插件的安装配置流程，涵盖VS Code与JetBrains IDE支持、四步验证法及国内用户账号绑定要点，助开发者快速开启AI结对编程新体验。</description>
+    </item>
+  </channel>
+</rss>

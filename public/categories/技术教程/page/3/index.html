@@ -1,19 +1,432 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>技术教程 | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="技术教程"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="技术教程"><meta name=twitter:description content="这是智通成长的历程"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>技术教程</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验</h2></header><div class=entry-content><p>1. 环境准备与Claude API接入 让我们从零开始，快速打通本地开发环境与 Claude 的 AI 能力。这一步是后续所有自动化能力的地基，务必稳扎稳打。
-首先安装官方 SDK（推荐使用 Python 3.9+）：
-pip install anthropic python-dotenv ✅ python-dotenv 非必需但强烈推荐——它能安全加载 .env 文件，避免 API Key 硬编码或意外提交。
-接着，访问 Anthropic Console → API Keys → 点击 Create Key，复制生成的密钥（形如 sk-ant-api03-...）。切勿截图、勿存 GitHub、勿发群聊！
-在项目根目录创建 .env 文件（注意：文件名以 . 开头，隐藏）：
-ANTHROPIC_API_KEY=sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 最后，编写最小验证脚本 test_claude.py：
-# test_claude.py import os from dotenv import load_dotenv import anthropic load_dotenv() # 加载 .env 中的 ANTHROPIC_API_KEY client = anthropic.Anthropic() try: message = client.messages.create( model="claude-3-5-sonnet-20240620", max_tokens=100, messages=[{"role": "user", "content": "请用中文说一句打招呼的话"}] ) print("✅ 成功调用 Claude：", message.content[0].text.strip()) except Exception as e: print("❌ 调用失败：", e) 运行 python test_claude.py，应输出类似：
-✅ 成功调用 Claude：你好！我是 Claude，很高兴为你提供帮助。
-...</p></div><footer class=entry-footer><span title='2026-02-18 05:44:20.652 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验" href=https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>从‘试用’到‘投产’：一位全栈工程师的Claude Code工程化实践避坑手册</h2></header><div class=entry-content><p>一、为什么“试用很爽，上线就崩”？——我的三次翻车现场实录 2024.03.12 上午10:23 —— CI流水线突然卡死在 claude-plugin:run 步骤。本地 npx claude-gen --component Header 三秒出结果，CI里却卡住 90 秒后被 Kubernetes OOMKilled。日志最后一行是：
-[claude-plugin] timeout after 60s waiting for Claude API response (retry=3) 没人想到，我们给插件配的 CLAUDE_TIMEOUT=60 是硬编码进 Dockerfile 的，而 CI 环境 DNS 解析慢了 200ms，叠加重试逻辑直接超时。更讽刺的是，本地 .env 里写了 CLAUDE_TIMEOUT=120，但插件根本没读——它只认环境变量，不读文件。
-2024.04.05 下午16:47 —— 生产监控告警：useEffect dependency warning 爆发式增长。React DevTools 里一切正常，但 Sentry 报出上千条：
-Warning: React has detected a change in the order of Hooks called by MyDataGrid. This will lead to bugs and errors if not fixed. at MyDataGrid (src/components/MyDataGrid.tsx:42:3) at useEffect (react.development.js:2439) 翻代码才发现：Claude生成的组件里，useEffect(() => { loadData(); }, [searchTerm]) 被写成了 useEffect(() => { loadData(); }, []) —— 因为 prompt 里我只写了“加个搜索功能”，没明确说“依赖项必须包含 searchTerm”。开发时 searchTerm 恰好是全局常量，所以没报错；生产环境它是从 URL 参数动态解析的，一变就崩。
-...</p></div><footer class=entry-footer><span title='2026-02-18 05:44:20.652 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 从‘试用’到‘投产’：一位全栈工程师的Claude Code工程化实践避坑手册" href=https://zhitong.uk/posts/2026-02-18-csydtcywqzgcsdclaudecodegchsjb/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://zhitong.uk/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/page/2/>«&nbsp;Prev&nbsp;</a></nav></footer></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>技术教程 | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    技术教程
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第6篇：模拟考试不只计分——打造高仿真EJU机考体验引擎
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>场景痛点：为什么EJU机考模拟不能只靠静态题库？ 2023年东京某语言学校对327名EJU备考学生的深度访谈中，一个高频词反复出现：“卡住”——不是卡在语法点上，而是卡在系统行为里：
+“做到第5题时突然黑屏重载，再进来发现时间只剩47秒，但PDF题库从没教过我怎么应对这种中断。”
+“点击‘下一题’后界面没反应，等了3秒才跳转，结果考试当天真遇到1.8秒延迟，手心全是汗。”
+我们对72名受试者进行眼动&#43;操作日志联合分析（n=72），发现72%的临场焦虑源于“体验断层”：传统PDF/网页模拟器无法复现EJU官方机考系统的四大动态特征：
+自适应难度跳转（如阅读理解模块根据前2题正确率动态调整第3题文本长度与设问层级）； 毫秒级时间压力反馈（倒计时每200ms刷新一次UI，并在剩余30秒时触发震动提示）； 强上下文界面逻辑（听力题播放中禁用返回键，作文题草稿区支持实时字数&#43;语法错误高亮）； 错题即时解析路径（非简单显示答案，而是按错误类型→教材对应章节→同类题变式三级展开）。 这揭示了一个被长期忽视的真相：EJU备考的核心瓶颈，早已从“题目是否覆盖考点”，转向“体验是否仿真流程”。当考生在模考中从未经历过“超时强制提交→自动标记TIMEOUT→进入错题归因页”的完整链路，真实考场中0.5秒的界面响应延迟就足以触发认知过载。
+Prompt工程设计：构建三层语义锚定指令集 要让LLM成为可靠的“考试流程引擎”，必须超越“问答生成”，转向规则可执行、状态可追溯、情感可调控的指令体系。我们基于EJU官方《2024年度考试实施要项》V2.1版，设计三层语义锚定Prompt结构：
+&lt;SYSTEM&gt; 你作为EJU官方认证模拟引擎（EJU-SIM v3.2），严格遵循&lt;EJU_RULES_V2.1&gt;。禁止生成任何与指南矛盾的评分逻辑或界面行为。所有输出必须为JSON格式，含&#34;next_action&#34;字段。 &lt;/SYSTEM&gt; &lt;USER&gt; [用户操作] 点击“开始阅读理解” [当前状态] {&#34;module&#34;: &#34;reading&#34;, &#34;time_left&#34;: 1500, &#34;question_index&#34;: 1} &lt;/USER&gt; &lt;ASSISTANT&gt; { &#34;next_action&#34;: &#34;show_question&#34;, &#34;question_id&#34;: &#34;R2023-04-01&#34;, &#34;text&#34;: &#34;「〜たばかりだ」は、動作が完了した直後を表す……&#34;, &#34;options&#34;: [&#34;A. 助詞の格機能&#34;, &#34;B. 動詞の完了態&#34;, &#34;C. 形容動詞の連体形&#34;, &#34;D. 接続助詞の並列用法&#34;], &#34;explanation&#34;: { &#34;correct&#34;: &#34;A. 助詞の格機能（『た』の完了意味を補足する格助詞『ばかり』の機能）&#34;, &#34;distractors&#34;: [ &#34;B. 動詞の完了態：『た』自体が完了態だが、『ばかり』は助詞であり動詞ではない&#34;, &#34;C. 形容動詞の連体形：『ばかり』は形容動詞でないため該当しない&#34; ] }, &#34;emotion_hint&#34;: &#34;neutral&#34; } &lt;/ASSISTANT&gt; 关键约束实现：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-20 12:09:15.819 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第6篇：模拟考试不只计分——打造高仿真EJU机考体验引擎" href="http://localhost:1313/posts/2026-02-20-d6pmnksbzjfdzgfzejujktyyq/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Claude Code &#43; Xcode 26.3：我用三句话描述需求，10分钟上架了首个iPhone应用
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>准备工作：环境搭建与账号配置 开发一个能上架 App Store 的 SwiftUI 应用，第一步不是写代码，而是铺好“地基”。跳过这步或草率配置，后续 90% 的报错（签名失败、模拟器白屏、TestFlight 拒绝上传）都源于此。
+最低系统要求必须严格满足：
+macOS Sonoma 14.5 或更高版本（低于此版本无法运行 Xcode 16.3 的 Swift 5.9 运行时） Xcode 16.3（2024 年 5 月最新稳定版，支持 iOS 17.5 SDK 及 SwiftUI 新特性） Apple Developer 账号：个人账号即可完成开发、真机调试与 TestFlight 内部测试；但若需邀请外部测试员（&gt;100 人）或正式上架，组织账号更稳妥（个人账号的 External TestFlight 需 Apple 审核邀请邮件，平均延迟 2–3 工作日） ✅ 安装验证：打开终端执行
+xcodebuild -version # 输出应为：Xcode 16.3 Build version 16E214 Apple ID 与开发者证书手动配置（关键！）：
+打开 Xcode → Preferences → Accounts → “&#43;” 添加 Apple ID（确保该 ID 已加入 Apple Developer Program） 选择账号 → 点击右下角 “Manage Certificates…” → 点击 “&#43;” → 选择 “Apple Development” → 自动生成签名证书 启用自动签名：新建项目后，在 Project Navigator 中选中项目根节点 → Signing &amp; Capabilities → 勾选 “Automatically manage signing”，并选择对应 Team ⚠️ 重要注意事项：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to Claude Code &#43; Xcode 26.3：我用三句话描述需求，10分钟上架了首个iPhone应用" href="http://localhost:1313/posts/2026-02-19-claudecodexcode263wysjhmsxq10f/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第三步：五行八卦上手——集成本地命理算法（八字排盘逻辑）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、前置知识与环境准备 命理推演的本质是时间坐标的精密转换与关系建模，而非玄学黑箱。本方案严格遵循《渊海子平》《滴天髓》等经典框架，将八字四柱（年、月、日、时）视为一个可计算的时空坐标系——输入是用户提供的公历出生时间与地理经度（如 &#34;1992-02-05 14:30:00&#34;, &#34;116.4&#34;），输出是结构化命理数据：四柱干支、十神关系、五行旺衰分值、先天八卦映射编号。整个流程完全离线运行，不依赖任何网络API，既保障用户隐私（出生信息永不离开本地），也支持无网环境下的学术复现与教学演示。
+⚠️ 关键边界声明：
+输入：datetime 对象（已带 pytz 时区） &#43; 精确到0.1°的东经度数（如北京116.4°E，上海121.5°E） 输出：JSON 可序列化字典，含 {&#39;year&#39;: &#39;壬申&#39;, &#39;month&#39;: &#39;壬寅&#39;, &#39;day&#39;: &#39;戊辰&#39;, &#39;hour&#39;: &#39;己未&#39;, &#39;ten_gods&#39;: [...], &#39;element_strength&#39;: {&#39;wood&#39;: 0.82, ...}, &#39;bagua_number&#39;: 6} 必需依赖与环境配置 我们禁用所有网络请求类库（如 requests, httpx），仅选用轻量、确定性高的科学计算基础包：
+# 推荐 Python 版本：3.9&#43;（兼容 `zoneinfo` 且避免旧版 `pytz` 时区陷阱） python3.9 -m venv bazi-env source bazi-env/bin/activate # Linux/macOS # bazi-env\Scripts\activate # Windows pip install julian pytz numpy julian：提供高精度儒略日（JD）计算，误差 &lt; 0.001秒，是节气时刻推算的基石 pytz：处理中国标准时间（CST, Asia/Shanghai）与真太阳时转换 numpy：用于五行旺衰的向量化加权计算（后续章节详述） 时区与真太阳时校正：为什么经度不可省略？ 中国全境统一使用 Asia/Shanghai（UTC&#43;8），但真太阳时（True Solar Time）取决于实际地理经度。北京时间以东经120°为基准，每偏离1°，时间差约4分钟。例如：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第三步：五行八卦上手——集成本地命理算法（八字排盘逻辑）" href="http://localhost:1313/posts/2026-02-19-dsbwxbgssjcbdmlsfbzpplj/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>准备工作：环境与工具配置 在正式进入命理应用开发前，必须搭建一个稳定、可预测、与 Claude Code 高度协同的开发环境。这不是简单的“装好 Xcode 就行”，而是为 AI 编程建立清晰的边界和契约——让 Claude 知道它在什么系统上运行、用什么语法、遵循什么约束。
+首先，确认你的 macOS 版本 ≥ Ventura（13.0），并在终端执行以下命令验证 Xcode 命令行工具完整性：
+xcode-select --install # 若提示已安装，则跳过；否则按向导完成安装 sw_vers &amp;&amp; xcodebuild -version ✅ 正确输出应类似：
+ProductName: macOS ProductVersion: 14.5 BuildVersion: 23F79 Xcode 15.4 Build version 15F31d 接着，下载并安装 Cursor IDE（v0.48&#43; 推荐）。它对 Claude Code 的集成最成熟：打开设置 → Settings → Extensions → 搜索 “Claude Code” → 启用插件。API Key 配置入口位于：
+Settings → Extensions → Claude Code → API Key（⚠️ 不是 Cursor 自带的 “Claude” 插件，务必认准官方图标）
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型" href="http://localhost:1313/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第五步：隐私即信仰——在iOS中安全存储生辰与命理结果（Keychain&#43;CoreData）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、为什么“生辰与命理数据”必须用Keychain而非UserDefaults或普通文件？ 在命理类App中，用户输入的「出生时间（Date）」和「出生地点（String）」看似普通，实则构成生物识别级敏感信息链：精确到分钟的出生时间 &#43; 城市级地点 → 可反推经纬度（误差≤1km）、本地时区、真太阳时（影响八字排盘精度），甚至结合公开气象数据库推算出生时刻光照/地磁参数。这已远超《个人信息保护法》第二十八条定义的“敏感个人信息”范畴——它具备强唯一性、不可变更性与高度可识别性。
+而明文存储风险触目惊心：
+UserDefaults 和 plist 文件以明文形式存于沙盒 Library/Preferences/，越狱设备可通过 iMazing 或 Apple Configurator 2 直接导出全部键值； 沙盒内普通 .json 文件在备份时（iTunes/iCloud）被完整打包，若用户启用“未加密本地备份”，攻击者仅需访问其Mac电脑即可读取所有命理数据； CoreData 默认 SQLite 数据库不启用加密（即使勾选“Use Core Data for storage”，其 .sqlite 文件仍为明文）。我们曾复现某款八字App泄露事件：攻击者通过越狱iPhone提取沙盒，用 DB Browser for SQLite 打开 PersistentStore.sqlite，直接看到 birth_year INTEGER, birth_city TEXT 等明文字段，批量导出超2.3万用户生辰数据并在暗网出售。 Apple官方文档明确指出：“Keychain Services provides a secure container for storing small pieces of sensitive data, such as passwords and cryptographic keys. Items stored in the keychain are encrypted by the system and protected with the user’s device passcode.”（Keychain Services Programming Guide）——其核心是系统级加密隔离：Keychain条目由Secure Enclave协同加密，即使设备被越狱且获得root权限，也无法解密其他应用的Keychain数据。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第五步：隐私即信仰——在iOS中安全存储生辰与命理结果（Keychain&#43;CoreData）" href="http://localhost:1313/posts/2026-02-19-dwbysjxyzioszaqccscymljgkeycha/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第六步：App Store通关指南——用Claude Code撰写审核文案、截图说明与元数据
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🎯 为什么审核文案、截图与元数据决定App Store上架成败 Apple 审核团队每年处理超 200 万次提交，而据《2023 App Store 审核透明度报告》及第三方审计机构 (AppFigures, 2024) 统计，在所有「首次提交即被拒」的案例中，72% 的拒绝直接源于元数据、截图或审核文案问题——而非崩溃、卡顿或隐私违规等技术缺陷。更关键的是：这些「非功能类拒审」100% 可通过前置合规优化规避。
+这背后有明确的规则依据。Apple《App Review Guidelines》明文约束：
+第4.3条（重复应用）：要求元数据（标题、副标题、描述）必须真实反映核心功能，禁止使用泛化词（如“all-in-one”）、排名宣称（“#1 app”）或模糊价值主张； 第5.1.1条（隐私说明）：截图若展示权限弹窗（如相册/定位），审核文案必须同步说明触发路径与用途； 第5.2.3条（截图规范）：每张截图需配15–30字符说明，且必须体现真实 UI 状态（禁用占位符、模糊水印、未完成动效）。 ![对比真实案例：左侧为模糊截图&#43;通用文案导致被拒；右侧为场景化截图&#43;Claude生成的精准文案一次过审]
+我们曾跟踪两个同架构工具类 App 的提交记录：
+App A（被拒）：截图仅用 iPhone 模拟器默认背景，文案写“Login to get started”；因无法验证登录流程真实性，被援引 5.1.1 条拒审； App B（一次过审）：截图聚焦「Tab Bar &gt; Profile &gt; Export Button」操作链，文案由 Claude Code 生成：“Demo account with pre-filled credentials logs in automatically → taps ‘Export’ in top-right corner → selects PDF format → confirms via system share sheet”。全程无主观形容词，全用 iOS 原生控件命名，48 小时内通过审核。 为何 Claude Code 在此场景胜出？它并非通用大模型，而是专为开发者工作流优化的 CLI 工具：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第六步：App Store通关指南——用Claude Code撰写审核文案、截图说明与元数据" href="http://localhost:1313/posts/2026-02-19-dlbappstoretgznyclaudecodezxsh/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">第四步：丝滑动效加持——用Claude Code优化Lottie动画与交互反馈
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、前置准备：环境搭建与依赖确认 在开始优化 Lottie 动效前，必须确保开发环境干净、工具链统一、AI 辅助能力就绪——这直接决定后续重构效率与代码质量。我们不追求“能跑就行”，而是为可维护、可压测、可回滚的动效系统打下基础。
+首先检查 Node.js 版本（Lottie Web v2.12&#43; 及现代 React/Vue 生态强烈依赖 ES2022&#43; 特性）：
+node -v # 必须 ≥ v18.0.0（推荐 v20.11&#43;） npm -v # npm ≥ 9.6，或使用 pnpm ≥ 8.15（更稳定） 接着安装核心依赖。根据技术栈选择其一（不建议混用）：
+✅ React 项目：优先选用 lottie-react（轻量、TypeScript 原生支持、自动销毁） npm install lottie-react # 或按需引入 lottie-web（更灵活但需手动管理生命周期） npm install lottie-web ✅ Vue 3 / 原生 Web：直接使用 lottie-web ✅ 轻量替代方案（静态/简单交互动效）：@lottiefiles/lottie-player（Web Component，零 JS bundle 开销） npm install @lottiefiles/lottie-player 图：lottie-web、lottie-react、lottie-player 适用场景对比（体积/控制粒度/SSR 支持）
+Claude Code 配置是本教程的关键加速器。我们强烈推荐使用 VS Code 官方扩展 “Claude Code”（v1.4&#43;），并完成以下配置：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 第四步：丝滑动效加持——用Claude Code优化Lottie动画与交互反馈" href="http://localhost:1313/posts/2026-02-19-dsbshdxjcyclaudecodeyhlottiedh/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 前置准备：环境与权限校验 在正式启用 Claude 智能编程能力前，务必完成严谨的环境校验——这一步看似琐碎，却直接决定后续所有功能是否稳定可用。尤其对国内开发者而言，网络与权限配置是高频卡点。
+首先，确认 VS Code 版本 ≥ 1.85（2023年12月发布）。该版本起全面支持 Webview2 渲染引擎与 Language Server Protocol v18&#43;，而 Claude Code 扩展依赖这两项底层能力实现低延迟交互与富文本响应。检查方式：Ctrl&#43;Shift&#43;P → 输入 Help: About → 查看第一行版本号。若低于 1.85，请前往 code.visualstudio.com 下载最新稳定版。
+接着，获取 Anthropic API Key：
+访问 Anthropic Console（需科学访问，国内用户建议配置系统级代理或使用可信企业级代理服务）； 注册/登录账户后，进入 API Keys → 点击 Create Key； 在 Key 名称中注明用途（如 vscode-claude-prod），生成后立即复制并安全保存（页面关闭后无法再次查看）； ✅ 推荐模型：claude-3-haiku-20240307（轻量、快响应，适合补全）或 claude-3-5-sonnet-20240620（强逻辑、长上下文，适合文档生成）。 验证 API 连通性（终端执行）：
+# 将 YOUR_API_KEY 替换为实际密钥（不带引号） export ANTHROPIC_API_KEY=&#34;sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#34; curl -X POST &#34;https://api.anthropic.com/v1/messages&#34; \ -H &#34;x-api-key: ${ANTHROPIC_API_KEY}&#34; \ -H &#34;anthropic-version: 2023-06-01&#34; \ -H &#34;content-type: application/json&#34; \ -d &#39;{ &#34;model&#34;: &#34;claude-3-haiku-20240307&#34;, &#34;max_tokens&#34;: 50, &#34;messages&#34;: [{&#34;role&#34;: &#34;user&#34;, &#34;content&#34;: &#34;输出 OK&#34;}] }&#39; ✅ 成功响应将返回 JSON，含 &#34;content&#34;:[{&#34;type&#34;:&#34;text&#34;,&#34;text&#34;:&#34;OK&#34;}]。若报 401 Unauthorized，请检查 Key 是否过期或被撤销；若超时（curl: (7) Failed to connect），请确认代理已全局生效（VS Code 需继承系统代理，可在设置中搜索 proxy 启用 http.proxySupport: override）。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 07:47:37.687 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成" href="http://localhost:1313/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引言：为什么精准提问对Claude Code至关重要 Claude 3.5 Sonnet（尤其是其专为代码优化的 claude-3-5-sonnet-latest）在代码理解任务中展现出显著优势：它对Python类型提示、TypeScript接口推导、Django/Flask框架模式识别准确率比通用LLM高42%（Anthropic内部基准测试，2024 Q2），且能稳定处理长达200K token的上下文——但强大能力不等于鲁棒响应。模糊提问会直接触发模型的“安全退避机制”，导致输出泛化、遗漏关键路径，甚至虚构API行为。
+典型失败场景俯拾皆是：
+❌ “修一下这个bug” → 模型无法定位未提供的异常堆栈或复现步骤； ❌ “优化这段代码” → 无性能指标（QPS/内存/延迟）、无约束条件（可读性优先？还是CPU热点？），结果可能用functools.lru_cache掩盖了根本的N&#43;1查询问题； ❌ “解释这段代码” → 未声明粒度（函数级？数据流级？安全语义级？），返回变成教科书式语法复述，漏掉os.path.join()在Windows路径拼接中的空字节注入风险。 来看一个真实对比案例（基于Flask路由函数）：
+# 原始模糊Prompt： # “解释下面这段代码” def upload_file(): file = request.files[&#39;file&#39;] filename = secure_filename(file.filename) file.save(os.path.join(&#39;/tmp&#39;, filename)) return jsonify({&#34;status&#34;: &#34;ok&#34;}) → Claude Code响应（简化）：
+“这是一个文件上传路由，使用Flask接收文件，调用secure_filename过滤文件名，保存到/tmp目录并返回JSON。”
+⚠️ 缺失关键信息：未指出/tmp硬编码路径的安全隐患（任意用户可覆盖系统临时文件）、未警示request.files[&#39;file&#39;]缺少Content-Type校验、未说明secure_filename对Unicode路径的处理缺陷。
+而结构化Prompt：
+# ROLE: 资深Python安全工程师，专注Web应用渗透测试 # CONTEXT: Flask 2.3.3, Werkzeug 2.3.7, Python 3.11 # TASK: 按OWASP Top 10标准逐行标注安全风险点，明确漏洞类型、利用条件、修复建议 # CONSTRAINTS: 仅输出Markdown表格，含列：行号 | 代码片段 | 风险类型 | CVSSv3评分 | 修复方案 # EXAMPLE: # | 3 | file = request.files[&#39;file&#39;] | 失效的访问控制 | 6.5 | 添加@auth_required装饰器并校验用户角色 | → 响应精准命中5处风险（含/tmp目录遍历、secure_filename绕过、MIME类型缺失等），并提供对应CVE编号与修复代码片段。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 04:51:18.727 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力" href="http://localhost:1313/posts/2026-02-19-jztwdysypromptengineeringjycla/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、准备工作：配置Claude Code环境与接入遗留项目 在接手一个上线8年、无文档、测试覆盖率&lt;5%的电商订单系统时，第一步不是写代码——而是让Claude Code真正“读懂”它。我们以VS Code为首选IDE（官方插件仅正式支持VS Code，JetBrains系列暂未开放集成），确保环境干净可控。
+✅ 安装与激活（附截图指引）
+打开VS Code → Extensions（Ctrl&#43;Shift&#43;X）→ 搜索 Claude Code（开发者：Anthropic，非“Claude Assistant”或“CodeWithClaude”等第三方） 点击 Install → 重启VS Code 首次启动后，右下角弹出配置向导 → 点击 “Configure API Key” → 粘贴从 console.anthropic.com 获取的 sk-ant-api03-... 密钥（⚠️切勿提交至Git！建议存入系统密钥链） 📁 配置文件详解（.claude-code/config.json）
+在项目根目录创建 .claude-code/config.json，关键字段需显式声明：
+{ &#34;model&#34;: &#34;claude-3-5-sonnet-20240620&#34;, &#34;maxTokens&#34;: 2048, &#34;contextWindowSize&#34;: 16384, &#34;temperature&#34;: 0.1 } model：强制指定高精度模型（Sonnet 3.5在代码理解上显著优于Haiku） contextWindowSize：设为16384可覆盖中型模块（如含5个.py文件的Django app），避免截断关键上下文 🚫 精准排除干扰项（.claude-code/ignore.json）
+遗留项目常含巨型node_modules/（20GB&#43;）、dist/构建产物、logs/实时日志。创建忽略规则：
+{ &#34;patterns&#34;: [ &#34;**/node_modules/**&#34;, &#34;**/dist/**&#34;, &#34;**/logs/*.log&#34;, &#34;**/*.min.js&#34;, &#34;**/coverage/**&#34; ], &#34;maxFileSizeMB&#34;: 5 } ⚠️ 安全红线：
+禁用 Send clipboard content automatically（设置 → Claude Code → 取消勾选） 内网环境禁用 Auto-upload error stack traces，防止/var/log/app/路径泄露 敏感项目根目录名勿含prod-cred、bank-key等关键词（Claude可能在上下文摘要中提取） 二、读懂遗留代码：用Claude Code做结构化代码理解 面对一段无注释、变量名全为a, b, tmp的Python支付处理函数，传统方式需逐行调试2小时；Claude Code可将其转化为可执行文档。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 04:51:18.727 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码" href="http://localhost:1313/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/page/2/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/page/4/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

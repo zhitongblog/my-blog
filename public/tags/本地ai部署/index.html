@@ -1,16 +1,269 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>本地AI部署 | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/tags/%E6%9C%AC%E5%9C%B0ai%E9%83%A8%E7%BD%B2/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/tags/%E6%9C%AC%E5%9C%B0ai%E9%83%A8%E7%BD%B2/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/tags/%E6%9C%AC%E5%9C%B0ai%E9%83%A8%E7%BD%B2/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/tags/%E6%9C%AC%E5%9C%B0ai%E9%83%A8%E7%BD%B2/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="本地AI部署"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="本地AI部署"><meta name=twitter:description content="这是智通成长的历程"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>本地AI部署</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>本地运行、飞书直连、MCP即插即用：OpenClaw让Claude Code真正扎根企业工作流</h2></header><div class=entry-content><p>开篇：我们不是在搭AI玩具，而是在修一条通往产线的“数据铁轨” 上个月上线前夜23:47，飞书弹出一条带红点的私聊消息——运维老张发来一张截图，上面是Ansible执行日志的最后一行：
-TASK [set dns servers] ********************************************************* ok: [test-web-01] => {"changed": true, "msg": "DNS servers updated"} ... PLAY RECAP ********************************************************************* test-web-01 : ok=12 changed=5 unreachable=0 failed=0 但紧接着是另一张图：dig @127.0.0.1 api.payments.internal 返回 connection refused；三台测试机全部失联，CI流水线卡死在「部署后健康检查」环节。
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>本地AI部署 | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/tags/%E6%9C%AC%E5%9C%B0ai%E9%83%A8%E7%BD%B2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/%E6%9C%AC%E5%9C%B0ai%E9%83%A8%E7%BD%B2/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/%E6%9C%AC%E5%9C%B0ai%E9%83%A8%E7%BD%B2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    本地AI部署
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">本地运行、飞书直连、MCP即插即用：OpenClaw让Claude Code真正扎根企业工作流
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>开篇：我们不是在搭AI玩具，而是在修一条通往产线的“数据铁轨” 上个月上线前夜23:47，飞书弹出一条带红点的私聊消息——运维老张发来一张截图，上面是Ansible执行日志的最后一行：
+TASK [set dns servers] ********************************************************* ok: [test-web-01] =&gt; {&#34;changed&#34;: true, &#34;msg&#34;: &#34;DNS servers updated&#34;} ... PLAY RECAP ********************************************************************* test-web-01 : ok=12 changed=5 unreachable=0 failed=0 但紧接着是另一张图：dig @127.0.0.1 api.payments.internal 返回 connection refused；三台测试机全部失联，CI流水线卡死在「部署后健康检查」环节。
 凌晨三点，六个人蹲在会议室，一边回滚DNS配置，一边盯着Claude Code生成的那段Ansible任务块发呆——它确实“语法正确”，也完美匹配了我们给它的prompt：“请为测试环境配置本地DNS解析”。但它没读过我们的/etc/resolv.conf模板规范，更不知道127.0.0.1在我们内部网络里是保留给Consul Agent用的黑洞地址。
 这不是模型能力的问题。Claude 3.5 Sonnet在代码生成benchmarks上吊打我们团队90%的中级工程师。问题在于：再聪明的AI，如果进不了我们的审批流、读不了本地MySQL、按不了飞书里的「重启服务」按钮，它就只是个会写诗的幻灯片。
-过去半年，我们试过6种Claude接入方案：Cloudflare Workers调API、LangChain+FastAPI中转、飞书Bot直连Claude云、自建Ollama镜像、MCP协议桥接、甚至用Rust写了轻量代理……5次失败。不是跑不通，是每次上线三天内必出“流程性断裂”：审批单提交后无人处理、日志告警没触发脚本、GitLab PR描述格式被AI塞进emoji导致CI拒绝合并……
+过去半年，我们试过6种Claude接入方案：Cloudflare Workers调API、LangChain&#43;FastAPI中转、飞书Bot直连Claude云、自建Ollama镜像、MCP协议桥接、甚至用Rust写了轻量代理……5次失败。不是跑不通，是每次上线三天内必出“流程性断裂”：审批单提交后无人处理、日志告警没触发脚本、GitLab PR描述格式被AI塞进emoji导致CI拒绝合并……
 核心卡点从来不是“能不能生成代码”，而是**“能不能嵌进现有工作流里不掉链子”**——就像修铁路，光有高铁头车没用，得铺钢轨、设信号灯、配调度员、接供电网。我们修的不是AI玩具，是一条通往产线的「数据铁轨」。
 为什么非得本地跑Claude Code？——我的三块绊脚石和一次血泪重装 云端API看着省事，直到它第一次把“查订单量”的请求拖到8.2秒才返回——用户早切走看钉钉了。我们实测了三轮（每轮200次请求），结果如下：
-指标 云端Claude API 本地OpenClaw（A10 GPU） 平均响应延迟 8.2s ± 1.7s 1.3s ± 0.4s 内存常驻占用 —（无感知） 3.1GB（稳定） 审计日志完整性 仅含request_id 完整记录：用户ID、原始指令、SQL查询、生成脚本、执行结果、人工修改diff 网络策略兼容性 需开通外网出口+白名单域名 仅需内网访问DB/Redis/飞书Webhook 这还不是最疼的。法务部在第三次安全评审时直接盖章拒批：“所有含config/、log/、secrets/路径的文件禁止上传至境外API端点”——而我们的Ansible Playbook里明文写着vault_password_file: ../../secrets/vault.key。
-更致命的是回滚。某次微调后Claude开始把SELECT COUNT(*) FROM orders错写成SELECT * FROM orders LIMIT 1000，线上慢查询飙升。修复？得等模型团队重新训、打包、发布、K8s滚动更新……耗时47分钟。而本地方案，我们只要git checkout v2.3.0 && systemctl restart openclaw，22秒完成。
-...</p></div><footer class=entry-footer><span title='2026-03-20 10:15:34.303 +0000 UTC'>March 20, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 本地运行、飞书直连、MCP即插即用：OpenClaw让Claude Code真正扎根企业工作流" href=https://zhitong.uk/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+指标 云端Claude API 本地OpenClaw（A10 GPU） 平均响应延迟 8.2s ± 1.7s 1.3s ± 0.4s 内存常驻占用 —（无感知） 3.1GB（稳定） 审计日志完整性 仅含request_id 完整记录：用户ID、原始指令、SQL查询、生成脚本、执行结果、人工修改diff 网络策略兼容性 需开通外网出口&#43;白名单域名 仅需内网访问DB/Redis/飞书Webhook 这还不是最疼的。法务部在第三次安全评审时直接盖章拒批：“所有含config/、log/、secrets/路径的文件禁止上传至境外API端点”——而我们的Ansible Playbook里明文写着vault_password_file: ../../secrets/vault.key。
+更致命的是回滚。某次微调后Claude开始把SELECT COUNT(*) FROM orders错写成SELECT * FROM orders LIMIT 1000，线上慢查询飙升。修复？得等模型团队重新训、打包、发布、K8s滚动更新……耗时47分钟。而本地方案，我们只要git checkout v2.3.0 &amp;&amp; systemctl restart openclaw，22秒完成。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-20 10:15:34.303 +0000 UTC'>March 20, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 本地运行、飞书直连、MCP即插即用：OpenClaw让Claude Code真正扎根企业工作流" href="http://localhost:1313/posts/2026-03-20-bdyxfszlmcpjcjyopenclawrclaude/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>行为心理学 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E8%A1%8C%E4%B8%BA%E5%BF%83%E7%90%86%E5%AD%A6/</link><description>Recent content in 行为心理学 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Feb 2026 12:09:15 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E8%A1%8C%E4%B8%BA%E5%BF%83%E7%90%86%E5%AD%A6/index.xml" rel="self" type="application/rss+xml"/><item><title>第7篇：如何让‘坚持学习’变成习惯？——游戏化激励系统设计拆解</title><link>https://zhitong.uk/posts/2026-02-21-d7prhrjcxxbcxgyxhjlxtsjcj/</link><pubDate>Fri, 20 Feb 2026 12:09:15 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-21-d7prhrjcxxbcxgyxhjlxtsjcj/</guid><description>拆解AI教育平台真实数据，揭示学习坚持难的底层动机衰减机制，详解如何通过游戏化激励系统（成就体系、进度可视化、即时反馈等）提升用户长期学习留存率。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>行为心理学 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E8%A1%8C%E4%B8%BA%E5%BF%83%E7%90%86%E5%AD%A6/</link>
+    <description>Recent content in 行为心理学 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 20 Feb 2026 12:09:15 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%A1%8C%E4%B8%BA%E5%BF%83%E7%90%86%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第7篇：如何让‘坚持学习’变成习惯？——游戏化激励系统设计拆解</title>
+      <link>http://localhost:1313/posts/2026-02-21-d7prhrjcxxbcxgyxhjlxtsjcj/</link>
+      <pubDate>Fri, 20 Feb 2026 12:09:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-21-d7prhrjcxxbcxgyxhjlxtsjcj/</guid>
+      <description>拆解AI教育平台真实数据，揭示学习坚持难的底层动机衰减机制，详解如何通过游戏化激励系统（成就体系、进度可视化、即时反馈等）提升用户长期学习留存率。</description>
+    </item>
+  </channel>
+</rss>

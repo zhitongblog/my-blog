@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>自动化审核 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%A1%E6%A0%B8/</link>
+    <description>Recent content in 自动化审核 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Apr 2026 11:48:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%A1%E6%A0%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>合规护航：用Claude Code自动审核广告内容与GDPR/CCPA合规性</title>
+      <link>http://localhost:1313/posts/2026-04-09-hghhyclaudecodezdshggnrygdprcc/</link>
+      <pubDate>Thu, 09 Apr 2026 11:48:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-09-hghhyclaudecodezdshggnrygdprcc/</guid>
+      <description>本文详解如何利用Claude Code实现广告文案、弹窗提示及SDK埋点的自动化GDPR/CCPA合规性审查，显著降低人工审核成本与法律风险。</description>
+    </item>
+  </channel>
+</rss>

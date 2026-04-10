@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>任务分解 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E4%BB%BB%E5%8A%A1%E5%88%86%E8%A7%A3/</link><description>Recent content in 任务分解 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Mar 2026 10:15:34 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E4%BB%BB%E5%8A%A1%E5%88%86%E8%A7%A3/index.xml" rel="self" type="application/rss+xml"/><item><title>不是所有AI编排都叫OpenClaw：深度解析它如何为Claude Code注入任务分解、状态追踪与错误自愈能力</title><link>https://zhitong.uk/posts/2026-03-20-bssyaibpdjopenclawsdjxtrhwclau/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-bssyaibpdjopenclawsdjxtrhwclau/</guid><description>深度解析OpenClaw如何突破传统AI编码局限，为Claude Code赋予任务分解、跨步骤状态追踪与运行时错误自愈能力，解决真实项目中异步逻辑错乱、重试缺失、异常处理失效等典型卡壳问题。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>任务分解 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E4%BB%BB%E5%8A%A1%E5%88%86%E8%A7%A3/</link>
+    <description>Recent content in 任务分解 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 20 Mar 2026 10:15:34 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E4%BB%BB%E5%8A%A1%E5%88%86%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不是所有AI编排都叫OpenClaw：深度解析它如何为Claude Code注入任务分解、状态追踪与错误自愈能力</title>
+      <link>http://localhost:1313/posts/2026-03-20-bssyaibpdjopenclawsdjxtrhwclau/</link>
+      <pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-20-bssyaibpdjopenclawsdjxtrhwclau/</guid>
+      <description>深度解析OpenClaw如何突破传统AI编码局限，为Claude Code赋予任务分解、跨步骤状态追踪与运行时错误自愈能力，解决真实项目中异步逻辑错乱、重试缺失、异常处理失效等典型卡壳问题。</description>
+    </item>
+  </channel>
+</rss>

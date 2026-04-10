@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Ollama on 智通和你一起学AI</title><link>https://zhitong.uk/tags/ollama/</link><description>Recent content in Ollama on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Mar 2026 10:15:34 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/ollama/index.xml" rel="self" type="application/rss+xml"/><item><title>告别多模型切换！OpenClaw作为本地AI网关，统一调度Claude Code的实战手记</title><link>https://zhitong.uk/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</guid><description>本文实战记录如何用OpenClaw作为本地AI网关统一调度Claude Code、Ollama与CodeLlama等多模型，解决端口冲突、密钥轮换、输出格式不一致等痛点，提升本地AI开发效率。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ollama on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/ollama/</link>
+    <description>Recent content in Ollama on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 04 Apr 2026 02:27:25 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ollama/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>51万行Claude Code源码泄露实录：8大隐藏功能代码级拆解（附GitHub可运行Demo）</title>
+      <link>http://localhost:1313/posts/2026-04-04-51wxclaudecodeymxlsl8dycgndmjc/</link>
+      <pubDate>Sat, 04 Apr 2026 02:27:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-04-51wxclaudecodeymxlsl8dycgndmjc/</guid>
+      <description>深度解析51万行Claude桥接项目源码，代码级拆解8大隐藏功能，涵盖本地化API桥接、多模型后端适配与IDE集成机制，并提供可运行GitHub Demo。</description>
+    </item>
+    <item>
+      <title>告别多模型切换！OpenClaw作为本地AI网关，统一调度Claude Code的实战手记</title>
+      <link>http://localhost:1313/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</link>
+      <pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-20-gbdmxqhopenclawzwbdaiwgtyddcla/</guid>
+      <description>本文实战记录如何用OpenClaw作为本地AI网关统一调度Claude Code、Ollama与CodeLlama等多模型，解决端口冲突、密钥轮换、输出格式不一致等痛点，提升本地AI开发效率。</description>
+    </item>
+  </channel>
+</rss>

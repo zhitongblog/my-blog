@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>LLM on 智通和你一起学AI</title><link>https://zhitong.uk/tags/llm/</link><description>Recent content in LLM on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sun, 22 Feb 2026 12:07:15 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/llm/index.xml" rel="self" type="application/rss+xml"/><item><title>阿里云OpenClaw镜像+智谱GLM-5双模切换？Mac本地AI助理的进阶玩法揭秘</title><link>https://zhitong.uk/posts/2026-02-23-alyopenclawjxzpglm5smqhmacbdai/</link><pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-23-alyopenclawjxzpglm5smqhmacbdai/</guid><description>揭秘Mac本地双模AI助理搭建：基于阿里云OpenClaw镜像与智谱GLM-5模型无缝切换，解决云端API延迟、断网失效等痛点，实现低延迟、高隐私、离线可用的个人知识助理实践。</description></item><item><title>终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力</title><link>https://zhitong.uk/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</link><pubDate>Wed, 18 Feb 2026 08:35:09 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</guid><description>本文探讨Claude Code如何赋能Shell脚本开发，让Bash直接理解PRD需求，填补CLI层AI自动化空白，提升运维脚本的可审计性、可复用性与工程规范性。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>LLM on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/llm/</link>
+    <description>Recent content in LLM on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 02 Apr 2026 04:10:31 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Buddy电子宠物藏在3721行里：Claude Code中被忽略的拟人化交互协议与情感状态机设计</title>
+      <link>http://localhost:1313/posts/2026-04-02-buddydzcwcz3721xlclaudecodezbh/</link>
+      <pubDate>Thu, 02 Apr 2026 04:10:31 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-02-buddydzcwcz3721xlclaudecodezbh/</guid>
+      <description>揭秘Claude Code中隐藏的3721行Buddy电子宠物模块，解析其拟人化交互协议与情感状态机设计，探讨AI助手在确定性系统中嵌入情感建模的工程权衡与实践启示。</description>
+    </item>
+    <item>
+      <title>阿里云OpenClaw镜像&#43;智谱GLM-5双模切换？Mac本地AI助理的进阶玩法揭秘</title>
+      <link>http://localhost:1313/posts/2026-02-23-alyopenclawjxzpglm5smqhmacbdai/</link>
+      <pubDate>Sun, 22 Feb 2026 12:07:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-23-alyopenclawjxzpglm5smqhmacbdai/</guid>
+      <description>揭秘Mac本地双模AI助理搭建：基于阿里云OpenClaw镜像与智谱GLM-5模型无缝切换，解决云端API延迟、断网失效等痛点，实现低延迟、高隐私、离线可用的个人知识助理实践。</description>
+    </item>
+    <item>
+      <title>终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力</title>
+      <link>http://localhost:1313/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</link>
+      <pubDate>Wed, 18 Feb 2026 08:35:09 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/</guid>
+      <description>本文探讨Claude Code如何赋能Shell脚本开发，让Bash直接理解PRD需求，填补CLI层AI自动化空白，提升运维脚本的可审计性、可复用性与工程规范性。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Llama3 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/llama3/</link>
+    <description>Recent content in Llama3 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 28 Mar 2026 03:42:16 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/llama3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>你的AI写作分身会‘进化’吗？3个信号说明它真懂你</title>
+      <link>http://localhost:1313/posts/2026-03-28-ndaixzfshjhm3gxhsmtzdn/</link>
+      <pubDate>Sat, 28 Mar 2026 03:42:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-28-ndaixzfshjhm3gxhsmtzdn/</guid>
+      <description>探讨AI写作工具如何通过RAG、持续微调与行为模仿实现个性化‘进化’，识别3个关键信号判断AI是否真正理解你的语言风格、思维节奏与表达习惯。</description>
+    </item>
+  </channel>
+</rss>

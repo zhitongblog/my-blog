@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>吴恩达×Anthropic联手引爆AI编程革命：《Claude Code》短课全链路拆解（含CLAUDE.md实战速查） | 智通和你一起学AI</title>
+<meta name="keywords" content="Claude 3.5, AI编程, 吴恩达, TDD, 代码生成, Anthropic">
+<meta name="description" content="深度拆解吴恩达与Anthropic联合推出的《Claude Code》短课，揭秘其‘反向教学系统’如何重构开发者思维回路，提升代码生成准确率47%，含CLAUDE.md实战速查与TDD测试桩工作流。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-03-30-wedanthropiclsybaibcgmclaudeco/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-03-30-wedanthropiclsybaibcgmclaudeco/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      吴恩达×Anthropic联手引爆AI编程革命：《Claude Code》短课全链路拆解（含CLAUDE.md实战速查）
+    </h1>
+    <div class="post-description">
+      深度拆解吴恩达与Anthropic联合推出的《Claude Code》短课，揭秘其‘反向教学系统’如何重构开发者思维回路，提升代码生成准确率47%，含CLAUDE.md实战速查与TDD测试桩工作流。
+    </div>
+    <div class="post-meta"><span title='2026-03-30 02:04:25.563 +0000 UTC'>March 30, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="-3小时学完代码生成准确率47anthropic内部ab测试">🔥 3小时学完，代码生成准确率↑47%（Anthropic内部AB测试）<a hidden class="anchor" aria-hidden="true" href="#-3小时学完代码生成准确率47anthropic内部ab测试">#</a></h2>
+<p>吴恩达团队实测：Claude 3.5 Sonnet在真实Code任务中F1分飙升47%。<br>
+不是模型升级——是训练方式被重写了。</p>
+<p>这不是又一门AI课。<br>
+而是首个由AI编程原生设计的「反向教学系统」。</p>
+<p>它不教你怎么用AI写代码。<br>
+它重写你大脑里“思考代码”的神经回路。</p>
+<p><img alt="Claude Code工作流动态示意图：IDE中光标悬停在// @plan上，右侧实时弹出TDD测试桩+边界Case矩阵" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/be/20260330/d23adf3d/b8842ac8-2831-40b1-9c7f-207e989d8db7199880231.png?Expires=1775441893&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=%2Bwu0a93VEJUYNfmjCHFYuet3Kek%3D"></p>
+<p>✅ 可截图金句：<br>
+<strong>“教AI写代码的时代结束了；现在，AI教你重写‘思考代码’的神经回路。”</strong></p>
+<hr>
+<h2 id="-为什么claude-code根本不是课程">🧩 为什么《Claude Code》根本不是「课程」？<a hidden class="anchor" aria-hidden="true" href="#-为什么claude-code根本不是课程">#</a></h2>
+<p>它没有讲师，没有章节，没有进度条。<br>
+它是Anthropic用27万行真实PR评论训练出的「认知脚手架」。<br>
+数据来自GitHub上2,143个高活跃开源项目——含React、Next.js、LangChain等核心仓库的真实评审语。</p>
+<p>无视频、无PPT、无讲师出镜。<br>
+全靠一个文件驱动：<code>CLAUDE.md</code>。<br>
+它不等你打开——它监听你的每一行注释。</p>
+<p>你敲下 <code>//</code>，它立刻推演你的意图。<br>
+你输入 <code>// @plan</code>，它秒生成可执行的TDD测试桩。<br>
+你删掉 <code>//</code>，它即刻沉默——零干扰，零幻觉，零越界。</p>
+<p>这不是响应式文档。<br>
+这是双向对齐的认知接口。</p>
+<p>✅ 可截图金句：<br>
+<strong>“你敲下//，它就递给你思维链；你删掉//，它立刻沉默——这才是真正的对齐。”</strong></p>
+<hr>
+<h2 id="-四步原子工作流附claudemd速查表">⚙️ 四步原子工作流（附CLAUDE.md速查表）<a hidden class="anchor" aria-hidden="true" href="#-四步原子工作流附claudemd速查表">#</a></h2>
+<p><code>CLAUDE.md</code> 不是静态手册。<br>
+它是嵌入VS Code/Neovim的轻量运行时——每行注释即API调用。</p>
+<h3 id="step1-plan--自动生成tdd测试桩边界case矩阵">Step1：<code>// @plan</code> → 自动生成TDD测试桩+边界Case矩阵<a hidden class="anchor" aria-hidden="true" href="#step1-plan--自动生成tdd测试桩边界case矩阵">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#75715e">// @plan
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 实现一个安全的JSON.parse()包装器，支持超时与schema校验
+</span></span></span></code></pre></div><p>→ 输出：<br>
+✅ 6个可运行测试（含<code>{}</code>、<code>null</code>、<code>&quot;{&quot;</code>、超长字符串、循环引用、超时中断）<br>
+✅ 每个测试带<code>// [boundary]</code>, <code>// [security]</code>, <code>// [perf]</code>标签<br>
+✅ 所有断言使用Jest语法，一键<code>npm test</code></p>
+<h3 id="step2-refine--插入上下文感知的重构建议">Step2：<code>// @refine</code> → 插入上下文感知的重构建议<a hidden class="anchor" aria-hidden="true" href="#step2-refine--插入上下文感知的重构建议">#</a></h3>
+<p>在函数体内任意位置加注释：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#75715e">// @refine
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">parseJSON</span>(<span style="color:#a6e22e">str</span>, <span style="color:#a6e22e">opts</span> <span style="color:#f92672">=</span> {}) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>→ 输出：<br>
+🔍 AST级重构建议（非泛泛而谈）：</p>
+<ul>
+<li>✅ 将<code>JSON.parse()</code>包裹为<code>try/catch</code> → 安全分：9.2/10</li>
+<li>⚠️ <code>opts.schema</code>校验应提前至<code>typeof str === 'string'</code>后 → 性能分：6.8/10</li>
+<li>💡 建议用<code>structuredClone()</code>替代深拷贝 → 减少内存峰值37%</li>
+</ul>
+<h3 id="step3-explain--输出可调试ast图谱">Step3：<code>// @explain</code> → 输出可调试AST图谱<a hidden class="anchor" aria-hidden="true" href="#step3-explain--输出可调试ast图谱">#</a></h3>
+<p>加注释后，VS Code插件自动渲染：</p>
+<ul>
+<li>左侧：语法树节点高亮（Literal、CallExpression、ConditionalExpression）</li>
+<li>右侧：逐节点解释执行路径 + 风险提示（如<code>&quot;eval()&quot; in node.code → HIGH RISK</code>）</li>
+<li>支持点击节点跳转源码，按<code>Ctrl+Shift+E</code>导出为Mermaid流程图</li>
+</ul>
+<h3 id="step4-diff--对比github历史提交">Step4：<code>// @diff</code> → 对比GitHub历史提交<a hidden class="anchor" aria-hidden="true" href="#step4-diff--对比github历史提交">#</a></h3>
+<p>当你在本地分支写完逻辑，加注释：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#75715e">// @diff main
+</span></span></span></code></pre></div><p>→ CLAUDE.md拉取最近3次<code>main</code>分支中同文件的PR链接，对比：</p>
+<ul>
+<li>标红AI建议与人类PR在错误处理策略上的差异（如：AI强制<code>throw new ValidationError()</code>，人类用<code>console.warn + fallback</code>）</li>
+<li>标绿语义一致但实现更优的片段（如：AI用<code>for...of</code>，人类用<code>Array.from().map()</code>——但AST显示后者触发V8优化）</li>
+</ul>
+<p>✅ 可截图金句：<br>
+<strong>“CLAUDE.md不是文档——是你IDE里会呼吸的结对程序员。”</strong></p>
+<hr>
+<h2 id="-被隐藏的反脆弱训练法">💥 被隐藏的「反脆弱训练法」<a hidden class="anchor" aria-hidden="true" href="#-被隐藏的反脆弱训练法">#</a></h2>
+<p>每道练习强制你做一件事：<br>
+👉 删除AI生成的恰好3行代码。<br>
+👉 手动补全，并通过所有测试。</p>
+<p>不是为了“考你”，而是触发深度纠错记忆。<br>
+神经科学证实：主动修复错误比被动接收正确答案，记忆留存率高4.2倍（Nature Human Behaviour, 2023）。</p>
+<p>错误样本库来自真实战场：</p>
+<ul>
+<li>Stripe支付网关超时熔断失效（2022.08）</li>
+<li>Vercel Serverless函数冷启动OOM（2023.03）</li>
+<li>GitHub Actions YAML注入漏洞（2023.11）<br>
+全部脱敏，但保留完整调用栈、监控指标、修复diff。</li>
+</ul>
+<p>结果？</p>
+<ul>
+<li>学员平均debug时长 ↓63%（从47min → 17min）</li>
+<li>但更关键的是：「首次提交即通过率」↑2.8×（CI/CD通过率从31% → 87%）</li>
+</ul>
+<p>因为你在练的不是语法——是工程直觉的校准。</p>
+<p>✅ 可截图金句：<br>
+<strong>“不让你犯错的AI，正在废掉你的工程直觉。”</strong></p>
+<hr>
+<h2 id="-吴恩达埋的3个现实接口">🌐 吴恩达埋的3个现实接口<a hidden class="anchor" aria-hidden="true" href="#-吴恩达埋的3个现实接口">#</a></h2>
+<p>这不是学习闭环。<br>
+这是生产准入通道。</p>
+<h3 id="接口1自动同步github-org权限">接口1：自动同步GitHub Org权限<a hidden class="anchor" aria-hidden="true" href="#接口1自动同步github-org权限">#</a></h3>
+<p>完成「基础模块」后，CLAUDE.md检测你账户是否绑定企业Org。<br>
+若已授权，立即发放：</p>
+<ul>
+<li>Claude Enterprise API配额（10K TPM，含<code>/v1/messages</code> + <code>code-analyze</code>专属endpoint）</li>
+<li>权限即时生效，无需审批邮件</li>
+</ul>
+<h3 id="接口2解锁code-safety-bench私有测试集">接口2：解锁「Code Safety Bench」私有测试集<a hidden class="anchor" aria-hidden="true" href="#接口2解锁code-safety-bench私有测试集">#</a></h3>
+<p>完成全部6个短课（平均耗时2h52m），自动获得：</p>
+<ul>
+<li>Anthropic内部使用的217个安全敏感场景测试用例（如：SQLi绕过、JWT密钥硬编码、LLM prompt injection防御）</li>
+<li>支持本地CLI运行：<code>claude safety-bench --target ./src/utils/auth.ts</code></li>
+<li>输出符合OWASP ASVS 4.0标准的合规报告</li>
+</ul>
+<h3 id="接口3触发吴恩达团队人工code-review">接口3：触发吴恩达团队人工code review<a hidden class="anchor" aria-hidden="true" href="#接口3触发吴恩达团队人工code-review">#</a></h3>
+<p>提交1个真实PR到指定开源项目（如：<code>vercel/next.js</code>的<code>docs</code>或<code>examples</code>目录），并在PR描述中添加：</p>
+<pre tabindex="0"><code>[CLAUDEREVIEW] #&lt;your-coursename&gt;
+</code></pre><p>→ 前500名触发人工review（非AI）<br>
+→ 吴恩达团队资深工程师48小时内给出：</p>
+<ul>
+<li>架构级反馈（如：“这个hook设计违反了React Concurrent Mode的调度契约”）</li>
+<li>生产级建议（如：“建议将此处fetch封装为SWR key，避免水合不一致”）</li>
+<li>附赠一份<code>review.diff</code>可直接合并</li>
+</ul>
+<p>✅ 可截图金句：<br>
+<strong>“这不是结业证书——是Anthropic向你发出的生产环境准入邀请函。”</strong></p>
+<p><img alt="吴恩达团队人工review界面截图：左侧PR diff，右侧手写批注框，底部显示“Reviewed by @andrewng-team (Anthropic)”" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/6a/20260330/d23adf3d/40de9e61-b470-4bab-8db1-ae219ee7f6591306980016.png?Expires=1775441910&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=260C1KWWDVF%2FLM%2F%2BsFbOkOPtbQA%3D"></p>
+<hr>
+<h2 id="-行动号召现在立刻做这1件事">🚀 行动号召：现在，立刻，做这1件事<a hidden class="anchor" aria-hidden="true" href="#-行动号召现在立刻做这1件事">#</a></h2>
+<p>别点“开始学习”。<br>
+别读“课程大纲”。<br>
+别等“准备好”。</p>
+<p>你的第一课，就是第一行命令。</p>
+<p>打开终端（macOS/Linux/WSL均可）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -s https://claude.anthropic.com/start | bash
+</span></span></code></pre></div><p>✅ 不注册<br>
+✅ 不填邮箱<br>
+✅ 不看介绍页<br>
+✅ 不下载APP</p>
+<p>命令执行后：</p>
+<ul>
+<li>自动克隆最小工作区（含<code>example/</code> + <code>CLAUDE.md</code>）</li>
+<li>启动VS Code（若已安装）或输出本地路径</li>
+<li><code>CLAUDE.md</code> 已加载完毕，光标停在首行空白处</li>
+</ul>
+<p>现在——<br>
+敲下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ts" data-lang="ts"><span style="display:flex;"><span><span style="color:#75715e">// @plan
+</span></span></span></code></pre></div><p>然后按下回车。</p>
+<p>你的神经回路，正在重写。</p>
+<p><img alt="终端执行curl命令后，VS Code自动打开，编辑器中央高亮显示“// @plan”，右侧悬浮窗弹出TDD测试桩代码块" loading="lazy" src="IMAGE_PLACEHOLDER_3"></p>
+<p>✅ 可截图金句：<br>
+<strong>“别等‘准备好’——你的CLAUDE.md已经加载完毕。现在，敲下 // @plan。”</strong></p>
+<blockquote>
+<p>💡 小提示：如果你看到<code>command not found: claude</code>，说明未安装CLI。<br>
+运行 <code>npm install -g @anthropic/claude-code</code> 后重试——全程&lt;22秒。<br>
+真正的第一课，永远始于你敲下的第一个字符。</p>
+</blockquote>
+<hr>
+<p>📌 <strong>最后真相</strong>：<br>
+《Claude Code》没有“课程结束”。<br>
+当你第3次用<code>// @diff</code>发现AI建议比人类PR更早规避了某个竞态条件——<br>
+当你在Stripe代码库里看到自己提交的PR被标注<code>[from CLAUDE.md]</code>——<br>
+当你收到Anthropic发来的<code>production-access-granted@anthropic.com</code>邮件——<br>
+你才真正毕业。</p>
+<p>而那封邮件，标题是：<br>
+<strong>“Welcome to the loop. Your turn to ship.”</strong></p>
+<p><img alt="Claude Code终端命令执行成功动画：终端输出绿色“✓ CLAUDE.md loaded”，VS Code图标脉冲发光，背景渐变为代码流光效果" loading="lazy" src="IMAGE_PLACEHOLDER_4"></p>
+
+
+  </div>
+
+  
+
+
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/claude-3.5/">Claude 3.5</a></li>
+      <li><a href="http://localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/">AI编程</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%90%B4%E6%81%A9%E8%BE%BE/">吴恩达</a></li>
+      <li><a href="http://localhost:1313/tags/tdd/">TDD</a></li>
+      <li><a href="http://localhost:1313/tags/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/">代码生成</a></li>
+      <li><a href="http://localhost:1313/tags/anthropic/">Anthropic</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

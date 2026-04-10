@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>图文理解 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E5%9B%BE%E6%96%87%E7%90%86%E8%A7%A3/</link>
+    <description>Recent content in 图文理解 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 08 Apr 2026 06:44:02 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%9B%BE%E6%96%87%E7%90%86%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>多模态突破：Claude Code驱动图文/视频广告自动合成</title>
+      <link>http://localhost:1313/posts/2026-04-08-dmttpclaudecodeqdtwspggzdhc/</link>
+      <pubDate>Wed, 08 Apr 2026 06:44:02 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-08-dmttpclaudecodeqdtwspggzdhc/</guid>
+      <description>本文实战解析如何利用Claude Code等多模态API构建图文/视频广告自动合成流水线，解决大促紧急需求下的跨模态对齐难题，涵盖错误归因、链路优化与生产级落地经验。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>零代码开发 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E9%9B%B6%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/</link><description>Recent content in 零代码开发 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Thu, 26 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E9%9B%B6%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml"/><item><title>零代码≠低能力：Claude Code BrowserCat MCP在电商数据采集中的实战压测报告</title><link>https://zhitong.uk/posts/2026-03-26-ldmdnlclaudecodebrowsercatmcpz/</link><pubDate>Thu, 26 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-26-ldmdnlclaudecodebrowsercatmcpz/</guid><description>本文详述使用Claude+BrowserCat+MCP零代码方案，在72小时内完成5大电商平台实时价格、库存与SKU变更监控的压测全过程，验证零代码在高对抗场景下的工程可靠性与团队提效价值。</description></item><item><title>零代码+Vercel一键部署：我用OpenClaw 3小时搭出日更AI情报站，流量涨了470%</title><link>https://zhitong.uk/posts/2026-02-23-ldmvercelyjbswyopenclaw3xsdcrg/</link><pubDate>Mon, 23 Feb 2026 11:12:45 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-23-ldmvercelyjbswyopenclaw3xsdcrg/</guid><description>揭秘OpenClaw与Vercel Edge Functions协同构建AI情报站的实战路径：3小时完成日更AI周报平台部署，实现470%流量增长，打破零代码=低质的刻板认知，展现AI原生时代的工程熵减新范式。</description></item><item><title>第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型</title><link>https://zhitong.uk/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</link><pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</guid><description>本文详解如何用Claude Code在Cursor IDE中零代码生成SwiftUI命理应用骨架与数据模型，涵盖macOS环境配置、Xcode命令行工具验证及Claude插件集成，助开发者快速启动AI协同iOS开发。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>零代码开发 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E9%9B%B6%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in 零代码开发 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 26 Mar 2026 12:57:16 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E9%9B%B6%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>零代码≠低能力：Claude Code BrowserCat MCP在电商数据采集中的实战压测报告</title>
+      <link>http://localhost:1313/posts/2026-03-26-ldmdnlclaudecodebrowsercatmcpz/</link>
+      <pubDate>Thu, 26 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-26-ldmdnlclaudecodebrowsercatmcpz/</guid>
+      <description>本文详述使用Claude&#43;BrowserCat&#43;MCP零代码方案，在72小时内完成5大电商平台实时价格、库存与SKU变更监控的压测全过程，验证零代码在高对抗场景下的工程可靠性与团队提效价值。</description>
+    </item>
+    <item>
+      <title>零代码&#43;Vercel一键部署：我用OpenClaw 3小时搭出日更AI情报站，流量涨了470%</title>
+      <link>http://localhost:1313/posts/2026-02-23-ldmvercelyjbswyopenclaw3xsdcrg/</link>
+      <pubDate>Mon, 23 Feb 2026 11:12:45 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-23-ldmvercelyjbswyopenclaw3xsdcrg/</guid>
+      <description>揭秘OpenClaw与Vercel Edge Functions协同构建AI情报站的实战路径：3小时完成日更AI周报平台部署，实现470%流量增长，打破零代码=低质的刻板认知，展现AI原生时代的工程熵减新范式。</description>
+    </item>
+    <item>
+      <title>第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型</title>
+      <link>http://localhost:1313/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</link>
+      <pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</guid>
+      <description>本文详解如何用Claude Code在Cursor IDE中零代码生成SwiftUI命理应用骨架与数据模型，涵盖macOS环境配置、Xcode命令行工具验证及Claude插件集成，助开发者快速启动AI协同iOS开发。</description>
+    </item>
+  </channel>
+</rss>

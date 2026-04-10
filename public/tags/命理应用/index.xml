@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>命理应用 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E5%91%BD%E7%90%86%E5%BA%94%E7%94%A8/</link><description>Recent content in 命理应用 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Thu, 19 Feb 2026 10:02:44 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E5%91%BD%E7%90%86%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型</title><link>https://zhitong.uk/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</link><pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</guid><description>本文详解如何用Claude Code在Cursor IDE中零代码生成SwiftUI命理应用骨架与数据模型，涵盖macOS环境配置、Xcode命令行工具验证及Claude插件集成，助开发者快速启动AI协同iOS开发。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>命理应用 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E5%91%BD%E7%90%86%E5%BA%94%E7%94%A8/</link>
+    <description>Recent content in 命理应用 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 19 Feb 2026 10:02:44 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%91%BD%E7%90%86%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型</title>
+      <link>http://localhost:1313/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</link>
+      <pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/</guid>
+      <description>本文详解如何用Claude Code在Cursor IDE中零代码生成SwiftUI命理应用骨架与数据模型，涵盖macOS环境配置、Xcode命令行工具验证及Claude插件集成，助开发者快速启动AI协同iOS开发。</description>
+    </item>
+  </channel>
+</rss>

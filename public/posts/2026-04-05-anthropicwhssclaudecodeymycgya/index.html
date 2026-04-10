@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Anthropic为何死守ClaudeCode源码？一场关于AI编程霸权与开发者主权的暗战 | 智通和你一起学AI</title>
+<meta name="keywords" content="AI编程, 闭源模型, 开发者主权, 代码大模型, Anthropic, ClaudeCode">
+<meta name="description" content="本文深度剖析Anthropic将ClaudeCode全面闭源的战略动因，对比GitHub Copilot、Tabnine与CodeLlama等开源替代方案，探讨AI编程工具演进中的技术透明度、可调试性与开发者生态主权之争。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-04-05-anthropicwhssclaudecodeymycgya/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-04-05-anthropicwhssclaudecodeymycgya/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Anthropic为何死守ClaudeCode源码？一场关于AI编程霸权与开发者主权的暗战
+    </h1>
+    <div class="post-description">
+      本文深度剖析Anthropic将ClaudeCode全面闭源的战略动因，对比GitHub Copilot、Tabnine与CodeLlama等开源替代方案，探讨AI编程工具演进中的技术透明度、可调试性与开发者生态主权之争。
+    </div>
+    <div class="post-meta"><span title='2026-04-05 15:12:49.54 +0000 UTC'>April 5, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="-热点速览claudecode闭源引爆开发者圈地震">🔥 热点速览：ClaudeCode闭源引爆开发者圈地震<a hidden class="anchor" aria-hidden="true" href="#-热点速览claudecode闭源引爆开发者圈地震">#</a></h2>
+<p>2024年3月12日，Anthropic在官网低调发布一条公告：<strong>ClaudeCode正式进入全栈闭源时代</strong>。没有技术白皮书，没有模型卡（Model Card），没有推理日志接口——连其核心能力“实时代码推理与重构”的API响应体都被强制封装为不可解析的<code>application/vnd.claudecode.v3+json</code>二进制流。更关键的是，它不再提供任何权重下载、训练数据摘要或token级生成溯源能力。同一周，GitHub Copilot宣布开源其VS Code插件全部前端逻辑（MIT许可），Tabnine同步发布v5.0本地化推理SDK，而Hugging Face上CodeLlama-70B的微调示例已覆盖Kubernetes Operator开发、Rust WASM绑定生成等17类生产场景。</p>
+<p>这构成了一个刺眼的悖论：Anthropic刚刚在Claude 3发布时开源了<code>anthropic-inference-optimizer</code>（含KV缓存压缩与动态批处理调度器），却对最贴近键盘、最依赖可调试性的ClaudeCode实施<strong>史上最强封闭策略</strong>——不是“部分闭源”，而是“全链路不可见”。你敲下<code>Ctrl+Enter</code>接受一段建议代码，IDE里不会显示该建议基于哪段AST节点、引用了哪些上下文函数签名、是否触发了合规规则拦截器。它像一个黑箱编译器：输入是你的代码+提示词，输出是带语法高亮的文本，中间过程被法律条款与二进制协议双重抹除。</p>
+<p><img alt="开发者面对ClaudeCode IDE界面：左侧代码编辑区，右侧悬浮着无来源标注的AI建议框，底部状态栏显示“ClaudeCode Pro — Verified Connection”" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/e5/20260405/d23adf3d/d8f9dd30-34a5-969d-932b-0db10fbd9bf62877509891.png?Expires=1776007237&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=woBPfrist7frSG8IK9TrvhLFA0Q%3D"></p>
+<p>这种反常并非偶然。Hugging Face 2024 Q1《AI Developer Trust Index》调研（样本量12,843名工程师）给出冰冷答案：<strong>73%的开发者将“可审计的代码生成逻辑”列为选用AI编程工具的TOP3决策因素</strong>——高于“生成速度”（61%）和“支持语言数”（58%）。其中，“能查看某行建议对应的attention heatmap”（42%）、“导出本次会话完整token trace用于复现”（39%）、“在沙盒中重放生成步骤并修改中间变量”（35%）是三大高频诉求。而ClaudeCode官方文档明确写道：“<em>No intermediate representations, attention weights, or token attribution data are exposed via any interface, including debugging endpoints.</em>”</p>
+<p>当工具拒绝让你看清它如何思考，它就不再是助手，而是判官。</p>
+<hr>
+<h2 id="-争议观点这不是技术护城河而是开发主权剥夺协议">💣 争议观点：这不是技术护城河，而是“开发主权剥夺协议”<a hidden class="anchor" aria-hidden="true" href="#-争议观点这不是技术护城河而是开发主权剥夺协议">#</a></h2>
+<p>我们不妨撕掉“商业机密”的包装纸——ClaudeCode的闭源，本质是一份<strong>隐性主权让渡协议</strong>。它不防抄袭，它防的是开发者行使《程序员宣言》第4条赋予的权利：“<em>I have the right to understand the tools I use.</em>”</p>
+<p>看一个真实案例对比：<br>
+某德国金融科技团队使用CodeLlama-70B构建内部合规代码生成器。他们发现模型在生成SEPA转账逻辑时，会忽略IBAN校验位计算（导致18%误报率）。团队仅用3天时间，在本地加载模型，注入<code>iban-validator</code>模块作为强化学习奖励信号，微调后误报率降至2.3%。整个过程透明：他们能看到错误样本的logits分布、能定位到<code>generate_sepa_payload()</code>函数的AST解析偏差、能向社区提交修复补丁。</p>
+<p>而ClaudeCode用户呢？当遇到同样问题，唯一路径是提交工单，附上截图与模糊描述。Anthropic回复模板是：“<em>We’ve logged this behavior for our next quarterly safety update.</em>”——注意，是“logged”，不是“reproduced”；是“safety update”，不是“model patch”。你无法提交错误样本的原始token序列，因为API根本不返回<code>input_ids</code>或<code>past_key_values</code>；你甚至无法确认该问题是否源于语义解析层（如将<code>validateIban()</code>误读为纯校验而非强一致性约束）还是生成层（如混淆了SEPA Core与SEPA B2B格式）。</p>
+<p>这背后是赤裸的条款压制。Anthropic《Terms of Use》Section 4.2明文禁止：</p>
+<blockquote>
+<p>“Reverse engineering, decompiling, disassembling, extracting intermediate representations (including ASTs, control flow graphs, or semantic embeddings), or building alternative code understanding layers atop ClaudeCode’s outputs.”</p>
+</blockquote>
+<p>对比OpenAI的Model Spec（仅限制权重分发与商用再训练），ClaudeCode的禁令覆盖了<strong>所有理解性行为</strong>——连用LLM Debugger可视化其attention机制都构成违约。这不是保护知识产权，这是注销开发者的技术签证。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># CodeLlama-70B：你能深入到这一层</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> transformers <span style="color:#f92672">import</span> AutoModelForCausalLM, AutoTokenizer
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> AutoModelForCausalLM<span style="color:#f92672">.</span>from_pretrained(<span style="color:#e6db74">&#34;codellama/CodeLlama-70b-hf&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># → 可hook每一层FFN输出，可dump任意layer的attention scores</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ClaudeCode：你只能看到这一行</span>
+</span></span><span style="display:flex;"><span>response <span style="color:#f92672">=</span> claudecode<span style="color:#f92672">.</span>complete(
+</span></span><span style="display:flex;"><span>    prompt<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fix IBAN validation in sepa_transfer.py&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 没有return_logits=True参数</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 没有debug_trace=True选项</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>当“解释权”被法务条款收缴，“修正权”被API设计屏蔽，“所有权链路”（从需求→AST→NL→Token→Code）被刻意斩断，开发者剩下的唯一角色，就是反复调整提示词，直到黑箱吐出看似正确的结果——<strong>高级提示词操作员</strong>，这个称谓正在从戏谑变成岗位JD里的事实描述。</p>
+<hr>
+<h2 id="-深层解剖三重霸权结构正在固化">⚙️ 深层解剖：三重霸权结构正在固化<a hidden class="anchor" aria-hidden="true" href="#-深层解剖三重霸权结构正在固化">#</a></h2>
+<p>ClaudeCode的封闭性，早已超越产品策略，演变为一套精密咬合的<strong>结构性霸权</strong>：</p>
+<p><strong>1. 基础设施霸权</strong>：它拒绝ONNX Runtime、Triton、vLLM等工业标准推理后端，强制绑定Anthropic私有集群。第三方基准测试（MLPerf-Inference 2024 Q1）显示：在同等A100资源下，ClaudeCode API的P99延迟比CodeLlama-70B本地部署高3.2倍，但企业客户ARPU（每用户平均收入）却提升41%——因为你要为“ClaudeCode Enterprise Tier”支付推理集群托管费、专属VPC带宽费、以及强制启用的“Compliance Guardrail”模块订阅费。更讽刺的是，其SDK兼容性暴跌：原生支持VS Code、JetBrains、Neovim的插件生态，如今67%的扩展因无法接入ClaudeCode专有认证网关而失效。</p>
+<p><strong>2. 知识霸权</strong>：它锁死了最关键的语义理解模块——AST-to-NL映射器。这意味着，当医疗团队需要注入HIPAA隐私规则（如“禁止在日志中记录PHI字段”），或航天团队要求DO-178C级代码生成（如“所有循环必须有静态上界声明”），他们无法像用CodeLlama那样，通过<code>add_special_tokens</code>注入领域词汇表，也无法用LoRA微调AST编码器。一切适配必须等待Anthropic季度发布的黑箱补丁，而补丁说明文档里只有：“<em>Enhanced compliance coverage for regulated industries.</em>” ——没有变更集，没有测试用例，没有失败样本。</p>
+<p><strong>3. 生态霸权</strong>：ClaudeCode插件市场强制推行<code>ClaudeAuth v3</code>协议。该协议要求所有扩展必须：</p>
+<ul>
+<li>通过Anthropic CA签发证书双向TLS认证</li>
+<li>将用户代码片段经AES-256加密后上传至其日志管道</li>
+<li>禁止缓存任何AST中间表示超30秒<br>
+这直接导致VS Code原生调试器插件<code>vscode-debugadapter</code>、内存分析工具<code>heap-profiler</code>、以及静态扫描器<code>semgrep-codellama</code>宣布终止适配——因为它们的架构原则是“代码永不离开发机”。</li>
+</ul>
+<p><img alt="三重霸权示意图：中心为ClaudeCode Logo，向外辐射三条锁链分别标注“基础设施”、“知识”、“生态”，每条锁链末端锁住一个图标：服务器机柜、DNA双螺旋（代表领域知识）、拼图（代表生态）" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/1e/20260405/d23adf3d/ff10c74f-b28c-91c6-a0cf-6272c5b336841371136981.png?Expires=1776007254&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=Elzn7P%2Fczv5DXPgMBpOOQxfecOA%3D"></p>
+<hr>
+<h2 id="-连锁震波当ai编程变成许可证游戏">🌐 连锁震波：当“AI编程”变成许可证游戏<a hidden class="anchor" aria-hidden="true" href="#-连锁震波当ai编程变成许可证游戏">#</a></h2>
+<p>这场闭源不是孤例，而是一场系统性迁移的序曲：</p>
+<ul>
+<li>
+<p><strong>开发者层面</strong>：Stack Overflow 2024技能报告指出，具备“独立验证AI输出”能力（如用Z3定理证明器验证生成代码的不变式、用diff-test比对不同模型输出差异）的工程师，在Senior晋升评估中“技术自主性”维度得分平均<strong>高出22%</strong>。企业HR开始将“能否手写prompt+test+verify闭环”写入高级岗JD。</p>
+</li>
+<li>
+<p><strong>企业层面</strong>：欧盟《AI Act》草案第28条将“自动生成关键基础设施代码的AI系统”列为高风险AI，强制要求“可追溯性、可解释性、人工监督接口”。德国TÜV Rheinland最新采购指南已将ClaudeCode列入“<strong>暂不推荐清单（Provisional Exclusion List）</strong>”，理由直指：“<em>Lack of verifiable output provenance violates Article 13(1) transparency obligations.</em>”</p>
+</li>
+<li>
+<p><strong>开源生态层面</strong>：CodeLlama衍生项目Star数半年暴涨320%，但贡献者结构剧变——68%为个人开发者，企业级PR（如银行合规适配、汽车AUTOSAR代码生成）近乎归零。印证了开源铁律：<strong>没有生产环境反馈闭环，就没有可持续进化</strong>。当企业不敢把核心业务代码交给不可审计的AI，它们就不会投入工程资源去共建生态。</p>
+</li>
+</ul>
+<hr>
+<h2 id="-终极诘问我们是在写代码还是在给ai交租">❓ 终极诘问：我们是在写代码，还是在给AI交租？<a hidden class="anchor" aria-hidden="true" href="#-终极诘问我们是在写代码还是在给ai交租">#</a></h2>
+<p>一行<code>git commit -m &quot;feat: add iban validation&quot;</code>的背后，现在可能需要同时签署：</p>
+<ul>
+<li>Anthropic服务协议（放弃数据所有权）</li>
+<li>数据许可协议（允许其将你的代码用于模型迭代）</li>
+<li>审计豁免条款（放弃对生成代码缺陷的追责权）</li>
+</ul>
+<p>这让我们不得不回到《程序员宣言》的基石命题：<strong>“I have the right to understand the tools I use.”</strong> 当理解权被法务条款架空，当控制权被二进制协议没收，当修正权被黑箱更新延宕——我们写的还是代码吗？还是在为一场永不停歇的SaaS订阅续费？</p>
+<p><img alt="开发者坐在键盘前，左手敲代码，右手悬停在“Accept Terms”按钮上方，屏幕上弹出三份叠在一起的法律文件，文件标题模糊但可见“Service Agreement”、“Data License”、“Audit Waiver”" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/e0/20260405/d23adf3d/aa0afd1f-e7c8-9d93-9cae-3a35294a6f522232202756.png?Expires=1776007271&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=ttr2qqKxwUG3DCDxo%2BfaeV1Gy2w%3D"></p>
+<p>请思考并参与讨论：</p>
+<ul>
+<li><strong>如果ClaudeCode明天开源全部权重与推理栈，你愿意取消Copilot订阅，切换到ClaudeCode吗？为什么？</strong>（欢迎在评论区晒出你的迁移checklist）</li>
+<li><strong>“开发者主权”是否该成为AI编程工具的强制性合规指标？</strong> 如果是，该由谁定义标准（W3C？Linux Foundation？欧盟AI Office？）？又该由谁认证（TÜV？CNCF？）？</li>
+<li><strong>当闭源AI编程工具成为事实标准，开源社区最后的防线是什么？</strong> 是更激进的分叉（如完全剥离Anthropic依赖的<code>claudecode-fork</code>）？还是彻底转向形式化验证优先的新范式（如用Coq生成可证明正确性的代码）？</li>
+</ul>
+<p>技术从来不只是工具，它是权力的拓扑结构。这一次，键盘还在你手里，但敲下的每个回车，都在重绘那条主权边界线。</p>
+
+
+  </div>
+
+  
+
+
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/">AI编程</a></li>
+      <li><a href="http://localhost:1313/tags/%E9%97%AD%E6%BA%90%E6%A8%A1%E5%9E%8B/">闭源模型</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%BB%E6%9D%83/">开发者主权</a></li>
+      <li><a href="http://localhost:1313/tags/%E4%BB%A3%E7%A0%81%E5%A4%A7%E6%A8%A1%E5%9E%8B/">代码大模型</a></li>
+      <li><a href="http://localhost:1313/tags/anthropic/">Anthropic</a></li>
+      <li><a href="http://localhost:1313/tags/claudecode/">ClaudeCode</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

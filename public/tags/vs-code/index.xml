@@ -1,1 +1,89 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>VS Code on 智通和你一起学AI</title><link>https://zhitong.uk/tags/vs-code/</link><description>Recent content in VS Code on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Mar 2026 12:57:16 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/vs-code/index.xml" rel="self" type="application/rss+xml"/><item><title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</title><link>https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</link><pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</guid><description>详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。</description></item><item><title>工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成</title><link>https://zhitong.uk/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/</link><pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/</guid><description>详解在VS Code中深度集成Claude Code的完整流程：从环境校验、Anthropic API密钥配置，到智能代码补全与自动生成文档的实战配置，助力工程师提升编码效率与工程化水平。</description></item><item><title>重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码</title><link>https://zhitong.uk/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/</link><pubDate>Thu, 19 Feb 2026 04:51:18 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/</guid><description>本文详解如何用Claude Code官方插件快速理解、重构与修复高风险遗留代码，涵盖环境配置、API密钥安全实践、项目接入及典型调试场景，助力开发者高效应对无文档、低测试覆盖率的老系统。</description></item><item><title>快速上手：5分钟配置Claude Code并完成首个代码生成任务</title><link>https://zhitong.uk/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/</link><pubDate>Thu, 19 Feb 2026 04:37:13 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/</guid><description>本文手把手教你5分钟完成Claude Code的本地配置与首个代码生成任务，涵盖系统要求、OAuth登录、VS Code插件安装及基础使用技巧，助开发者快速上手AI编程助手。</description></item><item><title>初识Claude Code：告别传统编码，拥抱AI结对编程</title><link>https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</link><pubDate>Thu, 19 Feb 2026 03:34:10 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</guid><description>本文详解Claude Code插件的安装配置流程，涵盖VS Code与JetBrains IDE支持、四步验证法及国内用户账号绑定要点，助开发者快速开启AI结对编程新体验。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>VS Code on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/vs-code/</link>
+    <description>Recent content in VS Code on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Apr 2026 13:46:09 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/vs-code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第一步：零配置启动——用Claude Code生成项目脚手架</title>
+      <link>http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/</link>
+      <pubDate>Fri, 10 Apr 2026 13:46:09 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-10-dyblpzqdyclaudecodescxmjsj/</guid>
+      <description>本文详解如何通过Anthropic官方VS Code扩展Claude Code零配置生成项目脚手架，强调其IDE深度集成特性、环境依赖（VS Code ≥1.85）及与CLI/API的本质区别，助开发者规避常见认知误区。</description>
+    </item>
+    <item>
+      <title>工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成</title>
+      <link>http://localhost:1313/posts/2026-04-06-gchjjzvscodezsdjcclaudecodesxz/</link>
+      <pubDate>Mon, 06 Apr 2026 13:19:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-gchjjzvscodezsdjcclaudecodesxz/</guid>
+      <description>详解在VS Code中安全集成官方Claude Code扩展，实现智能代码补全与自动化文档生成，涵盖环境校验、权限配置、网络代理设置及最佳实践。</description>
+    </item>
+    <item>
+      <title>重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码</title>
+      <link>http://localhost:1313/posts/2026-04-06-zgydslqrclaudecodebnddyhhxfyld/</link>
+      <pubDate>Mon, 06 Apr 2026 13:06:12 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-zgydslqrclaudecodebnddyhhxfyld/</guid>
+      <description>本文详解如何在VS Code中安全配置官方Claude Code插件，精准接入复杂遗留项目，实现代码理解、自动化重构与智能调试，提升技术债治理效率。</description>
+    </item>
+    <item>
+      <title>快速上手：5分钟配置Claude Code并完成首个代码生成任务</title>
+      <link>http://localhost:1313/posts/2026-04-06-ksss5fzpzclaudecodebwcsgdmscrw/</link>
+      <pubDate>Mon, 06 Apr 2026 10:44:43 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-ksss5fzpzclaudecodebwcsgdmscrw/</guid>
+      <description>本文手把手教你5分钟配置Claude Desktop App及VS Code插件，完成首个本地化代码生成任务，涵盖系统要求、权限验证与实操演示，专为开发者优化，不依赖通用API。</description>
+    </item>
+    <item>
+      <title>社区自救行动：GitHub上悄然兴起的ClaudeCode替代方案清单（含轻量微调指南）</title>
+      <link>http://localhost:1313/posts/2026-04-06-sqzjxdgithubsqrxqdclaudecodetd/</link>
+      <pubDate>Sun, 05 Apr 2026 16:07:36 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-sqzjxdgithubsqrxqdclaudecodetd/</guid>
+      <description>Anthropic静默下线ClaudeCode后，开发者社区48小时内自发构建替代生态：含500&#43; fork、19个托管API网关及轻量微调指南，探讨AI编程基础设施主权与开源自救实践。</description>
+    </item>
+    <item>
+      <title>51万行Claude Code源码泄露实录：8大隐藏功能代码级拆解（附GitHub可运行Demo）</title>
+      <link>http://localhost:1313/posts/2026-04-04-51wxclaudecodeymxlsl8dycgndmjc/</link>
+      <pubDate>Sat, 04 Apr 2026 02:27:25 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-04-51wxclaudecodeymxlsl8dycgndmjc/</guid>
+      <description>深度解析51万行Claude桥接项目源码，代码级拆解8大隐藏功能，涵盖本地化API桥接、多模型后端适配与IDE集成机制，并提供可运行GitHub Demo。</description>
+    </item>
+    <item>
+      <title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</title>
+      <link>http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</link>
+      <pubDate>Fri, 27 Mar 2026 12:57:16 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/</guid>
+      <description>详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。</description>
+    </item>
+    <item>
+      <title>工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成</title>
+      <link>http://localhost:1313/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/</link>
+      <pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/</guid>
+      <description>详解在VS Code中深度集成Claude Code的完整流程：从环境校验、Anthropic API密钥配置，到智能代码补全与自动生成文档的实战配置，助力工程师提升编码效率与工程化水平。</description>
+    </item>
+    <item>
+      <title>重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码</title>
+      <link>http://localhost:1313/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/</link>
+      <pubDate>Thu, 19 Feb 2026 04:51:18 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/</guid>
+      <description>本文详解如何用Claude Code官方插件快速理解、重构与修复高风险遗留代码，涵盖环境配置、API密钥安全实践、项目接入及典型调试场景，助力开发者高效应对无文档、低测试覆盖率的老系统。</description>
+    </item>
+    <item>
+      <title>快速上手：5分钟配置Claude Code并完成首个代码生成任务</title>
+      <link>http://localhost:1313/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/</link>
+      <pubDate>Thu, 19 Feb 2026 04:37:13 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/</guid>
+      <description>本文手把手教你5分钟完成Claude Code的本地配置与首个代码生成任务，涵盖系统要求、OAuth登录、VS Code插件安装及基础使用技巧，助开发者快速上手AI编程助手。</description>
+    </item>
+    <item>
+      <title>初识Claude Code：告别传统编码，拥抱AI结对编程</title>
+      <link>http://localhost:1313/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</link>
+      <pubDate>Thu, 19 Feb 2026 03:34:10 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-csclaudecodegbctbmybaijdbc/</guid>
+      <description>本文详解Claude Code插件的安装配置流程，涵盖VS Code与JetBrains IDE支持、四步验证法及国内用户账号绑定要点，助开发者快速开启AI结对编程新体验。</description>
+    </item>
+  </channel>
+</rss>

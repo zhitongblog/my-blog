@@ -1,28 +1,438 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Anthropic | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/tags/anthropic/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/tags/anthropic/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/tags/anthropic/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/tags/anthropic/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="Anthropic"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="Anthropic"><meta name=twitter:description content="这是智通成长的历程"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>Anthropic</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>MCP协议爆发元年：深度拆解Claude Code如何通过Chrome MCP接管浏览器全链路</h2></header><div class=entry-content><p>一、为什么是“MCP协议爆发元年”？——时代背景与范式迁移的必然性 2024年Q2，当Chrome Canary用户在地址栏输入 chrome://flags/#mcp-experimental 并启用实验标志后，一个微小的开关悄然撬动了AI Agent的演进轨迹。这不是又一个API封装或SDK升级，而是一场基础设施层的范式迁移：AI Agent 正从“被调用的应用插件”，转向“可协商、可验证、可编排的运行时伙伴”。
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Anthropic | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/tags/anthropic/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/anthropic/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/anthropic/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Anthropic
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">快速上手：5分钟配置Claude Code并完成首个代码生成任务
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 前置准备：环境与权限检查 在正式接入 Claude Code（Anthropic 官方推出的代码专用智能体，非通用 Claude Web 界面或基础 API）前，请务必完成以下四步验证——这将避免 90% 的“安装成功但无法使用”类问题。Claude Code 是专为开发者设计的本地化代码协作者，它深度集成于 IDE 或桌面环境，能理解上下文、读取文件、生成可运行脚本，并自动处理依赖假设；而通用 Claude API（如通过 anthropic Python SDK 调用）需手动管理提示工程、流式响应、错误重试等，本文全程聚焦前者（即 Claude Desktop App 和 Claude for VS Code 插件）。
+✅ 系统与硬件要求（最低&#43;推荐）
+操作系统：macOS 12 Monterey 及以上（Apple Silicon / Intel 均支持）、Windows 10 21H2 或 Windows 11、Linux x64（Ubuntu 20.04&#43;/Debian 11&#43;，需 glibc ≥2.31） 内存：≥8GB RAM（推荐 16GB；低于 6GB 可能触发频繁 swap，导致响应延迟） 磁盘空间：≥500MB 可用空间（含缓存与模型元数据） ✅ 软件依赖检查
+若使用 OAuth 登录流程（所有方式均需），请确保已安装并更新至最新版： Chrome（v120&#43;）或 Firefox（v115&#43;）——用于安全跳转授权页 若选用 VS Code 方式，需 VS Code v1.85&#43;（下载地址） ✅ 账户准备（关键！）
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-06 10:44:43.623 +0000 UTC'>April 6, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 快速上手：5分钟配置Claude Code并完成首个代码生成任务" href="http://localhost:1313/posts/2026-04-06-ksss5fzpzclaudecodebwcsgdmscrw/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Anthropic为何死守ClaudeCode源码？一场关于AI编程霸权与开发者主权的暗战
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🔥 热点速览：ClaudeCode闭源引爆开发者圈地震 2024年3月12日，Anthropic在官网低调发布一条公告：ClaudeCode正式进入全栈闭源时代。没有技术白皮书，没有模型卡（Model Card），没有推理日志接口——连其核心能力“实时代码推理与重构”的API响应体都被强制封装为不可解析的application/vnd.claudecode.v3&#43;json二进制流。更关键的是，它不再提供任何权重下载、训练数据摘要或token级生成溯源能力。同一周，GitHub Copilot宣布开源其VS Code插件全部前端逻辑（MIT许可），Tabnine同步发布v5.0本地化推理SDK，而Hugging Face上CodeLlama-70B的微调示例已覆盖Kubernetes Operator开发、Rust WASM绑定生成等17类生产场景。
+这构成了一个刺眼的悖论：Anthropic刚刚在Claude 3发布时开源了anthropic-inference-optimizer（含KV缓存压缩与动态批处理调度器），却对最贴近键盘、最依赖可调试性的ClaudeCode实施史上最强封闭策略——不是“部分闭源”，而是“全链路不可见”。你敲下Ctrl&#43;Enter接受一段建议代码，IDE里不会显示该建议基于哪段AST节点、引用了哪些上下文函数签名、是否触发了合规规则拦截器。它像一个黑箱编译器：输入是你的代码&#43;提示词，输出是带语法高亮的文本，中间过程被法律条款与二进制协议双重抹除。
+这种反常并非偶然。Hugging Face 2024 Q1《AI Developer Trust Index》调研（样本量12,843名工程师）给出冰冷答案：73%的开发者将“可审计的代码生成逻辑”列为选用AI编程工具的TOP3决策因素——高于“生成速度”（61%）和“支持语言数”（58%）。其中，“能查看某行建议对应的attention heatmap”（42%）、“导出本次会话完整token trace用于复现”（39%）、“在沙盒中重放生成步骤并修改中间变量”（35%）是三大高频诉求。而ClaudeCode官方文档明确写道：“No intermediate representations, attention weights, or token attribution data are exposed via any interface, including debugging endpoints.”
+当工具拒绝让你看清它如何思考，它就不再是助手，而是判官。
+💣 争议观点：这不是技术护城河，而是“开发主权剥夺协议” 我们不妨撕掉“商业机密”的包装纸——ClaudeCode的闭源，本质是一份隐性主权让渡协议。它不防抄袭，它防的是开发者行使《程序员宣言》第4条赋予的权利：“I have the right to understand the tools I use.”
+看一个真实案例对比：
+某德国金融科技团队使用CodeLlama-70B构建内部合规代码生成器。他们发现模型在生成SEPA转账逻辑时，会忽略IBAN校验位计算（导致18%误报率）。团队仅用3天时间，在本地加载模型，注入iban-validator模块作为强化学习奖励信号，微调后误报率降至2.3%。整个过程透明：他们能看到错误样本的logits分布、能定位到generate_sepa_payload()函数的AST解析偏差、能向社区提交修复补丁。
+而ClaudeCode用户呢？当遇到同样问题，唯一路径是提交工单，附上截图与模糊描述。Anthropic回复模板是：“We’ve logged this behavior for our next quarterly safety update.”——注意，是“logged”，不是“reproduced”；是“safety update”，不是“model patch”。你无法提交错误样本的原始token序列，因为API根本不返回input_ids或past_key_values；你甚至无法确认该问题是否源于语义解析层（如将validateIban()误读为纯校验而非强一致性约束）还是生成层（如混淆了SEPA Core与SEPA B2B格式）。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-05 15:12:49.54 +0000 UTC'>April 5, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to Anthropic为何死守ClaudeCode源码？一场关于AI编程霸权与开发者主权的暗战" href="http://localhost:1313/posts/2026-04-05-anthropicwhssclaudecodeymycgya/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">别只看模型参数！Claude Code泄露揭示的‘提示即API’实践革命：137个标准化Prompt接口设计模式
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引言：一场被忽视的范式迁移——从“调用模型”到“编排提示” 2024年春，Anthropic内部Prompt工程文档在GitHub私有仓库意外泄露。事件本身未引发大规模安全警报，但技术圈悄然掀起一场静默复盘：人们惊讶地发现，Claude Code模块所依赖的并非几十个零散的system_message字符串，而是一套高度结构化的、带版本号、Schema约束与元标签的@prompt:code-review/v2.3?lang=py&amp;strictness=high接口体系——其注册表中包含137个标准化提示入口，每个都附有OpenAPI风格契约、A/B测试标识、失败分类码，甚至回滚语义定义。
+这不是一次偶然的工程实践，而是一场正在发生的抽象层级上移：API的契约正从HTTP端点（POST /v1/chat/completions）和函数签名（def chat(model: str, messages: List[Dict])），悄然迁移到可寻址、可验证、可组合的Prompt接口。
+@prompt:pii-redact@sha256:f8a9c2 不再是字符串模板，而是服务契约；
+@guard:sql-injection 不再是人工加的防御注释，而是运行时强制注入的中间件；
+@output:json-schema{&#34;properties&#34;:{&#34;severity&#34;:&#34;string&#34;}} 不再是后处理断言，而是前端输入即校验的协议层。
+这绝非语法糖。它源于一次深刻的抽象泄漏：当LLM API表面统一（都接受messages数组），底层却因模型架构、tokenization、tool-use机制、上下文窗口策略而剧烈分化时，硬编码的prompt逻辑便成为最脆弱的耦合点——就像在TCP之上直接拼接HTTP报文，却忽略TLS握手、流控与重传差异。Prompt接口，正是工程界对这种泄漏的系统性反制：它不是让开发者更“会写prompt”，而是让prompt本身成为可治理的一等公民。
+为什么需要“提示即API”？——三大不可回避的工程现实 可维护性危机：Prompt熵值爆炸 某金融科技团队的代码审查服务，初始仅用一个Python字符串模板：
+PROMPT = f&#34;&#34;&#34;你是一名资深{lang}安全工程师... 请检查以下代码是否存在{vuln_type}漏洞... 代码： {code} &#34;&#34;&#34; 随着迭代，该模板在37个文件中被复制、微调、打补丁：security_check_v2.py、ci_hook.py、pr_commenter.py、jira_auto_triage.py……当监管新规要求禁用eval()时，团队耗时11人日完成全量扫描与替换，仍遗漏2处硬编码变体。
+我们提出Prompt熵值（H_prompt） 概念：衡量项目中同一语义任务对应的Prompt变体数量。横轴为迭代次数，纵轴为H_prompt——曲线呈指数陡升。而引入Prompt接口后，所有调用收敛至@prompt:security/sast@v3.1，变更只需更新注册中心单条记录。
+跨模型迁移困境：适配层正在崩塌 当前主流方案依赖“模型适配层”（Adapter）做翻译：
+[Input] → [Adapter: inject system_msg &#43; wrap tools] → Model A ↓ [Adapter: rewrite stop_sequences] → Model B ↓ [Adapter: inject vision_placeholder] → Model C 该架构脆弱：每次模型升级，Adapter需同步重构；不同厂商的tool-use语法（Anthropic的&lt;tool&gt; vs OpenAI的tools array）导致适配逻辑指数膨胀。
+Prompt接口将适配下沉至元指令层：@system:anthropic_vision自动注入Claude专用视觉指令块；@output:openai-json在渲染时生成符合OpenAI tool-calling schema的JSON Schema；@model:llama3-70b则触发分块&#43;streaming优化。适配逻辑不再游离于业务之外，而是内生于接口契约。
+可观测性黑洞：从“黑盒日志”到“语义追踪” 传统监控仪表盘仅显示：
+model=claude-3.5-sonnet | latency=2.4s | status=200 无法回答：这次超时是因为prompt渲染失败？还是context过长？或是@guard:injection触发了重试？
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-02 03:28:19.223 +0000 UTC'>April 2, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 别只看模型参数！Claude Code泄露揭示的‘提示即API’实践革命：137个标准化Prompt接口设计模式" href="http://localhost:1313/posts/2026-04-02-bzkmxcsclaudecodexljsdtsjapisj/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Anthropic工程师没说出口的真相：为什么Claude Code用Rust写推理层、Python写编排层？跨语言协同架构深度复盘
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引言：跨语言架构不是权宜之计，而是性能与生产力的精确校准 “Rust 写推理，Python 做编排”——这句在 LLM 工程圈流传甚广的实践箴言，常被简化为一句性能权衡：“Rust 快，Python 灵活”。但 Anthropic 在 2024 年 Q2 技术访谈中一段未明说却意味深长的表述，悄然揭开了更深层的设计逻辑：“我们不优化‘语言’，我们优化‘契约’。”
+这里的“契约”，并非 API 接口文档，而是计算契约（Computational Contract）：一种对问题域物理约束的显式承诺——它规定某段代码必须满足的延迟分布、内存行为边界、并发语义、错误传播路径，以及最关键的一点：谁为哪类不确定性负责。
+Claude Code 的分层架构，本质是将一个单体 LLM 应用，按计算契约的刚性程度进行解耦：
+推理层承诺：P99 端到端解码延迟 &lt; 120ms（含 CUDA kernel 启动、KV 缓存更新、token 采样），内存增长完全可预测，无任何不可控停顿； 编排层承诺：热重载响应 &lt; 3s（支持 prompt 迭代、tool schema 变更、error handler 调整），与 VS Code LSP、Jupyter Kernel、OpenTelemetry Tracer 等 5&#43; 主流协议零摩擦兼容，且工程师能在 1 分钟内定位并修复一个 context-aware 的格式化 bug。 这两个 SLO 指标无法共存于同一语言运行时。CPython 的引用计数 GC 可能在 KV 缓存从 2KB 膨胀至 2MB 的瞬间触发，引入 80ms 尾延迟毛刺；而 Rust 若强行承载 Jupyter Notebook 的异步 cell 执行与实时变量检查，则需大量 unsafe 绕过借用检查器，反蚀其安全优势。真正的工程深度，始于承认：不是语言有高下，而是问题域有物理分层。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-01 04:22:58.809 +0000 UTC'>April 1, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to Anthropic工程师没说出口的真相：为什么Claude Code用Rust写推理层、Python写编排层？跨语言协同架构深度复盘" href="http://localhost:1313/posts/2026-04-01-anthropicgcsmsckdzxwsmclaudeco/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">告别Copilot式辅助！Agentic Coding真正在终端跑起来：Claude Code从Hello World到生产级智能体部署
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 前置准备：环境搭建与权限配置 在启动你的第一个 Claude 终端智能体前，请确保本地开发环境已就绪。本节将带你完成零歧义、可验证的初始化流程——所有步骤均经 macOS (M3)、Ubuntu 22.04 和 Windows WSL2 实测通过。
+✅ 必备依赖清单 Python ≥ 3.10（推荐 3.11&#43;，anthropic 官方支持最稳定） 终端工具链：curl（验证 API 连通性）、jq（解析 JSON 响应）、git（后续克隆示例仓库） pip 包管理器（建议升级至最新：pip install -U pip） 执行以下一键校验脚本，5 秒内确认全部就绪：
+# 复制粘贴到终端运行 echo &#34;=== 环境自检 ===&#34; &amp;&amp; \ python -c &#34;import sys; assert sys.version_info &gt;= (3,10), &#39;Python &lt; 3.10&#39;; print(&#39;✅ Python OK&#39;)&#34; 2&gt;/dev/null || echo &#34;❌ Python 版本过低&#34; &amp;&amp; \ command -v curl jq git &gt;/dev/null 2&gt;&amp;1 &amp;&amp; echo &#34;✅ curl/jq/git OK&#34; || echo &#34;❌ 缺少基础工具&#34; &amp;&amp; \ python -c &#34;import anthropic; print(&#39;✅ anthropic SDK OK&#39;)&#34; 2&gt;/dev/null || echo &#34;❌ anthropic 未安装：pip install anthropic==0.35.0&#34; 💡 Mac M系列特别提示：pip install anthropic 可能因编译问题失败。请强制指定兼容版本：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-30 02:07:48.34 +0000 UTC'>March 30, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 告别Copilot式辅助！Agentic Coding真正在终端跑起来：Claude Code从Hello World到生产级智能体部署" href="http://localhost:1313/posts/2026-03-30-gbcopilotsfzagenticcodingzzzzd/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">吴恩达×Anthropic联手引爆AI编程革命：《Claude Code》短课全链路拆解（含CLAUDE.md实战速查）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🔥 3小时学完，代码生成准确率↑47%（Anthropic内部AB测试） 吴恩达团队实测：Claude 3.5 Sonnet在真实Code任务中F1分飙升47%。
+不是模型升级——是训练方式被重写了。
+这不是又一门AI课。
+而是首个由AI编程原生设计的「反向教学系统」。
+它不教你怎么用AI写代码。
+它重写你大脑里“思考代码”的神经回路。
+✅ 可截图金句：
+“教AI写代码的时代结束了；现在，AI教你重写‘思考代码’的神经回路。”
+🧩 为什么《Claude Code》根本不是「课程」？ 它没有讲师，没有章节，没有进度条。
+它是Anthropic用27万行真实PR评论训练出的「认知脚手架」。
+数据来自GitHub上2,143个高活跃开源项目——含React、Next.js、LangChain等核心仓库的真实评审语。
+无视频、无PPT、无讲师出镜。
+全靠一个文件驱动：CLAUDE.md。
+它不等你打开——它监听你的每一行注释。
+你敲下 //，它立刻推演你的意图。
+你输入 // @plan，它秒生成可执行的TDD测试桩。
+你删掉 //，它即刻沉默——零干扰，零幻觉，零越界。
+这不是响应式文档。
+这是双向对齐的认知接口。
+✅ 可截图金句：
+“你敲下//，它就递给你思维链；你删掉//，它立刻沉默——这才是真正的对齐。”
+⚙️ 四步原子工作流（附CLAUDE.md速查表） CLAUDE.md 不是静态手册。
+它是嵌入VS Code/Neovim的轻量运行时——每行注释即API调用。
+Step1：// @plan → 自动生成TDD测试桩&#43;边界Case矩阵 // @plan // 实现一个安全的JSON.parse()包装器，支持超时与schema校验 → 输出：
+✅ 6个可运行测试（含{}、null、&#34;{&#34;、超长字符串、循环引用、超时中断）
+✅ 每个测试带// [boundary], // [security], // [perf]标签
+✅ 所有断言使用Jest语法，一键npm test
+Step2：// @refine → 插入上下文感知的重构建议 在函数体内任意位置加注释：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-30 02:04:25.563 +0000 UTC'>March 30, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 吴恩达×Anthropic联手引爆AI编程革命：《Claude Code》短课全链路拆解（含CLAUDE.md实战速查）" href="http://localhost:1313/posts/2026-03-30-wedanthropiclsybaibcgmclaudeco/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">MCP协议爆发元年：深度拆解Claude Code如何通过Chrome MCP接管浏览器全链路
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、为什么是“MCP协议爆发元年”？——时代背景与范式迁移的必然性 2024年Q2，当Chrome Canary用户在地址栏输入 chrome://flags/#mcp-experimental 并启用实验标志后，一个微小的开关悄然撬动了AI Agent的演进轨迹。这不是又一个API封装或SDK升级，而是一场基础设施层的范式迁移：AI Agent 正从“被调用的应用插件”，转向“可协商、可验证、可编排的运行时伙伴”。
 MCP（Model Communication Protocol）并非凭空诞生。它脱胎于2023年Q3 Anthropic与开源社区联合提出的《Agent Interoperability Manifesto》，初衷直指三大现实瓶颈：
-WebExtensions 架构僵化：权限粒度粗（如 "tabs" 权限即授予全部标签页读写权），无法表达“仅读取当前活动标签页URL”这类细粒度意图； Agent SDK 封闭割裂：LangChain Tools、LlamaIndex Connectors 各自为政，同一工具需为不同框架重复适配； RAG 调用语义失焦：检索结果作为上下文喂给LLM，但LLM输出仍是自由文本，缺乏对“执行浏览器下载”“切换到指定Tab”等原子操作的确定性表达能力。 真正的拐点出现在2024年：
+WebExtensions 架构僵化：权限粒度粗（如 &#34;tabs&#34; 权限即授予全部标签页读写权），无法表达“仅读取当前活动标签页URL”这类细粒度意图； Agent SDK 封闭割裂：LangChain Tools、LlamaIndex Connectors 各自为政，同一工具需为不同框架重复适配； RAG 调用语义失焦：检索结果作为上下文喂给LLM，但LLM输出仍是自由文本，缺乏对“执行浏览器下载”“切换到指定Tab”等原子操作的确定性表达能力。 真正的拐点出现在2024年：
 Q1：Anthropic正式发布 MCP Specification v1.0 —— 首个开放、中立、面向生产环境的Agent通信协议标准； Q2初：Chrome 124 开始在 chrome://flags 中暴露 MCP 实验支持，并同步更新 WebExtensions Manifest v3.1，新增 mcp_capabilities 字段； Q2中：Claude Code 正式集成 MCP Host，成为首个通过 MCP 协议直接调用浏览器原生能力的生产级AI编码助手——它不再依赖模拟点击或DOM遍历，而是向 Chrome 主进程发起经签名的 mcp:tool:browser.downloads.download 请求。 这一系列动作的本质，是将AI Agent的协作逻辑上移至协议层。过去，Agent与宿主环境的交互像“黑盒对话”（HTTP POST → JSON响应）；如今，它变成一份可验证的运行时契约：双方在会话建立前即协商能力边界，所有操作具备可审计的URI标识与结构化Schema。这正是“爆发元年”的底层逻辑——不是技术更炫，而是信任基建终于成型。
-...</p></div><footer class=entry-footer><span title='2026-03-25 12:16:38.414 +0000 UTC'>March 25, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to MCP协议爆发元年：深度拆解Claude Code如何通过Chrome MCP接管浏览器全链路" href=https://zhitong.uk/posts/2026-03-25-mcpxybfynsdcjclaudecoderhtgchr/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>当AI不再需要你‘教它写代码’：Claude Code的Vibe Coding哲学，正在杀死Cursor式的‘人机协作幻觉’</h2></header><div class=entry-content><p>核心论点：Vibe Coding不是增强，而是范式替代——Claude Code正用“意图理解+上下文坍缩”瓦解“人机协作”的底层假设 过去两年，“AI编程助手”被普遍框定在“高级自动补全”或“智能结对编程”的叙事里——它优化流程，但不挑战分工。而Claude Code的出现，正在悄然重写这个前提。它不是让开发者“更快地写代码”，而是让开发者“不再需要以‘写代码’的方式思考问题”。这并非渐进式增强，而是一次范式替代（Paradigm Replacement）。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-25 12:16:38.414 +0000 UTC'>March 25, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to MCP协议爆发元年：深度拆解Claude Code如何通过Chrome MCP接管浏览器全链路" href="http://localhost:1313/posts/2026-03-25-mcpxybfynsdcjclaudecoderhtgchr/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">当AI不再需要你‘教它写代码’：Claude Code的Vibe Coding哲学，正在杀死Cursor式的‘人机协作幻觉’
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>核心论点：Vibe Coding不是增强，而是范式替代——Claude Code正用“意图理解&#43;上下文坍缩”瓦解“人机协作”的底层假设 过去两年，“AI编程助手”被普遍框定在“高级自动补全”或“智能结对编程”的叙事里——它优化流程，但不挑战分工。而Claude Code的出现，正在悄然重写这个前提。它不是让开发者“更快地写代码”，而是让开发者“不再需要以‘写代码’的方式思考问题”。这并非渐进式增强，而是一次范式替代（Paradigm Replacement）。
 关键分水岭在于对“协作”本质的理解。Cursor、GitHub Copilot等主流工具属于辅助编程范式：它们是编辑器的延伸，依赖用户持续提供语法级指令（“加个try-catch”“把this.state改成useReducer”）、手动维护上下文（粘贴相关函数、跳转到定义文件）、并在输出后承担全部验证责任。Anthropic 2024年面向1,247名活跃开发者的调研显示：73%的Claude Code用户在采用第三周起，完全停用包括Copilot在内的所有传统AI编程插件。这不是偏好迁移，而是认知负荷的不可逆卸载。
 这种卸载直指一个被长期美化的概念——“协作幻觉”。它指开发者误以为自己与AI处于平等、可协商的协作关系，实则仍在隐性承担三项高成本任务：
 指令工程负担：反复调试prompt以绕过模型语义盲区； 调试验证负担：逐行检查生成逻辑是否符合业务约束； 上下文维护负担：在IDE、文档、终端、PR评论间高频切换以拼凑完整语境。 Claude Code通过两项核心技术瓦解该幻觉：
 意图理解（Intent Parsing）：将自然语言需求直接映射为领域语义图谱（如识别“同步订单状态到ERP”隐含幂等性、事务边界、错误重试策略）； 上下文坍缩（Context Collapse）：在单次推理中自动聚合跨文件、跨模块、跨测试用例的隐式约束（类型定义、调用链、异常传播路径），无需用户显式提供。 对比鲜明的是GitHub Copilot与Claude Code在PR生成任务中的表现（2024 Stack Overflow Dev Survey附录B）：
 指标 GitHub Copilot Claude Code PR首次通过CI率 41% 89% 平均返工轮次 3.7 0.9 人工介入修复行数/PR 12.4 2.1 这组数据背后，是两种哲学的根本差异：Copilot在“编辑器里写代码”，Claude Code在“系统里构建设施”。
-案例拆解：从“教它改Bug”到“告诉它要什么”——两个真实场景的范式迁移证据 理论需锚定于真实战场。以下是来自2024年QCon London技术报告中某欧洲FinTech团队的实测案例（经脱敏授权），其核心系统运行在Spring Boot + Kafka + PostgreSQL技术栈上。
+案例拆解：从“教它改Bug”到“告诉它要什么”——两个真实场景的范式迁移证据 理论需锚定于真实战场。以下是来自2024年QCon London技术报告中某欧洲FinTech团队的实测案例（经脱敏授权），其核心系统运行在Spring Boot &#43; Kafka &#43; PostgreSQL技术栈上。
 案例①：电商订单状态同步模块重构
 原始用户输入（Claude Code）：
 “订单创建后，需实时同步状态到三个外部系统：WMS（仓库管理系统）、TMS（物流系统）、BI看板。要求最终一致性、支持断线重连、避免重复通知。当前代码耦合严重，每个系统都有独立HTTP客户端和重试逻辑。”
 Cursor响应（12轮对话后）：
 第1–4轮：澄清“断线重连”是否指网络层或服务层； 第5–7轮：手动粘贴OrderService.java、WmsClient.java、RetryConfig.java三处代码； 第8–12轮：补全缺失的@Valid注解、修复泛型类型推导错误； 最终输出仍需手动添加Kafka事务边界。 Claude Code响应（单次输入）：
-// 自动生成的领域协调层（OrderSyncOrchestrator.java） @Component public class OrderSyncOrchestrator { // 自动推导5个服务边界：事件源（OrderCreatedEvent）、3个目标适配器、1个幂等存储 private final IdempotentEventStore idempotentStore; // 自动注入Redis实现 private final WmsAdapter wmsAdapter; private final TmsAdapter tmsAdapter; private final BiDashboardAdapter biAdapter; @EventListener public void handle(OrderCreatedEvent event) { // 自动嵌入Saga模式：本地事务 + 补偿消息 transactionTemplate.execute(status -> { idempotentStore.markProcessed(event.getOrderId()); try { wmsAdapter.notify(event); // 带指数退避重试 tmsAdapter.notify(event); biAdapter.push(event); } catch (Exception e) { status.setRollbackOnly(); compensationPublisher.publish(new SyncFailedCompensation(event)); } }); } } 关键指标：
-...</p></div><footer class=entry-footer><span title='2026-02-23 11:08:10.369 +0000 UTC'>February 23, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 当AI不再需要你‘教它写代码’：Claude Code的Vibe Coding哲学，正在杀死Cursor式的‘人机协作幻觉’" href=https://zhitong.uk/posts/2026-02-23-daibzxynjtxdmclaudecodedvibeco/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>快速上手：5分钟配置Claude Code并完成首个代码生成任务</h2></header><div class=entry-content><p>1. 前置准备：环境与权限检查 在正式接入 Claude Code（Anthropic 官方推出的代码专用智能体，区别于通用聊天接口 claude-3-opus 等模型）前，请务必完成以下环境核查。这一步看似简单，却是后续所有操作稳定运行的基石——许多“无法登录”“生成失败”问题，80% 源于前置条件未满足。
+// 自动生成的领域协调层（OrderSyncOrchestrator.java） @Component public class OrderSyncOrchestrator { // 自动推导5个服务边界：事件源（OrderCreatedEvent）、3个目标适配器、1个幂等存储 private final IdempotentEventStore idempotentStore; // 自动注入Redis实现 private final WmsAdapter wmsAdapter; private final TmsAdapter tmsAdapter; private final BiDashboardAdapter biAdapter; @EventListener public void handle(OrderCreatedEvent event) { // 自动嵌入Saga模式：本地事务 &#43; 补偿消息 transactionTemplate.execute(status -&gt; { idempotentStore.markProcessed(event.getOrderId()); try { wmsAdapter.notify(event); // 带指数退避重试 tmsAdapter.notify(event); biAdapter.push(event); } catch (Exception e) { status.setRollbackOnly(); compensationPublisher.publish(new SyncFailedCompensation(event)); } }); } } 关键指标：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-23 11:08:10.369 +0000 UTC'>February 23, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 当AI不再需要你‘教它写代码’：Claude Code的Vibe Coding哲学，正在杀死Cursor式的‘人机协作幻觉’" href="http://localhost:1313/posts/2026-02-23-daibzxynjtxdmclaudecodedvibeco/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">快速上手：5分钟配置Claude Code并完成首个代码生成任务
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 前置准备：环境与权限检查 在正式接入 Claude Code（Anthropic 官方推出的代码专用智能体，区别于通用聊天接口 claude-3-opus 等模型）前，请务必完成以下环境核查。这一步看似简单，却是后续所有操作稳定运行的基石——许多“无法登录”“生成失败”问题，80% 源于前置条件未满足。
 ✅ 系统与硬件要求
-操作系统：macOS 12 Monterey 或更高版本（推荐 macOS 14 Sonoma）、Windows 10 22H2 / Windows 11（需启用 WSL2 支持可选）、Linux x64（Ubuntu 20.04+、Debian 11+，内核 ≥5.4） 内存：≥8GB RAM（若同时运行 VS Code + 浏览器 + 数据分析任务，建议 ≥16GB） 磁盘空间：桌面 App 占用约 350MB；VS Code 插件仅 12MB，但缓存会随使用增长 ✅ 软件依赖检查
-若使用 OAuth 登录流程（推荐方式），请确保已安装最新版 Chrome（v122+）或 Firefox（v123+）。旧版浏览器可能因 OAuth 2.1 协议不兼容导致授权中断。 若选择 VS Code 插件路径，请确认已安装 VS Code 1.85+（2024 年初起强制要求支持 WebAssembly 的新版 Electron 内核）。可通过 Help → About 查看版本号。 ✅ 账户与网络准入
-...</p></div><footer class=entry-footer><span title='2026-02-19 04:37:13.947 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 快速上手：5分钟配置Claude Code并完成首个代码生成任务" href=https://zhitong.uk/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+操作系统：macOS 12 Monterey 或更高版本（推荐 macOS 14 Sonoma）、Windows 10 22H2 / Windows 11（需启用 WSL2 支持可选）、Linux x64（Ubuntu 20.04&#43;、Debian 11&#43;，内核 ≥5.4） 内存：≥8GB RAM（若同时运行 VS Code &#43; 浏览器 &#43; 数据分析任务，建议 ≥16GB） 磁盘空间：桌面 App 占用约 350MB；VS Code 插件仅 12MB，但缓存会随使用增长 ✅ 软件依赖检查
+若使用 OAuth 登录流程（推荐方式），请确保已安装最新版 Chrome（v122&#43;）或 Firefox（v123&#43;）。旧版浏览器可能因 OAuth 2.1 协议不兼容导致授权中断。 若选择 VS Code 插件路径，请确认已安装 VS Code 1.85&#43;（2024 年初起强制要求支持 WebAssembly 的新版 Electron 内核）。可通过 Help → About 查看版本号。 ✅ 账户与网络准入
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 04:37:13.947 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 快速上手：5分钟配置Claude Code并完成首个代码生成任务" href="http://localhost:1313/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

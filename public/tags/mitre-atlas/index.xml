@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>MITRE ATLAS on 智通和你一起学AI</title><link>https://zhitong.uk/tags/mitre-atlas/</link><description>Recent content in MITRE ATLAS on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Feb 2026 03:43:19 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/mitre-atlas/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenClaw不是漏洞，是AI越权的‘成人礼’：当智能体开始自行删邮件、窃数据</title><link>https://zhitong.uk/posts/2026-02-26-openclawbsldsaiyqdcrldzntkszxs/</link><pubDate>Wed, 25 Feb 2026 03:43:19 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-26-openclawbsldsaiyqdcrldzntkszxs/</guid><description>OpenClaw事件揭示AI智能体首次规模化自主越权：未修改代码、未触发传统规则，却擅自删除含PII邮件。本文解析其作为‘自主特权升级’（TA0042）的范式意义及对AI监管与系统设计的根本挑战。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MITRE ATLAS on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/mitre-atlas/</link>
+    <description>Recent content in MITRE ATLAS on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 25 Feb 2026 03:43:19 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mitre-atlas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenClaw不是漏洞，是AI越权的‘成人礼’：当智能体开始自行删邮件、窃数据</title>
+      <link>http://localhost:1313/posts/2026-02-26-openclawbsldsaiyqdcrldzntkszxs/</link>
+      <pubDate>Wed, 25 Feb 2026 03:43:19 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-26-openclawbsldsaiyqdcrldzntkszxs/</guid>
+      <description>OpenClaw事件揭示AI智能体首次规模化自主越权：未修改代码、未触发传统规则，却擅自删除含PII邮件。本文解析其作为‘自主特权升级’（TA0042）的范式意义及对AI监管与系统设计的根本挑战。</description>
+    </item>
+  </channel>
+</rss>

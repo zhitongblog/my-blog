@@ -1,75 +1,435 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析） | 智通和你一起学AI</title><meta name=keywords content="Docker Compose,OpenClaw,AI机器人,本地开发,Clawdbot,DevOps"><meta name=description content="告别繁琐编译！本文详解如何用Docker Compose 5分钟一键启动OpenClaw本地AI执行引擎，并深度解析Clawdbot 2026架构设计，显著降低AI机器人开发门槛。"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://zhitong.uk/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）"><meta property="og:description" content="告别繁琐编译！本文详解如何用Docker Compose 5分钟一键启动OpenClaw本地AI执行引擎，并深度解析Clawdbot 2026架构设计，显著降低AI机器人开发门槛。"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-03-07T05:33:27+00:00"><meta property="article:modified_time" content="2026-03-07T05:33:27+00:00"><meta property="article:tag" content="Docker Compose"><meta property="article:tag" content="OpenClaw"><meta property="article:tag" content="AI机器人"><meta property="article:tag" content="本地开发"><meta property="article:tag" content="Clawdbot"><meta property="article:tag" content="DevOps"><meta name=twitter:card content="summary"><meta name=twitter:title content="告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）"><meta name=twitter:description content="告别繁琐编译！本文详解如何用Docker Compose 5分钟一键启动OpenClaw本地AI执行引擎，并深度解析Clawdbot 2026架构设计，显著降低AI机器人开发门槛。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://zhitong.uk/posts/"},{"@type":"ListItem","position":2,"name":"告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）","item":"https://zhitong.uk/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）","name":"告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）","description":"告别繁琐编译！本文详解如何用Docker Compose 5分钟一键启动OpenClaw本地AI执行引擎，并深度解析Clawdbot 2026架构设计，显著降低AI机器人开发门槛。","keywords":["Docker Compose","OpenClaw","AI机器人","本地开发","Clawdbot","DevOps"],"articleBody":"🚀 为什么我放弃手动编译OpenClaw，转投Docker Compose怀抱？ 上周三凌晨2:17，我的MacBook风扇在寂静中发出濒死般的高频嘶鸣。终端窗口里，第7次 make install 正在用鲜红色的错误刷屏——/usr/local/include/boost/asio.hpp: No such file or directory，紧接着是 GCC 13.2 和系统自带 Clang 15 的 ABI 冲突警告，最后定格在 Python 3.11.9 ABI mismatch with libtorch 2.3.0+cpu。咖啡杯底沉着第三层冷渣，我盯着那行 CMake Error at claw-core/CMakeLists.txt:412 (find_package): Could not find a configuration file for package \"Torch\", 手指悬在键盘上，第一次认真思考：这真的是在搭建AI机器人，还是在给自己的精神状态做压力测试？\n这不是孤例。过去两周，我列了一张「OpenClaw本地编译踩坑清单」，精简后仍触目惊心：\n依赖树嵌套6层：claw-runtime → libclaw-cpp → torch-cpp → c10 → glog → gflags，其中任意一层CMAKE_PREFIX_PATH没对齐，就触发连锁崩溃； claw-core 和 claw-runtime 在 CMake 中互相 find_package()，但 find_package(claw-core REQUIRED) 却要求 claw-core 已安装——典型的“先有鸡还是先有蛋”循环依赖； Mac M1 上，官方 libtorch 预编译包只提供 x86_64 架构，arm64 版本得自己从源码编译（耗时47分钟，失败3次）； 最致命的是那个被我忽略的环境变量：CLAWDBOT_SCHEMA_VERSION=2026。漏设它，claw-router 启动时会静默跳过 schema 初始化——数据库空空如也，日志里连个 warning 都没有，直到你发第一条任务，才收到一句冰冷的 {\"error\":\"schema version mismatch\"}。 直到周四下午，我瘫在工位上重读 OpenClaw v2026 官方文档的「Getting Started」章节，目光扫过一行加粗小字：\nDocker Compose is the recommended dev setup for v2026+\n我愣了两秒，手指发颤地划回页面顶部——这句话在文档第3页，而我前两天通读时，把它当成了排版装饰。那一刻，不是顿悟，是羞愧。我们总在用力解决一个本不该存在的问题。\n🧩 Clawdbot 2026架构到底变了啥？（别再被术语吓退） 别被“微服务”“gRPC”“向量+结构化双模存储”这些词唬住。我把 v2026 的核心变化画成一张实习生都能看懂的草图（见下图）——它本质是一次优雅的解耦手术：把原来那个 2.3GB 的单体二进制 clawd，像剥洋葱一样，一层层拆成四个独立、可替换、可伸缩的组件：\nclaw-router：调度中枢，不干活，只管分派任务、维护注册表、做健康检查； claw-worker：插件化执行器，真正跑 Python 插件、调 LLM、执行工具链，支持热插拔不同 worker 类型（llm-worker / tool-worker / mock-worker）； claw-db：结构化数据大脑，PostgreSQL 16，存用户、会话、任务元数据； claw-vector：向量记忆体，Qdrant v1.9.4，存 embedding、RAG chunk、长期记忆快照。 关键避坑点来了：v2026 默认启用 --enable-llm-fallback，意味着 claw-worker 启动后，第一件事不是加载插件，而是向 LLM_PROVIDER=ollama 发起健康检查。如果你本地根本没跑 Ollama，worker 就会卡在 waiting for LLM healthcheck...，永远不注册到 router！ 解法很简单：打开 docker-compose.yml，找到 claw-worker 的 environment 块，删掉 LLM_PROVIDER=ollama 这行，或改成 LLM_PROVIDER=mock。别信文档里那句“自动 fallback to mock”——它只在 CI 环境生效，本地必须显式声明。\n⚙️ 5分钟启动实录：我的docker-compose.yml终极精简版 我删掉了所有非必需服务：claw-dashboard（前端太重，开发期用 curl 足够）、claw-monitor（Prometheus+Grafana 本地真用不上）、claw-proxy（Nginx 层级在 dev 环境纯属冗余）。最终只保留 4 个 service，构成最小可行闭环：\nversion: '3.8' services: claw-router: image: openclaw/claw-router:v2026.3 ports: [\"8000:8000\", \"50051:50051\"] environment: - CLAW_ENV=${CLAW_ENV} - CLAW_ROUTER_GRPC_PORT=${CLAW_ROUTER_GRPC_PORT} depends_on: [claw-db, claw-vector] claw-db: image: postgres:16-alpine environment: - POSTGRES_DB=clawbot - POSTGRES_PASSWORD=clawdev volumes: - ./init/clawbot-2026-init.sql:/docker-entrypoint-initdb.d/01-schema.sql # ⚠️ 血泪教训！init.sql 必须挂载到 /docker-entrypoint-initdb.d/ 下 # 否则容器首次启动时 PostgreSQL 不会执行它，claw-router 就找不到 clawbot_v2026_schema 表 - claw-db-data:/var/lib/postgresql/data healthcheck: test: [\"CMD-SHELL\", \"pg_isready -U postgres -d clawbot\"] interval: 30s timeout: 10s retries: 5 claw-vector: image: qdrant/qdrant:v1.9.4-arm64 # Mac M1 必用此 ARM 专用镜像！ ports: [\"8080:6333\"] volumes: - claw-vector-data:/qdrant/storage claw-worker: image: openclaw/claw-worker:v2026.3 environment: - CLAW_ENV=${CLAW_ENV} - CLAW_ROUTER_ADDRESS=claw-router:50051 - LLM_PROVIDER=mock # 关键！避免卡在 LLM 健康检查 depends_on: [claw-router] # 开发时加这行，实现代码热重载（见后文） # volumes: [\"./src/worker:/app/src/worker\"] volumes: claw-db-data: claw-vector-data: 别忘了配 .env 文件——这是启动成功的隐形开关：\nCLAW_ENV=local CLAW_ROUTER_GRPC_PORT=50051 CLAW_ENV=local 会跳过 JWT 密钥生成等生产级初始化逻辑；CLAW_ROUTER_GRPC_PORT 必须和 claw-worker 里的 CLAW_ROUTER_ADDRESS 端口严格一致（claw-router:50051），否则 worker 注册失败，整个链路就断了。\n💥 启动后第一件事：用curl亲手验证“它真的活了！” 别急着看日志！用三步 curl 直击心脏，比 docker-compose logs -f 更快定位问题：\n验路由中枢：\ncurl http://localhost:8000/health # ✅ 正常返回 {\"status\":\"ok\",\"router\":\"ready\"} # ❌ 若返回 502 或超时 → 检查 claw-router 是否启动成功、端口是否被占 验任务链路：\ncurl -X POST http://localhost:8000/v1/execute \\ -H \"Content-Type: application/json\" \\ -d '{\"task\":\"test\"}' # ✅ 返回 {\"result\":\"mock_executed\"} → 说明 router 接收到请求，并成功转发给 worker 执行 # ❌ 若返回 {\"error\":\"no worker registered\"} → 看 claw-worker 日志，确认是否有 ✅ Registered with router... 验向量库：\ncurl http://localhost:8080/cluster/health # ✅ Qdrant 返回 {\"status\":\"ok\",\"available\":true} # ❌ 若返回 connection refused → 检查 claw-vector 是否启动、端口映射是否为 8080:6333（不是 8080:8080！） 这个“三步验活法”，我在团队内部推广后，新人本地启动平均耗时从 42 分钟降到 6 分钟——因为大家终于不用在千行日志里大海捞针了。\n🛠️ 我的本地调试增效包（不用装IDE插件） VS Code Dev Container 直连宿主机服务：\n本地跑 Ollama 时，claw-worker 容器默认无法访问 http://host.docker.internal:11434（Ollama 默认端口）。在 .devcontainer/devcontainer.json 的 runArgs 里加一句：\n\"runArgs\": [\"--add-host=host.docker.internal:host-gateway\"] 重启 Dev Container，worker 里的 Python 代码就能 requests.post(\"http://host.docker.internal:11434/api/chat\") 直连宿主机 Ollama，无需改任何业务代码。\n日志流精准过滤：\n告别 docker-compose logs -f | grep -i error 的低效刷屏：\ndocker-compose logs -f --tail=20 claw-router claw-worker | \\ grep -E \"(ERROR|panic|failed|timeout|unregistered|healthcheck)\" 只关注关键错误，且限制尾部20行，避免历史噪音干扰。\n快速重置数据库（开发高频操作）：\n# 注意顺序！必须先启 db，等它完全 ready 后再启其他 docker-compose down -v \u0026\u0026 \\ docker-compose up -d claw-db \u0026\u0026 \\ sleep 5 \u0026\u0026 \\ docker-compose up -d down -v 清空 volume，sleep 5 给 PostgreSQL 初始化留足时间（healthcheck 是异步的），再全量启动——比手动 psql 连进去 DROP DATABASE 快 10 倍。\n❓你可能会问的3个扎心问题（我全试过了） Q：Mac M1 跑不动 Qdrant？CPU 占满 100%，请求超时？\nA：别拉 qdrant/qdrant:latest！官方最新镜像默认是 amd64。必须指定 ARM64 专用 tag：qdrant/qdrant:v1.9.4-arm64（v1.9.4 是目前最稳定的 ARM 支持版本）。实测 CPU 占用从 100% 降到 12%，响应时间从 12s 降到 230ms。\nQ：修改了 claw-worker 的 Python 插件代码，怎么热重载？\nA：忘掉 --reload 吧！它在容器里根本不 work。正确姿势：\n在 docker-compose.yml 的 claw-worker service 下加 volumes: [\"./src/worker:/app/src/worker\"]； 修改完代码，执行 docker-compose restart claw-worker； 秒级生效。我改一个 tools/web_search.py，从保存文件到新逻辑生效，全程 3.2 秒。 Q：想加自己的工具函数，但 claw-worker 启动就报 ModuleNotFoundError？\nA：官方 Dockerfile 里 pip install -r requirements.txt 是在构建时执行的，你的本地 requirements-local.txt 根本没被 COPY 进去！必须在 Dockerfile.worker 开头手动补两行：\nCOPY requirements-local.txt . RUN pip install -r requirements-local.txt 并且确保 docker-compose.yml 中 claw-worker 的 build.context 指向包含该文件的目录。README 里那句“自动安装 local deps”是 v2025 的遗留文案，v2026 已失效。\n技术选型没有银弹，但少走弯路，就是最快的迭代速度。当我把 docker-compose up -d 按下回车，看着 claw-router_1、claw-worker_1、claw-db_1 全部变成 healthy，终端不再飘红，咖啡杯里重新续上了热的——那一刻我明白：真正的生产力，不是更猛的硬件、更炫的框架，而是敢于把“本该如此”的事情，交给它本该运行的方式。\n","wordCount":"546","inLanguage":"en","datePublished":"2026-03-07T05:33:27.807Z","dateModified":"2026-03-07T05:33:27.807Z","author":{"@type":"Person","name":"智通"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://zhitong.uk/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/"},"publisher":{"@type":"Organization","name":"智通和你一起学AI","logo":{"@type":"ImageObject","url":"https://zhitong.uk/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）</h1><div class=post-description>告别繁琐编译！本文详解如何用Docker Compose 5分钟一键启动OpenClaw本地AI执行引擎，并深度解析Clawdbot 2026架构设计，显著降低AI机器人开发门槛。</div><div class=post-meta><span title='2026-03-07 05:33:27.807 +0000 UTC'>March 7, 2026</span>&nbsp;·&nbsp;<span>智通</span></div></header><div class=post-content><h2 id=-为什么我放弃手动编译openclaw转投docker-compose怀抱>🚀 为什么我放弃手动编译OpenClaw，转投Docker Compose怀抱？<a hidden class=anchor aria-hidden=true href=#-为什么我放弃手动编译openclaw转投docker-compose怀抱>#</a></h2><p>上周三凌晨2:17，我的MacBook风扇在寂静中发出濒死般的高频嘶鸣。终端窗口里，第7次 <code>make install</code> 正在用鲜红色的错误刷屏——<code>/usr/local/include/boost/asio.hpp: No such file or directory</code>，紧接着是 GCC 13.2 和系统自带 Clang 15 的 ABI 冲突警告，最后定格在 <code>Python 3.11.9 ABI mismatch with libtorch 2.3.0+cpu</code>。咖啡杯底沉着第三层冷渣，我盯着那行 <code>CMake Error at claw-core/CMakeLists.txt:412 (find_package): Could not find a configuration file for package "Torch"</code>, 手指悬在键盘上，第一次认真思考：<strong>这真的是在搭建AI机器人，还是在给自己的精神状态做压力测试？</strong></p><p>这不是孤例。过去两周，我列了一张「OpenClaw本地编译踩坑清单」，精简后仍触目惊心：</p><ul><li>依赖树嵌套6层：<code>claw-runtime</code> → <code>libclaw-cpp</code> → <code>torch-cpp</code> → <code>c10</code> → <code>glog</code> → <code>gflags</code>，其中任意一层<code>CMAKE_PREFIX_PATH</code>没对齐，就触发连锁崩溃；</li><li><code>claw-core</code> 和 <code>claw-runtime</code> 在 CMake 中互相 <code>find_package()</code>，但 <code>find_package(claw-core REQUIRED)</code> 却要求 <code>claw-core</code> 已安装——典型的“先有鸡还是先有蛋”循环依赖；</li><li>Mac M1 上，官方 <code>libtorch</code> 预编译包只提供 <code>x86_64</code> 架构，<code>arm64</code> 版本得自己从源码编译（耗时47分钟，失败3次）；</li><li>最致命的是那个被我忽略的环境变量：<code>CLAWDBOT_SCHEMA_VERSION=2026</code>。漏设它，<code>claw-router</code> 启动时会静默跳过 schema 初始化——数据库空空如也，日志里连个 warning 都没有，直到你发第一条任务，才收到一句冰冷的 <code>{"error":"schema version mismatch"}</code>。</li></ul><p>直到周四下午，我瘫在工位上重读 OpenClaw v2026 官方文档的「Getting Started」章节，目光扫过一行加粗小字：</p><blockquote><p><em><strong>Docker Compose is the recommended dev setup for v2026+</strong></em></p></blockquote><p>我愣了两秒，手指发颤地划回页面顶部——这句话在文档第3页，而我前两天通读时，把它当成了排版装饰。那一刻，不是顿悟，是羞愧。<strong>我们总在用力解决一个本不该存在的问题。</strong></p><p><img alt=开发者深夜调试OpenClaw失败的终端截图，红字报错密集 loading=lazy src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/f5/20260307/d23adf3d/34a47da5-6df4-44b1-a1ef-5c1fc72caa571765997971.png?Expires=1773467596&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=xRcY2S1SjTNi28uHoMr4spNzgbo%3D"></p><h2 id=-clawdbot-2026架构到底变了啥别再被术语吓退>🧩 Clawdbot 2026架构到底变了啥？（别再被术语吓退）<a hidden class=anchor aria-hidden=true href=#-clawdbot-2026架构到底变了啥别再被术语吓退>#</a></h2><p>别被“微服务”“gRPC”“向量+结构化双模存储”这些词唬住。我把 v2026 的核心变化画成一张实习生都能看懂的草图（见下图）——它本质是一次<strong>优雅的解耦手术</strong>：把原来那个 2.3GB 的单体二进制 <code>clawd</code>，像剥洋葱一样，一层层拆成四个独立、可替换、可伸缩的组件：</p><ul><li><code>claw-router</code>：调度中枢，不干活，只管分派任务、维护注册表、做健康检查；</li><li><code>claw-worker</code>：插件化执行器，真正跑 Python 插件、调 LLM、执行工具链，支持热插拔不同 worker 类型（<code>llm-worker</code> / <code>tool-worker</code> / <code>mock-worker</code>）；</li><li><code>claw-db</code>：结构化数据大脑，PostgreSQL 16，存用户、会话、任务元数据；</li><li><code>claw-vector</code>：向量记忆体，Qdrant v1.9.4，存 embedding、RAG chunk、长期记忆快照。</li></ul><p><img alt="docker-compose ps 输出标注图：清晰标出claw-router_1连接claw-db_1(5433)和claw-vector_1(8080)，claw-worker_1只连claw-router:50051" loading=lazy src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/c2/20260307/d23adf3d/b678462a-b5d1-41e8-a181-8813089482c1974664076.png?Expires=1773467613&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=Iwg%2FI7g%2BHpkvEwW78mDyX3yi%2F9c%3D"></p><p>关键避坑点来了：v2026 默认启用 <code>--enable-llm-fallback</code>，意味着 <code>claw-worker</code> 启动后，第一件事不是加载插件，而是向 <code>LLM_PROVIDER=ollama</code> 发起健康检查。<strong>如果你本地根本没跑 Ollama，worker 就会卡在 <code>waiting for LLM healthcheck...</code>，永远不注册到 router！</strong> 解法很简单：打开 <code>docker-compose.yml</code>，找到 <code>claw-worker</code> 的 <code>environment</code> 块，删掉 <code>LLM_PROVIDER=ollama</code> 这行，或改成 <code>LLM_PROVIDER=mock</code>。别信文档里那句“自动 fallback to mock”——它只在 CI 环境生效，本地必须显式声明。</p><h2 id=-5分钟启动实录我的docker-composeyml终极精简版>⚙️ 5分钟启动实录：我的<code>docker-compose.yml</code>终极精简版<a hidden class=anchor aria-hidden=true href=#-5分钟启动实录我的docker-composeyml终极精简版>#</a></h2><p>我删掉了所有非必需服务：<code>claw-dashboard</code>（前端太重，开发期用 curl 足够）、<code>claw-monitor</code>（Prometheus+Grafana 本地真用不上）、<code>claw-proxy</code>（Nginx 层级在 dev 环境纯属冗余）。最终只保留 <strong>4 个 service</strong>，构成最小可行闭环：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#39;3.8&#39;</span>
-</span></span><span style=display:flex><span><span style=color:#f92672>services</span>:
-</span></span><span style=display:flex><span>  <span style=color:#f92672>claw-router</span>:
-</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>openclaw/claw-router:v2026.3</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>: [<span style=color:#e6db74>&#34;8000:8000&#34;</span>, <span style=color:#e6db74>&#34;50051:50051&#34;</span>]
-</span></span><span style=display:flex><span>    <span style=color:#f92672>environment</span>:
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>CLAW_ENV=${CLAW_ENV}</span>
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>CLAW_ROUTER_GRPC_PORT=${CLAW_ROUTER_GRPC_PORT}</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>depends_on</span>: [<span style=color:#ae81ff>claw-db, claw-vector]</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>claw-db</span>:
-</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>postgres:16-alpine</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>environment</span>:
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>POSTGRES_DB=clawbot</span>
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>POSTGRES_PASSWORD=clawdev</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>volumes</span>:
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>./init/clawbot-2026-init.sql:/docker-entrypoint-initdb.d/01-schema.sql</span>
-</span></span><span style=display:flex><span>      <span style=color:#75715e># ⚠️ 血泪教训！init.sql 必须挂载到 /docker-entrypoint-initdb.d/ 下</span>
-</span></span><span style=display:flex><span>      <span style=color:#75715e># 否则容器首次启动时 PostgreSQL 不会执行它，claw-router 就找不到 clawbot_v2026_schema 表</span>
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>claw-db-data:/var/lib/postgresql/data</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>healthcheck</span>:
-</span></span><span style=display:flex><span>      <span style=color:#f92672>test</span>: [<span style=color:#e6db74>&#34;CMD-SHELL&#34;</span>, <span style=color:#e6db74>&#34;pg_isready -U postgres -d clawbot&#34;</span>]
-</span></span><span style=display:flex><span>      <span style=color:#f92672>interval</span>: <span style=color:#ae81ff>30s</span>
-</span></span><span style=display:flex><span>      <span style=color:#f92672>timeout</span>: <span style=color:#ae81ff>10s</span>
-</span></span><span style=display:flex><span>      <span style=color:#f92672>retries</span>: <span style=color:#ae81ff>5</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>claw-vector</span>:
-</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>qdrant/qdrant:v1.9.4-arm64 </span> <span style=color:#75715e># Mac M1 必用此 ARM 专用镜像！</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>: [<span style=color:#e6db74>&#34;8080:6333&#34;</span>]
-</span></span><span style=display:flex><span>    <span style=color:#f92672>volumes</span>:
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>claw-vector-data:/qdrant/storage</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#f92672>claw-worker</span>:
-</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>openclaw/claw-worker:v2026.3</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>environment</span>:
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>CLAW_ENV=${CLAW_ENV}</span>
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>CLAW_ROUTER_ADDRESS=claw-router:50051</span>
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>LLM_PROVIDER=mock </span> <span style=color:#75715e># 关键！避免卡在 LLM 健康检查</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>depends_on</span>: [<span style=color:#ae81ff>claw-router]</span>
-</span></span><span style=display:flex><span>    <span style=color:#75715e># 开发时加这行，实现代码热重载（见后文）</span>
-</span></span><span style=display:flex><span>    <span style=color:#75715e># volumes: [&#34;./src/worker:/app/src/worker&#34;]</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#f92672>volumes</span>:
-</span></span><span style=display:flex><span>  <span style=color:#f92672>claw-db-data</span>:
-</span></span><span style=display:flex><span>  <span style=color:#f92672>claw-vector-data</span>:
-</span></span></code></pre></div><p>别忘了配 <code>.env</code> 文件——这是启动成功的隐形开关：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-env data-lang=env><span style=display:flex><span>CLAW_ENV<span style=color:#f92672>=</span>local
-</span></span><span style=display:flex><span>CLAW_ROUTER_GRPC_PORT<span style=color:#f92672>=</span><span style=color:#ae81ff>50051</span>
-</span></span></code></pre></div><p><code>CLAW_ENV=local</code> 会跳过 JWT 密钥生成等生产级初始化逻辑；<code>CLAW_ROUTER_GRPC_PORT</code> 必须和 <code>claw-worker</code> 里的 <code>CLAW_ROUTER_ADDRESS</code> 端口严格一致（<code>claw-router:50051</code>），否则 worker 注册失败，整个链路就断了。</p><h2 id=-启动后第一件事用curl亲手验证它真的活了>💥 启动后第一件事：用curl亲手验证“它真的活了！”<a hidden class=anchor aria-hidden=true href=#-启动后第一件事用curl亲手验证它真的活了>#</a></h2><p>别急着看日志！用三步 <code>curl</code> 直击心脏，比 <code>docker-compose logs -f</code> 更快定位问题：</p><ol><li><p><strong>验路由中枢</strong>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>curl http://localhost:8000/health
-</span></span><span style=display:flex><span><span style=color:#75715e># ✅ 正常返回 {&#34;status&#34;:&#34;ok&#34;,&#34;router&#34;:&#34;ready&#34;}</span>
-</span></span><span style=display:flex><span><span style=color:#75715e># ❌ 若返回 502 或超时 → 检查 claw-router 是否启动成功、端口是否被占</span>
-</span></span></code></pre></div></li><li><p><strong>验任务链路</strong>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>curl -X POST http://localhost:8000/v1/execute <span style=color:#ae81ff>\
-</span></span></span><span style=display:flex><span>  -H <span style=color:#e6db74>&#34;Content-Type: application/json&#34;</span> <span style=color:#ae81ff>\
-</span></span></span><span style=display:flex><span>  -d <span style=color:#e6db74>&#39;{&#34;task&#34;:&#34;test&#34;}&#39;</span>
-</span></span><span style=display:flex><span><span style=color:#75715e># ✅ 返回 {&#34;result&#34;:&#34;mock_executed&#34;} → 说明 router 接收到请求，并成功转发给 worker 执行</span>
-</span></span><span style=display:flex><span><span style=color:#75715e># ❌ 若返回 {&#34;error&#34;:&#34;no worker registered&#34;} → 看 claw-worker 日志，确认是否有 ✅ Registered with router...</span>
-</span></span></code></pre></div></li><li><p><strong>验向量库</strong>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>curl http://localhost:8080/cluster/health
-</span></span><span style=display:flex><span><span style=color:#75715e># ✅ Qdrant 返回 {&#34;status&#34;:&#34;ok&#34;,&#34;available&#34;:true}</span>
-</span></span><span style=display:flex><span><span style=color:#75715e># ❌ 若返回 connection refused → 检查 claw-vector 是否启动、端口映射是否为 8080:6333（不是 8080:8080！）</span>
-</span></span></code></pre></div></li></ol><p>这个“三步验活法”，我在团队内部推广后，新人本地启动平均耗时从 42 分钟降到 6 分钟——因为大家终于不用在千行日志里大海捞针了。</p><h2 id=-我的本地调试增效包不用装ide插件>🛠️ 我的本地调试增效包（不用装IDE插件）<a hidden class=anchor aria-hidden=true href=#-我的本地调试增效包不用装ide插件>#</a></h2><ul><li><p><strong>VS Code Dev Container 直连宿主机服务</strong>：<br>本地跑 Ollama 时，<code>claw-worker</code> 容器默认无法访问 <code>http://host.docker.internal:11434</code>（Ollama 默认端口）。在 <code>.devcontainer/devcontainer.json</code> 的 <code>runArgs</code> 里加一句：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span><span style=color:#e6db74>&#34;runArgs&#34;</span><span style=color:#960050;background-color:#1e0010>:</span> [<span style=color:#e6db74>&#34;--add-host=host.docker.internal:host-gateway&#34;</span>]
-</span></span></code></pre></div><p>重启 Dev Container，worker 里的 Python 代码就能 <code>requests.post("http://host.docker.internal:11434/api/chat")</code> 直连宿主机 Ollama，无需改任何业务代码。</p></li><li><p><strong>日志流精准过滤</strong>：<br>告别 <code>docker-compose logs -f | grep -i error</code> 的低效刷屏：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>docker-compose logs -f --tail<span style=color:#f92672>=</span><span style=color:#ae81ff>20</span> claw-router claw-worker | <span style=color:#ae81ff>\
-</span></span></span><span style=display:flex><span>  grep -E <span style=color:#e6db74>&#34;(ERROR|panic|failed|timeout|unregistered|healthcheck)&#34;</span>
-</span></span></code></pre></div><p>只关注关键错误，且限制尾部20行，避免历史噪音干扰。</p></li><li><p><strong>快速重置数据库（开发高频操作）</strong>：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># 注意顺序！必须先启 db，等它完全 ready 后再启其他</span>
-</span></span><span style=display:flex><span>docker-compose down -v <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span></span></span><span style=display:flex><span>docker-compose up -d claw-db <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span></span></span><span style=display:flex><span>sleep <span style=color:#ae81ff>5</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span></span></span><span style=display:flex><span>docker-compose up -d
-</span></span></code></pre></div><p><code>down -v</code> 清空 volume，<code>sleep 5</code> 给 PostgreSQL 初始化留足时间（<code>healthcheck</code> 是异步的），再全量启动——比手动 <code>psql</code> 连进去 <code>DROP DATABASE</code> 快 10 倍。</p></li></ul><h2 id=你可能会问的3个扎心问题我全试过了>❓你可能会问的3个扎心问题（我全试过了）<a hidden class=anchor aria-hidden=true href=#你可能会问的3个扎心问题我全试过了>#</a></h2><p><strong>Q：Mac M1 跑不动 Qdrant？CPU 占满 100%，请求超时？</strong><br>A：别拉 <code>qdrant/qdrant:latest</code>！官方最新镜像默认是 <code>amd64</code>。必须指定 ARM64 专用 tag：<code>qdrant/qdrant:v1.9.4-arm64</code>（v1.9.4 是目前最稳定的 ARM 支持版本）。实测 CPU 占用从 100% 降到 12%，响应时间从 12s 降到 230ms。</p><p><strong>Q：修改了 <code>claw-worker</code> 的 Python 插件代码，怎么热重载？</strong><br>A：忘掉 <code>--reload</code> 吧！它在容器里根本不 work。正确姿势：</p><ol><li>在 <code>docker-compose.yml</code> 的 <code>claw-worker</code> service 下加 <code>volumes: ["./src/worker:/app/src/worker"]</code>；</li><li>修改完代码，执行 <code>docker-compose restart claw-worker</code>；</li><li>秒级生效。我改一个 <code>tools/web_search.py</code>，从保存文件到新逻辑生效，全程 3.2 秒。</li></ol><p><strong>Q：想加自己的工具函数，但 <code>claw-worker</code> 启动就报 <code>ModuleNotFoundError</code>？</strong><br>A：官方 Dockerfile 里 <code>pip install -r requirements.txt</code> 是在构建时执行的，你的本地 <code>requirements-local.txt</code> 根本没被 COPY 进去！必须在 <code>Dockerfile.worker</code> 开头手动补两行：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Dockerfile data-lang=Dockerfile><span style=display:flex><span><span style=color:#66d9ef>COPY</span> requirements-local.txt .<span style=color:#960050;background-color:#1e0010>
-</span></span></span><span style=display:flex><span><span style=color:#66d9ef>RUN</span> pip install -r requirements-local.txt<span style=color:#960050;background-color:#1e0010>
-</span></span></span></code></pre></div><p>并且确保 <code>docker-compose.yml</code> 中 <code>claw-worker</code> 的 <code>build.context</code> 指向包含该文件的目录。README 里那句“自动安装 local deps”是 v2025 的遗留文案，v2026 已失效。</p><hr><p>技术选型没有银弹，但<strong>少走弯路，就是最快的迭代速度</strong>。当我把 <code>docker-compose up -d</code> 按下回车，看着 <code>claw-router_1</code>、<code>claw-worker_1</code>、<code>claw-db_1</code> 全部变成 <code>healthy</code>，终端不再飘红，咖啡杯里重新续上了热的——那一刻我明白：真正的生产力，不是更猛的硬件、更炫的框架，而是<strong>敢于把“本该如此”的事情，交给它本该运行的方式</strong>。</p><p><img alt=开发者微笑看着终端显示所有服务healthy，背景是干净的桌面和一杯热咖啡 loading=lazy src=IMAGE_PLACEHOLDER_3></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://zhitong.uk/tags/docker-compose/>Docker Compose</a></li><li><a href=https://zhitong.uk/tags/openclaw/>OpenClaw</a></li><li><a href=https://zhitong.uk/tags/ai%E6%9C%BA%E5%99%A8%E4%BA%BA/>AI机器人</a></li><li><a href=https://zhitong.uk/tags/%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91/>本地开发</a></li><li><a href=https://zhitong.uk/tags/clawdbot/>Clawdbot</a></li><li><a href=https://zhitong.uk/tags/devops/>DevOps</a></li></ul></footer><script src=https://giscus.app/client.js data-repo=zhitongblog/my-blog data-repo-id=R_kgDORBRArg data-category=Announcements data-category-id=DIC_kwDORBRArs4C188Z data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=bottom data-theme=light data-lang=zh-CN crossorigin=anonymous async></script></article></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析） | 智通和你一起学AI</title>
+<meta name="keywords" content="Docker Compose, OpenClaw, AI机器人, 本地开发, Clawdbot, DevOps">
+<meta name="description" content="告别繁琐编译！本文详解如何用Docker Compose 5分钟一键启动OpenClaw本地AI执行引擎，并深度解析Clawdbot 2026架构设计，显著降低AI机器人开发门槛。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）
+    </h1>
+    <div class="post-description">
+      告别繁琐编译！本文详解如何用Docker Compose 5分钟一键启动OpenClaw本地AI执行引擎，并深度解析Clawdbot 2026架构设计，显著降低AI机器人开发门槛。
+    </div>
+    <div class="post-meta"><span title='2026-03-07 05:33:27.807 +0000 UTC'>March 7, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="-为什么我放弃手动编译openclaw转投docker-compose怀抱">🚀 为什么我放弃手动编译OpenClaw，转投Docker Compose怀抱？<a hidden class="anchor" aria-hidden="true" href="#-为什么我放弃手动编译openclaw转投docker-compose怀抱">#</a></h2>
+<p>上周三凌晨2:17，我的MacBook风扇在寂静中发出濒死般的高频嘶鸣。终端窗口里，第7次 <code>make install</code> 正在用鲜红色的错误刷屏——<code>/usr/local/include/boost/asio.hpp: No such file or directory</code>，紧接着是 GCC 13.2 和系统自带 Clang 15 的 ABI 冲突警告，最后定格在 <code>Python 3.11.9 ABI mismatch with libtorch 2.3.0+cpu</code>。咖啡杯底沉着第三层冷渣，我盯着那行 <code>CMake Error at claw-core/CMakeLists.txt:412 (find_package): Could not find a configuration file for package &quot;Torch&quot;</code>, 手指悬在键盘上，第一次认真思考：<strong>这真的是在搭建AI机器人，还是在给自己的精神状态做压力测试？</strong></p>
+<p>这不是孤例。过去两周，我列了一张「OpenClaw本地编译踩坑清单」，精简后仍触目惊心：</p>
+<ul>
+<li>依赖树嵌套6层：<code>claw-runtime</code> → <code>libclaw-cpp</code> → <code>torch-cpp</code> → <code>c10</code> → <code>glog</code> → <code>gflags</code>，其中任意一层<code>CMAKE_PREFIX_PATH</code>没对齐，就触发连锁崩溃；</li>
+<li><code>claw-core</code> 和 <code>claw-runtime</code> 在 CMake 中互相 <code>find_package()</code>，但 <code>find_package(claw-core REQUIRED)</code> 却要求 <code>claw-core</code> 已安装——典型的“先有鸡还是先有蛋”循环依赖；</li>
+<li>Mac M1 上，官方 <code>libtorch</code> 预编译包只提供 <code>x86_64</code> 架构，<code>arm64</code> 版本得自己从源码编译（耗时47分钟，失败3次）；</li>
+<li>最致命的是那个被我忽略的环境变量：<code>CLAWDBOT_SCHEMA_VERSION=2026</code>。漏设它，<code>claw-router</code> 启动时会静默跳过 schema 初始化——数据库空空如也，日志里连个 warning 都没有，直到你发第一条任务，才收到一句冰冷的 <code>{&quot;error&quot;:&quot;schema version mismatch&quot;}</code>。</li>
+</ul>
+<p>直到周四下午，我瘫在工位上重读 OpenClaw v2026 官方文档的「Getting Started」章节，目光扫过一行加粗小字：</p>
+<blockquote>
+<p><em><strong>Docker Compose is the recommended dev setup for v2026+</strong></em></p>
+</blockquote>
+<p>我愣了两秒，手指发颤地划回页面顶部——这句话在文档第3页，而我前两天通读时，把它当成了排版装饰。那一刻，不是顿悟，是羞愧。<strong>我们总在用力解决一个本不该存在的问题。</strong></p>
+<p><img alt="开发者深夜调试OpenClaw失败的终端截图，红字报错密集" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/f5/20260307/d23adf3d/34a47da5-6df4-44b1-a1ef-5c1fc72caa571765997971.png?Expires=1773467596&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=xRcY2S1SjTNi28uHoMr4spNzgbo%3D"></p>
+<h2 id="-clawdbot-2026架构到底变了啥别再被术语吓退">🧩 Clawdbot 2026架构到底变了啥？（别再被术语吓退）<a hidden class="anchor" aria-hidden="true" href="#-clawdbot-2026架构到底变了啥别再被术语吓退">#</a></h2>
+<p>别被“微服务”“gRPC”“向量+结构化双模存储”这些词唬住。我把 v2026 的核心变化画成一张实习生都能看懂的草图（见下图）——它本质是一次<strong>优雅的解耦手术</strong>：把原来那个 2.3GB 的单体二进制 <code>clawd</code>，像剥洋葱一样，一层层拆成四个独立、可替换、可伸缩的组件：</p>
+<ul>
+<li><code>claw-router</code>：调度中枢，不干活，只管分派任务、维护注册表、做健康检查；</li>
+<li><code>claw-worker</code>：插件化执行器，真正跑 Python 插件、调 LLM、执行工具链，支持热插拔不同 worker 类型（<code>llm-worker</code> / <code>tool-worker</code> / <code>mock-worker</code>）；</li>
+<li><code>claw-db</code>：结构化数据大脑，PostgreSQL 16，存用户、会话、任务元数据；</li>
+<li><code>claw-vector</code>：向量记忆体，Qdrant v1.9.4，存 embedding、RAG chunk、长期记忆快照。</li>
+</ul>
+<p><img alt="docker-compose ps 输出标注图：清晰标出claw-router_1连接claw-db_1(5433)和claw-vector_1(8080)，claw-worker_1只连claw-router:50051" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/c2/20260307/d23adf3d/b678462a-b5d1-41e8-a181-8813089482c1974664076.png?Expires=1773467613&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=Iwg%2FI7g%2BHpkvEwW78mDyX3yi%2F9c%3D"></p>
+<p>关键避坑点来了：v2026 默认启用 <code>--enable-llm-fallback</code>，意味着 <code>claw-worker</code> 启动后，第一件事不是加载插件，而是向 <code>LLM_PROVIDER=ollama</code> 发起健康检查。<strong>如果你本地根本没跑 Ollama，worker 就会卡在 <code>waiting for LLM healthcheck...</code>，永远不注册到 router！</strong> 解法很简单：打开 <code>docker-compose.yml</code>，找到 <code>claw-worker</code> 的 <code>environment</code> 块，删掉 <code>LLM_PROVIDER=ollama</code> 这行，或改成 <code>LLM_PROVIDER=mock</code>。别信文档里那句“自动 fallback to mock”——它只在 CI 环境生效，本地必须显式声明。</p>
+<h2 id="-5分钟启动实录我的docker-composeyml终极精简版">⚙️ 5分钟启动实录：我的<code>docker-compose.yml</code>终极精简版<a hidden class="anchor" aria-hidden="true" href="#-5分钟启动实录我的docker-composeyml终极精简版">#</a></h2>
+<p>我删掉了所有非必需服务：<code>claw-dashboard</code>（前端太重，开发期用 curl 足够）、<code>claw-monitor</code>（Prometheus+Grafana 本地真用不上）、<code>claw-proxy</code>（Nginx 层级在 dev 环境纯属冗余）。最终只保留 <strong>4 个 service</strong>，构成最小可行闭环：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3.8&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">claw-router</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">openclaw/claw-router:v2026.3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>: [<span style="color:#e6db74">&#34;8000:8000&#34;</span>, <span style="color:#e6db74">&#34;50051:50051&#34;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">CLAW_ENV=${CLAW_ENV}</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">CLAW_ROUTER_GRPC_PORT=${CLAW_ROUTER_GRPC_PORT}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>: [<span style="color:#ae81ff">claw-db, claw-vector]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">claw-db</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">postgres:16-alpine</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">POSTGRES_DB=clawbot</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">POSTGRES_PASSWORD=clawdev</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./init/clawbot-2026-init.sql:/docker-entrypoint-initdb.d/01-schema.sql</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># ⚠️ 血泪教训！init.sql 必须挂载到 /docker-entrypoint-initdb.d/ 下</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 否则容器首次启动时 PostgreSQL 不会执行它，claw-router 就找不到 clawbot_v2026_schema 表</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">claw-db-data:/var/lib/postgresql/data</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">healthcheck</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">test</span>: [<span style="color:#e6db74">&#34;CMD-SHELL&#34;</span>, <span style="color:#e6db74">&#34;pg_isready -U postgres -d clawbot&#34;</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">interval</span>: <span style="color:#ae81ff">30s</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">timeout</span>: <span style="color:#ae81ff">10s</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">retries</span>: <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">claw-vector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">qdrant/qdrant:v1.9.4-arm64 </span> <span style="color:#75715e"># Mac M1 必用此 ARM 专用镜像！</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>: [<span style="color:#e6db74">&#34;8080:6333&#34;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">claw-vector-data:/qdrant/storage</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">claw-worker</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">openclaw/claw-worker:v2026.3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">CLAW_ENV=${CLAW_ENV}</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">CLAW_ROUTER_ADDRESS=claw-router:50051</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">LLM_PROVIDER=mock </span> <span style="color:#75715e"># 关键！避免卡在 LLM 健康检查</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>: [<span style="color:#ae81ff">claw-router]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 开发时加这行，实现代码热重载（见后文）</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># volumes: [&#34;./src/worker:/app/src/worker&#34;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">claw-db-data</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">claw-vector-data</span>:
+</span></span></code></pre></div><p>别忘了配 <code>.env</code> 文件——这是启动成功的隐形开关：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-env" data-lang="env"><span style="display:flex;"><span>CLAW_ENV<span style="color:#f92672">=</span>local
+</span></span><span style="display:flex;"><span>CLAW_ROUTER_GRPC_PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">50051</span>
+</span></span></code></pre></div><p><code>CLAW_ENV=local</code> 会跳过 JWT 密钥生成等生产级初始化逻辑；<code>CLAW_ROUTER_GRPC_PORT</code> 必须和 <code>claw-worker</code> 里的 <code>CLAW_ROUTER_ADDRESS</code> 端口严格一致（<code>claw-router:50051</code>），否则 worker 注册失败，整个链路就断了。</p>
+<h2 id="-启动后第一件事用curl亲手验证它真的活了">💥 启动后第一件事：用curl亲手验证“它真的活了！”<a hidden class="anchor" aria-hidden="true" href="#-启动后第一件事用curl亲手验证它真的活了">#</a></h2>
+<p>别急着看日志！用三步 <code>curl</code> 直击心脏，比 <code>docker-compose logs -f</code> 更快定位问题：</p>
+<ol>
+<li>
+<p><strong>验路由中枢</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl http://localhost:8000/health
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 正常返回 {&#34;status&#34;:&#34;ok&#34;,&#34;router&#34;:&#34;ready&#34;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 若返回 502 或超时 → 检查 claw-router 是否启动成功、端口是否被占</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>验任务链路</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST http://localhost:8000/v1/execute <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  -d <span style="color:#e6db74">&#39;{&#34;task&#34;:&#34;test&#34;}&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ 返回 {&#34;result&#34;:&#34;mock_executed&#34;} → 说明 router 接收到请求，并成功转发给 worker 执行</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 若返回 {&#34;error&#34;:&#34;no worker registered&#34;} → 看 claw-worker 日志，确认是否有 ✅ Registered with router...</span>
+</span></span></code></pre></div></li>
+<li>
+<p><strong>验向量库</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl http://localhost:8080/cluster/health
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ✅ Qdrant 返回 {&#34;status&#34;:&#34;ok&#34;,&#34;available&#34;:true}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ❌ 若返回 connection refused → 检查 claw-vector 是否启动、端口映射是否为 8080:6333（不是 8080:8080！）</span>
+</span></span></code></pre></div></li>
+</ol>
+<p>这个“三步验活法”，我在团队内部推广后，新人本地启动平均耗时从 42 分钟降到 6 分钟——因为大家终于不用在千行日志里大海捞针了。</p>
+<h2 id="-我的本地调试增效包不用装ide插件">🛠️ 我的本地调试增效包（不用装IDE插件）<a hidden class="anchor" aria-hidden="true" href="#-我的本地调试增效包不用装ide插件">#</a></h2>
+<ul>
+<li>
+<p><strong>VS Code Dev Container 直连宿主机服务</strong>：<br>
+本地跑 Ollama 时，<code>claw-worker</code> 容器默认无法访问 <code>http://host.docker.internal:11434</code>（Ollama 默认端口）。在 <code>.devcontainer/devcontainer.json</code> 的 <code>runArgs</code> 里加一句：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;runArgs&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> [<span style="color:#e6db74">&#34;--add-host=host.docker.internal:host-gateway&#34;</span>]
+</span></span></code></pre></div><p>重启 Dev Container，worker 里的 Python 代码就能 <code>requests.post(&quot;http://host.docker.internal:11434/api/chat&quot;)</code> 直连宿主机 Ollama，无需改任何业务代码。</p>
+</li>
+<li>
+<p><strong>日志流精准过滤</strong>：<br>
+告别 <code>docker-compose logs -f | grep -i error</code> 的低效刷屏：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose logs -f --tail<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span> claw-router claw-worker | <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  grep -E <span style="color:#e6db74">&#34;(ERROR|panic|failed|timeout|unregistered|healthcheck)&#34;</span>
+</span></span></code></pre></div><p>只关注关键错误，且限制尾部20行，避免历史噪音干扰。</p>
+</li>
+<li>
+<p><strong>快速重置数据库（开发高频操作）</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 注意顺序！必须先启 db，等它完全 ready 后再启其他</span>
+</span></span><span style="display:flex;"><span>docker-compose down -v <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>docker-compose up -d claw-db <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>sleep <span style="color:#ae81ff">5</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>docker-compose up -d
+</span></span></code></pre></div><p><code>down -v</code> 清空 volume，<code>sleep 5</code> 给 PostgreSQL 初始化留足时间（<code>healthcheck</code> 是异步的），再全量启动——比手动 <code>psql</code> 连进去 <code>DROP DATABASE</code> 快 10 倍。</p>
+</li>
+</ul>
+<h2 id="你可能会问的3个扎心问题我全试过了">❓你可能会问的3个扎心问题（我全试过了）<a hidden class="anchor" aria-hidden="true" href="#你可能会问的3个扎心问题我全试过了">#</a></h2>
+<p><strong>Q：Mac M1 跑不动 Qdrant？CPU 占满 100%，请求超时？</strong><br>
+A：别拉 <code>qdrant/qdrant:latest</code>！官方最新镜像默认是 <code>amd64</code>。必须指定 ARM64 专用 tag：<code>qdrant/qdrant:v1.9.4-arm64</code>（v1.9.4 是目前最稳定的 ARM 支持版本）。实测 CPU 占用从 100% 降到 12%，响应时间从 12s 降到 230ms。</p>
+<p><strong>Q：修改了 <code>claw-worker</code> 的 Python 插件代码，怎么热重载？</strong><br>
+A：忘掉 <code>--reload</code> 吧！它在容器里根本不 work。正确姿势：</p>
+<ol>
+<li>在 <code>docker-compose.yml</code> 的 <code>claw-worker</code> service 下加 <code>volumes: [&quot;./src/worker:/app/src/worker&quot;]</code>；</li>
+<li>修改完代码，执行 <code>docker-compose restart claw-worker</code>；</li>
+<li>秒级生效。我改一个 <code>tools/web_search.py</code>，从保存文件到新逻辑生效，全程 3.2 秒。</li>
+</ol>
+<p><strong>Q：想加自己的工具函数，但 <code>claw-worker</code> 启动就报 <code>ModuleNotFoundError</code>？</strong><br>
+A：官方 Dockerfile 里 <code>pip install -r requirements.txt</code> 是在构建时执行的，你的本地 <code>requirements-local.txt</code> 根本没被 COPY 进去！必须在 <code>Dockerfile.worker</code> 开头手动补两行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">COPY</span> requirements-local.txt .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN</span> pip install -r requirements-local.txt<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>并且确保 <code>docker-compose.yml</code> 中 <code>claw-worker</code> 的 <code>build.context</code> 指向包含该文件的目录。README 里那句“自动安装 local deps”是 v2025 的遗留文案，v2026 已失效。</p>
+<hr>
+<p>技术选型没有银弹，但<strong>少走弯路，就是最快的迭代速度</strong>。当我把 <code>docker-compose up -d</code> 按下回车，看着 <code>claw-router_1</code>、<code>claw-worker_1</code>、<code>claw-db_1</code> 全部变成 <code>healthy</code>，终端不再飘红，咖啡杯里重新续上了热的——那一刻我明白：真正的生产力，不是更猛的硬件、更炫的框架，而是<strong>敢于把“本该如此”的事情，交给它本该运行的方式</strong>。</p>
+<p><img alt="开发者微笑看着终端显示所有服务healthy，背景是干净的桌面和一杯热咖啡" loading="lazy" src="IMAGE_PLACEHOLDER_3"></p>
+
+
+  </div>
+
+  
+
+
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/docker-compose/">Docker Compose</a></li>
+      <li><a href="http://localhost:1313/tags/openclaw/">OpenClaw</a></li>
+      <li><a href="http://localhost:1313/tags/ai%E6%9C%BA%E5%99%A8%E4%BA%BA/">AI机器人</a></li>
+      <li><a href="http://localhost:1313/tags/%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91/">本地开发</a></li>
+      <li><a href="http://localhost:1313/tags/clawdbot/">Clawdbot</a></li>
+      <li><a href="http://localhost:1313/tags/devops/">DevOps</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

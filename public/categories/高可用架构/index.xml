@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>高可用架构 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84/</link>
+    <description>Recent content in 高可用架构 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Apr 2026 11:51:27 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E9%AB%98%E5%8F%AF%E7%94%A8%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>生产就绪：构建高可用、可监控、支持灰度发布的广告自动化系统</title>
+      <link>http://localhost:1313/posts/2026-04-09-scjxgjgkykjkzchdfbdggzdhxt/</link>
+      <pubDate>Thu, 09 Apr 2026 11:51:27 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-09-scjxgjgkykjkzchdfbdggzdhxt/</guid>
+      <description>本文剖析广告自动化系统从‘能跑通’到‘生产就绪’的关键跃迁，涵盖高可用设计、连接池雪崩治理、K8s健康探针调优、灰度发布策略及全链路可观测性实践。</description>
+    </item>
+  </channel>
+</rss>

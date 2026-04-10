@@ -1,1 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>软件工程 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link><description>Recent content in 软件工程 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Thu, 19 Feb 2026 07:47:37 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>安全与边界：识别幻觉、规避风险，构建可信的AI编程协作范式</title><link>https://zhitong.uk/posts/2026-02-19-aqybjsbhjgbfxgjkxdaibcxzfs/</link><pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-aqybjsbhjgbfxgjkxdaibcxzfs/</guid><description>深入解析AI编程中的‘幻觉’本质——非事实性但语法合法的错误代码生成，剖析成因与风险，并提出融合人工校验、类型约束与上下文防护的可信协作范式。</description></item><item><title>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计</title><link>https://zhitong.uk/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</link><pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</guid><description>本文深入解析Claude Code如何超越传统代码补全，成为TDD实践与技术方案设计的智能协作者——通过逆向解析测试契约驱动架构决策、策略抽象与可维护实现。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>软件工程 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link>
+    <description>Recent content in 软件工程 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 06 Apr 2026 13:46:30 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安全与边界：识别幻觉、规避风险，构建可信的AI编程协作范式</title>
+      <link>http://localhost:1313/posts/2026-04-06-aqybjsbhjgbfxgjkxdaibcxzfs/</link>
+      <pubDate>Mon, 06 Apr 2026 13:46:30 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-06-aqybjsbhjgbfxgjkxdaibcxzfs/</guid>
+      <description>深入剖析AI编程中的幻觉现象，解析其成因与典型表现，提供可落地的风险识别、边界控制与可信协作实践，助开发者在使用Copilot等工具时兼顾效率与系统可靠性。</description>
+    </item>
+    <item>
+      <title>为什么说这篇离职长文比Qwen3发布更值得AI工程师精读？——一位架构师的自我解构</title>
+      <link>http://localhost:1313/posts/2026-03-29-wsmszplzzwbqwen3fbgzdaigcsjdyw/</link>
+      <pubDate>Sun, 29 Mar 2026 07:00:18 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-29-wsmszplzzwbqwen3fbgzdaigcsjdyw/</guid>
+      <description>本文探讨一篇离职长文为何比Qwen3发布更值得AI工程师精读，剖析其在系统架构、契约设计、可观测性等工程实践中的高密度认知价值，揭示技术人文文本的深层生产力。</description>
+    </item>
+    <item>
+      <title>安全与边界：识别幻觉、规避风险，构建可信的AI编程协作范式</title>
+      <link>http://localhost:1313/posts/2026-02-19-aqybjsbhjgbfxgjkxdaibcxzfs/</link>
+      <pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-aqybjsbhjgbfxgjkxdaibcxzfs/</guid>
+      <description>深入解析AI编程中的‘幻觉’本质——非事实性但语法合法的错误代码生成，剖析成因与风险，并提出融合人工校验、类型约束与上下文防护的可信协作范式。</description>
+    </item>
+    <item>
+      <title>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计</title>
+      <link>http://localhost:1313/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</link>
+      <pubDate>Thu, 19 Feb 2026 07:47:37 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/</guid>
+      <description>本文深入解析Claude Code如何超越传统代码补全，成为TDD实践与技术方案设计的智能协作者——通过逆向解析测试契约驱动架构决策、策略抽象与可维护实现。</description>
+    </item>
+  </channel>
+</rss>

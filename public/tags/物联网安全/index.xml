@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>物联网安全 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8/</link><description>Recent content in 物联网安全 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sat, 21 Mar 2026 02:54:08 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>裸奔龙虾警告！OpenClaw安全漏洞频发，高校已拉响禁令红线</title><link>https://zhitong.uk/posts/2026-03-21-lblxjgopenclawaqldpfgxylxjlhx/</link><pubDate>Sat, 21 Mar 2026 02:54:08 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-21-lblxjgopenclawaqldpfgxylxjlhx/</guid><description>揭露OpenClaw开源机械臂平台严重安全缺陷：明文HTTP指令、无认证WebSocket、未签名固件升级等漏洞，已致多所高校紧急禁用。本文深入分析其作为网络可寻址物理执行单元的风险本质与防护建议。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>物联网安全 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8/</link>
+    <description>Recent content in 物联网安全 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 21 Mar 2026 02:54:08 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%89%A9%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>裸奔龙虾警告！OpenClaw安全漏洞频发，高校已拉响禁令红线</title>
+      <link>http://localhost:1313/posts/2026-03-21-lblxjgopenclawaqldpfgxylxjlhx/</link>
+      <pubDate>Sat, 21 Mar 2026 02:54:08 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-21-lblxjgopenclawaqldpfgxylxjlhx/</guid>
+      <description>揭露OpenClaw开源机械臂平台严重安全缺陷：明文HTTP指令、无认证WebSocket、未签名固件升级等漏洞，已致多所高校紧急禁用。本文深入分析其作为网络可寻址物理执行单元的风险本质与防护建议。</description>
+    </item>
+  </channel>
+</rss>

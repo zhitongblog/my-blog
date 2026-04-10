@@ -1,1 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Python on 智通和你一起学AI</title><link>https://zhitong.uk/tags/python/</link><description>Recent content in Python on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Thu, 19 Feb 2026 10:02:44 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>第三步：五行八卦上手——集成本地命理算法（八字排盘逻辑）</title><link>https://zhitong.uk/posts/2026-02-19-dsbwxbgssjcbdmlsfbzpplj/</link><pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-dsbwxbgssjcbdmlsfbzpplj/</guid><description>本文详解如何在本地离线实现传统八字排盘算法，基于公历时间与地理经度精准推算四柱干支、十神、五行旺衰及八卦映射，全程不联网，保障用户隐私并支持学术复现。</description></item><item><title>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验</title><link>https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</link><pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</guid><description>本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <description>Recent content in Python on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 01 Apr 2026 04:22:58 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anthropic工程师没说出口的真相：为什么Claude Code用Rust写推理层、Python写编排层？跨语言协同架构深度复盘</title>
+      <link>http://localhost:1313/posts/2026-04-01-anthropicgcsmsckdzxwsmclaudeco/</link>
+      <pubDate>Wed, 01 Apr 2026 04:22:58 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-01-anthropicgcsmsckdzxwsmclaudeco/</guid>
+      <description>深度解析Claude Code为何用Rust实现高性能推理层、Python构建灵活编排层——聚焦‘计算契约’这一被忽视的设计哲学，揭示延迟、内存、并发与错误责任的分层治理逻辑。</description>
+    </item>
+    <item>
+      <title>告别Copilot式辅助！Agentic Coding真正在终端跑起来：Claude Code从Hello World到生产级智能体部署</title>
+      <link>http://localhost:1313/posts/2026-03-30-gbcopilotsfzagenticcodingzzzzd/</link>
+      <pubDate>Mon, 30 Mar 2026 02:07:48 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-30-gbcopilotsfzagenticcodingzzzzd/</guid>
+      <description>本文详解如何在终端本地部署Claude驱动的Agentic Coding智能体，覆盖环境搭建、Hello World实现到生产级应用部署，支持macOS、Ubuntu和WSL2，强调零歧义可验证的实操流程。</description>
+    </item>
+    <item>
+      <title>第三步：五行八卦上手——集成本地命理算法（八字排盘逻辑）</title>
+      <link>http://localhost:1313/posts/2026-02-19-dsbwxbgssjcbdmlsfbzpplj/</link>
+      <pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-dsbwxbgssjcbdmlsfbzpplj/</guid>
+      <description>本文详解如何在本地离线实现传统八字排盘算法，基于公历时间与地理经度精准推算四柱干支、十神、五行旺衰及八卦映射，全程不联网，保障用户隐私并支持学术复现。</description>
+    </item>
+    <item>
+      <title>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验</title>
+      <link>http://localhost:1313/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</link>
+      <pubDate>Wed, 18 Feb 2026 05:44:20 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-18-claudecodeszznclpzclaudemddgit/</guid>
+      <description>本指南详解如何从零配置Claude API，创建CLAUDE.md规范，并集成AI校验到Git预提交钩子，提升代码质量与团队协作效率。</description>
+    </item>
+  </channel>
+</rss>

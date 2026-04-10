@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>大模型实践 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AE%9E%E8%B7%B5/</link><description>Recent content in 大模型实践 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Thu, 19 Feb 2026 08:34:58 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml"/><item><title>别再学Prompt Engineering了！真正稀缺的是‘AGI商业翻译官’——解码大模型商业化最后一公里</title><link>https://zhitong.uk/posts/2026-02-19-bzxpromptengineeringlzzxqdsagi/</link><pubDate>Thu, 19 Feb 2026 08:34:58 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-bzxpromptengineeringlzzxqdsagi/</guid><description>本文揭示Prompt Engineering的局限性，指出大模型商业化关键瓶颈在于‘AGI商业翻译官’——既懂技术又通业务与合规的复合型角色，剖析真实项目崩盘案例，提供从技术到商业落地的系统解法。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>大模型实践 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AE%9E%E8%B7%B5/</link>
+    <description>Recent content in 大模型实践 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 19 Feb 2026 08:34:58 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>别再学Prompt Engineering了！真正稀缺的是‘AGI商业翻译官’——解码大模型商业化最后一公里</title>
+      <link>http://localhost:1313/posts/2026-02-19-bzxpromptengineeringlzzxqdsagi/</link>
+      <pubDate>Thu, 19 Feb 2026 08:34:58 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-bzxpromptengineeringlzzxqdsagi/</guid>
+      <description>本文揭示Prompt Engineering的局限性，指出大模型商业化关键瓶颈在于‘AGI商业翻译官’——既懂技术又通业务与合规的复合型角色，剖析真实项目崩盘案例，提供从技术到商业落地的系统解法。</description>
+    </item>
+  </channel>
+</rss>

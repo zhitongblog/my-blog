@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>EJU备考 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/eju%E5%A4%87%E8%80%83/</link><description>Recent content in EJU备考 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Sat, 21 Feb 2026 00:17:01 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/eju%E5%A4%87%E8%80%83/index.xml" rel="self" type="application/rss+xml"/><item><title>第10篇：750分不是终点——用LTV思维构建EJU长期成长陪伴体系</title><link>https://zhitong.uk/posts/2026-02-21-d10p750fbszdyltvswgjejuzqczpbt/</link><pubDate>Sat, 21 Feb 2026 00:17:01 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-21-d10p750fbszdyltvswgjejuzqczpbt/</guid><description>本文提出以LTV（生命周期价值）思维重构EJU日语备考体系，超越750分冲刺范式，构建支持长期能力成长的陪伴式学习系统，解决错题复现率高、能力停滞等结构性痛点。</description></item><item><title>第5篇：日语语法图谱怎么画？——用知识图谱重构EJU语言考点</title><link>https://zhitong.uk/posts/2026-02-20-d5pryyftpzmhyzstpzgejuyykd/</link><pubDate>Fri, 20 Feb 2026 12:09:15 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-20-d5pryyftpzmhyzstpzgejuyykd/</guid><description>本文揭示EJU日语语法高错题率的深层原因，提出用知识图谱重构语法体系的方法，聚焦「～てある」「～ておく」等难点的三维语义维度建模，助力考生构建可迁移、可推理的语法认知结构。</description></item><item><title>第2篇：从0画出第一张蓝图——EJU备考APP核心功能MVP清单</title><link>https://zhitong.uk/posts/2026-02-20-d2pc0hcdyzltejubkapphxgnmvpqd/</link><pubDate>Fri, 20 Feb 2026 09:28:03 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-20-d2pc0hcdyzltejubkapphxgnmvpqd/</guid><description>基于1247名EJU考生深度调研，本文拆解三大备考断点，输出可落地的核心功能MVP清单，聚焦解决题海迷航、错题黑洞与计划瘫痪等真实痛点。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>EJU备考 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/eju%E5%A4%87%E8%80%83/</link>
+    <description>Recent content in EJU备考 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 21 Feb 2026 00:17:01 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/eju%E5%A4%87%E8%80%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>第10篇：750分不是终点——用LTV思维构建EJU长期成长陪伴体系</title>
+      <link>http://localhost:1313/posts/2026-02-21-d10p750fbszdyltvswgjejuzqczpbt/</link>
+      <pubDate>Sat, 21 Feb 2026 00:17:01 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-21-d10p750fbszdyltvswgjejuzqczpbt/</guid>
+      <description>本文提出以LTV（生命周期价值）思维重构EJU日语备考体系，超越750分冲刺范式，构建支持长期能力成长的陪伴式学习系统，解决错题复现率高、能力停滞等结构性痛点。</description>
+    </item>
+    <item>
+      <title>第5篇：日语语法图谱怎么画？——用知识图谱重构EJU语言考点</title>
+      <link>http://localhost:1313/posts/2026-02-20-d5pryyftpzmhyzstpzgejuyykd/</link>
+      <pubDate>Fri, 20 Feb 2026 12:09:15 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-20-d5pryyftpzmhyzstpzgejuyykd/</guid>
+      <description>本文揭示EJU日语语法高错题率的深层原因，提出用知识图谱重构语法体系的方法，聚焦「～てある」「～ておく」等难点的三维语义维度建模，助力考生构建可迁移、可推理的语法认知结构。</description>
+    </item>
+    <item>
+      <title>第2篇：从0画出第一张蓝图——EJU备考APP核心功能MVP清单</title>
+      <link>http://localhost:1313/posts/2026-02-20-d2pc0hcdyzltejubkapphxgnmvpqd/</link>
+      <pubDate>Fri, 20 Feb 2026 09:28:03 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-20-d2pc0hcdyzltejubkapphxgnmvpqd/</guid>
+      <description>基于1247名EJU考生深度调研，本文拆解三大备考断点，输出可落地的核心功能MVP清单，聚焦解决题海迷航、错题黑洞与计划瘫痪等真实痛点。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,27 +1,499 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>AI编程 | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/tags/ai%E7%BC%96%E7%A8%8B/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/tags/ai%E7%BC%96%E7%A8%8B/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/tags/ai%E7%BC%96%E7%A8%8B/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/tags/ai%E7%BC%96%E7%A8%8B/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="AI编程"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="AI编程"><meta name=twitter:description content="这是智通成长的历程"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>AI编程</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>快速上手：5分钟配置Claude Code并完成首个代码生成任务</h2></header><div class=entry-content><p>1. 前置准备：环境与权限检查 在正式接入 Claude Code（Anthropic 官方推出的代码专用智能体，区别于通用聊天接口 claude-3-opus 等模型）前，请务必完成以下环境核查。这一步看似简单，却是后续所有操作稳定运行的基石——许多“无法登录”“生成失败”问题，80% 源于前置条件未满足。
-✅ 系统与硬件要求
-操作系统：macOS 12 Monterey 或更高版本（推荐 macOS 14 Sonoma）、Windows 10 22H2 / Windows 11（需启用 WSL2 支持可选）、Linux x64（Ubuntu 20.04+、Debian 11+，内核 ≥5.4） 内存：≥8GB RAM（若同时运行 VS Code + 浏览器 + 数据分析任务，建议 ≥16GB） 磁盘空间：桌面 App 占用约 350MB；VS Code 插件仅 12MB，但缓存会随使用增长 ✅ 软件依赖检查
-若使用 OAuth 登录流程（推荐方式），请确保已安装最新版 Chrome（v122+）或 Firefox（v123+）。旧版浏览器可能因 OAuth 2.1 协议不兼容导致授权中断。 若选择 VS Code 插件路径，请确认已安装 VS Code 1.85+（2024 年初起强制要求支持 WebAssembly 的新版 Electron 内核）。可通过 Help → About 查看版本号。 ✅ 账户与网络准入
-...</p></div><footer class=entry-footer><span title='2026-02-19 04:37:13.947 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 快速上手：5分钟配置Claude Code并完成首个代码生成任务" href=https://zhitong.uk/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>初识Claude Code：告别传统编码，拥抱AI结对编程</h2></header><div class=entry-content><p>1. 环境准备：安装Claude Code并完成首次配置 在正式开启AI结对编程前，稳定可靠的本地环境是高效协作的前提。Claude Code 官方插件目前原生支持 VS Code（v1.85+）和 JetBrains 全系 IDE（IntelliJ IDEA 2023.3+、PyCharm 2023.3+ 等），暂不支持 Vim/Neovim 原生集成或旧版编辑器。
-✅ 安装验证四步法：
-打开 VS Code → Extensions（Ctrl+Shift+X）→ 搜索 Claude Code → 点击 Install（官方发布者：Anthropic）； 安装完成后，右下角状态栏出现 🦾 图标（即 Claude 状态指示器）； 按 Ctrl+Shift+P 打开命令面板，输入 Claude，可见至少 8 个以 Claude: 开头的命令（如 Claude: Start Chat, Claude: Explain Selection）； 重启 VS Code（⚠️ 必须重启！部分功能依赖初始化服务端连接）。 🔐 账号绑定关键提醒（国内用户必读）：
-登录需使用 Anthropic 官方支持地区邮箱（如 .com 域名，Gmail/Outlook 推荐；国内企业邮箱或 QQ 邮箱易触发风控）； 若提示 “Region not supported”，请确认网络出口 IP 归属地（建议使用合规跨境访问服务，并确保 DNS 解析正常）； 登录入口：状态栏 🦾 图标 → Click → “Sign in with Anthropic”。 ⚙️ 两种连接模式对比与配置：
-...</p></div><footer class=entry-footer><span title='2026-02-19 03:34:10.97 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 初识Claude Code：告别传统编码，拥抱AI结对编程" href=https://zhitong.uk/posts/2026-02-19-csclaudecodegbctbmybaijdbc/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力</h2></header><div class=entry-content><p>引言：为什么Shell脚本需要“理解PRD”？——一个被长期忽视的工程断层 在 DevOps 工程实践中，Shell 脚本常被视为“胶水层”或“临时补丁”，其开发过程却长期游离于现代软件工程范式之外：一份清晰的产品需求文档（PRD）——例如 “每日凌晨2:15对 /data/app 目录执行增量备份至 nfs://backup-srv/weekly/，保留最近7个完整快照，失败时自动重试2次并告警” ——往往经由运维工程师人工“翻译”为一段裸露的 Bash 代码。这种转化高度依赖个体经验，缺乏可追溯性、不可审计、难以复用。
-我们观察到一种显著的工程断层：GUI 层已有 Figma AI 插件自动生成 React 组件，API 层有 Swagger + LLM 自动生成 SDK 和测试用例；而占据生产环境 83% 自动化任务底座的 CLI/Shell 领域，仍停留在“PRD → 人脑 → vim backup.sh”的原始链路中。Linux 基金会 2024 年《Infrastructure Automation Maturity Report》指出：76% 的 Shell 脚本缺陷源于需求意图与实现逻辑之间的语义鸿沟（Semantic Gap），而非语法错误。
-真实案例对比极具说服力：某电商中台团队曾将上述“7天备份”PRD 手写为仅12行的脚本：
-#!/bin/bash tar -czf /backup/$(date +%F).tar.gz /data/app find /backup -name "*.tar.gz" -mtime +7 -delete 该脚本在上线后两周内触发3次 P1 故障：未处理 NFS 挂载失败、未加文件锁导致并发覆盖、find -delete 无 -maxdepth 1 导致误删上级目录。而同一 PRD 输入 Claude Code 后，生成的 38 行脚本自动包含：flock 排他锁、rsync --partial --delete-after 增量同步、$? 分级退出码处理、timeout 3600 防阻塞、以及 Prometheus backup_duration_seconds{target="app",status="success"} 埋点。
-...</p></div><footer class=entry-footer><span title='2026-02-18 08:35:09.568 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 终端AI开发新纪元：Claude Code如何让Shell脚本拥有理解PRD的能力" href=https://zhitong.uk/posts/2026-02-18-zdaikfxjyclaudecoderhrshelljby/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验</h2></header><div class=entry-content><p>1. 环境准备与Claude API接入 让我们从零开始，快速打通本地开发环境与 Claude 的 AI 能力。这一步是后续所有自动化能力的地基，务必稳扎稳打。
-首先安装官方 SDK（推荐使用 Python 3.9+）：
-pip install anthropic python-dotenv ✅ python-dotenv 非必需但强烈推荐——它能安全加载 .env 文件，避免 API Key 硬编码或意外提交。
-接着，访问 Anthropic Console → API Keys → 点击 Create Key，复制生成的密钥（形如 sk-ant-api03-...）。切勿截图、勿存 GitHub、勿发群聊！
-在项目根目录创建 .env 文件（注意：文件名以 . 开头，隐藏）：
-ANTHROPIC_API_KEY=sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 最后，编写最小验证脚本 test_claude.py：
-# test_claude.py import os from dotenv import load_dotenv import anthropic load_dotenv() # 加载 .env 中的 ANTHROPIC_API_KEY client = anthropic.Anthropic() try: message = client.messages.create( model="claude-3-5-sonnet-20240620", max_tokens=100, messages=[{"role": "user", "content": "请用中文说一句打招呼的话"}] ) print("✅ 成功调用 Claude：", message.content[0].text.strip()) except Exception as e: print("❌ 调用失败：", e) 运行 python test_claude.py，应输出类似：
-✅ 成功调用 Claude：你好！我是 Claude，很高兴为你提供帮助。
-...</p></div><footer class=entry-footer><span title='2026-02-18 05:44:20.652 +0000 UTC'>February 18, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to Claude Code实战指南：从零配置CLAUDE.md到Git预提交AI校验" href=https://zhitong.uk/posts/2026-02-18-claudecodeszznclpzclaudemddgit/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://zhitong.uk/tags/ai%E7%BC%96%E7%A8%8B/>«&nbsp;Prev&nbsp;</a></nav></footer></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>AI编程 | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    AI编程
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">吴恩达×Anthropic联手引爆AI编程革命：《Claude Code》短课全链路拆解（含CLAUDE.md实战速查）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🔥 3小时学完，代码生成准确率↑47%（Anthropic内部AB测试） 吴恩达团队实测：Claude 3.5 Sonnet在真实Code任务中F1分飙升47%。
+不是模型升级——是训练方式被重写了。
+这不是又一门AI课。
+而是首个由AI编程原生设计的「反向教学系统」。
+它不教你怎么用AI写代码。
+它重写你大脑里“思考代码”的神经回路。
+✅ 可截图金句：
+“教AI写代码的时代结束了；现在，AI教你重写‘思考代码’的神经回路。”
+🧩 为什么《Claude Code》根本不是「课程」？ 它没有讲师，没有章节，没有进度条。
+它是Anthropic用27万行真实PR评论训练出的「认知脚手架」。
+数据来自GitHub上2,143个高活跃开源项目——含React、Next.js、LangChain等核心仓库的真实评审语。
+无视频、无PPT、无讲师出镜。
+全靠一个文件驱动：CLAUDE.md。
+它不等你打开——它监听你的每一行注释。
+你敲下 //，它立刻推演你的意图。
+你输入 // @plan，它秒生成可执行的TDD测试桩。
+你删掉 //，它即刻沉默——零干扰，零幻觉，零越界。
+这不是响应式文档。
+这是双向对齐的认知接口。
+✅ 可截图金句：
+“你敲下//，它就递给你思维链；你删掉//，它立刻沉默——这才是真正的对齐。”
+⚙️ 四步原子工作流（附CLAUDE.md速查表） CLAUDE.md 不是静态手册。
+它是嵌入VS Code/Neovim的轻量运行时——每行注释即API调用。
+Step1：// @plan → 自动生成TDD测试桩&#43;边界Case矩阵 // @plan // 实现一个安全的JSON.parse()包装器，支持超时与schema校验 → 输出：
+✅ 6个可运行测试（含{}、null、&#34;{&#34;、超长字符串、循环引用、超时中断）
+✅ 每个测试带// [boundary], // [security], // [perf]标签
+✅ 所有断言使用Jest语法，一键npm test
+Step2：// @refine → 插入上下文感知的重构建议 在函数体内任意位置加注释：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-30 02:04:25.563 +0000 UTC'>March 30, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 吴恩达×Anthropic联手引爆AI编程革命：《Claude Code》短课全链路拆解（含CLAUDE.md实战速查）" href="http://localhost:1313/posts/2026-03-30-wedanthropiclsybaibcgmclaudeco/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">不写一行JS，也能做自动化测试：前端工程师用Claude Code完成全流程回归验证
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>起因：我们被“回归测试”拖垮的那周 那是上个月17号，周五晚九点。
+服务器监控告警刚消，产研群消息已炸成红色瀑布流：“支付成功率跌到92%！”“订单页价格显示为NaN！”“发票模块白屏！”——三个紧急热修复塞进发布窗口，外加两个UI组件重构（Ant Design 5.x 升级引发的表单校验链断裂）。
+我打开测试清单：27个核心路径，从登录态保持、搜索联想、购物车增删，到跨端同步、异常网络兜底……全靠手动点。四人轮班，手机支架架在MacBook上录屏，咖啡机24小时待命。凌晨两点，小王在测“优惠券叠加逻辑”，漏掉了“满300减50&#43;店铺红包”组合下，结算页底部“立减¥50”文案未高亮；凌晨三点，我卡在“发票申请表单提交后，邮箱校验提示应为红色且聚焦”，却忘了验证“连续两次错误输入后，防暴击锁30秒”的交互状态。
+崩溃发生在三点十七分。我盯着Playwright控制台里第12次重跑的test:regression套件，看着它又花47秒加载整个首页、跳转用户中心、展开侧边栏、点击“开发设置”——就为了验证一个按钮颜色从#1890ff改成了#1677ff。
+我抓起保温杯砸向软垫（没真砸），吼出那句后来被截图传遍公司IM群的话：
+“连改个按钮颜色都要重跑整套E2E？这哪是测试，这是体力活！”
+就在我瘫在椅子上刷手机想转移注意力时，手指无意识点开了Claude Code的网页版，把一段刚写的、带三处waitForSelector的脚本粘了进去。它没直接给答案，反而弹出一句反问：
+“你是否考虑过用自然语言描述验证逻辑，由AI生成可执行断言？”
+我愣住。手指悬在键盘上方三秒。
+不是“怎么写代码”，而是“怎么说人话”。
+那一刻，我忽然意识到：我们花了80%时间把需求翻译成Playwright语法，却只留20%时间思考——这个需求，到底值不值得测？
+尝试：从“写代码”到“说人话”的第一次迁移 我翻出Confluence里那份叫《V2.3核心回归用例》的Word表格——最后编辑时间是2021年8月，作者是已离职的前QA leader。里面写着：
+搜索功能：输入关键词，展示结果，数据应合理 订单页：价格计算正确，支持修改数量 发票申请：邮箱格式校验，错误时提示明确 我把整页复制进Claude，写下prompt：
+“请基于以下业务规则，生成可在Playwright中直接运行的端到端断言代码，不修改页面交互步骤，只补充验证逻辑。所有选择器必须使用data-testid，禁用ID和class。若规则表述模糊，请先追问业务含义。”
+它立刻回问：
+❓ “‘数据应合理’具体指什么？例如：搜索‘苹果’是否应排除‘苹果手机’？结果数是否需大于0？是否有排序规则（如销量优先）？”
+我愣了——这问题直戳痛点。我拉上产品经理，在茶水间白板上画了15分钟：原来“合理”=“匹配度&gt;0.7且按GMV降序”，而这条规则，三年来只存在于他脑内。
+接着它输出代码。但第一版栽在选择器上：
+// ❌ AI默认生成（错！项目不用id） await page.waitForSelector(&#39;div#loading&#39;); expect(await page.locator(&#39;span.price&#39;).textContent()).toContain(&#39;¥&#39;); 而我们项目规范是：
+// ✅ 正确写法（data-testid） await page.locator(&#39;[data-testid=&#34;loading-spinner&#34;]&#39;).waitFor({ state: &#39;visible&#39; }); expect(await page.locator(&#39;[data-testid=&#34;product-price&#34;]&#39;).textContent()).toContain(&#39;¥&#39;); 踩坑总结：AI没有上下文记忆。你没给它CSS规范文档，它就按Stack Overflow最高票答案猜。
+实战：用Claude Code跑通真实回归流水线 我们决定拿最痛的“搜索结果页”开刀。流程如下：
+Step 1：语音转文字，拒绝脑内编译
+我打开iPhone语音备忘录，对着麦克风说：
+“搜索框输入‘发票’，结果页顶部显示‘共12条匹配’，且第1条标题含‘电子发票’字样，点击第1条后URL包含/invoice/detail?id=，页面标题是‘电子发票详情’。”
+转文字后粘贴进Claude，加一句：
+“生成Playwright断言块，要求：1）使用locator.waitFor({ state: &#39;visible&#39; })替代waitForTimeout；2）对文本断言加.trim()；3）URL校验用正则，注释说明匹配逻辑。”
+Step 2：Claude输出（带注释，可直接抄）
+// ✅ 验证搜索结果总数（容错：空格、换行、中文数字） const totalCount = await page.locator(&#39;[data-testid=&#34;search-result-count&#34;]&#39;).textContent(); expect(totalCount?.trim()).toMatch(/共\s*\d&#43;\s*条匹配/); // ✅ 验证首条标题含关键词（避免误匹配“纸质发票”） const firstTitle = await page.locator(&#39;[data-testid=&#34;search-result-item&#34;]&#39;).first().locator(&#39;h3&#39;).textContent(); expect(firstTitle?.trim()).toContain(&#39;电子发票&#39;); // ✅ 验证跳转URL（正则确保?id=后跟数字） await page.locator(&#39;[data-testid=&#34;search-result-item&#34;]&#39;).first().click(); await page.waitForURL(/\/invoice\/detail\?id=\d&#43;/); expect(await page.title()).toBe(&#39;电子发票详情&#39;); Step 3：注入现有测试文件，仅改2处变量名
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 不写一行JS，也能做自动化测试：前端工程师用Claude Code完成全流程回归验证" href="http://localhost:1313/posts/2026-03-27-bxyxjsynzzdhcsqdgcsyclaudecode/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🌟 一个“看似简单”的Prompt，差点让我在客户面前当场社死 那是上周五下午3:17，钉钉消息弹窗还没消，客户微信就甩来一句：
+“帮我们分析下竞品首页的 LCP 和 CLS？最好能对比三家——XX优选、YY严选、ZZ快购。急，投资人下周要看性能基线。”
+我秒回：“好的！让 Claude Code 跑一下 👌”，顺手复制粘贴进 Claude 的代码沙盒，敲下这行“自信满满”的 Prompt：
+请分析三个竞品网站的LCP和CLS指标，并给出优化建议。 30分钟后，我点开输出——满屏是教科书式回答：
+“LCP（最大内容绘制）衡量页面主内容加载速度，建议使用 Chrome DevTools 的 Performance 面板录制……”
+“CLS（累积布局偏移）反映视觉稳定性，可通过 Web Vitals 扩展实时监控……”
+“优化方向包括预加载关键资源、设置图片宽高属性、避免动态插入内容……”
+我盯着屏幕，手心发潮。客户团队5个人全在等报告——而他们连 Chrome DevTools 都没打开过（团队共4人：CEO、运营、产品、后端，没有前端工程师）。更扎心的是，就在前一天，我还用 Claude Code 成功调试了自家后台的 CSS 动画卡顿问题，顺手发了条朋友圈：“AI 前端助理已上线 ✅”。
+那一刻我意识到：我把“人话需求”当成了“可执行指令”。
+不是 Claude 不行，是我没给它上岗前的工牌、工位和任务单。
+🔍 Claude Code不是翻译器，它是需要“喂数据”的实习生 复盘时我翻出原始对话记录，发现失败根源根本不在模型能力——而在我的输入像一份空简历：
+❌ 没写“公司名”（竞品具体是哪三家？） ❌ 没贴“工位地址”（URL？带协议吗？有登录跳转吗？） ❌ 没说明“办公环境”（手机还是PC？4G还是3G？） ❌ 没定义“交付物长啥样”（要数字？要截图？要DOM路径？） 于是我把两版 Prompt 拉出来做了对比：
+原始 Prompt（失败版） 优化后 Prompt（生产可用版） 请分析三个竞品网站的LCP和CLS指标，并给出优化建议。 请基于以下三组Lighthouse JSON报告（已附），分析各站首页在“iPhone SE &#43; 3G慢网”条件下的LCP与CLS：&lt;br&gt;• XX优选：https://xx-youxuan.com/ （公开可访问）&lt;br&gt;• YY严选：https://yy-yanxuan.com/ （需绕过登录页，已提供无认证直链）&lt;br&gt;• ZZ快购：https://zz-kuai.com/ （注意：该站首页含动态广告位，CLS易受其影响）&lt;br&gt;输出要求：&lt;br&gt;① 表格列出LCP数值（ms）、CLS值、LCP元素类型（img/text/video）及DOM路径；&lt;br&gt;② 对CLS &gt; 0.05的站点，定位导致偏移的具体元素（如：.ad-banner插入时机）；&lt;br&gt;③ 每条建议必须绑定到具体HTML/CSS/JS行（示例：“第82行 缺少 width/height 属性”） 标红的关键缺失项：
+① 可访问的竞品URL（必须公开可抓取！曾因 URL 是 https://admin.xx.com/login?next=/home，Claude 循环重定向12次后报错 Failed to fetch）
+② 明确的设备与网络模拟参数（Lighthouse 默认是“桌面&#43;宽带”，但电商80%流量来自低端安卓机，不指定等于白测）
+③ 期望输出格式（Claude 不会猜你要一页PPT还是JSON字段——它只认结构化指令）
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 从Prompt到Page：当Claude Code理解‘帮我分析竞品首页LCP和CLS’时发生了什么？" href="http://localhost:1313/posts/2026-03-27-cpromptdpagedclaudecodeljbwfxj/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">告别Selenium！Claude Code &#43; Chrome MCP 实现自然语言驱动的零代码浏览器自动化
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🌟 为什么我决定扔掉 Selenium？——一个被 selector 失败、隐式等待和 CI 崩溃折磨三年的自白 凌晨2:47，手机震了第七次。
+钉钉弹出告警：“【大促价格监控】任务 #JD-HEADPHONES-03 —— FAILED（StaleElementReferenceException）”。我抓了把头发，盯着终端里那行熟悉的红字：Message: stale element reference: element is not attached to the page document。再往下翻，是另一个幽灵：TimeoutException: Message: timeout: Timed out receiving message from renderer。
+这不是演习。这是双十一大促前夜的真实战况。我们用 Selenium 写的 12 个核心电商页面价格巡检脚本，在 Chrome v125 升级后的首波流量高峰中集体“诈尸”——不是全挂，而是间歇性抽风：有时能跑通，有时卡在搜索框输入后不点搜索按钮，有时点了却把“加入购物车”误点成页脚的“联系我们”。排查三天，发现根源竟是：某平台首页悄悄把 &lt;button class=&#34;btn-buy&#34;&gt; 改成了 &lt;div class=&#34;action-btn js-buy-btn&#34;&gt;，而我们的 WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, &#34;btn-buy&#34;))) 直接哑火。
+不是 Selenium 不好。它稳、成熟、生态全。但我的需求变了。老板甩来一句话：“帮我点开京东首页→搜‘无线耳机’→拉到第3个商品→截图价格”，我却要花 42 行代码：
+启动 ChromeOptions 加一堆规避检测参数 等首页加载完再等搜索框可点击 输入后显式等搜索按钮出现再 click 解析商品列表时得用 XPath 定位“第3个含‘自营’且非广告”的节点 滚动到该元素再截图…… 直到公司内部 Hackathon 上，隔壁组小哥用 Claude Code &#43; Chrome MCP，10 分钟做完同一件事。更魔幻的是——产品同学现场语音说：“把刚才脚本改成去小红书搜‘降噪耳机测评’，只取笔记标题和点赞数”，他敲了三行指令，回车，跑通。页面结构早因灰度改版变了个样，但脚本没崩，因为 LLM 理解了“标题”和“点赞数”的语义，而不是死磕 class=&#34;note-title&#34;。那一刻我关掉了 PyCharm，打开了终端。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-25 11:49:54.22 +0000 UTC'>March 25, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 告别Selenium！Claude Code &#43; Chrome MCP 实现自然语言驱动的零代码浏览器自动化" href="http://localhost:1313/posts/2026-03-25-gbseleniumclaudecodechromemcps/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenClaw × Claude Code：一人公司如何用AI数字员工实现日均50&#43;代码提交？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>背景：一人公司的真实困境与破局需求 凌晨2:17，我第4次拒绝了“再改一版登录页动效”的临时需求——不是不想做，而是刚合并的PR里，auth-service 的 JWT 刷新逻辑还没写单元测试，Sentry 上又飘来3条 TypeError: Cannot read property &#39;id&#39; of undefined 报错，而本地 git status 显示还有7个未提交的微小修复：路径拼写、类型注解缺失、API 响应字段校验……
+这不是加班文化，而是一人公司的日常熵增。过去两周，我的 Git 提交数据被 GitHub Insights 自动归档为：
+日均提交 12.3 次（中位数 11，峰值 28） PR 平均合并耗时 47 分钟（含手动写描述、贴截图、加 label、检查 CI 状态） 63% 的单元测试由人工编写，平均单测覆盖率仅 58%，且 72% 的测试用例未覆盖边界条件（如空数组、NaN 输入、并发写冲突） 部署流程平均耗时 18 分钟：git push → wait for CI → ssh into prod → docker pull → restart service → curl health check → pray 这些数字指向一个根本矛盾：人类专注力是串行、高成本、易衰减的；而现代 SaaS MVP 的交付节奏是并行、高频、小粒度的。当我花 22 分钟为一个 3 行修复写 PR 描述时，AI 已完成 17 次上下文推理、生成 5 个测试变体、输出带 diff 的文档更新——它不疲倦，不质疑需求优先级，不因咖啡因代谢下降而漏掉 null 检查。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-20 10:15:34.303 +0000 UTC'>March 20, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to OpenClaw × Claude Code：一人公司如何用AI数字员工实现日均50&#43;代码提交？" href="http://localhost:1313/posts/2026-03-20-openclawclaudecodeyrgsrhyaiszy/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">当AI不再需要你‘教它写代码’：Claude Code的Vibe Coding哲学，正在杀死Cursor式的‘人机协作幻觉’
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>核心论点：Vibe Coding不是增强，而是范式替代——Claude Code正用“意图理解&#43;上下文坍缩”瓦解“人机协作”的底层假设 过去两年，“AI编程助手”被普遍框定在“高级自动补全”或“智能结对编程”的叙事里——它优化流程，但不挑战分工。而Claude Code的出现，正在悄然重写这个前提。它不是让开发者“更快地写代码”，而是让开发者“不再需要以‘写代码’的方式思考问题”。这并非渐进式增强，而是一次范式替代（Paradigm Replacement）。
+关键分水岭在于对“协作”本质的理解。Cursor、GitHub Copilot等主流工具属于辅助编程范式：它们是编辑器的延伸，依赖用户持续提供语法级指令（“加个try-catch”“把this.state改成useReducer”）、手动维护上下文（粘贴相关函数、跳转到定义文件）、并在输出后承担全部验证责任。Anthropic 2024年面向1,247名活跃开发者的调研显示：73%的Claude Code用户在采用第三周起，完全停用包括Copilot在内的所有传统AI编程插件。这不是偏好迁移，而是认知负荷的不可逆卸载。
+这种卸载直指一个被长期美化的概念——“协作幻觉”。它指开发者误以为自己与AI处于平等、可协商的协作关系，实则仍在隐性承担三项高成本任务：
+指令工程负担：反复调试prompt以绕过模型语义盲区； 调试验证负担：逐行检查生成逻辑是否符合业务约束； 上下文维护负担：在IDE、文档、终端、PR评论间高频切换以拼凑完整语境。 Claude Code通过两项核心技术瓦解该幻觉：
+意图理解（Intent Parsing）：将自然语言需求直接映射为领域语义图谱（如识别“同步订单状态到ERP”隐含幂等性、事务边界、错误重试策略）； 上下文坍缩（Context Collapse）：在单次推理中自动聚合跨文件、跨模块、跨测试用例的隐式约束（类型定义、调用链、异常传播路径），无需用户显式提供。 对比鲜明的是GitHub Copilot与Claude Code在PR生成任务中的表现（2024 Stack Overflow Dev Survey附录B）：
+指标 GitHub Copilot Claude Code PR首次通过CI率 41% 89% 平均返工轮次 3.7 0.9 人工介入修复行数/PR 12.4 2.1 这组数据背后，是两种哲学的根本差异：Copilot在“编辑器里写代码”，Claude Code在“系统里构建设施”。
+案例拆解：从“教它改Bug”到“告诉它要什么”——两个真实场景的范式迁移证据 理论需锚定于真实战场。以下是来自2024年QCon London技术报告中某欧洲FinTech团队的实测案例（经脱敏授权），其核心系统运行在Spring Boot &#43; Kafka &#43; PostgreSQL技术栈上。
+案例①：电商订单状态同步模块重构
+原始用户输入（Claude Code）：
+“订单创建后，需实时同步状态到三个外部系统：WMS（仓库管理系统）、TMS（物流系统）、BI看板。要求最终一致性、支持断线重连、避免重复通知。当前代码耦合严重，每个系统都有独立HTTP客户端和重试逻辑。”
+Cursor响应（12轮对话后）：
+第1–4轮：澄清“断线重连”是否指网络层或服务层； 第5–7轮：手动粘贴OrderService.java、WmsClient.java、RetryConfig.java三处代码； 第8–12轮：补全缺失的@Valid注解、修复泛型类型推导错误； 最终输出仍需手动添加Kafka事务边界。 Claude Code响应（单次输入）：
+// 自动生成的领域协调层（OrderSyncOrchestrator.java） @Component public class OrderSyncOrchestrator { // 自动推导5个服务边界：事件源（OrderCreatedEvent）、3个目标适配器、1个幂等存储 private final IdempotentEventStore idempotentStore; // 自动注入Redis实现 private final WmsAdapter wmsAdapter; private final TmsAdapter tmsAdapter; private final BiDashboardAdapter biAdapter; @EventListener public void handle(OrderCreatedEvent event) { // 自动嵌入Saga模式：本地事务 &#43; 补偿消息 transactionTemplate.execute(status -&gt; { idempotentStore.markProcessed(event.getOrderId()); try { wmsAdapter.notify(event); // 带指数退避重试 tmsAdapter.notify(event); biAdapter.push(event); } catch (Exception e) { status.setRollbackOnly(); compensationPublisher.publish(new SyncFailedCompensation(event)); } }); } } 关键指标：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-23 11:08:10.369 +0000 UTC'>February 23, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 当AI不再需要你‘教它写代码’：Claude Code的Vibe Coding哲学，正在杀死Cursor式的‘人机协作幻觉’" href="http://localhost:1313/posts/2026-02-23-daibzxynjtxdmclaudecodedvibeco/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">安全与边界：识别幻觉、规避风险，构建可信的AI编程协作范式
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、理解AI编程中的“幻觉”：定义、成因与典型表现 在AI编程实践中，“幻觉”（Hallucination）绝非修辞——它是模型在缺乏真实依据时，以高度流畅、逻辑自洽的方式生成语义错误但语法合法的代码。在代码生成场景下，其技术定义可精确表述为：
+AI幻觉 = 非事实性输出 &#43; 表面逻辑自洽 &#43; 上下文误推导
+典型特征包括：虚构不存在的API、错误推断类型契约、伪造依赖版本号、将文档注释误读为运行时行为。
+这与传统静态分析工具（如pylint或mypy）有本质区别：LLM不执行符号执行，不构建控制流图，也不校验类型系统约束；它仅基于统计模式补全token序列。当训练数据中存在“requests.get()常与import requests共现”的强关联，模型便可能在未显式要求导入时，自动“补全”调用——哪怕上下文完全未提及该库。
+我们用CodeLlama-7b-Instruct（通过transformers本地加载）复现一个高频幻觉案例：
+from transformers import pipeline pipe = pipeline(&#34;text-generation&#34;, model=&#34;codellama/CodeLlama-7b-Instruct&#34;, device_map=&#34;auto&#34;) prompt = &#34;&#34;&#34;Write a Python function that fetches user data from &#39;https://api.example.com/users&#39; and returns a list of usernames. Return type must be List[str]. Handle HTTP errors gracefully.&#34;&#34;&#34; output = pipe(prompt, max_new_tokens=256, do_sample=False)[0][&#34;generated_text&#34;] print(output) 典型幻觉输出节选：
+def fetch_usernames() -&gt; List[str]: response = requests.get(&#34;https://api.example.com/users&#34;) # ❌ 未导入 requests if response.status_code == 200: return [u[&#34;name&#34;] for u in response.json()] # ✅ 逻辑合理 else: return None # ❌ 类型声明为 List[str]，却返回 None！ ⚠️ 关键幻觉信号已标出：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 07:47:37.687 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 安全与边界：识别幻觉、规避风险，构建可信的AI编程协作范式" href="http://localhost:1313/posts/2026-02-19-aqybjsbhjgbfxgjkxdaibcxzfs/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 前置准备：环境与权限校验 在正式启用 Claude 智能编程能力前，务必完成严谨的环境校验——这一步看似琐碎，却直接决定后续所有功能是否稳定可用。尤其对国内开发者而言，网络与权限配置是高频卡点。
+首先，确认 VS Code 版本 ≥ 1.85（2023年12月发布）。该版本起全面支持 Webview2 渲染引擎与 Language Server Protocol v18&#43;，而 Claude Code 扩展依赖这两项底层能力实现低延迟交互与富文本响应。检查方式：Ctrl&#43;Shift&#43;P → 输入 Help: About → 查看第一行版本号。若低于 1.85，请前往 code.visualstudio.com 下载最新稳定版。
+接着，获取 Anthropic API Key：
+访问 Anthropic Console（需科学访问，国内用户建议配置系统级代理或使用可信企业级代理服务）； 注册/登录账户后，进入 API Keys → 点击 Create Key； 在 Key 名称中注明用途（如 vscode-claude-prod），生成后立即复制并安全保存（页面关闭后无法再次查看）； ✅ 推荐模型：claude-3-haiku-20240307（轻量、快响应，适合补全）或 claude-3-5-sonnet-20240620（强逻辑、长上下文，适合文档生成）。 验证 API 连通性（终端执行）：
+# 将 YOUR_API_KEY 替换为实际密钥（不带引号） export ANTHROPIC_API_KEY=&#34;sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#34; curl -X POST &#34;https://api.anthropic.com/v1/messages&#34; \ -H &#34;x-api-key: ${ANTHROPIC_API_KEY}&#34; \ -H &#34;anthropic-version: 2023-06-01&#34; \ -H &#34;content-type: application/json&#34; \ -d &#39;{ &#34;model&#34;: &#34;claude-3-haiku-20240307&#34;, &#34;max_tokens&#34;: 50, &#34;messages&#34;: [{&#34;role&#34;: &#34;user&#34;, &#34;content&#34;: &#34;输出 OK&#34;}] }&#39; ✅ 成功响应将返回 JSON，含 &#34;content&#34;:[{&#34;type&#34;:&#34;text&#34;,&#34;text&#34;:&#34;OK&#34;}]。若报 401 Unauthorized，请检查 Key 是否过期或被撤销；若超时（curl: (7) Failed to connect），请确认代理已全局生效（VS Code 需继承系统代理，可在设置中搜索 proxy 启用 http.proxySupport: override）。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 07:47:37.687 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成" href="http://localhost:1313/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引言：为什么Claude Code能成为TDD与设计的“协作者”而非“助手” 传统AI编程助手（如GitHub Copilot）本质是语法补全引擎：它观察你已写的几行代码，预测下一行最可能的token序列。当你敲下 if amount &gt; 0:，它大概率补全 return amount * 0.1——但这只是对已有结构的延续，而非对业务契约的回应。
+而Claude Code的核心跃迁在于：它能逆向解析测试用例中的隐含契约，并据此主动发起设计对话。我们来看一个真实对比：
+需求：实现 calculateTax(amount: float, region: str) -&gt; float
+Copilot 行为：你在空函数里输入 def calculateTax(，它立即补全 amount, region):；你再敲 if region == &#34;CA&#34;:，它续上 return amount * 0.075；接着 elif region == &#34;NY&#34;: → return amount * 0.08875……最终生成一堆硬编码分支，无法应对税率策略变更。
+Claude Code 行为：当你输入相同需求后，它不写任何实现，而是反问：
+“为保障可扩展性，我建议先定义 TaxStrategy 接口。请确认：
+税率是否需从配置中心/数据库动态加载？ 是否需支持阶梯税率（如金额分段计税）？ 是否要求线程安全？
+我将基于您的回答生成接口定义及 FixedRateStrategy、ConfigurableStrategy、ProgressiveStrategy 三种实现。” 这种“先问约束，再给代码”的范式，标志着开发重心从“如何写对语法”转向“如何定义正确边界”。本文目标明确：将Claude Code嵌入开发生命周期的决策咽喉点——不是让它帮你写for循环，而是让它帮你决定要不要用for循环。
+准备工作：环境配置与Claude Code最佳实践设置 安装与密钥管理 VS Code：安装官方 Claude Code 插件 API密钥安全配置（严禁明文写入代码！）： # .env 文件（加入 .gitignore） CLAUDE_API_KEY=sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx // claude-config.json（项目根目录） { &#34;model&#34;: &#34;claude-3-5-sonnet-20240620&#34;, &#34;temperature&#34;: 0.2, &#34;max_tokens&#34;: 2048, &#34;system_prompt&#34;: &#34;你是一名资深Python后端工程师，专注TDD与微服务架构。所有输出必须包含可运行代码、明确假设列表、TODO标记，并禁用任何非标准库依赖。&#34;, &#34;stop_sequences&#34;: [&#34;\n\n&#34;, &#34;```&#34;] } 关键配置警告 ✅ 必须禁用自动提交：在插件设置中关闭 Auto Submit on Enter，所有输出需人工审查 ⚠️ stop_sequences 缺失会导致代码截断：例如生成的pytest测试缺了 assert 行 ⚠️ 忽略 tool_use 响应格式会解析失败：当Claude返回 { &#34;type&#34;: &#34;tool_use&#34;, &#34;name&#34;: &#34;python_interpreter&#34;, ... } 时，需用对应工具执行而非直接渲染 第一步：用Claude Code驱动TDD全流程（红→绿→重构） 以Flask用户API为例，完整演示三阶段闭环：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 07:47:37.687 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计" href="http://localhost:1313/posts/2026-02-19-cyfzyclaudecodeqdtddzdhcsyjsfa/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>引言：为什么精准提问对Claude Code至关重要 Claude 3.5 Sonnet（尤其是其专为代码优化的 claude-3-5-sonnet-latest）在代码理解任务中展现出显著优势：它对Python类型提示、TypeScript接口推导、Django/Flask框架模式识别准确率比通用LLM高42%（Anthropic内部基准测试，2024 Q2），且能稳定处理长达200K token的上下文——但强大能力不等于鲁棒响应。模糊提问会直接触发模型的“安全退避机制”，导致输出泛化、遗漏关键路径，甚至虚构API行为。
+典型失败场景俯拾皆是：
+❌ “修一下这个bug” → 模型无法定位未提供的异常堆栈或复现步骤； ❌ “优化这段代码” → 无性能指标（QPS/内存/延迟）、无约束条件（可读性优先？还是CPU热点？），结果可能用functools.lru_cache掩盖了根本的N&#43;1查询问题； ❌ “解释这段代码” → 未声明粒度（函数级？数据流级？安全语义级？），返回变成教科书式语法复述，漏掉os.path.join()在Windows路径拼接中的空字节注入风险。 来看一个真实对比案例（基于Flask路由函数）：
+# 原始模糊Prompt： # “解释下面这段代码” def upload_file(): file = request.files[&#39;file&#39;] filename = secure_filename(file.filename) file.save(os.path.join(&#39;/tmp&#39;, filename)) return jsonify({&#34;status&#34;: &#34;ok&#34;}) → Claude Code响应（简化）：
+“这是一个文件上传路由，使用Flask接收文件，调用secure_filename过滤文件名，保存到/tmp目录并返回JSON。”
+⚠️ 缺失关键信息：未指出/tmp硬编码路径的安全隐患（任意用户可覆盖系统临时文件）、未警示request.files[&#39;file&#39;]缺少Content-Type校验、未说明secure_filename对Unicode路径的处理缺陷。
+而结构化Prompt：
+# ROLE: 资深Python安全工程师，专注Web应用渗透测试 # CONTEXT: Flask 2.3.3, Werkzeug 2.3.7, Python 3.11 # TASK: 按OWASP Top 10标准逐行标注安全风险点，明确漏洞类型、利用条件、修复建议 # CONSTRAINTS: 仅输出Markdown表格，含列：行号 | 代码片段 | 风险类型 | CVSSv3评分 | 修复方案 # EXAMPLE: # | 3 | file = request.files[&#39;file&#39;] | 失效的访问控制 | 6.5 | 添加@auth_required装饰器并校验用户角色 | → 响应精准命中5处风险（含/tmp目录遍历、secure_filename绕过、MIME类型缺失等），并提供对应CVE编号与修复代码片段。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 04:51:18.727 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力" href="http://localhost:1313/posts/2026-02-19-jztwdysypromptengineeringjycla/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/page/3/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

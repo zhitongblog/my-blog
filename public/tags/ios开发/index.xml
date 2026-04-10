@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>IOS开发 on 智通和你一起学AI</title><link>https://zhitong.uk/tags/ios%E5%BC%80%E5%8F%91/</link><description>Recent content in IOS开发 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Thu, 19 Feb 2026 10:02:44 +0000</lastBuildDate><atom:link href="https://zhitong.uk/tags/ios%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml"/><item><title>Claude Code + Xcode 26.3：我用三句话描述需求，10分钟上架了首个iPhone应用</title><link>https://zhitong.uk/posts/2026-02-19-claudecodexcode263wysjhmsxq10f/</link><pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-claudecodexcode263wysjhmsxq10f/</guid><description>本文详解如何用Claude Code辅助+Xcode 16.3快速开发并上架首个iPhone应用，涵盖环境配置、签名要点、TestFlight测试及App Store提交全流程，适合新手高效入门。</description></item><item><title>第六步：App Store通关指南——用Claude Code撰写审核文案、截图说明与元数据</title><link>https://zhitong.uk/posts/2026-02-19-dlbappstoretgznyclaudecodezxsh/</link><pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-19-dlbappstoretgznyclaudecodezxsh/</guid><description>详解如何用Claude Code高效撰写App Store审核文案、合规截图说明与精准元数据，规避72%因非功能问题导致的首次拒审，提升上架成功率。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>IOS开发 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/tags/ios%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in IOS开发 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 19 Feb 2026 10:02:44 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ios%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code &#43; Xcode 26.3：我用三句话描述需求，10分钟上架了首个iPhone应用</title>
+      <link>http://localhost:1313/posts/2026-02-19-claudecodexcode263wysjhmsxq10f/</link>
+      <pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-claudecodexcode263wysjhmsxq10f/</guid>
+      <description>本文详解如何用Claude Code辅助&#43;Xcode 16.3快速开发并上架首个iPhone应用，涵盖环境配置、签名要点、TestFlight测试及App Store提交全流程，适合新手高效入门。</description>
+    </item>
+    <item>
+      <title>第六步：App Store通关指南——用Claude Code撰写审核文案、截图说明与元数据</title>
+      <link>http://localhost:1313/posts/2026-02-19-dlbappstoretgznyclaudecodezxsh/</link>
+      <pubDate>Thu, 19 Feb 2026 10:02:44 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-19-dlbappstoretgznyclaudecodezxsh/</guid>
+      <description>详解如何用Claude Code高效撰写App Store审核文案、合规截图说明与精准元数据，规避72%因非功能问题导致的首次拒审，提升上架成功率。</description>
+    </item>
+  </channel>
+</rss>

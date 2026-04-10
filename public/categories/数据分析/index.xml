@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>数据分析 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</link>
+    <description>Recent content in 数据分析 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 29 Mar 2026 06:01:56 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从猜比分到算概率：我的观赛方式被彻底改变了</title>
+      <link>http://localhost:1313/posts/2026-03-29-ccbfdsglwdgsfsbcdgbl/</link>
+      <pubDate>Sun, 29 Mar 2026 06:01:56 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-29-ccbfdsglwdgsfsbcdgbl/</guid>
+      <description>本文讲述作者如何从依赖直觉的‘玄学猜分’转向基于伤病、体能、天气、历史失位数据等多维变量的概率推演，揭示数据驱动观赛思维的实战价值与认知升级路径。</description>
+    </item>
+    <item>
+      <title>50&#43;变量实时建模！原来专业球评都在偷偷用它</title>
+      <link>http://localhost:1313/posts/2026-03-29-50blssjmylzyqpdzttyt/</link>
+      <pubDate>Sun, 29 Mar 2026 05:58:03 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-29-50blssjmylzyqpdzttyt/</guid>
+      <description>揭秘专业球评背后的50&#43;变量实时建模技术，解决传统静态分析在足球、NBA等赛事中因信息过载导致的预测失准问题，涵盖毫秒级变量捕捉、多源异构数据融合与临场决策支持。</description>
+    </item>
+  </channel>
+</rss>

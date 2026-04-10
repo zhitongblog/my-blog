@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>开发实践 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/</link><description>Recent content in 开发实践 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Mar 2026 10:15:34 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml"/><item><title>从Prompt工程师到AI流程架构师：一人开发团队用OpenClaw重构Claude Code使用范式</title><link>https://zhitong.uk/posts/2026-03-20-cpromptgcsdailcjgsyrkftdyopenc/</link><pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate><guid>https://zhitong.uk/posts/2026-03-20-cpromptgcsdailcjgsyrkftdyopenc/</guid><description>本文讲述单人开发者如何通过OpenClaw工具重构Claude Code使用范式，从基础Prompt工程师升级为AI流程架构师，实现Spring Boot 3.2接口的零协作、端到端自动生成与验证。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>开发实践 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/</link>
+    <description>Recent content in 开发实践 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 02 Apr 2026 03:28:19 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>别只看模型参数！Claude Code泄露揭示的‘提示即API’实践革命：137个标准化Prompt接口设计模式</title>
+      <link>http://localhost:1313/posts/2026-04-02-bzkmxcsclaudecodexljsdtsjapisj/</link>
+      <pubDate>Thu, 02 Apr 2026 03:28:19 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-04-02-bzkmxcsclaudecodexljsdtsjapisj/</guid>
+      <description>揭秘Claude Code泄露事件揭示的‘提示即API’范式革命：137个标准化Prompt接口设计模式，涵盖版本控制、Schema约束、A/B测试与回滚语义，推动LLM应用从模型调用迈向可编排、可验证的提示契约时代。</description>
+    </item>
+    <item>
+      <title>从Prompt工程师到AI流程架构师：一人开发团队用OpenClaw重构Claude Code使用范式</title>
+      <link>http://localhost:1313/posts/2026-03-20-cpromptgcsdailcjgsyrkftdyopenc/</link>
+      <pubDate>Fri, 20 Mar 2026 10:15:34 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-03-20-cpromptgcsdailcjgsyrkftdyopenc/</guid>
+      <description>本文讲述单人开发者如何通过OpenClaw工具重构Claude Code使用范式，从基础Prompt工程师升级为AI流程架构师，实现Spring Boot 3.2接口的零协作、端到端自动生成与验证。</description>
+    </item>
+  </channel>
+</rss>

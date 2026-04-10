@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>初识Claude Code：为什么开发者需要这个AI编程伙伴？ | 智通和你一起学AI</title>
+<meta name="keywords" content="Claude, AI编程, 代码补全, 结对编程, NullPointerException, 开发者工具">
+<meta name="description" content="本文通过真实调试案例，解析Claude Code如何以‘结对编程老炮儿’视角解决空指针等复杂问题，对比Copilot与CodeWhisperer的局限，揭示其上下文理解与工程化思维优势。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-04-06-csclaudecodewsmkfzxyzgaibchb/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-04-06-csclaudecodewsmkfzxyzgaibchb/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      初识Claude Code：为什么开发者需要这个AI编程伙伴？
+    </h1>
+    <div class="post-description">
+      本文通过真实调试案例，解析Claude Code如何以‘结对编程老炮儿’视角解决空指针等复杂问题，对比Copilot与CodeWhisperer的局限，揭示其上下文理解与工程化思维优势。
+    </div>
+    <div class="post-meta"><span title='2026-04-06 02:26:58.91 +0000 UTC'>April 6, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="为什么我第一次用claude-code就删掉了半屏代码从怀疑到真香的真实心路">为什么我第一次用Claude Code就删掉了半屏代码？——从怀疑到真香的真实心路<a hidden class="anchor" aria-hidden="true" href="#为什么我第一次用claude-code就删掉了半屏代码从怀疑到真香的真实心路">#</a></h2>
+<p>凌晨1:23，咖啡凉透第三杯。我在一个临时接手的电商结算服务里卡了6小时——订单状态流转总在“已支付→待发货”环节静默失败，日志只有一行 <code>NullPointerException</code>，堆栈指向 <code>OrderProcessor.java:147</code>，而那行只是个看似无害的 <code>order.getBuyer().getProfile().getPreferredLanguage()</code>。</p>
+<p>我习惯性敲下 <code>Ctrl+Shift+P</code> 唤出 Copilot，输入注释 <code>// Fix NPE when buyer profile is null</code>……它生成了三行空安全判空，但漏掉了 <code>getBuyer()</code> 本身也可能是 null 的关键分支；换 CodeWhisperer，它热情地补全了 <code>Optional.ofNullable(...)</code> 链式调用，却把整个业务逻辑塞进 <code>orElseThrow()</code> 里，导致异常路径吞掉了上游传来的错误码。</p>
+<p>直到同事甩来链接：“试试 Claude Code，别当补全工具用，当‘结对编程的老炮儿’。”</p>
+<p>我半信半疑点开 VS Code 侧边栏的 Claude Code 面板，把报错日志、147行上下文、以及 <code>OrderProcessor</code> 类的 <code>process()</code> 方法完整粘贴进去，末尾加了一句：</p>
+<blockquote>
+<p>“请定位根本原因，不是表面修复。重点检查 Buyer 和 Profile 的初始化时机。”</p>
+</blockquote>
+<p>3秒后，它没生成任何代码——而是直接标红了 <code>OrderProcessor</code> 构造函数里一行被注释掉的 <code>// TODO: init buyer profile lazily</code>，并指出：<strong>“该服务在订单创建时未初始化 Buyer 对象（因异步下单流程跳过用户中心同步），导致后续所有 getBuyer() 调用返回 null。根本解法：在 Order 构建阶段强制关联 Buyer 实体，或在 process() 开头添加 Buyer 加载校验。”</strong></p>
+<p>紧接着，它列出了3个必须覆盖的边界条件：</p>
+<ol>
+<li>Buyer 存在但 Profile 为 null（当前 NPE）</li>
+<li>Buyer 为 null 但订单来自游客（需走游客默认语言流）</li>
+<li>Buyer 存在且 Profile 有值，但 <code>preferredLanguage</code> 字段为空字符串（应 fallback 到系统默认）</li>
+</ol>
+<p>我盯着屏幕，手指悬在键盘上，忘了呼吸。<br>
+不是因为它“写对了代码”，而是它<strong>看懂了代码没写的上下文</strong>——那个被注释掉的 TODO，那个异步下单的隐含约束，那个没人文档化的游客流程。<br>
+那一刻，我删掉了自己刚写的23行防御性判空，把光标移到构造函数，开始补全 Buyer 初始化逻辑。</p>
+<p><img alt="深夜调试时Claude Code侧边栏精准标出被注释的TODO和三个边界条件" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/6a/20260406/d23adf3d/6df8c2b6-b290-9875-9868-daeffbcfb24c2660666765.png?Expires=1776048153&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=N%2Bvwo1duij97wxVODjSaMLmiBaA%3D"></p>
+<hr>
+<h2 id="踩坑实录那些让我骂出声又默默截图存档的翻车现场">踩坑实录：那些让我骂出声、又默默截图存档的“翻车现场”<a hidden class="anchor" aria-hidden="true" href="#踩坑实录那些让我骂出声又默默截图存档的翻车现场">#</a></h2>
+<p>真香之后是真疼。Claude Code 不是神，是会犯错的、有脾气的、需要你“带教”的队友。以下是三个我骂出声后立刻截图存档的现场：</p>
+<p><strong>① TypeScript 泛型地狱里的类型误判</strong><br>
+<em>时间</em>：上周二下午，重构一个支持多租户的数据聚合 SDK<br>
+<em>翻车</em>：我给函数 <code>aggregate&lt;T extends Record&lt;string, any&gt;&gt;(data: T[], config: AggConfig): Promise&lt;Record&lt;string, unknown&gt;&gt;</code> 添加注释 <code>// 返回值结构同 data 元素，但 key 为 groupBy 字段值，value 为聚合结果对象</code>。Claude Code 生成的返回类型是 <code>Promise&lt;Record&lt;string, T&gt;&gt;</code>——它把泛型 <code>T</code> 当成了返回值元素类型，完全忽略了 <code>T[]</code> 中每个元素经聚合后结构已坍缩为 <code>{ count: number; sum: number }</code> 这类固定形态。TS 编译直接报错：<code>Type 'T' is not assignable to type '{ count: number; sum: number }'</code>。</p>
+<p><em>救火</em>：立刻在函数上方加 <code>// @claude-ignore</code> 注释块，切回手动写类型，同时把 <code>config</code> 的 <code>aggregator</code> 字段类型定义复制进提示词：“请严格按 AggregatorFn<!-- raw HTML omitted --> = (items: T[]) =&gt; { count: number; sum: number } 推导返回类型”。</p>
+<p><em>现在防</em>：泛型函数必加类型锚点——在注释里写死：“返回值 shape = { [groupKey]: { count: number; sum: number } }”。</p>
+<p><strong>② Java 自定义注解处理器的“幻觉生成”</strong><br>
+<em>时间</em>：接手一个金融风控老项目，Spring Boot 2.7 + 自研 <code>@RuleEngine</code> 注解<br>
+<em>翻车</em>：我让 Claude Code “为 RuleService.generateDecision() 方法添加 <code>@Generated</code> 注解，标记由规则引擎自动生成”。它真生成了 <code>@Generated(&quot;com.example.rule.RuleEngine&quot;)</code>……但项目里压根没有这个注解！真实注解是 <code>@AutoGenerated(by = &quot;RuleEngine&quot;)</code>，且必须配合 <code>@Retention(RetentionPolicy.RUNTIME)</code> 才能被规则引擎扫描到。</p>
+<p><em>救火</em>：删掉生成代码，打开 <code>src/main/java/com/example/annotation/</code> 目录，把 <code>AutoGenerated.java</code> 文件内容整段粘贴进 Claude Code 输入框，加一句：“请严格复用此注解定义，勿改名、勿改属性名”。</p>
+<p><em>现在防</em>：对遗留项目，第一件事是把 <code>annotation/</code> 和 <code>processor/</code> 目录下的核心类扔给它“学习”，再加约束：“所有生成代码必须使用 src/main/java/com/example/annotation/ 下已存在的注解”。</p>
+<p><strong>③ 中文注释触发“需求文档模式”</strong><br>
+<em>时间</em>：周五下班前，老板微信甩来需求：“导出要支持分页，别卡死”<br>
+<em>翻车</em>：我在 Controller 方法上写中文注释 <code>// 导出接口支持分页</code>，Claude Code 理解为“请生成一个完整的分页导出功能”，于是输出：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@GetMapping</span>(<span style="color:#e6db74">&#34;/export&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;</span>InputStreamResource<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">export</span>(<span style="color:#a6e22e">@RequestParam</span> <span style="color:#66d9ef">int</span> page, <span style="color:#a6e22e">@RequestParam</span> <span style="color:#66d9ef">int</span> size) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ... 生成了 Pageable + JPA 分页查询 + Excel 多Sheet 写入 ...</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>而真实需求只是：<strong>在现有 CSV 导出接口上，增加 offset/limit 参数过滤数据源，不改文件格式、不加新依赖</strong>。</p>
+<p><em>救火</em>：删掉全部生成，改写注释为：“⚠️ 仅修改本方法：在现有 CSV 导出逻辑中，增加 offset 和 limit 参数，用于数据库查询层分页。不新增任何依赖、不改变返回文件格式、不引入分页对象”。</p>
+<p><em>现在防</em>：中文指令前必加 ⚠️ 符号 + 明确“仅修改本方法” + “不新增/不改变/不引入”三重否定。</p>
+<hr>
+<h2 id="它真正帮我省下时间的地方根本不是写新代码">它真正帮我省下时间的地方，根本不是写新代码<a hidden class="anchor" aria-hidden="true" href="#它真正帮我省下时间的地方根本不是写新代码">#</a></h2>
+<p>最颠覆认知的是：Claude Code 最大价值，根本不在“写代码”，而在<strong>终结信息熵增</strong>。</p>
+<p>我们每天大量时间耗在“理解别人写的什么”、“回忆自己半年前为啥这么写”、“在10个相似文件里找重复逻辑”——这些事，它干得比人快、准、狠。</p>
+<p>上周重构支付模块，人工梳理 <code>PaymentService</code> 调用链（涉及 <code>Order</code>, <code>Wallet</code>, <code>Refund</code>, <code>Notify</code> 四个子模块），预估8小时。我让 Claude Code 扫描整个 <code>payment/</code> 包，指令是：</p>
+<blockquote>
+<p>“列出所有调用 DateUtils.formatDate() 的位置，标注调用方方法、参数格式、是否处理时区。特别关注：相同格式字符串（如 &lsquo;yyyy-MM-dd HH:mm:ss&rsquo;）在不同地方是否用了不同工具类（SimpleDateFormat / LocalDateTime / JodaTime）”</p>
+</blockquote>
+<p>5分钟，它返回表格：</p>
+<table>
+  <thead>
+      <tr>
+          <th>文件</th>
+          <th>方法</th>
+          <th>格式字符串</th>
+          <th>工具类</th>
+          <th>是否统一时区</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>OrderService.java</td>
+          <td>createOrder()</td>
+          <td>yyyy-MM-dd HH:mm:ss</td>
+          <td>SimpleDateFormat</td>
+          <td>❌（无时区）</td>
+      </tr>
+      <tr>
+          <td>RefundService.java</td>
+          <td>handleRefund()</td>
+          <td>yyyy-MM-dd HH:mm:ss</td>
+          <td>LocalDateTime</td>
+          <td>✅（ZoneId.systemDefault()）</td>
+      </tr>
+      <tr>
+          <td>NotifyService.java</td>
+          <td>sendPaySuccess()</td>
+          <td>yyyy-MM-dd HH:mm:ss</td>
+          <td>JodaTime</td>
+          <td>❌（UTC）</td>
+      </tr>
+  </tbody>
+</table>
+<p>并附结论：<strong>“检测到17处重复日期格式化调用，分散在5个类中，使用3种不兼容的时区处理方式。建议统一迁移至 <code>DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;).withZone(ZoneId.of(&quot;Asia/Shanghai&quot;))</code>”</strong></p>
+<p>实际重构耗时：3.5小时。省下的4.5小时，全花在跟产品确认时区策略上——而不是翻代码。</p>
+<p>另一个神技：读陌生代码时，选中一段200行的 Kafka 消费者逻辑，右键 → “Ask Claude Code: 这段代码在干啥？用不超过3句话的白话解释，忽略技术细节”。它输出：</p>
+<blockquote>
+<p>“1. 从 Kafka 拉取订单事件，按 order_id 分组（避免并发修改同一订单）<br>
+2. 对每组事件按时间戳排序，合并重复事件（保留最新状态）<br>
+3. 将最终状态更新到 MySQL，并发发送通知（失败则重试3次）”</p>
+</blockquote>
+<p>——比我自己啃半小时还准。这哪是AI？这是我的“代码翻译器”。</p>
+<hr>
+<h2 id="和它高效合作的4个土办法不用学prompt-engineering">和它高效合作的4个土办法（不用学Prompt Engineering）<a hidden class="anchor" aria-hidden="true" href="#和它高效合作的4个土办法不用学prompt-engineering">#</a></h2>
+<p>别被“Prompt Engineering”吓住。我和Claude Code磨合出的4个野路子，比任何教程都管用：</p>
+<p><strong>① 报错日志，整段粘贴，加一句定性指令</strong><br>
+❌ 错误示范：“怎么修复这个错误？”<br>
+✅ 土办法：把 IDEA 控制台里完整的 <code>Exception in thread &quot;main&quot; java.lang.NullPointerException: Cannot invoke &quot;String.length()&quot; because &quot;s&quot; is null</code> 整段粘贴，末尾加：</p>
+<blockquote>
+<p>“请定位根本原因，不是表面修复。指出哪个变量为 null，以及它本应在哪个环节被初始化。”</p>
+</blockquote>
+<p>它立刻聚焦到 <code>UserService.loadProfile()</code> 返回 null，而非在 <code>s.length()</code> 处加判空。</p>
+<p><strong>② 中文 TODO 注释，比英文更准</strong><br>
+在函数开头写：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// TODO: 这里要校验用户余额是否足够扣款，不足则抛 InsufficientBalanceException，不要用 if-else 返回 false</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deductBalance</span>(Long userId, BigDecimal amount) { ... }
+</span></span></code></pre></div><p>Claude Code 对“不要用 if-else 返回 false”这种中文否定指令的理解，远超 <code>// Return exception on insufficient balance</code>。</p>
+<p><strong>③ 生成不对？直接给解法路径</strong><br>
+当它用 if-else 写了一堆状态判断，而你知道该用策略模式时，别写“优化代码”——写：</p>
+<blockquote>
+<p>“请换一种思路：将 status 处理逻辑拆分为 Strategy 接口，为 PENDING/CONFIRMED/FAILED 各实现一个类，注入到 Service 中。”</p>
+</blockquote>
+<p>它真就给你画出接口、三个实现类、配置类，连单元测试骨架都写了。</p>
+<p><strong>④ 关键代码块旁，加 CONTEXT 锚点</strong><br>
+在敏感逻辑旁写：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// CONTEXT: 用户登录态必须校验 RBAC 权限，且只能操作本人订单</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> Order <span style="color:#a6e22e">updateOrder</span>(Long orderId, OrderUpdateDTO dto) { ... }
+</span></span></code></pre></div><p>比在提示词里写100字权限规则管用10倍——它会自动在方法开头插入 <code>rbacService.checkPermission(userId, &quot;ORDER_UPDATE&quot;, orderId)</code>。</p>
+<p>就像教实习生：<strong>少说“好好干”，多说“先查DB，再发MQ，最后记日志，三步缺一不可”</strong>。</p>
+<hr>
+<h2 id="我现在怎么把它塞进日常开发流非侵入式接入指南">我现在怎么把它塞进日常开发流？（非侵入式接入指南）<a hidden class="anchor" aria-hidden="true" href="#我现在怎么把它塞进日常开发流非侵入式接入指南">#</a></h2>
+<p>它已是我开发流里的“空气”——存在感低，但缺了就窒息。</p>
+<ul>
+<li><strong>VS Code 设置</strong>：关闭内联补全（太干扰），只启用侧边栏 Claude Code 面板。快捷键 <code>Cmd+K</code> 唤出，像唤出一个随时待命的资深同事。</li>
+<li><strong>Git 提交前必过一道关</strong>：写完代码，<code>git diff</code> 复制到 Claude Code，指令：
+<blockquote>
+<p>“请检查这个修改是否引入 N+1 查询风险、是否破坏事务边界、是否遗漏空指针防护。只指出风险点，不生成修复代码。”<br>
+上周它揪出一处 <code>@Transactional</code> 方法里循环调用 <code>userRepository.findById()</code>，我当场补了 <code>findByIdIn()</code> 批量查询。</p>
+</blockquote>
+</li>
+<li><strong>周会前10分钟</strong>：把本周所有 commit diff 粘贴进去，指令：
+<blockquote>
+<p>“总结本周代码变更趋势：高频修改的3个文件、新增的2个技术债点（如 TODO/XXX 注释）、潜在耦合增强的模块。”<br>
+它输出的报告，比我手写的周报还准——毕竟它真的“读”完了每一行。</p>
+</blockquote>
+</li>
+</ul>
+<p>最深刻的体会是：<strong>没用它的时候反而更慢</strong>。<br>
+我现在强制自己：</p>
+<ol>
+<li>先手写核心算法（比如排序逻辑、状态机转移）</li>
+<li>再让 Claude Code 审查：“请指出这30行是否有边界条件遗漏、是否可读性优化、是否符合 Clean Code 原则”</li>
+<li>最后，我基于它的反馈做决策——删、改、或坚持原方案。</li>
+</ol>
+<p>形成闭环：<strong>人脑构思 → 机器验证 → 人脑决策</strong>。</p>
+<p>最后坦白一句：<br>
+别让它帮你写 README。<br>
+我试过——它生成的文档永远比代码老三天。<br>
+因为 README 的真相是：<strong>它不是代码的说明书，而是你忘记写注释时，留给未来自己的忏悔录</strong>。</p>
+<p><img alt="开发者侧边栏Claude Code面板与代码编辑区并排，界面简洁无干扰" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/27/20260406/d23adf3d/7734f5d8-b389-9971-a6a2-c95b90d8600b3029146802.png?Expires=1776048170&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=QouYkztv9H7HaG5gl%2FewLOSAgBI%3D"></p>
+
+
+  </div>
+
+  
+
+
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/claude/">Claude</a></li>
+      <li><a href="http://localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/">AI编程</a></li>
+      <li><a href="http://localhost:1313/tags/%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8/">代码补全</a></li>
+      <li><a href="http://localhost:1313/tags/%E7%BB%93%E5%AF%B9%E7%BC%96%E7%A8%8B/">结对编程</a></li>
+      <li><a href="http://localhost:1313/tags/nullpointerexception/">NullPointerException</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/">开发者工具</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

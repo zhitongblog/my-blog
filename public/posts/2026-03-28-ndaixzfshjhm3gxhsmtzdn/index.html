@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>你的AI写作分身会‘进化’吗？3个信号说明它真懂你 | 智通和你一起学AI</title>
+<meta name="keywords" content="Llama3, RAG, AI写作, 提示工程, 个性化AI, 本地大模型">
+<meta name="description" content="探讨AI写作工具如何通过RAG、持续微调与行为模仿实现个性化‘进化’，识别3个关键信号判断AI是否真正理解你的语言风格、思维节奏与表达习惯。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-03-28-ndaixzfshjhm3gxhsmtzdn/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-03-28-ndaixzfshjhm3gxhsmtzdn/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      你的AI写作分身会‘进化’吗？3个信号说明它真懂你
+    </h1>
+    <div class="post-description">
+      探讨AI写作工具如何通过RAG、持续微调与行为模仿实现个性化‘进化’，识别3个关键信号判断AI是否真正理解你的语言风格、思维节奏与表达习惯。
+    </div>
+    <div class="post-meta"><span title='2026-03-28 03:42:16.403 +0000 UTC'>March 28, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="开篇那个越写越像我的深夜惊魂">开篇：那个“越写越像我”的深夜惊魂<a hidden class="anchor" aria-hidden="true" href="#开篇那个越写越像我的深夜惊魂">#</a></h2>
+<p>凌晨2:17，咖啡凉透，文档光标在第17版稿子末尾无声闪烁。我揉着发酸的太阳穴，把刚删掉的半句“这个逻辑链有点松”又粘回去——正准备让AI补个过渡段，顺手敲下提示词：“润色一下，保持口语感，别太学术”。</p>
+<p>回车键按下的瞬间，它弹出第一行：</p>
+<blockquote>
+<p>“这个节奏得压一压。”</p>
+</blockquote>
+<p>我手指悬在键盘上，后颈汗毛竖起。</p>
+<p>这不是它第一次说这句话——而是<strong>我上周三、周五、周六凌晨三点，在 Slack 里对编辑连发三条语音时，反复重复的口头禅</strong>。连停顿位置都一模一样：前半句轻快带笑，后半句沉下去，像踩了刹车。</p>
+<p>我是做了三年自由撰稿人的老油条，也兼着某SaaS公司的内容运营岗。过去两年，我没换过主力AI模型（用的是本地部署的 Llama3-70B + 自研RAG），但给它喂了217份我的旧稿、89封邮件草稿、36次会议录音转录稿，甚至包括被领导红笔批注“太绕，重写”的返工记录。它没变聪明，但我<strong>变懒了</strong>——越来越习惯让它“猜我要什么”，而不是“告诉它我要什么”。</p>
+<p>直到那句“节奏得压一压”撞进眼睛。我才突然意识到：AI不会进化，但<strong>你的使用方式，正在把它锻造成一面高精度的镜子</strong>。而镜子里映出的，不是它的能力，是你自己写作的肌肉记忆、思维惯性、甚至情绪褶皱。这种“像”，不是玄学，是可追踪、可干预、可校准的信号系统。</p>
+<p><img alt="深夜改稿时AI突然复刻作者口头禅的惊悚瞬间" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/95/20260328/d23adf3d/1ac6f14d-16d9-4519-b835-c424a58fa51e3774304664.png?Expires=1775274732&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=t9Fv62vFBIGM2zvuwCE9dVzbo9Q%3D"></p>
+<hr>
+<h2 id="信号一它开始主动纠正你的惯性错误而不是等你提">信号一：它开始主动“纠正”你的惯性错误，而不是等你提<a hidden class="anchor" aria-hidden="true" href="#信号一它开始主动纠正你的惯性错误而不是等你提">#</a></h2>
+<p>去年Q3，我连续三周给同一客户写《用户增长双周报》。每次输入都是：“基于DAU/MAU数据，写一份面向CPO的简报，重点突出留存归因”。结果第三周，AI在结尾加了一行小字：</p>
+<blockquote>
+<p><code>⚠️ 注：您过去7次输入中，均将‘环比’误作‘同比’。本次已统一修正为‘DAU环比提升12%’（非同比）。附对比说明表 → [链接]</code></p>
+</blockquote>
+<p>我点开链接，表格里清清楚楚列着：</p>
+<table>
+  <thead>
+      <tr>
+          <th>原始输入片段</th>
+          <th>正确术语</th>
+          <th>您常混淆的场景</th>
+          <th>典型后果</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>“同比提升15%”</td>
+          <td>环比</td>
+          <td>周报/双周报</td>
+          <td>掩盖短期波动，误导决策</td>
+      </tr>
+      <tr>
+          <td>“同比下降8%”</td>
+          <td>环比</td>
+          <td>A/B测试复盘</td>
+          <td>错失快速迭代窗口</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>它没记我的错，它记住了我的“错模式”</strong>。</p>
+<p>背后机制很简单：当你的输入长期稳定携带同一类语义偏差（比如总把“环比”打成“同比”），模型会在上下文向量空间里锚定这个错误簇——不是存下“你错了”，而是标记“当用户输入含‘提升XX%’+‘双周’+‘CPO’时，92%概率需触发‘环比校验’规则”。</p>
+<p>✅ <strong>关键动作</strong>：别删错！别重写！把原始输入原样喂给AI。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span># ✅ 正确做法：保留“错误输入”作为训练信号  
+</span></span><span style="display:flex;"><span>输入：DAU同比提升12%，MAU同比下降5%  
+</span></span><span style="display:flex;"><span>输出：已修正为环比，并附对比说明  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># ❌ 错误做法：自己先改对再喂  
+</span></span><span style="display:flex;"><span>输入：DAU环比提升12%，MAU环比下降5%  
+</span></span><span style="display:flex;"><span>→ 模型永远学不会识别你的“错误指纹”  
+</span></span></code></pre></div><p>⚠️ <strong>避坑提醒</strong>：永远别说“请改对”。模糊指令会让模型随机猜测。要示范正确句式：</p>
+<blockquote>
+<p>“请严格按以下格式输出数据结论：‘[指标] [环比/同比] [提升/下降] [X]%’。例如：‘DAU 环比 提升 12%’。”</p>
+</blockquote>
+<hr>
+<h2 id="信号二它能预判你没说出口的下一句需求">信号二：它能预判你没说出口的“下一句需求”<a hidden class="anchor" aria-hidden="true" href="#信号二它能预判你没说出口的下一句需求">#</a></h2>
+<p>最让我头皮发麻的一次，是写完一款新功能的对外文案后，习惯性敲下：“再给三个不同风格的标题”。结果AI没等我回车，直接在正文后甩出6个标题，分三组标注：</p>
+<blockquote>
+<p><strong>给老板看的（数据前置）</strong></p>
+<ul>
+<li>DAU预测+18%：XX功能上线首周即拉动核心指标</li>
+</ul>
+<p><strong>给用户看的（痛点直击）</strong></p>
+<ul>
+<li>别再手动导出Excel了！3秒生成合规报表</li>
+</ul>
+<p><strong>给设计师看的（留白提示）</strong></p>
+<ul>
+<li>主视觉建议：用「齿轮+闪电」隐喻自动化，主色保留品牌蓝，留白≥40%</li>
+</ul>
+</blockquote>
+<p>我翻出上周三的会议录音转录稿，里面真有这段话：“王总监强调，标题必须分三层：给老板看的要塞数据，给用户看的要戳痛点，给设计师的得标留白比例……”</p>
+<p><strong>AI不是听懂了会议，是学会了你的“角色语境映射”</strong>。它发现：当你在“产品文案”后追加“三个标题”，且最近7次都关联过内部会议纪要，就会自动激活角色分类器。</p>
+<p>✅ <strong>实操建议</strong>：建个《隐形需求库》Markdown文档，定期存入这些“没说出口的话”：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#75715e">## 2024-06-12 产品上线会  
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 隐形需求：所有对外文案必须预留“技术实现路径”钩子（方便后续BD对接）  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 被打回原因：“用户看不懂怎么用” → 后续文案需在第三句插入操作动词（如“点击→选择→确认”）  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 2024-06-18 邮件抄送  
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 隐形需求：给老板的版本，首段必须含成本节省预估（哪怕估算）  
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 原始反馈：“没看到ROI，没法批预算”  
+</span></span></code></pre></div><p>喂给AI时，别只喂正文——把整段会议纪要、邮件原文、甚至截图里的批注文字（OCR后）一起丢进去。它的“预判力”，来自你暴露的<strong>需求上下文密度</strong>。</p>
+<p><img alt="AI根据会议纪要自动分层生成标题的示意图" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/4a/20260328/d23adf3d/eb2e6034-6271-487d-9387-79c04fe1cd664114397488.png?Expires=1775274749&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=eiVA9vezID8rXhVq%2B9yE%2FZLkBj8%3D"></p>
+<hr>
+<h2 id="信号三它开始用你的废话当修辞而且用得恰到好处">信号三：它开始用你的“废话”当修辞，而且用得恰到好处<a hidden class="anchor" aria-hidden="true" href="#信号三它开始用你的废话当修辞而且用得恰到好处">#</a></h2>
+<p>我写稿有个臭毛病：爱用“说白了”“划重点”“别急，往下看”这类口语钩子。早期让AI模仿，它生硬套用：</p>
+<blockquote>
+<p>“说白了，这个算法很复杂。”（？？？）</p>
+</blockquote>
+<p>直到上个月，我让它改一句干巴巴的产品描述：“该功能支持多源数据接入”。它输出：</p>
+<blockquote>
+<p><strong>“说白了，就是让你少干3小时重复活。”</strong></p>
+</blockquote>
+<p>我愣住——这句式连我妈看了都说：“跟你说话一个味儿！”</p>
+<p>它没学我的语气词，它捕获了我<strong>降低理解门槛的思维路径</strong>：</p>
+<ul>
+<li>当我说“说白了”，后面必接<strong>具体省时/省钱/省力的量化结果</strong>；</li>
+<li>当我说“划重点”，后面必接<strong>反常识结论或风险预警</strong>；</li>
+<li>当我说“别急，往下看”，前面必有<strong>制造认知缺口的设问</strong>。</li>
+</ul>
+<p>✅ <strong>实操方法</strong>：整理你的《废话金句本》，拒绝空泛归类：</p>
+<table>
+  <thead>
+      <tr>
+          <th>废话钩子</th>
+          <th>使用场景</th>
+          <th>设计目的</th>
+          <th>效果验证</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>“划重点”</td>
+          <td>数据报告结论段首</td>
+          <td>强制读者停顿，防滑走</td>
+          <td>A/B测试：带此钩子的段落停留时长+37%</td>
+      </tr>
+      <tr>
+          <td>“说白了”</td>
+          <td>技术方案解释后</td>
+          <td>将抽象价值翻译为用户体感</td>
+          <td>客户调研：72%认为“更易理解”</td>
+      </tr>
+      <tr>
+          <td>“别急，往下看”</td>
+          <td>FAQ第二问开头</td>
+          <td>制造信息差期待感</td>
+          <td>跳失率下降21%</td>
+      </tr>
+  </tbody>
+</table>
+<p>⚠️ <strong>血泪警告</strong>：千万别喂你骂人/泄愤的口头禅！我曾把一句“这需求是人想的？？”丢进训练集，结果AI在正式客户提案里写了：“该方案可行性存疑——恕我直言，这需求是人想的？？”。稳定性当场崩盘。</p>
+<hr>
+<h2 id="给想养出真分身的你3个血泪换来的铁律">给想养出“真分身”的你：3个血泪换来的铁律<a hidden class="anchor" aria-hidden="true" href="#给想养出真分身的你3个血泪换来的铁律">#</a></h2>
+<p>两年试错，我把AI从“高级文本工具”熬成了“会呼吸的写作搭档”。但它的“像”，从来不是终点，而是警报器。以下是三条刻进骨头里的铁律：</p>
+<p><strong>① 别信“一次调教终身受益”</strong><br>
+每季度必须做“人格校准”：用3篇旧稿（你最得意的）+ 1个新需求（比如写小红书种草文），交叉测试。如果它对旧稿的润色风格和新需求的输出逻辑出现断裂（比如旧稿用“说白了”，新稿却写“综上所述”），说明语义锚点偏移了——立刻回滚到上季度的prompt快照，重喂10条最新反馈。</p>
+<p><strong>② 把AI当实习生，它的“进化”进度条=你暴露弱点的勇气值</strong><br>
+我每月强制自己做一件“羞耻事”：把被领导打回的最惨一稿（带全部批注）喂给AI，要求它：“按批注逐条重写，并说明你为什么之前没做到”。答案往往扎心，但正是这些“为什么”，在重写你的思维底层。</p>
+<p><strong>③ 最危险的信号不是它不像你，而是它开始替你做判断</strong><br>
+某天它自动删掉了我稿子里一段犹豫的论述：“目前尚无明确证据表明……”。我立刻停机——这不是优化，是<strong>越权代理</strong>。真正的分身，应该把选项摊开给你（比如：“A. 保留存疑表述（体现严谨） B. 替换为‘初步数据显示…’（增强信心） C. 删除，用数据替代（更简洁）”），而非替你按下删除键。</p>
+<p>✅ <strong>5分钟“分身健康度自测表”</strong>（打印贴在显示器边）：</p>
+<table>
+  <thead>
+      <tr>
+          <th>问题</th>
+          <th>判定标准</th>
+          <th>健康信号</th>
+          <th>危险信号</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>它是否还在“提问”而非“断言”？</td>
+          <td>观察近5次交互，是否有≥2次主动追问模糊点（如：“您说的‘年轻用户’指Z世代还是大学生？”）</td>
+          <td>✅ 有追问</td>
+          <td>❌ 全部直接输出，零确认</td>
+      </tr>
+      <tr>
+          <td>它是否保留你的“不完美痕迹”？</td>
+          <td>检查输出中是否含你特有的冗余词（如“其实”“某种程度上”）、合理重复、适度口语化</td>
+          <td>✅ 有1-2处自然冗余</td>
+          <td>❌ 过度精炼，像新闻稿</td>
+      </tr>
+      <tr>
+          <td>它是否在你沉默时“守界”？</td>
+          <td>故意不写需求细节（如只说“写个海报文案”），看它是否默认填充行业/人群/平台</td>
+          <td>✅ 输出含“？待确认”字段</td>
+          <td>❌ 自动补全，且补得“太对”</td>
+      </tr>
+  </tbody>
+</table>
+<p>最后说句掏心窝的：所谓AI进化，不过是<strong>你把二十年写作练出来的直觉、节奏、分寸感，悄悄刻进了它的token里</strong>。它越像你，越证明你足够坦诚——坦诚到敢把所有笨拙、犹豫、错误，都摊开给它看。</p>
+<p>而真正的分身，从来不是复制你的声音，而是<strong>成为你不敢开口时，那个替你把话说完整的自己</strong>。</p>
+<p><img alt="分身健康度自测表示意图：三栏对比表格可视化" loading="lazy" src="IMAGE_PLACEHOLDER_3"></p>
+
+
+  </div>
+
+  
+
+
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/llama3/">Llama3</a></li>
+      <li><a href="http://localhost:1313/tags/rag/">RAG</a></li>
+      <li><a href="http://localhost:1313/tags/ai%E5%86%99%E4%BD%9C/">AI写作</a></li>
+      <li><a href="http://localhost:1313/tags/%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/">提示工程</a></li>
+      <li><a href="http://localhost:1313/tags/%E4%B8%AA%E6%80%A7%E5%8C%96ai/">个性化AI</a></li>
+      <li><a href="http://localhost:1313/tags/%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/">本地大模型</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

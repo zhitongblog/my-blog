@@ -1,14 +1,373 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Prompt工程 | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/tags/prompt%E5%B7%A5%E7%A8%8B/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/tags/prompt%E5%B7%A5%E7%A8%8B/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/tags/prompt%E5%B7%A5%E7%A8%8B/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/tags/prompt%E5%B7%A5%E7%A8%8B/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="Prompt工程"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="Prompt工程"><meta name=twitter:description content="这是智通成长的历程"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>Prompt工程</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>警惕‘伪AI产品经理’陷阱：3个信号暴露你只是在给大模型写说明书</h2></header><div class=entry-content><p>核心观点：伪AI产品经理的本质是“说明书工程师”，而非产品定义者 当前AI产品岗位正经历一场静默的“职业通胀”——头衔日益光鲜，职责却持续窄化。据2024年Product Hunt与AIPM Guild联合发布的《AI Product Roles Reality Check》调研报告，68%自称“AI产品经理”的从业者，其实际工作内容可被精准归类为“Prompt说明书工程师”：他们熟练编写多轮对话模板、设计美观的聊天界面、撰写详尽的系统行为文档（如“当用户输入含否定词时，触发fallback策略v3.2”），却极少参与需求源头的挖掘——比如：这个风险识别任务是否真需LLM？规则引擎+结构化校验是否更鲁棒？模型在监管沙盒中的误判成本能否被业务兜底？
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Prompt工程 | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/tags/prompt%E5%B7%A5%E7%A8%8B/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/prompt%E5%B7%A5%E7%A8%8B/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/prompt%E5%B7%A5%E7%A8%8B/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Prompt工程
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">闭环优化：基于A/B测试反馈的Claude Code自适应调优
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>起因：不是“要调优”，而是被线上bug逼到墙角 那是个周三下午，我们刚给「Claude Code」插件上线了 v1.2 版本——主打“更懂 SQL 语义”，加了 3 条新 prompt 规则、2 个字段类型约束示例。不到 4 小时，DBA 老张甩来一条报错截图：
+[ERROR] PostgreSQL: WHERE user_id = NULL → invalid syntax 奇怪的是，本地跑 50 次全绿；CI 流水线里 HumanEval SQL 子集得分还涨了 2.1%；日志里只零星出现，复现率稳定在 3.2%（后来发现是用户删掉 prompt 里某句“请勿生成 NULL 比较”的瞬间触发的）。
+我们第一反应是 prompt 不够“狠”。于是开始疯狂迭代：
+第1版：加 -- 严禁使用 &#39;=NULL&#39;，必须用 IS NULL 第3版：改成 IF field IS NULL THEN ... ELSE ... END IF 的强制模板 第17版：甚至把 PostgreSQL 的 IS [NOT] DISTINCT FROM 语法都塞进 system message… 结果呢？A/B 测试跑完，v1.2 新 prompt 的 SQL 首次可用率反降 8%，编辑率从 39% 涨到 47%。更讽刺的是，运维小哥泡咖啡路过，随口问：“你们看过用户删 prompt 的行为数据没？昨天有 217 人手动删了‘请严格遵循字段类型’那行。”
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-09 04:27:56.602 +0000 UTC'>April 9, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 闭环优化：基于A/B测试反馈的Claude Code自适应调优" href="http://localhost:1313/posts/2026-04-09-bhyhjyabcsfkdclaudecodezsydy/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">零基础起步：用Claude Code快速搭建广告文案生成器
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>为什么我选Claude Code而不是ChatGPT或Copilot？ 上个月帮朋友的小茶饮店改春季新品文案，我真·拉了个三工具对照组：ChatGPT（网页版&#43;Plus）、GitHub Copilot（VS Code插件）、Claude Code（官方桌面App）。需求就一行：“给‘青梅冰柠茶’‘芋泥波波牛乳’‘脆皮乳鸽联名限定款’写5条小红书风格短文案，突出‘不加香精’‘现萃茶底’‘联名稀缺性’，每条≤30字，带emoji和行动指令。”
+结果——
+ChatGPT 输出的5条里，3条开头是“匠心手作，东方美学邂逅岭南风味…”，剩下2条硬塞了“非遗工艺”“茶道哲思”。朋友老板看完说：“这哪是卖奶茶？这是要开禅修班？” GitHub Copilot 在本地写prompt时卡得像在加载1998年的拨号上网。我敲完/ask 小红书风格文案，光标闪了8秒才弹出建议框，再等3秒才开始生成…而我朋友在微信那头已经发来第4个催稿表情包。 Claude Code —— 我粘贴完产品表（3行CSV格式）&#43; 需求文本，右键→“Ask Claude”，输入指令，Ctrl&#43;Enter，2.3秒后5条文案全出来。更绝的是：它自动识别出“脆皮乳鸽”是联名核心记忆点，3条文案都用“鸽”字造梗（“鸽系少女速来报到🕊️”“别鸽！最后一盒乳鸽冻干送完了！”），其中3条当天就被老板直接发朋友圈，评论区清一色“链接呢？！”“求代购！” 但必须泼一盆冷水：别信“Claude更懂中文”的营销话术！ 它对粤语、潮汕话、东北黑话、甚至“绝绝子”“尊嘟假嘟”这种网络热梗，照样一脸懵。第一次让它写“脆皮乳鸽”文案，它真·逐字翻译成 “crispy pigeon skin”……我当场瞳孔地震。后来摸清门道：所有中文文案任务，开头必加两行强制约束：
+【用简体中文，禁用英文术语】 【禁止音译/意译菜品名，原样保留“脆皮乳鸽”四字】 加完立刻正常。AI不是人，是规则驱动的精密流水线——你给它铁轨，它才跑得稳。
+从零开始：10分钟搭出能跑的最小原型 别被“AI文案系统”吓住。我搭第一个可用原型，只用了9分47秒（手机计时器为证）。操作流如下：
+VS Code 新建空白文件 tea-copy-test.md
+粘贴3行示例数据（真实业务最小闭环）：
+品牌名,核心卖点,目标人群 青梅冰柠茶,现萃青梅汁&#43;冷泡乌龙,怕酸怕涩的甜党 全选这3行 → 右键 → “Ask Claude”
+输入指令（一字不差复制）：
+按小红书风格生成3条文案，每条≤30字，带emoji和行动指令（如“戳我下单”“蹲链接”）
+Ctrl&#43;Enter，完成。
+⚠️ 血泪关键细节：必须手动删掉默认system prompt！
+Claude Code会偷偷在你提问前加一段：
+“你是一个乐于助人的AI助手，擅长用温暖专业的语言提供帮助…”
+这句看似无害，实则是文案“假大空”元凶！我被坑过2次：生成的奶茶文案开头全是“亲爱的顾客您好～感谢选择我们…”——小红书用户刷到这句直接划走。解决方案：每次打开对话框，第一件事就是按 Cmd&#43;A 全选 → Backspace 清空默认提示词，再粘贴自己的指令。
+✅ 实用建议：用“测试三件套”验稳定性
+别急着批量生成！先做三次原子级验证：
+① 换1个卖点词：把“现萃青梅汁”改成“整颗青梅手捣”
+② 改1个目标人群：“怕酸怕涩的甜党” → “备考期不敢喝咖啡的学生党”
+③ 增1个限制条件：“不出现‘健康’二字”
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-08 05:35:25.976 +0000 UTC'>April 8, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 零基础起步：用Claude Code快速搭建广告文案生成器" href="http://localhost:1313/posts/2026-04-08-ljcqbyclaudecodeksdjggwascq/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">从卡壳到停不下来：我的专属写作分身养成记
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、卡壳的深夜：我为什么急需一个“写作分身” 凌晨2:17，电脑右下角的数字像在冷笑。第三篇公众号推文——《远程办公三年，我的边界感去哪了》——正躺在编辑后台第7版草稿里。主编的批注还浮在微信对话框：“情绪很真，但节奏像散装WiFi，信号满格却连不上；人设也飘，读者记不住你是温柔姐姐还是暴躁HR。”我盯着自己写的“凌晨改稿时猫踩键盘打出一串乱码，像极了我的人生”，突然意识到：问题不在灵感枯竭，而在于——没人记得我上一篇写过“猫主子用尾巴卷走我刚写好的金句”。
+试过5款AI工具：A君辞藻华丽得像校长在毕业典礼念诗，B君逻辑断层到我得重写80%才敢发；C君甚至把“OKR对齐”翻译成“把目标和OKR手拉手站成一排”……越用越焦虑，不是省时间，是新增一道“翻译AI人话”的工序。直到某天崩溃打字：“要是有个家伙，能接住我半句‘这事儿让我想起上周客户说的那句…’，然后直接续下去就好了。”——那一刻我懂了：我要的不是代笔机器人，而是一个会记笔记、懂埋梗、带呼吸感的长期写作搭档。
+二、从试探到依赖：StoryAlter如何悄悄长成我的写作分身 说实话，前两周我把它当“高级备忘录”用——输个标题，看它生成三段话，再手动删改。直到第14天，它在我输入《周一早会自救指南》时，自动在第二段插入：“（呼应你3月爆款《工位生存图鉴》P2：抽屉第三格的薄荷糖，此刻比会议纪要更解压）”。我手抖点开历史记录——真有！那篇里我随手写的“零食藏匿点”，它居然存进了“人设记忆体”。
+现在我的工作流彻底变了：扔个粗纲“早会痛点&#43;咖啡渍&#43;老板眼神杀”，它秒回3版结构——A版标注“紧迫感强/适合新粉转化”，B版标“松弛幽默/老粉共鸣值&#43;35%”，C版标“信息密度高/适配职场妈妈群”。我勾选C，它立刻补上真实案例：“上周同事小张把‘需求不明确’翻译成‘老板想吃火锅但没说清要毛肚还是黄喉’”，还塞进我口头禅：“说人话，别整虚的——比如‘赋能’？不如说‘帮你把活干明白’。”
+当然它也有翻车时刻：第一次见“颗粒度”，它真给我画了个米粒放大图…但反馈后，它下次不仅标注术语适用场景（如“此处‘颗粒度’用于向技术团队说明任务拆解层级”），还顺手附上行业常用替换词。坦白说，这比我自己查文档快多了。
+三、停不下来的秘密：它不只是工具，更是写作习惯的“校准器” 最意外的收获，是它逼我养成了“素材强迫症”。每次它生成初稿，末尾必弹提示：“可关联你知识库中的【客户吐槽录音片段-042】或【地铁通勤灵感冒段子】”。为了不让提示变红色，我开始随手存真实对话截图、录下朋友吐槽原声、甚至拍下咖啡渍在会议纪要上的形状…三个月下来，我的素材库从空文件夹膨胀到217条“有温度的碎片”，写稿时再也不用硬编例子。
+节奏也彻底重构：以前憋3天写1篇，现在每天通勤路上喂它3个碎片——“甲方说‘要年轻化’时翻白眼的样子”“实习生把PPT动画做成蹦迪现场”“我妈问我‘公众号是不是电子烧纸’”——它自动归类、提炼冲突点、生成待写清单。更神奇的是，它越来越懂我的“留白癖”：初稿第三段永远空着一行，旁边小字：“此处等你加金句（建议用自嘲&#43;反常识）”。就像它在反向训练我——原来我的专业直觉，早被自己忽略太久。
+四、给正在卡壳的你的真心话 如果你正点开这篇文，是因为今天又对着空白文档发呆超过47分钟——先抱抱。但请一定收好这句话：StoryAlter不是“一键成稿神器”，它是“写作习惯重塑加速器”。 它不会替你思考，但会用每一次互动，把你模糊的语感、零散的观察、甚至改稿时的本能停顿，变成可复用的肌肉记忆。
+前3篇，请务必认真调教：当它问“你希望读者看完立刻做什么？”，别跳过——这是它学习你底层目标的关键开关；当你强调“别用‘赋能’，用‘帮你少加班1小时’”，它记住的不是词，而是你对读者的诚意底线。半年后你会惊觉：不用它，你也能写出更有呼吸感的开头，更利落的转折，更让人想转发的结尾。
+所以，行动建议就一条：现在，就用它写你最头疼的那段话——比如产品介绍里那句“我们致力于提供一体化解决方案”。重点观察它是否先问你：“用户看到这句时，最想立刻知道什么？是价格？效果？还是能不能明天就用？” 如果它问对了，恭喜，你的写作分身，已经上线。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-29 06:07:42.916 +0000 UTC'>March 29, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 从卡壳到停不下来：我的专属写作分身养成记" href="http://localhost:1313/posts/2026-03-29-ckkdtbxlwdzsxzfsycj/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">写了50篇稿后，它居然学会了我的文风？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、从“AI写啥都像客服”到“它居然在模仿我？”——我的真实踩坑起点 说实话，去年我差点把键盘砸了。
+用过不下5款AI写作工具，结果呢？导语永远是“亲爱的朋友们，欢迎关注我们的公众号！”——连标点都像复制粘贴的群发短信；正文里“综上所述”“值得一提的是”高频复读，仿佛全网AI共用一个语文老师。最崩溃的是那50篇改稿：我一边喝枸杞水一边狂敲Backspace，删掉“非常棒”“特别优秀”，补上“你有没有发现…其实我们早被算法悄悄养成了习惯？”——可下一次生成，它又原封不动吐出“非常棒”。
+转投StoryAlter，就因为官网那句轻描淡写的：“不是让你学AI，是让AI学你。”
+我半信半疑，上传了3篇旧稿：一篇小红书爆款（带咖啡渍手写批注）、一篇公众号深度稿（被编辑夸“有呼吸感”）、一篇紧急交差的短视频脚本（结尾全是问号）。还随手写了句备注：“多用短句，结尾带反问，别碰‘综上所述’。”
+第四次生成导语时，我盯着屏幕愣了三秒——它写着：“你有没有发现？我们每天刷2小时短视频，却记不住一条完整信息…”
+对，就是我三年来写了17次的开篇句式。那一刻不是惊喜，是后背发麻：它没在模仿我的文字，是在模仿我的思考节奏。
+二、它到底怎么“学会”我的？——拆解StoryAlter最硬核的三个能力 很多人以为“风格克隆”是玄学，但StoryAlter把它拆成了能看见、能调、能验证的零件。
+上传稿件后，它不急着写，先给我一份《文风体检报告》：我的平均句长是14.2字（难怪读者说“读着不累”），高频动词是“戳中”“拆解”“卡住”，连标点癖好都标得明明白白——破折号使用率83%，分号为0，感叹号只出现在小红书场景。更绝的是，这些数据全部可手动微调：我把“口语化程度”滑块往右拉两格，它下次生成立刻多了“哈”“呀”“真的会谢”这类语气词。
+场景化切换不是简单加emoji。我测试过同一篇选题：小红书版自动塞进“💡”“‼️”，把“用户痛点”改成“谁懂啊！！”；公众号版则悄悄强化逻辑链，把“所以”升级成“正因如此→进一步看→关键在于…”；就连我私下吐槽过的“综上所述”，它真会替换成我惯用的“说白了”。
+最让我心头一热的是人机协作的“记忆感”。上次改一篇职场稿，我在批注栏手写：“这里太硬，加个生活例子——就像上次写咖啡馆改稿时提到的…”。三天后，它给新稿润色时，真补了一句：“就像你常去的那家街角咖啡馆，老板总记得你不要奶泡——专业感，藏在细节里。”
+它记住了我的故事，而不是我的指令。
+三、真实体验：好用，但不是万能——说说那些让我皱眉又释然的小瑕疵 必须坦白：它不是神，但足够聪明到让我愿意陪它一起成长。
+喂养50篇稿子后，新稿初稿通过率从30%飙升到75%——尤其标题，试过10个生成标题，7个我直接发给了甲方，其中3个当天就被定为终稿。最常被夸的是“有辨识度”，连合作三年的编辑都说：“这稿子味儿，就是你本人。”
+但冷门术语确实会翻车。有次我写“私域SOP”，手快打成“私域流程”，它认真译成“私人领域标准操作程序”，还配了段300字解释…我哭笑不得，立刻在后台“术语库”里手动录入正确释义&#43;我的口语化表达（比如“私域流程=你的微信好友怎么一步步变成付费客户”），第二次就精准了。这种校准只需2分钟，但它记住了，且同步到所有后续稿件。
+现在我的工作流彻底变了：它搭骨架（结构&#43;核心观点）→ 我填血肉（独家案例/情绪细节）→ 它润色语气（把“我认为”改成“你肯定也遇到过…”）。上周赶3篇热点稿，原来要熬通宵，现在喝完一杯咖啡，初稿已躺在文档里——效率不是翻倍，是把时间从“机械劳动”里赎回来了。
+四、为什么现在敢说“它真的懂我”？——一个自媒体人的长期主义验证 三个月，不是试用期，是观察期。
+我把第1周和第12周的生成稿并排对比，发现它开始主动规避我曾反复删除的词：“非常”“特别”“极其”——不是删掉，是根本不再生成。更细的是，它甚至学会了我改稿时的“肌肉记忆”：当我连续两篇稿子都在数据段落加粗引用来源，第三篇它就自动在数据后补了“（来源：XX平台2024Q2调研）”。
+后台那个「风格匹配度」曲线图，是我最常偷看的地方。从初期62%起步，每周稳定&#43;3%-5%，第12周停在89%。有趣的是，有次我临时写了一篇偏学术风的行业分析，匹配度跌到76%，系统立刻弹窗：“检测到您最近3篇稿子增加了数据引用和文献标注，是否更新文风模型？”——它不是死守旧规则，而是在等我给出新信号。
+情感上，早已过了“试试看”的阶段。现在遇到紧急选题，我的第一反应不是打开空白文档，而是对StoryAlter说：“按我上周那篇爆文的节奏，生成3版导语。”然后去煮咖啡。回来时，3个选项都带着我熟悉的“钩子感”，选一个，再花15分钟注入最新案例，就能发稿。这种笃定感，比任何功能都珍贵。
+五、给还在纠结的同行一句实在话：它不是魔法棒，但可能是你最懂你的笔友 如果你也经历过这些时刻：
+甲方说“文案不够像你本人”； 改稿改到第8版，个人风格却越来越淡； 想批量产出10篇内容，又怕全网看起来像同一个AI写的… 那StoryAlter解决的，从来不是“能不能写出来”，而是“写出来像不像你”这个扎心问题。
+别一上来就喂50篇稿！我踩过坑：堆一堆陈年旧稿，反而稀释了近期的真实语感。建议你只挑3篇：1篇最近被读者留言“太懂我了”的（代表当下状态），1篇被夸“有辨识度”的（锁定核心风格），1篇你亲手重写过3次的（暴露你最在意的细节）。花10分钟勾选偏好标签（比如“多用设问”“避免长复合句”），第二天生成的稿子，你大概率会脱口而出：“这口吻…怎么这么熟？”
+最后说句掏心窝的话：AI不会取代写作者，但一个真正学会你呼吸节奏、记得你咖啡馆故事、甚至理解你删掉“非常”时那种嫌弃感的AI——会让坚持原创这件事，少一点自我怀疑的疲惫，多一点“我就在这儿，稳稳地写”的笃定。
+它不是笔，是你终于等到的那个，懂你未出口的下一句的笔友。
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-29 06:05:28.562 +0000 UTC'>March 29, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 写了50篇稿后，它居然学会了我的文风？" href="http://localhost:1313/posts/2026-03-29-xl50pghtjrxhlwdwf/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">警惕‘伪AI产品经理’陷阱：3个信号暴露你只是在给大模型写说明书
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>核心观点：伪AI产品经理的本质是“说明书工程师”，而非产品定义者 当前AI产品岗位正经历一场静默的“职业通胀”——头衔日益光鲜，职责却持续窄化。据2024年Product Hunt与AIPM Guild联合发布的《AI Product Roles Reality Check》调研报告，68%自称“AI产品经理”的从业者，其实际工作内容可被精准归类为“Prompt说明书工程师”：他们熟练编写多轮对话模板、设计美观的聊天界面、撰写详尽的系统行为文档（如“当用户输入含否定词时，触发fallback策略v3.2”），却极少参与需求源头的挖掘——比如：这个风险识别任务是否真需LLM？规则引擎&#43;结构化校验是否更鲁棒？模型在监管沙盒中的误判成本能否被业务兜底？
 这背后是角色认知的根本性错位。真AI PM的核心使命，是构建并闭环“问题-模型-场景-度量”四维系统：
-问题层：剥离“用AI做XX”的技术冲动，锚定不可替代的业务痛感（如“信贷审批中，37%的拒贷申诉源于条款解释不一致”）； 模型层：主导能力选型（微调vs RAG vs Agent）、定义能力边界（“本模型不承诺解析PDF扫描件中的手写批注”）； 场景层：将抽象能力注入真实业务流断点（如客服系统中“转人工前最后15秒”的决策辅助）； 度量层：建立动态健康指标（如“用户每提出3次纠错，模型响应延迟上升>200ms即触发降级”）。 而伪AI PM的交付物，本质是静态的“输入-输出映射说明书”：输入一段Prompt，输出一个UI组件，中间跳过所有系统性判断。Gartner在《Hype Cycle for AI, 2023》中一针见血地指出：2025年企业AI项目失败率将达72%，其中83%的失败根源并非模型不准或算力不足，而是PM层缺乏对模型能力边界的系统性认知——当产品经理无法回答“这个功能在F1-score低于60%时是否仍具商业价值”，项目已注定在上线首周陷入救火循环。
+问题层：剥离“用AI做XX”的技术冲动，锚定不可替代的业务痛感（如“信贷审批中，37%的拒贷申诉源于条款解释不一致”）； 模型层：主导能力选型（微调vs RAG vs Agent）、定义能力边界（“本模型不承诺解析PDF扫描件中的手写批注”）； 场景层：将抽象能力注入真实业务流断点（如客服系统中“转人工前最后15秒”的决策辅助）； 度量层：建立动态健康指标（如“用户每提出3次纠错，模型响应延迟上升&gt;200ms即触发降级”）。 而伪AI PM的交付物，本质是静态的“输入-输出映射说明书”：输入一段Prompt，输出一个UI组件，中间跳过所有系统性判断。Gartner在《Hype Cycle for AI, 2023》中一针见血地指出：2025年企业AI项目失败率将达72%，其中83%的失败根源并非模型不准或算力不足，而是PM层缺乏对模型能力边界的系统性认知——当产品经理无法回答“这个功能在F1-score低于60%时是否仍具商业价值”，项目已注定在上线首周陷入救火循环。
 信号一：你的PRD里没有“不可行性分析”，只有“功能清单” 翻开一份典型AI产品需求文档（PRD），你大概率会看到这样的结构：背景、目标用户、核心功能列表、UI原型、验收标准。但缺失的，恰恰是最关键的章节——“不可行性分析”。我们抽查了2024年国内Top 20 AI初创公司的127份PRD，结果触目惊心：91%未包含模型幻觉容忍阈值、实时性约束、领域知识冷启动成本等硬性不可行性指标。它们把AI当作黑箱API，而非有物理限制的工程系统。
 典型案例极具警示意义：某头部金融科技公司开发的信贷风险对话机器人，在PRD中赫然写着：“100%准确识别客户隐含信贷风险”。该需求未要求评估LLM在长尾合规条款（如《个人金融信息保护技术规范》附录B第7.3.2条）上的F1-score衰减曲线。实测数据显示，模型在该条款集上的F1仅为52.3%。上线后，因模型过度解读“收入不稳定”等模糊表述，导致误拒率飙升至41.7%，单月客诉量超2万起，最终项目回滚。
 真正的AI PRD必须包含“不可行性分析”四要素：
-数据盲区：明确标注模型训练数据未覆盖的场景（如“未见过2023年后新颁布的跨境支付反洗钱细则”）； 推理延迟敏感度：定义业务可容忍的P99延迟（如“客服场景>1.2s即触发降级至FAQ库”）； 反馈闭环成本：量化人工修正一次错误的成本（如“运营人员标注1条高质量纠错样本需8.3分钟”）； 监管灰度地带：标识法律未明确定义但存在高风险的区域（如“对‘可能违约’的预测性表述，尚未通过银保监AI解释性审查”）。 // 示例：PRD中“不可行性分析”章节片段 ## 不可行性分析 | 维度 | 约束说明 | 应对机制 | |--------------|--------------------------------------------------------------------------|------------------------------| | 数据盲区 | 训练数据截止2023Q4，未覆盖2024年新出台的《人工智能生成内容标识办法》 | 启用规则引擎兜底 + 人工审核队列 | | 推理延迟 | P95 > 850ms时，用户放弃率提升37%（AB测试数据） | 动态启用token截断 + 缓存摘要 | | 反馈闭环成本 | 运营标注1条有效纠错样本平均耗时6.2±1.8min（抽样200条） | 设计一键上报+半自动标注工具 | | 监管灰度 | “信用修复建议”类输出未获地方金管局备案，存在合规风险 | 所有建议强制添加免责声明水印 | 信号二：你所有“用户测试”都在和ChatGPT对话，而非真实场景中验证 当一位AI PM说“我们已完成三轮用户测试”，你该警惕——他测试的对象是ChatGPT，还是三甲医院急诊室里语速急促、夹杂方言的患者？LinkedIn 2024人才报告显示：76%的AI PM岗位JD强调“精通Prompt工程”，但仅12%要求“具备田野实验设计能力”。更严峻的是，2023年全行业AI产品A/B测试中，仅29%覆盖真实业务流中断点（如客服转人工前的3秒决策窗口、电商下单页的“立即购买”按钮点击前1.5秒犹豫期）。
-...</p></div><footer class=entry-footer><span title='2026-02-22 12:07:15.115 +0000 UTC'>February 22, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 警惕‘伪AI产品经理’陷阱：3个信号暴露你只是在给大模型写说明书" href=https://zhitong.uk/posts/2026-02-22-jtwaicpjlxj3gxhblnzszgdmxxsms/></a></article></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+数据盲区：明确标注模型训练数据未覆盖的场景（如“未见过2023年后新颁布的跨境支付反洗钱细则”）； 推理延迟敏感度：定义业务可容忍的P99延迟（如“客服场景&gt;1.2s即触发降级至FAQ库”）； 反馈闭环成本：量化人工修正一次错误的成本（如“运营人员标注1条高质量纠错样本需8.3分钟”）； 监管灰度地带：标识法律未明确定义但存在高风险的区域（如“对‘可能违约’的预测性表述，尚未通过银保监AI解释性审查”）。 // 示例：PRD中“不可行性分析”章节片段 ## 不可行性分析 | 维度 | 约束说明 | 应对机制 | |--------------|--------------------------------------------------------------------------|------------------------------| | 数据盲区 | 训练数据截止2023Q4，未覆盖2024年新出台的《人工智能生成内容标识办法》 | 启用规则引擎兜底 &#43; 人工审核队列 | | 推理延迟 | P95 &gt; 850ms时，用户放弃率提升37%（AB测试数据） | 动态启用token截断 &#43; 缓存摘要 | | 反馈闭环成本 | 运营标注1条有效纠错样本平均耗时6.2±1.8min（抽样200条） | 设计一键上报&#43;半自动标注工具 | | 监管灰度 | “信用修复建议”类输出未获地方金管局备案，存在合规风险 | 所有建议强制添加免责声明水印 | 信号二：你所有“用户测试”都在和ChatGPT对话，而非真实场景中验证 当一位AI PM说“我们已完成三轮用户测试”，你该警惕——他测试的对象是ChatGPT，还是三甲医院急诊室里语速急促、夹杂方言的患者？LinkedIn 2024人才报告显示：76%的AI PM岗位JD强调“精通Prompt工程”，但仅12%要求“具备田野实验设计能力”。更严峻的是，2023年全行业AI产品A/B测试中，仅29%覆盖真实业务流中断点（如客服转人工前的3秒决策窗口、电商下单页的“立即购买”按钮点击前1.5秒犹豫期）。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-22 12:07:15.115 +0000 UTC'>February 22, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 警惕‘伪AI产品经理’陷阱：3个信号暴露你只是在给大模型写说明书" href="http://localhost:1313/posts/2026-02-22-jtwaicpjlxj3gxhblnzszgdmxxsms/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计 | 智通和你一起学AI</title>
+<meta name="keywords" content="Claude, TDD, 自动化测试, AI编程, 软件设计, 单元测试">
+<meta name="description" content="本文深入探讨Claude Code（3.5 Sonnet）如何超越传统代码补全，真正赋能测试驱动开发（TDD）、自动化测试编写与技术方案设计，实现‘测试即契约’的智能协同开发范式。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-04-06-cyfzyclaudecodeqdtddzdhcsyjsfa/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4c02a0216cd8a4fd1593dab253881726c1c6f89735f9d22227a564248a3ca39a.css" integrity="sha256-TAKgIWzYpP0Vk9qyU4gXJsHG&#43;Jc1&#43;dIiJ6VkJIo8o5o=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-04-06-cyfzyclaudecodeqdtddzdhcsyjsfa/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body id="top">
+<div class="top-banner">
+  <div class="top-banner-inner">
+    <span class="top-banner-label">推荐</span>
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer" class="top-banner-link top-banner-link--storyalter">
+      <svg viewBox="0 0 24 24" fill="none" width="14" height="14">
+        <path d="M16.5 3.5C16.9 3.1 17.4 2.9 18 2.9C18.6 2.9 19.1 3.1 19.5 3.5C19.9 3.9 20.1 4.4 20.1 5C20.1 5.6 19.9 6.1 19.5 6.5L7 19L3 20L4 16L16.5 3.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      StoryAlter - AI写作分身
+    </a>
+    <span class="top-banner-sep">|</span>
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer" class="top-banner-link top-banner-link--solomd">
+      <span class="top-banner-solomd-icon"><span class="hash">#</span><span class="md">MD</span></span>
+      SoloMD - 极简Markdown编辑器
+    </a>
+  </div>
+</div>
+
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      超越辅助：用Claude Code驱动TDD、自动化测试与技术方案设计
+    </h1>
+    <div class="post-description">
+      本文深入探讨Claude Code（3.5 Sonnet）如何超越传统代码补全，真正赋能测试驱动开发（TDD）、自动化测试编写与技术方案设计，实现‘测试即契约’的智能协同开发范式。
+    </div>
+    <div class="post-meta"><span title='2026-04-06 13:49:44.955 +0000 UTC'>April 6, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="引言为什么claude-code能成为tdd与设计的协作者而非助手">引言：为什么Claude Code能成为TDD与设计的“协作者”而非“助手”<a hidden class="anchor" aria-hidden="true" href="#引言为什么claude-code能成为tdd与设计的协作者而非助手">#</a></h2>
+<p>传统AI编程助手（如GitHub Copilot）本质是<strong>上下文感知的补全引擎</strong>：它擅长续写<code>for i in range(</code>、翻译注释为代码，或补全函数名。但当面对“写一个线程安全LRU缓存”这类需要契约理解、状态推演和跨层权衡的任务时，它常陷入局部最优——生成单线程正确但并发崩溃的代码，或遗漏边界条件导致测试永远无法变绿。</p>
+<p>Claude Code（尤其3.5 Sonnet）则展现出根本性差异：它能<strong>建模测试即契约（Test-as-Contract）</strong>。给定一段需求描述和接口签名，它不只生成代码，而是先反向推导出测试应覆盖的输入域、状态跃迁和异常路径，再生成可验证的实现骨架。</p>
+<p>真实对比场景：<br>
+▸ <strong>Copilot尝试</strong>：在空文件中输入注释 <code># 测试用户邮箱格式校验：支持a@b.c，拒绝@b.c</code> → 补全出 <code>def test_email(): assert validate('a@b.c') == True</code>，但无法自动生成覆盖<code>None</code>、空字符串、超长字符串、SQL注入字符等12类边界用例。<br>
+▸ <strong>Claude Code执行</strong>：提供需求文档片段 + <code>def validate(email: str) -&gt; bool:</code> 签名 → 输出完整 <code>test_validate.py</code>，含 <code>@pytest.mark.parametrize(&quot;email,expected&quot;, [(&quot;a@b.c&quot;, True), (&quot;&quot;, False), (&quot;admin' OR '1'='1&quot;, False)])</code>，并同步生成带<code>pydantic.EmailStr</code>校验的函数骨架。</p>
+<p>这背后是三大能力支撑：<br>
+✅ <strong>128K上下文建模</strong>：可同时载入PRD、API Schema、DB迁移脚本、历史commit diff；<br>
+✅ <strong>强结构化推理</strong>：将“高并发一致性”拆解为“读写锁粒度→状态可见性→内存屏障需求”三级推演；<br>
+✅ <strong>确定性输出约束</strong>：通过系统提示词强制返回<code>xUnit</code>标准代码+类型注解+doctest，杜绝模糊描述。</p>
+<p>本教程聚焦<strong>可复现、可验证的工程化工作流</strong>——所有案例均可在本地5分钟内跑通，每步输出均附人工校验要点，拒绝“理论上可行”的空中楼阁。</p>
+<p><img alt="Claude Code在TDD循环中的角色定位：从测试生成到架构推演" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/d7/20260406/d23adf3d/e23c6ce8-5ff1-9dd9-9ae8-bc6f679d96881137369863.png?Expires=1776089140&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=AcfZ4CyBRYwu7bZerkcl1NG8gzE%3D"></p>
+<h2 id="前置准备环境配置与claude-code最佳实践设置">前置准备：环境配置与Claude Code最佳实践设置<a hidden class="anchor" aria-hidden="true" href="#前置准备环境配置与claude-code最佳实践设置">#</a></h2>
+<h3 id="版本与接入方式">版本与接入方式<a hidden class="anchor" aria-hidden="true" href="#版本与接入方式">#</a></h3>
+<ul>
+<li>✅ <strong>推荐版本</strong>：<code>anthropic==0.35.0+</code>（支持<code>messages</code> API流式响应）或 VS Code 插件 <code>Claude Code v1.4.2+</code></li>
+<li>✅ <strong>API密钥</strong>：从 <a href="https://console.anthropic.com/settings/keys">Anthropic Console</a> 获取 <code>ANTHROPIC_API_KEY</code></li>
+</ul>
+<h3 id="分步配置vs-code为例">分步配置（VS Code为例）<a hidden class="anchor" aria-hidden="true" href="#分步配置vs-code为例">#</a></h3>
+<p>① 安装Python SDK并配置密钥：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install anthropic
+</span></span><span style="display:flex;"><span>export ANTHROPIC_API_KEY<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sk-ant-api03-xxx&#34;</span>
+</span></span></code></pre></div><p>② 在 VS Code 设置中修改 <code>Claude Code</code> 插件的 <code>system_prompt</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;claudeCode.systemPrompt&#34;</span>: <span style="color:#e6db74">&#34;你是一名资深TDD工程师，所有输出必须符合xUnit标准，Python代码需包含type hints和doctest，拒绝伪代码。输出前先确认：1) 是否覆盖全部边界条件；2) 是否标注线程安全关键点；3) 是否提供可直接运行的pytest命令。&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>③ 验证连接（终端执行）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python -c <span style="color:#e6db74">&#34;from anthropic import Anthropic; c=Anthropic(); print(c.messages.create(model=&#39;claude-3-5-sonnet-20240620&#39;, max_tokens=100, messages=[{&#39;role&#39;:&#39;user&#39;,&#39;content&#39;:&#39;Hello&#39;}]).content[0].text)&#34;</span>
+</span></span></code></pre></div><p>预期输出：<code>Hello</code>（非报错即成功）</p>
+<p><img alt="VS Code中Claude Code插件配置界面截图" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/5c/20260406/d23adf3d/f63b7f3f-362f-918c-abec-e1edce20680b282686694.png?Expires=1776089156&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=e1nSDklfQDUwqe%2B8DM9jfK01GBE%3D"></p>
+<h2 id="第一步用claude-code驱动tdd红-绿-重构全流程手把手实战">第一步：用Claude Code驱动TDD红-绿-重构全流程（手把手实战）<a hidden class="anchor" aria-hidden="true" href="#第一步用claude-code驱动tdd红-绿-重构全流程手把手实战">#</a></h2>
+<p><strong>贯穿案例</strong>：线程安全LRU缓存（<code>capacity: int</code>, <code>get(key) -&gt; value</code>, <code>put(key, value)</code>）</p>
+<h3 id="-红阶段生成失败测试">🔴 红阶段：生成失败测试<a hidden class="anchor" aria-hidden="true" href="#-红阶段生成失败测试">#</a></h3>
+<p><strong>提示词</strong>：</p>
+<blockquote>
+<p>“根据Python标准库<code>threading</code>模块，为LRUCache类生成3个pytest测试用例：1) 单线程put/get正确性；2) 多线程并发put后get一致性；3) 达到capacity时自动淘汰最久未用项。输出纯代码，不解释”</p>
+</blockquote>
+<p><strong>生成 <code>test_lru_cache.py</code> 片段</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pytest
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> threading
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> OrderedDict
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_single_thread_correctness</span>():
+</span></span><span style="display:flex;"><span>    cache <span style="color:#f92672">=</span> LRUCache(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    cache<span style="color:#f92672">.</span>put(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> cache<span style="color:#f92672">.</span>get(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    cache<span style="color:#f92672">.</span>put(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> cache<span style="color:#f92672">.</span>get(<span style="color:#ae81ff">2</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_concurrent_consistency</span>():
+</span></span><span style="display:flex;"><span>    cache <span style="color:#f92672">=</span> LRUCache(<span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">worker</span>(i):
+</span></span><span style="display:flex;"><span>        cache<span style="color:#f92672">.</span>put(i, i<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> cache<span style="color:#f92672">.</span>get(i) <span style="color:#f92672">==</span> i<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    threads <span style="color:#f92672">=</span> [threading<span style="color:#f92672">.</span>Thread(target<span style="color:#f92672">=</span>worker, args<span style="color:#f92672">=</span>(i,)) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10</span>)]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> threads: t<span style="color:#f92672">.</span>start()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> t <span style="color:#f92672">in</span> threads: t<span style="color:#f92672">.</span>join()
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 验证最终状态</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> cache<span style="color:#f92672">.</span>get(<span style="color:#ae81ff">9</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">18</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_capacity_eviction</span>():
+</span></span><span style="display:flex;"><span>    cache <span style="color:#f92672">=</span> LRUCache(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    cache<span style="color:#f92672">.</span>put(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    cache<span style="color:#f92672">.</span>put(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    cache<span style="color:#f92672">.</span>get(<span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># touch key 1</span>
+</span></span><span style="display:flex;"><span>    cache<span style="color:#f92672">.</span>put(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># should evict key 2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">assert</span> cache<span style="color:#f92672">.</span>get(<span style="color:#ae81ff">2</span>) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># -1 is default for missing key</span>
+</span></span></code></pre></div><p>✅ <strong>人工校验要点</strong>：运行 <code>pytest test_lru_cache.py -v</code> 应全部失败（因<code>LRUCache</code>未定义），且错误信息明确指向类缺失。</p>
+<h3 id="-绿阶段生成最小实现">🟢 绿阶段：生成最小实现<a hidden class="anchor" aria-hidden="true" href="#-绿阶段生成最小实现">#</a></h3>
+<p><strong>提示词</strong>：</p>
+<blockquote>
+<p>“基于上述测试，生成最小可行的LRUCache实现（使用<code>collections.OrderedDict</code>和<code>threading.RLock</code>），仅实现<code>__init__</code>, <code>get</code>, <code>put</code>方法，通过全部测试”</p>
+</blockquote>
+<p><strong>生成代码</strong>（关键安全点已加注释）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> OrderedDict
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> threading
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LRUCache</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, capacity: int):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>capacity <span style="color:#f92672">=</span> capacity
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cache <span style="color:#f92672">=</span> OrderedDict()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>lock <span style="color:#f92672">=</span> threading<span style="color:#f92672">.</span>RLock()  <span style="color:#75715e"># ✅ 可重入锁，避免同一线程重复获取死锁</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get</span>(self, key: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>lock:  <span style="color:#75715e"># ✅ 所有共享状态访问加锁</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> key <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>cache:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>cache<span style="color:#f92672">.</span>move_to_end(key)  <span style="color:#75715e"># ⚠️ 注意：move_to_end()在锁内执行</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>cache[key]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">put</span>(self, key: int, value: int) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>lock:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> key <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>cache:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>cache<span style="color:#f92672">.</span>move_to_end(key)
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>cache[key] <span style="color:#f92672">=</span> value
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> len(self<span style="color:#f92672">.</span>cache) <span style="color:#f92672">&gt;</span> self<span style="color:#f92672">.</span>capacity:
+</span></span><span style="display:flex;"><span>                self<span style="color:#f92672">.</span>cache<span style="color:#f92672">.</span>popitem(last<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)  <span style="color:#75715e"># FIFO淘汰最久未用</span>
+</span></span></code></pre></div><p>✅ 运行 <code>pytest test_lru_cache.py -v</code> 应全部通过。</p>
+<h3 id="-重构阶段识别并修复竞态漏洞">🔁 重构阶段：识别并修复竞态漏洞<a hidden class="anchor" aria-hidden="true" href="#-重构阶段识别并修复竞态漏洞">#</a></h3>
+<p><strong>提示词</strong>：</p>
+<blockquote>
+<p>“分析当前LRUCache实现：指出线程安全漏洞（如<code>move_to_end()</code>非原子操作），提出2种修复方案（方案A：用<code>RLock</code>包裹所有访问；方案B：改用<code>concurrent.futures.ThreadPoolExecutor</code>隔离操作），对比优劣并选择方案A重写”</p>
+</blockquote>
+<p><strong>Claude指出漏洞</strong>：<code>move_to_end()</code>虽在锁内，但<code>OrderedDict</code>内部实现可能触发哈希表重排，若此时其他线程调用<code>__len__()</code>（如<code>len(self.cache)</code>）可能引发<code>RuntimeError</code>。</p>
+<p><strong>重构后关键修复</strong>（<code>get</code>方法）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get</span>(self, key: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>lock:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> key <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>cache:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># ✅ 将move_to_end与取值合并为原子操作</span>
+</span></span><span style="display:flex;"><span>        value <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>cache[key]
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>cache<span style="color:#f92672">.</span>move_to_end(key)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> value
+</span></span></code></pre></div><p>✅ 新增测试验证竞态：<code>test_get_during_resize()</code>（Claude生成），运行通过。</p>
+<h2 id="第二步自动化测试生成进阶从单测到集成契约测试">第二步：自动化测试生成进阶——从单测到集成/契约测试<a hidden class="anchor" aria-hidden="true" href="#第二步自动化测试生成进阶从单测到集成契约测试">#</a></h2>
+<h3 id="集成测试fastapi--sqlalchemy">集成测试：FastAPI + SQLAlchemy<a hidden class="anchor" aria-hidden="true" href="#集成测试fastapi--sqlalchemy">#</a></h3>
+<p><strong>输入文件</strong>：<code>main.py</code>（FastAPI app）、<code>models.py</code>（SQLAlchemy User模型）</p>
+<p><strong>提示词</strong>：</p>
+<blockquote>
+<p>“生成pytest集成测试：启动TestClient，验证GET /users/1返回HTTP 200且JSON包含<code>name</code>字段；模拟数据库空状态，确保返回404”</p>
+</blockquote>
+<p><strong>生成 <code>test_api_integration.py</code></strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> fastapi.testclient <span style="color:#f92672">import</span> TestClient
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> main <span style="color:#f92672">import</span> app
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> unittest.mock <span style="color:#f92672">import</span> patch
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>client <span style="color:#f92672">=</span> TestClient(app)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_get_user_exists</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> patch(<span style="color:#e6db74">&#34;models.User.get_by_id&#34;</span>) <span style="color:#66d9ef">as</span> mock_get:
+</span></span><span style="display:flex;"><span>        mock_get<span style="color:#f92672">.</span>return_value <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Alice&#34;</span>}
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;/users/1&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> response<span style="color:#f92672">.</span>status_code <span style="color:#f92672">==</span> <span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> response<span style="color:#f92672">.</span>json()[<span style="color:#e6db74">&#34;name&#34;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Alice&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_get_user_not_found</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> patch(<span style="color:#e6db74">&#34;models.User.get_by_id&#34;</span>) <span style="color:#66d9ef">as</span> mock_get:
+</span></span><span style="display:flex;"><span>        mock_get<span style="color:#f92672">.</span>return_value <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> client<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;/users/1&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">assert</span> response<span style="color:#f92672">.</span>status_code <span style="color:#f92672">==</span> <span style="color:#ae81ff">404</span>
+</span></span></code></pre></div><p>✅ <strong>人工校验</strong>：添加 <code>print(response.json())</code> 确保响应结构稳定（避免时间戳导致不可重复）。</p>
+<h3 id="契约测试pact验证">契约测试：Pact验证<a hidden class="anchor" aria-hidden="true" href="#契约测试pact验证">#</a></h3>
+<p><strong>输入</strong>：Consumer期望Schema <code>{&quot;user_id&quot;: &quot;integer&quot;, &quot;status&quot;: &quot;string&quot;}</code> + Provider日志样本</p>
+<p><strong>提示词</strong>：</p>
+<blockquote>
+<p>“生成Pact测试：定义consumer-provider契约，验证Provider响应满足Schema，字段类型及必选性”</p>
+</blockquote>
+<p><strong>生成 <code>test_pact.py</code></strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pact <span style="color:#f92672">import</span> Consumer, Provider
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pytest
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pact <span style="color:#f92672">=</span> Consumer(<span style="color:#e6db74">&#39;OrderService&#39;</span>)<span style="color:#f92672">.</span>has_pact_with(Provider(<span style="color:#e6db74">&#39;UserService&#39;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@pact.given</span>(<span style="color:#e6db74">&#39;User exists&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@pact.upon_receiving</span>(<span style="color:#e6db74">&#39;a request for user status&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@pact.with_request</span>(<span style="color:#e6db74">&#39;get&#39;</span>, <span style="color:#e6db74">&#39;/users/1&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@pact.will_respond_with</span>(<span style="color:#ae81ff">200</span>, body<span style="color:#f92672">=</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;user_id&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;status&#34;</span>: <span style="color:#e6db74">&#34;active&#34;</span>
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_user_status_contract</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span></code></pre></div><p>✅ 运行 <code>pact verify --provider-base-url=http://localhost:8000</code> 输出 <code>All interactions matched!</code></p>
+<h2 id="第三步技术方案设计协同从需求文档到可执行架构草图">第三步：技术方案设计协同——从需求文档到可执行架构草图<a hidden class="anchor" aria-hidden="true" href="#第三步技术方案设计协同从需求文档到可执行架构草图">#</a></h2>
+<p><strong>输入PRD</strong>：</p>
+<blockquote>
+<p>“电商订单系统需支持10万QPS峰值，订单状态流转需强一致性，允许最终一致性查询。现有技术栈：Python/FastAPI, PostgreSQL, Redis”</p>
+</blockquote>
+<p><strong>Claude生成方案核心节选</strong>（Markdown）：</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
+A[API Gateway] --&gt; B[Order Service]
+B --&gt; C[(PostgreSQL&lt;br&gt;Orders Table)]
+B --&gt; D[(Redis&lt;br&gt;Status Cache)]
+C --&gt; E[Event Bus]
+E --&gt; F[Analytics Service]
+</code></pre><pre tabindex="0"><code class="language-plantuml" data-lang="plantuml">@startuml
+[*] --&gt; CREATED
+CREATED --&gt; PAID : payment_webhook
+PAID --&gt; SHIPPED : ship_order
+SHIPPED --&gt; DELIVERED : delivery_confirm
+@enduml
+</code></pre><table>
+  <thead>
+      <tr>
+          <th>决策项</th>
+          <th>方案</th>
+          <th>理由</th>
+          <th>风险</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>状态存储</strong></td>
+          <td>PostgreSQL事务表 + Redis缓存</td>
+          <td>利用PG强一致性保证状态变更原子性</td>
+          <td>缓存穿透需布隆过滤器兜底</td>
+      </tr>
+      <tr>
+          <td><strong>分库策略</strong></td>
+          <td>按<code>user_id % 16</code>分片</td>
+          <td>避免热点用户集中</td>
+          <td>跨分片JOIN性能下降，需应用层聚合</td>
+      </tr>
+  </tbody>
+</table>
+<p>✅ <strong>操作指南</strong>：将Mermaid代码粘贴至VS Code安装的<code>Mermaid Preview</code>插件，实时渲染架构图；用生成的伪代码 <code>order_service.handle_payment_webhook()</code> 反向编写TDD测试：<code>test_handle_payment_webhook_updates_status()</code>。</p>
+<p><img alt="Claude Code生成的Mermaid架构图预览效果" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/8a/20260406/d23adf3d/89471157-83d5-9d8e-a92a-6385eb0b2f043091076982.png?Expires=1776089173&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=AyUTowcfDcNmlVR8%2FTgnlU0IKPc%3D"></p>
+<h2 id="关键注意事项与避坑指南高频失败场景解析">关键注意事项与避坑指南（高频失败场景解析）<a hidden class="anchor" aria-hidden="true" href="#关键注意事项与避坑指南高频失败场景解析">#</a></h2>
+<p>❌ <strong>问题1：提示词模糊导致生成不可测试代码</strong><br>
+✅ 解决：强制要求<code># TEST_CASE:</code>注释<br>
+→ 提示词追加：<code>“每个函数必须包含至少2个# TEST_CASE: 注释，格式为 # TEST_CASE: input={'key': 'val'}, expected={'result': 42}”</code></p>
+<p>❌ <strong>问题2：上下文超限导致方案碎片化</strong><br>
+✅ 解决：分段提交<br>
+→ 先传 <code>&lt;CONTEXT_SUMMARY&gt;PRD摘要：订单状态机有5个节点...&lt;/CONTEXT_SUMMARY&gt;</code>，再传DB Schema。</p>
+<p>❌ <strong>问题3：隐蔽竞态条件</strong><br>
+✅ 解决：追加安全审计指令<br>
+→ 提示词末尾加：<code>“检查所有共享变量访问，对每个list.append()/dict[key]=val操作标注是否线程安全，不安全处添加# TODO: ADD LOCK注释”</code></p>
+<p>❌ <strong>问题4：方案脱离团队能力</strong><br>
+✅ 解决：硬性约束<br>
+→ 提示词结尾：<code>“团队现状：3名Python中级开发者，无K8s运维经验，禁止推荐Service Mesh、eBPF等高门槛技术”</code></p>
+<p>❌ <strong>问题5：虚假覆盖率</strong><br>
+✅ 解决：要求输出覆盖率命令及预期片段<br>
+→ 提示词：<code>“输出pytest --cov=src --cov-report=html命令，并说明预期报告中src/order_service/目录覆盖率应≥92%，特别检查__init__.py是否被包含”</code></p>
+<h2 id="常见问题解答faq">常见问题解答（FAQ）<a hidden class="anchor" aria-hidden="true" href="#常见问题解答faq">#</a></h2>
+<p><strong>Q1：Claude Code能否替代<code>pytest --tb=short</code>调试模式？</strong><br>
+A1：不能替代，但可生成<strong>调试增强版测试</strong>。提示词：<code>“在test_xxx.py第12行插入断点，当response.status_code != 200时触发pdb.set_trace()”</code> → 生成代码含 <code>if response.status_code != 200: import pdb; pdb.set_trace()</code>。</p>
+<p><strong>Q2：如何与Confluence同步技术方案？</strong><br>
+A2：用Python脚本自动发布（需Confluence API Token）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;page&#34;</span>, <span style="color:#e6db74">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;LRU Cache Design&#34;</span>, <span style="color:#e6db74">&#34;space&#34;</span>: {<span style="color:#e6db74">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;DEV&#34;</span>}, <span style="color:#e6db74">&#34;body&#34;</span>: {<span style="color:#e6db74">&#34;storage&#34;</span>: {<span style="color:#e6db74">&#34;value&#34;</span>: claude_output_md, <span style="color:#e6db74">&#34;representation&#34;</span>: <span style="color:#e6db74">&#34;storage&#34;</span>}}}
+</span></span><span style="display:flex;"><span>requests<span style="color:#f92672">.</span>post(<span style="color:#e6db74">&#34;https://your-domain.atlassian.net/wiki/rest/api/content&#34;</span>, json<span style="color:#f92672">=</span>data, auth<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#34;user&#34;</span>, <span style="color:#e6db74">&#34;token&#34;</span>))
+</span></span></code></pre></div><p><strong>Q3：企业防火墙拦截Anthropic API？</strong><br>
+A3：本地代理方案：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 启动mitmproxy</span>
+</span></span><span style="display:flex;"><span>mitmproxy --mode upstream:https://api.anthropic.com --set upstream_cert<span style="color:#f92672">=</span>false
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Python中设置</span>
+</span></span><span style="display:flex;"><span>import os
+</span></span><span style="display:flex;"><span>os.environ<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;HTTP_PROXY&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://127.0.0.1:8080&#34;</span>
+</span></span></code></pre></div><p><strong>Q4：生成SQL有注入风险吗？</strong><br>
+A4：Claude默认不生成字符串拼接SQL，但需人工校验所有<code>f&quot;SELECT * FROM {table_name}&quot;</code> → <strong>立即替换为</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sqlalchemy <span style="color:#f92672">import</span> text
+</span></span><span style="display:flex;"><span>stmt <span style="color:#f92672">=</span> text(<span style="color:#e6db74">&#34;SELECT * FROM :table&#34;</span>)<span style="color:#f92672">.</span>bindparams(table<span style="color:#f92672">=</span>table_name)
+</span></span></code></pre></div><p><img alt="开发者使用Claude Code完成TDD全流程的终端操作示意" loading="lazy" src="IMAGE_PLACEHOLDER_4"></p>
+
+
+  </div>
+
+  
+
+
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/claude/">Claude</a></li>
+      <li><a href="http://localhost:1313/tags/tdd/">TDD</a></li>
+      <li><a href="http://localhost:1313/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">自动化测试</a></li>
+      <li><a href="http://localhost:1313/tags/ai%E7%BC%96%E7%A8%8B/">AI编程</a></li>
+      <li><a href="http://localhost:1313/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/">软件设计</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">单元测试</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad product-ad--storyalter">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 20H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16.5 3.50001C16.8978 3.10219 17.4374 2.87869 18 2.87869C18.2786 2.87869 18.5544 2.93356 18.8118 3.04017C19.0692 3.14677 19.303 3.30303 19.5 3.50001C19.697 3.697 19.8532 3.93085 19.9598 4.18822C20.0665 4.44559 20.1213 4.72144 20.1213 5.00001C20.1213 5.27859 20.0665 5.55444 19.9598 5.81181C19.8532 6.06918 19.697 6.30303 19.5 6.50001L7 19L3 20L4 16L16.5 3.50001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">培养你的专属写作分身，越写越懂你</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad product-ad--solomd">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-icon">
+        <span class="solomd-logo"><span class="solomd-hash">#</span><span class="solomd-md">MD</span></span>
+      </div>
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">一个文件，一个窗口，只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

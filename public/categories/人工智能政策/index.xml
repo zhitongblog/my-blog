@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>人工智能政策 on 智通和你一起学AI</title><link>https://zhitong.uk/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%94%BF%E7%AD%96/</link><description>Recent content in 人工智能政策 on 智通和你一起学AI</description><generator>Hugo -- 0.154.5</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Feb 2026 03:08:08 +0000</lastBuildDate><atom:link href="https://zhitong.uk/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%94%BF%E7%AD%96/index.xml" rel="self" type="application/rss+xml"/><item><title>当大模型巨头互诉抄袭：垂直小模型创业者的黄金窗口期已悄然开启</title><link>https://zhitong.uk/posts/2026-02-25-ddmxjthscxczxmxcyzdhjckqyqrkq/</link><pubDate>Wed, 25 Feb 2026 03:08:08 +0000</pubDate><guid>https://zhitong.uk/posts/2026-02-25-ddmxjthscxczxmxcyzdhjckqyqrkq/</guid><description>本文分析OpenAI诉Meta、Anthropic诉Google等大模型版权诉讼背后的结构性机遇，指出通用模型合规焦灼正为垂直领域小模型创业者打开黄金窗口期，详解技术路径与商业落地逻辑。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>人工智能政策 on 智通和你一起学AI</title>
+    <link>http://localhost:1313/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%94%BF%E7%AD%96/</link>
+    <description>Recent content in 人工智能政策 on 智通和你一起学AI</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 25 Feb 2026 03:08:08 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%94%BF%E7%AD%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>当大模型巨头互诉抄袭：垂直小模型创业者的黄金窗口期已悄然开启</title>
+      <link>http://localhost:1313/posts/2026-02-25-ddmxjthscxczxmxcyzdhjckqyqrkq/</link>
+      <pubDate>Wed, 25 Feb 2026 03:08:08 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2026-02-25-ddmxjthscxczxmxcyzdhjckqyqrkq/</guid>
+      <description>本文分析OpenAI诉Meta、Anthropic诉Google等大模型版权诉讼背后的结构性机遇，指出通用模型合规焦灼正为垂直领域小模型创业者打开黄金窗口期，详解技术路径与商业落地逻辑。</description>
+    </item>
+  </channel>
+</rss>

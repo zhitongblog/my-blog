@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>写作卡壳时，你的‘第二大脑’在线吗？StoryAlter实测报告 | 智通和你一起学AI</title>
+<meta name="keywords" content="AI写作工具, 第二大脑, 知识管理, StoryAlter, 创意写作, 笔记软件">
+<meta name="description" content="本文实测StoryAlter作为写作者‘第二大脑’的效果，解决灵感散乱、写作卡壳痛点，探讨其在素材聚合、上下文联想与叙事生成方面的实际表现与适用场景。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-03-28-xzkksnddednzxmstoryalterscbg/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-03-28-xzkksnddednzxmstoryalterscbg/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      写作卡壳时，你的‘第二大脑’在线吗？StoryAlter实测报告
+    </h1>
+    <div class="post-description">
+      本文实测StoryAlter作为写作者‘第二大脑’的效果，解决灵感散乱、写作卡壳痛点，探讨其在素材聚合、上下文联想与叙事生成方面的实际表现与适用场景。
+    </div>
+    <div class="post-meta"><span title='2026-03-28 03:46:11.4 +0000 UTC'>March 28, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="一那个凌晨三点的崩溃现场我为什么开始找第二大脑">一、那个凌晨三点的崩溃现场：我为什么开始找“第二大脑”<a hidden class="anchor" aria-hidden="true" href="#一那个凌晨三点的崩溃现场我为什么开始找第二大脑">#</a></h2>
+<p>凌晨3:17，MacBook 屏幕泛着幽蓝冷光。光标在空白文档第一行疯狂闪烁，像垂死萤火虫最后的抽搐。</p>
+<p>我刚删掉第7版开头——那句“林薇把辞职信折成纸鹤时，HR正在朋友圈点赞她的健身打卡照”，写完又觉得太用力，像往清汤里撒胡椒粉，呛人又失真。手指悬在键盘上发僵，眼干得眨眼都像砂纸摩擦。关掉窗口，三秒后又鬼使神差点开。手机备忘录里躺着12条零碎灵感：“地铁口穿西装啃包子的男人”“茶水间微波炉叮声后的沉默”“张伟第三次说‘我理解’时喉结没动”……每一条都闪着光，但连不成线。不是没想法，是想法散装在微信语音、截图、便签、甚至某次会议纪要的页脚里——它们拒绝被调用，像一群不肯排队的野猫。</p>
+<p>那一刻我意识到：我的大脑不是内存不足，是<strong>缺乏索引</strong>。它记得所有碎片，却不会主动把“地铁包子男”的疲惫感，和“张伟喉结没动”的谎言关联起来。写作卡壳，从来不是创意枯竭，而是认知带宽被“回忆、定位、比对、重组”这些后台进程占满了。</p>
+<p><img alt="深夜写作崩溃场景：凌乱桌面、发光的MacBook、手机屏幕显示12条未整理备忘录" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/96/20260328/d23adf3d/fe3a63ee-6649-40dc-81e3-2d76775aa8651315262350.png?Expires=1775275273&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=s8CZP81lNU7CEE7xFmbjkTnG3lw%3D"></p>
+<h2 id="二试过5个工具后我为什么把storyalter当急救包用">二、试过5个工具后，我为什么把StoryAlter当“急救包”用<a hidden class="anchor" aria-hidden="true" href="#二试过5个工具后我为什么把storyalter当急救包用">#</a></h2>
+<p>老实说，我曾是“知识管理仪式感”的重度患者。为了建一个“完美双链笔记系统”，我在Notion里折腾了14天：嵌套数据库、自动归档规则、颜色标签体系……结果写小说第一章时，卡在“如何让主角第一次见老板时不显得太怂”这个细节上，转头去调试一个自动化模板，花了47分钟。</p>
+<p>后来我横向测试了5个主流工具，列了个血泪对比表：</p>
+<table>
+  <thead>
+      <tr>
+          <th>工具</th>
+          <th>我的真实体验</th>
+          <th>StoryAlter的“反常识”优势</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Notion</td>
+          <td>模板越美，启动越重；想记一句“咖啡凉了”都要选数据库、填字段、打标签</td>
+          <td><strong>不建库也能用</strong>：粘贴语音/截图/文字，它自动识别并打标（如 <code>#伏笔</code> <code>#权力关系</code>）</td>
+      </tr>
+      <tr>
+          <td>Logseq</td>
+          <td>双链哲学很美，但写到一半想查上周写的“女配动机”，得手动翻页+关键词搜索+猜日期</td>
+          <td><strong>语音即索引</strong>：直接说“找所有提到‘电梯故障’的片段”，0.8秒出结果（含微信语音转文字记录）</td>
+      </tr>
+      <tr>
+          <td>Obsidian</td>
+          <td>插件生态强大，但配置完Zettelkasten体系后，我连打开软件都要深呼吸</td>
+          <td><strong>零配置启动</strong>：注册完直接点“+”按钮，扔进去就自动分析人物关系、情绪倾向、时间锚点</td>
+      </tr>
+      <tr>
+          <td>RemNote</td>
+          <td>AI总结惊艳，但总把我的草稿润色成教科书体，丢失口语节奏和毛边感</td>
+          <td><strong>AI是助手，不是主编</strong>：默认关闭自动润色，所有AI操作需手动触发+明确指令（后文详述）</td>
+      </tr>
+      <tr>
+          <td><strong>StoryAlter</strong></td>
+          <td>✅ <strong>真正救我命的功能</strong>：微信语音转文字后，自动标注“冲突伏笔”（检测到反问句+停顿&gt;1.2s）、“人物动机”（识别出“必须”“不能输”等强驱动词）</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<p>它的核心逻辑不是“让你更规范”，而是“先接住你随时会漏掉的念头”。就像急诊室护士——不问你病历怎么写，只管一把托住你摇摇欲坠的意识流。</p>
+<h2 id="三真实工作流从灵感到成稿它怎么帮我接住断掉的线">三、真实工作流：从灵感到成稿，它怎么帮我“接住断掉的线”<a hidden class="anchor" aria-hidden="true" href="#三真实工作流从灵感到成稿它怎么帮我接住断掉的线">#</a></h2>
+<p>上周写职场小说《格子间悖论》，卡在第三章：主角张伟发现直属上司篡改报销单，但不敢举报。我需要一个既合理又带刺的爆发点。传统做法是翻前两章找伏笔、查人物设定、再苦思矛盾升级方式……这次我用了StoryAlter的闭环三步：</p>
+<p><strong>① 语音输入碎片对话（地铁上录的）</strong><br>
+早上通勤时，用StoryAlter App录下一段即兴脑暴：“张伟盯着报销单数字，想起上周帮领导垫付的280块打车费…他手在抖，但不是因为怕。”<br>
+→ 自动转文字 + 标签：<code>#生理反应</code> <code>#经济压迫</code> <code>#未兑现承诺</code></p>
+<p><strong>② 拖拽到“张伟角色卡”自动关联过往行为记录</strong><br>
+我把这段录音拖进张伟的个人页，系统瞬间弹出关联项：</p>
+<ul>
+<li>2天前录入的微信语音：“他说‘我信你’的时候，眼睛没看我”（标签：<code>#信任崩塌</code>）</li>
+<li>上周截图的聊天记录：“报销单我帮你压着，别声张”（标签：<code>#权力让渡</code>）</li>
+<li>系统还标红提示：“⚠️ 与‘垫付280元’事件存在时间冲突（间隔仅36小时）”</li>
+</ul>
+<p><strong>③ 点击“生成矛盾点建议”弹出3个我没想到的权力博弈角度</strong><br>
+不是笼统的“他该举报还是隐忍”，而是具体可落笔的切口：</p>
+<blockquote>
+<ol>
+<li><strong>财务漏洞反制</strong>：张伟发现报销单篡改手法，和自己上月提交的流程优化提案完全一致——领导偷用了他的方案，却否决了他本人的晋升申请。</li>
+<li><strong>沉默成本可视化</strong>：系统自动提取他近7天所有“已读不回”消息，生成热力图，显示对领导的消息回复延迟平均增加2.3倍。</li>
+<li><strong>道具复用</strong>：那张被篡改的报销单，恰好印着公司新LOGO——而张伟正是LOGO设计组外包成员，合同里写着“知识产权归属员工”。</li>
+</ol>
+</blockquote>
+<p>重点来了：它<strong>没替我写一个字</strong>，但把“回忆张伟上一章撒过什么谎”这种脑力消耗项自动化了。我只需要专注一件事：哪条矛盾最痛？选第一条，立刻铺开场景——他盯着报销单右下角自己的设计署名，手指慢慢攥紧。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>// StoryAlter中张伟角色卡的自动关联片段（简化示意）
+</span></span><span style="display:flex;"><span>[张伟] —— 角色状态：隐忍阈值 78%（↑12%）
+</span></span><span style="display:flex;"><span>├── 关联事件：报销单篡改（2024-06-12）
+</span></span><span style="display:flex;"><span>├── 关联伏笔：  
+</span></span><span style="display:flex;"><span>│   ├── “我信你”时未直视（2024-06-10） → 信任指数 32%  
+</span></span><span style="display:flex;"><span>│   └── 垫付280元打车费（2024-06-11） → 经济压力值 ★★★★☆  
+</span></span><span style="display:flex;"><span>└── 冲突建议：  
+</span></span><span style="display:flex;"><span>    ✦ 财务漏洞反制（匹配度 92%）←【点击插入草稿】  
+</span></span><span style="display:flex;"><span>    ✦ 沉默成本可视化（匹配度 76%）  
+</span></span><span style="display:flex;"><span>    ✦ 道具复用：LOGO署名权（匹配度 85%）  
+</span></span></code></pre></div><h2 id="四翻车实录这些功能我劝你别碰至少别一开始碰">四、翻车实录：这些功能我劝你别碰（至少别一开始碰）<a hidden class="anchor" aria-hidden="true" href="#四翻车实录这些功能我劝你别碰至少别一开始碰">#</a></h2>
+<p>再好的工具，用错姿势也是自残。以下是我用真金白银交的学费：</p>
+<p><strong>① 过早开启“AI续写”，文风当场去世</strong><br>
+有次赶稿心急，对着半截句子点“AI续写”：“张伟把报销单推回去，说……”<br>
+结果它输出：</p>
+<blockquote>
+<p>“张伟将那份承载着责任与良知的纸张轻轻推回，目光如炬，心中信念如磐石般坚定——真正的成长，始于直面黑暗的勇气。”</p>
+</blockquote>
+<p>我盯着屏幕足足10秒，然后默默删掉全文。它把我精心设计的冷幽默（原句其实是：“张伟把报销单推回去，说‘这单子油墨味儿不对，您喷的香水盖不住’”）润色成了豆瓣高赞鸡汤体。</p>
+<p>✅ <strong>土法解药</strong>：现在我所有AI操作前必加指令，且固定写在输入框第一行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>【指令】保持原文口语化节奏；禁用成语/比喻/抒情副词；保留“嗯”“啊”等语气词；若涉及讽刺，用反讽标点（例：他真是个“好”领导）。
+</span></span></code></pre></div><p><strong>② 盲目用“智能归档”，素材库变迷宫</strong><br>
+曾把32段采访录音全塞进“素材库”，指望AI自动分类。结果想找某句关键台词——“我们不是不想改革，是改革改到了自己头上”——在库里翻了20分钟，因为AI把它归到了<code>#行业趋势</code>而非<code>#权力自反</code>（我自己才懂的标签）。</p>
+<p>✅ <strong>土法解药</strong>：现在只做两件事：</p>
+<ul>
+<li>所有原始素材（录音/截图/聊天）统一丢进【闪念】库，<strong>不做任何分类</strong>；</li>
+<li>真正需要检索时，用“语义搜”而非“标签搜”：直接输入“改革改到自己头上”，它基于上下文匹配，3秒定位。</li>
+</ul>
+<h2 id="五给写作者的懒人配置清单3步启动你的第二大脑">五、给写作者的“懒人配置清单”：3步启动你的第二大脑<a hidden class="anchor" aria-hidden="true" href="#五给写作者的懒人配置清单3步启动你的第二大脑">#</a></h2>
+<p>别被“第二大脑”这个词吓住。它不需要你懂PARA方法论，也不要求你每天总结复盘。我的经验是：<strong>先让它记住你，再让它帮你思考</strong>。极简启动三步：</p>
+<p><strong>① 只开3个标签页（删掉其他所有）</strong></p>
+<ul>
+<li><code>【闪念】</code>：扔一切——微信语音、截图、随手打的字、甚至拍下的咖啡渍照片；</li>
+<li><code>【人物】</code>：每人一个页，只填3项：名字、1句核心动机（例：“张伟：不想被当成废物”）、1个身体记忆（例：“摸左耳垂时在说谎”）；</li>
+<li><code>【卡点】</code>：专门存“写不下去”的句子，格式：<code>[卡点] 场景：茶水间 / 问题：她转身时该笑还是哭？</code></li>
+</ul>
+<blockquote>
+<p>💡 StoryAlter默认隐藏所有复杂面板，这3个页就是你的全部世界。</p>
+</blockquote>
+<p><strong>② 每天睡前花90秒，把当天所有零散输入拖进去</strong><br>
+不用整理！不用打标！就机械性拖拽。我常把微信里和编辑的聊天记录整段拖进【闪念】，系统会自动拆解：“编辑说‘结尾太软’→ 标签：<code>#结构反馈</code>”、“发来竞品链接→ 标签：<code>#市场参照</code>”。90秒，比刷小红书一条视频还短。</p>
+<p><strong>③ 遇到卡壳时，不搜索关键词，直接点“随机关联”按钮</strong><br>
+这是最反直觉也最有效的一招。比如写到“女主撕毁合同”，卡住了。我不搜“撕毁”“愤怒”“决裂”，而是点那个小闪电图标⚡️。系统随机抓取两条无关素材：</p>
+<ul>
+<li>上周录的语音：“物业说漏水要等三天修，我笑了，笑得自己都怕”</li>
+<li>一张截图：电影《寄生虫》里石头摆件特写</li>
+</ul>
+<p>它强行把“笑得自己都怕”和“石头摆件”连到“撕毁合同”上——瞬间想到：女主撕合同时，手里正捏着一块从老家带来的鹅卵石。笑点有了，隐喻也有了。<strong>认知损耗降为0，灵感反而破土而出。</strong></p>
+<p><img alt="StoryAlter界面截图：简洁的3标签页布局，中央醒目的“随机关联”闪电按钮" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/74/20260328/d23adf3d/247144f7-54b5-46f0-bc55-63b2d6db08d61249672573.png?Expires=1775275290&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=dovwWRaiKHPtpUKp%2BeSoMK2KKnE%3D"></p>
+<p>最后说句掏心窝的：所谓“第二大脑”，不是让你变成更高效的机器，而是<strong>把那些本该交给硬盘的记忆、关联、检索工作，真的卸下来</strong>。让你的大脑，只负责做它最擅长的事——感受、怀疑、刺破表象，然后，写出让人脊背发麻的那一句。</p>
+<p>现在，关掉这篇文章，打开StoryAlter，点那个巨大的“+”号。<br>
+别想太多，先录一句：“今天地铁上，看见个穿睡衣挤早高峰的人……”<br>
+剩下的，交给它。你只管，继续写。</p>
+
+
+  </div>
+
+  
+
+
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/ai%E5%86%99%E4%BD%9C%E5%B7%A5%E5%85%B7/">AI写作工具</a></li>
+      <li><a href="http://localhost:1313/tags/%E7%AC%AC%E4%BA%8C%E5%A4%A7%E8%84%91/">第二大脑</a></li>
+      <li><a href="http://localhost:1313/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/">知识管理</a></li>
+      <li><a href="http://localhost:1313/tags/storyalter/">StoryAlter</a></li>
+      <li><a href="http://localhost:1313/tags/%E5%88%9B%E6%84%8F%E5%86%99%E4%BD%9C/">创意写作</a></li>
+      <li><a href="http://localhost:1313/tags/%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/">笔记软件</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

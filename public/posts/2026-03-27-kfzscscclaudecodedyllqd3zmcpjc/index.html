@@ -1,39 +1,440 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱） | 智通和你一起学AI</title><meta name=keywords content="Claude Code,MCP,Puppeteer,VS Code,浏览器自动化,DevOps"><meta name=description content="详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）"><meta property="og:description" content="详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-03-27T12:57:16+00:00"><meta property="article:modified_time" content="2026-03-27T12:57:16+00:00"><meta property="article:tag" content="Claude Code"><meta property="article:tag" content="MCP"><meta property="article:tag" content="Puppeteer"><meta property="article:tag" content="VS Code"><meta property="article:tag" content="浏览器自动化"><meta property="article:tag" content="DevOps"><meta name=twitter:card content="summary"><meta name=twitter:title content="开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）"><meta name=twitter:description content="详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://zhitong.uk/posts/"},{"@type":"ListItem","position":2,"name":"开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）","item":"https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）","name":"开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地\/远程\/沙箱）","description":"详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。","keywords":["Claude Code","MCP","Puppeteer","VS Code","浏览器自动化","DevOps"],"articleBody":"为什么我一开始死磕“本地模式”却连浏览器都打不开？ 上周三下午三点十七分，我盯着 VS Code 里第 17 次报错的终端窗口，手边咖啡凉透，心里只剩一个念头：这破 puppeteer-core 怎么连 localhost 都连不上？\nError: net::ERR_CONNECTION_REFUSED at http://localhost:9222/json at navigate (/node_modules/puppeteer-core/lib/cjs/puppeteer/common/Frame.js:138:25) 我翻遍 Puppeteer 文档、Chrome 启动参数、Docker 网络配置，甚至重装了 Chromium……直到凌晨一点，偶然在 Claude Code 的 MCP 插件设置页底部发现一行小字：\n⚠️ MCP Server 默认禁用本地进程 spawn（出于安全策略），需手动启用 mcp.allowLocalProcess=true\n——原来不是 Chrome 没起来，是 MCP 根本没让它起！puppeteer-core 在等一个永远不会出现的调试端口。\n那一刻我顿悟：MCP 的三种模式，根本不是“技术选型”，而是权限与上下文的分层契约。\n“谁在调”？是 IDE 插件、CI 脚本，还是用户点击的按钮？ “在哪调”？是开发机、K8s Pod，还是客户浏览器里的 Web Worker？ “以谁的身份调”？是 root、普通用户、还是被 seccomp 锁死的 sandbox 用户？ 这才是真正的设计原点。\n下面这张对比表，是我贴在工位显示器边框上的速查便签（手写体，带咖啡渍）：\n场景 推荐模式 关键约束 我的便签原文 调试前端组件（如 Storybook 快照） ✅ 本地模式 仅限本机，无网络访问权 本地=快但受限 批量爬取公开电商页面（含 JS 渲染） ✅ 远程模式 需自维 Grid/Selenium，证书自己管 远程=自由但要管证书 渲染用户上传的 HTML 报表模板 ✅ 沙箱模式 DOM 可操作，但 fetch/open/print 全受白名单控制 沙箱=安全但没 DOM 操作权 本地模式：把浏览器当“自家打印机”，快但容易卡纸 给内部 BI 工具加“一键截图”时，我天真地认为 mcp-local-browser 就是开个 Chromium 窗口的事。结果在同事的 M1 Mac 上，脚本刚执行就弹出：\n[0512/142219.123456:FATAL:zygote_host_impl_linux.cc(117)] No usable sandbox! 查了一圈才明白：Chromium 在 macOS ARM64 下默认要求 sandbox，但 mcp-local-browser 启动时没传 --no-sandbox —— 它压根不帮你加这个 flag。\n临时解法？在启动前塞环境变量：\nexport CHROMIUM_FLAGS=\"--no-sandbox --disable-gpu --headless=new\" npx mcp-local-browser --config ./local-config.json 但治标不治本。后来我整理出本地模式三大“地域性故障”：\nWindows 路径硬编码：mcp-local-browser 默认找 C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe，但很多企业 IT 部署的是 32 位版，实际路径是 C:\\Program Files (x86)\\... → 解法：永远用 where chrome 或注册表读取 HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\chrome.exe Linux 容器字体缺失：Alpine 镜像里没有中文字体，page.pdf() 输出全是方块 → 解法：apk add fonts-liberation ttf-dejavu（别信 fontconfig，它不解决渲染） 调试端口冲突：有人在 mcp-server 启动命令里硬加 --remote-debugging-port=9222，结果和已运行的 Chrome 冲突 → ❌ 绝对别碰！ ✅ 必做动作：写个 check_browser_ready() 健康检查函数：\ncheck_browser_ready() { local timeout=30 while [ $timeout -gt 0 ]; do if curl -s http://localhost:9222/json | jq -e '.[0].id' \u003e/dev/null 2\u003e\u00261; then echo \"✅ Browser ready on port 9222\" return 0 fi sleep 1 ((timeout--)) done echo \"❌ Browser failed to start after 30s\" \u003e\u00262 return 1 } 远程模式：租个“浏览器云主机”，自由但得自己配钥匙 给某零售客户做价格监控时，我们用 mcp-remote-browser 对接自建 Selenium Grid。首日上线，所有任务全挂——日志里只有模糊的 net::ERR_FAILED。\n抓包后发现真相：curl -v https://price-api.com 直接报：\nSSL certificate problem: unable to get local issuer certificate 原来我们用的 selenium/hub:4.11 镜像基于 Debian Bookworm，但 ca-certificates 包版本太老，不认 Let’s Encrypt 新根证书（ISRG Root X1）。apt update \u0026\u0026 apt install -y ca-certificates 重启容器后，世界清静了。\n远程模式的坑，本质是“网络链路变长后，每个环节都可能掉链子”：\nURL 地址错乱：Selenium Hub 返回的 page.url 是 http://selenium-hub:4444/wd/hub/session/abc123/url，而客户端需要的是 https://client-domain.com/report/abc123 → 解法：在 MCP 客户端拦截 page.url，用正则替换内网地址为对外域名 WebSocket 断连：高频滚动抓取时，30 秒超时太短 → 改环境变量：MCP_REMOTE_TIMEOUT_MS=120000 ✅ 必做验证：用 OpenSSL 检查证书链是否完整：\nopenssl s_client -connect grid.example.com:4444 -servername grid.example.com -showcerts 2\u003e/dev/null | openssl x509 -noout -text | grep \"Issuer\\|Subject\" ❌ 绝对别碰：在远程浏览器里执行 localStorage.clear()。因为每个 session 是独立的 Chrome 实例，clear() 只清当前 tab，下次新 session 又是全新 localStorage —— 白清。\n🛠️ 我的 docker-compose.yml 关键片段（防 IP 白名单拦截）：\nservices: selenium-hub: image: selenium/hub:4.11 environment: - JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps= 注：空字符串 whitelistedIps 表示不限制，否则默认只允许 127.0.0.1 和 localhost\n沙箱模式：把浏览器关进“透明玻璃房”，安全但手脚被绑 最惊悚的一次：客户上传了一个 HTML 报表模板，我们用 mcp-sandbox-browser 渲染，结果所有 window.open() 全静默失败，fetch('https://api.example.com') 直接抛 TypeError: fetch is not allowed in sandbox context。\n翻源码才发现：沙箱策略不是靠 CSP 头控制，而是硬编码在 sandbox-config.json 里：\n{ \"allowedOrigins\": [\"https://sandbox-api.example.com\"], \"disabledApis\": [\"window.open\", \"window.print\", \"navigator.geolocation\"] } 更隐蔽的坑：\n→ 触发 SecurityError: Failed to execute 'write' on 'document'（沙箱禁止动态文档写入） window.print() 不报错，也不弹窗，直接消失 → 因为沙箱禁用所有系统级 API，且无 fallback 日志 ✅ 必做能力探测：注入 sandbox-checker.js 到沙箱 iframe：\n// sandbox-checker.js console.log(\"SharedArrayBuffer:\", typeof SharedArrayBuffer !== 'undefined'); console.log(\"Permissions API:\", await navigator.permissions.query({name:'geolocation'}).then(r=\u003er.state,()=\u003enull)); ❌ 千万别干：eval(userInput)。哪怕你加了 Content-Security-Policy: script-src 'none'，原型污染仍可能绕过（比如篡改 Function.prototype.constructor）。\n🛠️ 我的 workaround 流程：\n用 DOMPurify.sanitize(html, {ALLOWED_TAGS: ['div','span','table']}) 过滤用户 HTML 注入前，先加一层 sandbox=\"allow-scripts allow-same-origin\" iframe 用 MutationObserver 监听 iframe.contentDocument 加载完成（比 load 事件更可靠，尤其对 srcdoc） 我的终极选择逻辑：三句话定乾坤 上线前，我常问自己这三句话——它们比任何架构图都管用：\n“本地模式”只用在：你完全控制机器 + 需要毫秒级响应 + 不碰外部网络\n✅ 例：VS Code 插件实时渲染 Markdown 预览（延迟 \u003e50ms 用户就感知卡顿）\n❌ 例：爬取淘宝商品页（本地模式连不了淘宝 CDN，且会被风控）\n“远程模式”只用在：你要跑真实网络请求 + 能自主维护服务 + 接受 1~3 秒延迟\n✅ 例：每日凌晨跑 Selenium 自动化测试（可容忍重试、可升级 Grid）\n❌ 例：用户提交表单后即时预览（延迟不可控，且运维成本高）\n“沙箱模式”只用在：输入不可信 + 输出要展示给他人 + 宁可功能残缺也要零漏洞\n✅ 例：在线代码编辑器的 HTML 预览（用户能写任意 JS，必须隔离）\n❌ 例：内部数据看板（可信环境，沙箱反而拖慢渲染）\n最后，血泪总结上线前三件事：\n本地模式：用 strace -e trace=clone,execve,connect -p $(pgrep -f 'mcp-local-browser') 抓进程行为，确认没意外 connect() 外网 远程模式：用 mitmproxy --mode upstream:https://your-grid.com:4444 拦截全部流量，看有没有漏网的 fetch() 请求 沙箱模式：用 lsof -i :PORT | grep LISTEN 确认沙箱进程没偷偷开监听端口（曾经有沙箱因 debug 模式暴露了 9229 端口！） 现在，每当我看到 ERR_CONNECTION_REFUSED，第一反应不再是查 Chrome 参数——而是摸出这张便签，对着三行手写字，深呼吸，再决定：这次，到底该让浏览器住进哪个房间？\n","wordCount":"500","inLanguage":"en","datePublished":"2026-03-27T12:57:16.542Z","dateModified":"2026-03-27T12:57:16.542Z","author":{"@type":"Person","name":"智通"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://zhitong.uk/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/"},"publisher":{"@type":"Organization","name":"智通和你一起学AI","logo":{"@type":"ImageObject","url":"https://zhitong.uk/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）</h1><div class=post-description>详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。</div><div class=post-meta><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></div></header><div class=post-content><h2 id=为什么我一开始死磕本地模式却连浏览器都打不开>为什么我一开始死磕“本地模式”却连浏览器都打不开？<a hidden class=anchor aria-hidden=true href=#为什么我一开始死磕本地模式却连浏览器都打不开>#</a></h2><p>上周三下午三点十七分，我盯着 VS Code 里第 17 次报错的终端窗口，手边咖啡凉透，心里只剩一个念头：<strong>这破 <code>puppeteer-core</code> 怎么连 localhost 都连不上？</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>Error: net::ERR_CONNECTION_REFUSED at http://localhost:9222/json
-</span></span><span style=display:flex><span>    at navigate <span style=color:#f92672>(</span>/node_modules/puppeteer-core/lib/cjs/puppeteer/common/Frame.js:138:25<span style=color:#f92672>)</span>
-</span></span></code></pre></div><p>我翻遍 Puppeteer 文档、Chrome 启动参数、Docker 网络配置，甚至重装了 Chromium……直到凌晨一点，偶然在 Claude Code 的 MCP 插件设置页底部发现一行小字：</p><blockquote><p>⚠️ MCP Server 默认禁用本地进程 spawn（出于安全策略），需手动启用 <code>mcp.allowLocalProcess=true</code></p></blockquote><p>——原来不是 Chrome 没起来，是 MCP 根本没让它起！<code>puppeteer-core</code> 在等一个永远不会出现的调试端口。</p><p>那一刻我顿悟：<strong>MCP 的三种模式，根本不是“技术选型”，而是权限与上下文的分层契约。</strong></p><ul><li>“谁在调”？是 IDE 插件、CI 脚本，还是用户点击的按钮？</li><li>“在哪调”？是开发机、K8s Pod，还是客户浏览器里的 Web Worker？</li><li>“以谁的身份调”？是 root、普通用户、还是被 <code>seccomp</code> 锁死的 sandbox 用户？</li></ul><p>这才是真正的设计原点。</p><p>下面这张对比表，是我贴在工位显示器边框上的速查便签（手写体，带咖啡渍）：</p><table><thead><tr><th>场景</th><th>推荐模式</th><th>关键约束</th><th>我的便签原文</th></tr></thead><tbody><tr><td>调试前端组件（如 Storybook 快照）</td><td>✅ 本地模式</td><td>仅限本机，无网络访问权</td><td><strong>本地=快但受限</strong></td></tr><tr><td>批量爬取公开电商页面（含 JS 渲染）</td><td>✅ 远程模式</td><td>需自维 Grid/Selenium，证书自己管</td><td><strong>远程=自由但要管证书</strong></td></tr><tr><td>渲染用户上传的 HTML 报表模板</td><td>✅ 沙箱模式</td><td>DOM 可操作，但 <code>fetch</code>/<code>open</code>/<code>print</code> 全受白名单控制</td><td><strong>沙箱=安全但没 DOM 操作权</strong></td></tr></tbody></table><p><img alt="手写便签特写：本地=快但受限，远程=自由但要管证书，沙箱=安全但没 DOM 操作权" loading=lazy src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/e2/20260327/d23adf3d/63df624d-52e4-4be0-9c69-96dee0bdfce04172597740.png?Expires=1775188602&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=2axvjNgUEPiRJFgzkWI%2FHCZ7mIE%3D"></p><hr><h2 id=本地模式把浏览器当自家打印机快但容易卡纸>本地模式：把浏览器当“自家打印机”，快但容易卡纸<a hidden class=anchor aria-hidden=true href=#本地模式把浏览器当自家打印机快但容易卡纸>#</a></h2><p>给内部 BI 工具加“一键截图”时，我天真地认为 <code>mcp-local-browser</code> 就是开个 Chromium 窗口的事。结果在同事的 M1 Mac 上，脚本刚执行就弹出：</p><pre tabindex=0><code>[0512/142219.123456:FATAL:zygote_host_impl_linux.cc(117)] No usable sandbox!
-</code></pre><p>查了一圈才明白：Chromium 在 macOS ARM64 下默认要求 sandbox，但 <code>mcp-local-browser</code> 启动时没传 <code>--no-sandbox</code> —— 它压根不帮你加这个 flag。</p><p>临时解法？在启动前塞环境变量：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>export CHROMIUM_FLAGS<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;--no-sandbox --disable-gpu --headless=new&#34;</span>
-</span></span><span style=display:flex><span>npx mcp-local-browser --config ./local-config.json
-</span></span></code></pre></div><p>但治标不治本。后来我整理出本地模式三大“地域性故障”：</p><ul><li><strong>Windows 路径硬编码</strong>：<code>mcp-local-browser</code> 默认找 <code>C:\Program Files\Google\Chrome\Application\chrome.exe</code>，但很多企业 IT 部署的是 32 位版，实际路径是 <code>C:\Program Files (x86)\...</code> → 解法：永远用 <code>where chrome</code> 或注册表读取 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe</code></li><li><strong>Linux 容器字体缺失</strong>：Alpine 镜像里没有中文字体，<code>page.pdf()</code> 输出全是方块 → 解法：<code>apk add fonts-liberation ttf-dejavu</code>（别信 <code>fontconfig</code>，它不解决渲染）</li><li><strong>调试端口冲突</strong>：有人在 <code>mcp-server</code> 启动命令里硬加 <code>--remote-debugging-port=9222</code>，结果和已运行的 Chrome 冲突 → ❌ 绝对别碰！</li></ul><p>✅ <strong>必做动作</strong>：写个 <code>check_browser_ready()</code> 健康检查函数：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>check_browser_ready<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
-</span></span><span style=display:flex><span>  local timeout<span style=color:#f92672>=</span><span style=color:#ae81ff>30</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>while</span> <span style=color:#f92672>[</span> $timeout -gt <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>do</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> curl -s http://localhost:9222/json | jq -e <span style=color:#e6db74>&#39;.[0].id&#39;</span> &gt;/dev/null 2&gt;&amp;1; <span style=color:#66d9ef>then</span>
-</span></span><span style=display:flex><span>      echo <span style=color:#e6db74>&#34;✅ Browser ready on port 9222&#34;</span>
-</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>fi</span>
-</span></span><span style=display:flex><span>    sleep <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>((</span>timeout--<span style=color:#f92672>))</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>done</span>
-</span></span><span style=display:flex><span>  echo <span style=color:#e6db74>&#34;❌ Browser failed to start after 30s&#34;</span> &gt;&amp;<span style=color:#ae81ff>2</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
-</span></span></code></pre></div><hr><h2 id=远程模式租个浏览器云主机自由但得自己配钥匙>远程模式：租个“浏览器云主机”，自由但得自己配钥匙<a hidden class=anchor aria-hidden=true href=#远程模式租个浏览器云主机自由但得自己配钥匙>#</a></h2><p>给某零售客户做价格监控时，我们用 <code>mcp-remote-browser</code> 对接自建 Selenium Grid。首日上线，所有任务全挂——日志里只有模糊的 <code>net::ERR_FAILED</code>。</p><p>抓包后发现真相：<code>curl -v https://price-api.com</code> 直接报：</p><pre tabindex=0><code>SSL certificate problem: unable to get local issuer certificate
-</code></pre><p>原来我们用的 <code>selenium/hub:4.11</code> 镜像基于 Debian Bookworm，但 <code>ca-certificates</code> 包版本太老，不认 Let’s Encrypt 新根证书（ISRG Root X1）。<code>apt update && apt install -y ca-certificates</code> 重启容器后，世界清静了。</p><p>远程模式的坑，本质是“网络链路变长后，每个环节都可能掉链子”：</p><ul><li><strong>URL 地址错乱</strong>：Selenium Hub 返回的 <code>page.url</code> 是 <code>http://selenium-hub:4444/wd/hub/session/abc123/url</code>，而客户端需要的是 <code>https://client-domain.com/report/abc123</code> → 解法：在 MCP 客户端拦截 <code>page.url</code>，用正则替换内网地址为对外域名</li><li><strong>WebSocket 断连</strong>：高频滚动抓取时，30 秒超时太短 → 改环境变量：<code>MCP_REMOTE_TIMEOUT_MS=120000</code></li></ul><p>✅ <strong>必做验证</strong>：用 OpenSSL 检查证书链是否完整：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>openssl s_client -connect grid.example.com:4444 -servername grid.example.com -showcerts 2&gt;/dev/null | openssl x509 -noout -text | grep <span style=color:#e6db74>&#34;Issuer\|Subject&#34;</span>
-</span></span></code></pre></div><p>❌ <strong>绝对别碰</strong>：在远程浏览器里执行 <code>localStorage.clear()</code>。因为每个 session 是独立的 Chrome 实例，<code>clear()</code> 只清当前 tab，下次新 session 又是全新 localStorage —— 白清。</p><p>🛠️ <strong>我的 <code>docker-compose.yml</code> 关键片段</strong>（防 IP 白名单拦截）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>services</span>:
-</span></span><span style=display:flex><span>  <span style=color:#f92672>selenium-hub</span>:
-</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>selenium/hub:4.11</span>
-</span></span><span style=display:flex><span>    <span style=color:#f92672>environment</span>:
-</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps=</span>
-</span></span></code></pre></div><blockquote><p>注：空字符串 <code>whitelistedIps</code> 表示不限制，否则默认只允许 <code>127.0.0.1</code> 和 <code>localhost</code></p></blockquote><hr><h2 id=沙箱模式把浏览器关进透明玻璃房安全但手脚被绑>沙箱模式：把浏览器关进“透明玻璃房”，安全但手脚被绑<a hidden class=anchor aria-hidden=true href=#沙箱模式把浏览器关进透明玻璃房安全但手脚被绑>#</a></h2><p>最惊悚的一次：客户上传了一个 HTML 报表模板，我们用 <code>mcp-sandbox-browser</code> 渲染，结果所有 <code>window.open()</code> 全静默失败，<code>fetch('https://api.example.com')</code> 直接抛 <code>TypeError: fetch is not allowed in sandbox context</code>。</p><p>翻源码才发现：沙箱策略不是靠 CSP 头控制，而是硬编码在 <code>sandbox-config.json</code> 里：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>{
-</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;allowedOrigins&#34;</span>: [<span style=color:#e6db74>&#34;https://sandbox-api.example.com&#34;</span>],
-</span></span><span style=display:flex><span>  <span style=color:#f92672>&#34;disabledApis&#34;</span>: [<span style=color:#e6db74>&#34;window.open&#34;</span>, <span style=color:#e6db74>&#34;window.print&#34;</span>, <span style=color:#e6db74>&#34;navigator.geolocation&#34;</span>]
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>更隐蔽的坑：</p><ul><li><code>&lt;iframe srcdoc="&lt;script>document.write('hi')&lt;/script>"></code> → 触发 <code>SecurityError: Failed to execute 'write' on 'document'</code>（沙箱禁止动态文档写入）</li><li><code>window.print()</code> 不报错，也不弹窗，直接消失 → 因为沙箱禁用所有系统级 API，且无 fallback 日志</li></ul><p>✅ <strong>必做能力探测</strong>：注入 <code>sandbox-checker.js</code> 到沙箱 iframe：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#75715e>// sandbox-checker.js
-</span></span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;SharedArrayBuffer:&#34;</span>, <span style=color:#66d9ef>typeof</span> <span style=color:#a6e22e>SharedArrayBuffer</span> <span style=color:#f92672>!==</span> <span style=color:#e6db74>&#39;undefined&#39;</span>);
-</span></span><span style=display:flex><span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Permissions API:&#34;</span>, <span style=color:#66d9ef>await</span> <span style=color:#a6e22e>navigator</span>.<span style=color:#a6e22e>permissions</span>.<span style=color:#a6e22e>query</span>({<span style=color:#a6e22e>name</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#39;geolocation&#39;</span>}).<span style=color:#a6e22e>then</span>(<span style=color:#a6e22e>r</span>=&gt;<span style=color:#a6e22e>r</span>.<span style=color:#a6e22e>state</span>,()=&gt;<span style=color:#66d9ef>null</span>));
-</span></span></code></pre></div><p>❌ <strong>千万别干</strong>：<code>eval(userInput)</code>。哪怕你加了 <code>Content-Security-Policy: script-src 'none'</code>，原型污染仍可能绕过（比如篡改 <code>Function.prototype.constructor</code>）。</p><p>🛠️ <strong>我的 workaround 流程</strong>：</p><ol><li>用 <code>DOMPurify.sanitize(html, {ALLOWED_TAGS: ['div','span','table']})</code> 过滤用户 HTML</li><li>注入前，先加一层 <code>sandbox="allow-scripts allow-same-origin"</code> iframe</li><li>用 <code>MutationObserver</code> 监听 <code>iframe.contentDocument</code> 加载完成（比 <code>load</code> 事件更可靠，尤其对 <code>srcdoc</code>）</li></ol><hr><h2 id=我的终极选择逻辑三句话定乾坤>我的终极选择逻辑：三句话定乾坤<a hidden class=anchor aria-hidden=true href=#我的终极选择逻辑三句话定乾坤>#</a></h2><p>上线前，我常问自己这三句话——它们比任何架构图都管用：</p><blockquote><p><strong>“本地模式”只用在：你完全控制机器 + 需要毫秒级响应 + 不碰外部网络</strong><br>✅ 例：VS Code 插件实时渲染 Markdown 预览（延迟 >50ms 用户就感知卡顿）<br>❌ 例：爬取淘宝商品页（本地模式连不了淘宝 CDN，且会被风控）</p></blockquote><blockquote><p><strong>“远程模式”只用在：你要跑真实网络请求 + 能自主维护服务 + 接受 1~3 秒延迟</strong><br>✅ 例：每日凌晨跑 Selenium 自动化测试（可容忍重试、可升级 Grid）<br>❌ 例：用户提交表单后即时预览（延迟不可控，且运维成本高）</p></blockquote><blockquote><p><strong>“沙箱模式”只用在：输入不可信 + 输出要展示给他人 + 宁可功能残缺也要零漏洞</strong><br>✅ 例：在线代码编辑器的 HTML 预览（用户能写任意 JS，必须隔离）<br>❌ 例：内部数据看板（可信环境，沙箱反而拖慢渲染）</p></blockquote><p>最后，血泪总结上线前三件事：</p><ol><li><strong>本地模式</strong>：用 <code>strace -e trace=clone,execve,connect -p $(pgrep -f 'mcp-local-browser')</code> 抓进程行为，确认没意外 <code>connect()</code> 外网</li><li><strong>远程模式</strong>：用 <code>mitmproxy --mode upstream:https://your-grid.com:4444</code> 拦截全部流量，看有没有漏网的 <code>fetch()</code> 请求</li><li><strong>沙箱模式</strong>：用 <code>lsof -i :PORT | grep LISTEN</code> 确认沙箱进程没偷偷开监听端口（曾经有沙箱因 debug 模式暴露了 9229 端口！）</li></ol><p><img alt=三模式对比思维导图：本地（闪电图标）、远程（云朵图标）、沙箱（盾牌图标） loading=lazy src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/c9/20260327/d23adf3d/ed0cb6ce-0950-466b-878e-a7a129581e94572079452.png?Expires=1775188618&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=McGayow2ODliENMmU%2FpN6eFWFJg%3D"></p><p>现在，每当我看到 <code>ERR_CONNECTION_REFUSED</code>，第一反应不再是查 Chrome 参数——而是摸出这张便签，对着三行手写字，深呼吸，再决定：<strong>这次，到底该让浏览器住进哪个房间？</strong></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://zhitong.uk/tags/claude-code/>Claude Code</a></li><li><a href=https://zhitong.uk/tags/mcp/>MCP</a></li><li><a href=https://zhitong.uk/tags/puppeteer/>Puppeteer</a></li><li><a href=https://zhitong.uk/tags/vs-code/>VS Code</a></li><li><a href=https://zhitong.uk/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/>浏览器自动化</a></li><li><a href=https://zhitong.uk/tags/devops/>DevOps</a></li></ul></footer><script src=https://giscus.app/client.js data-repo=zhitongblog/my-blog data-repo-id=R_kgDORBRArg data-category=Announcements data-category-id=DIC_kwDORBRArs4C188Z data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=bottom data-theme=light data-lang=zh-CN crossorigin=anonymous async></script></article></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱） | 智通和你一起学AI</title>
+<meta name="keywords" content="Claude Code, MCP, Puppeteer, VS Code, 浏览器自动化, DevOps">
+<meta name="description" content="详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）
+    </h1>
+    <div class="post-description">
+      详解Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱），揭秘本地模式常见ERR_CONNECTION_REFUSED错误根源及安全配置要点，助开发者快速避坑并合理选型。
+    </div>
+    <div class="post-meta"><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="为什么我一开始死磕本地模式却连浏览器都打不开">为什么我一开始死磕“本地模式”却连浏览器都打不开？<a hidden class="anchor" aria-hidden="true" href="#为什么我一开始死磕本地模式却连浏览器都打不开">#</a></h2>
+<p>上周三下午三点十七分，我盯着 VS Code 里第 17 次报错的终端窗口，手边咖啡凉透，心里只剩一个念头：<strong>这破 <code>puppeteer-core</code> 怎么连 localhost 都连不上？</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Error: net::ERR_CONNECTION_REFUSED at http://localhost:9222/json
+</span></span><span style="display:flex;"><span>    at navigate <span style="color:#f92672">(</span>/node_modules/puppeteer-core/lib/cjs/puppeteer/common/Frame.js:138:25<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>我翻遍 Puppeteer 文档、Chrome 启动参数、Docker 网络配置，甚至重装了 Chromium……直到凌晨一点，偶然在 Claude Code 的 MCP 插件设置页底部发现一行小字：</p>
+<blockquote>
+<p>⚠️ MCP Server 默认禁用本地进程 spawn（出于安全策略），需手动启用 <code>mcp.allowLocalProcess=true</code></p>
+</blockquote>
+<p>——原来不是 Chrome 没起来，是 MCP 根本没让它起！<code>puppeteer-core</code> 在等一个永远不会出现的调试端口。</p>
+<p>那一刻我顿悟：<strong>MCP 的三种模式，根本不是“技术选型”，而是权限与上下文的分层契约。</strong></p>
+<ul>
+<li>“谁在调”？是 IDE 插件、CI 脚本，还是用户点击的按钮？</li>
+<li>“在哪调”？是开发机、K8s Pod，还是客户浏览器里的 Web Worker？</li>
+<li>“以谁的身份调”？是 root、普通用户、还是被 <code>seccomp</code> 锁死的 sandbox 用户？</li>
+</ul>
+<p>这才是真正的设计原点。</p>
+<p>下面这张对比表，是我贴在工位显示器边框上的速查便签（手写体，带咖啡渍）：</p>
+<table>
+  <thead>
+      <tr>
+          <th>场景</th>
+          <th>推荐模式</th>
+          <th>关键约束</th>
+          <th>我的便签原文</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>调试前端组件（如 Storybook 快照）</td>
+          <td>✅ 本地模式</td>
+          <td>仅限本机，无网络访问权</td>
+          <td><strong>本地=快但受限</strong></td>
+      </tr>
+      <tr>
+          <td>批量爬取公开电商页面（含 JS 渲染）</td>
+          <td>✅ 远程模式</td>
+          <td>需自维 Grid/Selenium，证书自己管</td>
+          <td><strong>远程=自由但要管证书</strong></td>
+      </tr>
+      <tr>
+          <td>渲染用户上传的 HTML 报表模板</td>
+          <td>✅ 沙箱模式</td>
+          <td>DOM 可操作，但 <code>fetch</code>/<code>open</code>/<code>print</code> 全受白名单控制</td>
+          <td><strong>沙箱=安全但没 DOM 操作权</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p><img alt="手写便签特写：本地=快但受限，远程=自由但要管证书，沙箱=安全但没 DOM 操作权" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/e2/20260327/d23adf3d/63df624d-52e4-4be0-9c69-96dee0bdfce04172597740.png?Expires=1775188602&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=2axvjNgUEPiRJFgzkWI%2FHCZ7mIE%3D"></p>
+<hr>
+<h2 id="本地模式把浏览器当自家打印机快但容易卡纸">本地模式：把浏览器当“自家打印机”，快但容易卡纸<a hidden class="anchor" aria-hidden="true" href="#本地模式把浏览器当自家打印机快但容易卡纸">#</a></h2>
+<p>给内部 BI 工具加“一键截图”时，我天真地认为 <code>mcp-local-browser</code> 就是开个 Chromium 窗口的事。结果在同事的 M1 Mac 上，脚本刚执行就弹出：</p>
+<pre tabindex="0"><code>[0512/142219.123456:FATAL:zygote_host_impl_linux.cc(117)] No usable sandbox!
+</code></pre><p>查了一圈才明白：Chromium 在 macOS ARM64 下默认要求 sandbox，但 <code>mcp-local-browser</code> 启动时没传 <code>--no-sandbox</code> —— 它压根不帮你加这个 flag。</p>
+<p>临时解法？在启动前塞环境变量：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export CHROMIUM_FLAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--no-sandbox --disable-gpu --headless=new&#34;</span>
+</span></span><span style="display:flex;"><span>npx mcp-local-browser --config ./local-config.json
+</span></span></code></pre></div><p>但治标不治本。后来我整理出本地模式三大“地域性故障”：</p>
+<ul>
+<li><strong>Windows 路径硬编码</strong>：<code>mcp-local-browser</code> 默认找 <code>C:\Program Files\Google\Chrome\Application\chrome.exe</code>，但很多企业 IT 部署的是 32 位版，实际路径是 <code>C:\Program Files (x86)\...</code> → 解法：永远用 <code>where chrome</code> 或注册表读取 <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe</code></li>
+<li><strong>Linux 容器字体缺失</strong>：Alpine 镜像里没有中文字体，<code>page.pdf()</code> 输出全是方块 → 解法：<code>apk add fonts-liberation ttf-dejavu</code>（别信 <code>fontconfig</code>，它不解决渲染）</li>
+<li><strong>调试端口冲突</strong>：有人在 <code>mcp-server</code> 启动命令里硬加 <code>--remote-debugging-port=9222</code>，结果和已运行的 Chrome 冲突 → ❌ 绝对别碰！</li>
+</ul>
+<p>✅ <strong>必做动作</strong>：写个 <code>check_browser_ready()</code> 健康检查函数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>check_browser_ready<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  local timeout<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span> <span style="color:#f92672">[</span> $timeout -gt <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> curl -s http://localhost:9222/json | jq -e <span style="color:#e6db74">&#39;.[0].id&#39;</span> &gt;/dev/null 2&gt;&amp;1; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>      echo <span style="color:#e6db74">&#34;✅ Browser ready on port 9222&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>    sleep <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">((</span>timeout--<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;❌ Browser failed to start after 30s&#34;</span> &gt;&amp;<span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><hr>
+<h2 id="远程模式租个浏览器云主机自由但得自己配钥匙">远程模式：租个“浏览器云主机”，自由但得自己配钥匙<a hidden class="anchor" aria-hidden="true" href="#远程模式租个浏览器云主机自由但得自己配钥匙">#</a></h2>
+<p>给某零售客户做价格监控时，我们用 <code>mcp-remote-browser</code> 对接自建 Selenium Grid。首日上线，所有任务全挂——日志里只有模糊的 <code>net::ERR_FAILED</code>。</p>
+<p>抓包后发现真相：<code>curl -v https://price-api.com</code> 直接报：</p>
+<pre tabindex="0"><code>SSL certificate problem: unable to get local issuer certificate
+</code></pre><p>原来我们用的 <code>selenium/hub:4.11</code> 镜像基于 Debian Bookworm，但 <code>ca-certificates</code> 包版本太老，不认 Let’s Encrypt 新根证书（ISRG Root X1）。<code>apt update &amp;&amp; apt install -y ca-certificates</code> 重启容器后，世界清静了。</p>
+<p>远程模式的坑，本质是“网络链路变长后，每个环节都可能掉链子”：</p>
+<ul>
+<li><strong>URL 地址错乱</strong>：Selenium Hub 返回的 <code>page.url</code> 是 <code>http://selenium-hub:4444/wd/hub/session/abc123/url</code>，而客户端需要的是 <code>https://client-domain.com/report/abc123</code> → 解法：在 MCP 客户端拦截 <code>page.url</code>，用正则替换内网地址为对外域名</li>
+<li><strong>WebSocket 断连</strong>：高频滚动抓取时，30 秒超时太短 → 改环境变量：<code>MCP_REMOTE_TIMEOUT_MS=120000</code></li>
+</ul>
+<p>✅ <strong>必做验证</strong>：用 OpenSSL 检查证书链是否完整：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl s_client -connect grid.example.com:4444 -servername grid.example.com -showcerts 2&gt;/dev/null | openssl x509 -noout -text | grep <span style="color:#e6db74">&#34;Issuer\|Subject&#34;</span>
+</span></span></code></pre></div><p>❌ <strong>绝对别碰</strong>：在远程浏览器里执行 <code>localStorage.clear()</code>。因为每个 session 是独立的 Chrome 实例，<code>clear()</code> 只清当前 tab，下次新 session 又是全新 localStorage —— 白清。</p>
+<p>🛠️ <strong>我的 <code>docker-compose.yml</code> 关键片段</strong>（防 IP 白名单拦截）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selenium-hub</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">selenium/hub:4.11</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">JAVA_OPTS=-Dwebdriver.chrome.whitelistedIps=</span>
+</span></span></code></pre></div><blockquote>
+<p>注：空字符串 <code>whitelistedIps</code> 表示不限制，否则默认只允许 <code>127.0.0.1</code> 和 <code>localhost</code></p>
+</blockquote>
+<hr>
+<h2 id="沙箱模式把浏览器关进透明玻璃房安全但手脚被绑">沙箱模式：把浏览器关进“透明玻璃房”，安全但手脚被绑<a hidden class="anchor" aria-hidden="true" href="#沙箱模式把浏览器关进透明玻璃房安全但手脚被绑">#</a></h2>
+<p>最惊悚的一次：客户上传了一个 HTML 报表模板，我们用 <code>mcp-sandbox-browser</code> 渲染，结果所有 <code>window.open()</code> 全静默失败，<code>fetch('https://api.example.com')</code> 直接抛 <code>TypeError: fetch is not allowed in sandbox context</code>。</p>
+<p>翻源码才发现：沙箱策略不是靠 CSP 头控制，而是硬编码在 <code>sandbox-config.json</code> 里：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;allowedOrigins&#34;</span>: [<span style="color:#e6db74">&#34;https://sandbox-api.example.com&#34;</span>],
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;disabledApis&#34;</span>: [<span style="color:#e6db74">&#34;window.open&#34;</span>, <span style="color:#e6db74">&#34;window.print&#34;</span>, <span style="color:#e6db74">&#34;navigator.geolocation&#34;</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>更隐蔽的坑：</p>
+<ul>
+<li><code>&lt;iframe srcdoc=&quot;&lt;script&gt;document.write('hi')&lt;/script&gt;&quot;&gt;</code> → 触发 <code>SecurityError: Failed to execute 'write' on 'document'</code>（沙箱禁止动态文档写入）</li>
+<li><code>window.print()</code> 不报错，也不弹窗，直接消失 → 因为沙箱禁用所有系统级 API，且无 fallback 日志</li>
+</ul>
+<p>✅ <strong>必做能力探测</strong>：注入 <code>sandbox-checker.js</code> 到沙箱 iframe：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// sandbox-checker.js
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;SharedArrayBuffer:&#34;</span>, <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">SharedArrayBuffer</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;undefined&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Permissions API:&#34;</span>, <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">permissions</span>.<span style="color:#a6e22e">query</span>({<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;geolocation&#39;</span>}).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">r</span>=&gt;<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">state</span>,()=&gt;<span style="color:#66d9ef">null</span>));
+</span></span></code></pre></div><p>❌ <strong>千万别干</strong>：<code>eval(userInput)</code>。哪怕你加了 <code>Content-Security-Policy: script-src 'none'</code>，原型污染仍可能绕过（比如篡改 <code>Function.prototype.constructor</code>）。</p>
+<p>🛠️ <strong>我的 workaround 流程</strong>：</p>
+<ol>
+<li>用 <code>DOMPurify.sanitize(html, {ALLOWED_TAGS: ['div','span','table']})</code> 过滤用户 HTML</li>
+<li>注入前，先加一层 <code>sandbox=&quot;allow-scripts allow-same-origin&quot;</code> iframe</li>
+<li>用 <code>MutationObserver</code> 监听 <code>iframe.contentDocument</code> 加载完成（比 <code>load</code> 事件更可靠，尤其对 <code>srcdoc</code>）</li>
+</ol>
+<hr>
+<h2 id="我的终极选择逻辑三句话定乾坤">我的终极选择逻辑：三句话定乾坤<a hidden class="anchor" aria-hidden="true" href="#我的终极选择逻辑三句话定乾坤">#</a></h2>
+<p>上线前，我常问自己这三句话——它们比任何架构图都管用：</p>
+<blockquote>
+<p><strong>“本地模式”只用在：你完全控制机器 + 需要毫秒级响应 + 不碰外部网络</strong><br>
+✅ 例：VS Code 插件实时渲染 Markdown 预览（延迟 &gt;50ms 用户就感知卡顿）<br>
+❌ 例：爬取淘宝商品页（本地模式连不了淘宝 CDN，且会被风控）</p>
+</blockquote>
+<blockquote>
+<p><strong>“远程模式”只用在：你要跑真实网络请求 + 能自主维护服务 + 接受 1~3 秒延迟</strong><br>
+✅ 例：每日凌晨跑 Selenium 自动化测试（可容忍重试、可升级 Grid）<br>
+❌ 例：用户提交表单后即时预览（延迟不可控，且运维成本高）</p>
+</blockquote>
+<blockquote>
+<p><strong>“沙箱模式”只用在：输入不可信 + 输出要展示给他人 + 宁可功能残缺也要零漏洞</strong><br>
+✅ 例：在线代码编辑器的 HTML 预览（用户能写任意 JS，必须隔离）<br>
+❌ 例：内部数据看板（可信环境，沙箱反而拖慢渲染）</p>
+</blockquote>
+<p>最后，血泪总结上线前三件事：</p>
+<ol>
+<li><strong>本地模式</strong>：用 <code>strace -e trace=clone,execve,connect -p $(pgrep -f 'mcp-local-browser')</code> 抓进程行为，确认没意外 <code>connect()</code> 外网</li>
+<li><strong>远程模式</strong>：用 <code>mitmproxy --mode upstream:https://your-grid.com:4444</code> 拦截全部流量，看有没有漏网的 <code>fetch()</code> 请求</li>
+<li><strong>沙箱模式</strong>：用 <code>lsof -i :PORT | grep LISTEN</code> 确认沙箱进程没偷偷开监听端口（曾经有沙箱因 debug 模式暴露了 9229 端口！）</li>
+</ol>
+<p><img alt="三模式对比思维导图：本地（闪电图标）、远程（云朵图标）、沙箱（盾牌图标）" loading="lazy" src="https://dashscope-result-sh.oss-cn-shanghai.aliyuncs.com/7d/c9/20260327/d23adf3d/ed0cb6ce-0950-466b-878e-a7a129581e94572079452.png?Expires=1775188618&OSSAccessKeyId=LTAI5tKPD3TMqf2Lna1fASuh&Signature=McGayow2ODliENMmU%2FpN6eFWFJg%3D"></p>
+<p>现在，每当我看到 <code>ERR_CONNECTION_REFUSED</code>，第一反应不再是查 Chrome 参数——而是摸出这张便签，对着三行手写字，深呼吸，再决定：<strong>这次，到底该让浏览器住进哪个房间？</strong></p>
+
+
+  </div>
+
+  
+
+
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/claude-code/">Claude Code</a></li>
+      <li><a href="http://localhost:1313/tags/mcp/">MCP</a></li>
+      <li><a href="http://localhost:1313/tags/puppeteer/">Puppeteer</a></li>
+      <li><a href="http://localhost:1313/tags/vs-code/">VS Code</a></li>
+      <li><a href="http://localhost:1313/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%87%AA%E5%8A%A8%E5%8C%96/">浏览器自动化</a></li>
+      <li><a href="http://localhost:1313/tags/devops/">DevOps</a></li>
+    </ul>
+  </footer><script src="https://giscus.app/client.js"
+        data-repo="zhitongblog/my-blog"
+        data-repo-id="R_kgDORBRArg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORBRArs4C188Z"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

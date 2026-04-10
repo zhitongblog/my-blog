@@ -1,60 +1,483 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>技术教程 | 智通和你一起学AI</title><meta name=keywords content><meta name=description content="这是智通成长的历程"><meta name=author content="智通"><link rel=canonical href=https://zhitong.uk/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/><link crossorigin=anonymous href=/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style><link rel=icon href=https://zhitong.uk/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zhitong.uk/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zhitong.uk/favicon-32x32.png><link rel=apple-touch-icon href=https://zhitong.uk/apple-touch-icon.png><link rel=mask-icon href=https://zhitong.uk/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://zhitong.uk/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/index.xml title=rss><link rel=alternate hreflang=en href=https://zhitong.uk/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "你的token"}'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586" crossorigin=anonymous></script><meta property="og:url" content="https://zhitong.uk/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"><meta property="og:site_name" content="智通和你一起学AI"><meta property="og:title" content="技术教程"><meta property="og:description" content="这是智通成长的历程"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><meta name=twitter:title content="技术教程"><meta name=twitter:description content="这是智通成长的历程"></head><body class=list id=top><header class=header><nav class=nav><div class=logo><a href=https://zhitong.uk/ accesskey=h title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zhitong.uk/ title=首页><span>首页</span></a></li><li><a href=https://zhitong.uk/posts/ title=文章><span>文章</span></a></li><li><a href=https://zhitong.uk/archives/ title=归档><span>归档</span></a></li><li><a href=https://zhitong.uk/tags/ title=标签><span>标签</span></a></li><li><a href=https://zhitong.uk/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><header class=page-header><h1>技术教程</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>Claude Code + Xcode 26.3：我用三句话描述需求，10分钟上架了首个iPhone应用</h2></header><div class=entry-content><p>准备工作：环境搭建与账号配置 开发一个能上架 App Store 的 SwiftUI 应用，第一步不是写代码，而是铺好“地基”。跳过这步或草率配置，后续 90% 的报错（签名失败、模拟器白屏、TestFlight 拒绝上传）都源于此。
-最低系统要求必须严格满足：
-macOS Sonoma 14.5 或更高版本（低于此版本无法运行 Xcode 16.3 的 Swift 5.9 运行时） Xcode 16.3（2024 年 5 月最新稳定版，支持 iOS 17.5 SDK 及 SwiftUI 新特性） Apple Developer 账号：个人账号即可完成开发、真机调试与 TestFlight 内部测试；但若需邀请外部测试员（>100 人）或正式上架，组织账号更稳妥（个人账号的 External TestFlight 需 Apple 审核邀请邮件，平均延迟 2–3 工作日） ✅ 安装验证：打开终端执行
-xcodebuild -version # 输出应为：Xcode 16.3 Build version 16E214 Apple ID 与开发者证书手动配置（关键！）：
-打开 Xcode → Preferences → Accounts → “+” 添加 Apple ID（确保该 ID 已加入 Apple Developer Program） 选择账号 → 点击右下角 “Manage Certificates…” → 点击 “+” → 选择 “Apple Development” → 自动生成签名证书 启用自动签名：新建项目后，在 Project Navigator 中选中项目根节点 → Signing & Capabilities → 勾选 “Automatically manage signing”，并选择对应 Team ⚠️ 重要注意事项：
-...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to Claude Code + Xcode 26.3：我用三句话描述需求，10分钟上架了首个iPhone应用" href=https://zhitong.uk/posts/2026-02-19-claudecodexcode263wysjhmsxq10f/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>第三步：五行八卦上手——集成本地命理算法（八字排盘逻辑）</h2></header><div class=entry-content><p>一、前置知识与环境准备 命理推演的本质是时间坐标的精密转换与关系建模，而非玄学黑箱。本方案严格遵循《渊海子平》《滴天髓》等经典框架，将八字四柱（年、月、日、时）视为一个可计算的时空坐标系——输入是用户提供的公历出生时间与地理经度（如 "1992-02-05 14:30:00", "116.4"），输出是结构化命理数据：四柱干支、十神关系、五行旺衰分值、先天八卦映射编号。整个流程完全离线运行，不依赖任何网络API，既保障用户隐私（出生信息永不离开本地），也支持无网环境下的学术复现与教学演示。
-⚠️ 关键边界声明：
-输入：datetime 对象（已带 pytz 时区） + 精确到0.1°的东经度数（如北京116.4°E，上海121.5°E） 输出：JSON 可序列化字典，含 {'year': '壬申', 'month': '壬寅', 'day': '戊辰', 'hour': '己未', 'ten_gods': [...], 'element_strength': {'wood': 0.82, ...}, 'bagua_number': 6} 必需依赖与环境配置 我们禁用所有网络请求类库（如 requests, httpx），仅选用轻量、确定性高的科学计算基础包：
-# 推荐 Python 版本：3.9+（兼容 `zoneinfo` 且避免旧版 `pytz` 时区陷阱） python3.9 -m venv bazi-env source bazi-env/bin/activate # Linux/macOS # bazi-env\Scripts\activate # Windows pip install julian pytz numpy julian：提供高精度儒略日（JD）计算，误差 &lt; 0.001秒，是节气时刻推算的基石 pytz：处理中国标准时间（CST, Asia/Shanghai）与真太阳时转换 numpy：用于五行旺衰的向量化加权计算（后续章节详述） 时区与真太阳时校正：为什么经度不可省略？ 中国全境统一使用 Asia/Shanghai（UTC+8），但真太阳时（True Solar Time）取决于实际地理经度。北京时间以东经120°为基准，每偏离1°，时间差约4分钟。例如：
-...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第三步：五行八卦上手——集成本地命理算法（八字排盘逻辑）" href=https://zhitong.uk/posts/2026-02-19-dsbwxbgssjcbdmlsfbzpplj/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型</h2></header><div class=entry-content><p>准备工作：环境与工具配置 在正式进入命理应用开发前，必须搭建一个稳定、可预测、与 Claude Code 高度协同的开发环境。这不是简单的“装好 Xcode 就行”，而是为 AI 编程建立清晰的边界和契约——让 Claude 知道它在什么系统上运行、用什么语法、遵循什么约束。
-首先，确认你的 macOS 版本 ≥ Ventura（13.0），并在终端执行以下命令验证 Xcode 命令行工具完整性：
-xcode-select --install # 若提示已安装，则跳过；否则按向导完成安装 sw_vers && xcodebuild -version ✅ 正确输出应类似：
-ProductName: macOS ProductVersion: 14.5 BuildVersion: 23F79 Xcode 15.4 Build version 15F31d 接着，下载并安装 Cursor IDE（v0.48+ 推荐）。它对 Claude Code 的集成最成熟：打开设置 → Settings → Extensions → 搜索 “Claude Code” → 启用插件。API Key 配置入口位于：
-Settings → Extensions → Claude Code → API Key（⚠️ 不是 Cursor 自带的 “Claude” 插件，务必认准官方图标）
-...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第二步：零代码起步——用Claude Code生成SwiftUI骨架与命理数据模型" href=https://zhitong.uk/posts/2026-02-19-debldmqbyclaudecodescswiftuigj/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>第五步：隐私即信仰——在iOS中安全存储生辰与命理结果（Keychain+CoreData）</h2></header><div class=entry-content><p>一、为什么“生辰与命理数据”必须用Keychain而非UserDefaults或普通文件？ 在命理类App中，用户输入的「出生时间（Date）」和「出生地点（String）」看似普通，实则构成生物识别级敏感信息链：精确到分钟的出生时间 + 城市级地点 → 可反推经纬度（误差≤1km）、本地时区、真太阳时（影响八字排盘精度），甚至结合公开气象数据库推算出生时刻光照/地磁参数。这已远超《个人信息保护法》第二十八条定义的“敏感个人信息”范畴——它具备强唯一性、不可变更性与高度可识别性。
-而明文存储风险触目惊心：
-UserDefaults 和 plist 文件以明文形式存于沙盒 Library/Preferences/，越狱设备可通过 iMazing 或 Apple Configurator 2 直接导出全部键值； 沙盒内普通 .json 文件在备份时（iTunes/iCloud）被完整打包，若用户启用“未加密本地备份”，攻击者仅需访问其Mac电脑即可读取所有命理数据； CoreData 默认 SQLite 数据库不启用加密（即使勾选“Use Core Data for storage”，其 .sqlite 文件仍为明文）。我们曾复现某款八字App泄露事件：攻击者通过越狱iPhone提取沙盒，用 DB Browser for SQLite 打开 PersistentStore.sqlite，直接看到 birth_year INTEGER, birth_city TEXT 等明文字段，批量导出超2.3万用户生辰数据并在暗网出售。 Apple官方文档明确指出：“Keychain Services provides a secure container for storing small pieces of sensitive data, such as passwords and cryptographic keys. Items stored in the keychain are encrypted by the system and protected with the user’s device passcode.”（Keychain Services Programming Guide）——其核心是系统级加密隔离：Keychain条目由Secure Enclave协同加密，即使设备被越狱且获得root权限，也无法解密其他应用的Keychain数据。
-...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第五步：隐私即信仰——在iOS中安全存储生辰与命理结果（Keychain+CoreData）" href=https://zhitong.uk/posts/2026-02-19-dwbysjxyzioszaqccscymljgkeycha/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>第六步：App Store通关指南——用Claude Code撰写审核文案、截图说明与元数据</h2></header><div class=entry-content><p>🎯 为什么审核文案、截图与元数据决定App Store上架成败 Apple 审核团队每年处理超 200 万次提交，而据《2023 App Store 审核透明度报告》及第三方审计机构 (AppFigures, 2024) 统计，在所有「首次提交即被拒」的案例中，72% 的拒绝直接源于元数据、截图或审核文案问题——而非崩溃、卡顿或隐私违规等技术缺陷。更关键的是：这些「非功能类拒审」100% 可通过前置合规优化规避。
-这背后有明确的规则依据。Apple《App Review Guidelines》明文约束：
-第4.3条（重复应用）：要求元数据（标题、副标题、描述）必须真实反映核心功能，禁止使用泛化词（如“all-in-one”）、排名宣称（“#1 app”）或模糊价值主张； 第5.1.1条（隐私说明）：截图若展示权限弹窗（如相册/定位），审核文案必须同步说明触发路径与用途； 第5.2.3条（截图规范）：每张截图需配15–30字符说明，且必须体现真实 UI 状态（禁用占位符、模糊水印、未完成动效）。 ![对比真实案例：左侧为模糊截图+通用文案导致被拒；右侧为场景化截图+Claude生成的精准文案一次过审]
-我们曾跟踪两个同架构工具类 App 的提交记录：
-App A（被拒）：截图仅用 iPhone 模拟器默认背景，文案写“Login to get started”；因无法验证登录流程真实性，被援引 5.1.1 条拒审； App B（一次过审）：截图聚焦「Tab Bar > Profile > Export Button」操作链，文案由 Claude Code 生成：“Demo account with pre-filled credentials logs in automatically → taps ‘Export’ in top-right corner → selects PDF format → confirms via system share sheet”。全程无主观形容词，全用 iOS 原生控件命名，48 小时内通过审核。 为何 Claude Code 在此场景胜出？它并非通用大模型，而是专为开发者工作流优化的 CLI 工具：
-...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第六步：App Store通关指南——用Claude Code撰写审核文案、截图说明与元数据" href=https://zhitong.uk/posts/2026-02-19-dlbappstoretgznyclaudecodezxsh/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>第四步：丝滑动效加持——用Claude Code优化Lottie动画与交互反馈</h2></header><div class=entry-content><p>一、前置准备：环境搭建与依赖确认 在开始优化 Lottie 动效前，必须确保开发环境干净、工具链统一、AI 辅助能力就绪——这直接决定后续重构效率与代码质量。我们不追求“能跑就行”，而是为可维护、可压测、可回滚的动效系统打下基础。
-首先检查 Node.js 版本（Lottie Web v2.12+ 及现代 React/Vue 生态强烈依赖 ES2022+ 特性）：
-node -v # 必须 ≥ v18.0.0（推荐 v20.11+） npm -v # npm ≥ 9.6，或使用 pnpm ≥ 8.15（更稳定） 接着安装核心依赖。根据技术栈选择其一（不建议混用）：
-✅ React 项目：优先选用 lottie-react（轻量、TypeScript 原生支持、自动销毁） npm install lottie-react # 或按需引入 lottie-web（更灵活但需手动管理生命周期） npm install lottie-web ✅ Vue 3 / 原生 Web：直接使用 lottie-web ✅ 轻量替代方案（静态/简单交互动效）：@lottiefiles/lottie-player（Web Component，零 JS bundle 开销） npm install @lottiefiles/lottie-player 图：lottie-web、lottie-react、lottie-player 适用场景对比（体积/控制粒度/SSR 支持）
-Claude Code 配置是本教程的关键加速器。我们强烈推荐使用 VS Code 官方扩展 “Claude Code”（v1.4+），并完成以下配置：
-...</p></div><footer class=entry-footer><span title='2026-02-19 10:02:44.713 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 第四步：丝滑动效加持——用Claude Code优化Lottie动画与交互反馈" href=https://zhitong.uk/posts/2026-02-19-dsbshdxjcyclaudecodeyhlottiedh/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成</h2></header><div class=entry-content><p>1. 前置准备：环境与权限校验 在正式启用 Claude 智能编程能力前，务必完成严谨的环境校验——这一步看似琐碎，却直接决定后续所有功能是否稳定可用。尤其对国内开发者而言，网络与权限配置是高频卡点。
-首先，确认 VS Code 版本 ≥ 1.85（2023年12月发布）。该版本起全面支持 Webview2 渲染引擎与 Language Server Protocol v18+，而 Claude Code 扩展依赖这两项底层能力实现低延迟交互与富文本响应。检查方式：Ctrl+Shift+P → 输入 Help: About → 查看第一行版本号。若低于 1.85，请前往 code.visualstudio.com 下载最新稳定版。
-接着，获取 Anthropic API Key：
-访问 Anthropic Console（需科学访问，国内用户建议配置系统级代理或使用可信企业级代理服务）； 注册/登录账户后，进入 API Keys → 点击 Create Key； 在 Key 名称中注明用途（如 vscode-claude-prod），生成后立即复制并安全保存（页面关闭后无法再次查看）； ✅ 推荐模型：claude-3-haiku-20240307（轻量、快响应，适合补全）或 claude-3-5-sonnet-20240620（强逻辑、长上下文，适合文档生成）。 验证 API 连通性（终端执行）：
-# 将 YOUR_API_KEY 替换为实际密钥（不带引号） export ANTHROPIC_API_KEY="sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" curl -X POST "https://api.anthropic.com/v1/messages" \ -H "x-api-key: ${ANTHROPIC_API_KEY}" \ -H "anthropic-version: 2023-06-01" \ -H "content-type: application/json" \ -d '{ "model": "claude-3-haiku-20240307", "max_tokens": 50, "messages": [{"role": "user", "content": "输出 OK"}] }' ✅ 成功响应将返回 JSON，含 "content":[{"type":"text","text":"OK"}]。若报 401 Unauthorized，请检查 Key 是否过期或被撤销；若超时（curl: (7) Failed to connect），请确认代理已全局生效（VS Code 需继承系统代理，可在设置中搜索 proxy 启用 http.proxySupport: override）。
-...</p></div><footer class=entry-footer><span title='2026-02-19 07:47:37.687 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 工程化进阶：在VS Code中深度集成Claude Code实现智能补全与文档生成" href=https://zhitong.uk/posts/2026-02-19-gchjjzvscodezsdjcclaudecodesxz/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力</h2></header><div class=entry-content><p>引言：为什么精准提问对Claude Code至关重要 Claude 3.5 Sonnet（尤其是其专为代码优化的 claude-3-5-sonnet-latest）在代码理解任务中展现出显著优势：它对Python类型提示、TypeScript接口推导、Django/Flask框架模式识别准确率比通用LLM高42%（Anthropic内部基准测试，2024 Q2），且能稳定处理长达200K token的上下文——但强大能力不等于鲁棒响应。模糊提问会直接触发模型的“安全退避机制”，导致输出泛化、遗漏关键路径，甚至虚构API行为。
-典型失败场景俯拾皆是：
-❌ “修一下这个bug” → 模型无法定位未提供的异常堆栈或复现步骤； ❌ “优化这段代码” → 无性能指标（QPS/内存/延迟）、无约束条件（可读性优先？还是CPU热点？），结果可能用functools.lru_cache掩盖了根本的N+1查询问题； ❌ “解释这段代码” → 未声明粒度（函数级？数据流级？安全语义级？），返回变成教科书式语法复述，漏掉os.path.join()在Windows路径拼接中的空字节注入风险。 来看一个真实对比案例（基于Flask路由函数）：
-# 原始模糊Prompt： # “解释下面这段代码” def upload_file(): file = request.files['file'] filename = secure_filename(file.filename) file.save(os.path.join('/tmp', filename)) return jsonify({"status": "ok"}) → Claude Code响应（简化）：
-“这是一个文件上传路由，使用Flask接收文件，调用secure_filename过滤文件名，保存到/tmp目录并返回JSON。”
-⚠️ 缺失关键信息：未指出/tmp硬编码路径的安全隐患（任意用户可覆盖系统临时文件）、未警示request.files['file']缺少Content-Type校验、未说明secure_filename对Unicode路径的处理缺陷。
-而结构化Prompt：
-# ROLE: 资深Python安全工程师，专注Web应用渗透测试 # CONTEXT: Flask 2.3.3, Werkzeug 2.3.7, Python 3.11 # TASK: 按OWASP Top 10标准逐行标注安全风险点，明确漏洞类型、利用条件、修复建议 # CONSTRAINTS: 仅输出Markdown表格，含列：行号 | 代码片段 | 风险类型 | CVSSv3评分 | 修复方案 # EXAMPLE: # | 3 | file = request.files['file'] | 失效的访问控制 | 6.5 | 添加@auth_required装饰器并校验用户角色 | → 响应精准命中5处风险（含/tmp目录遍历、secure_filename绕过、MIME类型缺失等），并提供对应CVE编号与修复代码片段。
-...</p></div><footer class=entry-footer><span title='2026-02-19 04:51:18.727 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 精准提问的艺术：用Prompt Engineering驾驭Claude Code的代码理解力" href=https://zhitong.uk/posts/2026-02-19-jztwdysypromptengineeringjycla/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码</h2></header><div class=entry-content><p>一、准备工作：配置Claude Code环境与接入遗留项目 在接手一个上线8年、无文档、测试覆盖率&lt;5%的电商订单系统时，第一步不是写代码——而是让Claude Code真正“读懂”它。我们以VS Code为首选IDE（官方插件仅正式支持VS Code，JetBrains系列暂未开放集成），确保环境干净可控。
-✅ 安装与激活（附截图指引）
-打开VS Code → Extensions（Ctrl+Shift+X）→ 搜索 Claude Code（开发者：Anthropic，非“Claude Assistant”或“CodeWithClaude”等第三方） 点击 Install → 重启VS Code 首次启动后，右下角弹出配置向导 → 点击 “Configure API Key” → 粘贴从 console.anthropic.com 获取的 sk-ant-api03-... 密钥（⚠️切勿提交至Git！建议存入系统密钥链） 📁 配置文件详解（.claude-code/config.json）
-在项目根目录创建 .claude-code/config.json，关键字段需显式声明：
-{ "model": "claude-3-5-sonnet-20240620", "maxTokens": 2048, "contextWindowSize": 16384, "temperature": 0.1 } model：强制指定高精度模型（Sonnet 3.5在代码理解上显著优于Haiku） contextWindowSize：设为16384可覆盖中型模块（如含5个.py文件的Django app），避免截断关键上下文 🚫 精准排除干扰项（.claude-code/ignore.json）
-遗留项目常含巨型node_modules/（20GB+）、dist/构建产物、logs/实时日志。创建忽略规则：
-{ "patterns": [ "**/node_modules/**", "**/dist/**", "**/logs/*.log", "**/*.min.js", "**/coverage/**" ], "maxFileSizeMB": 5 } ⚠️ 安全红线：
-禁用 Send clipboard content automatically（设置 → Claude Code → 取消勾选） 内网环境禁用 Auto-upload error stack traces，防止/var/log/app/路径泄露 敏感项目根目录名勿含prod-cred、bank-key等关键词（Claude可能在上下文摘要中提取） 二、读懂遗留代码：用Claude Code做结构化代码理解 面对一段无注释、变量名全为a, b, tmp的Python支付处理函数，传统方式需逐行调试2小时；Claude Code可将其转化为可执行文档。
-...</p></div><footer class=entry-footer><span title='2026-02-19 04:51:18.727 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 重构与调试利器：让Claude Code帮你读懂、优化和修复遗留代码" href=https://zhitong.uk/posts/2026-02-19-zgydslqrclaudecodebnddyhhxfyld/></a></article><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>快速上手：5分钟配置Claude Code并完成首个代码生成任务</h2></header><div class=entry-content><p>1. 前置准备：环境与权限检查 在正式接入 Claude Code（Anthropic 官方推出的代码专用智能体，区别于通用聊天接口 claude-3-opus 等模型）前，请务必完成以下环境核查。这一步看似简单，却是后续所有操作稳定运行的基石——许多“无法登录”“生成失败”问题，80% 源于前置条件未满足。
-✅ 系统与硬件要求
-操作系统：macOS 12 Monterey 或更高版本（推荐 macOS 14 Sonoma）、Windows 10 22H2 / Windows 11（需启用 WSL2 支持可选）、Linux x64（Ubuntu 20.04+、Debian 11+，内核 ≥5.4） 内存：≥8GB RAM（若同时运行 VS Code + 浏览器 + 数据分析任务，建议 ≥16GB） 磁盘空间：桌面 App 占用约 350MB；VS Code 插件仅 12MB，但缓存会随使用增长 ✅ 软件依赖检查
-若使用 OAuth 登录流程（推荐方式），请确保已安装最新版 Chrome（v122+）或 Firefox（v123+）。旧版浏览器可能因 OAuth 2.1 协议不兼容导致授权中断。 若选择 VS Code 插件路径，请确认已安装 VS Code 1.85+（2024 年初起强制要求支持 WebAssembly 的新版 Electron 内核）。可通过 Help → About 查看版本号。 ✅ 账户与网络准入
-...</p></div><footer class=entry-footer><span title='2026-02-19 04:37:13.947 +0000 UTC'>February 19, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer><a class=entry-link aria-label="post link to 快速上手：5分钟配置Claude Code并完成首个代码生成任务" href=https://zhitong.uk/posts/2026-02-19-ksss5fzpzclaudecodebwcsgdmscrw/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://zhitong.uk/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/>«&nbsp;Prev&nbsp;
-</a><a class=next href=https://zhitong.uk/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/page/3/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2026 <a href=https://zhitong.uk/>智通和你一起学AI</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>技术教程 | 智通和你一起学AI</title>
+<meta name="keywords" content="">
+<meta name="description" content="这是智通成长的历程">
+<meta name="author" content="智通">
+<link rel="canonical" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a97c7316fca682b791318bb538ae5a43c0fe7f25d31ab76588fe2683635ff044.css" integrity="sha256-qXxzFvymgreRMYu1OK5aQ8D&#43;fyXTGrdliP4mg2Nf8EQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "你的token"}'></script>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7786364053868586"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="智通和你一起学AI (Alt + H)">智通和你一起学AI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    技术教程
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">告别Copilot式辅助！Agentic Coding真正在终端跑起来：Claude Code从Hello World到生产级智能体部署
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 前置准备：环境搭建与权限配置 在启动你的第一个 Claude 终端智能体前，请确保本地开发环境已就绪。本节将带你完成零歧义、可验证的初始化流程——所有步骤均经 macOS (M3)、Ubuntu 22.04 和 Windows WSL2 实测通过。
+✅ 必备依赖清单 Python ≥ 3.10（推荐 3.11&#43;，anthropic 官方支持最稳定） 终端工具链：curl（验证 API 连通性）、jq（解析 JSON 响应）、git（后续克隆示例仓库） pip 包管理器（建议升级至最新：pip install -U pip） 执行以下一键校验脚本，5 秒内确认全部就绪：
+# 复制粘贴到终端运行 echo &#34;=== 环境自检 ===&#34; &amp;&amp; \ python -c &#34;import sys; assert sys.version_info &gt;= (3,10), &#39;Python &lt; 3.10&#39;; print(&#39;✅ Python OK&#39;)&#34; 2&gt;/dev/null || echo &#34;❌ Python 版本过低&#34; &amp;&amp; \ command -v curl jq git &gt;/dev/null 2&gt;&amp;1 &amp;&amp; echo &#34;✅ curl/jq/git OK&#34; || echo &#34;❌ 缺少基础工具&#34; &amp;&amp; \ python -c &#34;import anthropic; print(&#39;✅ anthropic SDK OK&#39;)&#34; 2&gt;/dev/null || echo &#34;❌ anthropic 未安装：pip install anthropic==0.35.0&#34; 💡 Mac M系列特别提示：pip install anthropic 可能因编译问题失败。请强制指定兼容版本：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-30 02:07:48.34 +0000 UTC'>March 30, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 告别Copilot式辅助！Agentic Coding真正在终端跑起来：Claude Code从Hello World到生产级智能体部署" href="http://localhost:1313/posts/2026-03-30-gbcopilotsfzagenticcodingzzzzd/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">不写一行JS，也能做自动化测试：前端工程师用Claude Code完成全流程回归验证
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>起因：我们被“回归测试”拖垮的那周 那是上个月17号，周五晚九点。
+服务器监控告警刚消，产研群消息已炸成红色瀑布流：“支付成功率跌到92%！”“订单页价格显示为NaN！”“发票模块白屏！”——三个紧急热修复塞进发布窗口，外加两个UI组件重构（Ant Design 5.x 升级引发的表单校验链断裂）。
+我打开测试清单：27个核心路径，从登录态保持、搜索联想、购物车增删，到跨端同步、异常网络兜底……全靠手动点。四人轮班，手机支架架在MacBook上录屏，咖啡机24小时待命。凌晨两点，小王在测“优惠券叠加逻辑”，漏掉了“满300减50&#43;店铺红包”组合下，结算页底部“立减¥50”文案未高亮；凌晨三点，我卡在“发票申请表单提交后，邮箱校验提示应为红色且聚焦”，却忘了验证“连续两次错误输入后，防暴击锁30秒”的交互状态。
+崩溃发生在三点十七分。我盯着Playwright控制台里第12次重跑的test:regression套件，看着它又花47秒加载整个首页、跳转用户中心、展开侧边栏、点击“开发设置”——就为了验证一个按钮颜色从#1890ff改成了#1677ff。
+我抓起保温杯砸向软垫（没真砸），吼出那句后来被截图传遍公司IM群的话：
+“连改个按钮颜色都要重跑整套E2E？这哪是测试，这是体力活！”
+就在我瘫在椅子上刷手机想转移注意力时，手指无意识点开了Claude Code的网页版，把一段刚写的、带三处waitForSelector的脚本粘了进去。它没直接给答案，反而弹出一句反问：
+“你是否考虑过用自然语言描述验证逻辑，由AI生成可执行断言？”
+我愣住。手指悬在键盘上方三秒。
+不是“怎么写代码”，而是“怎么说人话”。
+那一刻，我忽然意识到：我们花了80%时间把需求翻译成Playwright语法，却只留20%时间思考——这个需求，到底值不值得测？
+尝试：从“写代码”到“说人话”的第一次迁移 我翻出Confluence里那份叫《V2.3核心回归用例》的Word表格——最后编辑时间是2021年8月，作者是已离职的前QA leader。里面写着：
+搜索功能：输入关键词，展示结果，数据应合理 订单页：价格计算正确，支持修改数量 发票申请：邮箱格式校验，错误时提示明确 我把整页复制进Claude，写下prompt：
+“请基于以下业务规则，生成可在Playwright中直接运行的端到端断言代码，不修改页面交互步骤，只补充验证逻辑。所有选择器必须使用data-testid，禁用ID和class。若规则表述模糊，请先追问业务含义。”
+它立刻回问：
+❓ “‘数据应合理’具体指什么？例如：搜索‘苹果’是否应排除‘苹果手机’？结果数是否需大于0？是否有排序规则（如销量优先）？”
+我愣了——这问题直戳痛点。我拉上产品经理，在茶水间白板上画了15分钟：原来“合理”=“匹配度&gt;0.7且按GMV降序”，而这条规则，三年来只存在于他脑内。
+接着它输出代码。但第一版栽在选择器上：
+// ❌ AI默认生成（错！项目不用id） await page.waitForSelector(&#39;div#loading&#39;); expect(await page.locator(&#39;span.price&#39;).textContent()).toContain(&#39;¥&#39;); 而我们项目规范是：
+// ✅ 正确写法（data-testid） await page.locator(&#39;[data-testid=&#34;loading-spinner&#34;]&#39;).waitFor({ state: &#39;visible&#39; }); expect(await page.locator(&#39;[data-testid=&#34;product-price&#34;]&#39;).textContent()).toContain(&#39;¥&#39;); 踩坑总结：AI没有上下文记忆。你没给它CSS规范文档，它就按Stack Overflow最高票答案猜。
+实战：用Claude Code跑通真实回归流水线 我们决定拿最痛的“搜索结果页”开刀。流程如下：
+Step 1：语音转文字，拒绝脑内编译
+我打开iPhone语音备忘录，对着麦克风说：
+“搜索框输入‘发票’，结果页顶部显示‘共12条匹配’，且第1条标题含‘电子发票’字样，点击第1条后URL包含/invoice/detail?id=，页面标题是‘电子发票详情’。”
+转文字后粘贴进Claude，加一句：
+“生成Playwright断言块，要求：1）使用locator.waitFor({ state: &#39;visible&#39; })替代waitForTimeout；2）对文本断言加.trim()；3）URL校验用正则，注释说明匹配逻辑。”
+Step 2：Claude输出（带注释，可直接抄）
+// ✅ 验证搜索结果总数（容错：空格、换行、中文数字） const totalCount = await page.locator(&#39;[data-testid=&#34;search-result-count&#34;]&#39;).textContent(); expect(totalCount?.trim()).toMatch(/共\s*\d&#43;\s*条匹配/); // ✅ 验证首条标题含关键词（避免误匹配“纸质发票”） const firstTitle = await page.locator(&#39;[data-testid=&#34;search-result-item&#34;]&#39;).first().locator(&#39;h3&#39;).textContent(); expect(firstTitle?.trim()).toContain(&#39;电子发票&#39;); // ✅ 验证跳转URL（正则确保?id=后跟数字） await page.locator(&#39;[data-testid=&#34;search-result-item&#34;]&#39;).first().click(); await page.waitForURL(/\/invoice\/detail\?id=\d&#43;/); expect(await page.title()).toBe(&#39;电子发票详情&#39;); Step 3：注入现有测试文件，仅改2处变量名
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 不写一行JS，也能做自动化测试：前端工程师用Claude Code完成全流程回归验证" href="http://localhost:1313/posts/2026-03-27-bxyxjsynzzdhcsqdgcsyclaudecode/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>为什么我一开始死磕“本地模式”却连浏览器都打不开？ 上周三下午三点十七分，我盯着 VS Code 里第 17 次报错的终端窗口，手边咖啡凉透，心里只剩一个念头：这破 puppeteer-core 怎么连 localhost 都连不上？
+Error: net::ERR_CONNECTION_REFUSED at http://localhost:9222/json at navigate (/node_modules/puppeteer-core/lib/cjs/puppeteer/common/Frame.js:138:25) 我翻遍 Puppeteer 文档、Chrome 启动参数、Docker 网络配置，甚至重装了 Chromium……直到凌晨一点，偶然在 Claude Code 的 MCP 插件设置页底部发现一行小字：
+⚠️ MCP Server 默认禁用本地进程 spawn（出于安全策略），需手动启用 mcp.allowLocalProcess=true
+——原来不是 Chrome 没起来，是 MCP 根本没让它起！puppeteer-core 在等一个永远不会出现的调试端口。
+那一刻我顿悟：MCP 的三种模式，根本不是“技术选型”，而是权限与上下文的分层契约。
+“谁在调”？是 IDE 插件、CI 脚本，还是用户点击的按钮？ “在哪调”？是开发机、K8s Pod，还是客户浏览器里的 Web Worker？ “以谁的身份调”？是 root、普通用户、还是被 seccomp 锁死的 sandbox 用户？ 这才是真正的设计原点。
+下面这张对比表，是我贴在工位显示器边框上的速查便签（手写体，带咖啡渍）：
+场景 推荐模式 关键约束 我的便签原文 调试前端组件（如 Storybook 快照） ✅ 本地模式 仅限本机，无网络访问权 本地=快但受限 批量爬取公开电商页面（含 JS 渲染） ✅ 远程模式 需自维 Grid/Selenium，证书自己管 远程=自由但要管证书 渲染用户上传的 HTML 报表模板 ✅ 沙箱模式 DOM 可操作，但 fetch/open/print 全受白名单控制 沙箱=安全但没 DOM 操作权 ...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-27 12:57:16.542 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 开发者速查手册：Claude Code调用浏览器的3种MCP集成模式（本地/远程/沙箱）" href="http://localhost:1313/posts/2026-03-27-kfzscscclaudecodedyllqd3zmcpjc/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">不写一行代码也能跑OpenClaw：基于QMT的低门槛AI策略部署实战
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、什么是“不写代码也能跑AI策略”？——先建立一个生活化认知 你有没有用过智能电饭煲？
+按下「快煮」按钮，30分钟后一锅软糯喷香的米饭就端上桌了。你不需要知道它内部的温度传感器怎么校准、PID算法如何调节加热功率、甚至不用看懂电路板上密密麻麻的焊点——但你确实在使用一套精密的自动化系统。
+“不写代码也能跑AI策略”，就是这么一回事。
+它不是让AI代替你思考，也不是把编程藏起来偷偷帮你写；而是把已经验证过的AI交易逻辑（比如“用多模态特征识别反转信号”“基于市场情绪动态调整仓位”），封装成像“煮饭模式”一样可点击、可调节、可验证的标准化组件。
+这里有两个常见误解，我们先轻轻拨开：
+❌ 误解1：“AI策略=必须会Python”
+→ 实际上，就像你不需要会造芯片才能用手机，AI策略的“大脑”早已由专业团队训练好、测试好、打包好。你操作的是它的“遥控器”，不是它的“脑干”。
+❌ 误解2：“量化交易=敲代码调参数”
+→ 这是2015年的玩法。今天的QMT&#43;OpenClaw组合，已把策略部署变成类似安装微信小程序：下载、拖入、点启用——全程无终端、无pip install、无requirements.txt。
+✅ 真正的核心价值只有一句：
+把AI策略从「实验室论文」变成「厨房里的调味罐」——打开盖子，闻一闻、尝一尝、换一种配比，就能立刻知道效果。
+二、认识你的两个新朋友：OpenClaw 和 QMT 是谁？ 想象你走进一间设备崭新、中文菜单清晰、连抽油烟机都带语音提示的智能厨房——这就是 QMT。
+它由中信证券等头部券商免费提供（注意：不是某宝99元的第三方平台），原生支持A股/期货/可转债行情、毫秒级下单、全周期回测、策略管理、实盘风控，界面全是中文按钮和表格，连“委托状态”都标着「已报」「部成」「已撤」这样的大白话。
+而 OpenClaw，是你在厨房里打开的第一个调料柜——里面整整齐齐码着几包“AI策略调料包”：
+trend_boost_v2.json → 主攻强势股延续行情的AI模型 mean_reversion_ai.dll → 专治超跌反弹的风控引擎 risk_guard.cfg → 动态仓位控制器，像自动限流阀 它不是黑箱API，而是开源项目（GitHub可查源码），所有逻辑透明可验；它也不是要你从头训练模型，而是把已在万只股票、十年数据上跑通的AI能力，压缩成几个文件扔进QMT就能用。
+✅ 一句话记住它们：
+QMT = 你的智能厨房（工具）｜OpenClaw = 厨房里预配好的AI调料包（策略）
+三、准备工作：3分钟搞定所有“入场装备” 别被“AI”“量化”吓住——这比装一个微信还简单。你只需要4样东西，且全部免费、无需编程基础：
+物品 说明 是否必须 ✅ 一台Windows电脑（Win10/Win11） Mac/Linux暂不支持QMT专业版 必须 ✅ 券商账户（支持QMT） 中信、华泰、国泰君安等32家券商已接入，开户时勾选「QMT权限」即可 必须 ✅ QMT专业版客户端 官网下载，安装过程≈点「下一步」5次 必须 ✅ OpenClaw策略包 点击下载v2.1正式版（百度网盘）｜提取码：aiqmt｜SHA256校验值：a1f...e8c 必须 📌 关键提醒：
+❌ 不需要安装Python / Anaconda / Visual Studio ❌ 不需要配置环境变量、修改注册表、编译C&#43;&#43; ✅ 安装QMT后，双击桌面图标即登录——输入券商资金账号&#43;交易密码，5秒进系统 💡 小技巧：在中信证券官网 →「服务支持」→「软件下载」→ 搜索「QMT专业版」→ 下载「Windows_x64」版本（别选“极速版”或“轻量版”，它们不支持OpenClaw）。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-10 04:01:48.148 +0000 UTC'>March 10, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 不写一行代码也能跑OpenClaw：基于QMT的低门槛AI策略部署实战" href="http://localhost:1313/posts/2026-03-10-bxyxdmynpopenclawjyqmtddmkaicl/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenClaw实战指南：零代码部署你的7×24小时A股AI盯盘机器人
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>为什么我放弃自研，转投OpenClaw？——一个被K线图逼疯的散户自白 2023年春天，我信誓旦旦地在朋友圈发了一条：“用Python&#43;AkShare搭个自己的盯盘机器人，不求暴富，只求不漏掉中科曙光的第三次涨停。”结果三个月后，我在凌晨2:17对着满屏ConnectionResetError和一封来自券商的“您的IP因高频请求被临时封禁”邮件，默默删掉了第3版脚本的Git仓库。
+真实崩溃三连击，至今想起手还抖：
+🔹 交易所接口限流：AkShare走的是公开网页抓取，上交所某天突然加了Cloudflare人机验证，我的get_daily()直接返回403——而我当时正用它做5分钟级别实时扫描；
+🔹 盘中突发停牌没通知：3月8日午后，某AI概念股毫无征兆停牌，我的脚本还在疯狂重试get_tick()，导致后续12只股票行情全乱序；
+🔹 本地电脑休眠导致漏单：最讽刺的是——我设好条件单后去煮泡面，回来发现Mac自动休眠，WebSocket心跳断了17分钟，错过当日唯一一次有效突破信号。
+踩坑复盘时我列了张表，光「网络层可靠性」就写了19项：手动维护WebSocket心跳间隔、断线后重连退避策略（指数级还是固定？）、行情消息去重（同一笔tick被推送两次怎么办？）、连接状态广播、超时熔断……光是调试socket.setdefaulttimeout(3.5)和requests.adapters.HTTPAdapter(max_retries=2)的组合效果，我就耗掉整整27小时——最后发现，问题根本不在代码，而在“谁来保证这段代码永远活着”。
+关键转折发生在某个加班到凌晨的GitHub深夜。我搜quant live trading restart，点进OpenClaw仓库，一眼扫到README里那行命令：
+claw run --auto-restart 点开文档才明白：这不是简单的systemd restart=always，而是进程守护 &#43; 异常堆栈快照回溯 &#43; 行情断点续传 &#43; 日志时间轴对齐——它甚至能在我服务器断电重启后，自动从最后一笔已确认的SH600XXX行情继续拉取，而不是从头开始同步。
+那一刻我意识到：自研不是写不出功能，而是扛不住“7×24无人值守”这个前提。OpenClaw不是“能跑”，是敢扔给服务器不管。
+下面这张对比表，是我用血泪换来的认知升级（重点标红项，全是零代码开箱即得）：
+能力维度 自研方案（我的3版脚本） OpenClaw开箱能力 ✅ 进程存活保障 supervisord配置失败3次，仍会静默退出 --auto-restart 原生支持，崩溃秒级复活 断网断电续传 需手动记录last_seq_id，极易丢数据 行情断点自动持久化，重启后无缝衔接 多交易所心跳管理 手写ping/pong逻辑，易被防火墙拦截 内置多协议心跳（SSE/WebSocket/HTTP长轮询） 日志可追溯性 print()混杂，无法定位某次误报源头 claw logs --since &#34;2024-03-12T10:20&#34; 精确回放 时区与开盘校准 手动算A股9:15/9:25/9:30/11:30/14:57… 内置交易所交易日历，自动跳过休市时段 告警通道热插拔 改代码→重部署→等服务重启 claw config set notify.webhook_url=xxx 即刻生效 内存泄漏防护 RSS涨到2.1G后OOM killer干掉进程 --memory-limit 800m &#43; 自动优雅重启 零代码部署实录：从下载到盯盘成功，我只用了19分钟（含泡面时间） 别信“5分钟快速上手”的宣传语——那是作者在MacBook Pro上测的。我的实战环境是阿里云ECS（2C4G Ubuntu 22.04），以下是真正避过所有坑的流水账：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-09 09:23:33.113 +0000 UTC'>March 9, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to OpenClaw实战指南：零代码部署你的7×24小时A股AI盯盘机器人" href="http://localhost:1313/posts/2026-03-09-openclawszznldmbsnd724xsagaidp/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🚀 为什么我放弃手动编译OpenClaw，转投Docker Compose怀抱？ 上周三凌晨2:17，我的MacBook风扇在寂静中发出濒死般的高频嘶鸣。终端窗口里，第7次 make install 正在用鲜红色的错误刷屏——/usr/local/include/boost/asio.hpp: No such file or directory，紧接着是 GCC 13.2 和系统自带 Clang 15 的 ABI 冲突警告，最后定格在 Python 3.11.9 ABI mismatch with libtorch 2.3.0&#43;cpu。咖啡杯底沉着第三层冷渣，我盯着那行 CMake Error at claw-core/CMakeLists.txt:412 (find_package): Could not find a configuration file for package &#34;Torch&#34;, 手指悬在键盘上，第一次认真思考：这真的是在搭建AI机器人，还是在给自己的精神状态做压力测试？
+这不是孤例。过去两周，我列了一张「OpenClaw本地编译踩坑清单」，精简后仍触目惊心：
+依赖树嵌套6层：claw-runtime → libclaw-cpp → torch-cpp → c10 → glog → gflags，其中任意一层CMAKE_PREFIX_PATH没对齐，就触发连锁崩溃； claw-core 和 claw-runtime 在 CMake 中互相 find_package()，但 find_package(claw-core REQUIRED) 却要求 claw-core 已安装——典型的“先有鸡还是先有蛋”循环依赖； Mac M1 上，官方 libtorch 预编译包只提供 x86_64 架构，arm64 版本得自己从源码编译（耗时47分钟，失败3次）； 最致命的是那个被我忽略的环境变量：CLAWDBOT_SCHEMA_VERSION=2026。漏设它，claw-router 启动时会静默跳过 schema 初始化——数据库空空如也，日志里连个 warning 都没有，直到你发第一条任务，才收到一句冰冷的 {&#34;error&#34;:&#34;schema version mismatch&#34;}。 直到周四下午，我瘫在工位上重读 OpenClaw v2026 官方文档的「Getting Started」章节，目光扫过一行加粗小字：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-07 05:33:27.807 +0000 UTC'>March 7, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 告别复杂编译！用Docker Compose 5分钟启动OpenClaw本地AI执行引擎（含Clawdbot 2026架构解析）" href="http://localhost:1313/posts/2026-03-07-gbfzbyydockercompose5fzqdopenc/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenClaw实战：3分钟搭建本地AI博客机器人，CSDN/掘金/公众号全自动发布
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>痛点场景：为什么开发者写完技术博客却“发不出去”？ 你是否经历过这样的深夜：
+凌晨一点，刚在 VS Code 里敲完一篇关于 Rust Tokio 调度器原理的深度解析，代码块高亮完美、图表逻辑清晰、参考文献标注严谨——你甚至给每张图加了 alt 文本。但当你打开 CSDN 编辑器粘贴 Markdown，发现代码块全乱码；切到掘金，发现本地 ./assets/chart.png 显示 404；再切到微信公众号后台，编辑器直接把三个反引号吞掉，还提示“图片未通过防盗链校验”。最后，你花了 27 分钟手动调整格式、重传图片、改标题关键词、反复预览……发布成功那一刻，灵感早已冷却，转发语都懒得写了。
+这不是个例。我们联合 5 家技术社区运营方对 1,283 名活跃技术作者（月均产出 ≥3 篇原创）做了匿名调研：
+72% 的人每月产出 3&#43; 篇优质内容，但其中仅 18% 能稳定实现 CSDN/掘金/微信公众号三端同步发布； 平均单篇跨平台发布耗时 22.3 分钟（中位数），其中 41% 时间花在格式救火、33% 耗在图片处理、17% 消耗于 SEO 重写与发布时间协调； 超过 65% 的作者表示，“不是不想发，是每次发布都像重启一次小型运维事故”。 这些卡点背后，是三个不可调和的系统摩擦：
+🔹 格式鸿沟：Markdown 是开发者的母语，但各平台富文本编辑器是“方言集合体”——CSDN 解析 &lt;pre&gt;&lt;code&gt; 却忽略 language 属性；掘金支持 Mermaid 但禁用 &lt;iframe&gt;；公众号则把所有 &lt;img src=&#34;local.jpg&#34;&gt; 当作无效输入。
+🔹 资产孤岛：一张本地 PNG 图，在 CSDN 可直传，在掘金需拖拽，在公众号必须经微信图床且强制压缩——更致命的是，公众号会拦截未备案域名的图片链接，导致已发布的文章某天突然满屏红叉。
+🔹 意图失真：你写《如何用 WASM 加速前端 Excel 解析》是为解决性能瓶颈，但平台算法只认“Excel 教程”“WASM 入门”这类高频词。手动重写标题、摘要、标签，本质是在向推荐系统“翻译”你的技术意图。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-05 08:28:35.566 +0000 UTC'>March 5, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to OpenClaw实战：3分钟搭建本地AI博客机器人，CSDN/掘金/公众号全自动发布" href="http://localhost:1313/posts/2026-03-05-openclawsz3fzdjbdaibkjqrcsdnjj/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">不越狱、不虚拟机：macOS原生部署OpenClaw全指南（Node.js 24.13.0实测）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一、前置条件检查与环境准备 在开始部署 OpenClaw 前，请务必完成以下系统级验证——这一步看似简单，却是后续所有环节稳定运行的基石。macOS 对架构、权限和工具链高度敏感，跳过检查可能导致构建失败、运行崩溃或权限弹窗反复触发。
+首先，打开终端（Terminal），执行以下命令确认基础环境：
+sw_vers &amp;&amp; arch ✅ 预期输出示例（Apple Silicon）：
+ProductName: macOS ProductVersion: 14.6 BuildVersion: 23G80 arm64 ✅ 预期输出示例（Intel &#43; Rosetta 2）：
+ProductName: macOS ProductVersion: 14.5 BuildVersion: 23F79 x86_64 ⚠️ 关键提示：
+最低系统要求：macOS Sonoma 14.5 或更高版本（Sequoia 15.0&#43; 完全兼容）； 架构要求：Apple Silicon（M1/M2/M3）原生支持；Intel 用户必须已启用 Rosetta 2（若未启用，运行 softwareupdate --install-rosetta 并输入管理员密码）； SIP（系统完整性保护）全程无需禁用——本方案所有操作均在用户空间完成，严格遵守 Apple 安全模型。 接下来验证开发工具链：
+# 检查 Xcode Command Line Tools xcode-select -p # 应返回类似 /Library/Developer/CommandLineTools # 若报错 &#34;command not found&#34; 或路径不存在，则安装： xcode-select --install 安装过程中会弹出图形化窗口，点击「安装」→「同意许可协议」→ 等待完成（约 2–5 分钟）。完成后再次运行 xcode-select -p 确认。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-22 12:07:15.115 +0000 UTC'>February 22, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 不越狱、不虚拟机：macOS原生部署OpenClaw全指南（Node.js 24.13.0实测）" href="http://localhost:1313/posts/2026-02-22-byybxnjmacosysbsopenclawqznnod/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">新手友好但高手惊叹：Mac一键部署OpenClaw后，我删掉了所有AI SaaS订阅
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>为什么我突然想亲手部署一个AI工具？ 上个月账单弹出来时，我盯着屏幕愣了三秒：Notion AI $20、Copy.ai $39、Tome $24、Runway $45——合计 $128。不是付不起，是越付越憋屈。
+比如上周五下午，我需要把一场跨部门会议的录音&#43;共享文档&#43;白板照片，合成一份带格式的纪要发给高管。Notion AI 能写，但导出 Word 后所有标题层级全乱；Copy.ai 生成得漂亮，可“保留原始数据表格”这个需求它直接忽略；Tome 做PPT行，但拒绝处理我本地的 Keynote 备注；Runway 能识图，却死活读不懂扫描件里手写的“待法务复核”批注……最后，我花了47分钟手动调格式、复制粘贴、截图标注——而客户说：“纪要下周二前发就行。”
+真正让我半夜三点坐起来开终端的是那封邮件：
+“附件是17份扫描版合同（PDF），请今天下班前标出所有‘不可转让条款’及对应页码。”
+我试了四款SaaS OCR工具：
+Notion AI：上传失败，“文件过大或格式不支持”； Adobe Acrobat Online：识别后文字堆成一团，连段落都分不清； Copy.ai 的“PDF解析”功能：只返回前两页，且把“第十二条”识别成“弟十二奈”； Runway 的文档理解：卡在“Processing…” 12分钟，最终超时。 最讽刺的是——我连原始文本都没抽出来。打开预览.app，Cmd&#43;A → Cmd&#43;C，粘贴出来是空的。PDF里根本没有可选文字。那一刻我盯着那个灰色的复制按钮，突然意识到：我不是在用AI工具，是在向黑盒递申请表。
+“不是不想用SaaS，是它不让我碰底层——就像租豪车，却连油箱盖都打不开。”
+我甚至不能告诉它：“用你自己的OCR引擎，别联网，就用我Mac里的Metal加速，哪怕慢一点，但求给我干净文本。”
+OpenClaw是什么？别被名字吓到，它真不是“给黑客准备的” 第一次在Hacker News看到“OpenClaw”这名字，我本能点叉——听着像挖矿木马，或是某次CTF比赛的遗留项目。直到看见GitHub README第一行写着：
+OpenClaw v0.4.2 — Your local, offline, macOS-native AI copilot. No API keys. No cloud. Just drag, drop, and think. 我下载了demo视频。画面里，作者把一份带手写签名的扫描PDF拖进Dock图标，3秒后弹出窗口：“已提取文本（含手写批注），是否生成结构化摘要？”——他点了“是”，接着输入：“对比第5条与第12条责任条款，用表格呈现差异”。表格立刻生成，连“甲方未明确履约时限”这种隐含风险都标红了。
+我关掉视频，去终端敲：
+brew install openclaw # ❌ 报错：No available formula or cask with the name &#34;openclaw&#34; 才发现它压根没上Homebrew主仓——因为作者坚持“零依赖安装包”，所有模型、运行时、UI框架全打包进一个32MB的 .dmg。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-22 12:07:15.115 +0000 UTC'>February 22, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 新手友好但高手惊叹：Mac一键部署OpenClaw后，我删掉了所有AI SaaS订阅" href="http://localhost:1313/posts/2026-02-23-xsyhdgsjtmacyjbsopenclawhwsdls/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">阿里云OpenClaw镜像&#43;智谱GLM-5双模切换？Mac本地AI助理的进阶玩法揭秘
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>为什么我放弃纯云端方案，开始折腾Mac本地双模AI助理？ 某次出差坐高铁去杭州，信号断断续续，进隧道前我顺手问手机里的AI助手：“把刚才会议录音摘要成3点，发到邮箱”。屏幕顿住，三秒后弹出一行小字：API request failed: timeout (zhipu.ai)。接着是第二行、第三行……直到我盯着“正在加载…”的转圈图标整整217秒——窗外油菜花田飞速倒退，而我的待办事项还卡在云端某个负载过高的GPU节点上。
+那一刻我突然笑出声：所谓“永远在线”，不过是把焦虑从本地迁移到了别人的机房里。
+这不是孤例。过去半年，我用纯云端方案（智谱&#43;通义&#43;Claude API混搭）做个人知识助理，表面丝滑，实则暗礁密布：
+延迟肉眼可见：平均端到端响应823ms（实测数据），写邮件草稿时每敲一个句号都要等半秒“思考”，像在和一位慢性子博士对话； 敏感信息不敢托付：客户合同条款、未发布的财报片段、甚至自家App的错误日志——全得手动脱敏再粘贴，效率归零； 模型切换=改代码&#43;重启服务：昨天用Qwen写周报，今天想试试GLM-5？得改model_name、调参、重跑Flask服务，比换轮胎还麻烦； 账单静悄悄膨胀：上月¥237.64，细看才发现——光是PDF解析就吃了¥89，而其中73%的请求其实只提取了一页目录。 真正的转折点，发生在某个加班到凌晨的周四。我在GitHub刷到 openclaw 项目，README赫然写着：“Apple Silicon Native Support ✅”。心一热，brew install openclaw ——结果终端直接甩我一脸红字：
+Error: No available formula or cask with the name &#34;openclaw&#34; 哦，原来它压根不是Homebrew包……而是个Docker镜像。而我的第一行docker run命令，就在我M2 Pro上触发了OOM Killer。那一刻我才懂：所谓“一行命令部署”，不过是厂商给的温柔陷阱。
+OpenClaw镜像本地部署：从“一行命令”到真能跑的血泪史 官方文档说“支持Mac”，但没说清楚：M-series芯片跑Linux容器，必须显式指定平台。默认拉取的是amd64镜像，启动即爆内存——因为Docker Desktop会强行用Rosetta模拟，而OpenClaw又吃GPU显存。踩坑三天后，我终于摸清正确姿势：
+# ❌ 错误：默认拉取，OOM docker run -p 8000:8000 ghcr.io/openclaw/server # ✅ 正确：强制arm64平台，且绑定Metal设备 docker run --platform=linux/arm64 \ --device=/dev/dri:/dev/dri \ -p 8000:8000 \ ghcr.io/openclaw/server 更狠的是镜像体积：原版32GB，包含qwen2-7b, phi-3-mini, llama3-8b三个完整权重包——而我日常只用GLM系列。于是写了prune.sh暴力瘦身：
+#!/bin/bash # prune.sh：删掉非必需模型（保留glm-5-9b-chat） docker exec -it openclaw-server sh -c &#34; rm -rf /models/qwen2-7b /models/phi-3-mini /models/llama3-8b &amp;&amp; echo &#39;✅ 清理完成，释放12.4GB&#39; &#34; 实测后发现：--gpus=all在Mac上完全无效（Docker Desktop根本不识别）。真正起效的是--device=/dev/dri:/dev/dri——这会启用Apple Metal加速层。推理速度从1.8 tok/s飙到4.1 tok/s，提升2.3倍。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-22 12:07:15.115 +0000 UTC'>February 22, 2026</span>&nbsp;·&nbsp;<span>智通</span></footer>
+  <a class="entry-link" aria-label="post link to 阿里云OpenClaw镜像&#43;智谱GLM-5双模切换？Mac本地AI助理的进阶玩法揭秘" href="http://localhost:1313/posts/2026-02-23-alyopenclawjxzpglm5smqhmacbdai/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/page/3/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">智通和你一起学AI</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<div class="product-ads">
+  <div class="product-ad">
+    <a href="https://storyalter.com" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">AI 写作</span>
+        <span class="product-ad-title">StoryAlter</span>
+        <span class="product-ad-desc">写小说？让 AI 成为你的专属写作分身，记住你的风格与偏好</span>
+      </div>
+    </a>
+  </div>
+  <div class="product-ad">
+    <a href="https://solomd.app" target="_blank" rel="noopener noreferrer">
+      <div class="product-ad-content">
+        <span class="product-ad-badge">Markdown</span>
+        <span class="product-ad-title">SoloMD</span>
+        <span class="product-ad-desc">极简 Markdown 编辑器，仅 15MB，一个文件、一个窗口、只需写作</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
